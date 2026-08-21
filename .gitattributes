@@ -1,6 +1,2 @@
-* text=auto eol=lf
-*.tex -text
-*.TEX -text
-*.bib -text
-*.pdf binary
-*.png binary
+# Render manifests are hash-bound evidence; preserve their exact bytes.
+provenance/*_RENDER_MANIFEST.csv -text

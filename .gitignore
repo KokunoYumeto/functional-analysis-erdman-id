@@ -6,6 +6,9 @@
 /qa/build-unit1/
 /qa/renders/unit1/
 /qa/renders/ch01-final/page-*.png
+/qa/build-through-ch02/
+/qa/build-through-ch02-pass1.pdf
+/qa/renders/through-ch02-final-20260821/
 
 # TeX intermediates
 *.aux

@@ -1,0 +1,570 @@
+\chapter{SELINGAN SANGAT SINGKAT TENTANG BAHASA KATEGORI}\label{categories}
+
+Dalam matematika kita mempelajari berbagai hal (objek) dan pemetaan tertentu di antara hal-hal tersebut (morfisme).
+Beberapa contohnya ialah himpunan dan fungsi, grup dan homomorfisme, ruang topologis
+dan pemetaan kontinu, ruang vektor dan transformasi linear, serta ruang Hilbert dan
+pemetaan linear terbatas. Contoh-contoh ini masing-masing berasal dari cabang matematika yang berbeda---teori
+himpunan, teori grup, topologi, aljabar linear, dan analisis fungsional.
+Namun, bidang-bidang yang berbeda ini memiliki banyak kesamaan: istilah seperti hasil kali,
+koproduk, subobjek, hasil bagi, tarik balik, isomorfisme, dan limit proyektif muncul dalam banyak bidang.
+Teori kategori merupakan upaya untuk menyatukan dan memformalkan sebagian konsep umum tersebut.
+Dalam arti tertentu, teori kategori mempelajari hal-hal yang sama-sama dimiliki oleh berbagai cabang matematika.
+Barangkali uraian yang lebih baik ialah: bahasa kategori memberi tahu kita ``bagaimana sesuatu bekerja'',
+bukan ``apa sesuatu itu''.
+
+Catatan ini---dan memang setiap buku pada tingkat ini---menggunakan bahasa himpunan di mana-mana tanpa
+mensyaratkan kajian terperinci tentang teori himpunan aksiomatik. Demikian pula, kita akan dengan leluasa menggunakan
+\emph{bahasa} kategori tanpa terlebih dahulu memulai kajian teori kategori yang memuaskan dari segi
+fondasi (teori kategori sendiri merupakan bidang penelitian yang luas dan penting). Kadang-kadang buku teks membuat
+bahkan bahasa kategori sulit dipelajari karena sangat mengandalkan latar belakang aljabar pembaca.
+Sebagaimana kebanyakan orang merasa nyaman menggunakan bahasa himpunan (terlepas dari apakah mereka pernah mengkaji
+\emph{teori} himpunan secara serius), hampir setiap orang seharusnya mendapati bahwa bahasa kategori nyaman digunakan
+dan memberi pencerahan tanpa prasyarat yang rumit.
+
+Bagi pembaca yang ingin mendalami pokok ini, saya merekomendasikan pengantar yang sangat ramah ke dunia
+kategori, yang terdapat sebagai Bab 3 dalam buku indah karya Semadeni~\cite{Semadeni:1971}. Salah satu buku klasik
+yang ditulis oleh seorang pendiri bidang ini ialah~\cite{MacLane:1971}. Buku yang lebih baru ialah~\cite{LawvereS:1997}.
+
+Dengan menunjukkan prinsip-prinsip pemersatu, bahasa kategori kerap memberikan wawasan mencolok tentang
+``cara sesuatu bekerja'' dalam matematika. Yang sama pentingnya, kita menjadi lebih efisien karena tidak perlu
+mengulangi argumen yang pada hakikatnya sama dalam konteks yang hanya sedikit berbeda.
+
+Untuk sementara, kita hanya akan mendefinisikan ``objek'', ``morfisme'', dan ``funktor'', lalu memberikan beberapa contoh.
+
+
+
+
+
+
+
+
+
+\section{Objek dan Morfisme}\label{C0151}
+\begin{defn} Misalkan $\sfml A$ suatu kelas yang anggota-anggotanya kita sebut
+ \index{objek (dari suatu kategori)}%
+\df{objek}. Untuk setiap pasangan objek $(S,T)$, kita kaitkan suatu kelas $\mor ST$ yang
+anggota-anggotanya kita sebut
+ \index{morfisme!dari suatu kategori}%
+\df{morfisme} (atau
+ \index{panah}%
+\df{panah}) dari $S$ ke $T$. Kita mengasumsikan bahwa $\mor ST$ dan $\mor UV$ saling lepas,
+kecuali jika $S = U$ dan $T = V$.
+
+Kita mengandaikan pula adanya operasi $\circ$ (disebut \df{komposisi}) yang
+mengaitkan setiap $\alpha \in \mor ST$ dan setiap $\beta \in \mor TU$ dengan suatu morfisme
+$\beta \circ \alpha \in \mor SU$ sedemikian rupa sehingga:
+ \begin{enumerate}
+  \item $\gamma \circ (\beta \circ \alpha) = (\gamma \circ
+\beta) \circ \alpha$ apabila $\alpha \in \mor ST$, $\beta \in \mor TU$, dan $\gamma \in
+\mor UV$;
+  \item untuk setiap objek $S$ terdapat morfisme $I_S \in
+\mor SS$ yang memenuhi $\alpha \circ I_S = \alpha$ apabila $\alpha \in \mor ST$, dan $I_S
+\circ \beta = \beta$ apabila $\beta \in \mor RS$.
+ \end{enumerate}
+Dalam keadaan ini, kelas $\sfml A$ bersama keluarga morfisme yang terkait merupakan suatu
+ \index{kategori}%
+\df{kategori}.
+
+Kita akan mencadangkan notasi
+ \index{<arrowto@$S \to^\alpha T$ (morfisme dalam suatu kategori)}%
+$S \to^\alpha T$ untuk keadaan ketika $S$ dan $T$ merupakan objek dalam suatu kategori dan
+$\alpha$ adalah morfisme anggota $\mor ST$. Seperti halnya pada grup dan ruang vektor,
+kita biasanya menghilangkan simbol komposisi $\circ$ dan menulis
+  \index{<binopconcat@$\beta\alpha$ (notasi untuk komposisi morfisme)}%
+  \index{konvensi!notasi untuk komposisi!morfisme}%
+$\beta\alpha$ untuk $\beta \circ \alpha$.
+
+Suatu kategori disebut
+ \index{kecil secara lokal}%
+ \index{kategori!kecil secara lokal}%
+\df{kecil secara lokal} jika $\mor ST$ merupakan himpunan untuk setiap pasangan objek $S$ dan $T$ dalam kategori tersebut. Kategori itu disebut
+ \index{kecil}%
+ \index{kategori!kecil}%
+\df{kecil} jika, selain itu, kelas semua objeknya merupakan suatu himpunan. Dalam catatan ini, kategori-kategori yang kita minati
+akan bersifat kecil secara lokal.
+\end{defn}
+
+\begin{exam} Kategori
+ \index{kategori!$\cat{SET}$ sebagai suatu}%
+ \index{SET@$\cat{SET}$!kategori}%
+$\cat{SET}$ memiliki himpunan sebagai objek dan fungsi (pemetaan) sebagai morfisme.
+\end{exam}
+
+\begin{exam} Kategori
+ \index{kategori!$\cat{AbGp}$ sebagai suatu}%
+ \index{AbGp@$\cat{AbGp}$!kategori}%
+$\cat{AbGp}$ memiliki grup Abelian sebagai objek dan homomorfisme grup sebagai morfisme.
+\end{exam}
+
+\begin{exam} Kategori
+ \index{kategori!$\cat{VEC}$ sebagai suatu}%
+ \index{VEC@$\cat{VEC}$!kategori}%
+$\cat{VEC}$ memiliki ruang vektor sebagai objek dan transformasi linear sebagai morfisme.
+\end{exam}
+
+
+
+
+
+
+
+\begin{defn}\label{C008111} Misalkan $\le$ suatu relasi pada himpunan tak kosong $S$.
+ \begin{enumerate}
+  \item Jika relasi
+ \index{<le@$\le$ (notasi untuk suatu urutan parsial)}%
+ $\le$ bersifat refleksif (yakni, $x \le x$ untuk setiap $x \in S$) dan transitif (yakni, jika $x \le y$ dan $y \le z$, maka $x  \le z$), relasi itu disebut suatu
+ \index{refleksif}%
+ \index{transitif}%
+ \index{praurutan}%
+ \index{urutan!pra-}%
+\df{praurutan}.
+  \item Jika $\le$ merupakan praurutan dan juga bersifat antisimetris (yakni, jika $x \le y$ dan $y \le x$, maka $x = y$), relasi itu disebut suatu
+ \index{antisimetris}%
+ \index{parsial!urutan}%
+ \index{urutan!parsial}%
+\df{urutan parsial}.
+  \item Elemen $x$ dan $y$ dalam suatu himpunan yang telah diberi praurutan disebut
+ \index{dapat dibandingkan}%
+\df{dapat dibandingkan} jika $x \le y$ atau $y \le x$.
+  \item Jika $\le$ merupakan urutan parsial yang membuat setiap dua elemen dapat dibandingkan, relasi itu disebut suatu
+ \index{linear!urutan}%
+ \index{urutan!linear}%
+\df{urutan linear} (atau suatu
+ \index{total!urutan}%
+ \index{urutan!total}%
+\df{urutan total}).
+  \item Jika relasi $\le$ merupakan praurutan (berturut-turut, urutan parsial,
+urutan linear) pada $S$, pasangan $(S,\le)$ disebut suatu
+ \index{himpunan terpraurut}%
+\df{himpunan terpraurut} (berturut-turut,
+ \index{himpunan terurut parsial}%
+\df{himpunan terurut parsial},
+ \index{himpunan terurut linear}%
+\df{himpunan terurut linear}).
+  \item Subhimpunan terurut linear dari himpunan terurut parsial $(S,\le)$ disebut suatu
+ \index{rantai}%
+\df{rantai} di~$S$.
+ \end{enumerate}
+Kita boleh menulis $b \ge a$ sebagai pengganti $a \le b$. Notasi
+ \index{<l@$<$ (notasi untuk suatu urutan ketat)}%
+$a < b$ (atau, secara ekuivalen, $b > a$) berarti $a \le b$ dan $a \ne b$.
+\end{defn}
+
+\begin{defn} Pemetaan $f\colon S \sto T$ antara himpunan-himpunan terpraurut disebut
+ \index{urutan!pemetaan pelestari}%
+\df{pelestari urutan} jika $x \le y$ di $S$ mengakibatkan $f(x) \le f(y)$ di~$T$.
+\end{defn}
+
+\begin{exam} Kategori
+ \index{kategori!$\cat{POSET}$ sebagai suatu}%
+ \index{POSET@$\cat{POSET}$!kategori}%
+$\cat{POSET}$ memiliki himpunan terurut parsial sebagai objek dan pemetaan pelestari urutan sebagai morfisme.
+\end{exam}
+
+\begin{notn} Misalkan $f \colon S \sto T$ suatu fungsi antara himpunan. Untuk $A \subseteq S$, kita mendefinisikan
+$f^{\sto}(A) = \{f(x)\colon x \in A\}$, dan untuk $B \subseteq T$, kita mendefinisikan
+ \index{<superscript@$f^{\sto}(A)$ atau $f(A)$ (citra $A$ di bawah $f$)}%
+ \index{<superscript@$f^{\gets}(B)$ (pracitra $B$ di bawah $f$)}%
+$f^{\gets}(B) = \{ x \in S\colon f(x) \in B\}$. Kita mengatakan bahwa $f^{\sto}(A)$ adalah
+ \index{citra}%
+\df{citra $A$ di bawah $f$} dan bahwa $f^{\gets}(B)$ adalah
+ \index{pracitra}%
+\df{pracitra} (atau
+ \index{invers!citra}%
+ \index{citra!invers}%
+\df{citra invers}) \df{$B$ di bawah~$f$}. Kadang-kadang, untuk menghindari notasi yang berjejal, saya akan menyerah pada kebiasaan meragukan dengan
+menulis $f(A)$ sebagai pengganti~$f^{\sto}(A)$.
+\end{notn}
+
+\begin{defn} Ingat bahwa keluarga $\sfml T$ yang terdiri atas subhimpunan-subhimpunan suatu himpunan $X$ disebut suatu
+ \index{topologi}%
+\df{topologi} pada $X$ jika keluarga itu memuat himpunan kosong $\emptyset$ dan $X$ sendiri serta tertutup terhadap pembentukan gabungan
+($\bigcup\sfml S \in \sfml T$ apabila $\sfml S \subseteq \sfml T$) dan irisan hingga ($\bigcap\sfml F \in \sfml T$
+apabila $\sfml F \subseteq \sfml T$ dan $\sfml F$ berhingga). Himpunan tak kosong $X$ bersama suatu topologi pada $X$ disebut suatu
+ \index{topologis!ruang}%
+ \index{ruang!topologis}%
+\df{ruang topologis}. Jika $(X,\sfml T)$ suatu ruang topologis, setiap anggota $\sfml T$ disebut suatu
+ \index{terbuka}%
+ \index{<binrel@$\open UX$ ($U$ merupakan subhimpunan terbuka dari~$X$)}%
+\df{himpunan terbuka}. Untuk menyatakan bahwa himpunan $U$ merupakan subhimpunan terbuka dari $X$, kita sering menulis $\open UX$. Komplemen dari suatu himpunan terbuka disebut suatu
+ \index{tertutup}%
+\df{himpunan tertutup}. Fungsi $f\colon X \sto Y$ antara ruang-ruang topologis disebut
+ \index{kontinu!fungsi}%
+ \index{fungsi!kontinu}%
+\df{kontinu} jika pracitra setiap himpunan terbuka bersifat terbuka; yakni, jika $\open{f^{\gets}(V)}X$ apabila $\open VY$.
+(Jika Anda belum pernah menjumpai ruang topologis, lihat dua butir pertama dalam bagian pertama
+Bab 10 dan bagian pertama Bab 11 pada catatan daring saya~\cite{Erdman:2007}.)
+\end{defn}
+
+\begin{exam} Setiap himpunan tak kosong $X$ memiliki topologi terkecil (terkasar); topologi itu terdiri tepat atas dua himpunan,
+$\emptyset$ dan~$X$. Topologi ini adalah topologi
+ \index{indiskret}%
+ \index{topologi!indiskret}%
+\df{indiskret} pada~$X$. (Perhatikan ejaan istilah bahasa Inggrisnya: terdapat kata lain dalam bahasa Inggris, ``indiscreet'',
+yang bermakna sama sekali berbeda.) Himpunan $X$ juga memiliki topologi terbesar (terhalus), yang terdiri atas
+keluarga $\sfml P(X)$ dari semua subhimpunan~$X$. Topologi ini adalah topologi
+ \index{diskret}%
+ \index{topologi!diskret}%
+\df{diskret} pada~$X$.
+  \end{exam}
+
+\begin{exam} Kategori
+ \index{kategori!$\cat{TOP}$ sebagai suatu}%
+ \index{TOP@$\cat{TOP}$!kategori}%
+$\cat{TOP}$ memiliki ruang topologis sebagai objek dan fungsi kontinu sebagai morfisme.
+\end{exam}
+
+\begin{defn}\label{defn_alg} Misalkan $(A,+,M)$ suatu ruang vektor atas $\K$ yang dilengkapi dengan
+operasi biner lain $A \times A \sto A$, dengan $(x,y) \mapsto x \cdot y$, sedemikian
+rupa sehingga $(A,+,\cdot\,)$ merupakan gelanggang. (Notasi $x \cdot y$ biasanya disingkat menjadi $xy$.) Jika, selain itu, persamaan
+  \begin{equation}\label{eq_def_algebra}
+     \alpha (xy) = (\alpha x)y = x(\alpha y)
+  \end{equation}
+berlaku untuk semua $x$, $y \in A$ dan $\alpha \in \K$, maka $(A,+,M,\,\cdot\,)$ disebut suatu
+ \index{aljabar}%
+\df{aljabar} atas medan~$\K$ (kadang-kadang disebut \df{aljabar asosiatif
+linear}). Seperti biasa, kita menyalahgunakan terminologi dengan menulis hal-hal seperti, ``Misalkan $A$ suatu
+aljabar.'' Kita mengatakan bahwa suatu aljabar $A$
+ \index{beridentitas!aljabar}%
+ \index{aljabar!beridentitas}%
+\df{beridentitas} jika gelanggang yang mendasarinya $(A,+,\cdot\,)$ memiliki identitas perkalian; yakni, jika terdapat
+ \index{perkalian!identitas}%
+ \index{identitas!perkalian}%
+suatu elemen $\vc 1_A \ne \vc 0$ di $A$ sehingga $\vc 1_A \cdot x = x \cdot \vc 1_A = x$ untuk semua $x \in A$.
+  Aljabar itu disebut
+ \index{komutatif!aljabar}%
+ \index{aljabar!komutatif}%
+\df{komutatif} jika gelanggangnya komutatif; yakni, jika $xy = yx$ untuk semua $x$, $y \in A$.
+
+Subhimpunan $B$ dari suatu aljabar $A$ disebut suatu
+ \index{subaljabar}%
+\df{subaljabar} dari $A$ jika subhimpunan tersebut merupakan aljabar dengan operasi-operasi yang diwarisinya dari~$A$. Suatu
+subaljabar $B$ dari aljabar beridentitas $A$ disebut
+ \index{beridentitas!subaljabar}%
+ \index{subaljabar!beridentitas}%
+\df{subaljabar beridentitas} jika memuat identitas perkalian dari~$A$.
+
+\textbf{PERHATIAN.} Agar menjadi subaljabar beridentitas, 
+\emph{tidaklah} cukup jika $B$ memiliki identitas perkaliannya sendiri; subaljabar itu harus memuat identitas dari~$A$. Jadi, suatu
+aljabar dapat sekaligus beridentitas dan merupakan subaljabar dari $A$ tanpa menjadi subaljabar beridentitas
+dari~$A$.
+
+Pemetaan $f\colon A \sto B$ antara aljabar-aljabar disebut suatu
+ \index{homomorfisme!aljabar}%
+ \index{aljabar!homomorfisme}%
+\df{homomorfisme (aljabar)} jika pemetaan itu merupakan pemetaan linear antara $A$ dan $B$ sebagai ruang vektor yang mempertahankan perkalian
+(yakni, $f(xy) = f(x)f(y)$ untuk semua $x$, $y \in A$). Dengan kata lain, homomorfisme aljabar adalah homomorfisme gelanggang linear.
+Pemetaan itu disebut
+ \index{beridentitas!homomorfisme aljabar}%
+ \index{aljabar!homomorfisme!beridentitas}%
+ \index{homomorfisme!aljabar!beridentitas}%
+\df{homomorfisme (aljabar) beridentitas} jika mempertahankan identitas; yakni, jika $A$ dan $B$ keduanya merupakan aljabar beridentitas dan $f(\vc 1_A) = \vc 1_B$.
+ \index{kernel!homomorfisme aljabar}%
+\df{Kernel} dari suatu homomorfisme aljabar $f\colon A \sto B$ tentu saja adalah $\{a \in A \colon f(a) = \vc 0\}$.
+
+Jika $f^{-1}$ ada dan juga merupakan homomorfisme aljabar, maka $f$ disebut suatu
+ \index{isomorfisme!aljabar}%
+\df{isomorfisme} dari $A$ ke $B$. Jika terdapat isomorfisme dari $A$ ke $B$, maka $A$ dan
+$B$ disebut
+ \index{isomorfik}%
+\df{isomorfik}.
+\end{defn}
+
+\begin{exam} Kategori
+ \index{kategori!$\cat{ALG}$ sebagai suatu}%
+ \index{ALG@$\cat{ALG}$!kategori}%
+$\cat{ALG}$ memiliki aljabar sebagai objek dan homomorfisme aljabar sebagai morfisme.
+\end{exam}
+
+Contoh-contoh sebelumnya merupakan contoh \emph{kategori konkret}---yakni, kategori
+yang objek-objeknya berupa himpunan (biasanya bersama struktur tambahan) dan
+morfisme-morfismenya berupa fungsi (biasanya dengan mempertahankan struktur tambahan tersebut). Dalam catatan ini,
+kategori-kategori yang kita minati bersifat konkret sekaligus kecil secara lokal. Berikut ini (bagi pembaca yang ingin tahu) adalah
+definisi yang lebih formal untuk \emph{kategori konkret}.
+
+\begin{defn}\label{C015124} Suatu kategori $\sfml A$ bersama fungsi $\abs{\hphantom{O}}$ yang mengaitkan
+setiap objek $A$ di $\sfml A$ dengan suatu himpunan $\abs A$ disebut suatu
+ \index{kategori konkret}%
+ \index{kategori!konkret}%
+\df{kategori konkret} jika syarat-syarat berikut dipenuhi:
+ \begin{enumerate}
+    \item setiap morfisme $A \to^f B$ merupakan fungsi dari $\abs A$ ke~$\abs B$;
+    \item setiap morfisme identitas $I_A$ di $\sfml A$ merupakan fungsi identitas pada~$\abs A$; dan
+    \item komposisi morfisme $A \to^f B$ dan $B \to^g C$ sama dengan komposisi
+fungsi $f\colon \abs A \sto \abs B$ dan $g\colon \abs B \sto \abs C$.
+ \end{enumerate}
+Jika $A$ suatu objek dalam kategori konkret $\sfml A$, maka $\abs A$ disebut
+ \index{himpunan dasar}%
+ \index{himpunan!dasar}%
+ \index{<unop@$\abs A$ (himpunan dasar dari objek~$A$)}%
+\df{himpunan dasar} dari~$A$.
+\end{defn}
+
+Meskipun kategori-kategori yang kita minati dalam catatan ini memang merupakan kategori
+konkret, mungkin tetap menarik untuk melihat contoh kategori yang
+\emph{tidak disajikan secara konkret}, yakni tanpa terlebih dahulu mewujudkan objek sebagai himpunan dan morfisme sebagai fungsi.
+
+\begin{exam}\label{C015127} Misalkan $G$ suatu monoid (yakni, semigrup beridentitas).
+ \index{monoid}%
+Tinjau suatu kategori $\cat C$ yang memiliki tepat satu objek, yang kita sebut~$\star$. Karena hanya
+ada satu objek, hanya ada satu keluarga morfisme $\mor{\star}{\star}$, yang kita
+ambil sebagai~$G$. Komposisi morfisme didefinisikan sebagai perkalian monoid.
+Artinya, $a \circ b := ab$ untuk semua $a$, $b \in G$. Jelas bahwa komposisi bersifat asosiatif dan
+elemen identitas $G$ merupakan morfisme identitas. Jadi, $\cat C$ adalah suatu kategori.
+\end{exam}
+
+\begin{defn} Dalam setiap kategori konkret, kita akan menyebut morfisme injektif sebagai suatu
+ \index{monomorfisme}%
+\df{monomorfisme} dan morfisme surjektif sebagai suatu
+ \index{epimorfisme}%
+\df{epimorfisme}.
+\end{defn}
+
+\begin{cau} Definisi-definisi di atas mencerminkan penggunaan asli istilah tersebut oleh Bourbaki dan merupakan definisi yang
+paling lazim dipakai oleh matematikawan di luar teori kategori itu sendiri; di dalam teori kategori,
+``monomorfisme'' berarti ``dapat dibatalkan dari kiri'' dan ``epimorfisme'' berarti ``dapat
+dibatalkan dari kanan''. (Perhatikan bahwa istilah \emph{injektif} dan \emph{surjektif} mungkin tidak
+bermakna jika diterapkan pada morfisme dalam kategori yang tidak konkret.)
+
+Suatu morfisme $B \to^g C$ disebut
+ \index{kiri!dapat dibatalkan dari}%
+ \index{dapat dibatalkan!dari kiri}%
+\df{dapat dibatalkan dari kiri} jika, setiap kali morfisme $A \to^{f_1} B$ dan $A \to^{f_2} B$ memenuhi
+$gf_1 = gf_2$, berlaku $f_1 = f_2$. Mac Lane menyarankan agar morfisme yang dapat dibatalkan dari kiri disebut
+ \index{monik}%
+morfisme \df{monik}. Perbedaan antara morfisme monik dan monomorfisme ternyata
+kecil. Dalam catatan ini, hampir semua morfisme yang kita jumpai bersifat monik jika dan
+hanya jika merupakan monomorfisme. Sebagai latihan mudah, buktikan bahwa setiap morfisme injektif
+dalam suatu kategori (konkret) bersifat monik. Konversnya kadang-kadang gagal.
+
+Dengan semangat yang sama, Mac Lane menyarankan agar suatu morfisme yang
+ \index{kanan!dapat dibatalkan dari}%
+ \index{dapat dibatalkan!dari kanan}%
+\emph{dapat dibatalkan dari kanan} (yakni, suatu morfisme $A \to^f B$ sedemikian sehingga, apabila
+morfisme $B \to^{g_1} C$ dan $B \to^{g_2} C$ memenuhi $g_1f = g_2f$, maka $g_1 = g_2$) disebut suatu
+ \index{epik}%
+morfisme \df{epik}. Sekali lagi, merupakan latihan mudah untuk menunjukkan bahwa dalam suatu kategori (konkret),
+setiap epimorfisme bersifat epik. Namun, konversnya gagal dalam beberapa kategori yang cukup umum.
+\end{cau}
+
+\begin{defn} Terminologi untuk invers morfisme dalam kategori pada dasarnya sama
+dengan terminologi untuk fungsi. Misalkan $A \to^\alpha B$ dan $B \to^\beta A$ merupakan
+morfisme dalam suatu kategori. Jika $\beta \circ \alpha = I_A$, maka $\beta$ adalah suatu
+ \index{kiri!invers!morfisme}%
+ \index{invers!kiri}%
+\df{invers kiri} dari $\alpha$ dan, secara ekuivalen, $\alpha$ adalah suatu
+ \index{kanan!invers!morfisme}%
+ \index{invers!kanan}%
+\df{invers kanan} dari $\beta$. Kita mengatakan bahwa morfisme $\alpha$ merupakan suatu
+ \index{isomorfisme!dalam suatu kategori}%
+\df{isomorfisme} (atau bersifat
+ \index{invertibel!morfisme}%
+\df{invertibel}) jika terdapat morfisme $B \to^\beta A$ yang sekaligus merupakan invers kiri dan
+invers kanan dari~$\alpha$. Morfisme demikian dinotasikan dengan $\alpha^{-1}$ dan disebut
+ \index{<unopur@$\alpha^{-1}$ (invers morfisme $\alpha$)}%
+ \index{invers!morfisme}%
+\df{invers} dari~$\alpha$.
+\end{defn}
+
+\begin{prop} Misalkan $A \to^\alpha B$ suatu morfisme dalam suatu kategori. Jika $\alpha$ memiliki invers kiri $\lambda$ dan
+invers kanan $\rho$, maka $\lambda = \rho$ dan, akibatnya, $\alpha$ merupakan suatu isomorfisme.
+\end{prop}
+
+Dalam setiap kategori konkret, kita dapat menanyakan apakah setiap morfisme bijektif (yakni, setiap
+pemetaan yang sekaligus merupakan monomorfisme dan epimorfisme) adalah suatu isomorfisme. Jawabannya
+sering kali merupakan \emph{ya} yang mudah (seperti dalam $\cat{SET}$, $\cat{AbGp}$, dan $\cat{VEC}$) atau
+\emph{tidak} yang mudah (misalnya, dalam kategori $\cat{POSET}$
+ \index{morfisme bijektif!tidak harus invertibel!dalam $\cat{POSET}$}%
+ \index{POSET@$\cat{POSET}$!morfisme bijektif dalam}%
+ \index{POSET@$\cat{POSET}$!kategori}%
+yang terdiri atas himpunan terurut parsial dan pemetaan pelestari urutan). Namun,
+sesekali jawabannya ternyata berupa hasil yang menarik dan mendalam (lihat, misalnya, \emph{teorema pemetaan
+terbuka}~\futurexref{6.3.4}{C069414}).
+
+\begin{exam} Dalam kategori $\cat{SET}$,
+ \index{morfisme bijektif!invertibel!dalam $\cat{SET}$}%
+ \index{SET@$\cat{SET}$!morfisme bijektif dalam}%
+setiap morfisme bijektif merupakan suatu isomorfisme.
+\end{exam}
+
+\begin{exam}\label{C015216} Kategori
+ \index{LAT@$\cat{LAT}$!kategori}%
+ \index{kategori!$\cat{LAT}$ sebagai suatu}%
+$\cat{LAT}$ memiliki kekisi sebagai objek dan homomorfisme
+kekisi sebagai morfisme. (Suatu
+ \index{kekisi}%
+\df{kekisi} adalah himpunan terurut parsial yang setiap pasangan elemennya memiliki infimum dan supremum, dan suatu
+ \index{kekisi!homomorfisme}%
+ \index{homomorfisme!kekisi}%
+\df{homomorfisme kekisi} adalah pemetaan antara kekisi-kekisi yang mempertahankan infimum dan supremum.)
+Dalam kategori ini, morfisme bijektif
+ \index{morfisme bijektif!invertibel!dalam $\cat{LAT}$}%
+ \index{LAT@$\cat{LAT}$!morfisme bijektif dalam}%
+merupakan isomorfisme.
+\end{exam}
+
+\begin{exam} Suatu
+ \index{homeomorfisme}%
+\df{homeomorfisme} adalah bijeksi kontinu $f$ antara ruang-ruang topologis yang inversnya $f^{-1}$ juga kontinu. Homeomorfisme
+merupakan isomorfisme dalam kategori $\cat{TOP}$. Dalam kategori ini, tidak setiap bijeksi kontinu merupakan homeomorfisme.
+\end{exam}
+
+\begin{exam} Jika, dalam kategori $\cat C$ pada Contoh~\ref{C015127}, monoid $G$ merupakan suatu grup,
+maka setiap morfisme dalam $\cat C$ merupakan suatu isomorfisme.
+\end{exam}
+
+
+
+
+
+
+\section{Funktor}
+\begin{defn} Jika $\cat{A}$ dan $\cat{B}$ merupakan kategori, suatu
+ \index{kovarian!funktor}%
+ \index{funktor!kovarian}%
+\df{funktor kovarian} $F$ dari $\cat A$ ke $\cat B$ (ditulis ${\cat A}\to^F{\cat B}$) adalah
+sepasang pemetaan: suatu
+ \index{objek!pemetaan}%
+ \index{pemetaan!objek}%
+\df{pemetaan objek} $F$ yang mengaitkan setiap objek $S$ dalam $\cat A$ dengan suatu objek $F(S)$ dalam
+$\cat B$, dan suatu
+ \index{morfisme!pemetaan}%
+ \index{pemetaan!morfisme}%
+\df{pemetaan morfisme} (yang juga dinotasikan dengan $F$) yang mengaitkan setiap morfisme $f \in \mor
+ST$ dalam $\cat A$ dengan suatu morfisme $F(f) \in \mor {F(S)}{F(T)}$ dalam $\cat B$, sedemikian rupa sehingga
+ \begin{enumerate}
+  \item $F(g \circ f) = F(g) \circ F(f)$ apabila $g \circ f$ terdefinisi dalam $\cat A$; dan
+  \item $F(\id S) = \id{F(S)}$ untuk setiap objek $S$ dalam $\cat A$.
+ \end{enumerate}
+
+Definisi suatu
+ \index{kontravarian!funktor}%
+ \index{funktor!kontravarian}%
+\df{funktor kontravarian} ${\cat A}\to^F{\cat B}$ berbeda dari definisi sebelumnya
+hanya dalam dua hal. Pertama, pemetaan morfismenya mengaitkan setiap morfisme $f \in \mor ST$ dalam
+$\cat A$ dengan suatu morfisme $F(f) \in \mor {F(T)}{F(S)}$ dalam $\cat B$. Kedua, syarat (a)
+di atas diganti dengan
+ \begin{enumerate}
+  \item[(\rm{a'})] $F(g \circ f) = F(f) \circ F(g)$ apabila $g \circ f$
+terdefinisi dalam~$\cat A$.
+ \end{enumerate}
+\end{defn}
+
+\begin{exam}\label{functors005exam} Suatu
+ \index{pelupa!funktor}%
+ \index{funktor!pelupa}%
+\df{funktor pelupa} adalah funktor yang memetakan objek dan morfisme dari suatu kategori $\cat
+C$ ke kategori $\cat C'$ yang memiliki struktur atau sifat lebih sedikit. Sebagai contoh, jika $V$
+suatu ruang vektor, funktor $F$ yang ``melupakan'' operasi perkalian skalar
+pada ruang vektor akan memetakan $V$ ke kategori grup Abelian. (Grup
+Abelian $F(V)$ akan memiliki himpunan elemen yang sama dengan ruang vektor $V$ dan
+operasi penjumlahan yang sama, tetapi tidak memiliki perkalian skalar.) Suatu pemetaan linear
+$T\colon V \sto W$ antara ruang-ruang vektor akan dibawa oleh funktor $F$ menjadi homomorfisme
+grup $F(T)$ antara grup-grup Abelian $F(V)$ dan~$F(W)$.
+
+Funktor pelupa juga dapat ``melupakan'' sifat. Jika $G$ suatu objek dalam
+kategori grup Abelian, funktor yang ``melupakan'' komutativitas grup Abelian
+akan membawa $G$ ke kategori grup.
+
+Pada bagian sebelumnya telah disebutkan bahwa semua kategori yang kita minati dalam
+catatan ini merupakan kategori konkret (kategori yang objek-objeknya berupa himpunan dengan struktur
+tambahan dan morfisme-morfismenya berupa pemetaan yang, dalam pengertian tertentu, mempertahankan
+struktur tambahan tersebut). Kita akan beberapa kali menggunakan jenis khusus funktor
+pelupa---funktor yang melupakan seluruh struktur objek kecuali himpunan dasarnya dan yang
+melupakan segala sifat morfisme yang mempertahankan struktur. Jika $A$ suatu
+objek dalam suatu kategori konkret $\cat C$, kita menotasikan
+ \index{<unop@$\abs A$ (funktor pelupa yang bekerja pada~$A$)}%
+himpunan dasarnya dengan $\abs{A}$. Jika \mbox{$A~\to^f~B$} suatu morfisme dalam $\cat C$, kita
+menotasikan dengan $\abs f$ pemetaan dari $\abs A$ ke $\abs B$ yang dipandang sekadar sebagai fungsi
+antara himpunan. Mudah dilihat bahwa $\abs{\hphantom{M}}$\,, yang membawa objek dalam
+$\cat C$ ke objek dalam $\cat{SET}$ (kategori himpunan dan pemetaan) serta morfisme dalam $\cat
+C$ ke morfisme dalam $\cat{SET}$, merupakan suatu funktor kovarian.
+
+Dalam kategori $\cat{VEC}$ yang terdiri atas ruang vektor dan pemetaan linear, misalnya,
+$\abs{\hphantom{M}}$ membuat ruang vektor $V$ ``melupakan'' penjumlahan maupun
+perkalian skalarnya ($\abs V$ hanyalah suatu himpunan). Jika $T\colon V \sto W$ suatu transformasi
+linear, maka $\abs T\colon \abs V \sto \abs W$ hanyalah pemetaan antara himpunan---pemetaan itu telah
+``melupakan'' sifat mempertahankan operasi.
+\end{exam}
+
+
+\begin{defn} Suatu himpunan terurut parsial disebut
+ \index{urutan!lengkap}%
+ \index{lengkap!urutan}%
+\df{lengkap secara urutan} jika setiap subhimpunan tak kosong memiliki supremum (yakni, batas atas
+terkecil) dan infimum (batas bawah terbesar).
+\end{defn}
+
+\begin{defn} Misalkan $S$ suatu himpunan. Maka
+ \index{himpunan kuasa}%
+ \index{P@$\sfml P(S)$ (himpunan kuasa dari $S$)}%
+\df{himpunan kuasa} dari $S$, yang dinotasikan dengan $\sfml P(S)$, adalah keluarga semua subhimpunan~$S$.
+\end{defn}
+
+\begin{exam}[Funktor himpunan kuasa] Misalkan $S$ suatu himpunan tak kosong.
+ \begin{enumerate}
+  \item Himpunan kuasa $\sfml P(S)$ dari $S$ yang diurutkan secara parsial oleh $\subseteq$
+bersifat lengkap secara urutan.
+  \item Kelas himpunan terurut parsial yang lengkap secara urutan beserta pemetaan
+pelestari urutan merupakan suatu kategori.
+ \index{funktor!himpunan kuasa}%
+ \index{himpunan kuasa!funktor}%
+  \item Untuk setiap fungsi $f$ antara himpunan, misalkan $\sfml P(f) = f^{\sto}$. Maka
+$\sfml P$ merupakan funktor kovarian dari kategori himpunan dan fungsi ke kategori
+himpunan terurut parsial yang lengkap secara urutan beserta pemetaan pelestari urutan.
+  \item Untuk setiap fungsi $f$ antara himpunan, misalkan $\sfml P(f) = f^{\gets}$. Maka
+$\sfml P$ merupakan funktor kontravarian dari kategori himpunan dan fungsi ke kategori
+himpunan terurut parsial yang lengkap secara urutan beserta pemetaan pelestari urutan.
+ \end{enumerate}
+\end{exam}
+
+\begin{defn}\label{defn_vsp_adjoint} Misalkan $T\colon V \sto W$ suatu pemetaan linear antara ruang-ruang vektor. Untuk setiap
+$g \in W^{\#}$, misalkan $T^{\#}(g) = g\,T$. Perhatikan bahwa $T^{\#}(g) \in V^{\#}$. Pemetaan $T^{\#}$ dari ruang
+vektor $W^{\#}$ ke ruang vektor~$V^{\#}$ disebut pemetaan
+ \index{adjoin!ruang vektor}%
+ \index{vektor!ruang!pemetaan adjoin}%
+ \index{<unopur@$T^\#$ (adjoin ruang vektor)}%
+\df{adjoin} (ruang vektor) dari~$T$.
+\end{defn}
+
+\begin{exam} Pasangan pemetaan $V \mapsto V^{\#}$ (yang membawa suatu ruang vektor ke dual aljabarnya) dan
+$T \mapsto T^{\#}$ (yang membawa suatu pemetaan linear ke dualnya) merupakan funktor kontravarian dari kategori $\cat{VEC}$
+yang terdiri atas ruang vektor dan pemetaan linear ke kategori itu sendiri.
+\end{exam}
+
+\begin{exam}\label{0007606} Jika $\cat C$ suatu kategori, definisikan
+ \index{kategori@$\cat{C^2}$ (pasangan objek dan morfisme)}%
+$\cat{C^2}$ sebagai kategori yang objek-objeknya merupakan pasangan terurut objek dalam $\cat C$ dan
+morfisme-morfismenya merupakan pasangan terurut morfisme dalam~$\cat C$. Jadi, jika $A \to^f C$ dan $B
+\to^g D$ merupakan morfisme dalam $\cat C$, maka $(A,B) \to^{(f,g)} (C,D)$ (dengan $(f,g)(a,b) =
+\bigl(f(a),g(b)\bigr)$ untuk semua $a \in A$ dan $b \in B$ apabila kategori tersebut konkret) merupakan morfisme dalam~$\cat{C^2}$.
+Komposisi morfisme didefinisikan dengan cara yang wajar: $(f,g) \circ (h,j) = (f \circ h, g
+\circ j)$. Kita mendefinisikan
+ \index{diagonal!funktor}%
+ \index{funktor!diagonal}%
+\df{funktor diagonal} $\cat C \to^{\ftr D} \cat{C^2}$ dengan $\ftr D(A) := (A,A)$ dan
+$\ftr D(f) := (f,f)$. Ini merupakan
+funktor kovarian.
+\end{exam}
+
+\begin{exam}\label{C029717} Misalkan $X$ dan $Y$ ruang-ruang topologis dan $\phi\colon X \sto Y$
+kontinu. Definisikan $\fml C \phi$ pada $\fml C(Y)$ dengan
+    \[ \fml C \phi(g) = g \circ \phi \]
+untuk semua $g \in \fml C(Y)$. Maka pasangan pemetaan $X \mapsto \fml C(X)$ dan
+ \index{C@$\fml C$ (funktor)}%
+$\phi \mapsto \fml C \phi$ merupakan funktor kontravarian dari kategori $\cat{TOP}$ yang terdiri atas ruang
+topologis dan pemetaan kontinu ke kategori aljabar beridentitas dan homomorfisme
+aljabar beridentitas.
+\end{exam}
+
+
+
+
+
+
+
+
+
+
+
+\endinput

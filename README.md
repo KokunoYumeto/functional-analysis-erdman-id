@@ -6,19 +6,20 @@ John M. Erdman, *Functional Analysis and Operator Algebras: An Introduction*
 
 ## Baca edisi saat ini
 
-[Buka PDF Unit 1 — Aljabar Linear dan Teorema Spektral](output/pdf/analisis-fungsional-dan-aljabar-operator-id-unit-1.pdf)
+[Buka PDF kumulatif Bab 1--2](output/pdf/analisis-fungsional-dan-aljabar-operator-id-bab-1-2.pdf)
 
-Unit 1 telah diterjemahkan lengkap dan melewati pemeriksaan struktur,
-matematika, residu bahasa, hak komponen, dua build bersih yang identik, serta
-inspeksi visual seluruh 25 halaman. PDF ini merupakan batas produksi pertama,
-bukan edisi lengkap.
+Bab 1 dan Bab 2 telah diterjemahkan lengkap dan melewati pemeriksaan struktur,
+matematika, residu bahasa, hak komponen, dua build bersih yang menghasilkan PDF
+identik, serta inspeksi visual seluruh 32 halaman. PDF ini merupakan batas
+produksi kedua, bukan edisi lengkap. [PDF Unit 1](output/pdf/analisis-fungsional-dan-aljabar-operator-id-unit-1.pdf)
+tetap tersedia sebagai artefak batas pertama.
 
 ## Cakupan
 
 Edisi yang dipilih mencakup seluruh buku 17 bab, kata pengantar, bibliografi,
 dan indeks. Bab 1–8 membentuk rute inti D20; Bab 9–17 merupakan lanjutan
 analisis fungsional dan aljabar operator. Penandaan kurikuler tidak menghapus
-isi sumber. Pekerjaan berikutnya dimulai pada Bab 2, bahasa kategori.
+isi sumber. Pekerjaan berikutnya dimulai pada Bab 3, ruang linear bernorma.
 
 Sumber resmi:
 
@@ -31,7 +32,7 @@ folder `provenance/`. Backend JSONL di folder `backend/` menggunakan ID yang
 netral terhadap bahasa dan nomor halaman agar unit dapat dipetakan ke bahasa
 lain tanpa mengekstrak ulang PDF.
 
-## Build Unit 1
+## Build
 
 Lihat [BUILD.md](BUILD.md). Build memerlukan distribusi TeX dengan pdfLaTeX,
 BibTeX, MakeIndex, `latexmk`, serta paket Xy-pic. Build modern sengaja boleh
@@ -39,10 +40,10 @@ mengalir ulang; nomor halaman bukan pengenal tetap.
 
 ## Aksesibilitas
 
-PDF batas pertama memiliki metadata, bookmark, tautan silang, dan indeks, tetapi
-belum merupakan PDF bertag. Reader HTML semantik dan aksesibel adalah keluaran
-wajib edisi lengkap dan masih dalam pengerjaan. Tidak ada klaim aksesibilitas
-yang melampaui keadaan ini.
+PDF kumulatif Bab 1--2 memiliki metadata, bookmark, tautan silang, dan indeks,
+tetapi belum merupakan PDF bertag. Reader HTML semantik dan aksesibel adalah
+keluaran wajib edisi lengkap dan masih dalam pengerjaan. Tidak ada klaim
+aksesibilitas yang melampaui keadaan ini.
 
 ## Lisensi dan atribusi
 
