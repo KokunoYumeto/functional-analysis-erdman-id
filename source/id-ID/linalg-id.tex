@@ -1,0 +1,1254 @@
+\chapter{ALJABAR LINEAR DAN TEOREMA SPEKTRAL}
+
+Dalam mata kuliah analisis tingkat awal, penekanan diberikan pada perilaku fungsi-fungsi individual (bernilai real atau kompleks). Dalam mata kuliah \emph{analisis fungsional},
+fokus beralih ke \emph{ruang-ruang} fungsi tersebut dan kelas-kelas pemetaan tertentu di antara ruang-ruang itu. Ternyata uraian yang ringkas,
+mungkin terlampau menyederhanakan, tetapi jelas tidak menyesatkan, tentang materi tersebut ialah \emph{aljabar linear berdimensi tak hingga}. Dari sudut pandang
+seorang analis, pencapaian terbesar aljabar linear sebagian besar berupa teorema-teorema tentang operator pada ruang vektor berdimensi hingga
+(terutama $\R^n$ dan $\C^n$). Akan tetapi, ruang vektor pemetaan bernilai skalar yang didefinisikan pada berbagai domain biasanya berdimensi tak
+hingga. Apakah proses memperumum hasil-hasil mengagumkan dari aljabar linear berdimensi hingga ke ranah berdimensi tak hingga dipandang sebagai
+rangkaian komplikasi abstrak yang sangat tidak menyenangkan atau sebagai sumber kaya wawasan menakjubkan, pertanyaan baru yang menarik, dan
+petunjuk yang menggugah menuju penerapan di bidang lain sepenuhnya bergantung pada orientasi seseorang terhadap matematika secara umum.
+
+Berdasarkan uraian di atas, akan bermanfaat untuk memulai perjalanan kita ke wilayah baru ini dengan tinjauan singkat atas beberapa keberhasilan
+klasik aljabar linear. Tidak jarang mahasiswa yang berhasil menyelesaikan mata kuliah pengantar aljabar linear pada akhirnya hanya memiliki
+gagasan yang paling samar tentang pokok bahasan mata kuliah itu. Sebagian kesalahan mungkin terletak pada banyak buku dasar yang mencampuradukkan
+secara tidak semestinya dua pokok bahasan yang sangat berbeda, meskipun berkaitan erat: di satu pihak, kajian \emph{ruang vektor} dan pemetaan linear
+di antaranya, dan di pihak lain, \emph{ruang hasil kali dalam} beserta pemetaan linearnya. Ruang vektor tidak memiliki gagasan geometri/topologi
+tentang \emph{jarak}, \emph{panjang}, \emph{ketegaklurusan}, himpunan \emph{terbuka}, atau \emph{sudut} antara vektor; yang ada hanyalah penjumlahan dan perkalian skalar.
+Ruang hasil kali dalam adalah ruang vektor yang dilengkapi struktur-struktur tambahan tersebut. Mari kita tinjau keduanya secara terpisah.
+
+
+\section{Ruang Vektor dan Dekomposisi Operator yang Dapat Didiagonalkan}
+\begin{conv} Dalam catatan ini semua ruang vektor
+ \index{konvensi!ruang vektor kompleks atau real}%
+ \index{C@$\C$!medan bilangan kompleks}%
+ \index{R@$\R$!medan bilangan real}%
+akan diasumsikan sebagai ruang vektor atas medan~$\C$ bilangan kompleks (dalam hal ini disebut \emph{ruang vektor kompleks}) atau atas
+medan~$\R$ bilangan real (dalam hal ini disebut \emph{ruang vektor real}). Tidak ada medan lain yang akan muncul. Ketika $\K$ muncul, medan itu dapat dipandang
+ \index{K@$\K$ (medan bilangan real atau kompleks)}%
+sebagai $\C$ ataupun~$\R$. Suatu
+ \index{skalar}%
+\df{skalar} adalah anggota $\K$; yaitu, suatu \emph{bilangan kompleks} atau suatu \emph{bilangan real}.
+\end{conv}
+
+\begin{defn}\label{00001} Tripel $(V,+,M)$ adalah
+ \index{vektor!ruang}%
+ \index{ruang!vektor}%
+\df{ruang vektor} atas $\K$ jika $(V,+)$ adalah grup Abelian dan $M\colon \K \sto \Hom(V)$
+adalah homomorfisme gelanggang beridentitas (dengan $\Hom(V)$ gelanggang homomorfisme grup
+pada~$V$).
+\end{defn}
+
+Untuk memeriksa arti istilah-istilah dalam definisi sebelumnya, lihat tiga bagian pertama dari bab pertama catatan
+aljabar linear saya~\cite{Erdman:2010}.
+
+\begin{exer} Definisi \emph{ruang vektor} yang ditemukan dalam banyak buku dasar kurang lebih
+sebagai berikut: suatu \emph{ruang vektor atas} $\K$ adalah himpunan $V$ beserta operasi
+penjumlahan dan perkalian skalar yang memenuhi aksioma-aksioma berikut:
+ \begin{enumerate}
+  \item[(1)] jika $x$, $y \in V$, maka $x + y \in V$;
+  \item[(2)] $(x + y) + z = x + (y + z)$ untuk setiap
+ \index{asosiatif}%
+$x$, $y$, $z \in V$ (asosiativitas);
+  \item[(3)] terdapat $\vc 0 \in V$ sehingga $x + \vc 0 = x$ untuk setiap
+ \index{identitas!aditif}%
+$x \in V$ (keberadaan identitas aditif);
+  \item[(4)] untuk setiap $x\in V$ terdapat $-x \in V$ sehingga
+ \index{aditif!invers}%
+ \index{invers!aditif}%
+$x + (-x) = \vc 0$ (keberadaan invers aditif);
+  \item[(5)] $x + y = y + x$ untuk setiap $x$, $y \in V$
+ \index{komutatif}%
+(komutativitas);
+  \item[(6)] jika $\alpha \in \K$ dan $x \in V$, maka $\alpha x \in V$;
+  \item[(7)] $\alpha (x + y) = \alpha x + \alpha y$ untuk setiap $\alpha \in \K$
+dan setiap $x$, $y \in V$;
+  \item[(8)] $(\alpha + \beta)x = \alpha x + \beta x$ untuk setiap $\alpha$,
+$\beta \in \K$ dan setiap $x \in V$;
+  \item[(9)] $(\alpha\beta)x = \alpha(\beta x)$ untuk setiap $\alpha$,
+$\beta \in \K$ dan setiap $x \in V$; dan
+  \item[(10)] $1\,x = x$ untuk setiap $x \in V$.
+ \end{enumerate}
+Buktikan bahwa definisi ini ekuivalen dengan definisi yang diberikan di atas dalam~\ref{00001}.
+\end{exer}
+
+\begin{defn} Subhimpunan $M$ dari ruang vektor $V$ adalah
+ \index{subruang!vektor}%
+ \index{vektor!subruang}%
+\df{subruang vektor} dari $V$ jika merupakan ruang vektor terhadap operasi yang diwarisinya dari~$V$.
+\end{defn}
+
+\begin{prop} Subhimpunan tak kosong $M$ dari ruang vektor $V$ adalah subruang vektor dari $V$ jika dan
+hanya jika tertutup terhadap penjumlahan dan perkalian skalar. (Artinya: jika $\vc x$ dan
+$\vc y$ termasuk dalam $M$, maka $\vc x + \vc y$ juga demikian; dan jika $\vc x$ termasuk dalam $M$ dan $\alpha
+\in \K$, maka $\alpha \vc x$ termasuk dalam~$M$.)
+\end{prop}
+
+\begin{defn} Vektor $y$ adalah
+ \index{linear!kombinasi}%
+ \index{kombinasi!linear}%
+\df{kombinasi linear} dari vektor-vektor $x_1$, \dots, $x_n$ jika terdapat skalar $\alpha_1$,
+\dots, $\alpha_n$ sehingga $y = \sum_{k=1}^n \alpha_k x_k$. Kombinasi linear $\sum_{k=1}^n \alpha_k x_k$ disebut
+ \index{linear!kombinasi!trivial}%
+ \index{trivial!kombinasi linear}%
+\df{trivial} jika semua koefisien $\alpha_1$, \dots, $\alpha_n$ bernilai nol. Jika sekurang-kurangnya
+satu $\alpha_k$ tidak sama dengan nol, kombinasi linear itu disebut \df{nontrivial}.
+\end{defn}
+
+\begin{defn} Jika $A$ adalah subhimpunan tak kosong dari ruang vektor~$V$, maka $\spn A$, yaitu
+ \index{rentang}%
+\df{rentang} dari $A$, adalah himpunan semua kombinasi linear unsur-unsur~$A$. Himpunan ini juga sering disebut
+ \index{rentang!linear}%
+ \index{linear!rentang}%
+\df{rentang linear} dari~$A$.
+\end{defn}
+
+\begin{notn}\label{bases111} Misalkan $A$ adalah himpunan yang merentang ruang vektor~$V$. Untuk setiap
+$x \in V$ terdapat himpunan hingga $S$ yang terdiri atas vektor-vektor dalam $A$, dan untuk setiap unsur $e$ dalam $A$
+terdapat skalar $x_e$ sehingga $x = \sum_{e \in S} x_e e$. Jika kita sepakat menetapkan $x_e = 0$
+apabila $e \in A \setminus S$, kita dapat pula menulis $x = \sum_{e \in A} x_e e$. Walaupun
+notasi ini mungkin memberi kesan bahwa kita menjumlahkan atas himpunan sembarang yang mungkin tak terhitung,
+kenyataannya semua kecuali sejumlah hingga suku bernilai nol, sehingga tidak timbul masalah
+``kekonvergenan''. Perlakukan $\sum_{e \in A} x_e e$ sebagai jumlah hingga.
+Asosiativitas dan komutativitas penjumlahan dalam $V$ membuat ekspresi tersebut tidak ambigu.
+\end{notn}
+
+\begin{defn}\label{defn_lin_dep} Subhimpunan $A$ dari suatu ruang vektor disebut
+ \index{linear!kebergantungan}%
+ \index{bergantung}
+\df{bergantung linear} jika vektor nol $\vc 0$ dapat ditulis sebagai kombinasi linear nontrivial
+dari unsur-unsur~$A$; yaitu, jika terdapat vektor $x_1, \dots, x_n \in A$
+dan skalar $\alpha_1, \dots, \alpha_n$, yang \textbf{tidak semuanya nol,} sehingga $\sum_{k=1}^n
+\alpha_kx_k = \vc 0$. Subhimpunan suatu ruang vektor disebut
+ \index{linear!kebebasan}%
+ \index{bebas}
+\df{bebas linear} jika tidak bergantung linear.
+\end{defn}
+
+Secara teknis, suatu \emph{himpunan} vektorlah yang bergantung atau bebas linear.
+Meskipun demikian, istilah-istilah ini sering digunakan seolah-olah merupakan sifat vektornya
+sendiri. Sebagai contoh, jika $S = \{x_1, \dots, x_n\}$ adalah himpunan hingga vektor dalam suatu
+ruang vektor, pernyataan ``himpunan $S$ bebas linear'' dan
+``vektor-vektor $x_1$, \dots, $x_n$ bebas linear'' dapat digunakan secara bergantian.
+
+\begin{defn}\label{defn_Hamel_basis} Himpunan $B$ yang terdiri atas vektor-vektor dalam ruang vektor $V$ adalah
+ \index{basis!Hamel}%
+ \index{Hamel!basis}%
+\df{basis Hamel} untuk $V$ jika bebas linear dan merentang~$V$.
+\end{defn}
+
+\begin{conv}\label{conv_1_1} Ruang vektor yang hanya memuat satu vektor, yaitu vektor nol, adalah ruang vektor
+ \index{konvensi!basis untuk ruang vektor nol}%
+ \index{vektor!ruang!trivial (atau nol)}%
+ \index{trivial!ruang vektor}%
+\df{trivial} (atau
+ \index{nol!ruang vektor}%
+\df{nol}). Terkait ruang ini terdapat sebuah pertanyaan teknis, meskipun tidak terlalu menarik. Apakah ruang ini memiliki basis Hamel?
+Dari definisi \emph{kebergantungan linear}~\ref{defn_lin_dep}, jelas bahwa himpunan kosong $\emptyset$ bebas
+linear. Himpunan kosong tentu merupakan subhimpunan bebas linear maksimal dari ruang nol (suatu kondisi yang, untuk ruang nontrivial,
+ekuivalen dengan menjadi himpunan perentang yang bebas linear). Akan tetapi, sulit untuk berpendapat bahwa himpunan kosong merentang sesuatu.
+Jadi, semata-mata sebagai konvensi, kita akan mengatakan bahwa jawaban atas pertanyaan itu adalah \emph{ya}. Ruang vektor nol memiliki basis
+Hamel, dan basis itu adalah himpunan kosong!
+\end{conv}
+
+Dalam buku pengantar aljabar linear, himpunan perentang yang bebas linear hanya disebut \emph{basis}. Di sini digunakan istilah \emph{basis Hamel}
+untuk membedakannya dari \emph{basis ortonormal} dan \emph{basis Schauder}, istilah-istilah yang mengacu pada konsep yang lebih
+penting dalam analisis fungsional.
+
+\begin{prop} Misalkan $B$ adalah basis Hamel untuk ruang vektor nontrivial~$V$. Maka setiap unsur dalam $V$ dapat ditulis secara tunggal sebagai kombinasi
+linear anggota-anggota~$B$.
+\end{prop}
+
+\begin{proof}[\emph{Petunjuk pembuktian}] Eksistensinya jelas. Sederhanakan pembuktian ketunggalan dengan menggunakan konvensi notasi
+yang disarankan dalam~\ref{bases111}.   \ns
+\end{proof}
+
+\begin{prop}\label{bases025} Misalkan $A$ adalah subhimpunan bebas linear dari ruang
+vektor~$V$. Maka terdapat basis Hamel untuk~$V$ yang memuat~$A$.
+\end{prop}
+
+\begin{proof}[\emph{Petunjuk pembuktian}] Tunjukkan terlebih dahulu bahwa, untuk ruang nontrivial, subhimpunan bebas linear dari $V$ adalah basis untuk~$V$
+jika dan hanya jika merupakan subhimpunan bebas linear maksimal. Kemudian urutkan keluarga subhimpunan bebas linear dari
+$V$ yang memuat~$A$ berdasarkan inklusi dan terapkan \emph{lema Zorn}. (Jika Anda belum mengenal \emph{lema Zorn},
+lihat Bagian 1.7 dalam catatan aljabar linear saya~\cite{Erdman:2010}.)  \ns
+\end{proof}
+
+\begin{cor} Setiap ruang vektor memiliki basis Hamel.
+\end{cor}
+
+\begin{defn}\label{000082} Misalkan $M$ dan $N$ adalah subruang dari ruang vektor $V$. Jika
+$M \cap N = \{\vc 0\}$ dan $M + N = V$, maka $V$ adalah
+ \index{internal!jumlah langsung!dalam ruang vektor}%
+ \index{langsung!jumlah!internal}%
+ \index{langsung!jumlah!ruang vektor}%
+ \index{<binopdirectsum@$\oplus$ (jumlah langsung ruang vektor)}%
+\df{jumlah langsung} (\df{internal}) dari $M$ dan $N$. Dalam hal ini kita menulis
+   \[ V = M \oplus N\,. \]
+Kita mengatakan bahwa $M$ dan $N$ adalah
+ \index{komplemen!subruang vektor}%
+ \index{vektor!ruang!komplemen}%
+\df{subruang vektor komplementer} dan masing-masing merupakan \df{komplemen} (ruang vektor) dari
+yang lain. 
+ \index{kodimensi}%
+\df{Kodimensi} subruang $M$ adalah dimensi komplemennya~$N$.
+\end{defn}
+
+\begin{prop}\label{0000823} Misalkan $V$ adalah ruang vektor dan andaikan $V = M \oplus N$. Maka untuk
+setiap $v \in V$ terdapat vektor-vektor tunggal $m \in M$ dan $n \in N$ sehingga $v = m + n$.
+\end{prop}
+
+\begin{exam} Misalkan $\fml C = \fml C[-1,1]$ adalah ruang vektor semua fungsi kontinu bernilai real
+pada interval $[-1,1]$. Fungsi $f$ dalam $\fml C$ disebut \df{genap} jika $f(-x) =
+f(x)$ untuk semua $x \in [-1,1]$; fungsi itu disebut \df{ganjil} jika $f(-x) = -f(x)$ untuk semua $x \in [-1,1]$.
+Misalkan $\fml C_o = \{f \in \fml C\colon  f \text{ ganjil }\}$ dan $\fml C_e = \{f \in \fml
+C\colon  f \text{ genap }\}$. Maka $\fml C = \fml C_o \oplus \fml C_e$.
+\end{exam}
+
+\begin{prop}\label{0000824} Jika $M$ adalah subruang dari ruang vektor $V$, maka terdapat subruang $N$ dari
+$V$ sehingga $V = M \oplus N$.
+\end{prop}
+
+\begin{lem}\label{bases030} Misalkan $V$ adalah ruang vektor dengan basis hingga tak kosong $\{e^1,
+\dots,e^n\}$ dan misalkan $v = \sum_{k=1}^n \alpha_k e^k$ adalah vektor dalam~$V$. Jika $p \in \N_n$
+dan $\alpha_p \ne 0$, maka
+\[
+\{e^1, \dots,e^{p-1},v,e^{p+1}, \dots, e^n\}
+\]
+adalah basis untuk~$V$.
+\end{lem}
+
+\begin{prop}\label{bases031} Jika suatu basis untuk ruang vektor $V$ memuat $n$ unsur,
+maka setiap subhimpunan bebas linear dari $V$ yang memiliki $n$ unsur juga merupakan basis.
+\end{prop}
+
+\begin{proof}[\emph{Petunjuk pembuktian}] Andaikan $\{e^1,\dots,e^n\}$ adalah basis untuk~$V$ dan
+$\{v^1, \dots,v^n\}$ bebas linear dalam~$V$. Mulailah dengan menggunakan lema~\ref{bases030}
+untuk menunjukkan bahwa (setelah mungkin menomori ulang $e^k$) himpunan $\{v^1, e^2, \dots, e^n\}$
+adalah basis untuk~$V$.  \ns
+\end{proof}
+
+\begin{cor}\label{bases032} Jika ruang vektor $V$ memiliki basis hingga $B$, maka setiap basis
+untuk $V$ berhingga dan memuat jumlah unsur yang sama dengan~$B$.
+\end{cor}
+
+\begin{defn} Suatu ruang vektor disebut
+ \index{berdimensi hingga}%
+\df{berdimensi hingga} jika memiliki basis hingga, dan
+ \index{dimensi!ruang vektor}%
+ \index{vektor!ruang!dimensi}%
+ \index{dim@$\dim V$ (dimensi ruang vektor $V$)}%
+\df{dimensi} ruang tersebut adalah banyaknya unsur dalam basis ini (dan dengan demikian dalam basis mana pun) untuk
+ruang itu. Dimensi ruang vektor berdimensi hingga $V$ dinotasikan dengan $\dim V$. Berdasarkan
+konvensi yang dibuat di atas~\ref{conv_1_1}, ruang vektor nol berdimensi nol. Jika
+ruang tersebut tidak memiliki basis hingga, ruang itu disebut
+ \index{berdimensi tak hingga}%
+\df{berdimensi tak hingga}.
+\end{defn}
+
+\begin{defn}\label{defn_op_vsp} Fungsi $T\colon V \sto W$ antara ruang-ruang vektor (atas medan yang sama) disebut
+ \index{linear!pemetaan}%
+\df{linear} jika $T(u + v) = Tu + Tv$ untuk semua $u$, $v \in V$ dan $T(\alpha v) = \alpha Tv$
+untuk semua $\alpha \in \K$ dan $v \in V$. Fungsi linear sering disebut
+\emph{transformasi linear} atau \emph{pemetaan linear}. Jika $V = W$, kita mengatakan bahwa pemetaan linear $T$ adalah
+ \index{operator!pada ruang vektor}%
+\df{operator} pada~$V$. Bergantung pada konteks, operator identitas $x \mapsto x$ pada $V$ dinotasikan
+ \index{identitas@$\id V$ atau $I_V$ atau $I$ (operator identitas)}%
+dengan $\id V$ atau $I_V$ atau cukup~$I$. Ingat bahwa jika $T\colon V \sto W$ adalah pemetaan linear, maka
+ \index{kernel!pemetaan linear}%
+ \index{<ker@$\ker T$ (kernel dari~$T$)}%
+\df{kernel} dari $T$, yang dinotasikan dengan $\ker T$, adalah $T^{\gets}(\{0\}) := \{x \in V\colon Tx = \vc
+0\}$. Selain itu,
+ \index{jangkauan!pemetaan linear}%
+ \index{<ran@$\ran T$ (jangkauan dari~$T$)}%
+\df{jangkauan} dari $T$, yang dinotasikan dengan $\ran T$, adalah $T^{\sto}(V) := \{Tx\colon x \in V\}$.
+\end{defn}
+
+\begin{prop} Pemetaan linear $T\colon V \sto W$ bersifat injektif jika dan hanya jika kernelnya nol.
+\end{prop}
+
+\begin{prop} Misalkan $T\colon V \sto W$ adalah pemetaan linear injektif antara ruang-ruang vektor. Jika $A$ adalah subhimpunan bebas linear
+dari~$V$, maka $T^\sto(A)$ adalah subhimpunan bebas linear dari~$W$.
+\end{prop}
+
+\begin{prop} Misalkan $T\colon V \sto W$ adalah pemetaan linear antara ruang-ruang vektor dan $A \subseteq V$.
+Maka $T^\sto(\spn A) = \spn T^\sto(A)$.
+\end{prop}
+
+\begin{prop} Misalkan $T\colon V \sto W$ adalah pemetaan linear injektif antara ruang-ruang vektor. Jika $B$ adalah basis
+untuk subruang $U$ dari~$V$, maka $T^\sto(B)$ adalah basis untuk~$T^\sto(U)$.
+\end{prop}
+
+\begin{prop} Dua ruang vektor berdimensi hingga isomorfik jika dan hanya jika keduanya memiliki dimensi yang sama.
+\end{prop}
+
+\begin{defn} Misalkan $T$ suatu pemetaan linear antara ruang-ruang vektor. \df{Peringkat} $T$ adalah dimensi jangkauan~$T$, sedangkan
+ \index{peringkat}
+ \index{nulitas}%
+\df{nulitas} $T$ adalah dimensi kernel~$T$.
+\end{defn}
+
+\begin{prop} Misalkan $T\colon V \sto W$ adalah pemetaan linear antara ruang-ruang vektor. Jika $V$ berdimensi hingga, maka
+  \[ \operatorname{peringkat} T + \operatorname{nulitas} T = \dim V. \]
+\end{prop}
+
+\begin{defn} Pemetaan linear $T\colon V \sto W$ antara ruang-ruang vektor disebut
+ \index{invertibel!pemetaan linear}%
+\df{invertibel} (atau suatu
+ \index{isomorfisme!ruang vektor}%
+\df{isomorfisme}) jika terdapat pemetaan linear $T^{-1}\colon W \sto V$ sehingga $T^{-1}T
+= \id V$ dan $TT^{-1} = \id W$. Dua ruang vektor $V$ dan $W$ disebut
+ \index{isomorfik!ruang vektor}%
+\df{isomorfik} jika terdapat isomorfisme dari $V$ ke~$W$.
+\end{defn}
+
+\begin{prop}\label{inv_lin_maps001} Pemetaan linear $T\colon V \sto W$ antara ruang-ruang vektor
+invertibel jika dan hanya jika memiliki invers kiri sekaligus invers kanan.
+\end{prop}
+
+\begin{prop}\label{inv_lin_maps004} Pemetaan linear antara ruang-ruang vektor invertibel jika
+dan hanya jika bijektif.
+\end{prop}
+
+\begin{prop} Misalkan $T$ operator pada ruang vektor berdimensi hingga. Ketiga pernyataan berikut ekuivalen:
+ \begin{enumerate}
+    \item $T$ adalah isomorfisme;
+    \item $T$ injektif; dan
+    \item $T$ surjektif.
+ \end{enumerate}
+\end{prop}
+
+ \begin{defn}\label{defn_similar_vs_ops} Dua operator $R$ dan $T$ pada ruang vektor $V$ disebut
+ \index{serupa!operator}%
+\df{serupa} jika terdapat operator invertibel $S$ pada $V$ sehingga $R = STS^{-1}$.
+\end{defn}
+
+\begin{prop}\label{sim004thm} Jika $V$ adalah ruang vektor, maka keserupaan merupakan relasi ekuivalensi
+pada~$\ofml L(V)$.
+\end{prop}
+
+Misalkan $V$ dan $W$ adalah ruang vektor berdimensi hingga dengan basis terurut. Andaikan $V$ berdimensi $n$ dengan basis terurut
+$\{e^1,e^2, \dots,e^n\}$ dan $W$ berdimensi $m$. Ingat dari pengantar aljabar linear bahwa jika $T\colon V \sto W$ linear,
+maka
+ \index{matriks!representasi}%
+ \index{representasi!matriks}%
+\emph{representasi matriks} $[T]$ (diambil terhadap basis terurut dalam $V$ dan~$W$) adalah matriks $m \times n$ $[T]$
+yang kolom ke-$k$ ($1 \le k \le n$) adalah vektor kolom $Te^k$ dalam~$W$. Pokoknya ialah bahwa tindakan $T$ pada
+vektor $x$ dapat \emph{direpresentasikan} sebagai perkalian $x$ oleh matriks $[T]$; yaitu,
+   \[ Tx = [T]x. \]
+Persamaan ini mungkin memerlukan sedikit penafsiran. Ruas kiri adalah fungsi $T$ yang dievaluasi di $x$, dengan
+hasil evaluasi dipandang sebagai vektor kolom dalam~$W$; ruas kanan adalah matriks $m \times n$ yang dikalikan
+dengan matriks $n \times 1$ (yaitu vektor kolom). Jadi, kesamaan yang dinyatakan adalah kesamaan dua matriks $m \times 1$ (vektor kolom).
+
+\begin{defn} Misalkan $V$ adalah ruang vektor berdimensi hingga dan $B = \{e^1, \dots, e^n\}$ adalah basis untuk~$V$. Operator $T$ pada $V$ disebut
+ \index{diagonal!operator}%
+ \index{operator!diagonal}%
+\df{diagonal} jika terdapat skalar $\alpha_1, \dots, \alpha_n$ sehingga $Te^k =
+\alpha_ke^k$ untuk setiap $k \in \N_n$. Secara ekuivalen, $T$ diagonal jika representasi matriksnya
+$[T] = [T_{ij}]$ memiliki sifat bahwa $T_{ij} = 0$ apabila $i \ne j$.
+\end{defn}
+
+Menanyakan apakah operator tertentu pada suatu ruang vektor berdimensi hingga bersifat diagonal,
+secara tegas, tidak bermakna. Sebagaimana didefinisikan, sifat operator berupa kediagonalan jelas
+\emph{bukan} konsep ruang vektor. Sifat ini hanya bermakna bagi ruang vektor
+\emph{yang basisnya telah ditentukan}. Fakta penting ini, meskipun jelas, tampaknya
+luput dari perhatian dalam banyak mata kuliah pengantar aljabar linear, mungkin karena fiksasi yang agak berlebihan
+pada $\R^n$ dalam mata kuliah tersebut. Berikut sifat \emph{ruang vektor} yang relevan.
+
+\begin{defn} Operator $T$ pada ruang vektor berdimensi hingga $V$ disebut
+ \index{dapat didiagonalkan!operator}%
+ \index{operator!dapat didiagonalkan}%
+\df{dapat didiagonalkan} jika terdapat basis untuk $V$ yang terhadapnya $T$
+bersifat diagonal. Secara ekuivalen, operator pada ruang vektor berdimensi hingga \emph{dengan
+basis} dapat didiagonalkan jika serupa dengan operator diagonal.
+\end{defn}
+
+\begin{defn} Misalkan $V$ adalah ruang vektor dan andaikan $V = M \oplus N$. Kita mengetahui
+dari~\ref{0000823} bahwa untuk setiap $\vc v \in V$ terdapat vektor-vektor tunggal $\vc m \in M$
+dan $\vc n \in N$ sehingga $\vc v = \vc m + \vc n$. Definisikan fungsi $\sbsb E{MN}\colon V \sto V$ dengan $\sbsb E{MN}v = n$.
+Fungsi $\sbsb E{MN}$ adalah
+ \index{proyeksi!dalam ruang vektor}%
+ \index{E@$\sbsb E{MN}$ (proyeksi sepanjang $M$ ke $N$)}%
+\df{proyeksi} $V$ \df{sepanjang} $M$ \df{ke}~$N$. (Kita sering menulis $E$ untuk $\sbsb E{MN}$. Namun ingat bahwa
+$E$ bergantung pada $M$ dan~$N$.)
+\end{defn}
+
+\begin{prop} Misalkan $V$ adalah ruang vektor dan andaikan $V = M \oplus N$. Jika $E$ adalah
+proyeksi $V$ sepanjang $M$ ke $N$, maka
+ \begin{enumerate}[label=\rm{(\alph*)}]
+  \item $E$ linear;
+ \index{idempoten}%
+  \item $E^2 = E$ \quad (yaitu, $E$ \df{idempoten});
+  \item $\ran E = N$; dan
+  \item $\ker E = M$.
+ \end{enumerate}
+\end{prop}
+
+\begin{prop} Misalkan $V$ adalah ruang vektor dan andaikan $E\colon V \sto V$ adalah fungsi yang
+memenuhi
+ \begin{enumerate}[label=\rm{(\alph*)}]
+  \item $E$ linear, dan
+  \item $E^2 = E$.
+\end{enumerate}
+Maka
+ \[V = \ker E \oplus \ran E\]
+dan $E$ adalah proyeksi $V$ sepanjang $\ker E$ ke~$\ran E$.
+\end{prop}
+
+Penting untuk dicatat bahwa konsekuensi langsung dari dua proposisi terakhir adalah bahwa
+fungsi $T\colon V \sto V$ dari ruang vektor berdimensi hingga ke dirinya sendiri merupakan
+proyeksi jika dan hanya jika linear dan idempoten.
+
+
+
+
+
+
+\begin{prop} Misalkan $T\colon V \sto W$ adalah transformasi linear antara ruang-ruang vektor. Maka
+  \begin{enumerate}[label=\rm{(\alph*)}]
+    \item $T$ memiliki invers kiri jika dan hanya jika injektif; dan
+    \item $T$ memiliki invers kanan jika dan hanya jika surjektif.
+  \end{enumerate}
+\end{prop}
+
+
+
+
+
+
+
+
+
+
+
+\begin{prop} Misalkan $V$ adalah ruang vektor dan andaikan $V = M \oplus N$. Jika $E$ adalah
+proyeksi $V$ sepanjang $M$ ke $N$, maka $I - E$ adalah proyeksi $V$ sepanjang $N$
+ke~$M$.
+\end{prop}
+
+Seperti baru saja kita lihat, jika $E$ adalah proyeksi pada ruang vektor $V$, maka operator
+identitas pada $V$ dapat ditulis sebagai jumlah dua proyeksi $E$ dan $I - E$ yang
+jangkauannya membentuk dekomposisi jumlah langsung ruang tersebut, $V = \ran E \oplus \ran
+(I - E)$. Kita dapat memperumum hal ini ke lebih dari dua proyeksi.
+
+\begin{defn} Andaikan pada ruang vektor $V$ terdapat operator-operator proyeksi $E_1$,
+\dots, $E_n$ sehingga
+\begin{enumerate}
+    \item $I_V = E_1 + E_2 + \dots + E_n$ dan
+    \item $E_iE_j = 0$ apabila $i \ne j$.
+\end{enumerate}
+Kita mengatakan bahwa $I_V = E_1 + E_2 + \dots + E_n$ adalah
+ \index{resolusi identitas!dalam ruang vektor}%
+\df{resolusi identitas}.
+\end{defn}
+
+\begin{prop} Jika $I_V = E_1 + E_2 + \dots + E_n$ adalah resolusi identitas pada ruang
+vektor $V$, maka $V = \bigoplus_{k=1}^n \ran E_k$.
+\end{prop}
+
+\begin{exam} Misalkan $P$ adalah bidang dalam $\R^3$ yang persamaannya $x - z = 0$ dan $L$ adalah garis
+yang persamaannya $y = 0$ dan $x = -z$. Misalkan $E$ adalah proyeksi $\R^3$ sepanjang~$L$
+ke $P$ dan $F$ adalah proyeksi $\R^3$ sepanjang~$P$ ke~$L$. Maka
+ \[[E] = \begin{bmatrix}
+              \frac12  & 0 & \frac12 \\
+                  0    & 1 &   0     \\
+              \frac12  & 0 & \frac12
+         \end{bmatrix} \qquad \text{ dan } \qquad
+   [F] = \begin{bmatrix}
+              \frac12  & 0 & -\frac12 \\
+                  0    & 0 &   0     \\
+             -\frac12  & 0 &  \frac12
+         \end{bmatrix}\,. \]
+\end{exam}
+
+\begin{defn} Skalar $\lambda \in \K$ adalah
+ \index{nilai eigen}%
+\df{nilai eigen} dari operator $T$ pada ruang vektor $V$ jika $\ker(T - \lambda I_V)$
+memuat vektor tak nol. Setiap vektor tersebut adalah
+ \index{vektor eigen}%
+\df{vektor eigen} dari $T$ yang berkaitan dengan $\lambda$, dan $\ker(T - \lambda I_V)$ adalah
+ \index{ruang eigen}
+\df{ruang eigen} dari $T$ yang berkaitan dengan~$\lambda$. Himpunan semua nilai eigen
+operator $T$ disebut
+ \index{spektrum titik}%
+ \index{spektrum!titik}%
+\df{spektrum titik} dan dinotasikan dengan~$\sigma_p(T)$.
+\end{defn}
+
+Jika $M$ adalah matriks $n \times n$, maka $\det(M - \lambda I_n)$ (dengan $I_n$ matriks identitas $n
+\times n$) adalah polinomial dalam $\lambda$ berderajat~$n$. Inilah
+\df{polinomial karakteristik} dari~$M$. Cara baku untuk menghitung nilai-nilai eigen suatu
+operator $T$ pada ruang vektor berdimensi hingga adalah mencari akar-akar polinomial
+karakteristik dari representasi matriksnya. Sifat multiplikatif fungsi determinan dengan mudah mengakibatkan
+bahwa polinomial karakteristik operator $T$ pada ruang vektor $V$ tidak bergantung pada basis yang dipilih untuk $V$ dan,
+karena itu, tidak bergantung pada representasi matriks tertentu dari~$T$ yang digunakan.
+
+\vskip 5 pt
+
+\begin{exam} Nilai-nilai eigen operator pada (ruang vektor real) $\R^3$ yang representasi matriksnya
+adalah $ \begin{bmatrix} 0  &  0  &  2 \\
+                                     0  &  2  &  0 \\
+                                     2  &  0  &  0
+                      \end{bmatrix}$ ialah $-2$ dan $+2$, dengan nilai yang terakhir memiliki multiplisitas (aljabar maupun
+geometris)~$2$. Ruang eigen yang berkaitan dengan nilai eigen negatif dan positif, berturut-turut, adalah
+\[
+\spn\{(1,0,-1)\}
+\quad\text{dan}\quad
+\spn\{(1,0,1), (0,1,0)\}.
+\]
+\end{exam}
+
+\vskip 5 pt
+
+\begin{prop} Setiap operator pada ruang vektor kompleks berdimensi hingga memiliki nilai eigen.
+\end{prop}
+
+\begin{exam} Proposisi sebelumnya tidak berlaku untuk ruang real berdimensi hingga.
+\end{exam}
+
+\begin{proof}[\emph{Petunjuk pembuktian}] Pertimbangkan rotasi bidang.  \ns
+\end{proof}
+
+Fakta utama yang dinyatakan oleh versi ruang vektor berdimensi hingga dari
+\emph{teorema spektral} ialah bahwa setiap operator yang dapat didiagonalkan pada ruang demikian dapat
+ditulis sebagai kombinasi linear operator-operator proyeksi, dengan koefisien kombinasi
+linear tersebut berupa nilai-nilai eigen operator dan jangkauan proyeksinya berupa
+ruang eigen yang bersesuaian. Jadi, jika $T$ adalah operator yang dapat didiagonalkan pada ruang vektor
+berdimensi hingga $V$, maka $V$ memiliki basis yang terdiri atas vektor-vektor eigen dari~$T$.
+
+Berikut pernyataan formal teorema tersebut.
+
+\begin{thm}[Teorema Spektral: versi ruang vektor berdimensi hingga] Andaikan $T$ adalah
+ \index{spektral!teorema!operator yang dapat didiagonalkan pada ruang vektor}%
+operator yang dapat didiagonalkan pada ruang vektor berdimensi hingga~$V$. Misalkan $\lambda_1, \dots, \lambda_n$ adalah
+nilai-nilai eigen (berbeda) dari~$T$. Maka terdapat resolusi identitas $I_V =
+E_1 + \dots + E_n$, dengan untuk setiap $k$ jangkauan proyeksi $E_k$ merupakan
+ruang eigen yang berkaitan dengan~$\lambda_k$, dan selanjutnya
+     \[ T = \lambda_1E_1 +\dots + \lambda_nE_n\,. \]
+\end{thm}
+
+\begin{proof} Pembuktian teorema ini dapat ditemukan dalam \cite{HoffmanK:1971} pada halaman~212. \ns
+\end{proof}
+
+\begin{exam} Misalkan $T$ adalah operator pada (ruang vektor real) $\R^2$ yang representasi matriksnya
+adalah $\begin{bmatrix} -7 &   8 \\ -16 &  17 \end{bmatrix}$.
+
+\vskip 3 pt
+
+ \begin{enumerate}
+  \item Polinomial karakteristik untuk~$T$ adalah
+                     $\sbsb cT(\lambda) = \lambda^2 - 10\lambda + 9$.
+
+\vskip 3 pt
+
+  \item Ruang eigen $M_1$ yang berkaitan dengan nilai eigen $1$ adalah $\spn \{(1,1)\}$.
+
+\vskip 3 pt
+
+  \item Ruang eigen $M_2$ yang berkaitan dengan nilai eigen $9$ adalah $\spn \{(1,2)\}$.
+
+\vskip 3 pt
+
+  \item Kita dapat menulis $T$ sebagai kombinasi linear operator-operator proyeksi. Secara khusus,
+   \[ T = 1\cdot E_1 + 9\cdot E_2 \text{ dengan } [E_1] = \begin{bmatrix} 2 & -1 \\ 2 & -1 \end{bmatrix}
+\text{ dan } [E_2] = \begin{bmatrix} -1 & 1 \\ -2 & 2 \end{bmatrix}\,. \]
+
+\vskip 3 pt
+
+  \item Perhatikan bahwa jumlah $[E_1]$ dan $[E_2]$ adalah matriks identitas dan hasil kali keduanya
+adalah matriks nol.
+
+\vskip 3 pt
+
+  \item Matriks $S = \begin{bmatrix} 1 &  1  \\ 1 &  2 \end{bmatrix}$ mendiagonalkan
+$[T]$. Artinya, $S^{-1}\,[T]\,S = \begin{bmatrix} 1 &  0  \\ 0 &  9 \end{bmatrix}$.
+
+
+\vskip 3 pt
+
+
+  \item Matriks yang merepresentasikan $\sqrt T$ adalah $\begin{bmatrix} -1 &  2  \\ -4 &  5 \end{bmatrix}$.
+ \end{enumerate}
+\end{exam}
+
+\begin{exer} Misalkan $T$ adalah operator pada $\R^3$ yang representasi matriksnya
+    \[
+      \begin{bmatrix}
+               2  &  0  &  0 \\
+              -1  &  3  &  2 \\
+               1  & -1  &  0
+      \end{bmatrix}.
+    \]
+  \begin{enumerate}
+    \item Tentukan polinomial karakteristik dan polinomial minimal dari~$T$.
+    \item Apa yang dapat disimpulkan dari bentuk polinomial minimal tersebut?
+    \item Tentukan matriks yang mendiagonalkan~$T$. Apa bentuk diagonal $T$ yang dihasilkan oleh matriks ini?
+    \item Tentukan (representasi matriks dari)~$\sqrt T$.
+  \end{enumerate}
+\end{exer}
+
+\begin{defn} Operator ruang vektor $T$ disebut
+ \index{nilpoten}%
+\df{nilpoten} jika $T^n = \vc 0$ untuk suatu $n \in \N$.
+\end{defn}
+
+Operator pada ruang vektor berdimensi hingga tidak harus dapat didiagonalkan. Jika tidak,
+seberapa dekat operator itu dengan operator yang dapat didiagonalkan? Berikut salah satu jawabannya.
+
+\begin{thm} Misalkan $T$ adalah operator pada ruang vektor berdimensi hingga~$V$. Andaikan polinomial minimal
+untuk $T$ terfaktor sepenuhnya menjadi faktor-faktor linear
+   \[ m_T(x) = (x - \lambda_1)^{r_1} \dots (x - \lambda_k)^{r_k} \]
+dengan $\lambda_1, \dots \lambda_k$ merupakan nilai-nilai eigen (berbeda) dari~$T$. Untuk setiap $j$, misalkan
+$W_j = \ker(T - \lambda_jI)^{r_j}$ dan $E_j$ adalah proyeksi $V$ ke $W_j$ sepanjang
+$W_1 + \dots + W_{j-1} + W_{j+1} + \dots + W_k$. Maka
+   \[ V = W_1 \oplus W_2 \oplus \dots \oplus W_k, \]
+setiap $W_j$ invarian terhadap $T$, dan $I_V = E_1 + \dots + E_k$. Selanjutnya, operator
+   \[ D = \lambda_1E_1 + \dots + \lambda_kE_k \]
+dapat didiagonalkan, operator
+   \[ N = T - D \]
+nilpoten, dan $N$ berkomutasi dengan~$D$.
+\end{thm}
+
+\begin{proof} Lihat~\cite{HoffmanK:1971}, halaman 222--223. \ns
+\end{proof}
+
+\begin{defn} Karena dalam teorema sebelumnya $T = D + N$, dengan $D$ dapat didiagonalkan dan $N$ nilpoten,
+kita menyebut $D$ sebagai
+ \index{dapat didiagonalkan!bagian}%
+ \index{bagian!dapat didiagonalkan}%
+\df{bagian yang dapat didiagonalkan} dari $T$, dan $N$ sebagai
+ \index{nilpoten!bagian}%
+ \index{bagian!nilpoten}%
+\df{bagian nilpoten} dari~$T$.
+\end{defn}
+
+\begin{exer} Misalkan $T$ adalah operator pada $\R^3$ yang representasi matriksnya
+ \[ \begin{bmatrix}
+        3  &  1  & -1 \\
+        2  &  2  & -1 \\
+        2  &  2  &  0
+  \end{bmatrix}. \]
+
+ \begin{enumerate}
+  \item Tentukan polinomial karakteristik dan polinomial minimal dari~$T$.
+  \item Tentukan ruang-ruang eigen dari~$T$.
+  \item Tentukan bagian yang dapat didiagonalkan $D$ dan bagian nilpoten $N$ dari~$T$.
+  \item Tentukan matriks yang mendiagonalkan~$D$. Apa bentuk diagonal
+dari $D$ yang dihasilkan oleh matriks ini?
+  \item Tunjukkan bahwa $D$ berkomutasi dengan~$N$.
+ \end{enumerate}
+\end{exer}
+\section{Operator Normal pada Ruang Hasil Kali Dalam}
+\begin{defn} Misalkan $V$ suatu ruang vektor. Sebuah fungsi $s$ yang mengaitkan setiap pasangan vektor
+$x$ dan $y$ dalam $V$ dengan suatu skalar
+ \index{s@$s(x,y)$ (hasil kali dalam semu)}%
+ \index{<s@$s(x,y)$ (hasil kali dalam semu)}%
+$s(x,y)$ adalah
+ \index{hasil kali dalam semu}%
+ \index{hasil kali dalam semu!ruang}%
+ \index{hasil kali!dalam semu}%
+ \index{ruang!hasil kali dalam semu}%
+\df{hasil kali dalam semu} pada $V$ apabila untuk setiap $x$, $y$, $z \in V$ dan $\alpha \in \K$ keempat syarat berikut dipenuhi:
+ \begin{enumerate}
+   \item $s(x + y , z) = s(x,z) + s(y,z)$;
+   \item $s(\alpha x,y) = \alpha s(x,y)$;
+   \item $s(x,y) = \conj{s(y,x)}$; dan
+   \item $s(x,x) \ge 0$.
+ \end{enumerate}
+ Jika, selain itu, fungsi $s$ memenuhi
+  \begin{enumerate}
+    \item Untuk setiap $x$ tak nol dalam $V$, berlaku $s(x,x) > 0$.
+  \end{enumerate}
+maka $s$ adalah
+ \index{hasil kali dalam}%
+ \index{hasil kali dalam!ruang}%
+ \index{hasil kali!dalam}%
+ \index{ruang!hasil kali dalam}%
+\df{hasil kali dalam} pada~$V$. Hasil kali dalam dua vektor $x$ dan $y$ biasanya akan kita tuliskan sebagai
+ \index{<bracpnt@$\langle x,y \rangle$ (hasil kali dalam)}%
+$\langle x,y \rangle$, bukan $s(x,y)$.
+
+\noindent Garis atas pada (c) menyatakan konjugasi kompleks (sehingga berlebihan dalam kasus ruang vektor real).
+Syarat (a) dan (b) memperlihatkan bahwa hasil kali dalam semu bersifat linear dalam variabel pertamanya. Syarat (a) dan (b) dalam
+proposisi~\ref{00015001} menyatakan bahwa hasil kali dalam kompleks bersifat
+ \index{konjugat!linear}%
+ \index{linear!konjugat}%
+\df{linear konjugat} dalam variabel keduanya. Jika suatu fungsi bernilai skalar dengan dua variabel pada ruang hasil kali dalam semu kompleks
+bersifat linear dalam satu variabel dan linear konjugat dalam variabel lainnya, fungsi itu sering disebut
+ \index{seskuilinear}%
+ \index{linear!seskuilinear}%
+\df{seskuilinear}. (Awalan ``sesqui-'' berarti ``satu setengah''.) Istilah \emph{seskuilinear} juga akan kita gunakan untuk
+fungsi bilinear pada ruang hasil kali dalam semu real. Secara bersama-sama, syarat (a)--(d) menyatakan bahwa hasil kali dalam semu itu merupakan
+\emph{bentuk seskuilinear semidefinit positif dan simetris konjugat}; bersama dengan syarat ketat tambahan di atas, bentuk itu definit positif.
+\end{defn}
+
+\begin{notn}\label{norm_notn} Jika $V$ adalah ruang vektor yang telah dilengkapi dengan
+hasil kali dalam semu dan $x \in V$, kita memperkenalkan singkatan
+  \[ \norm x := \sqrt{s(x,x)} \]
+yang dibaca \emph{norma $x$} atau \emph{panjang~$x$}. (Istilah yang agak
+optimistis ini dibenarkan, setidaknya ketika $s$ merupakan hasil kali dalam, oleh proposisi~\ref{00015025} di bawah.)
+\end{notn}
+
+\begin{prop}\label{00015001} Jika $x$, $y$, dan $z$ merupakan vektor dalam suatu ruang dengan hasil kali dalam semu $s$ dan $\alpha \in \K$, maka
+ \begin{enumerate}[label=\rm{(\alph*)}]
+   \item $s(x,y + z)  = s(x,y) + s(x,z)$,
+   \item $s(x,\alpha y) = \conj\alpha s(x,y)$, dan
+   \item jika $s$ merupakan hasil kali dalam, maka $s(x,x) = 0$ jika dan hanya jika $x = \vc 0$.
+ \end{enumerate}
+\end{prop}
+
+\begin{exam}\label{000150012} Untuk vektor $x = (x_1,x_2,\dots,x_n)$ dan $y = (y_1,y_2,\dots,y_n)$
+yang termasuk dalam $\K^n$, definisikan
+   \[ \langle x,y \rangle = \sum_{k=1}^n x_k \conj{y_k}\,. \]
+Maka
+ \index{K@$\K^n$!sebagai ruang hasil kali dalam}%
+ \index{hasil kali dalam!ruang!$\K^n$ sebagai}%
+$\K^n$ merupakan ruang hasil kali dalam.
+\end{exam}
+
+\begin{exam}\label{000150013} Misalkan $l_2 = l_2(\N)$ adalah himpunan semua barisan bilangan
+kompleks yang terjumlah secara kuadrat. (Suatu barisan $x = (x_k)_{k=1}^\infty$ disebut
+ \index{terjumlah secara kuadrat}%
+ \index{dapat dijumlahkan!kuadrat}%
+ \index{l@$l_2 = l_2(\N)$!barisan terjumlah secara kuadrat}%
+ \index{l@$l_2 = l_2(\N)$!sebagai ruang hasil kali dalam}%
+ \index{hasil kali dalam!ruang!$l_2$ sebagai}%
+\df{terjumlah secara kuadrat} jika $\sum_{k=1}^\infty \abs{x_k}^2 < \infty$.) (Operasi ruang vektornya didefinisikan
+titik demi titik.) Untuk vektor $x = (x_1,x_2,\dots)$ dan $y = (y_1,y_2,\dots)$ dalam $l_2$, definisikan
+   \[ \langle x,y \rangle = \sum_{k=1}^\infty x_k \conj{y_k}\,. \]
+Maka $l_2$ merupakan ruang hasil kali dalam. (Antara lain, harus ditunjukkan bahwa
+deret dalam definisi di atas benar-benar konvergen.) Ruang serupa adalah $l_2(\Z)$, yakni himpunan semua
+ \index{l@$l_2(\Z)$!barisan dua sisi terjumlah secara kuadrat}%
+ \index{l@$l_2(\Z)$!sebagai ruang hasil kali dalam}%
+ \index{hasil kali dalam!ruang!$l_2(\Z)$ sebagai}%
+barisan dua sisi yang terjumlah secara kuadrat $x = (\dots,x_{-2},x_{-1},x_0,x_1,x_2,\dots)$ dengan hasil kali dalam yang sudah jelas.
+\end{exam}
+
+\begin{exam}\label{000150014} Untuk $a < b$, misalkan $\fml C([a,b])$ adalah keluarga semua
+ \index{C@$\fml C([a,b])$!sebagai ruang hasil kali dalam}%
+ \index{hasil kali dalam!ruang!$\fml C([a,b])$ sebagai}%
+fungsi kontinu bernilai kompleks pada interval $[a,b]$. Untuk setiap $f$, $g \in \fml C([a,b])$, definisikan
+   \[ \langle f,g \rangle = \int_a^b f(x) \conj{g(x)}\,dx. \]
+Maka $\fml C([a,b])$ merupakan ruang hasil kali dalam.
+\end{exam}
+
+Berikut adalah fakta tunggal yang paling berguna mengenai hasil kali dalam semu. Fakta ini merupakan suatu ketaksamaan yang secara beragam
+dinisbatkan kepada Cauchy, Schwarz, Bunyakowsky, atau gabungan nama ketiganya.
+
+\begin{thm}[Ketaksamaan Schwarz]\label{00015002} Misalkan $s$ suatu hasil kali dalam semu yang didefinisikan pada ruang vektor~$V$.
+ \index{ketaksamaan Schwarz}%
+ \index{ketaksamaan!Schwarz}%
+Maka ketaksamaan
+   \[ \abs{s(x,y)} \le \norm x \,\norm y. \]
+berlaku untuk semua vektor $x$ dan~$y$ dalam~$V$.
+\end{thm}
+
+\begin{proof}[\emph{Petunjuk pembuktian}] Tetapkan $x$, $y \in V$. Untuk setiap $\alpha \in \K$, kita mengetahui bahwa
+  \begin{equation}\label{Schwarz_ineq}
+      0 \le s(x - \alpha y, x - \alpha y) .
+  \end{equation}
+Uraikan ruas kanan~\eqref{Schwarz_ineq} menjadi empat suku. Jika $s(y,x)=0$, kesimpulannya langsung. Jika tidak,
+tuliskan $s(y,x)$ dalam bentuk polar: $s(y,x) = r e^{i\theta}$, dengan $r > 0$ dan $\theta \in \R$.
+Kemudian, dalam ketaksamaan yang diperoleh, tinjau $\alpha$ yang berbentuk $e^{-i\theta}t$ dengan
+$t \in \R$. Perhatikan bahwa kini ruas kanan~\eqref{Schwarz_ineq} merupakan polinom kuadrat dalam~$t$. Apa yang dapat Anda katakan tentang
+diskriminannya? \ns
+\end{proof}
+
+\begin{prop} Misalkan $V$ suatu ruang vektor dengan hasil kali dalam semu $s$ dan $z \in V$. Maka $s(z,z) = 0$
+jika dan hanya jika $s(z,y) = 0$ untuk semua $y \in V$.
+\end{prop}
+
+\begin{prop} Misalkan $V$ suatu ruang vektor yang telah dilengkapi dengan hasil kali dalam semu $s$. Maka himpunan
+$L := \{z \in V\colon s(z,z) = 0\}$ merupakan subruang vektor dari $V$, dan ruang vektor hasil bagi $V/L$ dapat
+dijadikan ruang hasil kali dalam dengan mendefinisikan
+    \[ \langle\, [x],[y]\, \rangle := s(x,y) \]
+untuk semua $[x]$, $[y] \in V/L$.
+\end{prop}
+
+Proposisi berikut menunjukkan bahwa hasil kali dalam bersifat kontinu dalam variabel pertamanya. Simetri konjugat kemudian menjamin
+kekontinuan dalam variabel keduanya.
+
+\begin{prop} Jika $(x_n)$ merupakan barisan dalam ruang hasil kali dalam $V$ yang konvergen ke suatu
+vektor $a \in V$, maka $\langle x_n,y \rangle \sto \langle a,y \rangle$ untuk setiap $y \in V$.
+\end{prop}
+
+\begin{exam} Jika $(a_k)$ merupakan barisan bilangan real yang terjumlah secara kuadrat, maka deret $\sum_{k=1}^\infty k^{-1}a_k$
+konvergen mutlak.
+\end{exam}
+
+\begin{exer} Misalkan $0 < a < b$.
+ \begin{enumerate}
+  \item Jika $f$ dan $g$ merupakan fungsi kontinu bernilai real pada
+interval $[a,b]$, maka
+   \[\left(\int_a^b f(x)g(x)\,dx\right)^2
+             \le \int_a^b\bigl(f(x)\bigr)^2\,dx \cdot
+                       \int_a^b\bigl(g(x)\bigr)^2\,dx.\]
+
+\vskip 3 pt
+
+  \item Gunakan bagian (a) untuk mencari bilangan $M$ dan $N$ (yang bergantung pada $a$
+dan~$b$) sedemikian sehingga
+   \[M(b-a) \le \ln\left(\frac ba\right) \le N(b-a).\]
+
+\vskip 3 pt
+
+  \item Gunakan bagian (b) untuk menunjukkan bahwa $2.5 \le e \le 3$.
+ \end{enumerate}
+\end{exer}
+
+\begin{proof}[\emph{Petunjuk pembuktian}] Untuk (b), cobalah $f(x) = \sqrt x$ dan $g(x) = \dfrac1{\sqrt x}$. Kemudian cobalah
+$f(x) = \dfrac1x$ dan $g(x) = 1$. Untuk (c), cobalah $a = 1$ dan $b = 3$. Kemudian cobalah $a = 2$ dan $b = 5$. \ns
+\end{proof}
+
+\begin{defn} Misalkan $V$ suatu ruang vektor. Sebuah fungsi
+ \index{<unopn@$\norm x$ (norma suatu vektor~$x$)}%
+$\norm{\hphantom{x}} \colon V \sto \R \colon x \mapsto \norm{x}$ adalah
+ \index{norma}%
+\df{norma} pada $V$ jika
+ \begin{enumerate}
+  \item $\norm{x + y} \le \norm{x} + \norm{y}$ \qquad  untuk semua $x$, $y \in V$;
+  \item $\norm{\alpha x} = \abs{\alpha}\,\norm{x}$\qquad untuk semua $x \in V$ dan
+$\alpha \in \K$; dan
+  \item jika $\norm{x} = 0$, maka $x = \vc 0$.
+ \end{enumerate}
+Ungkapan $\norm{x}$ dapat dibaca sebagai ``\emph{norma} $x$'' atau ``\emph{panjang}
+ \index{panjang}%
+$x$''. Jika fungsi $\norm{\hphantom{x}}$ memenuhi (a) dan (b)
+di atas (tetapi mungkin tidak memenuhi~(c)), fungsi itu merupakan
+ \index{seminorma}%
+\df{seminorma} pada~$V$.
+
+Ruang vektor yang telah dilengkapi dengan suatu norma disebut
+ \index{bernorma!ruang linear}%
+ \index{bernorma!ruang vektor|seeonly{ruang linear bernorma}}%
+ \index{ruang!linear bernorma}%
+\df{ruang linear bernorma} (atau
+ \index{vektor!ruang!bernorma}%
+\df{ruang vektor bernorma}). Vektor dalam ruang linear bernorma yang normanya $1$ disebut
+ \index{satuan!vektor}%
+ \index{vektor!satuan}%
+\df{vektor satuan}.
+\end{defn}
+
+\begin{exer} Tunjukkan mengapa langsung jelas dari definisi bahwa $\norm{\vc 0} = 0$ dan bahwa norma
+(dan seminorma) hanya dapat mengambil nilai nonnegatif.
+\end{exer}
+
+Setiap ruang hasil kali dalam merupakan ruang linear bernorma. Dalam bahasa yang lebih tepat, hasil kali dalam pada suatu ruang vektor menginduksi
+ \index{norma!diinduksi oleh hasil kali dalam}%
+ \index{diinduksi!norma}
+suatu norma pada ruang tersebut.
+
+\begin{prop}\label{00015025} Misalkan $V$ suatu ruang hasil kali dalam. Pemetaan $x \mapsto \norm
+x$ pada $V$ yang didefinisikan dalam~\ref{norm_notn} merupakan norma pada~$V$.
+\end{prop}
+
+Dan setiap ruang linear bernorma merupakan ruang metrik. Ingat kembali definisi berikut.
+
+\begin{defn}\label{C019614} Misalkan $M$ suatu himpunan tak kosong. Sebuah fungsi $d \colon M \times M \sto \R$ adalah
+ \index{metrik}%
+\df{metrik} (atau
+ \index{jarak!fungsi}%
+ \index{d@$d(x,y)$ (jarak antara titik $x$ dan $y$)}%
+\df{fungsi jarak}) pada $M$ jika untuk semua $x$, $y$, $z \in M$
+ \begin{enumerate}
+     \item $d(x,y) = d(y,x)$,
+     \item $d(x,y) \le d(x,z) + d(z,y)$, \qquad (
+ \index{ketaksamaan segitiga}%
+ \index{ketaksamaan!segitiga}%
+\emph{ketaksamaan segitiga})
+     \item $d(x,x) = 0$, dan
+     \item $d(x,y) = 0$ hanya jika $x = y$.
+ \end{enumerate}
+Jika $d$ merupakan metrik pada himpunan $M$, kita mengatakan bahwa pasangan $(M,d)$ merupakan
+ \index{metrik!ruang}%
+ \index{ruang!metrik}%
+\df{ruang metrik}. Notasi ``$d(x,y)$'' dibaca ``jarak antara $x$
+dan~$y$''. (Seperti biasa, kita mengganti perumusan yang benar ``Misalkan $(M,d)$ suatu ruang metrik \dots''
+dengan ungkapan ``Misalkan $M$ suatu ruang metrik \dots''.)
+
+Jika $d \colon M \times M \sto \R$ memenuhi syarat (1)--(3), tetapi tidak memenuhi (4), maka $d$ merupakan
+ \index{pseudometrik}%
+\df{pseudometrik} pada~$M$.
+\end{defn}
+
+Seperti disebutkan di atas, setiap ruang linear bernorma merupakan ruang metrik. Secara lebih tepat, norma pada suatu ruang vektor
+menginduksi suatu
+ \index{metrik!diinduksi oleh norma}%
+metrik $d$, yang didefinisikan oleh $d(x,y) = \norm{x - y}$. Dengan kata lain, jarak antara
+dua vektor adalah panjang selisih keduanya.
+  \[ \xy
+       \Atriangle/<-`<-`>/[``;x`x-y`y]
+  \endxy \]
+Jika tidak ada metrik lain yang ditentukan, kita selalu memandang ruang linear bernorma sebagai ruang metrik
+ \index{diinduksi!metrik}%
+di bawah metrik terinduksi ini. Metrik tersebut disebut \emph{metrik yang diinduksi oleh norma}.
+
+\begin{exam}\label{0001503} Misalkan $V$ suatu ruang linear bernorma. Definisikan
+$d\colon V \times V \sto \R$ dengan $d(x,y) = \norm{x - y}$. Maka $d$ merupakan metrik pada~$V$.
+Jika $V$ hanya merupakan ruang berseminorma, maka $d$ merupakan pseudometrik.
+\end{exam}
+
+\begin{defn} Vektor $x$ dan $y$ dalam ruang hasil kali dalam $V$ disebut
+ \index{ortogonal}%
+\df{ortogonal} (atau
+ \index{tegak lurus}%
+\df{tegak lurus}) jika $\langle x,y \rangle = 0$. Dalam hal ini kita menulis
+ \index{<binrelperp@$x \perp y$ (vektor ortogonal)}%
+$x \perp y$. Subhimpunan $A$ dan $B$ dari $V$ disebut \df{ortogonal} jika $a \perp b$ untuk setiap $a
+\in A$ dan $b \in B$. Dalam hal ini kita menulis $A \perp B$.
+\end{defn}
+
+\begin{defn} Jika $M$ dan $N$ merupakan subruang dari ruang hasil kali dalam $V$, kita menggunakan notasi
+$V = M \oplus N$ untuk menyatakan bukan hanya bahwa $V$ merupakan jumlah langsung (ruang vektor) dari $M$
+dan $N$, melainkan juga bahwa $M$ dan $N$ ortogonal. Dengan demikian, kita mengatakan bahwa $V$ merupakan
+ \index{internal!jumlah langsung ortogonal}%
+ \index{langsung!jumlah!ortogonal}%
+ \index{ortogonal!jumlah langsung!ruang hasil kali dalam}%
+\df{jumlah langsung ortogonal} (\df{internal}) dari $M$ dan~$N$.
+\end{defn}
+
+\begin{prop} Misalkan $a$ suatu vektor dalam ruang hasil kali dalam $V$. Maka $a \perp x$ untuk setiap
+$x \in V$ jika dan hanya jika $a = 0$.
+\end{prop}
+
+\begin{prop} Dalam ruang hasil kali dalam, $x \perp y$ jika dan hanya jika $\norm{x + \alpha y} = \norm{x - \alpha y}$
+untuk semua skalar $\alpha$.
+\end{prop}
+
+\begin{prop}[Teorema Pythagoras]\label{00015037} Jika $x \perp y$ dalam suatu ruang hasil
+ \index{teorema Pythagoras}%
+kali dalam, maka
+   \[ \norm{x + y}^2 = \norm x^2 + \norm y^2\,. \]
+\end{prop}
+
+\begin{defn}\label{0001504} Misalkan $V$ dan $W$ merupakan ruang hasil kali dalam di atas medan skalar yang sama. Untuk $(v,w)$ dan
+$(v',w')$ dalam $V \times W$ dan $\alpha \in \K$, definisikan
+ \begin{align*}
+      (v,w) + (v',w') &= (v + v', w + w') \\
+\intertext{dan}
+         \alpha(v,w) &= (\alpha v,\alpha w)\,.
+ \end{align*}
+Hasilnya adalah suatu ruang vektor, yaitu \emph{jumlah langsung (eksternal)} dari $V$ dan~$W$.
+Untuk menjadikannya ruang hasil kali dalam, definisikan
+   \[ \langle (v,w),(v',w') \rangle = \langle v,v' \rangle + \langle w,w' \rangle. \]
+Definisi ini menjadikan jumlah langsung $V$ dan $W$ suatu ruang hasil kali dalam. Ruang tersebut merupakan
+ \index{eksternal!jumlah langsung}%
+ \index{langsung!jumlah!eksternal}%
+ \index{langsung!jumlah!ruang hasil kali dalam}%
+ \index{ortogonal!jumlah langsung!ruang hasil kali dalam}%
+ \index{<binopdirectsum@$\oplus$ (jumlah langsung ortogonal)}%
+\df{jumlah langsung} dari $V$ dan $W$ yang \df{ortogonal eksternal}, dan dinotasikan dengan $V \oplus W$.
+\end{defn}
+
+Perhatikan bahwa notasi $\oplus$ yang sama digunakan baik untuk jumlah langsung internal maupun eksternal,
+serta baik untuk jumlah langsung ruang vektor (lihat definisi~\ref{000082}) maupun jumlah langsung ortogonal.
+Jadi, ketika melihat simbol $V \oplus W$, penting untuk mengetahui kategori mana yang sedang kita gunakan:
+ruang vektor atau ruang hasil kali dalam. Hal ini khususnya penting karena kata ``ortogonal'' lazim dihilangkan
+sebagai pewatas ``jumlah langsung'', bahkan ketika sifat ortogonal memang dimaksudkan.
+
+\begin{exam} Dalam $\R^2$, misalkan $M$ adalah sumbu-$x$ dan $L$ adalah garis dengan persamaan $y = x$.
+Jika $\R^2$ dipandang sebagai ruang vektor (real), penulisan $\R^2 = M
+\oplus L$ benar. Sebaliknya, jika $\R^2$ dipandang sebagai ruang hasil kali dalam (real), maka
+$\R^2 \ne M \oplus L$ (karena $M$ dan $L$ tidak tegak lurus).
+\end{exam}
+
+\begin{prop} Misalkan $V$ suatu ruang hasil kali dalam. Hasil kali dalam pada $V$, yang dipandang sebagai pemetaan
+dari $V \oplus V$ ke $\K$, bersifat kontinu. Demikian pula normanya, yang dipandang sebagai pemetaan dari $V$
+ke $\R$.
+\end{prop}
+
+Mengenai pembuktian proposisi di atas, perhatikan bahwa pemetaan $(v,v') \mapsto
+\norm v + \norm{v'}$, $(v,v') \mapsto \sqrt{\norm v^2 + \norm{v'}^2}$, dan $(v,v')
+\mapsto \max\{\norm v, \norm{v'}\}$ semuanya merupakan norma pada $V \oplus V$. Norma manakah yang diinduksi
+oleh hasil kali dalam pada $V \oplus V$? Mengapa pilihan norma tidak berpengaruh ketika kita membuktikan
+bahwa hasil kali dalam tersebut kontinu?
+
+\begin{prop}[Hukum jajaran genjang]\label{parallelogram_law} Jika $x$ dan $y$ merupakan vektor dalam suatu ruang hasil kali
+ \index{hukum jajaran genjang}%
+dalam, maka
+   \[ \norm{x + y}^2 + \norm{x - y}^2 = 2\norm x^2 + 2\norm y^2\,. \]
+\end{prop}
+
+Walaupun setiap hasil kali dalam menginduksi suatu norma, tidak setiap norma berasal dari hasil kali dalam.
+
+\begin{exam}\label{00015061} Tidak ada hasil kali dalam pada ruang $\fml C([0,1])$ yang menginduksi norma seragam.
+\end{exam}
+
+\begin{proof}[\emph{Petunjuk pembuktian}] Gunakan proposisi sebelumnya. \ns
+\end{proof}
+
+\begin{prop}[Identitas polarisasi]\label{0001507} Jika $x$ dan $y$ merupakan vektor
+ \index{identitas polarisasi}%
+dalam ruang hasil kali dalam kompleks, maka
+ \[ \langle x,y \rangle = \tfrac14 (\norm{x + y}^2 - \norm{x - y}^2
+                       + i\,\norm{x + iy}^2 - i\,\norm{x - iy}^2)\,. \]
+\end{prop}
+
+Apakah identitas yang benar untuk ruang hasil kali dalam \emph{real}?
+
+\begin{notn}\label{0001511} Misalkan $V$ suatu ruang hasil kali dalam, $x \in V$, dan $A$,
+$B \subseteq V$. Jika $x \perp a$ untuk setiap $a \in A$, kita menulis $x \perp A$; dan jika $a
+\perp b$ untuk setiap $a \in A$ dan $b \in B$, kita menulis $A \perp B$.
+Kita mendefinisikan $A^\perp$, yaitu
+ \index{ortogonal!komplemen}%
+ \index{komplemen!ortogonal}%
+ \index{<unopur@$A^\perp$ (komplemen ortogonal)}%
+\df{komplemen ortogonal} dari $A$, sebagai $\{x \in V\colon x \perp A\}$. Karena frasa ``komplemen ortogonal dari $A$''
+agak panjang, terutama jika digunakan berulang kali, simbol ``$A^\perp$'' biasanya dilafalkan ``A perp''.
+Kita menulis $A^{\perp\perp}$ untuk $\left(A^\perp\right)^\perp$.
+\end{notn}
+
+\begin{prop}\label{0001512} Jika $A$ merupakan subhimpunan dari ruang hasil kali dalam $V$, maka
+$A^\perp$ merupakan subruang linear tertutup dari~$V$.
+\end{prop}
+
+\begin{prop}[Ortonormalisasi Gram--Schmidt] Jika $(v^k)$ merupakan barisan bebas linear dalam
+ \index{ortonormalisasi Gram--Schmidt}%
+ \index{ortonormalisasi}%
+ruang hasil kali dalam~$V$, maka terdapat barisan ortonormal $(e^k)$ dalam~$V$ sedemikian sehingga
+$\spn\{v^1, \dots, v^n\} = \spn\{e^1, \dots, e^n\}$ untuk setiap $n \in \N$.
+\end{prop}
+
+\begin{cor}\label{0001514} Jika $M$ merupakan subruang dari ruang hasil kali dalam berdimensi
+hingga $V$, maka $V = M \oplus M^\perp$.
+\end{cor}
+
+Akan berguna untuk mengatakan bahwa suatu barisan \emph{pada akhirnya} memiliki sifat tertentu atau
+bahwa barisan itu \emph{sering} memiliki sifat tersebut.
+
+\begin{defn}\label{C013121} Misalkan $(x_n)$ suatu barisan elemen dari himpunan $S$ dan $P$ suatu
+sifat yang mungkin dimiliki anggota $S$. Kita mengatakan bahwa barisan $(x_n)$
+ \index{pada akhirnya}%
+\df{pada akhirnya} memiliki sifat $P$ jika terdapat $n_0 \in \N$ sedemikian sehingga $x_n$ memiliki
+sifat $P$ untuk setiap $n \ge n_0$. (Cara lain untuk menyatakan hal yang sama: $x_n$ memiliki
+sifat $P$ untuk semua kecuali sejumlah hingga~$n$.)
+\end{defn}
+
+\begin{exam}\label{exam13122} Misalkan $l_c$ menyatakan
+ \index{l@$l_c$!barisan yang pada akhirnya nol}%
+ \index{l@$l_c$!sebagai ruang vektor}%
+ruang vektor yang terdiri atas semua barisan bilangan kompleks yang pada akhirnya nol;
+yaitu, himpunan semua barisan yang hanya memiliki sejumlah hingga entri tak nol. Barisan tersebut juga disebut barisan dengan
+ \index{hingga!tumpuan}%
+ \index{tumpuan!hingga}%
+\emph{bertumpuan hingga}. Operasi ruang vektornya didefinisikan titik demi titik. Kita menjadikan ruang $l_c$ suatu
+ \index{l@$l_c$!sebagai ruang hasil kali dalam}%
+ \index{hasil kali dalam!ruang!$l_c$ sebagai}%
+ruang hasil kali dalam dengan
+mendefinisikan $\langle a,b \rangle = \langle\, (a_n),(b_n)\, \rangle := \sum_{k=1}^\infty a_k \conj{b_k}$.
+\end{exam}
+
+\begin{defn}\label{C013131} Misalkan $(x_n)$ suatu barisan elemen dari himpunan $S$ dan $P$ suatu
+sifat yang mungkin dimiliki anggota $S$. Kita mengatakan bahwa barisan $(x_n)$
+ \index{sering}%
+\df{sering} memiliki sifat $P$ jika untuk setiap $k \in \N$ terdapat $n \ge k$ sedemikian sehingga
+$x_n$ memiliki sifat~$P$. (Perumusan yang ekuivalen: $x_n$ memiliki sifat $P$ untuk tak hingga banyak
+nilai~$n$.)
+\end{defn}
+
+\begin{exam}\label{exam13132} Misalkan $V = l_2$ merupakan ruang hasil kali dalam semua barisan bilangan kompleks
+yang terjumlah secara kuadrat (lihat contoh~\ref{000150013}) dan $M = l_c$ (lihat contoh~\ref{exam13122}). Maka kesimpulan~\ref{0001514} gagal.
+\end{exam}
+
+\begin{defn}\label{def_alg_dual} Suatu
+ \index{linear!fungsional}%
+ \index{fungsional!linear}%
+\df{fungsional linear} pada ruang vektor $V$ adalah pemetaan linear dari $V$ ke medan
+skalarnya. Himpunan semua fungsional linear pada $V$ merupakan
+ \index{dual!aljabar}%
+ \index{aljabar!ruang dual}%
+ \index{ruang!dual aljabar}%
+\df{ruang dual} (\df{aljabar}) dari~$V$. Kita akan menggunakan
+ \index{<unopur@$V^\#$ (ruang dual aljabar)}%
+ \index{V@$V^\#$ (ruang dual aljabar)}%
+notasi $V^{\#}$ untuk ruang dual aljabar.
+\end{defn}
+
+\begin{thm}[Teorema Riesz--Fr\'echet]\label{0001601} Jika $f \in V^{\#}$ dengan $V$ suatu
+ \index{teorema Riesz--Fr\'echet!versi berdimensi hingga}%
+ruang hasil kali dalam berdimensi hingga, maka terdapat vektor unik $a$ dalam $V$ sedemikian
+sehingga
+    \[ f(x) = \langle x,a \rangle \]
+untuk semua $x$ dalam $V$.
+\end{thm}
+
+Sebentar lagi kita akan membuktikan (dalam Teorema~\futurexref{4.5.2}{000342}) bahwa setiap fungsional linear kontinu pada ruang hasil
+kali dalam \emph{sebarang} memiliki representasi di atas. Versi berdimensi hingga yang dinyatakan di sini merupakan kasus khusus, karena
+setiap pemetaan linear pada ruang hasil kali dalam berdimensi hingga bersifat kontinu (lihat Proposisi~\futurexref{3.3.9}{00015033}).
+
+\begin{defn}\label{0001602} Misalkan $T\colon V \sto W$ suatu transformasi linear antara ruang
+hasil kali dalam kompleks. Jika terdapat fungsi $T^*\colon W \sto V$ yang memenuhi
+   \[ \langle T\vc v,\vc w \rangle = \langle \vc v,T^*\vc w \rangle \]
+untuk semua $\vc v \in V$ dan $\vc w \in W$, maka $T^*$ merupakan
+ \index{adjoin!operator pada ruang hasil kali dalam}%
+ \index{<unopurstar@$T^*$ (adjoin pada ruang hasil kali dalam)}%
+ \index{T@$T^*$ (adjoin pada ruang hasil kali dalam)}%
+\df{adjoin} (atau \df{transpos konjugat}, atau \df{konjugat Hermitian}) dari~$T$.
+\end{defn}
+
+\begin{prop}\label{00016021} Jika $T\colon V \sto W$ merupakan pemetaan linear antara ruang
+hasil kali dalam berdimensi hingga, maka $T^*$ ada.
+\end{prop}
+
+\begin{proof}[\emph{Petunjuk pembuktian}] Fungsional $\phi\colon V \times W \sto \C \colon
+(v,w) \mapsto \langle Tv,w \rangle$ bersifat seskuilinear. Tetapkan $w \in W$ dan definisikan $\phi_w
+\colon V \sto \C \colon v \mapsto \phi(v,w)$. Maka $\phi_w \in V^{\#}$. Gunakan
+\emph{teorema Riesz--Fr\'echet}~(\ref{0001601}). \ns
+\end{proof}
+
+\begin{prop} Jika $T\colon V \sto W$ merupakan pemetaan linear antara ruang hasil kali dalam
+berdimensi hingga, maka fungsi $T^*$ yang didefinisikan di atas bersifat linear dan $T^{**} = T$.
+\end{prop}
+
+\begin{thm}[Teorema dasar aljabar linear]\label{00016025} Jika
+ \index{dasar!teorema aljabar linear}%
+$T\colon V \sto W$ merupakan pemetaan linear antara ruang hasil kali dalam berdimensi hingga, maka
+   \[ \ker T^* = (\ran T)^\perp \quad \text{ dan } \quad \ran T^* = (\ker T)^\perp\,. \]
+\end{thm}
+
+\begin{defn}\label{000161} Suatu operator $U$ pada ruang hasil kali dalam disebut
+ \index{uniter!operator}%
+ \index{operator!uniter}%
+\df{uniter} jika $UU^* = U^*U = I$, yaitu jika $U^* = U^{-1}$.
+\end{defn}
+
+\begin{defn}\label{0001612} Dua operator $R$ dan $T$ pada ruang hasil kali dalam $V$ disebut
+ \index{uniter!ekuivalensi}%
+ \index{ekuivalen!secara uniter}%
+\df{ekuivalen secara uniter} jika terdapat operator uniter $U$ pada $V$ sedemikian sehingga $R =
+U^*TU$.
+\end{defn}
+
+\begin{prop} Jika $V$ merupakan ruang hasil kali dalam, maka ekuivalensi uniter memang merupakan
+relasi ekuivalensi pada~$\ofml L(V)$.
+\end{prop}
+
+\begin{defn} Suatu operator $T$ pada ruang hasil kali dalam berdimensi hingga $V$ disebut
+ \index{uniter!diagonalisasi}%
+ \index{dapat didiagonalkan!secara uniter}%
+\df{dapat didiagonalkan secara uniter} jika terdapat basis ortonormal untuk $V$ yang terhadapnya
+$T$ bersifat diagonal. Secara ekuivalen, suatu operator pada ruang hasil kali dalam berdimensi hingga
+\emph{dengan basis} dapat didiagonalkan secara uniter jika operator itu ekuivalen secara uniter dengan operator
+diagonal.
+\end{defn}
+
+\begin{defn} Suatu operator $T$ pada ruang hasil kali dalam disebut
+ \index{swaadjoin!operator}%
+ \index{operator!swaadjoin}%
+\df{swaadjoin} (atau
+ \index{Hermitian!operator}%
+ \index{operator!Hermitian}%
+\df{Hermitian}) jika $T^* = T$.
+\end{defn}
+
+\begin{defn}\label{000164} Suatu proyeksi $P$ dalam ruang hasil kali dalam disebut
+ \index{proyeksi!ortogonal}%
+ \index{ortogonal!proyeksi!dalam ruang hasil kali dalam}%
+ \index{operator!proyeksi ortogonal}%
+\df{proyeksi ortogonal} jika proyeksi itu swaadjoin. Jika $M$ merupakan jangkauan suatu proyeksi
+ortogonal, kita akan menggunakan notasi
+ \index{PM@$\sbsb PM$ (proyeksi ortogonal ke~$M$)}%
+$\sbsb PM$ untuk proyeksi tersebut, bukan notasi yang lebih rumit~$\sbsb E{M^\perp M}$.
+\end{defn}
+
+\begin{cau} Proyeksi pada ruang vektor atau ruang linear bernorma bersifat linear dan idempoten,
+sedangkan proyeksi ortogonal pada ruang hasil kali dalam bersifat linear, idempoten, dan
+swaadjoin. Situasi yang sebenarnya langsung ini agak dirumitkan oleh kecenderungan umum
+untuk menyebut proyeksi ortogonal hanya sebagai ``proyeksi''. Bahkan, kelak dalam catatan
+ini kita akan menggunakan konvensi tersebut. Dalam ruang hasil kali dalam,
+$\oplus$ biasanya menyatakan jumlah langsung ortogonal dan ``proyeksi'' biasanya berarti
+``proyeksi ortogonal''. Dalam banyak buku pengantar aljabar linear, seluruh pembahasan
+berlangsung dalam $\R^n$, sehingga kadang sulit menentukan apakah pada suatu halaman
+tertentu penulis memperlakukan $\R^n$ sebagai ruang vektor atau sebagai ruang hasil kali
+dalam.
+\end{cau}
+
+\begin{prop} Jika $P$ merupakan proyeksi ortogonal pada ruang hasil kali dalam $V$, maka kita memperoleh
+dekomposisi jumlah langsung ortogonal $V = \ker P \oplus \ran P$.
+\end{prop}
+
+\begin{defn} Jika $I_V = P_1 + P_2 + \dots + P_n$ merupakan resolusi identitas dalam suatu
+ruang hasil kali dalam~$V$ dan setiap $P_k$ merupakan proyeksi ortogonal, kita mengatakan bahwa $I_V =
+P_1 + P_2 + \dots + P_n$ merupakan
+ \index{resolusi identitas!ortogonal}%
+ \index{ortogonal!resolusi identitas}%
+\df{resolusi ortogonal dari identitas}.
+\end{defn}
+
+\begin{prop} Jika $I_V = P_1 + P_2 + \dots + P_n$ merupakan resolusi ortogonal dari identitas
+pada ruang hasil kali dalam $V$, maka $V = \bigoplus_{k=1}^n \ran P_k$.
+\end{prop}
+
+\begin{defn} Suatu operator $N$ pada ruang hasil kali dalam disebut
+ \index{normal!operator}%
+ \index{operator!normal}%
+\df{normal} jika $NN^* = N^*N$.
+\end{defn}
+
+Dua pencapaian besar aljabar linear adalah \emph{teorema spektral} untuk operator pada
+ruang hasil kali dalam (kompleks) berdimensi hingga (lihat \ref{00017}), yang memberikan
+syarat perlu dan cukup yang dapat dinyatakan secara sederhana agar suatu operator dapat
+didiagonalkan secara uniter, dan teorema~\ref{00018}, yang memberikan klasifikasi lengkap
+operator-operator tersebut.
+
+\begin{thm}[Teorema Spektral untuk Ruang Hasil Kali Dalam Kompleks Berdimensi Hingga]\label{00017}
+Misalkan $T$ suatu operator pada ruang hasil kali dalam berdimensi hingga~$V$ dengan nilai-nilai eigen (berbeda)
+ \index{spektral!teorema!operator normal pada ruang hasil kali dalam}%
+$\lambda_1, \dots, \lambda_n$. Maka $T$ dapat didiagonalkan secara uniter jika dan
+hanya jika $T$ normal. Jika $T$ normal, maka terdapat resolusi ortogonal dari identitas
+$I_V = P_1 + \dots + P_n$, dengan jangkauan proyeksi ortogonal $P_k$ untuk setiap $k$
+merupakan ruang eigen yang berkaitan dengan~$\lambda_k$, dan selanjutnya
+     \[ T = \lambda_1P_1 +\dots + \lambda_nP_n\,. \]
+\end{thm}
+
+\begin{proof} Lihat \cite{Roman:2005}, halaman 227. \ns
+\end{proof}
+
+\begin{thm}\label{00018} Dua operator normal pada ruang hasil kali dalam berdimensi hingga
+ \index{normal!operator!syarat untuk ekuivalensi uniter}%
+ekuivalen secara uniter jika dan hanya jika keduanya memiliki nilai-nilai eigen yang sama,
+masing-masing dengan multiplisitas yang sama; yaitu, jika dan hanya jika keduanya memiliki
+polinom karakteristik yang sama.
+\end{thm}
+
+\begin{proof} Lihat \cite{HoffmanK:1971}, halaman 357. \ns
+\end{proof}
+
+Sebagian besar uraian selanjutnya dikhususkan untuk upaya yang sungguh tak sepele dalam mencari
+generalisasi yang tepat dari kedua hasil di atas ke ranah berdimensi tak hingga, serta bentang
+matematika menakjubkan yang mulai terlihat di sepanjang perjalanan tersebut.
+
+\begin{exer} Misalkan $N = \dfrac13\begin{bmatrix}
+                                4+2i & 1-i  & 1-i  \\
+                                1-i  & 4+2i & 1-i  \\
+                                1-i  & 1-i  & 4+2i \end{bmatrix}$.
+
+\vskip 3 pt
+ \begin{enumerate}
+  \item Tunjukkan bahwa matriks $N$ bersifat normal.
+
+\vskip 3 pt
+
+  \item Dengan demikian, menurut \emph{teorema spektral}, $N$
+dapat dituliskan sebagai kombinasi linear proyeksi-proyeksi ortogonal.
+Tunjukkan secara eksplisit cara melakukannya (dan kerjakan perhitungannya).
+ \end{enumerate}
+\end{exer}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\endinput

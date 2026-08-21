@@ -1,0 +1,25 @@
+{
+  "schema": "interlanguage-modular-math",
+  "version": "0.1.0",
+  "encoding": "UTF-8",
+  "identity_policy": "locale-neutral stable IDs; never page-derived",
+  "record_sets": [
+    "resources.jsonl",
+    "units.jsonl",
+    "semantic_units.jsonl",
+    "segments.jsonl",
+    "formula_map.jsonl",
+    "index_terms.csv",
+    "terminology.jsonl",
+    "concepts.jsonl",
+    "concept_relations.jsonl",
+    "exercise_support.jsonl",
+    "assets.jsonl",
+    "relations.jsonl",
+    "rights.jsonl",
+    "corrections.jsonl",
+    "qa_events.jsonl",
+    "artifacts.jsonl",
+    "BACKEND_MANIFEST.csv"
+  ]
+}

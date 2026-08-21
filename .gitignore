@@ -1,0 +1,29 @@
+# Private/local coordination and frozen downloads
+/00_control/
+/authority/
+
+# Local build products and detailed render witnesses
+/qa/build-unit1/
+/qa/renders/unit1/
+/qa/renders/ch01-final/page-*.png
+
+# TeX intermediates
+*.aux
+*.bbl
+*.blg
+*.brf
+*.fls
+*.fdb_latexmk
+*.idx
+*.ilg
+*.ind
+*.log
+*.out
+*.toc
+
+# OS/editor debris
+.DS_Store
+Thumbs.db
+._*
+__pycache__/
+*.pyc

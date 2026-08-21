@@ -1,0 +1,1261 @@
+\chapter{LINEAR ALGEBRA AND THE SPECTRAL THEOREM}
+
+The emphasis in beginning analysis courses is on the behavior of individual (real or complex valued) functions.  In a \emph{functional analysis}
+course the focus is shifted to \emph{spaces} of such functions and certain classes of mappings between these spaces.  It turns out that a concise,
+perhaps overly simplistic, but certainly not misleading, description of such material is \emph{infinite dimensional linear algebra}.  From an
+analyst's point of view the greatest triumphs of linear algebra were, for the most part, theorems about operators on finite dimensional vector
+spaces (principally $\R^n$ and $\C^n$).  However, the vector spaces of scalar-valued mappings defined on various domains are typically infinite
+dimensional.  Whether one sees the process of generalizing the marvelous results of finite dimensional linear algebra to the infinite dimensional
+realm as a depressingly unpleasant string of abstract complications or as a rich source of astonishing insights, fascinating new questions, and
+suggestive hints towards applications in other fields depends entirely on one's orientation towards mathematics in general.
+
+In light of the preceding remarks it may be helpful to begin our journey into this new terrain with a brief review of some of the classical
+successes of linear algebra.  It is not unusual for students who successfully complete a beginning linear algebra to have at the end only the
+vaguest idea of what the course was about.  Part of the blame for this may be laid on the many elementary texts which make an unholy conflation
+of two quite different, if closely related subjects: the study of \emph{vector spaces} and the linear maps between them on the one hand, and
+\emph{inner product spaces} and their linear maps on the other.  Vector spaces have none of the geometric/topological notions of \emph{distance}
+or \emph{length} or \emph{perpendicularity} or \emph{open} set or \emph{angle} between vectors; there is only addition and scalar multiplication.
+Inner product spaces are vector spaces endowed with these additional structures.  Let's look at them separately.
+
+
+\section{Vector Spaces and the Decomposition of Diagonalizable Operators}
+\begin{conv} In these notes all vector
+ \index{conventions!vector spaces are complex or real}%
+ \index{C@$\C$!field of complex numbers}%
+ \index{R@$\R$!field of real numbers}%
+spaces will be assumed to be vector spaces over the field~$\C$ of complex numbers (in which case it is called a \emph{complex vector space}) or the
+field~$\R$ of real numbers (in which case it is a \emph{real vector space}).  No other fields will appear.  When $\K$ appears it can be taken
+ \index{K@$\K$ (field of real or complex numbers)}%
+to be either $\C$ or~$\R$. A
+ \index{scalar}%
+\df{scalar} is a member of $\K$; that is, either a \emph{complex number} or a \emph{real number}.
+\end{conv}
+
+\begin{defn}\label{00001} The triple $(V,+,M)$ is a
+ \index{vector!space}%
+ \index{space!vector}%
+\df{vector space} over $\K$ if $(V,+)$ is an Abelian group and $M\colon \K \sto \Hom(V)$
+is a unital ring homomorphism (where $\Hom(V)$ is the ring of group homomorphisms
+on~$V$).
+\end{defn}
+
+To check on the meanings of any the terms in the preceding definition, take a look at the first three sections of the first chapter of my
+linear algebra notes~\cite{Erdman:2010}.
+
+\begin{exer} The definition of \emph{vector space} found in many elementary texts is
+something like the following: a \emph{vector space over} $\K$ is a set $V$ together with operations
+of addition and scalar multiplication which satisfy the following axioms:
+ \begin{enumerate}
+  \item[(1)] if $x$, $y \in V$, then $x + y \in V$;
+  \item[(2)] $(x + y) + z = x + (y + z)$ for every
+ \index{associative}%
+$x$, $y$, $z \in V$ (associativity);
+  \item[(3)] there exists $\vc 0 \in V$ such that $x + \vc 0 = x$ for every
+ \index{identity!additive}%
+$x \in V$ (existence of additive identity);
+  \item[(4)] for every $x\in V$ there exists $-x \in V$ such that
+ \index{additive!inverses}%
+ \index{inverse!additive}%
+$x + (-x) = \vc 0$ (existence of additive inverses);
+  \item[(5)] $x + y = y + x$ for every $x$, $y \in V$
+ \index{commutative}%
+(commutativity);
+  \item[(6)] if $\alpha \in \K$ and $x \in V$, then $\alpha x \in V$;
+  \item[(7)] $\alpha (x + y) = \alpha x + \alpha y$ for every $\alpha \in \K$
+and every $x$, $y \in V$;
+  \item[(8)] $(\alpha + \beta)x = \alpha x + \beta x$ for every $\alpha$,
+$\beta \in \K$ and every $x \in V$;
+  \item[(9)] $(\alpha\beta)x = \alpha(\beta x)$ for every $\alpha$,
+$\beta \in \K$ and every $x \in V$; and
+  \item[(10)] $1\,x = x$ for every $x \in V$.
+ \end{enumerate}
+Verify that this definition is equivalent to the one given above in~\ref{00001}.
+\end{exer}
+
+\begin{defn} A subset $M$ of a vector space $V$ is a
+ \index{subspace!vector}%
+ \index{vector!subspace}%
+\df{vector subspace} of $V$ if it is a vector space under the operations it inherits from~$V$.
+\end{defn}
+
+\begin{prop} A nonempty subset of $M$ of a vector space $V$ is a vector subspace of $V$ if and
+only if it is closed under addition and scalar multiplication. (That is: if $\vc x$ and
+$\vc y$ belong to $M$, so does $\vc x + \vc y$; and if $\vc x$ belongs to $M$ and $\alpha
+\in \K$, then $\alpha \vc x$ belongs to~$M$.)
+\end{prop}
+
+\begin{defn} A vector $y$ is a
+ \index{linear!combination}%
+ \index{combination!linear}%
+\df{linear combination} of vectors $x_1$, \dots, $x_n$ if there exist scalars $\alpha_1$,
+\dots $\alpha_n$ such that $y = \sum_{k=1}^n \alpha_k x_k$. The linear combination $\sum_{k=1}^n \alpha_k x_k$ is
+ \index{linear!combination!trivial}%
+ \index{trivial!linear combination}%
+\df{trivial} if all the coefficients $\alpha_1$, \dots $\alpha_n$ are zero.  If at least
+one $\alpha_k$ is different from zero, the linear combination is \df{nontrivial}.
+\end{defn}
+
+\begin{defn} If $A$ is a nonempty subset of a vector space~$V$, then $\spn A$, the
+ \index{span}%
+\df{span} of $A$, is the set of all linear combinations of elements of~$A$.  This is also frequently called the
+ \index{span!linear}%
+ \index{linear!span}%
+\df{linear span} of~$A$.
+\end{defn}
+
+\begin{notn}\label{bases111} Let $A$ be a set which spans a vector space~$V$.  For every
+$x \in V$ there exists a finite set $S$ of vectors in $A$ and for each element $e$ in $A$
+there exists a scalar $x_e$ such that $x = \sum_{e \in S} x_e e$.  If we agree to let $x_e = 0$
+whenever $e \in B \setminus S$, we can just as well write $x = \sum_{e \in B} x_e e$.  Although
+this notation may make it appear as if we are summing over an arbitrary, perhaps uncountable,
+set, the fact of the matter is that all but finitely many of the terms are zero, so no
+``convergence'' problems arise. Treat $\sum_{e \in B} x_e e$ as a finite sum.
+Associativity and commutativity of addition in $V$ make the expression unambiguous.
+\end{notn}
+
+\begin{defn}\label{defn_lin_dep} A subset $A$ of a vector space is
+ \index{linear!dependence}%
+ \index{dependent}
+\df{linearly dependent} if the zero vector $\vc 0$ can be written as a nontrivial linear
+combination of elements of~$A$; that is, if there exist vectors $x_1, \dots, x_n \in A$
+and scalars $\alpha_1, \dots, \alpha_n$, \textbf{not all zero,} such that $\sum_{k=1}^n
+\alpha_kx_k = \vc 0$. A subset of a vector space is
+ \index{linear!independence}%
+ \index{independent}
+\df{linearly independent} if it is not linearly dependent.
+\end{defn}
+
+Technically, it is a \emph{set} of vectors that is linearly dependent or independent.
+Nevertheless, these terms are frequently used as if they were properties of the vectors
+themselves.  For instance, if $S = \{x_1, \dots, x_n\}$ is a finite set of vectors in a
+vector space, you may see the assertions ``the set $S$ is linearly independent'' and
+``the vectors $x_1$, \dots $x_n$ are linearly independent'' used interchangeably.
+
+\begin{defn}\label{defn_Hamel_basis} A set $B$ of vectors in a vector space $V$ is a
+ \index{basis!Hamel}%
+ \index{Hamel basis}%
+\df{Hamel basis} for $V$ if it is linearly independent and spans~$B$.
+\end{defn}
+
+\begin{conv}\label{conv_1_1} The vector space containing a single vector, the zero vector, is the
+ \index{convention!basis for the zero vector space}%
+ \index{vector!space!trivial (or zero)}%
+ \index{trivial!vector space}%
+\df{trivial} (or
+ \index{zero!vector space}%
+\df{zero}) vector space. Associated with this space is a technical, if not very interesting, question.  Does it have a Hamel basis?
+It is clear from the definition of \emph{linear dependence}~\ref{defn_lin_dep} that the empty set $\emptyset$ is linearly
+independent.  And it is certainly a maximal linearly independent subset of the zero space (which condition, for nontrivial
+spaces, is equivalent to being a linearly independent spanning set).  But it is hard to argue that the empty set spans anything.
+So, simply as a matter of convention, we will say that the answer to the question is \emph{yes}.  The zero vector space has a Hamel
+basis, and it is the empty set!
+\end{conv}
+
+In beginning linear algebra texts a linearly independent spanning set is called simply a \emph{basis}.  I use \emph{Hamel basis}
+instead to distinguish it from \emph{orthonormal basis} and \emph{Schauder basis}, terms which refer to concepts which are of
+more interest in functional analysis.
+
+\begin{prop} Let $B$ be a Hamel basis for a nontrivial vector space~$V$.  Then every element in $V$ can be written in a unique way as a linear
+combination of members of~$B$.
+\end{prop}
+
+\begin{proof}[\emph{Hint for proof}] Existence is clear.  Simplify the proof of uniqueness by making use of the notational
+convention suggested in~\ref{bases111}.   \ns
+\end{proof}
+
+\begin{prop}\label{bases025} Let $A$ be a linearly independent subset of a vector
+space~$V$. Then there exists a Hamel basis for~$V$ which contains~$A$.
+\end{prop}
+
+\begin{proof}[\emph{Hint for proof}] Show first that, for a nontrivial space, a linearly independent subset of $V$ is a basis for~$V$
+if and only if it is a maximal linearly independent subset. Then order the family of linearly independent subsets of
+$V$ which contain~$A$ by inclusion and apply \emph{Zorn's lemma}. (If you are not familiar with \emph{Zorn's lemma},
+see section 1.7 of my linear algebra notes~\cite{Erdman:2010}.)  \ns
+\end{proof}
+
+\begin{cor} Every vector space has a Hamel basis.
+\end{cor}
+
+\begin{defn}\label{000082} Let $M$ and $N$ be subspaces of a vector space $V$. If
+$M \cap N = \{\vc 0\}$ and $M + N = V$, then $V$ is the
+ \index{internal!direct sum!in vector spaces}%
+ \index{direct!sum!internal}%
+ \index{direct!sum!of vector spaces}%
+ \index{<binopdirectsum@$\oplus$ (vector space direct sum)}%
+(\df{internal}) \df{direct sum} of $M$ and $N$. In this case we write
+   \[ V = M \oplus N\,. \]
+We say that $M$ and $N$ are
+ \index{complement!of a vector subspace}%
+ \index{vector!space!complement}%
+\df{complementary vector subspaces} and that each is a (vector space) \df{complement} of the
+other. The
+ \index{codimension}%
+\df{codimension} of the subspace $M$ is the dimension of its complement~$N$.
+\end{defn}
+
+\begin{prop}\label{0000823} Let $V$ be a vector space and suppose that $V = M \oplus N$.  Then for
+every $v \in V$ there exist unique vectors $m \in M$ and $n \in N$ such that $v = m + n$.
+\end{prop}
+
+\begin{exam} Let $\fml C = \fml C[-1,1]$ be the vector space of all continuous real valued
+functions on the interval $[-1,1]$. A function $f$ in $\fml C$ is \df{even} if $f(-x) =
+f(x)$ for all $x \in [-1,1]$; it is \df{odd} if $f(-x) = -f(x)$ for all $x \in [-1,1]$.
+Let $\fml C_o = \{f \in \fml C\colon  f \text{ is odd }\}$ and $\fml C_e = \{f \in \fml
+C\colon  f \text{ is even }\}$. Then $\fml C = \fml C_o \oplus \fml C_e$.
+\end{exam}
+
+\begin{prop}\label{0000824} If $M$ is a subspace of a vector space $V$, then there exists a subspace $N$ of
+$V$ such that $V = M \oplus N$.
+\end{prop}
+
+\begin{lem}\label{bases030} Let $V$ be a vector space with a nonempty finite basis  $\{e^1,
+\dots,e^n\}$ and let $v = \sum_{k=1}^n \alpha_k e^k$ be a vector in~$V$.  If $p \in \N_n$
+and $\alpha_p \ne 0$, then $\{e^1, \dots,e^{p-1},v,e^{p+1}, \dots, e^n\}$ is a basis
+for~$V$.
+\end{lem}
+
+\begin{prop}\label{bases031} If some basis for a vector space $V$ contains $n$ elements,
+then every linearly independent subset of $V$ with $n$ elements is also a basis.
+\end{prop}
+
+\begin{proof}[\emph{Hint for proof}] Suppose $\{e^1,\dots,e^n\}$ is a basis for~$V$ and
+$\{v^1, \dots,v^n\}$ is linearly independent in~$V$. Start by using lemma~\ref{bases030}
+to show that (after perhaps renumbering the $e^k$'s) the set $\{v^1, e^2, \dots, e^n\}$
+is a basis for~$V$.  \ns
+\end{proof}
+
+\begin{cor}\label{bases032} If a vector space $V$ has a finite basis $B$, then every basis
+for $V$ is finite and contains the same number of elements as~$B$.
+\end{cor}
+
+\begin{defn} A vector space is
+ \index{finite dimensional}%
+\df{finite dimensional} if it has a finite basis and the
+ \index{dimension!of a vector space}%
+ \index{vector!space!dimension of a}%
+ \index{dim@$\dim V$ (dimension of a vector space $V$)}%
+\df{dimension} of the space is the number of elements in this (hence any) basis for the
+space. The dimension of a finite dimensional vector space $V$ is denoted by $\dim V$. By the
+convention made above~\ref{conv_1_1}, the zero vector space has dimension zero.  If
+the space does not have a finite basis, it is
+ \index{infinite dimensional}%
+\df{infinite dimensional}.
+\end{defn}
+
+\begin{defn}\label{defn_op_vsp} A function $T\colon V \sto W$ between vector spaces (over the same field) is
+ \index{linear!map}%
+\df{linear} if $T(u + v) = Tu + Tv$ for all $u$, $v \in V$ and $T(\alpha v) = \alpha Tv$
+for all $\alpha \in \K$ and $v \in V$. Linear functions are frequently called
+\emph{linear transformations} or \emph{linear maps}. When $V = W$ we say that the linear map $T$ is an
+ \index{operator!on a vector space}%
+\df{operator} on~$V$. Depending on context we denote the identity operator $x \mapsto x$ on $V$
+ \index{identity@$\id V$ or $I_V$ or $I$ (identity operator)}%
+by $\id V$ or $I_V$ or just~$I$. Recall that if $T\colon V \sto W$ is a linear map, then the
+ \index{kernel!of a linear map}%
+ \index{<ker@$\ker T$ (kernel of~$T$)}%
+\df{kernel} of $T$, denoted by $\ker T$, is $T^{\gets}(\{0\}) := \{x \in V\colon Tx = \vc
+0\}$. Also, the
+ \index{range!of a linear map}%
+ \index{<ran@$\ran T$ (range of~$T$)}%
+\df{range} of $T$, denoted by $\ran T$, is $T^{\sto}(V) := \{Tx\colon x \in V\}$.
+\end{defn}
+
+\begin{prop} A linear map $T\colon V \sto W$ is injective if and only if its kernel is zero.
+\end{prop}
+
+\begin{prop} Let $T\colon V \sto W$ be an injective linear map between vector spaces. If $A$ is a linearly independent
+subset of~$V$, then $T^\sto(A)$ is a linearly independent subset of~$W$.
+\end{prop}
+
+\begin{prop} Let $T\colon V \sto W$ be a linear map between vector spaces and $A \subseteq V$.
+Then $T^\sto(\spn A) = \spn T^\sto(A)$.
+\end{prop}
+
+\begin{prop} Let $T\colon V \sto W$ be an injective linear map between vector spaces. If $B$ is a basis
+for a subspace $U$ of~$V$, then $T^\sto(B)$ is a basis for~$T^\sto(U)$.
+\end{prop}
+
+\begin{prop} Two finite dimensional vector spaces are isomorphic if and only if they have the same dimension.
+\end{prop}
+
+\begin{defn} Let $T$ be a linear map between vector spaces. Then $\textrm{rank }T$, the
+ \index{rank}
+\df{rank} of $T$ is the dimension of the range of ~$T$, and $\textrm{nullity }T$, the
+ \index{nullity}%
+\df{nullity} of $T$ is the dimension of the kernel of~$T$.
+\end{defn}
+
+\begin{prop} Let $T\colon V \sto W$ be a linear map between vector spaces. If $V$ is finite dimensional, then
+  \[ \textrm{rank }T + \textrm{nullity }T = \dim V. \]
+\end{prop}
+
+\begin{defn} A linear map $T\colon V \sto W$ between vector spaces is
+ \index{invertible!linear map}%
+\df{invertible} (or is an
+ \index{isomorphism!of vector spaces}%
+\df{isomorphism}) if there exists a linear map $T^{-1}\colon W \sto V$ such that $T^{-1}T
+= \id V$ and $TT^{-1} = \id W$.  Two vector spaces $V$ and $W$ are
+ \index{isomorphic!vectorspaces}%
+\df{isomorphic} if there exists an isomorphism from $V$ to~$W$.
+\end{defn}
+
+\begin{prop}\label{inv_lin_maps001} A linear map $T\colon V \sto W$ between vector spaces
+is invertible if and only if has both a left inverse and a right inverse.
+\end{prop}
+
+\begin{prop}\label{inv_lin_maps004} A linear map between vector spaces is invertible if
+and only if it is bijective.
+\end{prop}
+
+\begin{prop} For an operator $T$ on a finite dimensional vector space the following are equivalent:
+ \begin{enumerate}
+    \item $T$ is an isomorphism;
+    \item $T$ is injective; and
+    \item $T$ is surjective.
+ \end{enumerate}
+\end{prop}
+
+ \begin{defn}\label{defn_similar_vs_ops} Two operators $R$ and $T$ on a vector space $V$ are
+ \index{similar!operators}%
+\df{similar} if there exists an invertible operator $S$ on $V$ such that $R = STS^{-1}$.
+\end{defn}
+
+\begin{prop}\label{sim004thm} If $V$ is a vector space, then similarity is an equivalence
+relation on~$\ofml L(V)$.
+\end{prop}
+
+Let $V$ and $W$ be finite dimensional vector spaces with ordered bases. Suppose that $V$ is $n$-dimensional with ordered basis
+$\{e^1,e^2, \dots,e^n\}$ and $W$ is $m$-dimensional. Recall from beginning linear algebra that if $T\colon V \sto W$ is linear,
+then its
+ \index{matrix!representation}%
+ \index{representation!matrix}%
+\emph{matrix representation} $[T]$ (taken with respect to the ordered bases in $V$ and~$W$) is the $m \times n$-matrix $[T]$
+whose $k^{\text{th}}$ column ($1 \le k \le n$) is the column vector $Te^k$ in~$W$.  The point here is that the action of $T$ on
+a vector $x$ can be \emph{represented} as multiplication of $x$ by the matrix $[T]$; that is,
+   \[ Tx = [T]x. \]
+Perhaps this equation requires a little interpretation. The left side is the function $T$ evaluated at $x$, the
+result of this evaluation being thought of as a column vector in~$W$; the right side is an $m \times n$ matrix multiplied
+by an $n \times 1$ matrix (that is, a column vector).  So the asserted equality is of two $m \times 1$ matrices (column vectors).
+
+\begin{defn} Let $V$ be a finite dimensional vector space and $B = \{e^1, \dots, e^n\}$ be a basis for~$V$.  An operator $T$ on $V$ is
+ \index{diagonal!operator}%
+ \index{operator!diagonal}%
+\df{diagonal} if there exist scalars $\alpha_1, \dots, \alpha_n$ such that $Te^k =
+\alpha_ke^k$ for each $k \in \N_n$. Equivalently, $T$ is diagonal if its matrix
+representation $[T] = [T_{ij}]$ has the property that $T_{ij} = 0$ whenever $i \ne j$.
+\end{defn}
+
+Asking whether a particular operator on some finite dimensional vector space is diagonal
+is, strictly speaking, nonsense. As defined, the operator property of being diagonal is
+definitely \emph{not} a vector space concept. It makes sense only for a vector space
+\emph{for which a basis has been specified}.  This important, if obvious, fact seems to
+go unnoticed in many beginning linear algebra courses, due, I suppose, to a rather obsessive
+fixation on $\R^n$ in such courses. Here is the relevant \emph{vector space} property.
+
+\begin{defn} An operator $T$ on a finite dimensional vector space $V$ is
+ \index{diagonalizable!operator}%
+ \index{operator!diagonalizable}%
+\df{diagonalizable} if there exists a basis for $V$ with respect to which $T$ is
+diagonal. Equivalently, an operator on a finite dimensional vector space \emph{with
+basis} is diagonalizable if it is similar to a diagonal operator.
+\end{defn}
+
+\begin{defn} Let $V$ be a vector space and suppose that $V = M \oplus N$.  We know
+from~\ref{0000823} that for each $\vc v \in V$ there exist unique vectors $\vc m \in M$
+and $\vc n \in N$ such that $\vc v = \vc m + \vc n$.  Define a function $\sbsb E{MN}\colon V \sto V$ by $\sbsb E{MN}v = n$.
+The function $\sbsb E{MN}$ is the
+ \index{projection!in a vector space}%
+ \index{E@$\sbsb E{MN}$ (projection along $M$ onto $N$)}%
+\df{projection of} $V$ \df{along} $M$ \df{onto}~$N$.  (Frequently we write $E$ for $\sbsb E{MN}$. But keep in mind that
+$E$ depends on both $M$ and~$N$.)
+\end{defn}
+
+\begin{prop} Let $V$ be a vector space and suppose that $V = M \oplus N$. If $E$ is the
+projection of $V$ along $M$ onto $N$, then
+ \begin{enumerate}[label=\rm{(\alph*)}]
+  \item $E$ is linear;
+ \index{idempotent}%
+  \item $E^2 = E$ \quad (that is, $E$ is \df{idempotent});
+  \item $\ran E = N$; and
+  \item $\ker E = M$.
+ \end{enumerate}
+\end{prop}
+
+\begin{prop} Let $V$ be a vector space and suppose that $E\colon V \sto V$ is a function which
+satisfies
+ \begin{enumerate}[label=\rm{(\alph*)}]
+  \item $E$ is linear, and
+  \item $E^2 = E$.
+\end{enumerate}
+Then
+ \[V = \ker E \oplus \ran E\]
+and $E$ is the projection of $V$ along $\ker E$ onto~$\ran E$.
+\end{prop}
+
+It is important to note that an obvious consequence of the last two propositions is that
+a function $T\colon V \sto V$ from a finite dimensional vector space into itself is a
+projection if and only if it is linear and idempotent.
+
+
+
+
+
+
+
+\begin{prop} Let $T\colon V \sto W$ be a linear transformation between vector spaces. Then
+  \begin{enumerate}[label=\rm{(\alph*)}]
+    \item $T$ has a left inverse if and only if it is injective; and
+    \item $T$ has a right inverse if and only if it is surjective.
+  \end{enumerate}
+\end{prop}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{prop} Let $V$ be a vector space and suppose that $V = M \oplus N$.  If $E$ is the
+projection of $V$ along $M$ onto $N$, then $I - E$ is the projection of $V$ along $N$
+onto~$M$.
+\end{prop}
+
+As we have just seen, if $E$ is a projection on a vector space $V$, then the identity
+operator on $V$ can be written as the sum of two projections $E$ and $I - E$ whose
+corresponding ranges form a direct sum decomposition of the space $V = \ran E \oplus \ran
+(I - E)$.  We can generalize this to more than two projections.
+
+\begin{defn} Suppose that on a vector space $V$ there exist projection operators $E_1$,
+\dots, $E_n$ such that
+\begin{enumerate}
+    \item $I_V = E_1 + E_2 + \dots + E_n$ and
+    \item $E_iE_j = 0$ whenever $i \ne j$.
+\end{enumerate}
+Then we say that $I_V = E_1 + E_2 + \dots + E_n$ is a
+ \index{resolution of the identity!in vector spaces}%
+\df{resolution of the identity}.
+\end{defn}
+
+\begin{prop} If $I_V = E_1 + E_2 + \dots + E_n$ is a resolution of the identity on a vector
+space $V$, then $V = \bigoplus_{k=1}^n \ran E_k$.
+\end{prop}
+
+\begin{exam} Let $P$ be the plane in $\R^3$ whose equation is $x - z = 0$ and $L$ be the line
+whose equations are $y = 0$ and $x = -z$.  Let $E$ be the projection of $\R^3$ along~$L$
+onto $P$ and $F$ be the projection of $\R^3$ along~$P$ onto~$L$.  Then
+ \[[E] = \begin{bmatrix}
+              \frac12  & 0 & \frac12 \\
+                  0    & 1 &   0     \\
+              \frac12  & 0 & \frac12
+         \end{bmatrix} \qquad \text{ and } \qquad
+   [F] = \begin{bmatrix}
+              \frac12  & 0 & -\frac12 \\
+                  0    & 0 &   0     \\
+             -\frac12  & 0 &  \frac12
+         \end{bmatrix}\,. \]
+\end{exam}
+
+\begin{defn} A complex number $\lambda$ is an
+ \index{eigenvalue}%
+\df{eigenvalue} of an operator $T$ on a vector space $V$ if $\ker(T - \lambda I_V)$
+contains a nonzero vector.  Any such vector is an
+ \index{eigenvector}%
+\df{eigenvector} of $T$ associated with $\lambda$ and $\ker(T - \lambda I_V)$ is the
+ \index{eigenspace}
+\df{eigenspace} of $T$ associated with~$\lambda$.  The set of all eigenvalues of the
+operator $T$ is its
+ \index{point spectrum}%
+ \index{spectrum!point}%
+\df{point spectrum} and is denoted by~$\sigma_p(T)$.
+\end{defn}
+
+If $M$ is an $n \times n$ matrix, then $\det(M - \lambda I_n)$ (where $I_n$ is the $n
+\times n$ identity matrix) is a polynomial in $\lambda$ of degree~$n$. This is the
+\df{characteristic polynomial} of~$M$. A standard way of computing the eigenvalues of an
+operator $T$ on a finite dimensional vector space is to find the zeros of the
+characteristic polynomial of its matrix representation. It is an easy consequence of the
+multiplicative property of the determinant function that the characteristic polynomial of
+an operator $T$ on a vector space $V$ is independent of the basis chosen for $V$ and
+hence of the particular matrix representation of~$T$ that is used.
+
+\vskip 5 pt
+
+\begin{exam} The eigenvalues of the operator on (the real vector space) $\R^3$ whose matrix
+representation is  $ \begin{bmatrix} 0  &  0  &  2 \\
+                                     0  &  2  &  0 \\
+                                     2  &  0  &  0
+                      \end{bmatrix}$ are $-2$ and $+2$, the latter having (both algebraic and
+geometric) multiplicity~$2$. The eigenspace associated with the negative eigenvalue is
+$\spn\{(1,0,-1)\}$ and the eigenspace associated with the positive eigenvalue is
+$\spn\{(1,0,1), (0,1,0)\}$.
+\end{exam}
+
+\vskip 5 pt
+
+\begin{prop} Every operator on a complex finite dimensional vector space has an eigenvalue.
+\end{prop}
+
+\begin{exam} The preceding proposition does not hold for real finite dimensional spaces.
+\end{exam}
+
+\begin{proof}[\emph{Hint for proof}] Consider rotations of the plane.  \ns
+\end{proof}
+
+The central fact asserted by the finite dimensional vector space version of the
+\emph{spectral theorem} is that every diagonalizable operator on such a space can be
+written as a linear combination of projection operators where the coefficients of the
+linear combination are the eigenvalues of the operator and the ranges of the projections
+are the corresponding eigenspaces.  Thus if $T$ is a diagonalizable operator on a finite
+dimensional vector space $V$, then $V$ has a basis consisting of eigenvectors of~$T$.
+
+Here is a formal statement of the theorem.
+
+\begin{thm}[Spectral Theorem: finite dimensional vector space version] Suppose that $T$ is a
+ \index{spectral!theorem!for diagonalizable operators on vector spaces}%
+diagonalizable operator on a finite dimensional vector space~$V$.  Let $\lambda_1, \dots, \lambda_n$ be
+the (distinct) eigenvalues of~$T$. Then there exists a resolution of the identity $I_V =
+E_1 + \dots + E_n$, where for each $k$ the range of the projection $E_k$ is the
+eigenspace associated with~$\lambda_k$, and furthermore
+     \[ T = \lambda_1E_1 +\dots + \lambda_nE_n\,. \]
+\end{thm}
+
+\begin{proof} A proof of this theorem can be found in \cite{HoffmanK:1971} on page~212. \ns
+\end{proof}
+
+\begin{exam}  Let $T$ be the operator on (the real vector space) $\R^2$ whose matrix representation
+is $\begin{bmatrix} -7 &   8 \\ -16 &  17 \end{bmatrix}$.
+
+\vskip 3 pt
+
+ \begin{enumerate}
+  \item The characteristic polynomial for~$T$ is
+                     $\sbsb cT(\lambda) = \lambda^2 - 10\lambda + 9$.
+
+\vskip 3 pt
+
+  \item The eigenspace $M_1$ associated with the eigenvalue $1$ is $\spn \{(1,1)\}$.
+
+\vskip 3 pt
+
+  \item The eigenspace $M_2$ associated with the eigenvalue $9$ is $\spn \{(1,2)\}$.
+
+\vskip 3 pt
+
+  \item We can write $T$ as a linear combination of projection operators.  In particular,
+   \[ T = 1\cdot E_1 + 9\cdot E_2 \text{ where } [E_1] = \begin{bmatrix} 2 & -1 \\ 2 & -1 \end{bmatrix}
+\text{ and } [E_2] = \begin{bmatrix} -1 & 1 \\ -2 & 2 \end{bmatrix}\,. \]
+
+\vskip 3 pt
+
+  \item Notice that the sum of $[E_1]$ and $[E_2]$ is the identity matrix and that their
+product is the zero matrix.
+
+\vskip 3 pt
+
+  \item The matrix  $S = \begin{bmatrix} 1 &  1  \\ 1 &  2 \end{bmatrix}$  diagonalizes
+$[T]$. That is, $S^{-1}\,[T]\,S = \begin{bmatrix} 1 &  0  \\ 0 &  9 \end{bmatrix}$.
+
+
+\vskip 3 pt
+
+
+  \item A matrix representing $\sqrt T$ is $\begin{bmatrix} -1 &  2  \\ -4 &  5 \end{bmatrix}$.
+ \end{enumerate}
+\end{exam}
+
+\begin{exer} Let $T$ be the operator on $\R^3$ whose matrix representation is
+    \smash[b]{$\begin{bmatrix}
+               2  &  0  &  0 \\
+              -1  &  3  &  2 \\
+               1  & -1  &  0 \end{bmatrix}$.}
+  \begin{enumerate}
+    \item Find the characteristic and minimal polynomials of~$T$.
+    \item What can be concluded from the form of the minimal polynomial?
+    \item Find a matrix which diagonalizes~$T$. What is the diagonal form of $T$ produced by this matrix?
+    \item Find (the matrix representation of)~$\sqrt T$.
+  \end{enumerate}
+\end{exer}
+
+\begin{defn} A vector space operator $T$ is
+ \index{nilpotent}%
+\df{nilpotent} if $T^n = \vc 0$ for some $n \in \N$.
+\end{defn}
+
+An operator on a finite dimensional vector space need not be diagonalizable.  If it is not,
+how close to diagonalizable is it?  Here is one answer.
+
+\begin{thm} Let $T$ be an operator on a finite dimensional vector space~$V$.  Suppose that the minimal
+polynomial for $T$ factors completely into linear factors
+   \[ m_T(x) = (x - \lambda_1)^{r_1} \dots (x - \lambda_k)^{r_k} \]
+where $\lambda_1, \dots \lambda_k$ are the (distinct) eigenvalues of~$T$. For each $j$ let
+$W_j = \ker(T - \lambda_jI)^{r_j}$ and $E_j$ be the projection of $V$ onto $W_j$ along
+$W_1 + \dots + W_{j-1} + W_{j+1} + \dots + W_k$. Then
+   \[ V = W_1 \oplus W_2 \oplus \dots \oplus W_k, \]
+each $W_j$ is invariant under $T$, and $I = E_1 + \dots + E_k$. Furthermore, the operator
+   \[ D = \lambda_1E_1 + \dots + \lambda_kE_k \]
+is diagonalizable, the operator
+   \[ N = T - D \]
+is nilpotent, and $N$ commutes with~$D$.
+\end{thm}
+
+\begin{proof} See~\cite{HoffmanK:1971}, pages 222--223. \ns
+\end{proof}
+
+\begin{defn} Since, in the preceding theorem, $T = D + N$ where $D$ is diagonalizable and $N$ is nilpotent,
+we say that $D$ is the
+ \index{diagonalizable!part}%
+ \index{part!diagonalizable}%
+\df{diagonalizable part} of $T$ and $N$ is the
+ \index{nilpotent!part}%
+ \index{part!nilpotent}%
+\df{nilpotent part} of~$T$.
+\end{defn}
+
+\begin{exer} Let $T$ be the operator on $\R^3$ whose matrix representation is
+ $\begin{bmatrix}
+        3  &  1  & -1 \\
+        2  &  2  & -1 \\
+        2  &  2  &  0
+  \end{bmatrix}$.
+
+ \begin{enumerate}
+  \item Find the characteristic and minimal polynomials of~$T$.
+  \item Find the eigenspaces of~$T$.
+  \item Find the diagonalizable part $D$ and nilpotent part $N$ of~$T$.
+  \item Find a matrix which diagonalizes~$D$. What is the diagonal form
+of $D$ produced by this matrix?
+  \item Show that $D$ commutes with~$N$.
+ \end{enumerate}
+\end{exer}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Normal Operators on an Inner Product Space}
+\begin{defn} Let $V$ be a vector space.  A function $s$ which associates to each pair of vectors
+$x$ and $y$ in $V$ a scalar
+ \index{s@$s(x,y)$ (semi-inner product)}%
+ \index{<s@$s(x,y)$ (semi-inner product)}%
+$s(x,y)$ is an
+ \index{semi-inner product}%
+ \index{semi-inner product!space}%
+ \index{product!semi-inner}%
+ \index{space!semi-inner product}%
+\df{semi-inner product} on $V$ provided that for every $x$, $y$, $z \in V$ and $\alpha \in \K$ the following four conditions are satisfied:
+ \begin{enumerate}
+   \item $s(x + y , z) = s(x,z) + s(y,z)$;
+   \item $s(\alpha x,y) = \alpha s(x,y)$;
+   \item $s(x,y) = \conj{s(y,x)}$; and
+   \item] $s(x,x) \ge 0$.
+ \end{enumerate}
+ If, in addition, the function $s$ satisfies
+  \begin{enumerate}
+    \item For every nonzero $x$ in $V$ we have $s(x,x) > 0$.
+  \end{enumerate}
+then $s$ is an
+ \index{inner product}%
+ \index{inner product!space}%
+ \index{product!inner}%
+ \index{space!inner product}%
+\df{inner product} on~$V$.  We will usually write the inner product of two vectors $x$ and $y$ as
+ \index{<bracpnt@$\langle x,y \rangle$ (inner product)}%
+$\langle x,y \rangle$ rather than $s(x,y)$.
+
+\noindent The overline in (c) denotes complex conjugation (so is redundant in the case of a real vector space).
+Conditions (a) and (b) show that a semi-inner product is linear in its first variable.  Conditions (a) and (b) of
+proposition~\ref{00015001} say that a complex inner product is
+ \index{conjugate!linear}%
+ \index{linear!conjugate}%
+\df{conjugate linear} in its second variable.  When a scalar valued function of two variables on a complex semi-inner product
+space is linear in one variable and conjugate linear in the other, it is often called
+ \index{sesquilinear}%
+ \index{linear!sesqui-}%
+\df{sesquilinear}.  (The prefix ``sesqui-'' means ``one and a half''.)  We will also use the term \emph{sesquilinear} for a
+bilinear function on a real semi-inner product space.  Taken together conditions (a)--(d) say that the inner product is a
+\emph{positive definite, conjugate symmetric, sesquilinear form}.
+\end{defn}
+
+\begin{notn}\label{norm_notn} If $V$ is a vector space which has been equipped with an
+semi-inner product and $x \in V$ we introduce the abbreviation
+  \[ \norm x := \sqrt{s(x,x)} \]
+which is read \emph{the norm of $x$} or \emph{the length of~$x$}.  (This somewhat
+optimistic terminology is justified, at least when $s$ is an inner product, in proposition~\ref{00015025} below.)
+\end{notn}
+
+\begin{prop}\label{00015001} If $x$, $y$, and $z$ are vectors in a space with semi-inner product $s$ and $\alpha \in \K$, then
+ \begin{enumerate}[label=\rm{(\alph*)}]
+   \item $s(x,y + z)  = s(x,y) + s(x,z)$,
+   \item $s(x,\alpha y) = \conj\alpha s(x,y)$, and
+   \item $s(x,x) = 0$ if and only if $x = \vc 0$.
+ \end{enumerate}
+\end{prop}
+
+\begin{exam}\label{000150012} For vectors $x = (x_1,x_2,\dots,x_n)$ and $y = (y_1,y_2,\dots,y_n)$
+belonging to $\K^n$ define
+   \[ \langle x,y \rangle = \sum_{k=1}^n x_k \conj{y_k}\,. \]
+Then
+ \index{K@$\K^n$!as an inner product space}%
+ \index{inner product!space!$\K^n$ as a}%
+$\K^n$ is an inner product space.
+\end{exam}
+
+\begin{exam}\label{000150013} Let $l_2 = l_2(\N)$ be the set of all square summable sequences of
+complex numbers. (A sequence $x = (x_k)_{k=1}^\infty$ is
+ \index{square summable}%
+ \index{summable!square}%
+ \index{l@$l_2 = l_2(\N)$!square summable sequences}%
+ \index{l@$l_2 = l_2(\N)$!as an inner product space}%
+ \index{inner product!space!$l_2$ as a}%
+\df{square summable} if $\sum_{k=1}^\infty \abs{x_k}^2 < \infty$.) (The vector space operations are defined
+pointwise.) For vectors $x = (x_1,x_2,\dots)$ and $y = (y_1,y_2,\dots)$ belonging to $l_2$ define
+   \[ \langle x,y \rangle = \sum_{k=1}^\infty x_k \conj{y_k}\,. \]
+Then $l_2$ is an inner product space.  (It must be shown, among other things, that the
+series in the preceding definition actually converges.)  A similar space is $l_2(\Z)$ the set of all square summable
+ \index{l@$l_2(\Z)$!square summable bilateral sequences}%
+ \index{l@$l_2(\Z)$!as an inner product space}%
+ \index{inner product!space!$l_2(\Z)$ as a}%
+bilateral sequences $x = (\dots,x_{-2},x_{-1},x_0,x_1,x_2,\dots)$ with the obvious inner product.
+\end{exam}
+
+\begin{exam}\label{000150014} For $a < b$ let $\fml C([a,b])$ be the family of all
+ \index{C@$\fml C([a,b])$!as an inner product space}%
+ \index{inner product!space!$\fml C([a,b])$ as a}%
+continuous complex valued functions on the interval $[a,b]$.  For every $f$, $g \in \fml C([a,b])$ define
+   \[ \langle f,g \rangle = \int_a^b f(x) \conj{g(x)}\,dx. \]
+Then $\fml C([a,b])$ is an inner product space.
+\end{exam}
+
+Here is the single most useful fact about semi-inner products. It is an inequality attributed variously to Cauchy,
+Schwarz, Bunyakowsky, or combinations of the three.
+
+\begin{thm}[Schwarz inequality]\label{00015002} Let $s$ be a semi-inner product defined on a vector space~$V$.
+ \index{Schwarz inequality}%
+ \index{inequality!Schwarz}%
+Then the inequality
+   \[ \abs{s(x,y)} \le \norm x \,\norm y. \]
+holds for all vectors $x$ and~$y$ in~$V$.
+\end{thm}
+
+\begin{proof}[\emph{Hint for proof}] Fix $x$, $y \in V$.  For every $\alpha \in \K$ we know that
+  \begin{equation}\label{Schwarz_ineq}
+      0 \le s(x - \alpha y, x - \alpha y) .
+  \end{equation}
+Expand the right hand side of~\eqref{Schwarz_ineq} into four terms and write $s(y,x)$ in polar form: $s(y,x) = r e^{i\theta}$,
+where $r > 0$ and $\theta \in \R$.  Then in the resulting inequality consider those $\alpha$ of the form $e^{-i\theta}t$ where
+$t \in \R$.  Notice that now the right side of~\eqref{Schwarz_ineq} is a quadratic polynomial in~$t$.  What can you say about its
+discriminant?  \ns
+\end{proof}
+
+\begin{prop} Let $V$ be a vector space with semi-inner product $s$ and let $z \in V$.  Then $s(z,z) = 0$
+if and only if $s(z,y) = 0$ for all $y \in V$.
+\end{prop}
+
+\begin{prop} Let $V$ be a vector space on which a semi-inner product $s$ has been defined.  Then the set
+$L := \{z \in V\colon s(z,z) = 0\}$ is a vector subspace of $V$ and the quotient vector space $V/L$ can be
+made into an inner product space by defining
+    \[ \langle\, [x],[y]\, \rangle := s(x,y) \]
+for all $[x]$, $[y] \in V/L$.
+\end{prop}
+
+The next proposition shows that an inner product is continuous in its first variable.  Conjugate symmetry then guarantees
+continuity in the second variable.
+
+\begin{prop} If $(x_n)$ is a sequence in an inner product space $V$ which converges to a
+vector $a \in V$, then $\langle x_n,y \rangle \sto \langle a,y \rangle$ for every  $y \in V$.
+\end{prop}
+
+\begin{exam} If $(a_k)$ is a square summable sequence of real numbers, then the series $\sum_{k=1}^\infty k^{-1}a_k$
+converges absolutely.
+\end{exam}
+
+\begin{exer} Let $0 < a < b$.
+ \begin{enumerate}
+  \item If $f$ and $g$ are continuous real valued functions on the
+interval $[a,b]$, then
+   \[\left(\int_a^b f(x)g(x)\,dx\right)^2
+             \le \int_a^b\bigl(f(x)\bigr)^2\,dx \cdot
+                       \int_a^b\bigl(g(x)\bigr)^2\,dx.\]
+
+\vskip 3 pt
+
+  \item Use part (a) to find numbers $M$ and $N$ (depending on $a$
+and~$b$) such that
+   \[M(b-a) \le \ln\left(\frac ba\right) \le N(b-a).\]
+
+\vskip 3 pt
+
+  \item Use part (b) to show that $2.5 \le e \le 3$.
+ \end{enumerate}
+\end{exer}
+
+\begin{proof}[\emph{Hint for proof}] For (b) try $f(x) = \sqrt x$ and $g(x) = \dfrac1{\sqrt x}$.  Then try
+$f(x) = \dfrac1x$ and $g(x) = 1$.  For (c) try $a = 1$ and $b = 3$.  Then try $a = 2$ and $b = 5$.  \ns
+\end{proof}
+
+\begin{defn} Let $V$ be a vector space. A function
+ \index{<unopn@$\norm x$ (norm of a vector~$x$)}%
+$\norm{\hphantom{x}} \colon V \sto \R \colon x \mapsto \norm{x}$ is a
+ \index{norm}%
+\df{norm} on $V$ if
+ \begin{enumerate}
+  \item $\norm{x + y} \le \norm{x} + \norm{y}$ \qquad  for all $x$, $y \in V$;
+  \item $\norm{\alpha x} = \abs{\alpha}\,\norm{x}$\qquad for all $x \in V$ and
+$\alpha \in \K$; and
+  \item if $\norm{x} = 0$, then $x = \vc 0$.
+ \end{enumerate}
+The expression $\norm{x}$ may be read as ``the \emph{norm} of $x$'' or ``the
+ \index{length}%
+\emph{length} of $x$''.  If the function $\norm{\hphantom{x}}$ satisfies~(a) and~(b)
+above (but perhaps not~(c)) it is a
+ \index{seminorm}%
+\df{seminorm} on~$V$.
+
+A vector space on which a norm has been defined is a
+ \index{normed!linear space}%
+ \index{normed!vector space|seeonly{normed linear space}}%
+ \index{space!normed linear}%
+\df{normed linear space} (or
+ \index{vector!space!normed}%
+\df{normed vector space}). A vector in a normed linear space which has norm $1$ is a
+ \index{unit!vector}%
+ \index{vector!unit}%
+\df{unit vector}.
+\end{defn}
+
+\begin{exer} Show why it is clear from the definition that $\norm{\vc 0} = 0$ and that norms
+(and seminorms) can take on only positive values.
+\end{exer}
+
+Every inner product space is a normed linear space.  In more precise language, an inner product on a vector space induces
+ \index{norm!induced by an inner product}%
+ \index{induced!norm}
+a norm on the space.
+
+\begin{prop}\label{00015025} Let $V$ be an inner product space. The map $x \mapsto \norm
+x$ defined on $V$ in~\ref{norm_notn} is a norm on~$V$.
+\end{prop}
+
+And every normed linear space is a metric space.  Recall the following definition.
+
+\begin{defn}\label{C019614} Let $M$ be a nonempty set. A function $d \colon M \times M \sto \R$ is a
+ \index{metric}%
+\df{metric} (or
+ \index{distance!function}%
+ \index{d@$d(x,y)$ (distance between points $x$ and $y$)}%
+\df{distance function}) on $M$ if for all $x$, $y$, $z \in M$
+ \begin{enumerate}
+     \item $d(x,y) = d(y,x)$,
+     \item $d(x,y) \le d(x,z) + d(z,y)$, \qquad (the
+ \index{triangle inequality}%
+ \index{inequality!triangle}%
+\emph{triangle inequality})
+     \item $d(x,x) = 0$, and
+     \item $d(x,y) = 0$ only if $x = y$.
+ \end{enumerate}
+If $d$ is a metric on a set $M$, then we say that the pair $(M,d)$ is a
+ \index{metric!space}%
+ \index{space!metric}%
+\df{metric space}.  The notation ``$d(x,y)$'' is read, ``the distance between $x$
+and~$y$''. (As usual we substitute the phrase, ``Let $M$ be a metric space \dots '' for
+the correct formulation ``Let $(M,d)$ be a metric space \dots''.
+
+If $d \colon M \times M \sto \R$ satisfies conditions (1)--(3), but not (4), then $d$ is a
+ \index{pseudometric}%
+\df{pseudometric} on~$M$.
+\end{defn}
+
+As mentioned above, every normed linear space is a metric space. More precisely, a norm on a vector space
+induces a
+ \index{metric!induced by a norm}%
+metric $d$, which is defined by $d(x,y) = \norm{x - y}$.  That is, the distance between
+two vectors is the length of their difference.
+  \[ \xy
+       \Atriangle/<-`<-`>/[``;x`x-y`y]
+  \endxy \]
+If no other metric is specified we always regard a normed linear space as a metric space
+ \index{induced!metric}%
+under this induced metric.  The metric is referred to as the \emph{metric induced by the norm}.
+
+\begin{exam}\label{0001503}  Let $V$ be a normed linear space.  Define
+$d\colon V \times V \sto \R$ by $d(x,y) = \norm{x - y}$.  Then $d$ is a metric on~$V$.
+If $V$ is only a seminormed space, then $d$ is a pseudometric.
+\end{exam}
+
+\begin{defn} Vectors $x$ and $y$ in an inner product space $V$ are
+ \index{orthogonal}%
+\df{orthogonal} (or
+ \index{perpendicular}%
+\df{perpendicular}) if $\langle x,y \rangle = 0$.  In this case we write
+ \index{<binrelperp@$x \perp y$ (orthogonal vectors)}%
+$x \perp y$.  Subsets $A$ and $B$ of $V$ are \df{orthogonal} if $a \perp b$ for every $a
+\in A$ and $b \in B$.  In this case we write $A \perp B$.
+\end{defn}
+
+\begin{defn} If $M$ and $N$ are subspaces of an inner product space $V$ we use the notation
+$V = M \oplus N$ to indicate not only that $V$ is the (vector space) direct sum of $M$
+and $N$ but also that $M$ and $N$ are orthogonal. Thus we say that $V$ is the
+ \index{internal!orthogonal direct sum}%
+ \index{direct!sum!orthogonal}%
+ \index{orthogonal!direct sum!of inner product spaces}%
+(\df{internal}) \df{orthogonal direct sum} of $M$ and~$N$.
+\end{defn}
+
+\begin{prop} Let $a$ be a vector in an inner product space $V$.  Then $a \perp x$ for every
+$x \in V$ if and only if $a = 0$.
+\end{prop}
+
+\begin{prop} In an inner product space $x \perp y$ if and only if $\norm{x + \alpha y} = \norm{x - \alpha y}$
+for all scalars $\alpha$.
+\end{prop}
+
+\begin{prop}[The Pythagorean theorem]\label{00015037}  If $x \perp y$ in an inner
+ \index{Pythagorean theorem}%
+product space, then
+   \[ \norm{x + y}^2 = \norm x^2 + \norm y^2\,. \]
+\end{prop}
+
+\begin{defn}\label{0001504} Let $V$ and $W$ be inner product spaces.  For $(v,w)$ and
+$(v',w')$ in $V \times W$ and $\alpha \in \C$ define
+ \begin{align*}
+      (v,w) + (v',w') &= (v + v', w + w') \\
+\intertext{and}
+         \alpha(v,w) &= (\alpha v,\alpha w)\,.
+ \end{align*}
+This results in a vector space, which is the \emph{(external) direct sum} of $V$ and~$W$.
+To make it into an inner product space define
+   \[ \langle (v,w),(v',w') \rangle = \langle v,v' \rangle + \langle w,w' \rangle. \]
+This makes the direct sum of $V$ and $W$ into an inner product space.  It is the
+(\df{external orthogonal})
+ \index{external!direct sum}%
+ \index{direct!sum!external}%
+ \index{direct!sum!of inner product spaces}%
+ \index{orthogonal!direct sum!of inner product spaces}%
+ \index{<binopdirectsum@$\oplus$ (orthogonal direct sum)}%
+\df{direct sum} of $V$ and $W$ and is denoted by $V \oplus W$.
+\end{defn}
+
+Notice that the same notation $\oplus$ is used for both internal and external direct sums
+and for both vector space direct sums (see definition~\ref{000082}) and orthogonal direct
+sums. So when we see the symbol $V \oplus W$ it is important to know which category we
+are in: vector spaces or inner product spaces, especially as it is common practice to
+omit the word ``orthogonal'' as a modifier to ``direct sum'' even in cases when it is
+intended.
+
+\begin{exam} In $\R^2$ let $M$ be the $x$-axis and $L$ be the line whose equation is $y = x$.
+If we think of $\R^2$ as a (real) vector space, then it is correct to write $\R^2 = M
+\oplus L$.  If, on the other hand, we regard $\R^2$ as a (real) inner product space, then
+$\R^2 \ne M \oplus L$ (because $M$ and $L$ are not perpendicular).
+\end{exam}
+
+\begin{prop}  Let $V$ be an inner product space.  The inner product on $V$, regarded as a map
+from $V \oplus V$ into $\C$, is continuous. So is the norm, regarded as a map from $V$
+into $\R$.
+\end{prop}
+
+Concerning the proof of the preceding proposition, notice that the maps $(v,v') \mapsto
+\norm v + \norm{v'}$, $(v,v') \mapsto \sqrt{\norm v^2 + \norm{v'}^2}$, and $(v,v')
+\mapsto \max\{\norm v, \norm{v'}\}$ are all norms on $V \oplus V$. Which one is induced
+by the inner product on $V \oplus V$?  Why does it not matter which one we use in proving
+that the inner product is continuous?
+
+\begin{prop}[The parallelogram law]\label{parallelogram_law}  If $x$ and $y$ are vectors in an inner product
+ \index{parallelogram law}%
+space, then
+   \[ \norm{x + y}^2 + \norm{x - y}^2 = 2\norm x^2 + 2\norm y^2\,. \]
+\end{prop}
+
+While every inner product induces a norm not every norm comes from an inner product.
+
+\begin{exam}\label{00015061} There is no inner product on space $\fml C([0,1])$ which induces the uniform norm.
+\end{exam}
+
+\begin{proof}[\emph{Hint for proof}] Use the preceding proposition. \ns
+\end{proof}
+
+\begin{prop}[The polarization identity]\label{0001507} If $x$ and $y$ are vectors
+ \index{polarization identity}%
+in a complex inner product space, then
+ \[ \langle x,y \rangle = \tfrac14 (\norm{x + y}^2 - \norm{x - y}^2
+                       + i\,\norm{x + iy}^2 - i\,\norm{x - iy}^2)\,. \]
+\end{prop}
+
+What is the correct identity for a \emph{real} inner product space?
+
+\begin{notn}\label{0001511} Let $V$ be an inner product space, $x \in V$, and $A$,
+$B \subseteq V$. If $x \perp a$ for every $a \in A$, we write $x \perp A$; and if $a
+\perp b$ for every $a \in A$ and $b \in B$, we write $A \perp B$.
+We define $A^\perp$, the
+ \index{orthogonal!complement}%
+ \index{complement!orthogonal}%
+ \index{<unopur@$A^\perp$ (orthogonal complement)}%
+\df{orthogonal complement} of $A$, to be $\{x \in V\colon x \perp A\}$.  Since the phrase ``orthogonal complement of $A$''
+is a bit unwieldy, especially when used repeatedly, the symbol ``$A^\perp$'' is usually pronounced ``A perp''.
+We write $A^{\perp\perp}$ for $\left(A^\perp\right)^\perp$.
+\end{notn}
+
+\begin{prop}\label{0001512} If $A$ is a subset of an inner product space $V$, then
+$A^\perp$ is a closed linear subspace of~$V$.
+\end{prop}
+
+\begin{prop}[Gram-Schmidt orthonormalization] If $(v^k)$ is a linearly independent sequence in
+ \index{Gram-Schmidt orthonormalization}%
+ \index{orthonormalization}%
+an inner product space~$V$, then there exists an orthonormal sequence $(e^k)$ in~$V$ such
+that $\spn\{v^1, \dots, v^n\} = \spn\{e^1, \dots, e^n\}$ for every $n \in \N$.
+\end{prop}
+
+\begin{cor}\label{0001514} If $M$ is a subspace of a finite dimensional inner product
+space $V$, then $V = M \oplus M^\perp$.
+\end{cor}
+
+It will be convenient to say of sequences that they \emph{eventually} have a certain property or
+that they \emph{frequently} have that property.
+
+\begin{defn}\label{C013121}  Let $(x_n)$ be a sequence of elements of a set $S$ and $P$ be some
+property that members of $S$ may possess.  We say that the sequence $(x_n)$
+ \index{eventually}%
+\df{eventually} has property $P$ if there exists $n_0 \in \N$ such that $x_n$ has
+property $P$ for every $n \ge n_0$.  (Another way to say the same thing: $x_n$ has
+property $P$ for all but finitely many~$n$.)
+\end{defn}
+
+\begin{exam}\label{exam13122} Denote by
+ \index{l@$l_c$!sequences which are eventually zero}%
+ \index{l@$l_c$!as a vector space}%
+$l_c$ the vector space consisting of all sequences of complex numbers which are eventually zero;
+that is, the set of all sequences with only finitely many nonzero entries.  They are also referred to as the sequences with
+ \index{finite!support}%
+ \index{support!finite}%
+\emph{finite support}.  The vector space operations are defined pointwise.  We make the space $l_c$ into an
+ \index{l@$l_c$!as an inner product space}%
+ \index{inner product!space!$l_c$ as a}%
+inner product space by
+defining $\langle a,b \rangle = \langle\, (a_n),(b_n)\, \rangle := \sum_{k=1}^\infty a_n \conj{b_n}$.
+\end{exam}
+
+\begin{defn}\label{C013131} Let $(x_n)$ be a sequence of elements of a set $S$ and $P$ be some
+property that members of $S$ may possess.  We say that the sequence $(x_n)$
+ \index{frequently}%
+\df{frequently} has property $P$ if for every $k \in \N$ there exists $n \ge k$ such that
+$x_n$ has property~$P$. (An equivalent formulation: $x_n$ has property $P$ for infinitely
+many~$n$.)
+\end{defn}
+
+\begin{exam}\label{exam13132} Let $V = l_2$ be the inner product space of all square-summable sequences of complex numbers
+(see example~\ref{000150013}) and $M = l_c$ (see example~\ref{exam13122}).  Then the conclusion of~\ref{0001514} fails.
+\end{exam}
+
+\begin{defn}\label{def_alg_dual} A
+ \index{linear!functional}%
+ \index{functional!linear}%
+\df{linear functional} on a vector space $V$ is a linear map from $V$ into its scalar
+field. The set of all linear functionals on $V$ is the
+ \index{dual!algebraic}%
+ \index{algebraic!dual space}%
+ \index{space!algebraic dual}%
+(\df{algebraic}) \df{dual space} of~$V$.  We will use the
+ \index{<unopur@$V^\#$ (algebraic dual space)}%
+ \index{V@$V^\#$ (algebraic dual space)}%
+notation $V^{\#}$ for the algebraic dual space.
+\end{defn}
+
+\begin{thm}[Riesz-Fr\'echet Theorem]\label{0001601} If $f \in V^{\#}$ where $V$ is a
+ \index{Riesz-Fr\'echet theorem!finite dimensional version}%
+finite dimensional inner product space, then there exists a unique vector $a$ in $V$ such
+that
+    \[ f(x) = \langle x,a \rangle \]
+for all $x$ in $V$.
+\end{thm}
+
+We will prove shortly (in~\ref{000342})that every continuous linear functional on an \emph{arbitrary} inner
+product space has the above representation. The finite dimensional version stated here is a special case, since
+every linear map on a finite dimensional inner product space is continuous (see proposition~\ref{00015033}).
+
+\begin{defn}\label{0001602} Let $T\colon V \sto W$ be a linear transformation between complex
+inner product spaces. If there exists a function $T^*\colon W \sto V$ which satisfies
+   \[ \langle T\vc v,\vc w \rangle = \langle \vc v,T^*\vc w \rangle \]
+for all $\vc v \in V$ and $\vc w \in W$, then $T^*$ is the
+ \index{adjoint!of an operator on an inner product space}%
+ \index{<unopurstar@$T^*$ (inner product space adjoint)}%
+ \index{T@$T^*$ (inner product space adjoint)}%
+\df{adjoint} (or \df{conjugate transpose}, or \df{Hermitian conjugate}) of~$T$.
+\end{defn}
+
+\begin{prop}\label{00016021} If $T\colon V \sto W$ is a linear map between finite
+dimensional inner product spaces, then $T^*$ exists.
+\end{prop}
+
+\begin{proof}[\emph{Hint for proof}] The functional $\phi\colon V \times W \sto \C \colon
+(v,w) \mapsto \langle Tv,w \rangle$ is sesquilinear. Fix $w \in W$ and define $\phi_w
+\colon V \sto \C \colon v \mapsto \phi(v,w)$. Then $\phi_w \in V^{\#}$. Use the
+\emph{Riesz-Fr\'echet theorem}~(\ref{0001601}).  \ns
+\end{proof}
+
+\begin{prop} If $T\colon V \sto W$ is a linear map between finite dimensional inner product
+spaces, then the function $T^*$ defined above is linear and $T^{**} = T$.
+\end{prop}
+
+\begin{thm}[The fundamental theorem of linear algebra]\label{00016025} If
+ \index{fundamental!theorem of linear algebra}%
+$T\colon V \sto W$ is a linear map between finite dimensional inner product spaces, then
+   \[ \ker T^* = (\ran T)^\perp \quad \text{ and } \quad \ran T^* = (\ker T)^\perp\,. \]
+\end{thm}
+
+\begin{defn}\label{000161} An operator $U$ on an inner product space is
+ \index{unitary!operator}%
+ \index{operator!unitary}%
+\df{unitary} if $UU^* = U^*U = I$, that is if $U^* = U^{-1}$.
+\end{defn}
+
+\begin{defn}\label{0001612} Two operators $R$ and $T$ on an inner product space $V$ are
+ \index{unitary!equivalence}%
+ \index{equivalent!unitarily}%
+\df{unitarily equivalent} if there exists a unitary operator $U$ on $V$ such that $R =
+U^*TU$.
+\end{defn}
+
+\begin{prop} If $V$ is an inner product space, then unitary equivalence is in fact an
+equivalence relation on~$\ofml L(V)$.
+\end{prop}
+
+\begin{defn} An operator $T$ on a finite dimensional inner product space $V$ is
+ \index{unitary!diagonalization}%
+ \index{diagonalizable!unitarily}%
+\df{unitarily diagonalizable} if there exists an orthonormal basis for $V$ with respect
+to which $T$ is diagonal. Equivalently, an operator on a finite dimensional inner product
+space \emph{with basis} is diagonalizable if it is unitarily equivalent to a diagonal
+operator.
+\end{defn}
+
+\begin{defn} An operator $T$ on an inner product space is
+ \index{self-adjoint!operator}%
+ \index{operator!self-adjoint}%
+\df{self-adjoint} (or
+ \index{Hermitian!operator}%
+ \index{operator!Hermitian}%
+\df{Hermitian}) if $T^* = T$.
+\end{defn}
+
+\begin{defn}\label{000164} A projection $P$ in an inner product space is an
+ \index{projection!orthogonal}%
+ \index{orthogonal!projection!in an inner product space}%
+ \index{operator!orthogonal projection}%
+\df{orthogonal projection} if it is self-adjoint.  If $M$ is the range of an orthogonal
+projection we will adopt the notation
+ \index{PM@$\sbsb PM$ (orthogonal projection onto~$M$)}%
+$\sbsb PM$ for the projection rather than the more cumbersome~$\sbsb E{M^\perp M}$.
+\end{defn}
+
+\begin{cau} A projection on a vector space or a normed linear space is linear and idempotent,
+while an orthogonal projection on an inner product space is linear, idempotent, and
+self-adjoint.  This otherwise straightforward situation is somewhat complicated by a
+common tendency to refer to orthogonal projections simply as ``projections''.  In fact,
+later in these notes we will adopt this very convention.  In inner product spaces
+$\oplus$ usually indicates orthogonal direct sum and ``projection'' usually means
+``orthogonal projection''. In many elementary linear algebra texts, where everything
+happens in $\R^n$, it can be quite exasperating trying to divine whether on any
+particular page the author is treating $\R^n$ as a vector space or as an inner product
+space.
+\end{cau}
+
+\begin{prop} If $P$ is an orthogonal projection on an inner product space $V$, then we have
+the orthogonal direct sum decomposition $V = \ker P \oplus \ran P$.
+\end{prop}
+
+\begin{defn} If $I_V = P_1 + P_2 + \dots + P_n$ is a resolution of the identity in an
+inner product space~$V$ and each $P_k$ is an orthogonal projection, then we say that $I =
+P_1 + P_2 + \dots + P_n$ is an
+ \index{resolution of the identity!orthogonal}%
+ \index{orthogonal!resolution of the identity}%
+\df{orthogonal resolution of the identity}.
+\end{defn}
+
+\begin{prop} If $I_V = P_1 + P_2 + \dots + P_n$ is an orthogonal resolution of the identity
+on an inner product space $V$, then $V = \bigoplus_{k=1}^n \ran P_k$.
+\end{prop}
+
+\begin{defn} An operator $N$ on an inner product space is
+ \index{normal!operator}%
+ \index{operator!normal}%
+\df{normal} if $NN^* = N^*N$.
+\end{defn}
+
+Two great triumphs of linear algebra are the \emph{spectral theorem} for operators on a
+(complex) finite dimensional inner product space (see \ref{00017}), which gives a simply
+stated necessary and sufficient condition for an operator to be unitarily diagonalizable,
+and theorem~\ref{00018}, which gives a complete classification of those operators.
+
+\begin{thm}[Spectral Theorem for Finite Dimensional Complex Inner Product Spaces]\label{00017}
+Let $T$ be an operator on a finite dimensional inner product space~$V$ with (distinct)
+ \index{spectral!theorem!for normal operators on inner product spaces}%
+eigenvalues $\lambda_1, \dots, \lambda_n$.  Then $T$ is unitarily diagonalizable if and
+only if it is normal.  If $T$ is normal, then there exists an orthogonal resolution of
+the identity $I_V = P_1 + \dots + P_n$, where for each $k$ the range of the orthogonal
+projection $P_k$ is the eigenspace associated with~$\lambda_k$, and furthermore
+     \[ T = \lambda_1P_1 +\dots + \lambda_nP_n\,. \]
+\end{thm}
+
+\begin{proof}  See \cite{Roman:2005}, page 227. \ns
+\end{proof}
+
+\begin{thm}\label{00018} Two normal operators on a finite dimensional inner product space
+ \index{normal!operator!conditions for unitary equivalence}%
+are unitarily equivalent if and only if they have the same eigenvalues each with the same
+multiplicity; that is, if and only if they have the same characteristic polynomial.
+\end{thm}
+
+\begin{proof} See \cite{HoffmanK:1971}, page 357.   \ns
+\end{proof}
+
+Much of the remainder of these notes is devoted to the definitely nontrivial adventure of finding
+appropriate generalizations of the preceding two results to the infinite dimensional
+setting and to the astonishing mathematical landscapes which come into view along the way.
+
+\begin{exer} Let $N = \dfrac13\begin{bmatrix}
+                                4+2i & 1-i  & 1-i  \\
+                                1-i  & 4+2i & 1-i  \\
+                                1-i  & 1-i  & 4+2i \end{bmatrix}$.
+
+\vskip 3 pt
+ \begin{enumerate}
+  \item The matrix $N$ is normal.
+
+\vskip 3 pt
+
+  \item Thus according to the \emph{spectral theorem} $N$
+can be written as a linear combination of orthogonal projections.
+Explain clearly how to do this (and carry out the computation).
+ \end{enumerate}
+\end{exer}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\endinput
