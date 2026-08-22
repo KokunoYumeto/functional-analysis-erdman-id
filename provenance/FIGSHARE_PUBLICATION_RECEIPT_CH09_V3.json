@@ -1,0 +1,100 @@
+{
+  "schema_version": "o008.figshare-publication-receipt.v3",
+  "recorded_date": "2026-08-22",
+  "release_boundary": "FAOA-2015-CH01-through-CH09",
+  "edition_state": "in_progress_chapters_1_9_of_17",
+  "figshare_article": {
+    "article_id": 33314709,
+    "title": "Analisis Fungsional dan Aljabar Operator: Suatu Pengantar — Edisi Bahasa Indonesia (Bab 1–9 dari 17)",
+    "defined_type": "online resource",
+    "status": "public",
+    "version": 3,
+    "doi": "10.6084/m9.figshare.33314709.v3",
+    "doi_url": "https://doi.org/10.6084/m9.figshare.33314709.v3",
+    "public_url": "https://figshare.com/articles/online_resource/Analisis_Fungsional_dan_Aljabar_Operator_Suatu_Pengantar_Edisi_Bahasa_Indonesia_rekaman_metadata_/33314709",
+    "published_date_utc": "2026-08-22T19:44:47Z",
+    "modified_date_utc": "2026-08-22T19:44:48Z",
+    "description_utf8_bytes": 2054,
+    "description_utf8_sha256": "0e07d583801b63207b18741bb2634ff3b4edb86b096d1847b6fbbf3613b1abe5",
+    "license_field": "CC0",
+    "license_value": 2,
+    "cc0_scope": "Figshare metadata and external-link pointers only",
+    "substantive_release_license": "CC BY-SA 4.0",
+    "substantive_bytes_uploaded_to_figshare": false
+  },
+  "reader_first_file": {
+    "file_id": 67761333,
+    "filename": "analisis-fungsional-dan-aljabar-operator-id-bab-1-9.pdf",
+    "is_link_only": true,
+    "figshare_reported_bytes": 0,
+    "external_url": "https://zenodo.org/records/22061720/files/analisis-fungsional-dan-aljabar-operator-id-bab-1-9.pdf",
+    "anonymous_stream_bytes": 1686477,
+    "anonymous_stream_sha256": "99215ff5987f720600152da902cec8f521329692931a0dbf89e82ef2d4ff6076",
+    "readback_result": "pass"
+  },
+  "linked_companions": [
+    {
+      "filename": "functional-analysis-erdman-id-2026.08.22-ch09-source-backend.zip",
+      "external_url": "https://zenodo.org/records/22061720/files/functional-analysis-erdman-id-2026.08.22-ch09-source-backend.zip",
+      "bytes": 1622383,
+      "sha256": "b526676d95275ecc22c6e9b3d2373c21472477509de3719d3fb546ee442fa921",
+      "readback_result": "pass"
+    },
+    {
+      "filename": "SHA256SUMS.txt",
+      "external_url": "https://zenodo.org/records/22061720/files/SHA256SUMS.txt",
+      "bytes": 253,
+      "sha256": "47d78cf87c246a3117fb6098b930fe66470cc5a7db485e85e067bb312d4d6bd8",
+      "readback_result": "pass"
+    }
+  ],
+  "platform_constraint": {
+    "observed_previous_http_status": 400,
+    "observed_previous_message": "Cannot add a linked file to an article that already has file(s).",
+    "effect": "The PDF occupies the sole external linked-file row; the source/backend ZIP and SHA256SUMS remain direct links in the public description and references.",
+    "license_safety_decision": "Do not upload CC BY-SA 4.0 substantive bytes under the Figshare CC0 field."
+  },
+  "memberships_and_caps": {
+    "project_id": 280296,
+    "project_url": "https://figshare.com/projects/Open_and_Share-Alike_Educational_Materials_Translations/280296",
+    "project_membership_verified": true,
+    "project_public_article_count": 25,
+    "project_stored_bytes_after_transaction": 212175199,
+    "project_storage_cap_bytes": 20000000000,
+    "collection_id": 8668413,
+    "collection_concept_doi": "10.6084/m9.figshare.c.8668413",
+    "collection_readback_version": 36,
+    "collection_readback_doi": "10.6084/m9.figshare.c.8668413.v36",
+    "collection_public_article_count_before": 19,
+    "collection_public_article_count_after": 20,
+    "collection_prior_members_preserved": true,
+    "collection_membership_verified": true,
+    "referenced_payload_bytes": 3309113,
+    "task_payload_cap_bytes": 500000000,
+    "caps_pass": true
+  },
+  "description_checks": {
+    "nine_of_seventeen_scope_visible": true,
+    "chapters_10_17_pending_visible": true,
+    "accessible_html_pending_visible": true,
+    "untagged_pdf_boundary_visible": true,
+    "erdman_attribution_visible": true,
+    "translation_change_disclosure_visible": true,
+    "non_endorsement_visible": true,
+    "substantive_cc_by_sa_visible": true,
+    "cc0_metadata_only_scope_visible": true,
+    "zenodo_filenames_sizes_hashes_visible": true,
+    "github_restored_link_visible": true
+  },
+  "anonymous_readback": {
+    "public_api_version": 3,
+    "article_doi_http_status_initial": 202,
+    "article_doi_effective_url": "https://figshare.com/articles/online_resource/Analisis_Fungsional_dan_Aljabar_Operator_Suatu_Pengantar_Edisi_Bahasa_Indonesia_rekaman_metadata_/33314709/3",
+    "collection_doi_http_status_initial": 202,
+    "collection_doi_effective_url": "https://figshare.com/collections/Indonesian_Open_Mathematics_Editions/8668413/36",
+    "doi_registration_state": "pending at readback; both versioned landing pages and public APIs are live",
+    "public_metadata_last_read_utc": "2026-08-22T19:45:00Z",
+    "all_required_metadata_and_stream_checks_pass": true,
+    "credential_material_recorded": false
+  }
+}

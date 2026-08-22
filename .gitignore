@@ -29,6 +29,7 @@
 /qa/renders/ch06-final/
 /qa/build-through-ch09-a/
 /qa/renders/ch09-final/
+/qa/release-ch09/
 
 # TeX intermediates
 *.aux

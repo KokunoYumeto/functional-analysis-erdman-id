@@ -1,0 +1,123 @@
+{
+  "schema_version": "o008.zenodo-publication-receipt.v1",
+  "recorded_date": "2026-08-22",
+  "release_boundary": "FAOA-2015-CH01-through-CH09",
+  "edition_state": "in_progress_chapters_1_9_of_17",
+  "source_content": {
+    "github_commit": "e3980f552a3e23c631223b3fd1802729568e101c",
+    "github_tree": "03e2cebef9eb46c2d5885bff9860cc96b5c70b1c",
+    "github_publication_receipt_sha256": "4c0eb6fc5e65942a9caf7e7d0e6c9568f38b67cb88f20e9869d4ca36bd5822ed"
+  },
+  "zenodo": {
+    "record_id": "22061720",
+    "concept_record_id": "22059739",
+    "version_doi": "10.5281/zenodo.22061720",
+    "concept_doi": "10.5281/zenodo.22059739",
+    "record_url": "https://zenodo.org/records/22061720",
+    "public_api_url": "https://zenodo.org/api/records/22061720",
+    "version": "2026.08.22-ch09",
+    "publication_date": "2026-08-22",
+    "resource_type": "publication-book",
+    "language": "ind",
+    "license": "cc-by-sa-4.0",
+    "access_right": "open",
+    "title": "Analisis Fungsional dan Aljabar Operator: Suatu Pengantar — Edisi Bahasa Indonesia",
+    "creator": "Erdman, John M.",
+    "contributor": "Codex (Other; translator and technical editor at the user's direction)",
+    "description_utf8_bytes": 1278,
+    "description_utf8_sha256": "99070500a8d49ba29f0bef4a490cf2a8bede48af5ce1ed59a5dbf1667f078bdb",
+    "partial_status_visible": true,
+    "chapters_10_17_pending_visible": true,
+    "non_endorsement_visible": true,
+    "accessible_html_pending_visible": true,
+    "github_restored_link_visible": true,
+    "stale_github_suspension_absent": true,
+    "related_identifiers": [
+      {
+        "relation": "isDerivedFrom",
+        "identifier": "https://web.pdx.edu/~erdman/FAOA/functional_analysis_operator_algebras_pdf.pdf",
+        "resource_type": "publication-book"
+      },
+      {
+        "relation": "isDerivedFrom",
+        "identifier": "https://web.pdx.edu/~erdman/FAOA/functional_analysis_operator_algebras_web.zip",
+        "resource_type": "software"
+      },
+      {
+        "relation": "isSupplementedBy",
+        "identifier": "https://github.com/KokunoYumeto/functional-analysis-erdman-id",
+        "resource_type": "software"
+      }
+    ]
+  },
+  "source_archive_verification": {
+    "archive_entries": 157,
+    "tracked_payload_files": 155,
+    "expanded_archive_bytes": 10456471,
+    "compressed_file_bytes": 1622383,
+    "deterministic_packaging_runs": 2,
+    "all_entry_streams_read": true,
+    "duplicate_entries": 0,
+    "forbidden_entries": 0,
+    "reader_pdf_inside_archive": false,
+    "reader_pdf_uploaded_separately": true,
+    "excluded_private_or_incompatible_surfaces": [
+      "00_control",
+      "authority",
+      "Git metadata",
+      "credentials",
+      "build caches",
+      "render scratch",
+      "TABLE.TEX",
+      "by-sa.eps",
+      "by-sa.pdf",
+      "Wiener_quote.tex"
+    ]
+  },
+  "files": [
+    {
+      "filename": "analisis-fungsional-dan-aljabar-operator-id-bab-1-9.pdf",
+      "bytes": 1686477,
+      "md5": "a559a5db1640dc16607ca92dbefb59de",
+      "sha256": "99215ff5987f720600152da902cec8f521329692931a0dbf89e82ef2d4ff6076",
+      "public_download_url": "https://zenodo.org/api/records/22061720/files/analisis-fungsional-dan-aljabar-operator-id-bab-1-9.pdf/content",
+      "anonymous_readback_bytes": 1686477,
+      "anonymous_readback_sha256": "99215ff5987f720600152da902cec8f521329692931a0dbf89e82ef2d4ff6076",
+      "match": true
+    },
+    {
+      "filename": "functional-analysis-erdman-id-2026.08.22-ch09-source-backend.zip",
+      "bytes": 1622383,
+      "md5": "9767044b549ab71f2f3627e800a7d904",
+      "sha256": "b526676d95275ecc22c6e9b3d2373c21472477509de3719d3fb546ee442fa921",
+      "public_download_url": "https://zenodo.org/api/records/22061720/files/functional-analysis-erdman-id-2026.08.22-ch09-source-backend.zip/content",
+      "anonymous_readback_bytes": 1622383,
+      "anonymous_readback_sha256": "b526676d95275ecc22c6e9b3d2373c21472477509de3719d3fb546ee442fa921",
+      "match": true
+    },
+    {
+      "filename": "SHA256SUMS.txt",
+      "bytes": 253,
+      "md5": "18de486cf31557736c0600b8c6399e81",
+      "sha256": "47d78cf87c246a3117fb6098b930fe66470cc5a7db485e85e067bb312d4d6bd8",
+      "public_download_url": "https://zenodo.org/api/records/22061720/files/SHA256SUMS.txt/content",
+      "anonymous_readback_bytes": 253,
+      "anonymous_readback_sha256": "47d78cf87c246a3117fb6098b930fe66470cc5a7db485e85e067bb312d4d6bd8",
+      "match": true
+    }
+  ],
+  "verification": {
+    "authenticated_deposition_file_count": 3,
+    "authenticated_deposition_file_mismatches": 0,
+    "publish_state": "done",
+    "submitted": true,
+    "anonymous_public_record_readback": true,
+    "anonymous_file_count": 3,
+    "anonymous_file_mismatches": 0,
+    "doi_http_status": 200,
+    "doi_final_url": "https://zenodo.org/records/22061720",
+    "public_html_partial_status_present": true,
+    "credential_material_recorded": false,
+    "result": "pass"
+  }
+}

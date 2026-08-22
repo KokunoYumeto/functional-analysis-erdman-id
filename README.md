@@ -23,12 +23,12 @@ tetap tersedia sebagai artefak batas sebelumnya.
 
 ## Preservasi versi
 
-Versi parsial `2026.08.22-ch08` dipertahankan secara mandiri di Zenodo dengan
-[DOI 10.5281/zenodo.22059740](https://doi.org/10.5281/zenodo.22059740). Catatan
-Zenodo tersebut secara eksplisit berstatus **edisi dalam pengerjaan, Bab 1--8
+Versi parsial `2026.08.22-ch09` dipertahankan secara mandiri di Zenodo dengan
+[DOI 10.5281/zenodo.22061720](https://doi.org/10.5281/zenodo.22061720). Catatan
+Zenodo tersebut secara eksplisit berstatus **edisi dalam pengerjaan, Bab 1--9
 dari 17 bab**, bukan buku lengkap. Mirror GitHub ini telah dipulihkan dan
 diverifikasi kembali secara anonim. [Item Figshare
-v2](https://doi.org/10.6084/m9.figshare.33314709.v2) menyediakan tautan pembaca
+v3](https://doi.org/10.6084/m9.figshare.33314709.v3) menyediakan tautan pembaca
 langsung ke PDF Zenodo; CC0 di Figshare hanya berlaku untuk metadata dan
 penunjuk tautan, sedangkan seluruh berkas substantif tetap berlisensi CC BY-SA
 4.0.
@@ -69,8 +69,11 @@ klaim aksesibilitas yang melampaui keadaan ini.
 
 Karya sumber John M. Erdman dan adaptasi Bahasa Indonesia ini dilisensikan
 menurut [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).
-Terjemahan dibuat oleh Codex atas arahan pengguna. Proyek ini tidak disponsori,
-disetujui, atau didukung oleh John M. Erdman maupun Portland State University.
+Terjemahan dan penyuntingan teknis dibantu oleh OpenAI Codex gpt-5.6-sol,
+Ultra, atas arahan pengguna manusia. Provenans model dan pembagian kredit
+dicatat di `provenance/TRANSLATION_MODEL_PROVENANCE.md`. Proyek ini tidak
+disponsori, disetujui, atau didukung oleh John M. Erdman maupun Portland State
+University.
 
 Komponen yang statusnya tidak cukup jelas tidak masuk ke reader. Berkas
 `DIAGXY.TEX` dipertahankan byte-identik di bawah pemberitahuan distribusi
