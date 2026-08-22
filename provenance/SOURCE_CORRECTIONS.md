@@ -193,3 +193,87 @@ link until Chapter 6 enters the reader.
 No upstream contact occurs during production. These entries are held for the
 single deduplicated post-corpus report only if that report is separately
 authorized.
+## Chapter 5
+
+The following source candidates are adjudicated and applied in
+`source/id-ID/Hilbert_space_operators-id.tex`. The target retains the complete
+ordered environment, label, citation, exercise, hint, index, defined-term, and
+formula topology except for the six explicitly locked mathematical surfaces
+listed below.
+
+1. `Hilbert_space_operators.tex:42,44`: correct the misspelled index display
+   word `isomorophisms` in the translated reader-facing entries.
+2. `Hilbert_space_operators.tex:143`: restore the omitted predicate: the
+   associated quadratic form is the zero function exactly when the operator is
+   the zero operator.
+3. `Hilbert_space_operators.tex:188--189`: in the bound for a sesquilinear
+   functional on `H` and `K`, quantify `x in H` and `y in K`, not both in `H`.
+4. `Hilbert_space_operators.tex:481`: encode scalar conjugation with the
+   semantic macro `\conj\alpha`, not the closure macro `\clo\alpha`.
+5. `Hilbert_space_operators.tex:490`: remove the trailing space from the raw
+   defined-term argument while translating it as `aljabar-*`.
+6. `Hilbert_space_operators.tex:536`: close the pronunciation parenthesis in
+   the star-homomorphism definition.
+7. `Hilbert_space_operators.tex:576`: scope the definition and notation for a
+   unitary element to a unital star algebra, because the displayed condition
+   uses the multiplicative identity.
+8. `Hilbert_space_operators.tex:602`: close the reader-facing parenthesis in
+   the star-subalgebra index entry.
+9. `Hilbert_space_operators.tex:790--792`: use the established real-field
+   macro `\R^2` in both occurrences, not the undefined literal `R^2`.
+10. `Hilbert_space_operators.tex:838--840`: require the star algebra to be
+    unital before asserting `0 \preceq p \preceq 1` for every projection.
+11. `Hilbert_space_operators.tex:864--866`: avoid the not-yet-defined notation
+    `A^+`; state directly that `a in A` is a positive element.
+12. `Hilbert_space_operators.tex:1076`: restore the missing space after the
+    comma, expressed naturally in Indonesian.
+13. `Hilbert_space_operators.tex:1106--1107`: exclude the zero Hilbert space
+    from the minimal-ideal claim; otherwise `FR(H)` is the zero ideal, whereas
+    this chapter defines a minimal ideal to be nonzero.
+14. Ordinary source-language defects at lines 221, 234, 249, 300, 536, 843,
+    and 1076, and the stray comma at line 834, are repaired naturally in the
+    Indonesian prose without changing mathematical surfaces.
+15. `Hilbert_space_operators.tex:77--81`: require both Hilbert spaces to be
+    nonzero before taking suprema over their unit spheres in the operator-norm
+    formula and its proof hint.
+16. `Hilbert_space_operators.tex:179--212`: require both Hilbert spaces to be
+    nonzero where the norm of a bounded sesquilinear functional is identified
+    with expressions involving unit vectors and nonzero vectors; this scope is
+    carried into the two immediately following propositions that invoke that
+    norm.
+17. `Hilbert_space_operators.tex:307--310`: state the finite-dimensional
+    spectral theorem for a complex inner-product space. A real planar rotation
+    is normal but need not be unitarily equivalent to a scalar multiplication
+    operator.
+18. `Hilbert_space_operators.tex:370--375`: require `H` to be a complex Hilbert
+    space before quantifying `alpha in C` and forming `alpha T`.
+19. `Hilbert_space_operators.tex:620--635`: require a nonzero Hilbert space in
+    the definitions and proposition for numerical range and numerical radius;
+    otherwise the unit sphere is empty and the displayed supremum has no stated
+    convention.
+20. `Hilbert_space_operators.tex:962--968`: bind `u` and `v` to the same
+    Hilbert space `H` on which `T` acts, so both tensor-composition formulas are
+    well typed.
+21. `Hilbert_space_operators.tex:970--971`: qualify the preview of the minimal
+    finite-rank ideal by requiring a nonzero Hilbert space, consistently with
+    the corrected proposition at lines 1106--1107 and the chapter's definition
+    of a minimal ideal as nonzero.
+22. `Hilbert_space_operators.tex:1116--1118`: restrict the claim that the
+    finite-rank ideal is not closed to infinite-dimensional Hilbert spaces. In
+    finite dimension it equals the full operator algebra and is closed.
+23. `functional_analysis_op_algs_bib.bib`, entry `Erdman:2010`: replace the
+    dead `ELMA_licensepage.html` URL in the derivative bibliography with the
+    durable DOI for the current publisher record of the same work. On
+    2026-08-22 the frozen URL and both title-specific links exposed by Erdman's
+    official author page returned HTTP 404; DOI `10.1142/11896` resolved and
+    its registered record identified John M. Erdman and the exact title. The
+    target retains the source's 2010 citation year because the DOI record is
+    for the later 2021 monograph; this is a link repair, not a silent edition
+    substitution. The frozen upstream bibliography remains byte-identical.
+
+The source's variation between `H\oplus K` and `H\times K` at lines 179--212
+is retained rather than silently harmonized: the finite direct sum is
+canonically the product here, and the source deliberately alternates the two
+descriptions. The cumulative Chapter 1--5 reader renders the intentional
+forward reference `chap_cpt_ops` as `\futurexref{7}{chap_cpt_ops}` until
+Chapter 7 supplies the live endpoint.

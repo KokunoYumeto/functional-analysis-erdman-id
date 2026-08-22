@@ -17,6 +17,14 @@
 /qa/ch03_translation_parts/
 /qa/build-through-ch04/
 /qa/render-through-ch04/
+/qa/build-through-ch05/
+/qa/build-through-ch05-a/
+/qa/build-through-ch05-b/
+/qa/render-ch05-all/
+/qa/CH05_BBOX.html
+/qa/CH05_EXTRACTED_TEXT.txt
+/qa/CH05_CHAPTER_PAGES_CONTACT.png
+/qa/CH05_BACKMATTER_CONTACT.png
 
 # TeX intermediates
 *.aux

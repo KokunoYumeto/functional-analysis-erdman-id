@@ -1,0 +1,1147 @@
+\chapter{HILBERT SPACE OPERATORS}
+
+\section{Invertible Linear Maps and Isometries}
+
+\begin{defn} A linear map $T\colon H \sto K$ between two inner product spaces is
+ \index{inner product!preserving}%
+\df{inner product preserving} if $\langle Tx, Ty \rangle = \langle x, y \rangle$ for all $x$, $y \in H$.
+\end{defn}
+
+\begin{prop}\label{prop_isometry_equiv} Let $T\colon H \sto K$ be a linear map between inner product spaces.  Then
+the following are equivalent:
+ \begin{enumerate}[label=\rm{(\alph*)}]
+   \item $T$ is inner product preserving;
+   \item $T$ is norm preserving; and
+   \item $T$ is an isometry.
+ \end{enumerate}
+\end{prop}
+
+Just as was the case with normed linear spaces (see the very end of section~\ref{sec_bdd_lin_maps})
+there are (at least) two important categories in which the objects are Hilbert spaces:
+ \begin{enumerate}
+  \item[(a)] $\cat{HSp} =$ Hilbert spaces and bounded linear maps, and
+   \index{HSp@$\cat{HSp}$!the category}%
+   \index{category!$\cat{HSp}$ as a}%
+  \item[(b)] $\cat{HSp_1} =$ Hilbert spaces and linear contractions.
+   \index{HSp1@$\cat{HSp_1}$!the category}%
+   \index{category!$\cat{HSp_1}$ as a}%
+ \end{enumerate}
+In any category it is usual to define \emph{isomorphism} to be an \emph{invertible morphism}. Since it is the
+ \index{category!topological}%
+(topological) category of Hilbert spaces and bounded linear maps that we encounter
+nearly exclusively in these notes it might seem reasonable to apply the word ``isomorphism'' to
+the isomorphisms in this category---in other words, to invertible maps; while an isomorphism
+in the more restrictive
+ \index{category!geometric}%
+(geometric) category of Hilbert spaces and linear contractions might reasonably be
+called an \emph{isometric isomorphism}.  But this is \emph{not} the convention.  When most mathematicians think of
+a ``Hilbert space isomorphism'' they think of a map which preserves all the Hilbert space structure---including
+the inner product.  Thus (invoking~\ref{prop_isometry_equiv}) the word
+ \index{isomorphism!between Hilbert spaces}%
+ \index{isomorphism!in the category $\cat{HSp}$}%
+ \index{HSp@$\cat{HSp}$!isomorophisms in}%
+ \index{isomorphism!in the category $\cat{HSp_1}$}%
+ \index{HSp1@$\cat{HSp_1}$!isomorophisms in}%
+``isomorphism'' when applied to maps between Hilbert spaces has come, in most places, to mean \emph{isometric isomorphism}.
+And consequently, the isomorphisms in the more common category $\cat{HSp}$ are called \emph{invertible (bounded linear) maps}.
+Recall also: We reserve the word
+ \index{operator}%
+ \index{conventions!all operators are bounded and linear}%
+``operator'' for bounded linear maps from a space \emph{into itself}.
+
+\begin{exam} Define an operator $T$ on the Hilbert space $H = L_2([0,\infty))$ by
+   \[ Tf(t) = \begin{cases}   f(t-1),  &\text{ if $t \ge 1$} \\
+                                   0,  &\text{ if $0 \le t < 1$.}
+           \end{cases} \]
+Then $T$ is an isometry but not an isometric isomorphism. If, on the other hand,
+$H = L_2(\R)$ and $T$ maps each $f \in H$ to the function $t \mapsto f(t-1)$, then $T$ is an isometric isomorphism.
+\end{exam}
+
+\begin{exam} Let $H$ be the Hilbert space defined in example~\ref{exam_Hsp_abs_cont}.  Then the differentiation mapping
+$D\colon f \mapsto f\,'$ from $H$ into $L_2([0,1])$ is an isometric isomorphism.  What is its inverse?
+\end{exam}
+
+\begin{exam} Let $\{(X_i,\mu_i) \colon i \in I\}$ be a family of $\sigma$-finite measure spaces. Make the disjoint union
+$\D X = \biguplus_{i \in I}X_i$ into a measure space $(X,\mu)$ in the usual way.  Then $L_2(X,\mu)$ is isometrically
+isomorphic to the direct sum of the Hilbert spaces $L_2(X_i,\mu_i)$.
+\end{exam}
+
+\begin{exam} Let $\mu$ be Lebesgue measure on $[-\frac\pi2, \frac\pi2]$ and $\nu$ be Lebesgue measure on $\R$.
+Let $(Uf)(x) = \dfrac{f(\arctan x)}{\sqrt{1+x^2}}$ for all $f \in L_2(\mu)$ and all $x \in \R$.  Then $U$ is an
+isometric isomorphism between $L_2([-\frac\pi2, \frac\pi2], \mu)$ and $L_2(\R, \nu)$.
+\end{exam}
+
+\begin{prop} Every inner product preserving surjection from one Hilbert space to another is automatically linear.
+\end{prop}
+
+\begin{prop}\label{prop_norm_lin_map} If $T\colon H \sto K$ is a bounded linear map between Hilbert spaces, then
+   \[ \norm T = \sup\{\abs{\langle Tx,y \rangle}\colon \norm x = \norm y = 1\}\,. \]
+\end{prop}
+
+\begin{proof}[\emph{Hint for proof}] Show first that $\norm x = \sup\{\abs{\langle x,y \rangle}\colon \norm y = 1\}$.  \ns
+\end{proof}
+
+\begin{defn} A
+ \index{curve}%
+\df{curve} in a Hilbert space $H$ is a continuous map from $[0,1]$ into~$H$. A curve is
+ \index{simple!curve}%
+\df{simple} if it is injective.  If $c$ is a curve and $0 \le a < b \le 1$, then the
+ \index{chord}%
+\df{chord} of $c$ corresponding to the interval $[a,b]$ is the vector $c(b) - c(a)$.  Two chords are
+\df{non-overlapping} if their associated parameter intervals have at most an endpoint in common.
+\end{defn}
+
+Halmos, in \cite{Halmos:1982}, illustrates the roominess of infinite dimensional Hilbert spaces by means of the
+following elegant example.
+
+\begin{exam} In every infinite dimensional Hilbert space there exists a simple curve which makes a right-angle
+turn at each point, in the sense that every pair of non-overlapping chords are perpendicular.
+\end{exam}
+
+\begin{proof}[\emph{Hint for proof}]  Consider characteristic functions in $L_2([0,1])$.  \ns
+\end{proof}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Operators and their Adjoints}
+
+\begin{prop}\label{C0635103} Let $S$, $T \in \ofml B(H,K)$ where $H$ and $K$ are Hilbert
+spaces. If $\langle Sx,y \rangle = \langle Tx,y \rangle$ for every $x \in H$ and $y \in
+K$, then $S = T$.
+\end{prop}
+
+\begin{defn} Let $T$ be an operator on a Hilbert space~$H$.  Then $Q_T$, the
+ \index{quadratic form}%
+ \index{form!quadratic}%
+ \index{Q@$Q_T$ (quadratic form associated with~$T$)}%
+\df{quadratic form associated with~$T$}, is the scalar valued function defined by
+   \[ Q_T(x) := \langle Tx,x \rangle \]
+for all $x \in H$.
+\end{defn}
+
+An operator on complex Hilbert spaces is zero if and only if its associated quadratic forms is.
+
+\begin{prop}\label{C0635105} If $H$ is a \emph{complex} Hilbert space and $T \in \ofml B(H)$, then
+$T = \vc 0$ if and only if $Q_T = 0$.
+\end{prop}
+
+\begin{proof}[\emph{Hint for proof}] In the hypothesis $Q_T(z) = 0$ for all $z \in H$ replace $z$ first by $y + x$
+and then by $y + ix$.  \ns
+\end{proof}
+
+The preceding proposition is one of the few we will encounter that does not hold for both real and complex Hilbert spaces.
+
+\begin{exam} Proposition~\ref{C0635105} is not true if in the hypothesis the word ``real'' is substituted for ``complex''.
+\end{exam}
+
+\begin{defn} A function $T\colon V \sto W$ between complex vector spaces is
+ \index{conjugate!linear}%
+ \index{linear!conjugate}%
+\df{conjugate linear} if it is additive ($T(x+y) = Tx + Ty$) and satisfies $T(\alpha x) =
+\conj\alpha\, Tx$ for all $x \in V$ and $\alpha \in \C$. A complex valued function of two
+variables $\phi\colon V \times W \sto \C$ is a
+ \index{sesquilinear functional}%
+ \index{functional!sesquilinear}%
+\df{sesquilinear functional} if it is linear in its first variable and conjugate linear
+in its second variable.
+
+If $H$ and $K$ are normed linear spaces, a sesquilinear functional $\phi$ on $H \times K$
+is
+ \index{bounded!sesquilinear functional}%
+ \index{sesquilinear functional!bounded}%
+ \index{functional!bounded sesquilinear}%
+\df{bounded} if there exists a constant $M > 0$ such that
+    \[ \abs{\phi(x,y)} \le M\norm x\norm y \]
+for all $x \in H$ and $y \in K$.
+\end{defn}
+
+\begin{prop} If $\phi \colon H \oplus K \sto \C$ is a bounded sesquilinear functional on
+the direct sum of two Hilbert spaces, then the following numbers (exist and) are equal:
+ \begin{enumerate}[label=\rm{(\alph*)}]
+    \item $\sup\{\abs{\phi(x,y)}\colon \norm x \le 1, \norm y \le 1\}$
+ \vskip 3 pt
+    \item $\sup\{\abs{\phi(x,y)}\colon \norm x = \norm y = 1\}$
+ \vskip 3 pt
+    \item $\sup\left\{\dfrac{\abs{\phi(x,y)}}{\norm x\,\norm y}\colon x,y \ne 0\right\}$
+ \vskip 3 pt
+    \item $\inf\{M > 0\colon \abs{\phi(x,y)} \le M\norm x\,\norm y
+                    \text{ for all $x$, $y \in H$}\}$.
+ \end{enumerate}
+\end{prop}
+
+\begin{proof}[\emph{Hint for proof}] The proof is virtually identical to the corresponding
+result for linear maps (see~\ref{C023221}). \ns
+\end{proof}
+
+\begin{defn} Let $\phi \colon H \oplus K \sto \C$ be a bounded sesquilinear functional on
+the direct sum of two Hilbert spaces. We define $\norm \phi$, the
+ \index{norm!of a bounded sesquilinear functional}%
+\emph{norm} of $\phi$, to be any of the (equal) expressions in the preceding result.
+\end{defn}
+
+\begin{prop} Let $T\colon H \sto K$ be a bounded linear map between Hilbert spaces.  Then
+   \[ \phi \colon H \oplus K \sto \C\colon (x,y) \mapsto \langle Tx,y \rangle \]
+is a bounded sesquilinear functional on $H \oplus K$ and $\norm\phi = \norm T$.
+\end{prop}
+
+\begin{prop} Let $\phi \colon H \times K \sto \C$ be a bounded sesquilinear functional on the
+product of two Hilbert spaces. Then there exist unique bounded linear maps $T \in \ofml B(H,K)$ and
+$S \in \ofml B(K,H)$ such that
+    \[ \phi(x,y) = \langle Tx,y \rangle = \langle x,Sy \rangle \]
+for all $x \in H$ and $y \in K$. Also, $\norm T = \norm S = \norm\phi$.
+\end{prop}
+
+\begin{proof}[\emph{Hint for proof}] Show that for every $x \in H$ the map
+$y \mapsto \conj{\phi(x,y)}$ is a bounded linear functional on~$K$. \ns
+\end{proof}
+
+\begin{defn}\label{def000926} Let $T\colon H \sto K$ be a bounded linear map between Hilbert spaces.  The
+mapping $(x,y) \mapsto \langle Tx,y \rangle$ from $H \oplus K$ into $\C$ is a bounded
+sesquilinear functional. By the preceding proposition there exists an unique bounded
+linear
+ \index{adjoint!of a linear map!between Hilbert spaces}%
+ \index{linear!map!adjoint of a}%
+ \index{<unopurstar@$T^*$ (Hilbert space adjoint)}%
+map $T^*\colon K \sto H$ called the \df{adjoint} of $T$ such that
+   \[ \langle Tx,y \rangle = \langle x,T^*y \rangle \]
+for all $x \in H$ and $y \in K$.
+\end{defn}
+
+\begin{exam}\label{C063526} Recall from example~\ref{exam150013} that the family $l_2$ of all
+square summable sequences of complex numbers is a Hilbert space. Let
+    \[ S\colon l_2 \sto l_2\colon (x_1,x_2,x_3,\dots) \mapsto (0,x_1,x_2,\dots)\,. \]
+Then $S$ is an operator on $l_2$,called the
+ \index{unilateral shift}%
+ \index{S@$S$ (unilateral shift operator)}%
+ \index{operator!unilateral shift}%
+\df{unilateral shift operator}, and $\norm S = 1$.  The adjoint $S^*$ of the unilateral
+shift
+ \index{unilateral shift!adjoint of}%
+ \index{adjoint!of the unilateral shift}%
+ \index{operator!unilateral shift!adjoint of}%
+is given by
+  \[ S^*\colon l_2 \sto l_2\colon (x_1,x_2,x_3,\dots) \mapsto (x_2,x_3,x_4,\dots). \]
+\end{exam}
+
+\begin{exam} Let $\bigl(e^n\bigr)_{n=1}^\infty$ be an orthonormal basis for a separable Hilbert space~$H$ and
+$\bigl(\alpha_n\bigr)_{n=1}^\infty$ be a bounded sequence of complex numbers. Let $Te^n = \alpha_n e^n$ for every~$n$.
+Then $T$ can be extended uniquely to a operator on~$H$.  What is the norm of this operator?  What is its adjoint?
+\end{exam}
+
+\begin{defn} The operator discussed in the preceding example is known as a
+ \index{operator!diagonal}%
+ \index{diagonal!operator}%
+\df{diagonal operator}.   A common notation for this operator is
+ \index{diag@$\diag(\alpha_1,\alpha_2,\dots)$ (diagonal operator)}%
+$\diag(\alpha_1,\alpha_2,\dots)$.
+\end{defn}
+
+In the category of inner product spaces and bounded linear maps both the kernel and range of a morphism are objects in the category.
+However, as the next example shows, this need not be true of Hilbert spaces.  While a Hilbert space operator always has a kernel
+which is itself a Hilbert space, its range may fail to be closed and consequently fail to be complete.
+
+\begin{exam}\label{exam_ran_nonclosed} The range of the diagonal operator $\diag\bigl(1,\frac12,\frac13, \dots\bigr)$ on the
+ \index{closed!range!operator without}%
+ \index{operator!without closed range}%
+Hilbert space $l_2$ is not closed.
+\end{exam}
+
+\begin{exam}\label{C063527} Let $(S,\fml A, \mu)$ be a sigma-finite positive measure space and $L_2(S,\mu)$
+be the Hilbert space of all (equivalence classes of) complex valued functions on $S$
+which are square integrable with respect to~$\mu$.  Let $\phi$ be an essentially bounded
+complex valued $\mu$-measurable function on~$S$. Define
+ \index{M@$M_\phi$ (multiplication operator)}%
+$M_\phi$ on $L_2(S,\mu)$ by $M_\phi(f) := \phi f$.  Then $M_\phi$ is an operator on $L_2(S,\mu)$; it is called a
+ \index{multiplication operator!on $L_2(S,\mu)$}%
+ \index{operator!multiplication!on $L_2(S,\mu)$}%
+\df{multiplication operator}. Its norm is given by $\norm{M_\phi} = \norm\phi_\infty$ and its
+ \index{multiplication operator!adjoint of a}%
+ \index{operator!multiplication!adjoint of a}%
+ \index{adjoint!of a multiplication operator}%
+adjoint by ${M_\phi}^*~=~M_{\conj\phi}$.
+\end{exam}
+
+It will be convenient to expand definition~\ref{0001612} slightly.
+
+\begin{defn} Operators $S$ and $T$ on Hilbert spaces $H$ and $K$, respectively, are said to be
+ \index{unitary!equivalence}%
+ \index{equivalent!unitarily}%
+\df{unitarily equivalent} if there is an isometric isomorphism $U\colon H \sto K$ such that $T = USU^{-1}$.
+
+\end{defn}
+
+\begin{exam} Let $\mu$ be Lebesgue measure on $[-\frac\pi2, \frac\pi2]$ and $\nu$ be Lebesgue measure on $\R$.
+Let $\phi(x) = x$ for $x \in [-\frac\pi2, \frac\pi2]$ and $\psi(x) = \arctan x$ for $x \in \R$.  Then the
+multiplication operators $M_\phi$ and $M_\psi$ (on $L_2([-\frac\pi2, \frac\pi2], \mu)$ and $L_2(\R, \nu)$,
+respectively) are unitarily equivalent.
+\end{exam}
+
+\begin{exam} Let Let $M_\phi$ be a multiplication operator on $L_2(S,\mu)$ where $(S,\fml A,\mu)$ is a
+$\sigma$-finite measure space as in example~\ref{C063527}.  Then $M_\phi$ is idempotent if and only if
+$\phi$ is the characteristic function of some set in~$\fml A$.
+\end{exam}
+
+One may regard the
+ \index{spectral!theorem}%
+\df{spectral theorem} in beginning linear algebra as saying: \textbf{Every normal operator on a finite
+dimensional inner product space is unitarily equivalent to a multiplication operator.}  What is truly
+remarkable is the way in which this generalizes to infinite dimensional Hilbert spaces---a subject
+for much later discussion.
+
+\begin{exer} Let $\N_3 = \{1,2,3\}$ and $\mu$ be counting measure on $\N_3$.
+ \begin{enumerate}
+  \item[(a)] Identify the Hilbert space~$L_2(\N_3,\mu)$.
+  \item[(b)] Identify the multiplication operators on~$L_2(\N_3,\mu)$.
+  \item[(c)] Let $T$ be the linear operator on $\C^3$ whose matrix
+representation is
+   \[ \begin{bmatrix}
+          2  &  0  &  1 \\
+          0  &  2  & -1 \\
+          1  & -1  &  1
+      \end{bmatrix}.\]
+Use the operator $T$ to illustrate the preceding formulation of the spectral theorem.
+ \end{enumerate}
+\end{exer}
+
+\begin{exam}\label{exam_int_op} Let $L_2 = L_2([0,1],\lambda)$ be the Hilbert space of all (equivalence classes of)
+complex valued functions on $[0,1]$ which are square integrable with respect to Lebesgue measure~$\lambda$.
+If $k\colon [0,1] \times [0,1] \sto \C$ is a bounded Borel measurable function, define  $K$ on $L_2$ by
+   \[ (Kf)(x) = \int_0^1 k(x,y)f(y)\,dy\,. \]
+Then $K$ is an
+ \index{integral!operator}%
+ \index{operator!integral}%
+\df{integral operator} and its
+ \index{kernel!of an integral operator}%
+ \index{integral!operator!kernel of a}%
+\df{kernel} is the function~$k$.  (This is another use of the word ``kernel''; it has nothing whatever to do
+with the more common use of the word: $\ker K = K^{\gets}(\{\vc 0\})$---see definition~\ref{defn_op_vsp}\,).
+The adjoint $K^*$ of $K$ is also an integral operator on $L_2$ and its
+ \index{adjoint!of an integral operator}%
+ \index{integral!operator!adjoint of an}%
+ \index{operator!integral!adjoint of an}%
+kernel is the function $k^*$ defined on $[0,1] \times [0,1]$ by $k^*(x,y) = \conj{k(y,x)}$.
+\end{exam}
+
+\begin{proof}[\emph{Hint for proof}] Verify that for $f \in L_2$
+   \[ \abs{(Kf)(x)} \le \norm{k}_\infty^{1/2}\left[ \int_0^1 \abs{k(x,y)}\abs{f(y)}^2\,dy\right]^{1/2}.\]
+\ns
+\end{proof}
+
+\begin{exam}\label{000319}  Let $H = L_2([0,1])$ be the real Hilbert space of all (equivalence classes of) real
+valued functions on $[0,1]$ which are square integrable with respect to Lebesgue measure. Define $V$ on $H$ by
+   \begin{equation}\label{000319i}
+       Vf(x) = \int_0^x f(t)\,dt\,.
+   \end{equation}
+Then $V$ is an operator on~$H$. This is a
+ \index{Volterra operator}%
+ \index{operator!Volterra}%
+\df{Volterra operator} and is an example of an integral operator. (What is its kernel~$k$\,?)
+\end{exam}
+
+\begin{exer} Let $V$ be the \emph{Volterra operator} defined above.
+ \begin{enumerate}
+  \item[(a)] Show that $V$ is injective.
+  \item[(b)] Compute $V^*$.
+  \item[(c)] What is $V + V^*$?  What is its range?
+ \end{enumerate}
+\end{exer}
+
+\begin{prop}\label{prop_adj_invol} If $S$ and $T$ are operators on a Hilbert space~$H$ and $\alpha \in \C$, then
+ \begin{enumerate}[label=\rm{(\alph*)}]
+  \item $(S + T)^* = S^* + T^*$;
+  \item $(\alpha T)^* = \conj\alpha T^*$;
+  \item $T^{**} = T$; and
+  \item $(TS)^* = S^*T^*$.
+ \end{enumerate}
+\end{prop}
+
+\begin{prop}\label{C063544} Let $T$ be an operator on a Hilbert space~$H$. Then
+   \begin{enumerate}[label=\rm{(\alph*)}]
+     \item $\norm{T^*} = \norm T$ and
+     \item $\norm{T^*T} = {\norm T}^2$.
+   \end{enumerate}
+\end{prop}
+
+\begin{proof}[\emph{Hint for proof}] Notice that since $T = T^{**}$ to prove (a) it is sufficient to show that $\norm T \le \norm{T^*}$.
+To this end observe that ${\norm{Tx}}^2 = \langle T^*Tx,x \rangle \le \norm{T^*}\norm T$ whenever $x \in H$ and $\norm x \le 1$.  From
+this conclude that ${\norm T}^2 \le \norm{T^*T} \le \norm{T^*}\norm T$.  \ns
+\end{proof}
+
+The rather innocent looking condition (b) in the preceding proposition will turn out to be \emph{the} property of fundamental interest
+when $C^*$-algebras are first introduced in chapter~\ref{chap_cpt_ops}.
+
+\begin{prop}\label{prop_ker_adj_perp_ran_op} If $T$ is an operator on a Hilbert space, then
+ \begin{enumerate}[label=\rm{(\alph*)}]
+   \item $\ker T^* = (\ran T)^\perp$,
+   \item $\clo{\ran T^*} = (\ker T)^\perp$,
+   \item $\ker T = (\ran T^*)^\perp$, and
+   \item $\clo{\ran T} = (\ker T^*)^\perp$.
+ \end{enumerate}
+\end{prop}
+
+Compare the preceding result with theorem~\ref{00016025}.
+
+\begin{defn}\label{def_bdd_away_zero} A bounded linear map $T \colon V \sto W$ between normed linear spaces is
+ \index{bounded!away from zero}%
+ \index{zero!bounded away from}%
+\df{bounded away from zero} (or
+ \index{bounded!below}%
+\df{bounded below}) if there exists a number $\delta > 0$ such that $\norm{Tx} \ge \delta\norm{x}$ for all $x \in V$.
+\end{defn}
+
+\begin{exam} Clearly if a bounded linear map is bounded away from zero, then it is injective. The operator
+$T\colon x \mapsto (x_1, \frac12 x_2, \frac13 x_3, \dots)$ defined on the Hilbert space $l_2$ shows that being bounded
+away from zero is a strictly stronger condition than being injective.
+\end{exam}
+
+\begin{prop}\label{prop_bafz_closed_rng} Every bounded linear map between Hilbert spaces which is bounded away from
+zero has closed range.
+\end{prop}
+
+\begin{prop}\label{prop_nasc_op_invert} An operator on a Hilbert space is invertible if and only if
+it is bounded away from zero and has dense range.
+\end{prop}
+
+\begin{prop} The pair of maps $H \mapsto H$ and $T \mapsto T^*$ taking every Hilbert space to
+ \index{adjoint!as a functor on $\cat{HSp}$}%
+ \index{functor!adjoint}%
+itself and every bounded linear map between Hilbert spaces to its adjoint is a contravariant functor
+from the category $\cat{HSp}$ of Hilbert spaces and bounded linear maps to itself.
+ \index{HSp@$\cat{HSp}$!adjoint functor on}%
+\end{prop}
+
+\begin{prop} Let $H$ be a Hilbert space, $T \in \ofml B(H)$, $M = H \oplus \{0\}$, and $N$ be the graph of~$T$.
+ \begin{enumerate}[label=\rm{(\alph*)}]
+  \item Then $N$ is a closed linear subspace of $H \oplus H$.
+  \item $T$ is injective if and only if $M \cap N = \{(0,0)\}$.
+  \item $\ran T$ is dense in $H$ if and only if $M + N$ is dense in $H \oplus H$.
+  \item $T$ is surjective if and only if $M + N = H \oplus H$.
+ \end{enumerate}
+\end{prop}
+
+\begin{exam} There exists a Hilbert space $H$ with subspaces $M$ and $N$ such that $M + N$ is not closed.
+\end{exam}
+
+\begin{prop} Let $H$ and $K$ be Hilbert spaces and $V$ be a vector subspace of~$H$.  Every bounded linear map
+$T\colon V \sto K$ can be extended to a bounded linear map from $\clo V$, the closure of $V$, without increasing its norm.
+\end{prop}
+
+\begin{exer} Let $\fml E$ be an orthonormal basis for a Hilbert space~$H$. Discuss linear transformations $T$ on $H$
+such that $T(e) = 0$ for every $e \in \fml E$.  Give a nontrivial example.
+\end{exer}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Algebras with Involution}
+\begin{defn}\label{00109}  An
+ \index{involution}%
+\df{involution} on an algebra $A$ is a map $x \mapsto x^\ast$ from $A$ into $A$ which satisfies
+  \begin{enumerate}
+    \item[(a)] $(x + y)^\ast = x^\ast + y^\ast$,
+    \item[(b)] $(\alpha x)^* = \clo\alpha\, x^*$,
+    \item[(c)] $x^{\ast\ast} = x$, and
+    \item[(d)] $(xy)^\ast = y^\ast x^\ast$
+  \end{enumerate}
+for all $x$, $y \in A$ and $\alpha \in \C$.  An algebra on which an involution has been defined is a
+ \index{star@$*\,$-algebra}%
+ \index{<star@$*\,$-algebra}%
+ \index{algebra!with involution}%
+ \index{algebra!$*\,$-}%
+\df{$*\,$-algebra } (pronounced ``star algebra''). If $a$ is an element of a $*\,$-algebra, then $a^*$ is called the
+ \index{adjoint}%
+\df{adjoint} of~$a$.
+\end{defn}
+
+\begin{exam} In the algebra $\C$ of complex numbers the map $z \mapsto \conj z$ of a
+number to its complex conjugate is an involution.
+\end{exam}
+
+\begin{exam}\label{0010902} The map of an $n \times n$ matrix to its conjugate transpose
+is an involution on the unital algebra~$M_n$.
+\end{exam}
+
+\begin{exam} Let $X$ be a compact Hausdorff space.  The map $f \mapsto \conj f$ of a
+function to its complex conjugate is an involution in the algebra~$\fml C(X)$.
+\end{exam}
+
+\begin{exam} The map $T \mapsto T^*$ of a Hilbert space operator to its adjoint is an
+involution in the algebra $\ofml B(H)$ (see proposition~\ref{prop_adj_invol}).
+\end{exam}
+
+\begin{prop} Let $a$ and $b$ be elements of a $*\,$-algebra.  Then $a$ commutes with $b$
+if and only if $a^*$ commutes with $b^*$.
+\end{prop}
+
+\begin{prop} In a unital $*\,$-algebra $\vc 1^* = \vc 1$.
+\end{prop}
+
+\begin{prop}\label{00109125} If a $*\,$-algebra $A$ has a left multiplicative identity $e$,
+then $A$ is unital and $e = \vc 1_A$.
+\end{prop}
+
+\begin{prop}\label{00109128fa} Let $a$ be an element of a unital $*\,$-algebra.  Then $a^*$ is invertible if and only if $a$ is.
+ \index{inverse!of an adjoint}%
+ \index{inverse!adjoint of an}%
+ \index{adjoint!inverse of an}%
+ \index{adjoint!of an inverse}%
+And when $a$ is invertible we have
+   \[ (a^*)^{-1} = \bigl(a^{-1}\bigr)^*\,. \]
+\end{prop}
+
+\begin{defn} An algebra homomorphism $\phi$ between $*\,$-algebras which preserves
+involution (that is, such that $\phi(a^*) = (\phi(a))^*$) is a
+ \index{<star@$*\,$-homomorphism}%
+ \index{star@$*\,$-homomorphism}%
+ \index{homomorphism!$*\,$-}%
+\df{$*\,$-homomorphism} (pronounced ``star homomorphism''.  A $*\,$-homomorphism $\phi\colon A \sto B$ between unital algebras is said to be
+ \index{unital!$*\,$-homomorphism}%
+ \index{bijective morphisms!are invertible!in $*\,$-algebras}%
+ \index{<star@$*\,$-homomorphism!unital}%
+\df{unital} if $\phi(\vc 1_A) = \vc 1_B$.  In the category of $*\,$-algebras and $*\,$-homomorphisms, the isomorphisms (called for emphasis
+ \index{<star@$*\,$-isomorphism}%
+ \index{star@$*\,$-isomorphism}%
+ \index{isomorphism!$*\,$-}
+\df{$*\,$-isomorphisms}) are the bijective $*\,$-homomorphisms.
+\end{defn}
+
+\begin{prop}\label{0010952} Let $\phi\colon A \sto B$ be a $*\,$-homomorphism between $*\,$-algebras. Then
+the kernel of $\phi$ is a $*\,$-ideal in $A$ and the range of $\phi$ is a
+$*\,$-subalgebra of~$B$.
+\end{prop}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Self-Adjoint Operators}
+\begin{defn} An element $a$ of a $*\,$-algebra $A$ is
+ \index{self-adjoint!element}%
+\df{self-adjoint} (or
+ \index{Hermitian!element}%
+\df{Hermitian}) if $a^* = a$.  It is
+ \index{normal!element}%
+\df{normal} if $a^*a = aa^*$. And it is
+ \index{unitary!element}%
+\df{unitary} if $a^*a = aa^* = \vc 1$. The set of all self-adjoint elements of $A$ is
+denoted by
+ \index{H@$\fml H(A)$ (self-adjoint elements of a $*\,$-algebra)}%
+$\fml H(A)$, the set of all normal elements
+ \index{N@$\fml N(A)$ (normal elements of a $*\,$-algebra)}%
+by~$\fml N(A)$, and the set of all unitary elements
+ \index{U@$\fml U(A)$ (unitary elements of a $*\,$-algebra)}%
+by~$\fml U(A)$.
+\end{defn}
+
+\begin{prop}\label{001093} Let $a$ be an element of a complex $*\,$-algebra.  Then there exist
+unique self-adjoint elements $u$ and $v$ such that $a = u + iv$.
+\end{prop}
+
+\begin{proof}[\emph{Hint for proof}] Think of the special case of writing a complex
+number in terms of its real and imaginary parts.  \ns
+\end{proof}
+
+\begin{defn} Let $S$ be a subset of a $*\,$-algebra~$A$.  Then
+$S^*~=~\{s^*\colon~s~\in~S\}$. The subset $S$ is
+ \index{self-adjoint!subset of a $*\,$-algebra}%
+ \index{<unopurstar@$S^*$ (set of adjoints of elements of~$S$)}%
+\df{self-adjoint} if $S^* = S$.
+
+A nonempty self-adjoint subalgebra of $A$ is a
+ \index{<star@$*\,$-subalgebra (self-adjoint subalgebra)}%
+ \index{star@$*\,$-subalgebra (self-adjoint subalgebra}%
+ \index{subalgebra!$*\,$-}%
+ \index{self-adjoint!subalgebra}%
+\df{$*\,$-subalgebra} (or a \df{sub-$*\,$-algebra}).
+\end{defn}
+
+\begin{cau} The preceding definition does \emph{not} say that the elements of a
+self-adjoint subset of a $*\,$-algebra are themselves self-adjoint.
+\end{cau}
+
+ \begin{prop} An operator $T$ on a complex Hilbert space $H$ is self-adjoint if and only if
+ its associated quadratic form $Q_T$ is real valued.
+ \end{prop}
+
+\begin{proof}[\emph{Hint for proof}] Use the same trick as in~\ref{C0635105}.  In the hypothesis that
+$Q_T(z)$ is always real, replace $z$ first by $y + x$ and then by $y + ix$.   \ns
+\end{proof}
+
+\begin{defn} Let $T$ be an operator on a Hilbert space~$H$.  The
+ \index{numerical!range}%
+ \index{range!numerical}%
+ \index{W@$W(T)$ (numerical range)}%
+\df{numerical range} of $T$, denoted by $W(T)$, is the range of the restriction to the unit sphere of $H$ of the
+quadratic form associated with~$T$.  That is,
+   \[ W(T) := \{Q_T(x) \colon x \in H \text{ and } \norm x = 1\}. \]
+The
+ \index{numerical!radius}%
+ \index{radius!numerical}%
+ \index{w@$w(T)$ (numerical radius)}%
+\df{numerical radius} of $T$, denoted by $w(T)$, is $\sup\{\abs \lambda\colon \lambda \in W(T)\}$.
+\end{defn}
+
+\begin{prop} If $T$ is a self-adjoint Hilbert space operator, then $\norm T = w(T)$.
+\end{prop}
+
+\begin{proof}[\emph{Hint for proof}] The hard part is showing that $\norm T \le w(T)$.  To this end show first that
+   \begin{equation}
+             Q_T(x + y) - Q_T(x - y) =   4 \Re\langle Tx,y \rangle
+   \end{equation}
+for all vectors $x$ and $y$ in the Hilbert space, where $Q_T$ is the quadratic form associated with $T$ and $\Re z$ is
+the real part of the complex number~$z$.  Use this to verify that if $\norm x = \norm y = 1$, then
+   \begin{equation}\label{num_ran_saop_eqn2}
+           \Re\langle Tx,y \rangle \le w(T).
+   \end{equation}
+Write the complex number $\langle Tx,y \rangle$ in polar form $re^{i\theta}$.  Clearly if we replace
+$x$ by $e^{-i\theta}x$ in inequality~\eqref{num_ran_saop_eqn2} the resulting inequality still holds whenever $\norm x = \norm y = 1$.
+
+Finally notice that if $\norm x = 1$ and $y$ is any vector in $H$ such that $Tx = \norm{Tx}\,y$, then
+   \begin{equation}
+             \norm{Tx} = \langle Tx,y \rangle\,.
+   \end{equation}
+Then the desired result follows immediately.         \ns
+\end{proof}
+
+In proposition~\ref{C0635105} we saw that an operator $T$ on a \emph{complex} Hilbert space is zero if and only if its
+associated quadratic form is.  It is an easy corollary of  the preceding proposition that this equivalence also holds
+for self-adjoint operators on a real Hilbert space.
+
+\begin{cor}\label{real_HSp_zero_Qform} Let $T$ be a self-adjoint operator on a Hilbert space.  Then $T = \vc 0$ if and
+only if its associated quadratic form $Q_T$ is zero.
+\end{cor}
+
+\begin{defn} An operator $T$ on a Hilbert space $H$ is
+ \index{positive!operator}%
+ \index{operator!positive}%
+\df{positive} if it is self-adjoint and its associated quadratic form is positive ($Q_T(x) \ge 0$ for every $x \in H$).
+\end{defn}
+
+\begin{exer} Let $H$ be a complex Hilbert space and $T$ be a positive operator on~$H$.  Define
+   \[ \langle x,y \rangle_1 := \langle Tx,y \rangle \qquad \text{ and } \qquad \norm{x}_1 \equiv \sqrt{\langle x,x \rangle_1} \]
+for all $x \in H$.
+ \begin{enumerate}
+  \item[(a)] Prove that $\norm{\hphantom O}_1$ is a norm if and only if $\ker T = \{0\}$.
+  \item[(b)] Suppose $\ker T = \{0\}$. Show that the norms $\norm{\hphantom O}$ and
+$\norm{\hphantom O}_1$ induce the same topology on~$H$ if and only if $T$ is invertible in
+$\ofml B(H)$. \emph{Hint.}  When there are two topologies on~$H$, it is frequently useful to
+consider the identity operator on~$H$.
+  \item[(c)] Suppose $T$ is invertible in $\ofml B(H)$.  For $S \in \ofml B(H)$ find an expression for the
+adjoint of $S$ with respect to the inner product $\langle \hphantom x , \hphantom y \rangle_1$.
+ \end{enumerate}
+\end{exer}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Projections}
+\begin{conv} At the moment our attention is focused primarily on
+ \index{conventions!projections in Hilbert spaces are orthogonal}%
+operators on Hilbert spaces.  In this context the term \emph{projection} is always taken
+ \index{projection}%
+to mean \emph{orthogonal projection} (see definition~\ref{000164}).  Thus a Hilbert space
+operator is called a projection if $P^2 = P$ and $P^* = P$.
+\end{conv}
+
+We generalize the definition of ``(orthogonal) projection'' from Hilbert spaces to $*\,$-algebras.
+
+\begin{defn} A
+ \index{projection!in a $*\,$-algebra}%
+\df{projection} in a $*\,$-algebra $A$ is an element $p$ of the algebra which is
+idempotent ($p^2 = p$) and self-adjoint ($p^* = p$).  The set of all projections in $A$
+is denoted
+ \index{P@$\fml P(A)$!projections in an algebra}%
+by~$\fml P(A)$.  In the case of $\ofml B(H)$, the bounded operators on a Hilbert space,
+we write $\fml P(H)$,
+ \index{p@$\fml P(H)$ or $\fml P(\ofml B(H))$!orthogonal projections on Hilbert space}%
+or, if $H$ is understood, just $\fml P$, for the more informative $\fml P(\ofml B(H))$.
+\end{defn}
+
+\begin{prop} Every operator on a Hilbert space that is an isometry on the orthogonal complement of its kernel has closed range.
+\end{prop}
+
+\begin{proof}[\emph{Hint for proof}] Notice first that if $M = (\ker T)^\perp$, where $T$ is the operator in question, then
+$\ran T = T^{\sto}(M)$.    \ns
+\end{proof}
+
+\begin{prop} Let $P$ be a projection on a Hilbert space $H$. Then
+ \begin{enumerate}[label=\rm{(\alph*)}]
+  \item $Px = x$ if and only if $x \in \ran P$\,;
+  \item $\ker P = (\ran P)^\perp$; and
+  \item $H = \ker P \oplus \ran P$.
+ \end{enumerate}
+\end{prop}
+
+In part (c) of the preceding proposition the symbol $\oplus$ stands of course for
+\emph{orthogonal} direct sum (see the paragraph following~\ref{000164}).
+
+\begin{prop} Let $M$ be a subspace of a Hilbert space $H$.  If $P \in \ofml B(H)$, if $Px = x$
+for every $x \in M$, and if $Px = \vc 0$ for every $x \in M^\perp$, then $P$ is the
+projection of $H$ onto~$M$.
+\end{prop}
+
+In the remainder of this section it is important to keep firmly in mind that the spaces $\ofml B(H)$ of Hilbert
+space operators are \emph{examples} of $*\,$-algebras, and that (orthogonal) projections on a Hilbert space are
+\emph{examples} of projections in $*\,$-algebras.  Thus on  the one hand, everything that is claimed for
+such projections in $*\,$-algebras holds for Hilbert space projections.  For lack of a better name we will refer to
+these results as documenting the
+ \index{abstract view of projections}%
+\df{abstract} structure of projections.  On the other hand, Hilbert space projections have additional structure which
+makes no sense in general $*\,$-algebras: they have \emph{domains} and \emph{ranges}, and they \emph{act on vectors}.
+When we investigate such matters we will say we are dealing with the
+ \index{spatial view of projections}%
+\df{spatial} (or \df{concrete}) structure of projections.  Notice how these two views alternate in the remainder of this section.
+
+Our first result gives necessary and sufficient conditions for the sum of projections to be a projection.
+
+\begin{prop}\label{prop_sum_projs} Let $p$ and $q$ be projections in a $*\,$-algebra. Then the following are equivalent:
+ \begin{enumerate}[label=\rm{(\alph*)}]
+  \item $pq = \vc 0$;
+  \item $qp = \vc 0$;
+  \item $qp = -pq$;
+ \index{projections!sum of}%
+  \item $p + q$ is a projection.
+ \end{enumerate}
+\end{prop}
+
+\begin{defn}\label{def_perp_projs} Let $p$ and $q$ be projections in a $*\,$-algebra.  If any of the conditions
+in the preceding result holds, then we say that $p$ and $q$ are
+ \index{projection!orthogonal}%
+ \index{projections!orthogonality of two}%
+ \index{orthogonal!projections!in a $*\,$-algebra}%
+\df{orthogonal} and write
+ \index{<binrel@$p \perp q$ (orthogonality of projections)}%
+$p \perp q$.  (Thus for operators on a Hilbert space we could correctly, if unpleasantly, speak of
+\emph{orthogonal orthogonal projections}!)
+\end{defn}
+
+Next is the corresponding spatial result for the sum of two projections.
+
+\begin{prop} Let $P$ and $Q$ be projections on a Hilbert space~$H$. Then $P \perp Q$
+ \index{orthogonal!Hilbert space projections}%
+if and only if $\ran P \perp \ran Q$. In this case $P + Q$ is a projection
+whose kernel is $\ker P \cap \ker Q$ and whose range is $\ran P + \ran Q$.
+\end{prop}
+
+\begin{exam} On a Hilbert space (orthogonal) projections need not commute. For example
+let $P$ be the projection of the (real) Hilbert space $R^2$ onto the line $y = x$ and $Q$
+be the projection of $R^2$ onto the $x$-axis.  Then $PQ \ne QP$.
+\end{exam}
+
+The product of two projections is a projection if and only if they commute.
+
+\begin{prop} Let $p$ and $q$ be projections in a $*\,$-algebra. Then $pq$ is a
+ \index{projections!product of}%
+projection if and only if $pq = qp$.
+\end{prop}
+
+\begin{prop} Let $P$ and $Q$ be projections on a Hilbert space~$H$. If $PQ = QP$, then
+$PQ$ is a projection whose kernel is $\ker P + \ker Q$ and whose range is $\ran P \cap
+\ran Q$.
+\end{prop}
+
+\begin{prop} Let $p$ and $q$ be projections in a $*\,$-algebra. Then the following are equivalent:
+ \begin{enumerate}[label=\rm{(\alph*)}]
+  \item $pq = p$;
+  \item $qp = p$;
+ \index{projections!difference of}%
+  \item $q - p$ is a projection.
+ \end{enumerate}
+\end{prop}
+
+\begin{defn}\label{0022251} Let $p$ and $q$ be projections in a $*\,$-algebra.  If any
+of the conditions in the preceding result holds, then we
+ \index{<binrelle@$p \preceq q$ (ordering of projections in a $*\,$-algebra)}%
+ \index{projections!ordering of}%
+ \index{ordering!partial!of projections}%
+ \index{partial!ordering!of projections}%
+write $p \preceq q$.
+\end{defn}
+
+\begin{prop} Let $P$ and $Q$ be projections on a Hilbert space~$H$. Then the following are equivalent:
+ \begin{enumerate}[label=\rm{(\alph*)}]
+  \item $P \preceq Q$;
+  \item $\norm{Px} \le \norm{Qx}$ for all $x \in H$; and
+  \item $\ran P \subseteq \ran Q$.
+ \end{enumerate}
+In this case $Q - P$ is a projection whose kernel is $\ran P + \ker Q$ and whose range is $\ran Q \ominus \ran P$.
+\end{prop}
+
+\noindent\emph{Notation:} Let $H$, $M$, and $N$ be subspaces of a Hilbert space. The assertion
+ \index{<binopdirectdiff@$\ominus$ (direct difference)}%
+$H = M \oplus N$, may be rewritten as $M = H \ominus N$ (or $N = H \ominus M$).
+
+\begin{prop} The operation $\preceq$ defined in~\ref{0022251} for projections on a
+$*\,$-algebra $A$ is a partial ordering on $\fml P(A)$.  If $p$ is a projection in $A$,
+then $\vc 0 \preceq p \preceq \vc 1$.
+\end{prop}
+
+\begin{prop} Suppose $p$ and $q$ are projections on a $*\,$-algebra~$A$. If $pq = qp$, then
+the infimum of $p$ and $q$, which we denote
+ \index{<binrel@$p \curlywedge q$ (infimum of projections)}%
+ \index{infimum!of projections in a $*\,$-algebra}%
+ \index{projections!infimum of}%
+by $p \curlywedge q$, exists with respect to the partial ordering $\preceq$ and $p
+\curlywedge q = pq$.  The infimum $p \curlywedge q$ may exist even when $p$ and $q$ do
+not commute.  A necessary and sufficient condition that $p \perp q$ hold is that both $p
+\curlywedge q = \vc 0$ and $pq = qp$ hold.
+\end{prop}
+
+\begin{prop} Suppose $p$ and $q$ are projections on a $*\,$-algebra~$A$. If $p \perp q$, then
+the supremum of $p$ and $q$, which we denote
+ \index{<binrel@$p \curlyvee q$ (supremum of projections)}%
+ \index{supremum!of projections in a $*\,$-algebra}%
+ \index{projections!supremum of}%
+by $p \curlyvee q$, exists with respect to the partial ordering $\preceq$ and $p
+\curlyvee q = p + q$.  The supremum $p \curlyvee q$ may exist even when $p$ and $q$ are
+not orthogonal.
+\end{prop}
+
+\begin{prop} Let $A$ be $C^*$-algebra, $a \in A^+$, and $0 < \epsilon \le \frac12$.  If
+$\norm{a^2 - a} < \epsilon/2$, then there exists a projection $p$ in $A$ such that
+$\norm{p - a} < \epsilon$.
+\end{prop}
+
+
+
+
+
+
+
+
+
+
+
+\section{Normal Operators}
+
+\begin{prop}\label{prop_nasc_normal} An operator $T$ on a Hilbert space $H$ is normal if and only if
+$\norm{Tx} = \norm{T^*x}$ for all $x \in H$.
+\end{prop}
+
+\begin{proof}[\emph{Hint for proof}] Use corollary~\ref{real_HSp_zero_Qform}.  \ns
+\end{proof}
+
+\begin{cor} If $T$ is a normal operator on a Hilbert space, then $\ker T = \ker T^*$.
+\end{cor}
+
+\begin{prop} If $T$ is a normal operator on a Hilbert space, then $\norm{T^2} = {\norm T}^2$.
+\end{prop}
+
+\begin{proof}[\emph{Hint for proof}] Substitute $Tx$ for $x$ in proposition~\ref{prop_nasc_normal}. Use
+proposition~\ref{C063544}.  \ns
+\end{proof}
+
+\begin{prop} If $T$ is a normal operator on a Hilbert space $H$, then
+   \[ H = \clo{\ran T} \oplus \ker T\,.  \]
+\end{prop}
+
+\begin{cor} A normal operator on a Hilbert space has dense range if and only if it is injective.
+\end{cor}
+
+\begin{exam} The \emph{unilateral shift} operator (\ref{C063526}) is an example of a Hilbert space operator that is injective
+but does not have dense range.  Its adjoint has dense range (in fact, is surjective) but is not injective.
+\end{exam}
+
+\begin{cor} A normal operator on a Hilbert space is invertible if and only if it is bounded away from zero.
+\end{cor}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Operators of Finite Rank}
+
+\begin{defn} The
+ \index{rank}%
+\df{rank} of a linear map is the (vector space) dimension of its range.  Thus an operator of
+ \index{finite!rank}%
+ \index{operator!of finite rank}%
+\df{finite rank} is one which has finite dimensional range. We denote by $\ofml{FR}(V)$
+ \index{fr@$\ofml{FR}(V)$ (operators of finite rank on~$V$)}%
+the collection of finite rank operators on a vector space $V$.
+\end{defn}
+
+\begin{exam}\label{0022431fa} For vectors $x$ and $y$ in a Hilbert space $H$ define
+   \[ x \otimes y\colon H \sto H \colon z \mapsto \langle z,y \rangle x\,. \]
+If $x$ and $y$ are nonzero vectors in $H$, then $x \otimes y$ is a rank-one operator on~$H$.
+\end{exam}
+
+The next two propositions identify the adjoints and composites of these rank-one operators.
+
+\begin{prop} If $u$ and $v$ are vectors in a Hilbert space, then
+   \[ (u \otimes v)^* = v \otimes u\,. \]
+\end{prop}
+
+\begin{prop} If $u$, $v$, $x$, and $y$ are vectors in a Hilbert space, then
+    \[ (u \otimes v)(x \otimes y) = \langle x,v \rangle (u \otimes y)\,. \]
+\end{prop}
+
+\begin{prop} If $x$ is a vector in a Hilbert space $H$, then $x \otimes x$ is a rank-one projection if and
+only if $x$ is a unit vector.
+\end{prop}
+
+\begin{prop} Suppose that $\{e^1, e^2, e^3, \dots, e^n\}$ is an orthonormal set in a Hilbert space~$H$.  Let
+$M = \spn\{e^1, \dots, e^n\}$.  Then $P = \sum_{k=1}^n e^k \otimes e^k$ is the orthogonal projection of $H$ onto~$M$.
+\end{prop}
+
+\begin{prop}\label{prop_op_act_otimes1} If $u$ and $v$ are vectors in a Hilbert space and $T$ is an operator on $H$, then
+   \[ T\,(u \otimes v) = (Tu) \otimes v\,. \]
+\end{prop}
+
+\begin{prop}\label{prop_op_act_otimes2} If $u$ and $v$ are vectors in a Hilbert space and $T$ is an operator on $H$, then
+   \[ (u \otimes v)\,T = u \otimes T^*v\,. \]
+\end{prop}
+
+We will see shortly that the family of all finite rank operators on a Hilbert space is a minimal $*\,$-ideal in the
+$*\,$-algebra $\ofml B(H)$.  In preparation for this we review a few basic facts about ideals in algebras.
+
+\begin{defn}\label{000551} An
+ \index{ideal!left}%
+ \index{left!ideal}%
+\df{left ideal} in an algebra $A$ is a vector subspace $J$ of $A$ such that $AJ \subseteq J$. (For
+ \index{ideal!right}%
+ \index{right!ideal}%
+\df{right ideals}, of course, we require $JA \subseteq J$.)  We say that $J$ is an
+ \index{ideal!in an algebra}%
+\df{ideal} if it is a two-sided ideal, that is, both a left and a right ideal.  A
+ \index{proper!ideal}%
+ \index{ideal!proper}%
+\df{proper} ideal is an ideal which is a proper subset of~$A$.
+
+The ideals $\{0\}$ and $A$ are often referred to as the
+ \index{trivial!ideal}%
+ \index{ideal!trivial}%
+\df{trivial ideals} of~$A$. The algebra $A$ is
+ \index{simple!algebra}%
+ \index{algebra!simple}%
+\df{simple} if it has no nontrivial ideals.
+
+A
+ \index{maximal ideal}%
+ \index{ideal!maximal}%
+\df{maximal} ideal is a proper ideal that is properly contained in no other proper ideal.
+We denote the family of all maximal ideals in an algebra $A$
+ \index{maximal@$\mx A$!set of maximal ideals in an algebra}%
+by~$\mx A$.  A
+ \index{minimal ideal}%
+ \index{ideal!minimal}%
+\df{minimal} ideal is a nonzero ideal that properly contains no other nonzero ideal.
+\end{defn}
+
+ \index{conventions!ideals are two-sided}%
+\begin{conv} Whenever we refer to an \emph{ideal} in an algebra we understand it to be a
+two-sided ideal (unless the contrary is stated).
+\end{conv}
+
+\begin{prop} No invertible element in a unital algebra can belong to a proper ideal.
+\end{prop}
+
+ \begin{prop}\label{000552} Every proper ideal in a unital algebra $A$ is contained in a
+ maximal ideal. Thus, in particular, $\mx A$ is nonempty whenever $A$ is a unital algebra.
+\end{prop}
+
+\begin{proof}[\emph{Hint for proof}] Zorn's lemma. \ns  \end{proof}
+
+\begin{prop}\label{000553} Let $a$ be an element of a commutative algebra~$A$.  If $A$ is
+unital and $a$ is not invertible, then $aA$ is a proper ideal in~$A$.
+\end{prop}
+
+\begin{defn}\label{000554} The ideal $aA$ in the preceding proposition is the
+ \index{principal ideal}%
+ \index{ideal!principal}%
+\df{principal ideal} generated by~$a$.
+\end{defn}
+
+\begin{defn}\label{000555} Let $J$ be an ideal in an algebra~$A$.  Define an
+equivalence relation $\sim$ on $A$ by
+  \[ a \sim b \qquad \text{if and only if } \qquad b-a \in J. \]
+For each $a \in A$ let $[a]$ be the equivalence class containing~$a$.  Let $A/J$ be the
+set of all equivalence classes of elements of~$A$.  For $[a]$ and $[b]$ in $A/J$ define
+  \[ [a] + [b] := [a+b] \qquad \text{ and } \qquad [a][b] := [ab] \]
+and for $\alpha \in \C$ and $[a] \in A/J$ define
+  \[\alpha[a] := [\alpha a] \,. \]
+Under these operations $A/J$ becomes an algebra.  It is the
+ \index{quotient!algebra}%
+ \index{algebra!quotient}%
+\df{quotient algebra} of $A$ by~$J$.  The notation $A/J$ is usually read ``$A$ mod~$J$''.
+The surjective algebra homomorphism
+  \[ \pi\colon A \sto A/J\colon a \mapsto [a]\]
+is called the
+ \index{quotient!map!for algebras}%
+\df{quotient map}.
+\end{defn}
+
+\begin{prop} The preceding definition makes sense and the claims made therein are correct.
+Furthermore, if the ideal $J$ is proper, then the quotient algebra $A/J$ is unital if $A$ is.
+\end{prop}
+
+\begin{proof}[\emph{Hint for proof}] You will need to show that:
+ \begin{enumerate}
+  \item[(a)] $\sim$ is an equivalence relation.
+  \item[(b)] Addition and multiplication of equivalence classes is well defined.
+  \item[(c)] Multiplication of an equivalence class by a scalar is well defined.
+  \item[(d)] $A/J$ is an algebra.
+  \item[(e)] The ``quotient map'' $\pi$ really is a surjective algebra homomorphism.
+ \end{enumerate}
+(At what point is it necessary that we factor out an ideal and not just a subalgebra?) \ns
+\end{proof}
+
+\begin{defn} In an algebra $A$ with involution
+ \index{<star@$*\,$-ideal}%
+ \index{star@$*\,$-ideal}%
+ \index{ideal!$*\,$-}%
+a \df{$*\,$-ideal} is a self-adjoint ideal in~$A$.
+\end{defn}
+
+\begin{prop}\label{0010953} Suppose that $J$ is a $*\,$-ideal in a $*\,$-algebra $A$.  In the quotient
+algebra $A/J$, as developed in~\ref{000555}, define $[a]^* := [a^*]$ for every $[a] \in A/J$.
+ \index{quotient!$*\,$-algebra}%
+ \index{<star@$*\,$-algebra!quotient}%
+This is a well-defined unary operation on the resulting quotient algebra $A/J$, which becomes a $*\,$-algebra, and the
+quotient map $a \mapsto [a]$ is a $*\,$-homomorphism. The $*\,$-algebra $A/J$ is,of
+course, the
+ \index{quotient!$*\,$-algebra}%
+ \index{<star@$*\,$-algebra!quotient}%
+ \index{star@$*\,$-algebra!quotient}%
+\df{quotient} of $A$ by~$J$.
+\end{prop}
+
+\begin{prop} Let $H$ be a Hilbert space. Then the family $\ofml{FR}(H)$ of all finite rank operators on $H$
+ \index{star@$*\,$-ideal!$\ofml{FR}(H)$ is a}%
+ \index{FR@$\ofml{FR}(H)$!as a $*\,$-ideal}%
+is a $*\,$-ideal in the $*\,$-algebra~$\ofml B(H)$.
+\end{prop}
+
+\begin{prop}\label{prop_frop_sum_rnk1} Let $T$ be an operator of rank-$n$ on a Hilbert space~$H$. Then there exist
+vectors $u^1$, \dots, $u^n$, $v^1$, \dots, $v^n$ in $H$ such that
+   \[ T = \sum_{k=1}^n u^k \otimes v^k\,. \]
+\end{prop}
+
+\begin{proof}[\emph{Hint for proof}] Let $\{e^1, \dots, e^n\}$ be an orthonormal basis for the range of~$T$.  For an
+arbitrary vector $x \in H$ write out the \emph{Fourier expansion} of $Tx$ (see proposition~\ref{C063144}(d)\,).  \ns
+\end{proof}
+
+\begin{cor} Every rank-one operator on a Hilbert space is of the form $u \otimes v$ for some nonzero vectors
+$u$ and $v$ in~$H$.
+\end{cor}
+
+\begin{cor} Every finite rank operator on a Hilbert space is a sum of (finitely many) rank-one operators.
+\end{cor}
+
+\begin{prop} If $H$ is a Hilbert space, then the family $\ofml{FR}(H)$ of finite rank operators on $H$
+is a minimal ideal in~$\ofml B(H)$.
+\end{prop}
+
+\begin{proof}[\emph{Hint for proof}] Let $\ofml J$ be a nonzero ideal in $\ofml B(H)$.  We need to show that $\ofml J$
+contains~$\ofml{FR}(H)$.  By proposition~\ref{prop_frop_sum_rnk1} it suffices to prove that $\ofml J$ contains every
+operator of the form $u \otimes v$.  To this end let $T$ be any nonzero member of $\ofml J$, let $y$ be a unit vector in
+the range of $T$, and let $x$ be any vector in $H$ such that $y = Tx$.  Consider the operator $(u \otimes y)T(x \otimes v)$. \ns
+\end{proof}
+
+Although the set of finite rank operators is an ideal in the Banach algebra of operators on a Hilbert space, it is not a closed
+ideal and, as a consequence, turns out not to be an appropriate set to factor out in hopes of getting a quotient object in the
+category of Banach algebras.  The closure of the ideal of finite rank operators on a Hilbert space is the ideal of \emph{compact
+operators}.  In a sense it would be a natural next step to examine the properties of this class of operators, among which we find
+some of the most important operators in applications, integral operators, for example.  However, a smoother and more perspicuous
+exposition is possible with a bit more technical apparatus at our disposal.  So in the next chapter we will concentrate on
+developing some of the standard tools used in functional analysis.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\endinput

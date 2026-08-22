@@ -1,0 +1,1147 @@
+\chapter{OPERATOR PADA RUANG HILBERT}
+
+\section{Pemetaan Linear Invertibel dan Isometri}
+
+\begin{defn} Suatu pemetaan linear $T\colon H \sto K$ antara dua ruang hasil kali dalam dikatakan
+ \index{hasil kali dalam!mempertahankan}%
+\df{mempertahankan hasil kali dalam} jika $\langle Tx, Ty \rangle = \langle x, y \rangle$ untuk semua $x$, $y \in H$.
+\end{defn}
+
+\begin{prop}\label{prop_isometry_equiv} Misalkan $T\colon H \sto K$ suatu pemetaan linear antara ruang-ruang hasil kali dalam. Maka
+pernyataan-pernyataan berikut ekuivalen:
+ \begin{enumerate}[label=\rm{(\alph*)}]
+   \item $T$ mempertahankan hasil kali dalam;
+   \item $T$ mempertahankan norma; dan
+   \item $T$ merupakan isometri.
+ \end{enumerate}
+\end{prop}
+
+Sama seperti pada ruang linear bernorma (lihat bagian paling akhir dari seksi~\ref{sec_bdd_lin_maps}),
+terdapat (sekurang-kurangnya) dua kategori penting yang objek-objeknya adalah ruang Hilbert:
+ \begin{enumerate}
+  \item[(a)] $\cat{HSp} =$ ruang Hilbert dan pemetaan linear terbatas, dan
+   \index{HSp@$\cat{HSp}$!kategori}%
+   \index{kategori!$\cat{HSp}$ sebagai suatu}%
+  \item[(b)] $\cat{HSp_1} =$ ruang Hilbert dan kontraksi linear.
+   \index{HSp1@$\cat{HSp_1}$!kategori}%
+   \index{kategori!$\cat{HSp_1}$ sebagai suatu}%
+ \end{enumerate}
+Dalam kategori apa pun, lazim untuk mendefinisikan \emph{isomorfisme} sebagai \emph{morfisme invertibel}. Karena hampir selalu
+ \index{kategori!topologis}%
+kategori (topologis) ruang Hilbert dan pemetaan linear terbataslah yang kita jumpai
+dalam catatan ini, tampaknya masuk akal untuk menerapkan kata ``isomorfisme'' pada
+isomorfisme dalam kategori ini---dengan kata lain, pada pemetaan invertibel; sedangkan isomorfisme
+dalam kategori yang lebih ketat, yaitu
+ \index{kategori!geometris}%
+kategori (geometris) ruang Hilbert dan kontraksi linear, dapat secara wajar
+disebut \emph{isomorfisme isometrik}. Namun, ini \emph{bukan} konvensi yang dipakai. Ketika kebanyakan matematikawan memikirkan
+``isomorfisme ruang Hilbert'', yang mereka maksud adalah pemetaan yang mempertahankan seluruh struktur ruang Hilbert---termasuk
+hasil kali dalam. Dengan demikian (menggunakan~\ref{prop_isometry_equiv}), kata
+ \index{isomorfisme!antara ruang Hilbert}%
+ \index{isomorfisme!dalam kategori $\cat{HSp}$}%
+ \index{HSp@$\cat{HSp}$!isomorfisme dalam}%
+ \index{isomorfisme!dalam kategori $\cat{HSp_1}$}%
+ \index{HSp1@$\cat{HSp_1}$!isomorfisme dalam}%
+``isomorfisme'', apabila diterapkan pada pemetaan antara ruang-ruang Hilbert, di hampir semua tempat berarti \emph{isomorfisme isometrik}.
+Akibatnya, isomorfisme dalam kategori yang lebih umum $\cat{HSp}$ disebut \emph{pemetaan (linear terbatas) invertibel}.
+Ingat pula: Kita mencadangkan kata
+ \index{operator}%
+ \index{konvensi!semua operator terbatas dan linear}%
+``operator'' bagi pemetaan linear terbatas dari suatu ruang \emph{ke ruang itu sendiri}.
+
+\begin{exam} Definisikan suatu operator $T$ pada ruang Hilbert $H = L_2([0,\infty))$ dengan
+   \[ Tf(t) = \begin{cases}   f(t-1),  &\text{ jika $t \ge 1$} \\
+                                   0,  &\text{ jika $0 \le t < 1$.}
+           \end{cases} \]
+Maka $T$ merupakan isometri, tetapi bukan isomorfisme isometrik. Sebaliknya, jika
+$H = L_2(\R)$ dan $T$ memetakan setiap $f \in H$ ke fungsi $t \mapsto f(t-1)$, maka $T$ merupakan isomorfisme isometrik.
+\end{exam}
+
+\begin{exam} Misalkan $H$ ruang Hilbert yang didefinisikan dalam contoh~\ref{exam_Hsp_abs_cont}. Maka pemetaan diferensiasi
+$D\colon f \mapsto f\,'$ dari $H$ ke $L_2([0,1])$ merupakan isomorfisme isometrik. Apa inversnya?
+\end{exam}
+
+\begin{exam} Misalkan $\{(X_i,\mu_i) \colon i \in I\}$ suatu keluarga ruang ukur $\sigma$-hingga. Jadikan gabungan saling lepas
+$\D X = \biguplus_{i \in I}X_i$ sebagai ruang ukur $(X,\mu)$ dengan cara biasa. Maka $L_2(X,\mu)$ isomorfik secara isometrik
+dengan jumlah langsung ruang-ruang Hilbert $L_2(X_i,\mu_i)$.
+\end{exam}
+
+\begin{exam} Misalkan $\mu$ ukuran Lebesgue pada $[-\frac\pi2, \frac\pi2]$ dan $\nu$ ukuran Lebesgue pada $\R$.
+Misalkan $(Uf)(x) = \dfrac{f(\arctan x)}{\sqrt{1+x^2}}$ untuk semua $f \in L_2(\mu)$ dan semua $x \in \R$. Maka $U$ merupakan
+isomorfisme isometrik antara $L_2([-\frac\pi2, \frac\pi2], \mu)$ dan $L_2(\R, \nu)$.
+\end{exam}
+
+\begin{prop} Setiap surjeksi yang mempertahankan hasil kali dalam dari suatu ruang Hilbert ke ruang Hilbert lainnya secara otomatis linear.
+\end{prop}
+
+\begin{prop}\label{prop_norm_lin_map} Jika $T\colon H \sto K$ merupakan pemetaan linear terbatas antara ruang-ruang Hilbert tak nol, maka
+   \[ \norm T = \sup\{\abs{\langle Tx,y \rangle}\colon \norm x = \norm y = 1\}\,. \]
+\end{prop}
+
+\begin{proof}[\emph{Petunjuk pembuktian}] Tunjukkan terlebih dahulu bahwa $\norm x = \sup\{\abs{\langle x,y \rangle}\colon \norm y = 1\}$. \ns
+\end{proof}
+
+\begin{defn} Suatu
+ \index{kurva}%
+\df{kurva} dalam ruang Hilbert $H$ adalah pemetaan kontinu dari $[0,1]$ ke~$H$. Suatu kurva dikatakan
+ \index{sederhana!kurva}%
+\df{sederhana} jika kurva itu injektif. Jika $c$ suatu kurva dan $0 \le a < b \le 1$, maka
+ \index{tali busur}%
+\df{tali busur} dari $c$ yang bersesuaian dengan interval $[a,b]$ adalah vektor $c(b) - c(a)$. Dua tali busur dikatakan
+\df{tak bertumpang tindih} jika interval parameter yang terkait dengannya paling banyak memiliki satu titik ujung bersama.
+\end{defn}
+
+Dalam \cite{Halmos:1982}, Halmos menggambarkan betapa luasnya ruang Hilbert berdimensi tak hingga melalui
+contoh elegan berikut.
+
+\begin{exam} Dalam setiap ruang Hilbert berdimensi tak hingga terdapat kurva sederhana yang berbelok membentuk sudut siku-siku
+di setiap titik, dalam arti bahwa setiap pasangan tali busur yang tak bertumpang tindih saling tegak lurus.
+\end{exam}
+
+\begin{proof}[\emph{Petunjuk pembuktian}] Tinjau fungsi-fungsi karakteristik dalam $L_2([0,1])$. \ns
+\end{proof}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Operator dan Adjoinnya}
+
+\begin{prop}\label{C0635103} Misalkan $S$, $T \in \ofml B(H,K)$, dengan $H$ dan $K$ ruang
+Hilbert. Jika $\langle Sx,y \rangle = \langle Tx,y \rangle$ untuk setiap $x \in H$ dan $y \in
+K$, maka $S = T$.
+\end{prop}
+
+\begin{defn} Misalkan $T$ suatu operator pada ruang Hilbert~$H$. Maka $Q_T$, yaitu
+ \index{bentuk kuadratik}%
+ \index{bentuk!kuadratik}%
+ \index{Q@$Q_T$ (bentuk kuadratik yang terkait dengan~$T$)}%
+\df{bentuk kuadratik yang terkait dengan~$T$}, adalah fungsi bernilai skalar yang didefinisikan oleh
+   \[ Q_T(x) := \langle Tx,x \rangle \]
+untuk setiap $x \in H$.
+\end{defn}
+
+Suatu operator pada ruang Hilbert kompleks adalah operator nol jika dan hanya jika bentuk kuadratik yang terkait dengannya adalah fungsi nol.
+
+\begin{prop}\label{C0635105} Jika $H$ adalah ruang Hilbert \emph{kompleks} dan $T \in \ofml B(H)$, maka
+$T = \vc 0$ jika dan hanya jika $Q_T = 0$.
+\end{prop}
+
+\begin{proof}[\emph{Petunjuk pembuktian}] Dalam hipotesis $Q_T(z) = 0$ untuk setiap $z \in H$, gantilah $z$ mula-mula dengan $y + x$
+dan kemudian dengan $y + ix$.  \ns
+\end{proof}
+
+Proposisi sebelumnya merupakan salah satu dari sedikit proposisi yang akan kita jumpai yang tidak berlaku sekaligus untuk ruang Hilbert real dan kompleks.
+
+\begin{exam} Proposisi~\ref{C0635105} tidak benar jika dalam hipotesis kata ``kompleks'' diganti dengan ``real''.
+\end{exam}
+
+\begin{defn} Suatu fungsi $T\colon V \sto W$ antara ruang vektor kompleks disebut
+ \index{konjugat!linear}%
+ \index{linear!konjugat}%
+\df{linear konjugat} jika fungsi itu aditif ($T(x+y) = Tx + Ty$) dan memenuhi $T(\alpha x) =
+\conj\alpha\, Tx$ untuk semua $x \in V$ dan $\alpha \in \C$. Suatu fungsi bernilai kompleks dengan dua
+variabel $\phi\colon V \times W \sto \C$ disebut
+ \index{fungsional seskuilinear}%
+ \index{fungsional!seskuilinear}%
+\df{fungsional seskuilinear} jika fungsi itu linear dalam variabel pertamanya dan linear konjugat
+dalam variabel keduanya.
+
+Jika $H$ dan $K$ adalah ruang linear bernorma, suatu fungsional seskuilinear $\phi$ pada $H \times K$
+disebut
+ \index{terbatas!fungsional seskuilinear}%
+ \index{fungsional seskuilinear!terbatas}%
+ \index{fungsional!seskuilinear terbatas}%
+\df{terbatas} jika terdapat suatu konstanta $M > 0$ sedemikian sehingga
+    \[ \abs{\phi(x,y)} \le M\norm x\norm y \]
+untuk semua $x \in H$ dan $y \in K$.
+\end{defn}
+
+\begin{prop} Jika $\phi \colon H \oplus K \sto \C$ adalah fungsional seskuilinear terbatas pada
+jumlah langsung dua ruang Hilbert tak nol, maka bilangan-bilangan berikut semuanya ada dan sama:
+ \begin{enumerate}[label=\rm{(\alph*)}]
+    \item $\sup\{\abs{\phi(x,y)}\colon \norm x \le 1, \norm y \le 1\}$
+ \vskip 3 pt
+    \item $\sup\{\abs{\phi(x,y)}\colon \norm x = \norm y = 1\}$
+ \vskip 3 pt
+    \item $\sup\left\{\dfrac{\abs{\phi(x,y)}}{\norm x\,\norm y}\colon x,y \ne 0\right\}$
+ \vskip 3 pt
+    \item $\inf\{M > 0\colon \abs{\phi(x,y)} \le M\norm x\,\norm y
+                    \text{ untuk semua $x \in H$, $y \in K$}\}$.
+ \end{enumerate}
+\end{prop}
+
+\begin{proof}[\emph{Petunjuk pembuktian}] Pembuktiannya hampir sama persis dengan hasil yang bersesuaian
+untuk pemetaan linear (lihat~\ref{C023221}). \ns
+\end{proof}
+
+\begin{defn} Misalkan $\phi \colon H \oplus K \sto \C$ fungsional seskuilinear terbatas pada
+jumlah langsung dua ruang Hilbert tak nol. Kita mendefinisikan $\norm \phi$, yaitu
+ \index{norma!fungsional seskuilinear terbatas}%
+\emph{norma} dari $\phi$, sebagai salah satu di antara ekspresi-ekspresi (yang sama) dalam hasil sebelumnya.
+\end{defn}
+
+\begin{prop} Misalkan $T\colon H \sto K$ pemetaan linear terbatas antara ruang Hilbert tak nol. Maka
+   \[ \phi \colon H \oplus K \sto \C\colon (x,y) \mapsto \langle Tx,y \rangle \]
+adalah fungsional seskuilinear terbatas pada $H \oplus K$ dan $\norm\phi = \norm T$.
+\end{prop}
+
+\begin{prop} Misalkan $\phi \colon H \times K \sto \C$ fungsional seskuilinear terbatas pada
+hasil kali dua ruang Hilbert tak nol. Maka terdapat pemetaan linear terbatas yang unik $T \in \ofml B(H,K)$ dan
+$S \in \ofml B(K,H)$ sedemikian sehingga
+    \[ \phi(x,y) = \langle Tx,y \rangle = \langle x,Sy \rangle \]
+untuk semua $x \in H$ dan $y \in K$. Selain itu, $\norm T = \norm S = \norm\phi$.
+\end{prop}
+
+\begin{proof}[\emph{Petunjuk pembuktian}] Tunjukkan bahwa untuk setiap $x \in H$, pemetaan
+$y \mapsto \conj{\phi(x,y)}$ adalah fungsional linear terbatas pada~$K$. \ns
+\end{proof}
+
+\begin{defn}\label{def000926} Misalkan $T\colon H \sto K$ pemetaan linear terbatas antara ruang-ruang Hilbert. Pemetaan
+$(x,y) \mapsto \langle Tx,y \rangle$ dari $H \oplus K$ ke dalam $\C$ adalah fungsional
+seskuilinear terbatas. Berdasarkan proposisi sebelumnya, terdapat pemetaan linear terbatas yang
+unik
+ \index{adjoin!pemetaan linear!antara ruang Hilbert}%
+ \index{linear!pemetaan!adjoin}%
+ \index{<unopurstar@$T^*$ (adjoin ruang Hilbert)}%
+$T^*\colon K \sto H$ yang disebut \df{adjoin} dari $T$ sedemikian sehingga
+   \[ \langle Tx,y \rangle = \langle x,T^*y \rangle \]
+untuk semua $x \in H$ dan $y \in K$.
+\end{defn}
+
+\begin{exam}\label{C063526} Ingat dari Contoh~\ref{exam150013} bahwa keluarga $l_2$ dari semua
+barisan bilangan kompleks yang kuadratnya dapat dijumlahkan merupakan ruang Hilbert. Misalkan
+    \[ S\colon l_2 \sto l_2\colon (x_1,x_2,x_3,\dots) \mapsto (0,x_1,x_2,\dots)\,. \]
+Maka $S$ adalah operator pada $l_2$, yang disebut
+ \index{geser unilateral}%
+ \index{S@$S$ (operator geser unilateral)}%
+ \index{operator!geser unilateral}%
+\df{operator geser unilateral}, dan $\norm S = 1$. Adjoin $S^*$ dari operator geser
+unilateral
+ \index{geser unilateral!adjoin}%
+ \index{adjoin!operator geser unilateral}%
+ \index{operator!geser unilateral!adjoin}%
+diberikan oleh
+  \[ S^*\colon l_2 \sto l_2\colon (x_1,x_2,x_3,\dots) \mapsto (x_2,x_3,x_4,\dots). \]
+\end{exam}
+
+\begin{exam} Ambil $\bigl(e^n\bigr)_{n=1}^\infty$ sebagai basis ortonormal bagi ruang Hilbert separabel~$H$ dan
+$\bigl(\alpha_n\bigr)_{n=1}^\infty$ barisan terbatas bilangan kompleks. Misalkan $Te^n = \alpha_n e^n$ untuk setiap~$n$.
+Maka $T$ dapat diperluas secara unik menjadi operator pada~$H$. Berapakah norma operator ini? Apa adjoinnya?
+\end{exam}
+
+\begin{defn} Operator yang dibahas dalam contoh sebelumnya dikenal sebagai
+ \index{operator!diagonal}%
+ \index{diagonal!operator}%
+\df{operator diagonal}. Notasi yang lazim untuk operator ini adalah
+ \index{diag@$\diag(\alpha_1,\alpha_2,\dots)$ (operator diagonal)}%
+$\diag(\alpha_1,\alpha_2,\dots)$.
+\end{defn}
+
+Dalam kategori ruang hasil kali dalam dan pemetaan linear terbatas, baik kernel maupun jangkauan suatu morfisme merupakan objek dalam kategori tersebut.
+Namun, seperti ditunjukkan oleh contoh berikut, hal ini tidak harus berlaku untuk ruang Hilbert. Walaupun operator pada ruang Hilbert selalu mempunyai kernel
+yang sendiri merupakan ruang Hilbert, jangkauannya mungkin tidak tertutup dan akibatnya tidak lengkap.
+
+\begin{exam}\label{exam_ran_nonclosed} Jangkauan operator diagonal $\diag\bigl(1,\frac12,\frac13, \dots\bigr)$ pada
+ \index{tertutup!jangkauan!operator tanpa}%
+ \index{operator!tanpa jangkauan tertutup}%
+ruang Hilbert $l_2$ tidak tertutup.
+\end{exam}
+
+\begin{exam}\label{C063527} Misalkan $(S,\fml A, \mu)$ ruang ukur positif yang sigma-hingga dan $L_2(S,\mu)$
+ruang Hilbert dari semua (kelas ekuivalensi) fungsi bernilai kompleks pada $S$
+yang terintegralkan kuadrat terhadap~$\mu$. Misalkan $\phi$ fungsi bernilai kompleks yang
+terbatas secara esensial dan terukur terhadap $\mu$ pada~$S$. Definisikan
+ \index{M@$M_\phi$ (operator perkalian)}%
+$M_\phi$ pada $L_2(S,\mu)$ dengan $M_\phi(f) := \phi f$. Maka $M_\phi$ adalah operator pada $L_2(S,\mu)$; operator ini disebut
+ \index{operator perkalian!pada $L_2(S,\mu)$}%
+ \index{operator!perkalian!pada $L_2(S,\mu)$}%
+\df{operator perkalian}. Normanya diberikan oleh $\norm{M_\phi} = \norm\phi_\infty$ dan
+ \index{operator perkalian!adjoin}%
+ \index{operator!perkalian!adjoin}%
+ \index{adjoin!operator perkalian}%
+adjoinnya oleh ${M_\phi}^*~=~M_{\conj\phi}$.
+\end{exam}
+
+Akan berguna untuk sedikit memperluas Definisi~\ref{0001612}.
+
+\begin{defn} Operator $S$ dan $T$ masing-masing pada ruang Hilbert $H$ dan $K$ disebut
+ \index{uniter!ekuivalensi}%
+ \index{ekuivalen!secara uniter}%
+\df{ekuivalen secara uniter} jika terdapat isomorfisme isometrik $U\colon H \sto K$ sedemikian sehingga $T = USU^{-1}$.
+
+\end{defn}
+
+\begin{exam} Misalkan $\mu$ ukuran Lebesgue pada $[-\frac\pi2, \frac\pi2]$ dan $\nu$ ukuran Lebesgue pada $\R$.
+Misalkan $\phi(x) = x$ untuk $x \in [-\frac\pi2, \frac\pi2]$ dan $\psi(x) = \arctan x$ untuk $x \in \R$. Maka operator
+perkalian $M_\phi$ dan $M_\psi$ (masing-masing pada $L_2([-\frac\pi2, \frac\pi2], \mu)$ dan $L_2(\R, \nu)$)
+ekuivalen secara uniter.
+\end{exam}
+
+\begin{exam} Misalkan $M_\phi$ operator perkalian pada $L_2(S,\mu)$, dengan $(S,\fml A,\mu)$
+ruang ukuran $\sigma$-hingga seperti dalam Contoh~\ref{C063527}. Maka $M_\phi$ idempoten jika dan hanya jika
+$\phi$ adalah fungsi karakteristik dari suatu himpunan dalam~$\fml A$.
+\end{exam}
+
+Kita dapat memandang
+ \index{spektral!teorema}%
+\df{teorema spektral} dalam aljabar linear dasar sebagai pernyataan berikut: \textbf{Setiap operator normal pada ruang hasil kali dalam kompleks
+berdimensi hingga ekuivalen secara uniter dengan suatu operator perkalian.} Yang benar-benar
+menakjubkan adalah bagaimana pernyataan ini digeneralisasi ke ruang Hilbert berdimensi tak hingga---pokok bahasan
+yang akan dibicarakan jauh kemudian.
+
+\begin{exer} Misalkan $\N_3 = \{1,2,3\}$ dan $\mu$ ukuran pencacahan pada $\N_3$.
+ \begin{enumerate}
+  \item[(a)] Identifikasilah ruang Hilbert~$L_2(\N_3,\mu)$.
+  \item[(b)] Identifikasilah operator perkalian pada~$L_2(\N_3,\mu)$.
+  \item[(c)] Misalkan $T$ operator linear pada $\C^3$ yang representasi
+matriksnya adalah
+   \[ \begin{bmatrix}
+          2  &  0  &  1 \\
+          0  &  2  & -1 \\
+          1  & -1  &  1
+      \end{bmatrix}.\]
+Gunakan operator $T$ untuk mengilustrasikan rumusan teorema spektral sebelumnya.
+ \end{enumerate}
+\end{exer}
+
+\begin{exam}\label{exam_int_op} Misalkan $L_2 = L_2([0,1],\lambda)$ ruang Hilbert dari semua (kelas ekuivalensi)
+fungsi bernilai kompleks pada $[0,1]$ yang terintegralkan kuadrat terhadap ukuran Lebesgue~$\lambda$.
+Jika $k\colon [0,1] \times [0,1] \sto \C$ fungsi terukur Borel yang terbatas, definisikan $K$ pada $L_2$ dengan
+   \[ (Kf)(x) = \int_0^1 k(x,y)f(y)\,dy\,. \]
+Maka $K$ adalah
+ \index{integral!operator}%
+ \index{operator!integral}%
+\df{operator integral} dan
+ \index{kernel!operator integral}%
+ \index{integral!operator!kernel}%
+\df{kernel} dari operator tersebut adalah fungsi~$k$. (Ini merupakan penggunaan lain dari kata ``kernel''; penggunaan ini sama sekali tidak berkaitan
+dengan penggunaan kata yang lebih umum: $\ker K = K^{\gets}(\{\vc 0\})$---lihat Definisi~\ref{defn_op_vsp}\,).
+Adjoin $K^*$ dari operator $K$ juga merupakan operator integral pada $L_2$ dan
+ \index{adjoin!operator integral}%
+ \index{integral!operator!adjoin}%
+ \index{operator!integral!adjoin}%
+kernelnya adalah fungsi $k^*$ yang didefinisikan pada $[0,1] \times [0,1]$ oleh $k^*(x,y) = \conj{k(y,x)}$.
+\end{exam}
+
+\begin{proof}[\emph{Petunjuk pembuktian}] Verifikasilah bahwa untuk $f \in L_2$
+   \[ \abs{(Kf)(x)} \le \norm{k}_\infty^{1/2}\left[ \int_0^1 \abs{k(x,y)}\abs{f(y)}^2\,dy\right]^{1/2}.\]
+\ns
+\end{proof}
+
+\begin{exam}\label{000319} Misalkan $H = L_2([0,1])$ ruang Hilbert real dari semua (kelas ekuivalensi) fungsi
+bernilai real pada $[0,1]$ yang terintegralkan kuadrat terhadap ukuran Lebesgue. Definisikan $V$ pada $H$ dengan
+   \begin{equation}\label{000319i}
+       Vf(x) = \int_0^x f(t)\,dt\,.
+   \end{equation}
+Maka $V$ merupakan operator pada~$H$. Operator ini adalah
+ \index{operator Volterra}%
+ \index{operator!Volterra}%
+\df{operator Volterra} dan merupakan contoh operator integral. (Apa kernel~$k$\, untuk operator ini?)
+\end{exam}
+
+\begin{exer} Misalkan $V$ adalah \emph{operator Volterra} yang didefinisikan di atas.
+ \begin{enumerate}
+  \item[(a)] Tunjukkan bahwa $V$ injektif.
+  \item[(b)] Hitunglah $V^*$.
+  \item[(c)] Tentukan $V + V^*$ beserta jangkauannya.
+ \end{enumerate}
+\end{exer}
+
+\begin{prop}\label{prop_adj_invol} Jika $S$ dan $T$ adalah operator pada ruang Hilbert kompleks~$H$ dan $\alpha \in \C$, maka
+ \begin{enumerate}[label=\rm{(\alph*)}]
+  \item $(S + T)^* = S^* + T^*$;
+  \item $(\alpha T)^* = \conj\alpha T^*$;
+  \item $T^{**} = T$; dan
+  \item $(TS)^* = S^*T^*$.
+ \end{enumerate}
+\end{prop}
+
+\begin{prop}\label{C063544} Misalkan $T$ operator pada ruang Hilbert~$H$. Maka
+   \begin{enumerate}[label=\rm{(\alph*)}]
+     \item $\norm{T^*} = \norm T$ dan
+     \item $\norm{T^*T} = {\norm T}^2$.
+   \end{enumerate}
+\end{prop}
+
+\begin{proof}[\emph{Petunjuk pembuktian}] Perhatikan bahwa karena $T = T^{**}$, untuk membuktikan (a) cukup ditunjukkan bahwa $\norm T \le \norm{T^*}$.
+Untuk itu, amati bahwa ${\norm{Tx}}^2 = \langle T^*Tx,x \rangle \le \norm{T^*}\norm T$ apabila $x \in H$ dan $\norm x \le 1$. Dari sini
+simpulkan bahwa ${\norm T}^2 \le \norm{T^*T} \le \norm{T^*}\norm T$.  \ns
+\end{proof}
+
+Syarat (b) yang tampak cukup biasa dalam proposisi sebelumnya kelak ternyata menjadi \emph{sifat} yang sangat penting
+ketika aljabar-$C^*$ pertama kali diperkenalkan dalam Bab~\futurexref{7}{chap_cpt_ops}.
+
+\begin{prop}\label{prop_ker_adj_perp_ran_op} Jika $T$ adalah operator pada ruang Hilbert, maka
+ \begin{enumerate}[label=\rm{(\alph*)}]
+   \item $\ker T^* = (\ran T)^\perp$,
+   \item $\clo{\ran T^*} = (\ker T)^\perp$,
+   \item $\ker T = (\ran T^*)^\perp$, dan
+   \item $\clo{\ran T} = (\ker T^*)^\perp$.
+ \end{enumerate}
+\end{prop}
+
+Bandingkan hasil sebelumnya dengan Teorema~\ref{00016025}.
+
+\begin{defn}\label{def_bdd_away_zero} Suatu pemetaan linear terbatas $T \colon V \sto W$ antara ruang linear bernorma disebut
+ \index{terbatas!jauh dari nol}%
+ \index{nol!terbatas jauh dari}%
+\df{terbatas jauh dari nol} (atau
+ \index{terbatas!dari bawah}%
+\df{terbatas dari bawah}) jika terdapat suatu bilangan $\delta > 0$ sedemikian sehingga $\norm{Tx} \ge \delta\norm{x}$ untuk setiap $x \in V$.
+\end{defn}
+
+\begin{exam} Jelas bahwa jika suatu pemetaan linear terbatas memiliki sifat terbatas jauh dari nol, maka pemetaan itu injektif. Operator
+$T\colon x \mapsto (x_1, \frac12 x_2, \frac13 x_3, \dots)$ yang didefinisikan pada ruang Hilbert $l_2$ menunjukkan bahwa sifat terbatas
+jauh dari nol merupakan syarat yang sungguh lebih kuat daripada sifat injektif.
+\end{exam}
+
+\begin{prop}\label{prop_bafz_closed_rng} Setiap pemetaan linear terbatas antara ruang Hilbert yang terbatas jauh dari
+nol memiliki jangkauan tertutup.
+\end{prop}
+
+\begin{prop}\label{prop_nasc_op_invert} Suatu operator pada ruang Hilbert invertibel jika dan hanya jika
+operator itu terbatas jauh dari nol dan memiliki jangkauan padat.
+\end{prop}
+
+\begin{prop} Pasangan pemetaan $H \mapsto H$ dan $T \mapsto T^*$ yang memetakan setiap ruang Hilbert ke
+ \index{adjoin!sebagai funktor pada $\cat{HSp}$}%
+ \index{funktor!adjoin}%
+dirinya sendiri dan setiap pemetaan linear terbatas antara ruang Hilbert ke adjoinnya merupakan funktor kontravarian
+dari kategori $\cat{HSp}$ yang terdiri atas ruang Hilbert dan pemetaan linear terbatas ke kategori itu sendiri.
+ \index{HSp@$\cat{HSp}$!funktor adjoin pada}%
+\end{prop}
+
+\begin{prop} Misalkan $H$ ruang Hilbert, $T \in \ofml B(H)$, $M = H \oplus \{0\}$, dan $N$ adalah graf dari~$T$.
+ \begin{enumerate}[label=\rm{(\alph*)}]
+  \item Maka $N$ adalah subruang linear tertutup dari $H \oplus H$.
+  \item $T$ injektif jika dan hanya jika $M \cap N = \{(0,0)\}$.
+  \item $\ran T$ padat dalam $H$ jika dan hanya jika $M + N$ padat dalam $H \oplus H$.
+  \item $T$ surjektif jika dan hanya jika $M + N = H \oplus H$.
+ \end{enumerate}
+\end{prop}
+
+\begin{exam} Terdapat ruang Hilbert $H$ dengan subruang $M$ dan $N$ sedemikian sehingga $M + N$ tidak tertutup.
+\end{exam}
+
+\begin{prop} Misalkan $H$ dan $K$ ruang Hilbert dan $V$ adalah subruang vektor dari~$H$. Setiap pemetaan linear terbatas
+$T\colon V \sto K$ dapat diperluas menjadi pemetaan linear terbatas dari $\clo V$, yaitu tutupan $V$, tanpa memperbesar normanya.
+\end{prop}
+
+\begin{exer} Misalkan $\fml E$ adalah basis ortonormal bagi ruang Hilbert~$H$. Bahas transformasi linear $T$ pada $H$
+sedemikian sehingga $T(e) = 0$ untuk setiap $e \in \fml E$. Berikan contoh tak trivial.
+\end{exer}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Aljabar dengan Involusi}
+\begin{defn}\label{00109}  Suatu
+ \index{involusi}%
+\df{involusi} pada suatu aljabar $A$ adalah suatu pemetaan $x \mapsto x^\ast$ dari $A$ ke $A$ yang memenuhi
+  \begin{enumerate}
+    \item[(a)] $(x + y)^\ast = x^\ast + y^\ast$,
+    \item[(b)] $(\alpha x)^* = \conj\alpha\, x^*$,
+    \item[(c)] $x^{\ast\ast} = x$, dan
+    \item[(d)] $(xy)^\ast = y^\ast x^\ast$
+  \end{enumerate}
+untuk semua $x$, $y \in A$, dan $\alpha \in \C$.  Suatu aljabar yang padanya telah didefinisikan suatu involusi adalah
+ \index{star@$*\,$-aljabar}%
+ \index{<star@$*\,$-aljabar}%
+ \index{aljabar!dengan involusi}%
+ \index{aljabar!$*\,$-}%
+\df{aljabar-$*\,$} (dibaca ``aljabar bintang''). Jika $a$ adalah elemen dari suatu aljabar-$*\,$, maka $a^*$ disebut
+ \index{adjoin}%
+\df{adjoin} dari~$a$.
+\end{defn}
+
+\begin{exam} Dalam aljabar $\C$ dari bilangan kompleks, pemetaan $z \mapsto \conj z$ yang memetakan suatu
+bilangan ke konjugat kompleksnya merupakan suatu involusi.
+\end{exam}
+
+\begin{exam}\label{0010902} Pemetaan yang memetakan suatu matriks $n \times n$ ke transpos konjugatnya
+merupakan suatu involusi pada aljabar beridentitas~$M_n$.
+\end{exam}
+
+\begin{exam} Misalkan $X$ suatu ruang Hausdorff kompak.  Pemetaan $f \mapsto \conj f$ yang memetakan suatu
+fungsi ke konjugat kompleksnya merupakan suatu involusi dalam aljabar~$\fml C(X)$.
+\end{exam}
+
+\begin{exam} Pemetaan $T \mapsto T^*$ yang memetakan suatu operator ruang Hilbert ke adjoinnya merupakan suatu
+involusi dalam aljabar $\ofml B(H)$ (lihat proposisi~\ref{prop_adj_invol}).
+\end{exam}
+
+\begin{prop} Misalkan $a$ dan $b$ elemen dari suatu aljabar-$*\,$.  Maka $a$ berkomutasi dengan $b$
+jika dan hanya jika $a^*$ berkomutasi dengan $b^*$.
+\end{prop}
+
+\begin{prop} Dalam suatu aljabar-$*\,$ beridentitas, $\vc 1^* = \vc 1$.
+\end{prop}
+
+\begin{prop}\label{00109125} Jika suatu aljabar-$*\,$ $A$ memiliki identitas perkalian kiri $e$,
+maka $A$ beridentitas dan $e = \vc 1_A$.
+\end{prop}
+
+\begin{prop}\label{00109128fa} Misalkan $a$ elemen dari suatu aljabar-$*\,$ beridentitas.  Maka $a^*$ invertibel jika dan hanya jika $a$ invertibel.
+ \index{invers!dari suatu adjoin}%
+ \index{invers!adjoin dari suatu}%
+ \index{adjoin!invers dari suatu}%
+ \index{adjoin!dari suatu invers}%
+Dan ketika $a$ invertibel, berlaku
+   \[ (a^*)^{-1} = \bigl(a^{-1}\bigr)^*\,. \]
+\end{prop}
+
+\begin{defn} Suatu homomorfisme aljabar $\phi$ di antara aljabar-$*\,$ yang mempertahankan
+involusi (yaitu, sedemikian sehingga $\phi(a^*) = (\phi(a))^*$) adalah suatu
+ \index{<star@homomorfisme-$*\,$}%
+ \index{star@homomorfisme-$*\,$}%
+ \index{homomorfisme!$*\,$-}%
+\df{homomorfisme-$*\,$} (dibaca ``homomorfisme bintang''). Suatu homomorfisme-$*\,$ $\phi\colon A \sto B$ di antara aljabar beridentitas disebut
+ \index{beridentitas!homomorfisme-$*\,$}%
+ \index{morfisme bijektif!dapat dibalik!dalam aljabar-$*\,$}%
+ \index{<star@homomorfisme-$*\,$!beridentitas}%
+\df{beridentitas} jika $\phi(\vc 1_A) = \vc 1_B$.  Dalam kategori aljabar-$*\,$ dan homomorfisme-$*\,$, isomorfisme (yang untuk penegasan disebut
+ \index{<star@isomorfisme-$*\,$}%
+ \index{star@isomorfisme-$*\,$}%
+ \index{isomorfisme!$*\,$-}
+\df{isomorfisme-$*\,$}) adalah homomorfisme-$*\,$ bijektif.
+\end{defn}
+
+\begin{prop}\label{0010952} Misalkan $\phi\colon A \sto B$ suatu homomorfisme-$*\,$ di antara aljabar-$*\,$. Maka
+kernel $\phi$ adalah suatu ideal-$*\,$ dalam $A$, dan citra $\phi$ adalah suatu
+subaljabar-$*\,$ dari~$B$.
+\end{prop}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Operator Swaadjoin}
+\begin{defn} Suatu elemen $a$ dari aljabar-$*\,$ $A$ bersifat
+ \index{swaadjoin!elemen}%
+\df{swaadjoin} (atau
+ \index{Hermitian!elemen}%
+\df{Hermitian}) jika $a^* = a$.  Elemen ini bersifat
+ \index{normal!elemen}%
+\df{normal} jika $a^*a = aa^*$. Jika aljabarnya beridentitas, elemen ini bersifat
+ \index{uniter!elemen}%
+\df{uniter} jika $a^*a = aa^* = \vc 1$. Himpunan semua elemen swaadjoin dari $A$
+dinotasikan dengan
+ \index{H@$\fml H(A)$ (elemen swaadjoin dari suatu aljabar-$*\,$)}%
+$\fml H(A)$, himpunan semua elemen normal
+ \index{N@$\fml N(A)$ (elemen normal dari suatu aljabar-$*\,$)}%
+dengan~$\fml N(A)$, dan, ketika aljabarnya beridentitas, himpunan semua elemen uniter
+ \index{U@$\fml U(A)$ (elemen uniter dari suatu aljabar-$*\,$)}%
+dengan~$\fml U(A)$.
+\end{defn}
+
+\begin{prop}\label{001093} Misalkan $a$ elemen dari suatu aljabar-$*\,$ kompleks.  Maka terdapat
+elemen swaadjoin unik $u$ dan $v$ sedemikian sehingga $a = u + iv$.
+\end{prop}
+
+\begin{proof}[\emph{Petunjuk pembuktian}] Pikirkan kasus khusus penulisan suatu bilangan kompleks
+dalam bentuk bagian real dan imajinernya.  \ns
+\end{proof}
+
+\begin{defn} Ambil $S$ suatu himpunan bagian dari aljabar-$*\,$~$A$.  Maka
+$S^*~=~\{s^*\colon~s~\in~S\}$. Himpunan $S$ disebut
+ \index{swaadjoin!himpunan bagian dari suatu aljabar-$*\,$}%
+ \index{<unopurstar@$S^*$ (himpunan adjoin dari elemen-elemen~$S$)}%
+\df{swaadjoin} jika $S^* = S$.
+
+Suatu subaljabar swaadjoin tak kosong dari $A$ disebut
+ \index{<star@subaljabar-$*\,$ (subaljabar swaadjoin)}%
+ \index{star@subaljabar-$*\,$ (subaljabar swaadjoin)}%
+ \index{subaljabar!$*\,$-}%
+ \index{swaadjoin!subaljabar}%
+\df{subaljabar-$*\,$}. Istilah sumber yang bersinonim juga diterjemahkan sebagai \df{subaljabar-$*\,$}.
+\end{defn}
+
+\begin{cau} Definisi sebelumnya \emph{tidak} menyatakan bahwa elemen-elemen dari suatu
+himpunan bagian swaadjoin dari suatu aljabar-$*\,$ dengan sendirinya bersifat swaadjoin.
+\end{cau}
+
+ \begin{prop} Suatu operator $T$ pada ruang Hilbert kompleks $H$ bersifat swaadjoin jika dan hanya jika
+ bentuk kuadratik terkaitnya $Q_T$ bernilai real.
+ \end{prop}
+
+\begin{proof}[\emph{Petunjuk pembuktian}] Gunakan trik yang sama seperti dalam~\ref{C0635105}.  Dalam hipotesis bahwa
+$Q_T(z)$ selalu real, gantilah $z$ mula-mula dengan $y + x$, lalu dengan $y + ix$.   \ns
+\end{proof}
+
+\begin{defn} Misalkan $T$ suatu operator pada ruang Hilbert tak nol~$H$.  Adapun
+ \index{numerik!jangkauan}%
+ \index{jangkauan!numerik}%
+ \index{W@$W(T)$ (jangkauan numerik)}%
+\df{jangkauan numerik} dari $T$, yang dinotasikan dengan $W(T)$, adalah jangkauan yang diperoleh pada sfer satuan dari $H$
+dengan membatasi bentuk kuadratik yang terkait dengan~$T$. Yaitu,
+   \[ W(T) := \{Q_T(x) \colon x \in H \text{ dan } \norm x = 1\}. \]
+Adapun
+ \index{numerik!radius}%
+ \index{radius!numerik}%
+ \index{w@$w(T)$ (radius numerik)}%
+\df{radius numerik} dari $T$, yang dinotasikan dengan $w(T)$, adalah $\sup\{\abs \lambda\colon \lambda \in W(T)\}$.
+\end{defn}
+
+\begin{prop} Jika $T$ suatu operator swaadjoin pada ruang Hilbert tak nol, maka $\norm T = w(T)$.
+\end{prop}
+
+\begin{proof}[\emph{Petunjuk pembuktian}] Bagian yang sulit adalah menunjukkan bahwa $\norm T \le w(T)$.  Untuk itu, tunjukkan terlebih dahulu bahwa
+   \begin{equation}
+             Q_T(x + y) - Q_T(x - y) =   4 \Re\langle Tx,y \rangle
+   \end{equation}
+untuk semua vektor $x$ dan $y$ dalam ruang Hilbert, di mana $Q_T$ merupakan bentuk kuadratik yang terkait dengan $T$ dan $\Re z$ adalah
+bagian real dari bilangan kompleks~$z$.  Gunakan ini untuk memverifikasi bahwa jika $\norm x = \norm y = 1$, maka
+   \begin{equation}\label{num_ran_saop_eqn2}
+           \Re\langle Tx,y \rangle \le w(T).
+   \end{equation}
+Tuliskan bilangan kompleks $\langle Tx,y \rangle$ dalam bentuk polar $re^{i\theta}$.  Jelas bahwa jika kita mengganti
+$x$ dengan $e^{-i\theta}x$ dalam pertidaksamaan~\eqref{num_ran_saop_eqn2}, pertidaksamaan yang dihasilkan tetap berlaku kapan pun $\norm x = \norm y = 1$.
+
+Terakhir, perhatikan bahwa jika $\norm x = 1$ dan $y$ adalah sebarang vektor dalam $H$ sedemikian sehingga $Tx = \norm{Tx}\,y$, maka
+   \begin{equation}
+             \norm{Tx} = \langle Tx,y \rangle\,.
+   \end{equation}
+Dengan demikian, hasil yang diinginkan segera diperoleh.         \ns
+\end{proof}
+
+Dalam proposisi~\ref{C0635105}, kita melihat bahwa suatu operator $T$ pada ruang Hilbert \emph{kompleks} merupakan operator nol jika dan hanya jika
+bentuk kuadratik terkaitnya bernilai nol.  Dari proposisi sebelumnya mudah diperoleh akibat bahwa ekuivalensi ini juga berlaku
+untuk operator swaadjoin pada ruang Hilbert real.
+
+\begin{cor}\label{real_HSp_zero_Qform} Misalkan $T$ suatu operator swaadjoin pada ruang Hilbert.  Maka $T = \vc 0$ jika dan
+hanya jika bentuk kuadratik terkaitnya $Q_T$ bernilai nol.
+\end{cor}
+
+\begin{defn} Suatu operator $T$ pada ruang Hilbert $H$ bersifat
+ \index{positif!operator}%
+ \index{operator!positif}%
+\df{positif} jika operator tersebut swaadjoin dan bentuk kuadratik terkaitnya positif ($Q_T(x) \ge 0$ untuk setiap $x \in H$).
+\end{defn}
+
+\begin{exer} Misalkan $H$ ruang Hilbert kompleks dan $T$ operator positif pada~$H$.  Definisikan
+   \[ \langle x,y \rangle_1 := \langle Tx,y \rangle \qquad \text{ dan } \qquad \norm{x}_1 \equiv \sqrt{\langle x,x \rangle_1} \]
+untuk semua $x \in H$.
+ \begin{enumerate}
+  \item[(a)] Buktikan bahwa $\norm{\hphantom O}_1$ merupakan norma jika dan hanya jika $\ker T = \{0\}$.
+  \item[(b)] Misalkan $\ker T = \{0\}$. Tunjukkan bahwa norma $\norm{\hphantom O}$ dan
+$\norm{\hphantom O}_1$ menginduksi topologi yang sama pada~$H$ jika dan hanya jika $T$ invertibel dalam
+$\ofml B(H)$. \emph{Petunjuk.}  Ketika terdapat dua topologi pada~$H$, sering kali berguna untuk
+mempertimbangkan operator identitas pada~$H$.
+  \item[(c)] Misalkan $T$ invertibel dalam $\ofml B(H)$.  Untuk $S \in \ofml B(H)$, carilah suatu rumus bagi
+adjoin dari $S$ terhadap hasil kali dalam $\langle \hphantom x , \hphantom y \rangle_1$.
+ \end{enumerate}
+\end{exer}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Proyeksi}
+\begin{conv} Saat ini perhatian kita terutama difokuskan pada
+ \index{konvensi!proyeksi di ruang Hilbert bersifat ortogonal}%
+operator pada ruang Hilbert.  Dalam konteks ini, istilah \emph{proyeksi} selalu dimaknai
+ \index{proyeksi}%
+sebagai \emph{proyeksi ortogonal} (lihat definisi~\ref{000164}). Jadi, suatu operator pada ruang Hilbert
+disebut proyeksi jika $P^2 = P$ dan $P^* = P$.
+\end{conv}
+
+Kita memperumum definisi ``proyeksi (ortogonal)'' dari ruang Hilbert ke aljabar-$*\,$.
+
+\begin{defn} Suatu
+ \index{proyeksi!dalam suatu aljabar-$*\,$}%
+\df{proyeksi} dalam suatu aljabar-$*\,$ $A$ adalah suatu elemen $p$ dari aljabar tersebut yang bersifat
+idempoten ($p^2 = p$) dan swaadjoin ($p^* = p$).  Himpunan semua proyeksi dalam $A$
+dinotasikan
+ \index{P@$\fml P(A)$!proyeksi dalam suatu aljabar}%
+dengan~$\fml P(A)$.  Dalam kasus $\ofml B(H)$, yaitu operator terbatas pada suatu ruang Hilbert,
+kita menulis $\fml P(H)$,
+ \index{p@$\fml P(H)$ atau $\fml P(\ofml B(H))$!proyeksi ortogonal pada ruang Hilbert}%
+atau, jika $H$ telah dipahami, cukup $\fml P$, untuk notasi yang lebih informatif $\fml P(\ofml B(H))$.
+\end{defn}
+
+\begin{prop} Setiap operator pada ruang Hilbert yang merupakan isometri pada komplemen ortogonal dari kernelnya memiliki jangkauan tertutup.
+\end{prop}
+
+\begin{proof}[\emph{Petunjuk pembuktian}] Perhatikan terlebih dahulu bahwa jika $M = (\ker T)^\perp$, dengan $T$ adalah operator yang dimaksud, maka
+$\ran T = T^{\sto}(M)$.    \ns
+\end{proof}
+
+\begin{prop} Misalkan $P$ suatu proyeksi pada ruang Hilbert $H$. Maka
+ \begin{enumerate}[label=\rm{(\alph*)}]
+  \item $Px = x$ jika dan hanya jika $x \in \ran P$\,;
+  \item $\ker P = (\ran P)^\perp$; dan
+  \item $H = \ker P \oplus \ran P$.
+ \end{enumerate}
+\end{prop}
+
+Pada bagian (c) dari proposisi sebelumnya, lambang $\oplus$ tentu saja menyatakan
+jumlah langsung \emph{ortogonal} (lihat paragraf setelah~\ref{000164}).
+
+\begin{prop} Misalkan $M$ suatu subruang dari ruang Hilbert $H$.  Jika $P \in \ofml B(H)$, jika $Px = x$
+untuk setiap $x \in M$, dan jika $Px = \vc 0$ untuk setiap $x \in M^\perp$, maka $P$ adalah
+proyeksi dari $H$ pada~$M$.
+\end{prop}
+
+Pada bagian selebihnya dari seksi ini, penting untuk selalu mengingat bahwa ruang $\ofml B(H)$ dari operator pada ruang
+Hilbert merupakan \emph{contoh} aljabar-$*\,$, dan bahwa proyeksi (ortogonal) pada suatu ruang Hilbert merupakan
+\emph{contoh} proyeksi dalam aljabar-$*\,$.  Jadi, di satu sisi, semua hal yang dinyatakan untuk
+proyeksi semacam itu dalam aljabar-$*\,$ berlaku bagi proyeksi ruang Hilbert. Karena tidak ada nama yang lebih baik, kita akan mengatakan bahwa
+hasil-hasil ini mendokumentasikan struktur
+ \index{pandangan abstrak tentang proyeksi}%
+\df{abstrak} dari proyeksi.  Di sisi lain, proyeksi ruang Hilbert memiliki struktur tambahan yang
+tidak bermakna dalam aljabar-$*\,$ umum: proyeksi tersebut memiliki \emph{domain} dan \emph{jangkauan}, serta \emph{bekerja pada vektor}.
+Ketika menyelidiki hal-hal semacam itu, kita akan mengatakan bahwa kita membahas struktur
+ \index{pandangan spasial tentang proyeksi}%
+\df{spasial} (atau \df{konkret}) dari proyeksi.  Perhatikan bagaimana kedua pandangan ini muncul berselang-seling dalam bagian selebihnya dari seksi ini.
+
+Hasil pertama kita memberikan syarat perlu dan cukup agar jumlah proyeksi merupakan suatu proyeksi.
+
+\begin{prop}\label{prop_sum_projs} Misalkan $p$ dan $q$ proyeksi dalam suatu aljabar-$*\,$. Maka pernyataan berikut ekuivalen:
+ \begin{enumerate}[label=\rm{(\alph*)}]
+  \item $pq = \vc 0$;
+  \item $qp = \vc 0$;
+  \item $qp = -pq$;
+ \index{proyeksi!jumlah dari}%
+  \item $p + q$ merupakan suatu proyeksi.
+ \end{enumerate}
+\end{prop}
+
+\begin{defn}\label{def_perp_projs} Misalkan $p$ dan $q$ proyeksi dalam suatu aljabar-$*\,$.  Jika salah satu syarat
+dalam hasil sebelumnya berlaku, maka kita mengatakan bahwa $p$ dan $q$ bersifat
+ \index{proyeksi!ortogonal}%
+ \index{proyeksi!keortogonalan dari dua proyeksi}%
+ \index{ortogonal!proyeksi!dalam suatu aljabar-$*\,$}%
+\df{ortogonal} dan menulis
+ \index{<binrel@$p \perp q$ (keortogonalan proyeksi)}%
+$p \perp q$.  (Jadi, untuk operator pada suatu ruang Hilbert, kita dapat dengan tepat, meskipun tidak nyaman, menyebut
+\emph{proyeksi ortogonal yang ortogonal}!)
+\end{defn}
+
+Berikutnya adalah hasil spasial yang bersesuaian untuk jumlah dua proyeksi.
+
+\begin{prop} Misalkan $P$ dan $Q$ proyeksi pada ruang Hilbert~$H$. Maka $P \perp Q$
+ \index{ortogonal!proyeksi ruang Hilbert}%
+jika dan hanya jika $\ran P \perp \ran Q$. Dalam kasus ini, $P + Q$ merupakan suatu proyeksi
+yang kernelnya adalah $\ker P \cap \ker Q$ dan jangkauannya adalah $\ran P + \ran Q$.
+\end{prop}
+
+\begin{exam} Pada suatu ruang Hilbert, proyeksi (ortogonal) tidak harus berkomutasi. Sebagai contoh,
+misalkan $P$ proyeksi dari ruang Hilbert (real) $\R^2$ pada garis $y = x$ dan $Q$
+adalah proyeksi dari $\R^2$ pada sumbu-$x$. Maka $PQ \ne QP$.
+\end{exam}
+
+Hasil kali dua proyeksi merupakan suatu proyeksi jika dan hanya jika keduanya berkomutasi.
+
+\begin{prop} Misalkan $p$ dan $q$ proyeksi dalam suatu aljabar-$*\,$. Maka $pq$ merupakan suatu
+ \index{proyeksi!hasil kali dari}%
+proyeksi jika dan hanya jika $pq = qp$.
+\end{prop}
+
+\begin{prop} Misalkan $P$ dan $Q$ proyeksi pada ruang Hilbert~$H$. Jika $PQ = QP$, maka
+$PQ$ merupakan suatu proyeksi yang kernelnya adalah $\ker P + \ker Q$ dan jangkauannya adalah $\ran P \cap
+\ran Q$.
+\end{prop}
+
+\begin{prop} Misalkan $p$ dan $q$ proyeksi dalam suatu aljabar-$*\,$. Maka pernyataan berikut ekuivalen:
+ \begin{enumerate}[label=\rm{(\alph*)}]
+  \item $pq = p$;
+  \item $qp = p$;
+ \index{proyeksi!selisih dari}%
+  \item $q - p$ merupakan suatu proyeksi.
+ \end{enumerate}
+\end{prop}
+
+\begin{defn}\label{0022251} Misalkan $p$ dan $q$ proyeksi dalam suatu aljabar-$*\,$.  Jika salah satu
+dari syarat dalam hasil sebelumnya berlaku, maka kita
+ \index{<binrelle@$p \preceq q$ (urutan proyeksi dalam suatu aljabar-$*\,$)}%
+ \index{proyeksi!urutan dari}%
+ \index{urutan!parsial!dari proyeksi}%
+ \index{parsial!urutan!dari proyeksi}%
+menulis $p \preceq q$.
+\end{defn}
+
+\begin{prop} Misalkan $P$ dan $Q$ proyeksi pada ruang Hilbert~$H$. Maka pernyataan berikut ekuivalen:
+ \begin{enumerate}[label=\rm{(\alph*)}]
+  \item $P \preceq Q$;
+  \item $\norm{Px} \le \norm{Qx}$ untuk semua $x \in H$; dan
+  \item $\ran P \subseteq \ran Q$.
+ \end{enumerate}
+Dalam kasus ini, $Q - P$ merupakan suatu proyeksi yang kernelnya adalah $\ran P + \ker Q$ dan jangkauannya adalah $\ran Q \ominus \ran P$.
+\end{prop}
+
+\noindent\emph{Notasi:} Misalkan $H$, $M$, dan $N$ subruang dari suatu ruang Hilbert. Pernyataan
+ \index{<binopdirectdiff@$\ominus$ (selisih langsung)}%
+$H = M \oplus N$ dapat ditulis ulang sebagai $M = H \ominus N$ (atau $N = H \ominus M$).
+
+\begin{prop} Operasi $\preceq$ yang didefinisikan dalam~\ref{0022251} untuk proyeksi pada suatu
+aljabar-$*\,$ beridentitas $A$ merupakan urutan parsial pada $\fml P(A)$. Jika $p$ adalah suatu proyeksi dalam $A$,
+maka $\vc 0 \preceq p \preceq \vc 1$.
+\end{prop}
+
+\begin{prop} Misalkan $p$ dan $q$ proyeksi dalam suatu aljabar-$*\,$~$A$. Jika $pq = qp$, maka
+infimum dari $p$ dan $q$, yang kita notasikan
+ \index{<binrel@$p \curlywedge q$ (infimum proyeksi)}%
+ \index{infimum!dari proyeksi dalam suatu aljabar-$*\,$}%
+ \index{proyeksi!infimum dari}%
+dengan $p \curlywedge q$, ada terhadap urutan parsial $\preceq$ dan $p
+\curlywedge q = pq$.  Infimum $p \curlywedge q$ dapat ada bahkan ketika $p$ dan $q$ tidak
+berkomutasi.  Syarat perlu dan cukup agar $p \perp q$ berlaku adalah bahwa $p
+\curlywedge q = \vc 0$ dan $pq = qp$ keduanya berlaku.
+\end{prop}
+
+\begin{prop} Misalkan $p$ dan $q$ proyeksi dalam suatu aljabar-$*\,$~$A$. Jika $p \perp q$, maka
+supremum dari $p$ dan $q$, yang kita notasikan
+ \index{<binrel@$p \curlyvee q$ (supremum proyeksi)}%
+ \index{supremum!dari proyeksi dalam suatu aljabar-$*\,$}%
+ \index{proyeksi!supremum dari}%
+dengan $p \curlyvee q$, ada terhadap urutan parsial $\preceq$ dan $p
+\curlyvee q = p + q$.  Supremum $p \curlyvee q$ dapat ada bahkan ketika $p$ dan $q$ tidak
+ortogonal.
+\end{prop}
+
+\begin{prop} Misalkan $A$ suatu aljabar-$C^*$, $a \in A$ suatu elemen positif, dan $0 < \epsilon \le \frac12$. Jika
+$\norm{a^2 - a} < \epsilon/2$, maka terdapat suatu proyeksi $p$ dalam $A$ sedemikian sehingga
+$\norm{p - a} < \epsilon$.
+\end{prop}
+ 
+ 
+ 
+ 
+ 
+
+
+
+ 
+ 
+
+\section{Operator Normal}
+
+\begin{prop}\label{prop_nasc_normal} Suatu operator $T$ pada ruang Hilbert $H$ bersifat normal jika dan hanya jika
+$\norm{Tx} = \norm{T^*x}$ untuk semua $x \in H$.
+\end{prop}
+
+\begin{proof}[\emph{Petunjuk pembuktian}] Gunakan Korolar~\ref{real_HSp_zero_Qform}.  \ns
+\end{proof}
+
+\begin{cor} Jika $T$ merupakan operator normal pada suatu ruang Hilbert, maka $\ker T = \ker T^*$.
+\end{cor}
+
+\begin{prop} Jika $T$ merupakan operator normal pada suatu ruang Hilbert, maka $\norm{T^2} = {\norm T}^2$.
+\end{prop}
+
+\begin{proof}[\emph{Petunjuk pembuktian}] Substitusikan $Tx$ sebagai pengganti $x$ dalam Proposisi~\ref{prop_nasc_normal}. Gunakan
+Proposisi~\ref{C063544}.  \ns
+\end{proof}
+
+\begin{prop} Jika $T$ merupakan operator normal pada ruang Hilbert $H$, maka
+   \[ H = \clo{\ran T} \oplus \ker T\,.  \]
+\end{prop}
+
+\begin{cor} Suatu operator normal pada ruang Hilbert memiliki jangkauan padat jika dan hanya jika operator itu injektif.
+\end{cor}
+
+\begin{exam} Operator \emph{geser unilateral} (\ref{C063526}) merupakan contoh operator pada ruang Hilbert yang injektif
+tetapi tidak memiliki jangkauan padat. Adjoinnya memiliki jangkauan padat (bahkan, bersifat surjektif), tetapi tidak injektif.
+\end{exam}
+
+\begin{cor} Suatu operator normal pada ruang Hilbert bersifat invertibel jika dan hanya jika operator tersebut terbatas jauh dari nol.
+\end{cor}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Operator Berperingkat Hingga}
+
+\begin{defn}
+ \index{peringkat}%
+\df{peringkat} suatu pemetaan linear adalah dimensi (ruang vektor) dari jangkauannya. Jadi, suatu operator
+ \index{hingga!peringkat}%
+ \index{operator!berperingkat hingga}%
+\df{berperingkat hingga} adalah operator yang memiliki jangkauan berdimensi hingga. Kita menyatakan dengan $\ofml{FR}(V)$
+ \index{fr@$\ofml{FR}(V)$ (operator berperingkat hingga pada~$V$)}%
+keluarga operator berperingkat hingga pada suatu ruang vektor $V$.
+\end{defn}
+
+\begin{exam}\label{0022431fa} Untuk vektor $x$ dan $y$ dalam ruang Hilbert $H$, definisikan
+   \[ x \otimes y\colon H \sto H \colon z \mapsto \langle z,y \rangle x\,. \]
+Jika $x$ dan $y$ merupakan vektor tak nol dalam $H$, maka $x \otimes y$ merupakan operator berperingkat satu pada~$H$.
+\end{exam}
+
+Dua proposisi berikutnya mengidentifikasi adjoin dan komposisi operator-operator berperingkat satu ini.
+
+\begin{prop} Jika $u$ dan $v$ merupakan vektor dalam suatu ruang Hilbert, maka
+   \[ (u \otimes v)^* = v \otimes u\,. \]
+\end{prop}
+
+\begin{prop} Jika $u$, $v$, $x$, dan $y$ merupakan vektor dalam suatu ruang Hilbert, maka
+    \[ (u \otimes v)(x \otimes y) = \langle x,v \rangle (u \otimes y)\,. \]
+\end{prop}
+
+\begin{prop} Jika $x$ merupakan vektor dalam ruang Hilbert $H$, maka $x \otimes x$ merupakan proyeksi berperingkat satu jika dan
+hanya jika $x$ merupakan vektor satuan.
+\end{prop}
+
+\begin{prop} Andaikan bahwa $\{e^1, e^2, e^3, \dots, e^n\}$ merupakan himpunan ortonormal dalam ruang Hilbert~$H$. Misalkan
+$M = \spn\{e^1, \dots, e^n\}$. Maka $P = \sum_{k=1}^n e^k \otimes e^k$ merupakan proyeksi ortogonal dari $H$ ke~$M$.
+\end{prop}
+
+\begin{prop}\label{prop_op_act_otimes1} Jika $u$ dan $v$ merupakan vektor dalam suatu ruang Hilbert dan $T$ merupakan operator pada ruang Hilbert yang sama, yaitu~$H$, maka
+   \[ T\,(u \otimes v) = (Tu) \otimes v\,. \]
+\end{prop}
+
+\begin{prop}\label{prop_op_act_otimes2} Jika $u$ dan $v$ merupakan vektor dalam suatu ruang Hilbert dan $T$ merupakan operator pada ruang Hilbert yang sama, yaitu~$H$, maka
+   \[ (u \otimes v)\,T = u \otimes T^*v\,. \]
+\end{prop}
+
+Kita akan segera melihat bahwa keluarga semua operator berperingkat hingga pada suatu ruang Hilbert tak nol merupakan ideal-$*\,$ minimal dalam
+aljabar-$*\,$ $\ofml B(H)$. Sebagai persiapan, kita meninjau beberapa fakta dasar tentang ideal dalam aljabar.
+
+\begin{defn}\label{000551} Suatu
+ \index{ideal!kiri}%
+ \index{kiri!ideal}%
+\df{ideal kiri} dalam suatu aljabar $A$ adalah subruang vektor $J$ dari $A$ sedemikian sehingga $AJ \subseteq J$. (Untuk
+ \index{ideal!kanan}%
+ \index{kanan!ideal}%
+\df{ideal kanan}, tentu saja, kita mensyaratkan $JA \subseteq J$.) Kita mengatakan bahwa $J$ merupakan suatu
+ \index{ideal!dalam suatu aljabar}%
+\df{ideal} jika ideal tersebut merupakan ideal dua sisi, yaitu ideal kiri sekaligus ideal kanan. Suatu ideal disebut
+ \index{sejati!ideal}%
+ \index{ideal!sejati}%
+\df{sejati} jika ideal itu merupakan subhimpunan sejati dari~$A$.
+
+Ideal $\{0\}$ dan $A$ sering disebut sebagai
+ \index{trivial!ideal}%
+ \index{ideal!trivial}%
+\df{ideal trivial} dari~$A$. Aljabar $A$ disebut
+ \index{sederhana!aljabar}%
+ \index{aljabar!sederhana}%
+\df{sederhana} jika tidak memiliki ideal tak trivial.
+
+Suatu
+ \index{ideal maksimal}%
+ \index{ideal!maksimal}%
+ideal \df{maksimal} adalah ideal sejati yang tidak termuat secara sejati dalam ideal sejati lain.
+Kita menyatakan keluarga semua ideal maksimal dalam suatu aljabar $A$
+ \index{maximal@$\mx A$!himpunan ideal maksimal dalam suatu aljabar}%
+dengan~$\mx A$. Suatu
+ \index{ideal minimal}%
+ \index{ideal!minimal}%
+ideal \df{minimal} adalah ideal tak nol yang tidak memuat secara sejati ideal tak nol lain.
+\end{defn}
+
+ \index{konvensi!ideal bersifat dua sisi}%
+\begin{conv} Setiap kali kita merujuk pada suatu \emph{ideal} dalam aljabar, ideal tersebut dipahami sebagai
+ideal dua sisi (kecuali dinyatakan sebaliknya).
+\end{conv}
+
+\begin{prop} Tidak satu pun elemen invertibel dalam aljabar beridentitas dapat termasuk dalam suatu ideal sejati.
+\end{prop}
+
+ \begin{prop}\label{000552} Setiap ideal sejati dalam aljabar beridentitas $A$ termuat dalam suatu
+ ideal maksimal. Jadi, khususnya, $\mx A$ tak kosong apabila $A$ merupakan aljabar beridentitas.
+\end{prop}
+
+\begin{proof}[\emph{Petunjuk pembuktian}] Lema Zorn. \ns  \end{proof}
+
+\begin{prop}\label{000553} Misalkan $a$ suatu elemen dari aljabar komutatif~$A$. Jika $A$
+beridentitas dan $a$ tidak invertibel, maka $aA$ merupakan ideal sejati dalam~$A$.
+\end{prop}
+
+\begin{defn}\label{000554} Ideal $aA$ dalam proposisi sebelumnya adalah
+ \index{ideal utama}%
+ \index{ideal!utama}%
+\df{ideal utama} yang dibangkitkan oleh~$a$.
+\end{defn}
+
+\begin{defn}\label{000555} Misalkan $J$ suatu ideal dalam aljabar~$A$. Definisikan suatu
+relasi ekuivalensi $\sim$ pada $A$ dengan
+  \[ a \sim b \qquad \text{jika dan hanya jika } \qquad b-a \in J. \]
+Untuk setiap $a \in A$, misalkan $[a]$ adalah kelas ekuivalensi yang memuat~$a$. Misalkan $A/J$ adalah
+himpunan semua kelas ekuivalensi elemen-elemen~$A$. Untuk $[a]$ dan $[b]$ dalam $A/J$, definisikan
+  \[ [a] + [b] := [a+b] \qquad \text{ dan } \qquad [a][b] := [ab] \]
+dan untuk $\alpha \in \C$ dan $[a] \in A/J$, definisikan
+  \[\alpha[a] := [\alpha a] \,. \]
+Terhadap operasi-operasi ini, $A/J$ menjadi suatu aljabar. Aljabar tersebut adalah
+ \index{hasil bagi!aljabar}%
+ \index{aljabar!hasil bagi}%
+\df{aljabar hasil bagi} dari $A$ oleh~$J$. Notasi $A/J$ biasanya dibaca ``$A$ modulo~$J$''.
+Homomorfisme aljabar surjektif
+  \[ \pi\colon A \sto A/J\colon a \mapsto [a]\]
+disebut
+ \index{hasil bagi!pemetaan!untuk aljabar}%
+\df{pemetaan hasil bagi}.
+\end{defn}
+
+\begin{prop} Definisi sebelumnya bermakna dan pernyataan-pernyataan di dalamnya benar.
+Lebih lanjut, jika ideal $J$ bersifat sejati, maka aljabar hasil bagi $A/J$ beridentitas jika $A$ beridentitas.
+\end{prop}
+
+\begin{proof}[\emph{Petunjuk pembuktian}] Anda perlu menunjukkan bahwa:
+ \begin{enumerate}
+  \item[(a)] $\sim$ merupakan relasi ekuivalensi.
+  \item[(b)] Penjumlahan dan perkalian kelas-kelas ekuivalensi terdefinisi dengan baik.
+  \item[(c)] Perkalian suatu kelas ekuivalensi dengan skalar terdefinisi dengan baik.
+  \item[(d)] $A/J$ merupakan suatu aljabar.
+  \item[(e)] ``Pemetaan hasil bagi'' $\pi$ memang merupakan homomorfisme aljabar surjektif.
+ \end{enumerate}
+(Pada tahap mana diperlukan bahwa kita mengambil hasil bagi oleh suatu ideal, bukan sekadar subaljabar?) \ns
+\end{proof}
+
+\begin{defn} Dalam suatu aljabar $A$ dengan involusi,
+ \index{<star@ideal-$*\,$}%
+ \index{star@ideal-$*\,$}%
+ \index{ideal!$*\,$-}%
+suatu \df{ideal-$*\,$} adalah ideal swaadjoin dalam~$A$.
+\end{defn}
+
+\begin{prop}\label{0010953} Andaikan $J$ suatu ideal-$*\,$ dalam aljabar-$*\,$ $A$. Dalam aljabar
+hasil bagi $A/J$, sebagaimana dikembangkan dalam~\ref{000555}, definisikan $[a]^* := [a^*]$ untuk setiap $[a] \in A/J$.
+ \index{hasil bagi!aljabar-$*\,$}%
+ \index{<star@aljabar-$*\,$!hasil bagi}%
+Ini merupakan operasi uner yang terdefinisi dengan baik pada aljabar hasil bagi $A/J$ yang terbentuk; aljabar tersebut menjadi aljabar-$*\,$, dan
+pemetaan hasil bagi $a \mapsto [a]$ merupakan homomorfisme-$*\,$. Aljabar-$*\,$ $A/J$ adalah, tentu
+saja,
+ \index{hasil bagi!aljabar-$*\,$}%
+ \index{<star@aljabar-$*\,$!hasil bagi}%
+ \index{star@aljabar-$*\,$!hasil bagi}%
+\df{hasil bagi} dari $A$ oleh~$J$.
+\end{prop}
+
+\begin{prop} Misalkan $H$ suatu ruang Hilbert. Maka keluarga $\ofml{FR}(H)$ dari semua operator berperingkat hingga pada $H$
+ \index{star@ideal-$*\,$!$\ofml{FR}(H)$ sebagai suatu}%
+ \index{FR@$\ofml{FR}(H)$!sebagai ideal-$*\,$}%
+merupakan ideal-$*\,$ dalam aljabar-$*\,$~$\ofml B(H)$.
+\end{prop}
+
+\begin{prop}\label{prop_frop_sum_rnk1} Misalkan $T$ suatu operator berperingkat $n$ pada ruang Hilbert~$H$. Maka terdapat
+vektor $u^1$, \dots, $u^n$, $v^1$, \dots, $v^n$ dalam $H$ sedemikian sehingga
+   \[ T = \sum_{k=1}^n u^k \otimes v^k\,. \]
+\end{prop}
+
+\begin{proof}[\emph{Petunjuk pembuktian}] Misalkan $\{e^1, \dots, e^n\}$ suatu basis ortonormal bagi jangkauan~$T$. Untuk
+sembarang vektor $x \in H$, tuliskan \emph{ekspansi Fourier} dari $Tx$ (lihat Proposisi~\ref{C063144}(d)\,).  \ns
+\end{proof}
+
+\begin{cor} Setiap operator berperingkat satu pada suatu ruang Hilbert berbentuk $u \otimes v$ untuk suatu pasangan vektor tak nol
+$u$ dan $v$ dalam~$H$.
+\end{cor}
+
+\begin{cor} Setiap operator berperingkat hingga pada suatu ruang Hilbert merupakan jumlah dari (sejumlah berhingga) operator berperingkat satu.
+\end{cor}
+
+\begin{prop} Jika $H \ne \{0\}$ merupakan ruang Hilbert, maka keluarga $\ofml{FR}(H)$ dari operator berperingkat hingga pada $H$
+merupakan ideal minimal dalam~$\ofml B(H)$.
+\end{prop}
+
+\begin{proof}[\emph{Petunjuk pembuktian}] Misalkan $\ofml J$ suatu ideal tak nol dalam $\ofml B(H)$. Kita perlu menunjukkan bahwa $\ofml J$
+memuat~$\ofml{FR}(H)$. Berdasarkan Proposisi~\ref{prop_frop_sum_rnk1}, cukup dibuktikan bahwa $\ofml J$ memuat setiap
+operator berbentuk $u \otimes v$. Untuk itu, misalkan $T$ sebarang anggota tak nol dari $\ofml J$, misalkan $y$ suatu vektor satuan dalam
+jangkauan $T$, dan misalkan $x$ sebarang vektor dalam $H$ sedemikian sehingga $y = Tx$. Tinjau operator $(u \otimes y)T(x \otimes v)$. \ns
+\end{proof}
+
+Meskipun himpunan operator berperingkat hingga merupakan ideal dalam aljabar Banach yang terdiri atas operator pada suatu ruang Hilbert berdimensi tak hingga, himpunan itu bukan ideal
+tertutup dan, sebagai akibatnya, ternyata bukan himpunan yang tepat untuk membentuk hasil bagi dengan harapan memperoleh suatu objek hasil bagi dalam
+kategori aljabar Banach. Tutupan ideal operator berperingkat hingga pada suatu ruang Hilbert adalah ideal \emph{operator
+kompak}. Dalam arti tertentu, langkah berikutnya yang wajar ialah mengkaji sifat-sifat kelas operator ini; di dalamnya kita menjumpai
+beberapa operator terpenting dalam penerapan, misalnya operator integral. Namun, pemaparan yang lebih lancar dan lebih gamblang
+dimungkinkan jika kita memiliki sedikit lebih banyak perangkat teknis. Oleh karena itu, dalam bab berikutnya kita akan berfokus pada
+pengembangan beberapa alat baku yang digunakan dalam analisis fungsional.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\endinput
