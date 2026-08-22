@@ -1,0 +1,94 @@
+\section{Ruang-$LF$}\label{sec_LFsps}
+Karena tujuan utama kita dalam bab ini adalah pengantar teori distribusi, mulai sekarang kita akan membatasi perhatian
+pada jenis limit induktif yang sangat sederhana---\emph{limit induktif ketat dari suatu barisan induktif}. Secara khusus, kita akan
+tertarik pada limit induktif ketat dari barisan ruang Fr\'echet yang meningkat.
+
+
+Ingat bahwa topologi lemah pada suatu himpunan $S$ diinduksi oleh suatu keluarga fungsi $f_\alpha \colon S \sto
+X_\alpha$ yang memetakan ke ruang-ruang topologis. Topologi ini adalah topologi terlemah pada $S$ yang membuat
+semua fungsi tersebut kontinu (lihat latihan~\ref{C021421}). Gagasan dualnya adalah
+ \index{topologi!kuat}%
+ \index{kuat!topologi}%
+\df{topologi kuat}, yakni topologi yang diinduksi oleh suatu keluarga fungsi yang memetakan \emph{dari}
+ruang-ruang topologis $X_\alpha$ \emph{ke dalam}~$S$. Topologi ini adalah topologi terkuat yang membuat
+semua fungsi tersebut kontinu. Salah satu topologi kuat yang telah kita jumpai adalah
+\emph{topologi hasil bagi} (lihat proposisi~\ref{prop_quotient_top_strong}). Contoh penting lainnya,
+yang akan kita perkenalkan berikutnya, adalah \emph{topologi limit induktif}.
+
+
+\begin{defn} Suatu
+ \index{induktif!barisan!ketat}%
+ \index{barisan!induktif ketat}%
+ \index{ketat!barisan induktif}%
+\df{barisan induktif ketat} adalah barisan $(X_i)$ ruang konveks lokal sedemikian sehingga untuk setiap $i \in \N$
+   \begin{enumerate}
+     \item[(i)] $X_i$ adalah subruang tertutup dari $X_{i+1}$ dan
+     \item[(ii)] topologi $\sfml T_i$ pada $X_i$ adalah pembatasan topologi $\sfml T_{i+1}$ pada $X_i$.
+   \end{enumerate}
+Ini, tentu saja, merupakan sistem terarah dengan morfisme penghubung $\phi_{ji}$ yang tidak lain adalah pemetaan inklusi dari $X_i$ ke $X_j$ untuk $i < j$.
+
+Yang disebut
+ \index{induktif!limit!ketat}%
+ \index{limit!induktif ketat}%
+ \index{ketat!limit induktif}%
+\df{limit induktif ketat} dari barisan ruang semacam itu adalah gabungannya $L = \bigcup_{i=1}^\infty X_i$. Kita memberi $L$ topologi
+konveks lokal terbesar yang membuat semua pemetaan inklusi $\psi_i\colon X_i \sto L$ kontinu. Inilah
+ \index{induktif!limit!topologi}%
+ \index{topologi!limit induktif}%
+ \index{limit!induktif!topologi}%
+\df{topologi limit induktif} pada~$L$.
+\end{defn}
+
+\begin{prop} Topologi limit induktif yang didefinisikan di atas ada.
+\end{prop}
+
+\begin{defn} Limit induktif ketat dari suatu barisan ruang Fr\'echet disebut
+ \index{LF@ruang-$LF$}%
+ \index{ruang!$LF$-}%
+\df{ruang-$LF$}.
+\end{defn}
+
+\begin{exam} Ruang $\fml D(\Omega) = \fml C^\infty_c(\Omega)$ dari fungsi uji pada suatu himpunan terbuka $\Omega$ dalam ruang Euklides
+adalah ruang-$LF$ (lihat notasi~\ref{mi_notn}).
+\end{exam}
+
+\begin{prop} Setiap ruang-$LF$ lengkap.
+\end{prop}
+
+\begin{proof} Lihat~\cite{Treves:1967}, Teorema 13.1.  \ns
+\end{proof}
+
+\begin{prop} Misalkan $T\colon L \sto Y$ suatu pemetaan linear dari ruang-$LF$ ke ruang konveks lokal. Andaikan bahwa $L = \underrightarrow{\lim}X_k$
+dengan $(X_k)$ suatu barisan induktif ketat ruang Fr\'echet. Maka $T$ kontinu jika dan hanya jika pembatasannya $T\bigr|_{X_k}$
+pada setiap $X_k$ kontinu.
+\end{prop}
+
+\begin{proof} Lihat~\cite{Treves:1967}, Proposisi~13.1, atau~\cite{Conway:1990}, Proposisi IV.5.7, atau~\cite{Grubb:2009}, Teorema B.18(c).  \ns
+\end{proof}
+
+\begin{cau} Fran\c{c}ois Treves, dalam bukunya yang ditulis dengan indah, \emph{Topological Vector Spaces, Distributions, and Kernels}, memperingatkan
+para pembacanya tentang suatu kekeliruan yang sangat sulit dikenali: orang mudah sekali menganggap bahwa jika $M$ adalah subruang vektor tertutup dari ruang-$LF$
+$L = \underrightarrow{\lim}X_k$, maka topologi yang diwarisi $M$ dari $L$ pasti sama dengan topologi limit induktif yang diperolehnya
+dari barisan induktif ketat ruang Fr\'echet~$M \cap X_k$. Ternyata hal ini \emph{tidak} benar secara umum.
+\end{cau}
+
+\begin{prop} Misalkan $T\colon L \sto Y$ suatu pemetaan linear dari ruang-$LF$ ke ruang konveks lokal. Maka $T$ kontinu jika dan hanya jika
+pemetaan tersebut kontinu sekuensial.
+\end{prop}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

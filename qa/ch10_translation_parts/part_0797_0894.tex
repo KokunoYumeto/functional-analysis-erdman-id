@@ -1,0 +1,96 @@
+\section{Transformasi Fourier}\label{section_Fourier_transform}
+
+Dalam~\ref{defn_Fourier_transform}, kita mendefinisikan transformasi Fourier suatu fungsi $\lfs 1\R$. Cara ekuivalen untuk menyatakan
+definisi ini adalah melalui konvolusi:
+  \[ (\mathfrak F f)(x) = (f \ast \varepsilon^x)(0) \]
+untuk $x \in \R$, dengan $\varepsilon^x$ fungsi $t \mapsto e^{itx}$.
+
+\begin{defn} Kita ingin memperluas transformasi yang berguna ini ke distribusi. Namun, ternyata ruang $\fml D^*(\R)$ terlampau besar
+untuk mendukung definisi yang wajar baginya. Dengan memulai dari himpunan ``fungsi uji'' yang lebih besar, yakni fungsi-fungsi dalam ruang Schwartz
+$\fml S(\R)$ (yang memuat $\fml D(\R)$ sebagai subruang rapat), kita memperoleh ruang fungsional linear kontinu yang lebih kecil; pada ruang ini, untungnya, kita
+dapat mendefinisikan suatu \emph{transformasi Fourier} secara alami.
+\end{defn}
+
+Sebelum mendefinisikan transformasi Fourier pada distribusi, mari kita ingat kembali dua fakta penting dari analisis real mengenai
+transformasi Fourier yang bekerja pada fungsi mulus terintegralkan.
+
+\begin{prop}[Rumus Inversi Fourier] Jika $f \in \fml S(\R)$,
+ \index{Fourier!rumus inversi}%
+maka
+   \[ f(x) = \int_\R \hat f \varepsilon^x\,dm\,. \]
+\end{prop}
+
+\begin{prop}\label{prop_FT_isomor1} Transformasi Fourier
+   \[ \mathfrak F\colon \fml S(\R) \sto \fml S(\R)\colon f \mapsto \hat f \]
+merupakan isomorfisme ruang Fr\'echet (yakni, pemetaan linear kontinu bijektif dengan invers kontinu), dan untuk semua
+$f \in \fml S(\R)$ serta $x \in \R$, kita mempunyai $\mathfrak F^2f(x) = f(-x)$, sehingga $\mathfrak F^4f = f$.
+\end{prop}
+
+\begin{proof} Pembuktian kedua hasil sebelumnya, bersama banyak informasi lain tentang transformasi yang menarik ini
+dan beragam penerapannya pada persamaan diferensial biasa maupun parsial, dapat ditemukan di berbagai sumber.
+Beberapa yang segera terlintas adalah~\cite{Cerda:2010}, Bab~7; \cite{Horvath:1966}, Bab~4, Seksi~11;
+\cite{McDonaldW:1999}, Seksi~11.3; \cite{Rudin:1991}, Bab~7; \cite{Treves:1967}, Bab~25; dan \cite{Yosida:1965},
+Bab~VI.   \ns
+\end{proof}
+
+\begin{defn} Fungsi inklusi $\iota\colon \fml D(\R) \sto \fml S(\R)$ bersifat kontinu. Maka pemetaan antara ruang-ruang dualnya
+   \[ u\colon \fml S^*(\R) \sto \fml D^*(\R)\colon \tau \mapsto u_\tau = \tau \circ \iota \]
+merupakan isomorfisme ruang vektor dari $\fml S^*(\R)$ ke suatu ruang distribusi pada~$\R$, yang kita sebut ruang
+ \index{distribusi tempered}%
+\df{distribusi tempered} (sebagian penulis memilih frasa
+ \index{distribusi!temperate}%
+\df{distribusi temperate}). Lazimnya, fungsional linear $\tau$ dan $u_\tau$ di atas diidentifikasi. Jadi, $\fml S^*(\R)$
+sendiri dipandang sebagai ruang distribusi tempered.
+\end{defn}
+
+Jika Anda kesulitan memverifikasi salah satu pernyataan dalam definisi sebelumnya, lihat Teorema 7.10\emph{ dan seterusnya} dalam~\cite{Rudin:1991}.
+
+\begin{exam} Setiap distribusi dengan tumpuan kompak merupakan distribusi tempered.
+\end{exam}
+
+\begin{defn} Definisikan
+ \index{Fourier!transformasi}%
+ \index{transformasi!Fourier}%
+ \index{F@$\mathfrak F(u)$ (transformasi Fourier dari~$u$)}%
+ \index{<unoptop@$\hat u$ (transformasi Fourier dari~$u$)}%
+\df{transformasi Fourier} $\hat u$ dari suatu distribusi tempered $u \in \fml S^*(\R)$ dengan
+   \[ \hat u(\phi) = u(\hat\phi) \]
+untuk semua $\phi \in \fml S(\R)$. Notasi $\mathfrak Fu$ merupakan alternatif bagi~$\hat u$.
+\end{defn}
+
+\begin{prop} Jika $f \in \lfs1\R$, maka kita dapat memperlakukan $\tilde f$ sebagai distribusi tempered dan, dalam hal ini,
+   \[ \hat{\tilde f} = \tilde{\hat f}\,. \]
+\end{prop}
+
+\begin{exam} Transformasi Fourier fungsi delta Dirac diberikan oleh
+   \[ \hat\delta = \tilde{\vc 1}\,. \]
+\end{exam}
+
+\begin{exam} Transformasi Fourier distribusi regular $\tilde{\vc 1}$ diberikan oleh
+   \[ \hat{\tilde{\vc 1}} = \delta\,. \]
+\end{exam}
+
+Proposisi~\ref{prop_FT_isomor1} memiliki generalisasi yang memuaskan bagi distribusi tempered.
+
+\begin{prop} Transformasi Fourier $\mathfrak F\colon \fml S^*(\R) \sto \fml S^*(\R)$ merupakan pemetaan linear kontinu
+bijektif yang inversnya juga kontinu. Lebih lanjut, $\mathfrak F^4$ merupakan pemetaan identitas pada~$\fml S^*(\R)$.
+\end{prop}
+
+Kita akan kembali sejenak ke pembahasan transformasi Fourier dalam bab berikutnya.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\endinput

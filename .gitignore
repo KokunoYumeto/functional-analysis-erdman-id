@@ -30,6 +30,10 @@
 /qa/build-through-ch09-a/
 /qa/renders/ch09-final/
 /qa/release-ch09/
+/qa/build-through-ch10-a/
+/qa/build-through-ch10-b/
+/qa/renders/ch10-final/
+/qa/release-ch10/
 
 # TeX intermediates
 *.aux

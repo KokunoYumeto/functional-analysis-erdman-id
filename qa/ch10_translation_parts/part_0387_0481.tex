@@ -1,0 +1,96 @@
+\begin{defn} Misalkan $X$ suatu ruang konveks lokal Hausdorff dan $X^*$ ruang dualnya, yaitu ruang semua
+fungsional linear kontinu pada~$X$. Untuk setiap $f \in X^*$ definisikan
+  \[ p_f\colon X \sto \K\colon x \mapsto \abs{f(x)}. \]
+Jelas bahwa setiap $p_f$ merupakan seminorma pada~$X$. Seperti dalam kasus ruang linear bernorma, kita mendefinisikan
+ \index{lemah!topologi!pada ruang konveks lokal}%
+ \index{sigma@$\sigma(X,X^*)$ (topologi lemah pada~$X$)}%
+\df{topologi lemah} pada $X$, yang dinotasikan dengan $\sigma(X,X^*)$, sebagai topologi lemah yang dibangkitkan oleh keluarga seminorma
+$\{p_f\colon f \in X^*\}$ pada~$X$. Demikian pula, untuk setiap $x \in X$ definisikan
+   \[ p_x\colon X^* \sto \K \colon f \mapsto \abs{f(x)}. \]
+Sekali lagi, setiap $p_x$ merupakan seminorma pada~$X^*$, dan kita mendefinisikan
+ \index{w*@$w^*$-topologi (topologi lemah-bintang)}%
+ \index{sigma@$\sigma(X^*,X)$ (topologi-$w^*$ pada~$X^*$)}%
+\df{topologi-$w^*$} pada $X^*$, yang dinotasikan dengan $\sigma(X^*,X)$, sebagai topologi lemah yang dibangkitkan oleh keluarga seminorma
+$\{p_x\colon x \in X\}$ pada~$X^*$.
+\end{defn}
+
+\begin{prop} Jika ruang distribusi $\fml D^*(\Omega)$ pada subhimpunan terbuka $\Omega$ dari $\R^n$ diberi topologi-$w^*$,
+maka suatu jaring $(u_\lambda)$ distribusi pada $\Omega$ konvergen ke distribusi $v$ pada $\Omega$ jika dan hanya jika
+$\left\langle u_\lambda, \phi\right\rangle \sto \left\langle v, \phi\right\rangle$ untuk setiap fungsi uji $\phi$ pada $\Omega$.
+\end{prop}
+
+\begin{prop} Andaikan suatu jaring $(u_\lambda)$ distribusi konvergen ke distribusi~$v$. Maka ${u_\lambda}^{(\alpha)} \sto v^{(\alpha)}$
+untuk setiap multi-indeks $\alpha$.
+\end{prop}
+
+\begin{proof} Lihat \cite{Rudin:1991}, Teorema 6.17; atau \cite{Yosida:1965}, Bab II, Seksi 3, Teorema; atau \cite{Grubb:2009}, Teorema 3.9;
+atau~\cite{HirschL:1999}, Bab 8, Proposisi 2.4.
+\end{proof}
+
+\begin{prop} Jika $g$, $f_k \in \locint\Omega$ untuk setiap $k$ (dengan $\open{\Omega}{\R^n}$) dan $f_k \sto g$ secara seragam pada
+setiap subhimpunan kompak dari $\Omega$, maka $\tilde f_k \sto \tilde g$.
+\end{prop}
+
+\begin{prop} Jika $f \in \fml C^\infty(\R^n)$, maka $\left(L_f\right)^{(\bs\alpha)} = L_{f^{(\bs\alpha)}}$ untuk setiap multi-indeks $\bs\alpha$.
+\end{prop}
+
+\begin{exer} Jika $\delta$ bukan suatu fungsi pada $\R$, lalu apa yang dimaksud orang ketika mereka menulis
+   \[ \lim_{k \sto \infty} \frac{k}{\pi(1+k^2x^2)} = \delta(x)\quad? \]
+Tunjukkan bahwa, jika ditafsirkan dengan tepat (sebagai suatu pernyataan tentang distribusi), ungkapan itu bahkan benar. \emph{Petunjuk.}
+Jika $s_k(x) = k\,\pi^{-1}(1+k^2x^2)^{-1}$ dan $\phi$ suatu fungsi uji pada $\R$, maka
+$\int_{-\infty}^\infty s_k\phi = \int_{-\infty}^\infty s_k\phi(0) + \int_{-\infty}^\infty s_k\eta$ dengan $\eta(x) = \phi(x) - \phi(0)$.
+Tunjukkan bahwa $\int_{-\infty}^\infty s_k\eta \sto 0$ ketika $k \sto \infty$.
+\end{exer}
+
+\begin{exer} Misalkan $f_n(x) = \sin nx$ untuk $n \in \N$ dan $x \in \R$. Barisan $(f_n)$ tidak konvergen secara klasik;
+tetapi barisan itu konvergen secara distribusional (ke $0$). Nyatakan pernyataan ini dengan tepat, lalu buktikan. \emph{Petunjuk.} Carilah antiturunannya.
+\end{exer}
+
+\begin{prop} Jika $\phi$ suatu fungsi mulus pada $\R$ dengan tumpuan kompak, maka
+    \[ \lim_{n \sto \infty}\frac2\pi \int_{-\infty}^\infty \frac{n^3x}{\bigl(1 + n^2x^2\bigr)^2}\,\, \phi(x)\,dx = \phi'(0)\,.\]
+\end{prop}
+
+\begin{exer} Berikan makna pada ungkapan
+   \[ 2\pi\sum_{n = -\infty}^\infty \delta(x-2\pi n) =  1 +  2\sum_{n = 1}^\infty \cos nx\,, \]
+dan tunjukkan bahwa, jika ditafsirkan dengan tepat, ungkapan itu benar. \emph{Petunjuk.} Siapa pun yang cukup bejat untuk percaya bahwa $\delta(x)$ \emph{berarti}
+sesuatu kemungkinan akan menafsirkan $\delta(x-a)$ sebagai hal yang sama dengan $\delta_a(x)$. Anda dapat memulai proses
+merasionalisasikannya dengan menghitung deret Fourier fungsi $g$ yang didefinisikan oleh $g(x) = \frac1{4\pi}x^2 - \frac12 x$ pada $[0,2\pi]$
+dan kemudian diperluas secara periodik ke $\R$. Anda mungkin perlu mencari teorema tentang konvergensi titik demi titik dan seragam dari deret Fourier
+serta tentang pendiferensialan suku demi suku deret semacam itu.
+\end{exer}
+
+\begin{defn} Misalkan $\Omega$ suatu subhimpunan terbuka dari $\R^n$, $u \in \fml D^*(\Omega)$, dan $f \in \fml C^\infty(\Omega)$.
+ \index{perkalian!distribusi dengan fungsi mulus}%
+ \index{<binopconcat@$fu$ (hasil kali fungsi mulus dengan distribusi)}%
+Definisikan
+   \[ (fu)(\phi) := u(f\phi) \]
+untuk semua fungsi uji $\phi$ pada~$\Omega$. Secara ekuivalen, kita dapat menulis $\langle fu,\phi \rangle = \langle u,f\phi \rangle$.
+\end{defn}
+
+\begin{prop} Fungsional $fu$ dalam definisi sebelumnya merupakan distribusi pada~$\Omega$.
+\end{prop}
+
+\begin{proof} Lihat~\cite{Rudin:1991}, halaman 159, Seksi 6.15.    \ns
+\end{proof}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

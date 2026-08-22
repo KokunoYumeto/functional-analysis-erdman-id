@@ -1,0 +1,336 @@
+ \documentclass[11pt,reqno]{amsbook}
+ \usepackage{cmap}
+ \usepackage[T1]{fontenc}
+ \usepackage[utf8]{inputenc}
+ \usepackage{lmodern}
+ \usepackage[indonesian]{babel}
+ \usepackage{amssymb}
+ \usepackage{amscd}
+ \usepackage[all]{xy}
+ \usepackage{url}
+ \usepackage{enumitem}
+ \usepackage{xcolor}
+ \definecolor{AccessibleLinkBlue}{HTML}{005A9C}
+ \usepackage[pdftex,
+            pdfauthor={John M Erdman},
+            pdftitle={Analisis Fungsional dan Aljabar Operator: Suatu Pengantar},
+            pdfsubject={analisis fungsional dan aljabar operator},
+            pdfkeywords={aljabar linear, analisis fungsional, operator, ruang Hilbert, ruang Banach, spektrum, operator kompak, teorema spektral, ruang vektor topologis, ruang Frechet, distribusi, ruang LF, konvolusi, transformasi Fourier},
+            pdfcreationdate={D:20260822000000+02'00'},
+            pdfmoddate={D:20260822000000+02'00'},
+            pdflang={id-ID},pdfdisplaydoctitle=true,
+            plainpages=false,pdftex,pagebackref=true,colorlinks,
+            allcolors=AccessibleLinkBlue,
+            bookmarks=true,bookmarksopen=true]{hyperref}
+     %plainpages=false corrects page numbers in index
+     %pagebackref=true provides back references from bibliography
+     %the translated wrapper restores reader navigation bookmarks
+
+
+
+
+
+
+
+\makeindex
+
+
+ \setlength{\textwidth}{6.5in}
+ \setlength{\oddsidemargin}{0in}
+ \setlength{\evensidemargin}{0in}
+ \setlength{\textheight}{9.25in}
+ \setlength{\topmargin}{-0.35in}
+
+ % Michael Barr's DIAGXY.TEX is preserved byte-for-byte under its embedded
+ % redistribution notice.  Exact case keeps the build portable.
+ \input{DIAGXY.TEX}
+
+%\includeonly{}
+
+
+\swapnumbers \theoremstyle{plain}
+\newtheorem{thm}{Teorema}[section]
+\newtheorem{lem}[thm]{Lema}
+\newtheorem{prop}[thm]{Proposisi}
+\newtheorem{cor}[thm]{Akibat}
+\newtheorem{ax}[thm]{Aksioma}
+
+\theoremstyle{definition}
+\newtheorem{defn}[thm]{Definisi}
+\newtheorem{notn}[thm]{Notasi}
+\newtheorem{conv}[thm]{Konvensi}
+
+\theoremstyle{remark}
+\newtheorem{rem}[thm]{Catatan}
+\newtheorem*{cau}{PERHATIAN}
+\newtheorem{fact}[thm]{Fakta}
+\newtheorem{exam}[thm]{Contoh}
+\newtheorem{exer}[thm]{Latihan}
+\newtheorem{prob}[thm]{Soal}
+\newtheorem{proj}[thm]{Proyek}
+
+\renewcommand{\proofname}{Bukti}
+\renewcommand{\chaptername}{Bab}
+\renewcommand{\contentsname}{Daftar Isi}
+\renewcommand{\bibname}{Daftar Pustaka}
+\renewcommand{\indexname}{Indeks}
+\renewcommand{\emailaddrname}{{\itshape Alamat surel}}
+\renewcommand{\seeonlyname}{lihat}
+\renewcommand{\seename}{lihat juga}
+\renewcommand{\alsoname}{lihat juga}
+
+
+
+\renewcommand{\thechapter}{\arabic{chapter}}
+\renewcommand{\thesection}{\thechapter.\arabic{section}}
+\renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
+
+
+\renewcommand{\labelenumi}{\rm(\alph{enumi})}
+%to get enumeration in lower case roman
+
+
+
+
+\numberwithin{equation}{section}
+
+
+
+
+
+ \newcommand{\field}[1]{\mathbb{#1}}
+ \newcommand{\C}{\field{C}}
+ \newcommand{\Di}{\field{D}}
+ \newcommand{\Dsk}{\field{D}}
+ \newcommand{\E}{\field{E}}
+ \newcommand{\K}{\field{K}}
+ \newcommand{\N}{\field{N}}
+ \newcommand{\Po}{\field{P}}
+ \newcommand{\Q}{\field{Q}}
+ \newcommand{\R}{\field{R}}
+ \newcommand{\Sp}{\field{S}}
+ \newcommand{\T}{\field{T}}
+ \newcommand{\Z}{\field{Z}}
+
+
+
+ \newcommand{\sto}{\rightarrow}
+      %Diagxy redefined \to . This shortens the arrow.
+ \newcommand{\ofml}[1]{\mathfrak{#1}}
+      % for families of operators
+ \newcommand{\fml}[1]{\mathcal{#1}}
+      % for families of functions
+ \newcommand{\sfml}[1]{\mathfrak{#1}}
+      % for families of sets
+ \newcommand{\ftr}[1]{\mathsf{#1}}
+      % for functors
+ \newcommand{\vc}[1]{\mathbf{#1}}
+      % for vectors
+ \newcommand{\df}[1]{\textsc{#1}}
+      % for terms being defined
+ \newcommand{\bs}[1]{\boldsymbol{#1}}
+      % to create bold symbols and Greek letters
+ \newcommand{\D}{\displaystyle}
+ \newcommand{\ns}{\renewcommand{\qed}{}}
+ \newcommand{\abs}[1]{\lvert#1\rvert}
+      % absolute value
+ \newcommand{\bigabs}[1]{\left\lvert#1\right\rvert}
+      % large absolute value
+  \newcommand{\norm}[1]{\lVert#1\rVert}
+      % norm
+ \newcommand{\bignorm}[1]{\bigl\lVert#1\bigr\rVert}
+      % large norm
+ \newcommand{\biggnorm}[1]{\biggl\lVert#1\biggr\rVert}
+      % larger norm
+ \newcommand{\trinorm}[1]{\vert\mspace{-2mu}\vert
+     \mspace{-2mu}\vert#1\vert\mspace{-2mu}\vert
+     \mspace{-2mu}\vert}
+      % 3-bar norm
+ \newcommand{\cstariso}[2]{#1\overset{\,{}_\ast}{\cong}#2}
+      % #1 is *-isomorphic to #2
+ \newcommand{\cat}[1]{\mathbf{#1}}
+      % for categories
+ \newcommand{\clo}[1]{\overline{#1}}
+      % closure
+ \newcommand{\cloco}[1]{\overline{\operatorname{co}}(#1)}
+      % closed convex hull
+ \newcommand{\co}[1]{\operatorname{co}(#1)}
+      % convex hull
+ \newcommand{\conj}[1]{\overline{#1}}
+      % complex conjugate
+ \newcommand{\id}[1]{\operatorname{id}_{#1}}
+      % Identity on #1
+ \newcommand{\intr}[1]{{#1}^{\circ}}
+      % interior
+  \newcommand{\lfs}[1]{\mathrm{L_{#1}}}
+      % Lebesgue function spaces
+ \newcommand{\locint}[1]{\mathrm{L_1^{loc}}({#1})}
+      % locally integrable functions on #1
+ \newcommand{\M}[2]{\mathbf{M}_{#1}({#2})}
+      % for matrix algebras
+ \newcommand{\mor}[2]{\operatorname{\mathfrak{Mor}}(#1,#2)}
+       % Morphisms from #1 to #2
+ \newcommand{\open}[2]{#1\overset{\thickspace{}_\circ}{\subseteq}#2}
+      % #1 is an open subset of #2
+ \newcommand{\sbsb}[2]{#1_{{}_\sst{#2}}}
+      % makes smaller, lower subscript
+ \newcommand{\spsp}[2]{#1^{{}^\sst{#2}}}
+      % makes smaller higher superscript
+ \newcommand{\sst}[1]{{\scriptstyle{#1}}}
+      % sub- and superscript size type
+ \newcommand{\ssst}[1]{{\scriptscriptstyle{#1}}}
+      % second level sub- and superscripts
+ \newcommand{\pd}[2]{\dfrac{\partial#1}{\partial#2}}
+      % first partial, 1 variable
+ \newcommand{\ppd}[2]{\dfrac{\partial^2#1}{\partial#2^2}}
+      % second partial, 1 variable
+ \newcommand{\ppdd}[3]{\dfrac{\partial^2#1}{\partial#2\partial#3}}
+      % second partial, 2 variables
+ \newcommand{\wt}[1]{\widetilde{#1}}
+ \newcommand{\wh}[1]{\widehat{#1}}
+ \makeatletter
+ \newcommand{\futurexref}[2]{%
+   \@ifundefined{r@#2}{#1}{\ref{#2}}}
+ \makeatother
+      % Use a live link when the labelled destination has entered this
+      % cumulative reader; otherwise retain the printed source number.
+
+
+
+ \DeclareMathOperator{\ad}{Ad}
+ \DeclareMathOperator{\ba}{ba}
+ \DeclareMathOperator{\ca}{ca}
+ \DeclareMathOperator{\card}{card}
+ \DeclareMathOperator{\cloin}{cl}
+ \DeclareMathOperator{\codim}{codim}
+ \DeclareMathOperator{\coker}{coker}
+ \DeclareMathOperator{\diag}{diag}
+ \DeclareMathOperator{\diam}{diam}
+ \DeclareMathOperator{\dist}{dist}
+ \DeclareMathOperator{\dom}{dom}
+ \DeclareMathOperator{\essran}{essran}
+ \DeclareMathOperator{\ext}{Ext}
+ \DeclareMathOperator{\fin}{Fin}
+ \DeclareMathOperator{\Hom}{Hom}
+ \DeclareMathOperator{\im}{im}
+ \DeclareMathOperator{\ind}{ind}
+ \DeclareMathOperator{\intrin}{int}
+ \DeclareMathOperator{\inv}{inv}
+ \DeclareMathOperator{\mx}{Max}
+ \DeclareMathOperator{\ran}{ran}
+ \DeclareMathOperator{\rca}{rca}
+ \DeclareMathOperator{\spn}{span}
+ \DeclareMathOperator{\supp}{supp}
+ \DeclareMathOperator{\tr}{tr}
+
+
+
+
+
+\begin{document}
+
+
+ \frontmatter
+ \title{ANALISIS FUNGSIONAL \\ DAN \\ ALJABAR OPERATOR: \\ Suatu Pengantar \\ \mbox{} \\ \large Unit Pembaca Kumulatif Bab 1--10}
+ \author{John M. Erdman \\
+      Portland State University \\
+      \mbox{\hphantom{P}} \\
+      Versi sumber 4 Oktober 2015 \\
+      \mbox{\hphantom{P}} \\
+    %  \copyright 2014 John M. Erdman \\
+      \mbox{\hphantom{P}} \\
+            \mbox{\hphantom{P}} \\
+                  \mbox{\hphantom{P}} }
+
+
+\vskip 2 in
+
+ \email{erdman@pdx.edu}
+
+\maketitle
+
+
+\begin{center}
+\textbf{Edisi Bahasa Indonesia --- batas produksi Bab 1--10}
+\end{center}
+
+Karya sumber John M. Erdman ini berlisensi Creative Commons
+Attribution--ShareAlike 4.0 International (CC BY-SA 4.0):
+\url{https://creativecommons.org/licenses/by-sa/4.0/}.
+Terjemahan Bahasa Indonesia dan adaptasi teknis ini juga diterbitkan dengan
+lisensi CC BY-SA 4.0. Edisi ini dibuat oleh Codex atas arahan pengguna dan tidak
+disponsori atau didukung oleh John M. Erdman maupun Portland State University.
+
+\begin{sloppypar}
+Sumber resmi:
+\url{https://web.pdx.edu/~erdman/FAOA/functional_analysis_operator_algebras_pdf.pdf}
+dan
+\url{https://web.pdx.edu/~erdman/FAOA/functional_analysis_operator_algebras_web.zip}.
+SHA-256 sumber masing-masing adalah
+\texttt{f320b16af7448fbb43582c21569840fe\allowbreak657fccf6f31d97f176913fdd0e1eb823}
+dan
+\texttt{0c667cfa7420b61dda8f8cb4ed9d619d\allowbreak b8abbd1b53d17eafe7d4a2e153342e53}.
+\end{sloppypar}
+
+Perubahan pada batas ini: semua prosa pembaca dalam Bab 1 sampai Bab 10
+diterjemahkan ke Bahasa Indonesia; struktur, rumus, label, sitasi, latihan,
+dan penomoran sumber dipertahankan, dengan koreksi sumber yang dicatat secara
+terpisah. Epigraf pihak ketiga, gambar lencana lisensi, dan makro tabel yang
+status komponennya tidak cukup jelas tidak digunakan. Berkas
+\texttt{DIAGXY.TEX} dipakai tanpa perubahan menurut pemberitahuan distribusinya
+sendiri. Halaman dapat
+mengalir ulang pada perangkat TeX modern; nomor halaman bukan pengenal tetap.
+
+
+
+\vfill\eject
+
+\tableofcontents
+
+
+
+
+\mainmatter
+
+
+
+
+ \include{linalg-id}
+ \include{categories-id}
+ \include{normlinspaces-id}
+ \include{Hilbert_spaces-id}
+ \include{Hilbert_space_operators-id}
+ \include{Banach_spaces-id}
+ \include{compact_operators-id}
+ \include{spectrum-id}
+ \include{topvecspaces-id}
+ \include{distributions-id}
+
+
+%\enlargethispage{\baselineskip}
+
+
+
+
+\backmatter
+
+
+ \clearpage
+ \phantomsection
+        %allows TOC links to find bibliography correctly
+ \bibliographystyle {amsplain}
+ \bibliography{functional_analysis_op_algs_bib}
+     %\addcontentsline{toc}{chapter}{Bibliography}
+
+
+ \cleardoublepage
+ \phantomsection
+         %allows TOC links to find index correctly
+ \printindex
+ \addcontentsline{toc}{chapter}{Index}
+
+
+
+
+\end{document}
+

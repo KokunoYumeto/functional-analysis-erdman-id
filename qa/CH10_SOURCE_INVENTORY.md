@@ -1,7 +1,7 @@
 # FAOA-2015-CH10 source inventory
 
 Date: 2026-08-22  
-State: **source frozen; terminology QA passed; first translation fragment active**  
+State: **source frozen; terminology QA passed; complete translation admitted**
 Unit: `FAOA-2015-CH10` / advanced continuation
 
 ## Exact source identity
@@ -99,7 +99,9 @@ is authorized during production.
 
 ## Source-review candidates
 
-These are translation-time adjudication candidates, not applied corrections:
+These candidates were adjudicated during translation and are now applied. The
+authoritative 16-record disposition is
+`provenance/SOURCE_CORRECTIONS_CH10.json`:
 
 - line 29: the universal property quantifies `i \in \N`, although the index set
   is the arbitrary directed set `D`; likely `i \in D`;
@@ -109,6 +111,8 @@ These are translation-time adjudication candidates, not applied corrections:
   not valid for a general directed set; requires independent mathematical
   adjudication before any repair;
 - line 98: “we will interested” lacks “be”;
+- line 119: the topology-restriction statement is malformed and must state
+  directly that the topology on `X_i` is the restriction of `\sfml T_{i+1}`;
 - line 121: `\phi{ji}` likely intends `\phi_{ji}`;
 - lines 252--255: Lebesgue-local integrability of `f` does not by itself ensure
   local integrability against an arbitrary regular Borel measure `\mu`, and
@@ -117,6 +121,8 @@ These are translation-time adjudication candidates, not applied corrections:
 - line 393: “generated the family” likely lacks “by”;
 - line 405: `\left<...\right>` should be reviewed against semantic
   `\langle...\rangle` notation;
+- line 456: `fu` is a functional, not a function, before the proposition proves
+  that it is a distribution;
 - lines 509 and 766: `\int_R` likely intends `\int_\R`;
 - line 559: the convolution theorem is followed by `\wh{fg}=\hat f\hat g`;
   the left side likely intends the transform of `f\ast g`;
@@ -148,7 +154,20 @@ induktif`, `ruang-$LF$`, `terintegralkan secara lokal`, `distribusi`,
 Dirac`, `fungsi Heaviside`, `distribusi Heaviside`, `turunan distribusi`,
 `operator diferensial`, `dipol`, `ukuran Lebesgue ternormalisasi`, `konvolusi`,
 `transformasi Fourier`, `adjoin formal`, `solusi klasik`, `solusi lemah`,
-`solusi distribusional`, `solusi diperumum`, and `distribusi temper`.
+`solusi distribusional`, `solusi diperumum`, and `distribusi tempered`.
+
+The Chapter 10-specific form **`distribusi tempered`** is directly attested in
+the official ITB Digital Library chapter PDF *Bab II: Ruang dan Operator LPS*,
+section II.1.3, both as the section heading and in the defining prose. The
+10-page PDF is frozen locally at
+`qa/terminology_evidence/itb-distribusi-tempered-2018-bab2.pdf`, 283,518 bytes,
+SHA-256
+`830a241c8ace73290a4c613cc6478bb17698d835b781b1fec332fa09838ddf02`.
+Page 2 was inspected visually and by text extraction. This evidence refines
+the provisional calque `distribusi temper`; no admitted Chapter 1--9 prose is
+affected. The upstream alternate *temperate distributions* remains the
+recognition form `distribusi temperate` where the source explicitly presents
+it as an alternative.
 
 Adverbial *weakly* follows the established `secara lemah` pattern. Therefore
 the controlled preference is **`terukur secara lemah`** for *weakly
@@ -157,7 +176,7 @@ recognized variant, not the preferred reader form. Neither phrase occurs in
 this Chapter 10 source; the record is reserved for cross-corpus consistency.
 Attributive compounds remain `topologi lemah` and `solusi lemah`.
 
-## Contiguous production fragments and first action
+## Contiguous production fragments and admission
 
 | Fragment | Inclusive source lines | Bytes | SHA-256 | Scope |
 |---|---:|---:|---|---|
@@ -169,9 +188,10 @@ Attributive compounds remain `topologi lemah` and `solusi lemah`.
 | CH10-F06 | 711--796 | 3,749 | `cac89f13c29d536a966c9b6684bf7e273d296e6d00547e176bc00da75cea8769` | distributional ODE solutions |
 | CH10-F07 | 797--894 | 4,326 | `f4036be8ec3face8cf220ba3bb6de88164e365863471aa31cb9cb767f6e2d5eb` | Fourier transform + `\endinput` |
 
-The fragments are byte-exact, nonoverlapping, exhaustive, and ordered; their
-bytes sum to 42,703. The terminology gate passed on 2026-08-22 without a prose
-change. The active executable production boundary is the complete `CH10-F01`
-range, lines 1--94, staged without altering upstream bytes and preserving all
-labels, formulas, diagram topology, index hooks, defined terms, and the
-proof-hint role.
+The source fragments are byte-exact, nonoverlapping, exhaustive, and ordered;
+their bytes sum to 42,703. All seven corresponding Indonesian target fragments
+were translated, independently reread, and assembled into the admitted
+42,627-byte target. Structural, mathematical, terminology, build, all-page
+visual, rights, privacy, and backend gates pass in
+`provenance/CH10_BUILD_AND_QA_RECEIPT.md`. The next executable source-order
+boundary is Chapter 11, `source/upstream/Gelfand_Naimark.tex`.

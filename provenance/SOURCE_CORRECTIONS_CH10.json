@@ -1,0 +1,301 @@
+{
+  "schema_version": "o008.source-corrections.v1",
+  "unit_id": "FAOA-2015-CH10",
+  "chapter": 10,
+  "status": "adjudicated_and_applied",
+  "source": {
+    "path": "source/upstream/distributions.tex",
+    "bytes": 42703,
+    "logical_records": 894,
+    "line_endings": "CRLF",
+    "sha256": "31f38daee49b9abfcd513a1c4a3f78414b122e469c6ac2d559c0b73ecbc082f8"
+  },
+  "target": {
+    "path": "source/id-ID/distributions-id.tex",
+    "bytes": 42627,
+    "logical_records": 876,
+    "line_endings": "LF",
+    "sha256": "6456f9def822da572e117f3ec368931f0bfb441840aa0785be1df6080bbb6840"
+  },
+  "normalization": {
+    "id": "explicit-range-nfc-whitespace-v1",
+    "source_selection": "Use each record's inclusive physical source-line range.",
+    "target_mapping": "Use each record's explicit inclusive physical target-line range after the classified direct-limit replacement and blank-only reflow.",
+    "steps": [
+      "Discard blank records and strip trailing whitespace.",
+      "Join selected records with LF and strip outer whitespace.",
+      "Normalize to Unicode NFC.",
+      "Replace each Unicode whitespace run with one ASCII space.",
+      "Hash normalized UTF-8 bytes with SHA-256."
+    ]
+  },
+  "record_count": 16,
+  "class_counts": {
+    "MATHEMATICAL_SOURCE_REPAIR": 9,
+    "MECHANICAL_SOURCE_REPAIR": 5,
+    "SEMANTIC_SOURCE_REPAIR": 1,
+    "SEMANTIC_TEX_SOURCE_REPAIR": 1
+  },
+  "independent_review": {
+    "direct_limit_construction": "passed: direct sum W, relation span N, quotient L, canonical maps, compatibility, factorization, and uniqueness",
+    "fragment_translation_reviews": "F01-F05 passed after listed repairs; F06-F07 reviewed separately before admission"
+  },
+  "records": [
+    {
+      "id": "FAOA-2015-CH10-CORR-001",
+      "source_lines": {
+        "start": 29,
+        "end": 29
+      },
+      "target_lines": {
+        "start": 29,
+        "end": 29
+      },
+      "classification": "MATHEMATICAL_SOURCE_REPAIR",
+      "decision": "The universal-property quantifier must range over the directed index set D, not N.",
+      "source_normalized_snippet_sha256": "d9669d2525bf462803d2376ea2127ab59a88dcafcf07d1985614b9089ddacebb",
+      "target_normalized_snippet_sha256": "e5bae8a46d1c60f24179fa526739dca742a1cd7220716474c4f109457ca67605",
+      "required_target_anchor": "i \\in D"
+    },
+    {
+      "id": "FAOA-2015-CH10-CORR-002",
+      "source_lines": {
+        "start": 54,
+        "end": 54
+      },
+      "target_lines": {
+        "start": 53,
+        "end": 54
+      },
+      "classification": "MECHANICAL_SOURCE_REPAIR",
+      "decision": "Repair English 'if this system' to the intended 'of this system'.",
+      "source_normalized_snippet_sha256": "e66b83e612857bc71d120eb9419695cd3ca95169134adc818ddac3c80af04b7d",
+      "target_normalized_snippet_sha256": "ea35273eed3e5b44fd84f04148ccf288bd174d5cac885eb7521aa7f2c8432144",
+      "required_target_anchor": "dari sistem ini"
+    },
+    {
+      "id": "FAOA-2015-CH10-CORR-003",
+      "source_lines": {
+        "start": 57,
+        "end": 73
+      },
+      "target_lines": {
+        "start": 57,
+        "end": 67
+      },
+      "classification": "MATHEMATICAL_SOURCE_REPAIR",
+      "decision": "Replace the false product/direct-sum quotient hint by the standard direct-sum quotient construction; independent universal-property review passed.",
+      "source_normalized_snippet_sha256": "f9c633d06681c86b1cd66cba42319a5699ca3c989d0ca2ea3522ebc41e636e2f",
+      "target_normalized_snippet_sha256": "2c7f02b04a945a31fb577dc346f486c4595171378ed8b8785a65c248b7642566",
+      "required_target_anchor": "N=\\operatorname{span}"
+    },
+    {
+      "id": "FAOA-2015-CH10-CORR-004",
+      "source_lines": {
+        "start": 98,
+        "end": 98
+      },
+      "target_lines": {
+        "start": 88,
+        "end": 90
+      },
+      "classification": "MECHANICAL_SOURCE_REPAIR",
+      "decision": "Supply the missing verb in 'we will [be] interested' through natural Indonesian syntax.",
+      "source_normalized_snippet_sha256": "9197b9851f2980c7812e19c6acc081fd7e621c9c569795be4c8058b05ef684d0",
+      "target_normalized_snippet_sha256": "fd54f410fb2b8008682baf784d6c0e2d935c1969fa2124dd8ec38976c120ee81",
+      "required_target_anchor": "kita akan"
+    },
+    {
+      "id": "FAOA-2015-CH10-CORR-005",
+      "source_lines": {
+        "start": 119,
+        "end": 119
+      },
+      "target_lines": {
+        "start": 112,
+        "end": 112
+      },
+      "classification": "MECHANICAL_SOURCE_REPAIR",
+      "decision": "State the restriction of topology T_{i+1} directly instead of the malformed restriction-of-sets wording.",
+      "source_normalized_snippet_sha256": "12fd4a470d8b35a4739bab847d4e07373082360d62a6bd5868ff37865f6cf923",
+      "target_normalized_snippet_sha256": "c4c3051efd2286a4c110f7eabf54d7e72c7a02837db7aea3b29c9bbfb86c31c0",
+      "required_target_anchor": "pembatasan topologi $\\sfml T_{i+1}$"
+    },
+    {
+      "id": "FAOA-2015-CH10-CORR-006",
+      "source_lines": {
+        "start": 121,
+        "end": 121
+      },
+      "target_lines": {
+        "start": 114,
+        "end": 114
+      },
+      "classification": "MATHEMATICAL_SOURCE_REPAIR",
+      "decision": "Restore the omitted subscript in the connecting morphism phi_{ji}.",
+      "source_normalized_snippet_sha256": "18f2ddd2c0de315d82635af3deadd9c4a4ecb71128e664429c36ef7e1b48b8e5",
+      "target_normalized_snippet_sha256": "c44a2d5c06c3c96933affca58737e8c47cd9791226974a99a232e493e4afff2b",
+      "required_target_anchor": "$\\phi_{ji}$"
+    },
+    {
+      "id": "FAOA-2015-CH10-CORR-007",
+      "source_lines": {
+        "start": 252,
+        "end": 255
+      },
+      "target_lines": {
+        "start": 242,
+        "end": 245
+      },
+      "classification": "MATHEMATICAL_SOURCE_REPAIR",
+      "decision": "Require f to be locally integrable with respect to the stated regular Borel measure; retain the local source notation L_mu because f is fixed in the example.",
+      "source_normalized_snippet_sha256": "634fad1cd3f03862dcef065d792d303d5a1fbdee01dbb33b1bf30f71e932f447",
+      "target_normalized_snippet_sha256": "60ca81c40292e6bc4950b72f9c407e76a9967b79a8ebd1037c629f981426a632",
+      "required_target_anchor": "terhadap ukuran tersebut"
+    },
+    {
+      "id": "FAOA-2015-CH10-CORR-008",
+      "source_lines": {
+        "start": 341,
+        "end": 341
+      },
+      "target_lines": {
+        "start": 331,
+        "end": 331
+      },
+      "classification": "MECHANICAL_SOURCE_REPAIR",
+      "decision": "Repair number agreement in 'every test functions' through natural Indonesian singular syntax.",
+      "source_normalized_snippet_sha256": "8b6742fc84da7f3e04391521f08a9d0b98b25409934f1945948e970282a317ad",
+      "target_normalized_snippet_sha256": "91f746fe34dca70635bb19ddaf9b450ab281e0338ed829099db8c72e3caacc45",
+      "required_target_anchor": "setiap fungsi uji"
+    },
+    {
+      "id": "FAOA-2015-CH10-CORR-009",
+      "source_lines": {
+        "start": 393,
+        "end": 393
+      },
+      "target_lines": {
+        "start": 383,
+        "end": 384
+      },
+      "classification": "MECHANICAL_SOURCE_REPAIR",
+      "decision": "Supply the missing relation in 'generated [by] the family'.",
+      "source_normalized_snippet_sha256": "94c4a630dd2297d566455c8e257298fbf8e4d907d31165881812295b3357f792",
+      "target_normalized_snippet_sha256": "19e21cd9560eadf77a1f247944e10cbf5afc1f042854afa243b5dcacce6b21f0",
+      "required_target_anchor": "dibangkitkan oleh keluarga seminorma"
+    },
+    {
+      "id": "FAOA-2015-CH10-CORR-010",
+      "source_lines": {
+        "start": 405,
+        "end": 405
+      },
+      "target_lines": {
+        "start": 395,
+        "end": 395
+      },
+      "classification": "SEMANTIC_TEX_SOURCE_REPAIR",
+      "decision": "Replace raw less-than/greater-than delimiters with semantic angle-bracket commands.",
+      "source_normalized_snippet_sha256": "f08603dc114874969996b410eb239d5908756462d0be72f36630099710721895",
+      "target_normalized_snippet_sha256": "2073e8669ed430602fa1ef68ccba03b601643bbf62ea17a71774302a96bef774",
+      "required_target_anchor": "\\left\\langle u_\\lambda"
+    },
+    {
+      "id": "FAOA-2015-CH10-CORR-011",
+      "source_lines": {
+        "start": 456,
+        "end": 456
+      },
+      "target_lines": {
+        "start": 446,
+        "end": 446
+      },
+      "classification": "SEMANTIC_SOURCE_REPAIR",
+      "decision": "Call fu a functional rather than a function before establishing that it is a distribution.",
+      "source_normalized_snippet_sha256": "4a7e111a885a8567ae43696b0417e043cfb50699f28e7847ce8695807408ed3f",
+      "target_normalized_snippet_sha256": "025f75fef499904fceb59f1880d70332d75f5bea50485c0e1b48cfefbb830a28",
+      "required_target_anchor": "Fungsional $fu$"
+    },
+    {
+      "id": "FAOA-2015-CH10-CORR-012",
+      "source_lines": {
+        "start": 509,
+        "end": 509
+      },
+      "target_lines": {
+        "start": 500,
+        "end": 500
+      },
+      "classification": "MATHEMATICAL_SOURCE_REPAIR",
+      "decision": "Restore the missing backslash in the integration domain R.",
+      "source_normalized_snippet_sha256": "917619f2bfb8321b7402923a83abe2a6d7aeeee7300cad444424452eddbdd689",
+      "target_normalized_snippet_sha256": "8a77c5438d47f0d215a0e7524b219e48efcbc4bb727de161fda97eddfc050354",
+      "required_target_anchor": "\\int_\\R \\abs f"
+    },
+    {
+      "id": "FAOA-2015-CH10-CORR-013",
+      "source_lines": {
+        "start": 559,
+        "end": 559
+      },
+      "target_lines": {
+        "start": 548,
+        "end": 550
+      },
+      "classification": "MATHEMATICAL_SOURCE_REPAIR",
+      "decision": "Apply the convolution theorem to the transform of f ast g, not the pointwise product fg.",
+      "source_normalized_snippet_sha256": "22c982368cd2d79aeeab4ba64555b6a1744cc6f2e176071ec1d1569bbc8cd297",
+      "target_normalized_snippet_sha256": "e0ee08eaf906883c33f11ef067e8ec8ee67b4267ba343b9bf09b1a29ecf0d3ff",
+      "required_target_anchor": "\\wh{f\\ast g}"
+    },
+    {
+      "id": "FAOA-2015-CH10-CORR-014",
+      "source_lines": {
+        "start": 566,
+        "end": 566
+      },
+      "target_lines": {
+        "start": 554,
+        "end": 557
+      },
+      "classification": "MATHEMATICAL_SOURCE_REPAIR",
+      "decision": "Type a general scalar-valued function with codomain K rather than only R.",
+      "source_normalized_snippet_sha256": "0d90a06f07b7f066706362aa49f059d8b6dabf837de0e626fb1462132c7f3197",
+      "target_normalized_snippet_sha256": "fc36f1c8d8783f16a98cfc6fc0acedd4989c2112ffbd40bbad61783f50a45afe",
+      "required_target_anchor": "\\R \\sto \\K"
+    },
+    {
+      "id": "FAOA-2015-CH10-CORR-015",
+      "source_lines": {
+        "start": 766,
+        "end": 766
+      },
+      "target_lines": {
+        "start": 751,
+        "end": 754
+      },
+      "classification": "MATHEMATICAL_SOURCE_REPAIR",
+      "decision": "Restore the missing backslash in the integration domain R.",
+      "source_normalized_snippet_sha256": "bc76177482286774401933f8e627c788ae54a1fe7792fe7dd99c2b48db1f33eb",
+      "target_normalized_snippet_sha256": "9bdd65e0548b67019a39fc37199eaa85f5671e48df478cd5644f6a10907fbb2b",
+      "required_target_anchor": "\\int_\\R \\phi"
+    },
+    {
+      "id": "FAOA-2015-CH10-CORR-016",
+      "source_lines": {
+        "start": 778,
+        "end": 778
+      },
+      "target_lines": {
+        "start": 765,
+        "end": 765
+      },
+      "classification": "MATHEMATICAL_SOURCE_REPAIR",
+      "decision": "Use the same lowercase derivative order p in numerator and denominator.",
+      "source_normalized_snippet_sha256": "d8d7e7defd2d9560c8422932eeddbabf002d94d99ae44e464a437be0d80092d0",
+      "target_normalized_snippet_sha256": "0335c3810987c5318177f466b5127fe0e97336c056e2b906bdbe64c1e3964dc9",
+      "required_target_anchor": "\\dfrac{d^p\\delta}{dx^p}"
+    }
+  ]
+}

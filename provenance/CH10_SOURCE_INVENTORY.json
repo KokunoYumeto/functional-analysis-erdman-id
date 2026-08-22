@@ -3,8 +3,17 @@
   "recorded_date": "2026-08-22",
   "unit_id": "FAOA-2015-CH10",
   "course_role": "advanced_continuation",
-  "state": "source_frozen_terminology_qa_passed_translation_ready",
+  "state": "admitted_2026-08-22",
   "bulk_translation_allowed": true,
+  "admission": {
+    "target_path": "source/id-ID/distributions-id.tex",
+    "target_bytes": 42627,
+    "target_records": 876,
+    "target_sha256": "6456f9def822da572e117f3ec368931f0bfb441840aa0785be1df6080bbb6840",
+    "receipt_path": "provenance/CH10_BUILD_AND_QA_RECEIPT.md",
+    "receipt_bytes": 10338,
+    "receipt_sha256": "2a4d7a6379b1cc4f634fd45d75413133670c134d9b3ba55c363ff273645b9c1f"
+  },
   "source": {
     "path": "source/upstream/distributions.tex",
     "title": "DISTRIBUTIONS",
@@ -143,11 +152,13 @@
     {"lines":[54,54],"class":"MECHANICAL_SOURCE_REPAIR_CANDIDATE","issue":"inductive limit if this system likely means of this system"},
     {"lines":[57,73],"class":"MATHEMATICAL_REVIEW_REQUIRED","issue":"product modulo direct sum construction appears too large for the categorical direct limit and eventual equality does not cover a general directed set"},
     {"lines":[98,98],"class":"MECHANICAL_SOURCE_REPAIR_CANDIDATE","issue":"we will interested lacks be"},
+    {"lines":[119,119],"class":"MECHANICAL_SOURCE_REPAIR_CANDIDATE","issue":"topology restriction wording is malformed and must state the restriction of T_{i+1} to X_i"},
     {"lines":[121,121],"class":"MATHEMATICAL_SOURCE_REPAIR_CANDIDATE","issue":"phi{ji} likely intends phi_{ji}"},
     {"lines":[252,255],"class":"MATHEMATICAL_REVIEW_REQUIRED","issue":"Lebesgue-local integrability does not ensure integrability against arbitrary regular Borel measure mu; L_mu also suppresses f"},
     {"lines":[341,341],"class":"MECHANICAL_SOURCE_REPAIR_CANDIDATE","issue":"every test functions should be singular"},
     {"lines":[393,393],"class":"MECHANICAL_SOURCE_REPAIR_CANDIDATE","issue":"generated the family likely lacks by"},
     {"lines":[405,405],"class":"SEMANTIC_TEX_REVIEW","issue":"left/right angle characters should be reviewed against langle/rangle"},
+    {"lines":[456,456],"class":"SEMANTIC_SOURCE_REPAIR_CANDIDATE","issue":"fu is a functional rather than a function before it is established as a distribution"},
     {"lines":[509,509],"class":"MATHEMATICAL_SOURCE_REPAIR_CANDIDATE","issue":"int_R likely intends int_mathbbR macro int_\\R"},
     {"lines":[559,559],"class":"MATHEMATICAL_SOURCE_REPAIR_CANDIDATE","issue":"convolution theorem displays transform of fg rather than transform of f ast g"},
     {"lines":[566,566],"class":"MATHEMATICAL_REVIEW_REQUIRED","issue":"general scalar-valued function is typed R to R rather than scalar field K"},
@@ -160,6 +171,7 @@
     "backend_witness": {"path":"backend/terminology.jsonl","bytes":98578,"records":255,"sha256":"98d69653ba962b1f88f84e9de28e13b9fa1c8f3fcbfbdc319e89b182f68a2144"},
     "field_usage_projection": {"path":"backend/terminology_qa.jsonl","bytes":9232,"records":7,"sha256":"0be61180b43ca8e314bc3323696a0836ed82f505153444373584d1ac640cc3c8"},
     "qa_report": {"path":"qa/terminology_evidence/undip-jfma-2020-dunford/TERMINOLOGY_QA_REPORT.md","bytes":9317,"sha256":"c7618249a3d9f273044a408e44438e2db710d5b5f46856ea5280bf247583858d"},
+    "chapter_specific_witness": {"path":"qa/terminology_evidence/itb-distribusi-tempered-2018-bab2.pdf","official_url":"https://digilib.itb.ac.id/assets/files/2019/2018_TS_PP_PEBRUDAL_ZANU_1-BAB2.pdf","pages":10,"bytes":283518,"sha256":"830a241c8ace73290a4c613cc6478bb17698d835b781b1fec332fa09838ddf02","inspected_page":2,"attested_preferred":"distribusi tempered","disposition":"local QA evidence only; do not redistribute without separate rights closure"},
     "inherited": {
       "directed set":"himpunan terarah",
       "weak topology":"topologi lemah",
@@ -202,7 +214,7 @@
       "weak solution":"solusi lemah",
       "distributional solution":"solusi distribusional",
       "generalized solution":"solusi diperumum",
-      "tempered distribution":"distribusi temper"
+      "tempered distribution":"distribusi tempered"
     },
     "weakly_measurable": {
       "source_term":"weakly measurable",
@@ -225,13 +237,15 @@
     {"id":"FAOA-2015-CH10-F07","start_line":797,"end_line":894,"line_count":98,"bytes":4326,"sha256":"f4036be8ec3face8cf220ba3bb6de88164e365863471aa31cb9cb767f6e2d5eb","scope":"Fourier transform and endinput"}
   ],
   "fragment_closure": {"nonoverlapping":true,"contiguous":true,"exhaustive":true,"ordered":true,"byte_sum":42703},
-  "first_executable_translation_boundary": {
-    "status":"active_after_terminology_QA_passed_2026-08-22",
-    "fragment_id":"FAOA-2015-CH10-F01",
-    "source_lines":[1,94],
-    "source_bytes":5150,
-    "source_sha256":"6cb7e8c7a4382345eaf5cac803b841cd883c326160284ef395649517515ce519",
-    "future_staging_path":"qa/ch10_translation_parts/part_0001_0094.tex",
-    "required_preservation":["source order","environment topology","mathematics","labels","references","citations","index hooks","defined terms","inline diagram topology","proof hint role"]
+  "production_boundary": {
+    "status":"complete_and_admitted_2026-08-22",
+    "unit_id":"FAOA-2015-CH10",
+    "source_lines":[1,894],
+    "target_path":"source/id-ID/distributions-id.tex",
+    "target_bytes":42627,
+    "target_sha256":"6456f9def822da572e117f3ec368931f0bfb441840aa0785be1df6080bbb6840",
+    "receipt_path":"provenance/CH10_BUILD_AND_QA_RECEIPT.md",
+    "next_unit":"FAOA-2015-CH11",
+    "next_source":"source/upstream/Gelfand_Naimark.tex"
   }
 }

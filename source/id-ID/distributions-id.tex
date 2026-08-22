@@ -1,0 +1,876 @@
+\chapter{DISTRIBUSI}
+
+\section{Limit Induktif}\label{sec_ind_limits}
+\begin{defn}\label{defn_dir_sys} Misalkan $D$ suatu himpunan terarah terhadap pengurutan parsial~$\le$ dan misalkan $\{A_i\colon i \in D\}$ suatu keluarga
+objek dalam suatu kategori~$\cat C$.  Anggap bahwa untuk setiap $i$, $j \in D$ dengan $i \le j$ terdapat suatu morfisme
+$\phi_{j,i}\colon A_i \sto A_j$ yang memenuhi $\phi_{ki} = \phi_{kj}\phi_{ji}$ setiap kali $i \le j \le k$ dalam~$D$.  Anggap pula bahwa
+$\phi_{ii}$ adalah pemetaan identitas pada $A_i$ untuk setiap $i \in D$. Maka keluarga berindeks $\vc A = \bigl(A_i\bigr)_{i \in D}$ dari
+objek-objek bersama keluarga berindeks $\bs\phi = \bigl(\phi_{ji}\bigr)$ dari \emph{morfisme penghubung} disebut suatu
+ \index{morfisme penghubung}%
+ \index{morfisme!penghubung}%
+ \index{terarah!sistem}%
+ \index{sistem!terarah}%
+\df{sistem terarah} dalam~$\cat C$.
+\end{defn}
+
+\begin{defn}\label{defn_ind_lim} Misalkan pasangan $(\vc A, \bs\phi)$ suatu sistem terarah (seperti di atas) dalam kategori~$\cat C$ yang
+himpunan terarah dasarnya adalah~$D$.  Suatu
+ \index{induktif!limit}%
+ \index{limit!induktif}%
+\df{limit induktif} (atau
+ \index{langsung!limit}%
+ \index{limit!langsung}%
+\df{limit langsung}) dari sistem $(\vc A,\bs\phi)$ adalah pasangan $(L,\bs\mu)$ dengan $L$ suatu objek dalam $\cat C$
+dan $\bs\mu = \bigl(\mu_i\bigr)_{i \in D}$ suatu keluarga morfisme $\mu_j\colon A_j \sto L$ dalam $\cat C$ yang memenuhi
+ \begin{enumerate}[label=\rm{(\alph*)}]
+  \item $\mu_i = \mu_j \phi_{ji}$ setiap kali $i \le j$ dalam $D$, dan
+  \item jika $(M,\bs\lambda)$ suatu pasangan dengan $M$ suatu objek dalam $\cat C$ dan $\bs\lambda = \bigl(\lambda_i\bigr)_{i \in D}$
+adalah suatu keluarga berindeks morfisme $\lambda_j\colon A_j \sto M$ dalam $\cat C$ yang memenuhi $\lambda_i = \lambda_j\phi_{ji}$ setiap kali $i \le j$ dalam~$D$,
+maka terdapat morfisme tunggal $\psi\colon L \sto M$ sedemikian sehingga $\lambda_i = \psi\mu_i$ untuk setiap $i \in D$.
+ \end{enumerate}
+Dengan penyalahgunaan bahasa yang lazim, biasanya kita mengatakan bahwa $L$ adalah limit induktif dari sistem $\vc A = (A_i)$ dan
+ \index{<arrowto@$\underrightarrow{\lim} A_i$ (limit induktif)}%
+menulis $L = \underrightarrow{\lim} A_i$.
+
+\vskip 15 pt
+
+   \[\xymatrix@+15pt@C+25pt{&&&& L\ar@{-->}[dddd]^\psi \\
+                   &&&&   \\
+                  {\cdots}\ar[r] & A_i \ar[uurrr]^{\mu_i}\ar[ddrrr]^{\lambda_i}\ar[r]^(.6){\phi_{ji}} &
+                       A_j\ar[uurr]^{\mu_j}\ar[ddrr]^{\lambda_j}\ar[r] & {\cdots} &  \\
+                   &&&&   \\
+                   &&&& M
+    }\]
+\end{defn}
+
+Dalam suatu kategori (konkret) sebarang, limit induktif belum tentu ada.  Namun, jika ada, limit tersebut tunggal.
+
+\begin{prop}\label{prop_ind_lim_unique} Limit induktif (jika ada dalam suatu kategori) bersifat tunggal (hingga isomorfisme).
+\end{prop}
+
+\begin{exam} Misalkan $S$ suatu objek tak kosong dalam kategori $\cat{SET}$. Tinjau keluarga $\sfml P(S)$ dari semua himpunan bagian $S$ yang diarahkan
+oleh pengurutan parsial~$\subseteq$.  Setiap kali $A \subseteq B \subseteq S$, ambil morfisme penghubung $\sbsb\iota{BA}$ sebagai
+pemetaan inklusi dari $A$ ke~$B$. Maka $\sfml P(S)$, bersama keluarga morfisme penghubung, membentuk suatu sistem terarah.  Limit
+induktif dari sistem ini adalah~$S$.
+\end{exam}
+
+\begin{exam} Limit langsung ada dalam kategori $\cat{VEC}$ dari ruang vektor dan pemetaan linear.
+\end{exam}
+
+\begin{proof}[\emph{Petunjuk untuk bukti}] Misalkan $(\vc V, \bs\phi)$ suatu sistem terarah dalam $\cat{VEC}$ (seperti dalam definisi~\ref{defn_dir_sys})
+dan $D$ adalah himpunan terarah dasarnya. Misalkan
+$W=\bigoplus_{i\in D}V_i$ dan $\iota_i\colon V_i\sto W$ inklusi kanonik. Tetapkan
+  \[ N=\operatorname{span}\{\iota_i(u)-\iota_j(\phi_{ji}(u)):
+       i\le j,\quad u\in V_i\}. \]
+Ambil $L=W/N$ dan $\mu_i=q\circ\iota_i$, dengan $q\colon W\sto W/N$ pemetaan hasil bagi, lalu verifikasikan sifat universalnya
+(lihat contoh~\ref{C015544} dan~\ref{X_dir_sum_VEC}).  \ns
+\end{proof}
+
+\begin{exam} Barisan $\Z \to^{\vc 1} \Z \to^{\vc 2} \Z \to^{\vc 3} \Z \to^{\vc 4} \dots$
+(dengan $\vc n \colon \Z \sto \Z$ memenuhi $\vc n(1) = n$) merupakan suatu barisan induktif grup-grup Abelian
+yang limit induktifnya adalah himpunan $\Q$ dari bilangan rasional.
+\end{exam}
+
+\begin{exam} Barisan $\Z \to^{\vc 2} \Z \to^{\vc 2} \Z \to^{\vc 2} \Z \to^{\vc 2} \dots$
+merupakan suatu barisan induktif grup-grup Abelian yang limit induktifnya adalah himpunan bilangan rasional
+diadik.
+\end{exam}
+
+
+
+
+
+
+
+
+
+\section{Ruang-$LF$}\label{sec_LFsps}
+Karena tujuan utama kita dalam bab ini adalah pengantar teori distribusi, mulai sekarang kita akan membatasi perhatian
+pada jenis limit induktif yang sangat sederhana---\emph{limit induktif ketat dari suatu barisan induktif}. Secara khusus, kita akan
+tertarik pada limit induktif ketat dari barisan ruang Fr\'echet yang meningkat.
+
+
+Ingat bahwa topologi lemah pada suatu himpunan $S$ diinduksi oleh suatu keluarga fungsi $f_\alpha \colon S \sto
+X_\alpha$ yang memetakan ke ruang-ruang topologis. Topologi ini adalah topologi terlemah pada $S$ yang membuat
+semua fungsi tersebut kontinu (lihat latihan~\ref{C021421}). Gagasan dualnya adalah
+ \index{topologi!kuat}%
+ \index{kuat!topologi}%
+\df{topologi kuat}, yakni topologi yang diinduksi oleh suatu keluarga fungsi yang memetakan \emph{dari}
+ruang-ruang topologis $X_\alpha$ \emph{ke dalam}~$S$. Topologi ini adalah topologi terkuat yang membuat
+semua fungsi tersebut kontinu. Salah satu topologi kuat yang telah kita jumpai adalah
+\emph{topologi hasil bagi} (lihat proposisi~\ref{prop_quotient_top_strong}). Contoh penting lainnya,
+yang akan kita perkenalkan berikutnya, adalah \emph{topologi limit induktif}.
+
+
+\begin{defn} Suatu
+ \index{induktif!barisan!ketat}%
+ \index{barisan!induktif ketat}%
+ \index{ketat!barisan induktif}%
+\df{barisan induktif ketat} adalah barisan $(X_i)$ ruang konveks lokal sedemikian sehingga untuk setiap $i \in \N$
+   \begin{enumerate}
+     \item[(i)] $X_i$ adalah subruang tertutup dari $X_{i+1}$ dan
+     \item[(ii)] topologi $\sfml T_i$ pada $X_i$ adalah pembatasan topologi $\sfml T_{i+1}$ pada $X_i$.
+   \end{enumerate}
+Ini, tentu saja, merupakan sistem terarah dengan morfisme penghubung $\phi_{ji}$ yang tidak lain adalah pemetaan inklusi dari $X_i$ ke $X_j$ untuk $i < j$.
+
+Yang disebut
+ \index{induktif!limit!ketat}%
+ \index{limit!induktif ketat}%
+ \index{ketat!limit induktif}%
+\df{limit induktif ketat} dari barisan ruang semacam itu adalah gabungannya $L = \bigcup_{i=1}^\infty X_i$. Kita memberi $L$ topologi
+konveks lokal terbesar yang membuat semua pemetaan inklusi $\psi_i\colon X_i \sto L$ kontinu. Inilah
+ \index{induktif!limit!topologi}%
+ \index{topologi!limit induktif}%
+ \index{limit!induktif!topologi}%
+\df{topologi limit induktif} pada~$L$.
+\end{defn}
+
+\begin{prop} Topologi limit induktif yang didefinisikan di atas ada.
+\end{prop}
+
+\begin{defn} Limit induktif ketat dari suatu barisan ruang Fr\'echet disebut
+ \index{LF@ruang-$LF$}%
+ \index{ruang!$LF$-}%
+\df{ruang-$LF$}.
+\end{defn}
+
+\begin{exam} Ruang $\fml D(\Omega) = \fml C^\infty_c(\Omega)$ dari fungsi uji pada suatu himpunan terbuka $\Omega$ dalam ruang Euklides
+adalah ruang-$LF$ (lihat notasi~\ref{mi_notn}).
+\end{exam}
+
+\begin{prop} Setiap ruang-$LF$ lengkap.
+\end{prop}
+
+\begin{proof} Lihat~\cite{Treves:1967}, Teorema 13.1.  \ns
+\end{proof}
+
+\begin{prop} Misalkan $T\colon L \sto Y$ suatu pemetaan linear dari ruang-$LF$ ke ruang konveks lokal. Andaikan bahwa $L = \underrightarrow{\lim}X_k$
+dengan $(X_k)$ suatu barisan induktif ketat ruang Fr\'echet. Maka $T$ kontinu jika dan hanya jika pembatasannya $T\bigr|_{X_k}$
+pada setiap $X_k$ kontinu.
+\end{prop}
+
+\begin{proof} Lihat~\cite{Treves:1967}, Proposisi~13.1, atau~\cite{Conway:1990}, Proposisi IV.5.7, atau~\cite{Grubb:2009}, Teorema B.18(c).  \ns
+\end{proof}
+
+\begin{cau} Fran\c{c}ois Treves, dalam bukunya yang ditulis dengan indah, \emph{Topological Vector Spaces, Distributions, and Kernels}, memperingatkan
+para pembacanya tentang suatu kekeliruan yang sangat sulit dikenali: orang mudah sekali menganggap bahwa jika $M$ adalah subruang vektor tertutup dari ruang-$LF$
+$L = \underrightarrow{\lim}X_k$, maka topologi yang diwarisi $M$ dari $L$ pasti sama dengan topologi limit induktif yang diperolehnya
+dari barisan induktif ketat ruang Fr\'echet~$M \cap X_k$. Ternyata hal ini \emph{tidak} benar secara umum.
+\end{cau}
+
+\begin{prop} Misalkan $T\colon L \sto Y$ suatu pemetaan linear dari ruang-$LF$ ke ruang konveks lokal. Maka $T$ kontinu jika dan hanya jika
+pemetaan tersebut kontinu sekuensial.
+\end{prop}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Distribusi}
+\begin{defn} Misalkan $\Omega$ suatu himpunan bagian terbuka tak kosong dari~$\R^n$. Suatu fungsi $f\colon \Omega \sto \R$ disebut
+ \index{terintegralkan!secara lokal}%
+ \index{secara lokal!terintegralkan}%
+\df{terintegralkan secara lokal} jika $\int_K \abs{f}\,d\mu < \infty$ untuk setiap himpunan bagian kompak $K$ dari~$\Omega$. (Di sini $\mu$ adalah ukuran Lebesgue
+berdimensi-$n$ yang biasa.) Keluarga semua fungsi tersebut pada $\Omega$ dinotasikan
+ \index{L@$\locint\Omega$!fungsi yang terintegralkan secara lokal pada~$\Omega$}%
+dengan~$\locint\Omega$.
+\end{defn}
+
+\begin{exam} Fungsi konstan $\vc 1$ pada garis real terintegralkan secara lokal, meskipun fungsi ini jelas tidak terintegralkan.
+\end{exam}
+
+Bahkan fungsi yang terintegralkan secara lokal tidak harus kontinu. Pada garis real, misalnya, fungsi karakteristik dari sebarang himpunan terukur Lebesgue
+terintegralkan secara lokal. Bayangkan betapa memudahkannya jika kita dapat membicarakan secara bermakna \emph{turunan} dari sebarang fungsi demikian dan,
+lebih baik lagi, diperbolehkan menurunkannya sesering yang kita inginkan. --- Selamat datang di dunia distribusi. Di sini
+   \begin{enumerate}
+       \item setiap fungsi yang terintegralkan secara lokal dapat dipandang sebagai suatu distribusi, dan
+       \item setiap distribusi dapat diturunkan tak berhingga kali, dan lebih lanjut,
+       \item semua aturan diferensiasi yang lazim dalam kalkulus dasar berlaku.
+   \end{enumerate}
+
+\begin{defn} Misalkan $\Omega$ suatu himpunan bagian terbuka tak kosong dari~$\R^n$. Suatu
+ \index{distribusi}%
+\df{distribusi} adalah fungsional linear kontinu pada ruang fungsi uji $\fml D(\Omega) = \fml C^\infty_c(\Omega)$ pada~$\Omega$.
+Meskipun secara teknis fungsional demikian didefinisikan pada suatu ruang fungsi pada $\Omega$, kita akan mengikuti kebiasaan longgar yang lazim
+dan menyebutnya sebagai \emph{distribusi pada~$\Omega$}. Himpunan semua distribusi pada $\Omega$, yaitu ruang dual dari $\fml D(\Omega)$,
+ \index{D@$\fml D^*(\Omega)$ (ruang distribusi pada~$\Omega$)}%
+akan dinotasikan dengan~$\fml D^*(\Omega)$.
+\end{defn}
+
+\begin{prop} Misalkan $\Omega$ suatu himpunan bagian terbuka dari~$\R^n$. Suatu fungsional linear $L$ pada ruang fungsi uji $\fml D(\Omega)$ pada $\Omega$ adalah
+distribusi jika dan hanya jika $L(\phi_k) \sto 0$ setiap kali $(\phi_k)$ merupakan barisan fungsi uji sedemikian sehingga $\phi_k^{(\bs\alpha)} \sto 0$
+secara seragam untuk setiap multi-indeks $\bs\alpha$ dan terdapat suatu himpunan kompak $K \subseteq \Omega$ yang memuat tumpuan setiap~$\phi_k$.
+\end{prop}
+
+\begin{proof} Lihat~\cite{Conway:1990}, proposisi IV.5.21 atau~\cite{Treves:1967}, proposisi 21.1(b).  \ns
+\end{proof}
+
+\begin{exam} Jika $\Omega$ suatu himpunan bagian terbuka tak kosong dari $\R^n$ dan $f$ suatu fungsi yang terintegralkan secara lokal pada $\Omega$, maka pemetaan
+   \[ L_f\colon \fml D(\Omega) \sto \K \colon \phi \mapsto \int f\phi\,d\lambda \]
+merupakan suatu distribusi. Distribusi demikian disebut
+ \index{regular!distribusi}%
+ \index{distribusi!regular}%
+ \index{L@$L_f$ (distribusi regular yang bersesuaian dengan~$f$)}%
+distribusi \df{regular}. Distribusi yang tidak regular disebut
+ \index{singular!distribusi}%
+ \index{distribusi!singular}%
+distribusi \df{singular}.
+\end{exam}
+
+\emph{Catatan.} Misalkan $u$ suatu distribusi dan $\phi$ suatu fungsi uji pada $\Omega$. Notasi baku untuk $u(\phi)$ adalah
+$\langle u,\phi \rangle$ dan $\langle \phi,u \rangle$. Kita juga menggunakan
+ \index{<unoptop@$\tilde f$ (distribusi regular yang bersesuaian dengan~$f$)}%
+notasi $\tilde f$ untuk $L_f$. Jadi, dalam contoh sebelumnya,
+
+    \[ \langle \tilde f,\phi \rangle = \langle \phi,\tilde f \rangle
+            = \tilde f(\phi) = \langle L_f,\phi \rangle
+            = \langle \phi,L_f \rangle = L_f(\phi) \]
+untuk $f \in \locint\Omega$.
+
+\begin{exam} Jika $\mu$ suatu ukuran Borel regular pada himpunan bagian terbuka tak kosong $\Omega$ dari~$\R^n$ dan $f$ suatu fungsi yang terintegralkan secara lokal
+terhadap ukuran tersebut pada $\Omega$, maka pemetaan
+    \[ L_\mu\colon \fml D(\Omega) \sto \R\colon \phi \mapsto \int_\Omega f\phi \,d\mu \]
+merupakan suatu distribusi pada $\Omega$.
+\end{exam}
+
+\begin{notn} Misalkan $a \in \R$. Definisikan $\mu_a$, yaitu
+ \index{Dirac!ukuran}%
+ \index{ukuran!Dirac}%
+ \index{mua@$\mu_a$ (ukuran Dirac yang terkonsentrasi di~$a$)}%
+\df{ukuran Dirac} yang terkonsentrasi di $a$, pada himpunan-himpunan Borel dari $\R$, dengan
+   \[ \mu_a(B) = \begin{cases}  1, &\text{jika $a \in B$} \\
+                                0, &\text{jika $a \notin B$}.
+                 \end{cases} \]
+Distribusi yang bersesuaian kita notasikan dengan $\delta_a$ dan kita sebut
+ \index{Dirac!distribusi}%
+ \index{distribusi!Dirac}%
+ \index{delta@$\delta_a$, $\delta$ (distribusi Dirac)}%
+\df{distribusi delta Dirac di $a$}. Jadi, $\delta_a = L_{\mu_a}$. Jika $a = 0$, kita menulis $\delta$ untuk $\delta_0$.
+Secara historis, distribusi $\delta$ telah menyandang nama yang terkenal menyesatkan (meskipun secara teknis
+tidak salah): \emph{fungsi delta Dirac}.
+\end{notn}
+
+\begin{exam} Jika $\delta_a$ adalah \emph{distribusi delta Dirac} di suatu titik $a \in \R$ dan $\phi$ suatu fungsi uji pada~$\R$,
+maka $\delta_a(\phi) = \phi(a)$.
+\end{exam}
+
+\begin{notn} Misalkan $H$ menyatakan fungsi karakteristik interval $[0,\infty)$. Fungsi ini adalah
+ \index{Heaviside!fungsi}%
+ \index{fungsi!Heaviside}%
+\df{fungsi Heaviside}. Distribusi yang bersesuaian, $\widetilde H = L_H$, adalah
+ \index{Heaviside!distribusi}%
+ \index{distribusi!Heaviside}%
+ \index{H@$\wt H$ (distribusi Heaviside)}%
+\df{distribusi Heaviside}.
+\end{notn}
+
+\begin{exam} Jika $\wt H$ adalah \emph{distribusi Heaviside} dan $\phi \in \fml D(\R)$, maka $\wt H(\phi) = \int_0^\infty \phi$.
+\end{exam}
+
+\begin{exam} Misalkan $f$ suatu fungsi yang dapat didiferensialkan pada $\R$ dan turunannya terintegralkan secara lokal. Maka
+    \begin{equation}\label{deriv_reg_distr}
+        L_{f\,'}(\phi) = -L_f(\phi\,')
+    \end{equation}
+untuk setiap $\phi \in \fml D(\R)$.
+\end{exam}
+
+\begin{proof}[\emph{Petunjuk untuk bukti}] Integrasi parsial. \ns
+\end{proof}
+
+Sekarang timbul sebuah pertanyaan penting: Bagaimana kita dapat mendefinisikan ``turunan'' suatu distribusi? Tentunya wajar jika kita menginginkan suatu
+distribusi regular berperilaku hampir sama dengan fungsi yang melahirkannya. Artinya, kita ingin turunan $(L_f)'$ dari
+suatu distribusi regular $L_f$ bersesuaian dengan distribusi regular yang timbul dari turunan fungsi~$f$. Dengan kata lain,
+yang kita inginkan adalah $(L_f)' = L_{f\,'}$. Menurut contoh sebelumnya, ini menyarankan bahwa untuk fungsi $f$ yang dapat didiferensialkan
+yang turunannya terintegralkan secara lokal, kita seharusnya mendefinisikan
+   \begin{equation}\label{deriv_distr1}
+        (L_f)'(\phi) = -L_f(\phi\,')
+   \end{equation}
+untuk setiap $\phi \in \fml D(\R)$. Pengamatan bahwa ruas kanan persamaan~\eqref{deriv_distr1} bermakna untuk
+\emph{distribusi apa pun} memotivasi definisi berikut.
+
+\begin{defn}\label{def_deriv_distr} Misalkan $u$ suatu distribusi pada himpunan bagian terbuka tak kosong $\Omega$ dari~$\R$. Kita mendefinisikan $u\,'$, yaitu
+ \index{turunan!distribusi}%
+ \index{distribusi!turunan}%
+\df{turunan} dari $u$,
+ \index{D@$Du$ (turunan suatu distribusi~$u$)}%
+ \index{<unopur@$u'$ (turunan suatu distribusi~$u$)}%
+dengan
+    \[ u\,'(\phi) := -u(\phi\,') \]
+untuk setiap fungsi uji $\phi$ pada~$\Omega$. Kita juga menggunakan notasi $Du$ untuk turunan dari~$u$.
+\end{defn}
+
+\begin{exam} \emph{Distribusi Dirac} $\delta$ adalah turunan dari \emph{distribusi Heaviside}~$\widetilde H$.
+\end{exam}
+
+\begin{exer} Misalkan $S$ suatu fungsi signum (atau tanda) pada $\R$; artinya, misalkan $S = 2H - 1$, dengan $H$ fungsi Heaviside.
+Misalkan pula $g$ suatu fungsi pada $\R$ sedemikian sehingga $g\colon x \mapsto -x - 3$ untuk $x < 0$ dan $g\colon x \mapsto x + 5$ untuk $x \ge 0$.
+   \begin{enumerate}[label=\rm{(\alph*)}]
+     \item Carilah konstanta $\alpha$ dan $\beta$ sedemikian sehingga ${\tilde g}' = \alpha \widetilde S + \beta \delta$.
+     \item Carilah suatu fungsi $a$ pada $\R$ sedemikian sehingga ${\tilde a}' = \wt S$.
+   \end{enumerate}
+\end{exer}
+
+\begin{exer} Misalkan $f(x) = \left\{
+                           \begin{array}{ll}
+                             1 - \abs x, & \hbox{jika $\abs x \le 1$;} \\
+                                 0,      & \hbox{selain itu.}
+                           \end{array}
+                         \right.$ Dengan menghitung kedua ruas persamaan~\eqref{deriv_reg_distr} secara terpisah, tunjukkan bahwa persamaan itu
+benar secara klasik untuk setiap fungsi uji yang tumpuannya termuat dalam interval~$[-1,1]$.
+\end{exer}
+
+\begin{exer} Misalkan $f(x) = \sbsb\chi{(0,1)}$ untuk $x \in~\R$ dan $\phi \in \fml D\bigl((-1,1)\bigr)$. Bandingkan nilai $L_{f\,'}(\phi)$ dan
+$\bigl(L_f\bigr)'(\phi)$.
+\end{exer}
+
+\begin{exer} Misalkan $f(x) = \left\{
+                           \begin{array}{ll}
+                             x, & \hbox{jika $0 \le x \le 1$;} \\
+                             x + 2, & \hbox{jika $1 < x \le 2$;} \\
+                             0, & \hbox{selain itu.}
+                           \end{array}
+                         \right.$ Bandingkan nilai $L_{f\,'}(\phi)$ dan $\bigl(L_f\bigr)'(\phi)$ untuk suatu fungsi uji~$\phi$.
+\end{exer}
+
+\begin{exer} Misalkan $h(x) = \left\{
+                           \begin{array}{ll}
+                             2x, & \hbox{jika $x < -1$;} \\
+                             1, & \hbox{jika $-1 \le x < 1$;} \\
+                             0, & \hbox{jika $x \ge 1$.}
+                           \end{array}
+                         \right.$ Carilah suatu fungsi $f$ yang terintegralkan secara lokal sedemikian sehingga ${\tilde f}\,' = \tilde h + 3\delta_1 - \delta_{-1}$.
+\end{exer}
+
+Definisi~\ref{def_deriv_distr} dapat diperluas ke turunan parsial dari distribusi tanpa kesulitan.
+
+\begin{defn} Misalkan $u$ suatu distribusi pada suatu himpunan bagian terbuka tak kosong $\Omega$ dari $\R^n$ untuk suatu $n \ge 2$ dan $\bs\alpha$
+suatu multi-indeks. Kita mendefinisikan
+ \index{operator diferensial!yang bekerja pada distribusi}%
+ \index{D@$D^{\bs\alpha}$ (notasi multi-indeks untuk diferensiasi)}%
+\df{operator diferensial} $D^{\bs\alpha} = \bigl(\frac{\partial}{\partial x_1}\bigr)^{\alpha_1} \dots
+\bigl(\frac{\partial}{\partial x_n}\bigr)^{\alpha_n}$ berorde $\abs{\bs\alpha}$ yang bekerja pada $u$ dengan
+   \[ D^{\bs\alpha}u(\phi) := (-1)^{\abs{\bs\alpha}}u\bigl(\phi^{(\bs\alpha)}) \]
+untuk setiap fungsi uji $\phi$ pada~$\Omega$.
+ \index{<unopura@$u^{\bs\alpha}$ (notasi multi-indeks untuk diferensiasi)}%
+Notasi alternatif untuk $D^{\bs\alpha}u$ adalah $u^{(\bs\alpha)}$.
+\end{defn}
+
+\begin{exer} Suatu \df{dipol} (dengan momen listrik 1 di titik asal pada $\R$) dapat dipandang sebagai ``limit'' ketika $\epsilon \sto 0^+$
+ \index{dipol}%
+dari suatu sistem $T_\epsilon$ yang terdiri atas dua muatan $-\frac1\epsilon$ dan $\frac1\epsilon$ yang masing-masing ditempatkan di $0$ dan $\epsilon$. Tunjukkan
+bagaimana hal ini dapat mengarahkan kita untuk mendefinisikan dipol secara matematis sebagai $-\delta\,'$. \emph{Petunjuk.} Pandanglah $T_\epsilon$ sebagai
+distribusi $\frac1\epsilon \delta_\epsilon - \frac1\epsilon \delta$.
+\end{exer}
+ 
+\begin{defn} Misalkan $X$ suatu ruang konveks lokal Hausdorff dan $X^*$ ruang dualnya, yaitu ruang semua
+fungsional linear kontinu pada~$X$. Untuk setiap $f \in X^*$ definisikan
+  \[ p_f\colon X \sto \K\colon x \mapsto \abs{f(x)}. \]
+Jelas bahwa setiap $p_f$ merupakan seminorma pada~$X$. Seperti dalam kasus ruang linear bernorma, kita mendefinisikan
+ \index{lemah!topologi!pada ruang konveks lokal}%
+ \index{sigma@$\sigma(X,X^*)$ (topologi lemah pada~$X$)}%
+\df{topologi lemah} pada $X$, yang dinotasikan dengan $\sigma(X,X^*)$, sebagai topologi lemah yang dibangkitkan oleh keluarga seminorma
+$\{p_f\colon f \in X^*\}$ pada~$X$. Demikian pula, untuk setiap $x \in X$ definisikan
+   \[ p_x\colon X^* \sto \K \colon f \mapsto \abs{f(x)}. \]
+Sekali lagi, setiap $p_x$ merupakan seminorma pada~$X^*$, dan kita mendefinisikan
+ \index{w*@$w^*$-topologi (topologi lemah-bintang)}%
+ \index{sigma@$\sigma(X^*,X)$ (topologi-$w^*$ pada~$X^*$)}%
+\df{topologi-$w^*$} pada $X^*$, yang dinotasikan dengan $\sigma(X^*,X)$, sebagai topologi lemah yang dibangkitkan oleh keluarga seminorma
+$\{p_x\colon x \in X\}$ pada~$X^*$.
+\end{defn}
+
+\begin{prop} Jika ruang distribusi $\fml D^*(\Omega)$ pada subhimpunan terbuka $\Omega$ dari $\R^n$ diberi topologi-$w^*$,
+maka suatu jaring $(u_\lambda)$ distribusi pada $\Omega$ konvergen ke distribusi $v$ pada $\Omega$ jika dan hanya jika
+$\left\langle u_\lambda, \phi\right\rangle \sto \left\langle v, \phi\right\rangle$ untuk setiap fungsi uji $\phi$ pada $\Omega$.
+\end{prop}
+
+\begin{prop} Andaikan suatu jaring $(u_\lambda)$ distribusi konvergen ke distribusi~$v$. Maka ${u_\lambda}^{(\alpha)} \sto v^{(\alpha)}$
+untuk setiap multi-indeks $\alpha$.
+\end{prop}
+
+\begin{proof} Lihat \cite{Rudin:1991}, Teorema 6.17; atau \cite{Yosida:1965}, Bab II, Seksi 3, Teorema; atau \cite{Grubb:2009}, Teorema 3.9;
+atau~\cite{HirschL:1999}, Bab 8, Proposisi 2.4.
+\end{proof}
+
+\begin{prop} Jika $g$, $f_k \in \locint\Omega$ untuk setiap $k$ (dengan $\open{\Omega}{\R^n}$) dan $f_k \sto g$ secara seragam pada
+setiap subhimpunan kompak dari $\Omega$, maka $\tilde f_k \sto \tilde g$.
+\end{prop}
+
+\begin{prop} Jika $f \in \fml C^\infty(\R^n)$, maka $\left(L_f\right)^{(\bs\alpha)} = L_{f^{(\bs\alpha)}}$ untuk setiap multi-indeks $\bs\alpha$.
+\end{prop}
+
+\begin{exer} Jika $\delta$ bukan suatu fungsi pada $\R$, lalu apa yang dimaksud orang ketika mereka menulis
+   \[ \lim_{k \sto \infty} \frac{k}{\pi(1+k^2x^2)} = \delta(x)\quad? \]
+Tunjukkan bahwa, jika ditafsirkan dengan tepat (sebagai suatu pernyataan tentang distribusi), ungkapan itu bahkan benar. \emph{Petunjuk.}
+Jika $s_k(x) = k\,\pi^{-1}(1+k^2x^2)^{-1}$ dan $\phi$ suatu fungsi uji pada $\R$, maka
+$\int_{-\infty}^\infty s_k\phi = \int_{-\infty}^\infty s_k\phi(0) + \int_{-\infty}^\infty s_k\eta$ dengan $\eta(x) = \phi(x) - \phi(0)$.
+Tunjukkan bahwa $\int_{-\infty}^\infty s_k\eta \sto 0$ ketika $k \sto \infty$.
+\end{exer}
+
+\begin{exer} Misalkan $f_n(x) = \sin nx$ untuk $n \in \N$ dan $x \in \R$. Barisan $(f_n)$ tidak konvergen secara klasik;
+tetapi barisan itu konvergen secara distribusional (ke $0$). Nyatakan pernyataan ini dengan tepat, lalu buktikan. \emph{Petunjuk.} Carilah antiturunannya.
+\end{exer}
+
+\begin{prop} Jika $\phi$ suatu fungsi mulus pada $\R$ dengan tumpuan kompak, maka
+    \[ \lim_{n \sto \infty}\frac2\pi \int_{-\infty}^\infty \frac{n^3x}{\bigl(1 + n^2x^2\bigr)^2}\,\, \phi(x)\,dx = \phi'(0)\,.\]
+\end{prop}
+
+\begin{exer} Berikan makna pada ungkapan
+   \[ 2\pi\sum_{n = -\infty}^\infty \delta(x-2\pi n) =  1 +  2\sum_{n = 1}^\infty \cos nx\,, \]
+dan tunjukkan bahwa, jika ditafsirkan dengan tepat, ungkapan itu benar. \emph{Petunjuk.} Siapa pun yang cukup bejat untuk percaya bahwa $\delta(x)$ \emph{berarti}
+sesuatu kemungkinan akan menafsirkan $\delta(x-a)$ sebagai hal yang sama dengan $\delta_a(x)$. Anda dapat memulai proses
+merasionalisasikannya dengan menghitung deret Fourier fungsi $g$ yang didefinisikan oleh $g(x) = \frac1{4\pi}x^2 - \frac12 x$ pada $[0,2\pi]$
+dan kemudian diperluas secara periodik ke $\R$. Anda mungkin perlu mencari teorema tentang konvergensi titik demi titik dan seragam dari deret Fourier
+serta tentang pendiferensialan suku demi suku deret semacam itu.
+\end{exer}
+
+\begin{defn} Misalkan $\Omega$ suatu subhimpunan terbuka dari $\R^n$, $u \in \fml D^*(\Omega)$, dan $f \in \fml C^\infty(\Omega)$.
+ \index{perkalian!distribusi dengan fungsi mulus}%
+ \index{<binopconcat@$fu$ (hasil kali fungsi mulus dengan distribusi)}%
+Definisikan
+   \[ (fu)(\phi) := u(f\phi) \]
+untuk semua fungsi uji $\phi$ pada~$\Omega$. Secara ekuivalen, kita dapat menulis $\langle fu,\phi \rangle = \langle u,f\phi \rangle$.
+\end{defn}
+
+\begin{prop} Fungsional $fu$ dalam definisi sebelumnya merupakan distribusi pada~$\Omega$.
+\end{prop}
+
+\begin{proof} Lihat~\cite{Rudin:1991}, halaman 159, Seksi 6.15.    \ns
+\end{proof}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Konvolusi}
+
+Seksi ini dan Seksi~\ref{section_Fourier_transform} memberikan pengantar yang \emph{sangat} singkat tentang konvolusi
+dan transformasi Fourier distribusi. Untuk banyak pembuktian, serta uraian yang lebih terperinci, pembaca dirujuk
+ke buku \emph{Functional Analysis} karya Walter Rudin yang elegan~\cite{Rudin:1991}.
+
+Untuk menghindari munculnya terlalu banyak faktor berbentuk $\sqrt{2\pi}$ beserta kebalikannya dalam rumus-rumus, selama
+sisa bab ini kita akan mengintegralkan terhadap
+ \index{ukuran Lebesgue ternormalisasi}%
+ \index{m@$m$ (ukuran Lebesgue ternormalisasi)}%
+\df{ukuran Lebesgue ternormalisasi} $m$ pada~$\R$. Ukuran ini didefinisikan oleh
+   \[ m(A) := \frac1{\sqrt{2\pi}}\lambda(A) \]
+untuk setiap subhimpunan terukur Lebesgue $A$ dari $\R$ (dengan $\lambda$ ukuran Lebesgue biasa pada~$\R$).
+
+Kita meninjau kembali beberapa fakta dasar dari analisis real mengenai konvolusi fungsi bernilai skalar. Ingat bahwa suatu fungsi bernilai kompleks atau
+real diperluas pada $\R$ disebut
+ \index{terintegralkan Lebesgue}%
+ \index{terintegralkan}%
+\emph{terintegralkan Lebesgue} jika $\int_\R\abs f\, dm < \infty$
+(dengan $m$ ukuran Lebesgue ternormalisasi pada~$\R$).
+ \index{L@$\lfs 1(\R)$!ruang fungsi terintegralkan Lebesgue}%
+ \index{L@$\lfs 1(\R)$!sebagai ruang Banach}%
+ \index{Banach!ruang!$\lfs 1(\R)$ sebagai}%
+Dengan $\lfs 1(\R)$ kita nyatakan ruang Banach semua kelas ekuivalensi fungsi terintegralkan Lebesgue pada~$\R$; dua fungsi \emph{ekuivalen}
+jika ukuran Lebesgue himpunan tempat keduanya berbeda adalah nol. Norma pada ruang Banach ini
+   \index{<unopn@$\norm{\hphantom{x}}_1$ (norma-$1$)}%
+diberikan oleh
+   \[ {\norm f}_1 := \int_\R \abs f\,dm. \]
+
+\begin{prop} Misalkan $f$ dan $g$ fungsi-fungsi terintegralkan Lebesgue pada~$\R$. Maka fungsi
+   \[ y \mapsto f(x - y)g(y) \]
+termasuk dalam $\lfs 1(\R)$ untuk hampir setiap~$x$. Definisikan suatu
+ \index{<binopast@$f \ast g$ (konvolusi dua fungsi)}%
+fungsi $f \ast g$ dengan
+   \[ (f \ast g)(x) := \int_\R f(x - y)g(y)\,dm(y) \]
+pada setiap titik tempat ruas kanan terdefinisi. Maka fungsi $f \ast g$ termasuk dalam $\lfs 1(\R)$.
+\end{prop}
+
+\begin{proof} Lihat~\cite{HewittS:1965}, Teorema 21.31.  \ns
+\end{proof}
+
+\begin{defn} Fungsi $f \ast g$ yang didefinisikan di atas adalah
+ \index{konvolusi!fungsi-fungsi dalam $\lfs 1(\R)$}%
+\df{konvolusi} dari $f$ dan~$g$.
+\end{defn}
+
+\begin{prop} Ruang Banach $\lfs 1(\R)$ dengan konvolusi merupakan aljabar Banach komutatif. Namun, aljabar ini \emph{tidak} beridentitas.
+\end{prop}
+
+\begin{proof} Lihat~\cite{HewittS:1965}, Teorema 21.34 dan 21.35.  \ns
+\end{proof}
+
+\begin{defn}\label{defn_Fourier_transform} Untuk setiap $f$ dalam $\lfs 1(\R)$, definisikan suatu fungsi $\hat f$ dengan
+    \[ \hat f(x) = \int_{-\infty}^\infty f(t) e^{-itx}\,dm(t). \]
+Fungsi $\hat f$ adalah
+ \index{Fourier!transformasi}%
+ \index{transformasi!Fourier}%
+ \index{F@$\mathfrak F(f)$ (transformasi Fourier dari~$f$)}%
+ \index{<unoptop@$\hat f$ (transformasi Fourier dari~$f$)}%
+\df{transformasi Fourier} dari~$f$. Kadang-kadang kita menulis $\mathfrak Ff$ untuk~$\hat f$.
+\end{defn}
+
+\begin{thm}[Lemma Riemann--Lebesgue] Jika $f \in \lfs 1(\R)$,
+ \index{lemma Riemann--Lebesgue}%
+maka $\hat f \in \fml C_0(\R)$.
+\end{thm}
+
+\begin{proof} Lihat~\cite{HewittS:1965}, 21.39.   \ns
+\end{proof}
+
+\begin{prop} Transformasi Fourier
+   \[ \mathfrak F\colon \lfs 1(\R) \sto \fml C_0(\R)\colon f \mapsto \hat f \]
+merupakan homomorfisme aljabar Banach. Kedua aljabar itu tidak beridentitas.
+\end{prop}
+
+Untuk penerapan, segi paling berguna dari proposisi sebelumnya ialah bahwa transformasi Fourier
+mengubah konvolusi dalam $\lfs 1(\R)$ menjadi
+perkalian titik demi titik dalam~$\fml C_0(\R)$; yakni, $\wh{f\ast g} =\hat f\hat g$.
+
+Berikutnya kita mendefinisikan apa yang dimaksud dengan mengambil konvolusi suatu distribusi dan suatu fungsi uji.
+
+\begin{notn} Untuk suatu titik $x \in \R$ dan suatu fungsi bernilai skalar $\phi$ pada $\R$
+ \index{phi@$\phi_x$}%
+definisikan
+   \[ \phi_x\colon \R \sto \K\colon y \mapsto \phi(x - y). \]
+\end{notn}
+
+\begin{prop} Jika $\phi$ dan $\psi$ merupakan fungsi-fungsi bernilai skalar pada $\R$ dan $x \in \R$, maka
+   \[ (\phi + \psi)_x = \phi_x + \psi_x\,. \]
+\end{prop}
+
+\begin{prop}\label{prop_convol_distr1} Untuk $u \in \fml D^*(\R)$ dan $\phi \in \fml D(\R)$,
+ \index{<binopast@$u \ast \phi$ (konvolusi distribusi dan fungsi uji)}%
+tetapkan
+   \[ (u \ast \phi)(x) := \langle u,\phi_x \rangle \]
+untuk semua $x \in \R$. Maka $u \ast \phi \in \fml C^\infty(\R)$.
+\end{prop}
+
+\begin{proof} Lihat~\cite{Rudin:1991}, Teorema 6.30(b).  \ns
+\end{proof}
+
+\begin{defn} Ketika $u$ dan $\phi$ seperti dalam proposisi sebelumnya, fungsi $u \ast \phi$ adalah
+ \index{konvolusi!distribusi dan fungsi uji}%
+\df{konvolusi} dari $u$ dan~$\phi$.
+\end{defn}
+
+\begin{prop} Jika $u$ dan $v$ merupakan distribusi pada $\R$ dan $\phi$ suatu fungsi uji pada $\R$, maka
+   \[ (u + v) \ast \phi = (u \ast \phi) + (v \ast \phi)\,. \]
+\end{prop}
+
+\begin{prop} Jika $u$ suatu distribusi pada $\R$ dan $\phi$ serta $\psi$ fungsi-fungsi uji pada $\R$, maka
+   \[ u \ast (\phi + \psi) = (u \ast \phi) + (u \ast \psi)\,. \]
+\end{prop}
+
+\begin{exam} Jika $H$ fungsi Heaviside dan $\phi$ suatu fungsi uji pada~$\R$, maka
+   \[ (\wt H \ast \phi)(x) = \int_{-\infty}^x \phi(t)\,dt. \]
+\end{exam}
+
+\begin{prop}\label{prop_convol_distr2} Jika $u \in \fml D^*(\R)$ dan $\phi \in \fml D(\R)$, maka
+   \[ D^{\bs\alpha}(u \ast \phi) = (D^{\bs\alpha}u) \ast \phi = u \ast \bigl(D^{\bs\alpha}(\phi)\bigr). \]
+\end{prop}
+
+\begin{proof} Lihat~\cite{Rudin:1991}, Teorema 6.30(b).  \ns
+\end{proof}
+
+\begin{prop}\label{prop_convol_distr3} Jika $u \in \fml D^*(\R)$ dan $\phi$, $\psi \in \fml D(\R)$, maka
+   \[ u \ast (\phi \ast \psi) = (u \ast \phi) \ast \psi. \]
+\end{prop}
+
+\begin{proof} Lihat~\cite{Rudin:1991}, Teorema 6.30(c).  \ns
+\end{proof}
+
+\begin{prop} Misalkan $u$, $v \in \fml D^*(\R)$. Jika
+   \[ u \ast \phi = v \ast \phi \]
+untuk semua $\phi \in \fml D(\R)$, maka $ u = v$.
+\end{prop}
+
+\begin{defn} Misalkan $\Omega$ suatu subhimpunan terbuka dari $\R^n$ dan $u \in \fml D^*(\R^n)$. Kita mengatakan bahwa ``$u = 0$ pada $\Omega$'' jika $u(\phi) = 0$
+untuk setiap $\phi \in \fml D(\Omega)$. Dengan semangat yang sama, kita mengatakan bahwa ``dua distribusi $u$ dan $v$ sama pada $\Omega$'' jika $u - v = 0$
+pada~$\Omega$. Suatu titik $x \in \R^n$ termasuk dalam
+ \index{tumpuan!distribusi}%
+ \index{supp@$\supp u$ (tumpuan distribusi~$u$)}%
+\df{tumpuan} dari $u$ jika \emph{tidak ada} lingkungan terbuka bagi $x$ yang padanya $u = 0$. Nyatakan tumpuan $u$ dengan~$\supp u$.
+\end{defn}
+
+\begin{exam} Tumpuan distribusi delta Dirac $\delta$ adalah~$\{0\}$.
+\end{exam}
+
+\begin{exam} Tumpuan distribusi Heaviside $\wt H$ adalah~$[0,\infty)$.
+\end{exam}
+
+\begin{rem} Andaikan suatu distribusi $u$ pada $\R^n$ memiliki tumpuan kompak. Maka dapat ditunjukkan bahwa $u$ memiliki perluasan unik menjadi
+fungsional linear kontinu pada~$\fml C^\infty(\R^n)$, yakni keluarga semua fungsi mulus pada~$\R^n$. Dalam kondisi ini, kesimpulan
+Proposisi~\ref{prop_convol_distr1} tetap benar dan definisi berikut berlaku. Jika $u \in \fml D^*(\R^n)$ memiliki tumpuan kompak
+dan $\phi \in \fml C^\infty(\R^n)$, maka kesimpulan Proposisi~\ref{prop_convol_distr2} tetap benar. Selain itu, jika $\psi$
+merupakan fungsi uji pada $\R^n$, maka $u \ast \psi$ merupakan fungsi uji pada $\R^n$ dan kesimpulan~\ref{prop_convol_distr3} tetap berlaku.
+Untuk pembahasan dan verifikasi menyeluruh atas pernyataan-pernyataan ini, lihat~\cite{Rudin:1991}, Teorema 6.24 dan~6.35.
+\end{rem}
+
+\begin{prop} Jika $u$ dan $v$ merupakan distribusi pada $\R^n$ dan paling sedikit salah satunya memiliki tumpuan kompak, maka terdapat distribusi tunggal
+$u \ast v$ sedemikian sehingga
+   \[ (u \ast v) \ast \phi = u \ast (v \ast \phi) \]
+untuk semua fungsi uji $\phi$ pada~$\R^n$.
+\end{prop}
+
+\begin{proof} Lihat \cite{Rudin:1991}, Definisi 6.36\emph{ dan seterusnya}.   \ns
+\end{proof}
+
+\begin{defn} Dalam proposisi sebelumnya, distribusi $u \ast v$ adalah
+ \index{konvolusi!dua distribusi}%
+ \index{<binopast@$u \ast v$ (konvolusi dua distribusi)}%
+\df{konvolusi} dari $u$ dan~$v$.
+\end{defn}
+
+\begin{exam} Jika $\delta$ distribusi delta Dirac, maka
+   \[ \tilde 1 \ast \delta\,' = \tilde 0\,. \]
+\end{exam}
+
+\begin{exam} Jika $\delta$ distribusi delta Dirac dan $H$ fungsi Heaviside, maka
+   \[ \delta\,' \ast \wt H = \delta\,. \]
+\end{exam}
+
+\begin{prop} Jika $u$ dan $v$ merupakan distribusi pada $\R^n$ dan paling sedikit salah satunya memiliki tumpuan kompak, maka $u \ast v = v \ast u$.
+\end{prop}
+
+\begin{proof} Lihat \cite{Rudin:1991}, Teorema 6.37(a).  \ns
+\end{proof}
+
+\begin{exer} Buktikan proposisi sebelumnya dengan asumsi bahwa $u$ dan $v$ \emph{keduanya} memiliki tumpuan kompak. \emph{Petunjuk.}
+Gunakan $(u \ast v) \ast (\phi \ast \psi)$, dengan $\phi$ dan $\psi$ fungsi-fungsi uji, sambil mengingat bahwa konvolusi fungsi
+bersifat komutatif.
+\end{exer}
+
+\begin{prop} Jika $u$ dan $v$ merupakan distribusi pada $\R^n$ dan paling sedikit salah satunya memiliki tumpuan kompak, maka
+  \[ \supp(u \ast v) \subseteq \supp u + \supp v. \]
+\end{prop}
+
+\begin{proof} Lihat \cite{Rudin:1991}, Teorema 6.37(b).  \ns
+\end{proof}
+
+\begin{prop}\label{prop_assoc_convol_distr} Jika $u$, $v$, dan $w$ merupakan distribusi pada $\R^n$ dan paling sedikit dua di antaranya memiliki
+tumpuan kompak, maka
+    \[ u \ast (v \ast w) = (u \ast v) \ast w. \]
+\end{prop}
+
+\begin{exam} Ungkapan $\tilde 1 \ast \delta\,' \ast \wt H$ bersifat ambigu. Jadi, hipotesis mengenai tumpuan
+distribusi-distribusi dalam proposisi sebelumnya tidak dapat dihilangkan.
+\end{exam}
+
+\begin{prop} Terhadap penjumlahan, perkalian skalar, dan konvolusi, keluarga semua distribusi pada $\R$ yang bertumpuan kompak
+merupakan aljabar komutatif beridentitas.
+\end{prop}
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Solusi Distribusional untuk Persamaan Diferensial Biasa}
+
+\begin{notn} Misalkan $\Omega$ suatu subhimpunan terbuka tak kosong dari $\R$, $n \in \N$, dan $a_0$, $a_1$, \dots $a_n \in \fml C^\infty(\Omega)$.
+Kita meninjau operator diferensial (biasa)
+ \index{diferensial!operator}%
+ \index{operator!diferensial}%
+berikut:
+   \[ L = \sum_{k=0}^n a_k(x)\frac{d^k}{dx^k} \]
+beserta persamaan diferensial (biasa)
+ \index{diferensial!persamaan}%
+ \index{persamaan!diferensial}%
+yang terkait dengannya,
+   \begin{equation}\label{eqn_ODE1}
+        Lu = v
+   \end{equation}
+dengan $u$ dan $v$ distribusi-distribusi pada~$\Omega$. Sehubungan dengan Persamaan~\eqref{eqn_ODE1}, kita juga dapat meninjau dua variasi:
+persamaan
+   \begin{equation}\label{eqn_ODE2}
+        \langle Lu, \phi\rangle = \langle v, \phi\rangle
+   \end{equation}
+dengan $\phi$ suatu fungsi uji, dan persamaan
+   \begin{equation}\label{eqn_ODE3}
+        \langle u, L^*\phi\rangle = \langle v, \phi\rangle
+   \end{equation}
+dengan $\phi$ suatu fungsi uji dan $L^* := \displaystyle\sum_{k=0}^n (-1)^k \frac{d^k(a_k\phi)}{dx^k}$ merupakan
+ \index{adjoin!formal}%
+ \index{adjoin formal}%
+\df{adjoin formal} dari~$L$.
+\end{notn}
+
+\begin{defn} Andaikan bahwa dalam persamaan-persamaan di atas distribusi $v$ diberikan. Jika terdapat distribusi regular $u$ yang
+memenuhi~\eqref{eqn_ODE1}, kita mengatakan bahwa $u$ merupakan solusi
+ \index{solusi klasik}%
+ \index{solusi!klasik}%
+\df{klasik} bagi persamaan diferensial itu. Jika $u$ merupakan distribusi regular yang bersesuaian dengan suatu fungsi yang
+\emph{tidak} memenuhi~\eqref{eqn_ODE1} dalam pengertian klasik, tetapi \emph{memenuhi}~\eqref{eqn_ODE2} untuk setiap fungsi uji~$\phi$,
+maka kita mengatakan bahwa $u$ merupakan solusi
+ \index{lemah!solusi}%
+ \index{solusi!lemah}%
+\df{lemah} bagi persamaan diferensial itu. Selanjutnya, jika $u$ merupakan distribusi singular yang memenuhi~\eqref{eqn_ODE3} untuk setiap fungsi
+uji~$\phi$, kita mengatakan bahwa $u$ merupakan solusi
+ \index{solusi distribusional}%
+ \index{solusi!distribusional}%
+\df{distribusional} bagi persamaan diferensial itu. Keluarga solusi
+ \index{solusi diperumum}%
+ \index{solusi!diperumum}%
+\df{diperumum} mencakup semua solusi klasik, lemah, dan distribusional.
+\end{defn}
+
+\begin{exam} Solusi diperumum bagi persamaan $\dfrac{du}{dx} = 0$ pada~$\R$ hanyalah distribusi konstan (yakni,
+distribusi regular yang berasal dari fungsi konstan). Jadi, setiap solusi diperumum merupakan solusi klasik.
+\end{exam}
+
+\begin{proof}[\emph{Petunjuk untuk bukti}] Andaikan $u$ suatu solusi diperumum bagi persamaan itu. Pilih suatu fungsi uji $\sbsb\phi 0$ sedemikian
+sehingga $\int_\R \sbsb\phi 0 = 1$. Misalkan $\phi$ suatu fungsi uji sebarang pada~$\R$. Definisikan
+   \[ \psi(x) = \phi(x) - \sbsb\phi 0(x)\int_\R \phi \]
+untuk semua $x \in \R$. Amati bahwa $\langle u,\psi \rangle = 0$, lalu hitung $\langle u,\phi \rangle$.  \ns
+\end{proof}
+
+\begin{exam} Distribusi Heaviside adalah solusi lemah persamaan diferensial $x\dfrac{du}{dx}~=~0$ pada~$\R$. Tentu saja,
+distribusi-distribusi konstan merupakan solusi klasik.
+\end{exam}
+
+\begin{exam} Distribusi Dirac $\delta$ merupakan solusi distribusional bagi persamaan diferensial $x^2\dfrac{du}{dx} = 0$ pada~$\R$.
+(Distribusi Heaviside merupakan solusi lemah; dan distribusi-distribusi konstan merupakan solusi klasik.)
+\end{exam}
+
+\begin{exam} Untuk $p = 0,1,2,\dots$, turunan ke-$p$, $\dfrac{d^p\delta}{dx^p}$, dari distribusi delta Dirac merupakan solusi
+bagi persamaan diferensial $x^{p+2}\dfrac{du}{dx} = 0$ pada~$\R$.
+\end{exam}
+
+\begin{exer} Carilah suatu solusi distribusional bagi persamaan diferensial $x \dfrac{du}{dx} + u = 0$ pada~$\R$.
+\end{exer}
+
+
+
+
+
+
+
+
+
+
+\section{Transformasi Fourier}\label{section_Fourier_transform}
+
+Dalam~\ref{defn_Fourier_transform}, kita mendefinisikan transformasi Fourier suatu fungsi $\lfs 1\R$. Cara ekuivalen untuk menyatakan
+definisi ini adalah melalui konvolusi:
+  \[ (\mathfrak F f)(x) = (f \ast \varepsilon^x)(0) \]
+untuk $x \in \R$, dengan $\varepsilon^x$ fungsi $t \mapsto e^{itx}$.
+
+\begin{defn} Kita ingin memperluas transformasi yang berguna ini ke distribusi. Namun, ternyata ruang $\fml D^*(\R)$ terlampau besar
+untuk mendukung definisi yang wajar baginya. Dengan memulai dari himpunan ``fungsi uji'' yang lebih besar, yakni fungsi-fungsi dalam ruang Schwartz
+$\fml S(\R)$ (yang memuat $\fml D(\R)$ sebagai subruang rapat), kita memperoleh ruang fungsional linear kontinu yang lebih kecil; pada ruang ini, untungnya, kita
+dapat mendefinisikan suatu \emph{transformasi Fourier} secara alami.
+\end{defn}
+
+Sebelum mendefinisikan transformasi Fourier pada distribusi, mari kita ingat kembali dua fakta penting dari analisis real mengenai
+transformasi Fourier yang bekerja pada fungsi mulus terintegralkan.
+
+\begin{prop}[Rumus Inversi Fourier] Jika $f \in \fml S(\R)$,
+ \index{Fourier!rumus inversi}%
+maka
+   \[ f(x) = \int_\R \hat f \varepsilon^x\,dm\,. \]
+\end{prop}
+
+\begin{prop}\label{prop_FT_isomor1} Transformasi Fourier
+   \[ \mathfrak F\colon \fml S(\R) \sto \fml S(\R)\colon f \mapsto \hat f \]
+merupakan isomorfisme ruang Fr\'echet (yakni, pemetaan linear kontinu bijektif dengan invers kontinu), dan untuk semua
+$f \in \fml S(\R)$ serta $x \in \R$, kita mempunyai $\mathfrak F^2f(x) = f(-x)$, sehingga $\mathfrak F^4f = f$.
+\end{prop}
+
+\begin{proof} Pembuktian kedua hasil sebelumnya, bersama banyak informasi lain tentang transformasi yang menarik ini
+dan beragam penerapannya pada persamaan diferensial biasa maupun parsial, dapat ditemukan di berbagai sumber.
+Beberapa yang segera terlintas adalah~\cite{Cerda:2010}, Bab~7; \cite{Horvath:1966}, Bab~4, Seksi~11;
+\cite{McDonaldW:1999}, Seksi~11.3; \cite{Rudin:1991}, Bab~7; \cite{Treves:1967}, Bab~25; dan \cite{Yosida:1965},
+Bab~VI.   \ns
+\end{proof}
+
+\begin{defn} Fungsi inklusi $\iota\colon \fml D(\R) \sto \fml S(\R)$ bersifat kontinu. Maka pemetaan antara ruang-ruang dualnya
+   \[ u\colon \fml S^*(\R) \sto \fml D^*(\R)\colon \tau \mapsto u_\tau = \tau \circ \iota \]
+merupakan isomorfisme ruang vektor dari $\fml S^*(\R)$ ke suatu ruang distribusi pada~$\R$, yang kita sebut ruang
+ \index{distribusi tempered}%
+\df{distribusi tempered} (sebagian penulis memilih frasa
+ \index{distribusi!temperate}%
+\df{distribusi temperate}). Lazimnya, fungsional linear $\tau$ dan $u_\tau$ di atas diidentifikasi. Jadi, $\fml S^*(\R)$
+sendiri dipandang sebagai ruang distribusi tempered.
+\end{defn}
+
+Jika Anda kesulitan memverifikasi salah satu pernyataan dalam definisi sebelumnya, lihat Teorema 7.10\emph{ dan seterusnya} dalam~\cite{Rudin:1991}.
+
+\begin{exam} Setiap distribusi dengan tumpuan kompak merupakan distribusi tempered.
+\end{exam}
+
+\begin{defn} Definisikan
+ \index{Fourier!transformasi}%
+ \index{transformasi!Fourier}%
+ \index{F@$\mathfrak F(u)$ (transformasi Fourier dari~$u$)}%
+ \index{<unoptop@$\hat u$ (transformasi Fourier dari~$u$)}%
+\df{transformasi Fourier} $\hat u$ dari suatu distribusi tempered $u \in \fml S^*(\R)$ dengan
+   \[ \hat u(\phi) = u(\hat\phi) \]
+untuk semua $\phi \in \fml S(\R)$. Notasi $\mathfrak Fu$ merupakan alternatif bagi~$\hat u$.
+\end{defn}
+
+\begin{prop} Jika $f \in \lfs1\R$, maka kita dapat memperlakukan $\tilde f$ sebagai distribusi tempered dan, dalam hal ini,
+   \[ \hat{\tilde f} = \tilde{\hat f}\,. \]
+\end{prop}
+
+\begin{exam} Transformasi Fourier fungsi delta Dirac diberikan oleh
+   \[ \hat\delta = \tilde{\vc 1}\,. \]
+\end{exam}
+
+\begin{exam} Transformasi Fourier distribusi regular $\tilde{\vc 1}$ diberikan oleh
+   \[ \hat{\tilde{\vc 1}} = \delta\,. \]
+\end{exam}
+
+Proposisi~\ref{prop_FT_isomor1} memiliki generalisasi yang memuaskan bagi distribusi tempered.
+
+\begin{prop} Transformasi Fourier $\mathfrak F\colon \fml S^*(\R) \sto \fml S^*(\R)$ merupakan pemetaan linear kontinu
+bijektif yang inversnya juga kontinu. Lebih lanjut, $\mathfrak F^4$ merupakan pemetaan identitas pada~$\fml S^*(\R)$.
+\end{prop}
+
+Kita akan kembali sejenak ke pembahasan transformasi Fourier dalam bab berikutnya.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\endinput

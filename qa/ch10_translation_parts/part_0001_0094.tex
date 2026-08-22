@@ -1,0 +1,86 @@
+\chapter{DISTRIBUSI}
+
+\section{Limit Induktif}\label{sec_ind_limits}
+\begin{defn}\label{defn_dir_sys} Misalkan $D$ suatu himpunan terarah terhadap pengurutan parsial~$\le$ dan misalkan $\{A_i\colon i \in D\}$ suatu keluarga
+objek dalam suatu kategori~$\cat C$.  Anggap bahwa untuk setiap $i$, $j \in D$ dengan $i \le j$ terdapat suatu morfisme
+$\phi_{j,i}\colon A_i \sto A_j$ yang memenuhi $\phi_{ki} = \phi_{kj}\phi_{ji}$ setiap kali $i \le j \le k$ dalam~$D$.  Anggap pula bahwa
+$\phi_{ii}$ adalah pemetaan identitas pada $A_i$ untuk setiap $i \in D$. Maka keluarga berindeks $\vc A = \bigl(A_i\bigr)_{i \in D}$ dari
+objek-objek bersama keluarga berindeks $\bs\phi = \bigl(\phi_{ji}\bigr)$ dari \emph{morfisme penghubung} disebut suatu
+ \index{morfisme penghubung}%
+ \index{morfisme!penghubung}%
+ \index{terarah!sistem}%
+ \index{sistem!terarah}%
+\df{sistem terarah} dalam~$\cat C$.
+\end{defn}
+
+\begin{defn}\label{defn_ind_lim} Misalkan pasangan $(\vc A, \bs\phi)$ suatu sistem terarah (seperti di atas) dalam kategori~$\cat C$ yang
+himpunan terarah dasarnya adalah~$D$.  Suatu
+ \index{induktif!limit}%
+ \index{limit!induktif}%
+\df{limit induktif} (atau
+ \index{langsung!limit}%
+ \index{limit!langsung}%
+\df{limit langsung}) dari sistem $(\vc A,\bs\phi)$ adalah pasangan $(L,\bs\mu)$ dengan $L$ suatu objek dalam $\cat C$
+dan $\bs\mu = \bigl(\mu_i\bigr)_{i \in D}$ suatu keluarga morfisme $\mu_j\colon A_j \sto L$ dalam $\cat C$ yang memenuhi
+ \begin{enumerate}[label=\rm{(\alph*)}]
+  \item $\mu_i = \mu_j \phi_{ji}$ setiap kali $i \le j$ dalam $D$, dan
+  \item jika $(M,\bs\lambda)$ suatu pasangan dengan $M$ suatu objek dalam $\cat C$ dan $\bs\lambda = \bigl(\lambda_i\bigr)_{i \in D}$
+adalah suatu keluarga berindeks morfisme $\lambda_j\colon A_j \sto M$ dalam $\cat C$ yang memenuhi $\lambda_i = \lambda_j\phi_{ji}$ setiap kali $i \le j$ dalam~$D$,
+maka terdapat morfisme tunggal $\psi\colon L \sto M$ sedemikian sehingga $\lambda_i = \psi\mu_i$ untuk setiap $i \in D$.
+ \end{enumerate}
+Dengan penyalahgunaan bahasa yang lazim, biasanya kita mengatakan bahwa $L$ adalah limit induktif dari sistem $\vc A = (A_i)$ dan
+ \index{<arrowto@$\underrightarrow{\lim} A_i$ (limit induktif)}%
+menulis $L = \underrightarrow{\lim} A_i$.
+
+\vskip 15 pt
+
+   \[\xymatrix@+15pt@C+25pt{&&&& L\ar@{-->}[dddd]^\psi \\
+                   &&&&   \\
+                  {\cdots}\ar[r] & A_i \ar[uurrr]^{\mu_i}\ar[ddrrr]^{\lambda_i}\ar[r]^(.6){\phi_{ji}} &
+                       A_j\ar[uurr]^{\mu_j}\ar[ddrr]^{\lambda_j}\ar[r] & {\cdots} &  \\
+                   &&&&   \\
+                   &&&& M
+    }\]
+\end{defn}
+
+Dalam suatu kategori (konkret) sebarang, limit induktif belum tentu ada.  Namun, jika ada, limit tersebut tunggal.
+
+\begin{prop}\label{prop_ind_lim_unique} Limit induktif (jika ada dalam suatu kategori) bersifat tunggal (hingga isomorfisme).
+\end{prop}
+
+\begin{exam} Misalkan $S$ suatu objek tak kosong dalam kategori $\cat{SET}$. Tinjau keluarga $\sfml P(S)$ dari semua himpunan bagian $S$ yang diarahkan
+oleh pengurutan parsial~$\subseteq$.  Setiap kali $A \subseteq B \subseteq S$, ambil morfisme penghubung $\sbsb\iota{BA}$ sebagai
+pemetaan inklusi dari $A$ ke~$B$. Maka $\sfml P(S)$, bersama keluarga morfisme penghubung, membentuk suatu sistem terarah.  Limit
+induktif dari sistem ini adalah~$S$.
+\end{exam}
+
+\begin{exam} Limit langsung ada dalam kategori $\cat{VEC}$ dari ruang vektor dan pemetaan linear.
+\end{exam}
+
+\begin{proof}[\emph{Petunjuk untuk bukti}] Misalkan $(\vc V, \bs\phi)$ suatu sistem terarah dalam $\cat{VEC}$ (seperti dalam definisi~\ref{defn_dir_sys})
+dan $D$ adalah himpunan terarah dasarnya. Misalkan
+$W=\bigoplus_{i\in D}V_i$ dan $\iota_i\colon V_i\sto W$ inklusi kanonik. Tetapkan
+  \[ N=\operatorname{span}\{\iota_i(u)-\iota_j(\phi_{ji}(u)):
+       i\le j,\quad u\in V_i\}. \]
+Ambil $L=W/N$ dan $\mu_i=q\circ\iota_i$, dengan $q\colon W\sto W/N$ pemetaan hasil bagi, lalu verifikasikan sifat universalnya
+(lihat contoh~\ref{C015544} dan~\ref{X_dir_sum_VEC}).  \ns
+\end{proof}
+
+\begin{exam} Barisan $\Z \to^{\vc 1} \Z \to^{\vc 2} \Z \to^{\vc 3} \Z \to^{\vc 4} \dots$
+(dengan $\vc n \colon \Z \sto \Z$ memenuhi $\vc n(1) = n$) merupakan suatu barisan induktif grup-grup Abelian
+yang limit induktifnya adalah himpunan $\Q$ dari bilangan rasional.
+\end{exam}
+
+\begin{exam} Barisan $\Z \to^{\vc 2} \Z \to^{\vc 2} \Z \to^{\vc 2} \Z \to^{\vc 2} \dots$
+merupakan suatu barisan induktif grup-grup Abelian yang limit induktifnya adalah himpunan bilangan rasional
+diadik.
+\end{exam}
+
+
+
+
+
+
+
+
+

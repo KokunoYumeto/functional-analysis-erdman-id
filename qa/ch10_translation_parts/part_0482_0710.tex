@@ -1,0 +1,225 @@
+\section{Konvolusi}
+
+Seksi ini dan Seksi~\ref{section_Fourier_transform} memberikan pengantar yang \emph{sangat} singkat tentang konvolusi
+dan transformasi Fourier distribusi. Untuk banyak pembuktian, serta uraian yang lebih terperinci, pembaca dirujuk
+ke buku \emph{Functional Analysis} karya Walter Rudin yang elegan~\cite{Rudin:1991}.
+
+Untuk menghindari munculnya terlalu banyak faktor berbentuk $\sqrt{2\pi}$ beserta kebalikannya dalam rumus-rumus, selama
+sisa bab ini kita akan mengintegralkan terhadap
+ \index{ukuran Lebesgue ternormalisasi}%
+ \index{m@$m$ (ukuran Lebesgue ternormalisasi)}%
+\df{ukuran Lebesgue ternormalisasi} $m$ pada~$\R$. Ukuran ini didefinisikan oleh
+   \[ m(A) := \frac1{\sqrt{2\pi}}\lambda(A) \]
+untuk setiap subhimpunan terukur Lebesgue $A$ dari $\R$ (dengan $\lambda$ ukuran Lebesgue biasa pada~$\R$).
+
+Kita meninjau kembali beberapa fakta dasar dari analisis real mengenai konvolusi fungsi bernilai skalar. Ingat bahwa suatu fungsi bernilai kompleks atau
+real diperluas pada $\R$ disebut
+ \index{terintegralkan Lebesgue}%
+ \index{terintegralkan}%
+\emph{terintegralkan Lebesgue} jika $\int_\R\abs f\, dm < \infty$
+(dengan $m$ ukuran Lebesgue ternormalisasi pada~$\R$).
+ \index{L@$\lfs 1(\R)$!ruang fungsi terintegralkan Lebesgue}%
+ \index{L@$\lfs 1(\R)$!sebagai ruang Banach}%
+ \index{Banach!ruang!$\lfs 1(\R)$ sebagai}%
+Dengan $\lfs 1(\R)$ kita nyatakan ruang Banach semua kelas ekuivalensi fungsi terintegralkan Lebesgue pada~$\R$; dua fungsi \emph{ekuivalen}
+jika ukuran Lebesgue himpunan tempat keduanya berbeda adalah nol. Norma pada ruang Banach ini
+   \index{<unopn@$\norm{\hphantom{x}}_1$ (norma-$1$)}%
+diberikan oleh
+   \[ {\norm f}_1 := \int_\R \abs f\,dm. \]
+
+\begin{prop} Misalkan $f$ dan $g$ fungsi-fungsi terintegralkan Lebesgue pada~$\R$. Maka fungsi
+   \[ y \mapsto f(x - y)g(y) \]
+termasuk dalam $\lfs 1(\R)$ untuk hampir setiap~$x$. Definisikan suatu
+ \index{<binopast@$f \ast g$ (konvolusi dua fungsi)}%
+fungsi $f \ast g$ dengan
+   \[ (f \ast g)(x) := \int_\R f(x - y)g(y)\,dm(y) \]
+pada setiap titik tempat ruas kanan terdefinisi. Maka fungsi $f \ast g$ termasuk dalam $\lfs 1(\R)$.
+\end{prop}
+
+\begin{proof} Lihat~\cite{HewittS:1965}, Teorema 21.31.  \ns
+\end{proof}
+
+\begin{defn} Fungsi $f \ast g$ yang didefinisikan di atas adalah
+ \index{konvolusi!fungsi-fungsi dalam $\lfs 1(\R)$}%
+\df{konvolusi} dari $f$ dan~$g$.
+\end{defn}
+
+\begin{prop} Ruang Banach $\lfs 1(\R)$ dengan konvolusi merupakan aljabar Banach komutatif. Namun, aljabar ini \emph{tidak} beridentitas.
+\end{prop}
+
+\begin{proof} Lihat~\cite{HewittS:1965}, Teorema 21.34 dan 21.35.  \ns
+\end{proof}
+
+\begin{defn}\label{defn_Fourier_transform} Untuk setiap $f$ dalam $\lfs 1(\R)$, definisikan suatu fungsi $\hat f$ dengan
+    \[ \hat f(x) = \int_{-\infty}^\infty f(t) e^{-itx}\,dm(t). \]
+Fungsi $\hat f$ adalah
+ \index{Fourier!transformasi}%
+ \index{transformasi!Fourier}%
+ \index{F@$\mathfrak F(f)$ (transformasi Fourier dari~$f$)}%
+ \index{<unoptop@$\hat f$ (transformasi Fourier dari~$f$)}%
+\df{transformasi Fourier} dari~$f$. Kadang-kadang kita menulis $\mathfrak Ff$ untuk~$\hat f$.
+\end{defn}
+
+\begin{thm}[Lemma Riemann--Lebesgue] Jika $f \in \lfs 1(\R)$,
+ \index{lemma Riemann--Lebesgue}%
+maka $\hat f \in \fml C_0(\R)$.
+\end{thm}
+
+\begin{proof} Lihat~\cite{HewittS:1965}, 21.39.   \ns
+\end{proof}
+
+\begin{prop} Transformasi Fourier
+   \[ \mathfrak F\colon \lfs 1(\R) \sto \fml C_0(\R)\colon f \mapsto \hat f \]
+merupakan homomorfisme aljabar Banach. Kedua aljabar itu tidak beridentitas.
+\end{prop}
+
+Untuk penerapan, segi paling berguna dari proposisi sebelumnya ialah bahwa transformasi Fourier
+mengubah konvolusi dalam $\lfs 1(\R)$ menjadi
+perkalian titik demi titik dalam~$\fml C_0(\R)$; yakni, $\wh{f\ast g} =\hat f\hat g$.
+
+Berikutnya kita mendefinisikan apa yang dimaksud dengan mengambil konvolusi suatu distribusi dan suatu fungsi uji.
+
+\begin{notn} Untuk suatu titik $x \in \R$ dan suatu fungsi bernilai skalar $\phi$ pada $\R$
+ \index{phi@$\phi_x$}%
+definisikan
+   \[ \phi_x\colon \R \sto \K\colon y \mapsto \phi(x - y). \]
+\end{notn}
+
+\begin{prop} Jika $\phi$ dan $\psi$ merupakan fungsi-fungsi bernilai skalar pada $\R$ dan $x \in \R$, maka
+   \[ (\phi + \psi)_x = \phi_x + \psi_x\,. \]
+\end{prop}
+
+\begin{prop}\label{prop_convol_distr1} Untuk $u \in \fml D^*(\R)$ dan $\phi \in \fml D(\R)$,
+ \index{<binopast@$u \ast \phi$ (konvolusi distribusi dan fungsi uji)}%
+tetapkan
+   \[ (u \ast \phi)(x) := \langle u,\phi_x \rangle \]
+untuk semua $x \in \R$. Maka $u \ast \phi \in \fml C^\infty(\R)$.
+\end{prop}
+
+\begin{proof} Lihat~\cite{Rudin:1991}, Teorema 6.30(b).  \ns
+\end{proof}
+
+\begin{defn} Ketika $u$ dan $\phi$ seperti dalam proposisi sebelumnya, fungsi $u \ast \phi$ adalah
+ \index{konvolusi!distribusi dan fungsi uji}%
+\df{konvolusi} dari $u$ dan~$\phi$.
+\end{defn}
+
+\begin{prop} Jika $u$ dan $v$ merupakan distribusi pada $\R$ dan $\phi$ suatu fungsi uji pada $\R$, maka
+   \[ (u + v) \ast \phi = (u \ast \phi) + (v \ast \phi)\,. \]
+\end{prop}
+
+\begin{prop} Jika $u$ suatu distribusi pada $\R$ dan $\phi$ serta $\psi$ fungsi-fungsi uji pada $\R$, maka
+   \[ u \ast (\phi + \psi) = (u \ast \phi) + (u \ast \psi)\,. \]
+\end{prop}
+
+\begin{exam} Jika $H$ fungsi Heaviside dan $\phi$ suatu fungsi uji pada~$\R$, maka
+   \[ (\wt H \ast \phi)(x) = \int_{-\infty}^x \phi(t)\,dt. \]
+\end{exam}
+
+\begin{prop}\label{prop_convol_distr2} Jika $u \in \fml D^*(\R)$ dan $\phi \in \fml D(\R)$, maka
+   \[ D^{\bs\alpha}(u \ast \phi) = (D^{\bs\alpha}u) \ast \phi = u \ast \bigl(D^{\bs\alpha}(\phi)\bigr). \]
+\end{prop}
+
+\begin{proof} Lihat~\cite{Rudin:1991}, Teorema 6.30(b).  \ns
+\end{proof}
+
+\begin{prop}\label{prop_convol_distr3} Jika $u \in \fml D^*(\R)$ dan $\phi$, $\psi \in \fml D(\R)$, maka
+   \[ u \ast (\phi \ast \psi) = (u \ast \phi) \ast \psi. \]
+\end{prop}
+
+\begin{proof} Lihat~\cite{Rudin:1991}, Teorema 6.30(c).  \ns
+\end{proof}
+
+\begin{prop} Misalkan $u$, $v \in \fml D^*(\R)$. Jika
+   \[ u \ast \phi = v \ast \phi \]
+untuk semua $\phi \in \fml D(\R)$, maka $ u = v$.
+\end{prop}
+
+\begin{defn} Misalkan $\Omega$ suatu subhimpunan terbuka dari $\R^n$ dan $u \in \fml D^*(\R^n)$. Kita mengatakan bahwa ``$u = 0$ pada $\Omega$'' jika $u(\phi) = 0$
+untuk setiap $\phi \in \fml D(\Omega)$. Dengan semangat yang sama, kita mengatakan bahwa ``dua distribusi $u$ dan $v$ sama pada $\Omega$'' jika $u - v = 0$
+pada~$\Omega$. Suatu titik $x \in \R^n$ termasuk dalam
+ \index{tumpuan!distribusi}%
+ \index{supp@$\supp u$ (tumpuan distribusi~$u$)}%
+\df{tumpuan} dari $u$ jika \emph{tidak ada} lingkungan terbuka bagi $x$ yang padanya $u = 0$. Nyatakan tumpuan $u$ dengan~$\supp u$.
+\end{defn}
+
+\begin{exam} Tumpuan distribusi delta Dirac $\delta$ adalah~$\{0\}$.
+\end{exam}
+
+\begin{exam} Tumpuan distribusi Heaviside $\wt H$ adalah~$[0,\infty)$.
+\end{exam}
+
+\begin{rem} Andaikan suatu distribusi $u$ pada $\R^n$ memiliki tumpuan kompak. Maka dapat ditunjukkan bahwa $u$ memiliki perluasan unik menjadi
+fungsional linear kontinu pada~$\fml C^\infty(\R^n)$, yakni keluarga semua fungsi mulus pada~$\R^n$. Dalam kondisi ini, kesimpulan
+Proposisi~\ref{prop_convol_distr1} tetap benar dan definisi berikut berlaku. Jika $u \in \fml D^*(\R^n)$ memiliki tumpuan kompak
+dan $\phi \in \fml C^\infty(\R^n)$, maka kesimpulan Proposisi~\ref{prop_convol_distr2} tetap benar. Selain itu, jika $\psi$
+merupakan fungsi uji pada $\R^n$, maka $u \ast \psi$ merupakan fungsi uji pada $\R^n$ dan kesimpulan~\ref{prop_convol_distr3} tetap berlaku.
+Untuk pembahasan dan verifikasi menyeluruh atas pernyataan-pernyataan ini, lihat~\cite{Rudin:1991}, Teorema 6.24 dan~6.35.
+\end{rem}
+
+\begin{prop} Jika $u$ dan $v$ merupakan distribusi pada $\R^n$ dan paling sedikit salah satunya memiliki tumpuan kompak, maka terdapat distribusi tunggal
+$u \ast v$ sedemikian sehingga
+   \[ (u \ast v) \ast \phi = u \ast (v \ast \phi) \]
+untuk semua fungsi uji $\phi$ pada~$\R^n$.
+\end{prop}
+
+\begin{proof} Lihat \cite{Rudin:1991}, Definisi 6.36\emph{ dan seterusnya}.   \ns
+\end{proof}
+
+\begin{defn} Dalam proposisi sebelumnya, distribusi $u \ast v$ adalah
+ \index{konvolusi!dua distribusi}%
+ \index{<binopast@$u \ast v$ (konvolusi dua distribusi)}%
+\df{konvolusi} dari $u$ dan~$v$.
+\end{defn}
+
+\begin{exam} Jika $\delta$ distribusi delta Dirac, maka
+   \[ \tilde 1 \ast \delta\,' = \tilde 0\,. \]
+\end{exam}
+
+\begin{exam} Jika $\delta$ distribusi delta Dirac dan $H$ fungsi Heaviside, maka
+   \[ \delta\,' \ast \wt H = \delta\,. \]
+\end{exam}
+
+\begin{prop} Jika $u$ dan $v$ merupakan distribusi pada $\R^n$ dan paling sedikit salah satunya memiliki tumpuan kompak, maka $u \ast v = v \ast u$.
+\end{prop}
+
+\begin{proof} Lihat \cite{Rudin:1991}, Teorema 6.37(a).  \ns
+\end{proof}
+
+\begin{exer} Buktikan proposisi sebelumnya dengan asumsi bahwa $u$ dan $v$ \emph{keduanya} memiliki tumpuan kompak. \emph{Petunjuk.}
+Gunakan $(u \ast v) \ast (\phi \ast \psi)$, dengan $\phi$ dan $\psi$ fungsi-fungsi uji, sambil mengingat bahwa konvolusi fungsi
+bersifat komutatif.
+\end{exer}
+
+\begin{prop} Jika $u$ dan $v$ merupakan distribusi pada $\R^n$ dan paling sedikit salah satunya memiliki tumpuan kompak, maka
+  \[ \supp(u \ast v) \subseteq \supp u + \supp v. \]
+\end{prop}
+
+\begin{proof} Lihat \cite{Rudin:1991}, Teorema 6.37(b).  \ns
+\end{proof}
+
+\begin{prop}\label{prop_assoc_convol_distr} Jika $u$, $v$, dan $w$ merupakan distribusi pada $\R^n$ dan paling sedikit dua di antaranya memiliki
+tumpuan kompak, maka
+    \[ u \ast (v \ast w) = (u \ast v) \ast w. \]
+\end{prop}
+
+\begin{exam} Ungkapan $\tilde 1 \ast \delta\,' \ast \wt H$ bersifat ambigu. Jadi, hipotesis mengenai tumpuan
+distribusi-distribusi dalam proposisi sebelumnya tidak dapat dihilangkan.
+\end{exam}
+
+\begin{prop} Terhadap penjumlahan, perkalian skalar, dan konvolusi, keluarga semua distribusi pada $\R$ yang bertumpuan kompak
+merupakan aljabar komutatif beridentitas.
+\end{prop}
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,38 @@
+{
+  "schema_version": "o008.ch10-translation-qa.v1",
+  "unit_id": "FAOA-2015-CH10",
+  "status": "pass",
+  "source": {
+    "bytes": 42703,
+    "lines": 894,
+    "sha256": "31f38daee49b9abfcd513a1c4a3f78414b122e469c6ac2d559c0b73ecbc082f8"
+  },
+  "target": {
+    "bytes": 42627,
+    "lines": 876,
+    "sha256": "6456f9def822da572e117f3ec368931f0bfb441840aa0785be1df6080bbb6840"
+  },
+  "master": {
+    "bytes": 9866,
+    "lines": 336,
+    "sha256": "5de05f7a154bea99d11924fc21dbbf7495c8642d5a3c58e48e0fdd053dd400b4"
+  },
+  "counts": {
+    "sections": 6,
+    "environment_begins": 124,
+    "labels": 18,
+    "references": 20,
+    "citations": 29,
+    "indexes": 101,
+    "defined_terms": 35,
+    "exercises": 11,
+    "proof_hints": 3,
+    "citation_only_proofs": 15,
+    "math_surfaces": 648,
+    "source_corrections": 16
+  },
+  "classified_math_edit_sha256": "eb32b119fe600c65a5b79653b1a5b1747c275a0c1fede7faf7586c5c27e456fd",
+  "terminology_witness_sha256": "830a241c8ace73290a4c613cc6478bb17698d835b781b1fec332fa09838ddf02",
+  "model_id": "OpenAI Codex gpt-5.6-sol, Ultra",
+  "errors": []
+}

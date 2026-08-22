@@ -1,0 +1,196 @@
+\section{Distribusi}
+\begin{defn} Misalkan $\Omega$ suatu himpunan bagian terbuka tak kosong dari~$\R^n$. Suatu fungsi $f\colon \Omega \sto \R$ disebut
+ \index{terintegralkan!secara lokal}%
+ \index{secara lokal!terintegralkan}%
+\df{terintegralkan secara lokal} jika $\int_K \abs{f}\,d\mu < \infty$ untuk setiap himpunan bagian kompak $K$ dari~$\Omega$. (Di sini $\mu$ adalah ukuran Lebesgue
+berdimensi-$n$ yang biasa.) Keluarga semua fungsi tersebut pada $\Omega$ dinotasikan
+ \index{L@$\locint\Omega$!fungsi yang terintegralkan secara lokal pada~$\Omega$}%
+dengan~$\locint\Omega$.
+\end{defn}
+
+\begin{exam} Fungsi konstan $\vc 1$ pada garis real terintegralkan secara lokal, meskipun fungsi ini jelas tidak terintegralkan.
+\end{exam}
+
+Bahkan fungsi yang terintegralkan secara lokal tidak harus kontinu. Pada garis real, misalnya, fungsi karakteristik dari sebarang himpunan terukur Lebesgue
+terintegralkan secara lokal. Bayangkan betapa memudahkannya jika kita dapat membicarakan secara bermakna \emph{turunan} dari sebarang fungsi demikian dan,
+lebih baik lagi, diperbolehkan menurunkannya sesering yang kita inginkan. --- Selamat datang di dunia distribusi. Di sini
+   \begin{enumerate}
+       \item setiap fungsi yang terintegralkan secara lokal dapat dipandang sebagai suatu distribusi, dan
+       \item setiap distribusi dapat diturunkan tak berhingga kali, dan lebih lanjut,
+       \item semua aturan diferensiasi yang lazim dalam kalkulus dasar berlaku.
+   \end{enumerate}
+
+\begin{defn} Misalkan $\Omega$ suatu himpunan bagian terbuka tak kosong dari~$\R^n$. Suatu
+ \index{distribusi}%
+\df{distribusi} adalah fungsional linear kontinu pada ruang fungsi uji $\fml D(\Omega) = \fml C^\infty_c(\Omega)$ pada~$\Omega$.
+Meskipun secara teknis fungsional demikian didefinisikan pada suatu ruang fungsi pada $\Omega$, kita akan mengikuti kebiasaan longgar yang lazim
+dan menyebutnya sebagai \emph{distribusi pada~$\Omega$}. Himpunan semua distribusi pada $\Omega$, yaitu ruang dual dari $\fml D(\Omega)$,
+ \index{D@$\fml D^*(\Omega)$ (ruang distribusi pada~$\Omega$)}%
+akan dinotasikan dengan~$\fml D^*(\Omega)$.
+\end{defn}
+
+\begin{prop} Misalkan $\Omega$ suatu himpunan bagian terbuka dari~$\R^n$. Suatu fungsional linear $L$ pada ruang fungsi uji $\fml D(\Omega)$ pada $\Omega$ adalah
+distribusi jika dan hanya jika $L(\phi_k) \sto 0$ setiap kali $(\phi_k)$ merupakan barisan fungsi uji sedemikian sehingga $\phi_k^{(\bs\alpha)} \sto 0$
+secara seragam untuk setiap multi-indeks $\bs\alpha$ dan terdapat suatu himpunan kompak $K \subseteq \Omega$ yang memuat tumpuan setiap~$\phi_k$.
+\end{prop}
+
+\begin{proof} Lihat~\cite{Conway:1990}, proposisi IV.5.21 atau~\cite{Treves:1967}, proposisi 21.1(b).  \ns
+\end{proof}
+
+\begin{exam} Jika $\Omega$ suatu himpunan bagian terbuka tak kosong dari $\R^n$ dan $f$ suatu fungsi yang terintegralkan secara lokal pada $\Omega$, maka pemetaan
+   \[ L_f\colon \fml D(\Omega) \sto \K \colon \phi \mapsto \int f\phi\,d\lambda \]
+merupakan suatu distribusi. Distribusi demikian disebut
+ \index{regular!distribusi}%
+ \index{distribusi!regular}%
+ \index{L@$L_f$ (distribusi regular yang bersesuaian dengan~$f$)}%
+distribusi \df{regular}. Distribusi yang tidak regular disebut
+ \index{singular!distribusi}%
+ \index{distribusi!singular}%
+distribusi \df{singular}.
+\end{exam}
+
+\emph{Catatan.} Misalkan $u$ suatu distribusi dan $\phi$ suatu fungsi uji pada $\Omega$. Notasi baku untuk $u(\phi)$ adalah
+$\langle u,\phi \rangle$ dan $\langle \phi,u \rangle$. Kita juga menggunakan
+ \index{<unoptop@$\tilde f$ (distribusi regular yang bersesuaian dengan~$f$)}%
+notasi $\tilde f$ untuk $L_f$. Jadi, dalam contoh sebelumnya,
+
+    \[ \langle \tilde f,\phi \rangle = \langle \phi,\tilde f \rangle
+            = \tilde f(\phi) = \langle L_f,\phi \rangle
+            = \langle \phi,L_f \rangle = L_f(\phi) \]
+untuk $f \in \locint\Omega$.
+
+\begin{exam} Jika $\mu$ suatu ukuran Borel regular pada himpunan bagian terbuka tak kosong $\Omega$ dari~$\R^n$ dan $f$ suatu fungsi yang terintegralkan secara lokal
+terhadap ukuran tersebut pada $\Omega$, maka pemetaan
+    \[ L_\mu\colon \fml D(\Omega) \sto \R\colon \phi \mapsto \int_\Omega f\phi \,d\mu \]
+merupakan suatu distribusi pada $\Omega$.
+\end{exam}
+
+\begin{notn} Misalkan $a \in \R$. Definisikan $\mu_a$, yaitu
+ \index{Dirac!ukuran}%
+ \index{ukuran!Dirac}%
+ \index{mua@$\mu_a$ (ukuran Dirac yang terkonsentrasi di~$a$)}%
+\df{ukuran Dirac} yang terkonsentrasi di $a$, pada himpunan-himpunan Borel dari $\R$, dengan
+   \[ \mu_a(B) = \begin{cases}  1, &\text{jika $a \in B$} \\
+                                0, &\text{jika $a \notin B$}.
+                 \end{cases} \]
+Distribusi yang bersesuaian kita notasikan dengan $\delta_a$ dan kita sebut
+ \index{Dirac!distribusi}%
+ \index{distribusi!Dirac}%
+ \index{delta@$\delta_a$, $\delta$ (distribusi Dirac)}%
+\df{distribusi delta Dirac di $a$}. Jadi, $\delta_a = L_{\mu_a}$. Jika $a = 0$, kita menulis $\delta$ untuk $\delta_0$.
+Secara historis, distribusi $\delta$ telah menyandang nama yang terkenal menyesatkan (meskipun secara teknis
+tidak salah): \emph{fungsi delta Dirac}.
+\end{notn}
+
+\begin{exam} Jika $\delta_a$ adalah \emph{distribusi delta Dirac} di suatu titik $a \in \R$ dan $\phi$ suatu fungsi uji pada~$\R$,
+maka $\delta_a(\phi) = \phi(a)$.
+\end{exam}
+
+\begin{notn} Misalkan $H$ menyatakan fungsi karakteristik interval $[0,\infty)$. Fungsi ini adalah
+ \index{Heaviside!fungsi}%
+ \index{fungsi!Heaviside}%
+\df{fungsi Heaviside}. Distribusi yang bersesuaian, $\widetilde H = L_H$, adalah
+ \index{Heaviside!distribusi}%
+ \index{distribusi!Heaviside}%
+ \index{H@$\wt H$ (distribusi Heaviside)}%
+\df{distribusi Heaviside}.
+\end{notn}
+
+\begin{exam} Jika $\wt H$ adalah \emph{distribusi Heaviside} dan $\phi \in \fml D(\R)$, maka $\wt H(\phi) = \int_0^\infty \phi$.
+\end{exam}
+
+\begin{exam} Misalkan $f$ suatu fungsi yang dapat didiferensialkan pada $\R$ dan turunannya terintegralkan secara lokal. Maka
+    \begin{equation}\label{deriv_reg_distr}
+        L_{f\,'}(\phi) = -L_f(\phi\,')
+    \end{equation}
+untuk setiap $\phi \in \fml D(\R)$.
+\end{exam}
+
+\begin{proof}[\emph{Petunjuk untuk bukti}] Integrasi parsial. \ns
+\end{proof}
+
+Sekarang timbul sebuah pertanyaan penting: Bagaimana kita dapat mendefinisikan ``turunan'' suatu distribusi? Tentunya wajar jika kita menginginkan suatu
+distribusi regular berperilaku hampir sama dengan fungsi yang melahirkannya. Artinya, kita ingin turunan $(L_f)'$ dari
+suatu distribusi regular $L_f$ bersesuaian dengan distribusi regular yang timbul dari turunan fungsi~$f$. Dengan kata lain,
+yang kita inginkan adalah $(L_f)' = L_{f\,'}$. Menurut contoh sebelumnya, ini menyarankan bahwa untuk fungsi $f$ yang dapat didiferensialkan
+yang turunannya terintegralkan secara lokal, kita seharusnya mendefinisikan
+   \begin{equation}\label{deriv_distr1}
+        (L_f)'(\phi) = -L_f(\phi\,')
+   \end{equation}
+untuk setiap $\phi \in \fml D(\R)$. Pengamatan bahwa ruas kanan persamaan~\eqref{deriv_distr1} bermakna untuk
+\emph{distribusi apa pun} memotivasi definisi berikut.
+
+\begin{defn}\label{def_deriv_distr} Misalkan $u$ suatu distribusi pada himpunan bagian terbuka tak kosong $\Omega$ dari~$\R$. Kita mendefinisikan $u\,'$, yaitu
+ \index{turunan!distribusi}%
+ \index{distribusi!turunan}%
+\df{turunan} dari $u$,
+ \index{D@$Du$ (turunan suatu distribusi~$u$)}%
+ \index{<unopur@$u'$ (turunan suatu distribusi~$u$)}%
+dengan
+    \[ u\,'(\phi) := -u(\phi\,') \]
+untuk setiap fungsi uji $\phi$ pada~$\Omega$. Kita juga menggunakan notasi $Du$ untuk turunan dari~$u$.
+\end{defn}
+
+\begin{exam} \emph{Distribusi Dirac} $\delta$ adalah turunan dari \emph{distribusi Heaviside}~$\widetilde H$.
+\end{exam}
+
+\begin{exer} Misalkan $S$ suatu fungsi signum (atau tanda) pada $\R$; artinya, misalkan $S = 2H - 1$, dengan $H$ fungsi Heaviside.
+Misalkan pula $g$ suatu fungsi pada $\R$ sedemikian sehingga $g\colon x \mapsto -x - 3$ untuk $x < 0$ dan $g\colon x \mapsto x + 5$ untuk $x \ge 0$.
+   \begin{enumerate}[label=\rm{(\alph*)}]
+     \item Carilah konstanta $\alpha$ dan $\beta$ sedemikian sehingga ${\tilde g}' = \alpha \widetilde S + \beta \delta$.
+     \item Carilah suatu fungsi $a$ pada $\R$ sedemikian sehingga ${\tilde a}' = \wt S$.
+   \end{enumerate}
+\end{exer}
+
+\begin{exer} Misalkan $f(x) = \left\{
+                           \begin{array}{ll}
+                             1 - \abs x, & \hbox{jika $\abs x \le 1$;} \\
+                                 0,      & \hbox{selain itu.}
+                           \end{array}
+                         \right.$ Dengan menghitung kedua ruas persamaan~\eqref{deriv_reg_distr} secara terpisah, tunjukkan bahwa persamaan itu
+benar secara klasik untuk setiap fungsi uji yang tumpuannya termuat dalam interval~$[-1,1]$.
+\end{exer}
+
+\begin{exer} Misalkan $f(x) = \sbsb\chi{(0,1)}$ untuk $x \in~\R$ dan $\phi \in \fml D\bigl((-1,1)\bigr)$. Bandingkan nilai $L_{f\,'}(\phi)$ dan
+$\bigl(L_f\bigr)'(\phi)$.
+\end{exer}
+
+\begin{exer} Misalkan $f(x) = \left\{
+                           \begin{array}{ll}
+                             x, & \hbox{jika $0 \le x \le 1$;} \\
+                             x + 2, & \hbox{jika $1 < x \le 2$;} \\
+                             0, & \hbox{selain itu.}
+                           \end{array}
+                         \right.$ Bandingkan nilai $L_{f\,'}(\phi)$ dan $\bigl(L_f\bigr)'(\phi)$ untuk suatu fungsi uji~$\phi$.
+\end{exer}
+
+\begin{exer} Misalkan $h(x) = \left\{
+                           \begin{array}{ll}
+                             2x, & \hbox{jika $x < -1$;} \\
+                             1, & \hbox{jika $-1 \le x < 1$;} \\
+                             0, & \hbox{jika $x \ge 1$.}
+                           \end{array}
+                         \right.$ Carilah suatu fungsi $f$ yang terintegralkan secara lokal sedemikian sehingga ${\tilde f}\,' = \tilde h + 3\delta_1 - \delta_{-1}$.
+\end{exer}
+
+Definisi~\ref{def_deriv_distr} dapat diperluas ke turunan parsial dari distribusi tanpa kesulitan.
+
+\begin{defn} Misalkan $u$ suatu distribusi pada suatu himpunan bagian terbuka tak kosong $\Omega$ dari $\R^n$ untuk suatu $n \ge 2$ dan $\bs\alpha$
+suatu multi-indeks. Kita mendefinisikan
+ \index{operator diferensial!yang bekerja pada distribusi}%
+ \index{D@$D^{\bs\alpha}$ (notasi multi-indeks untuk diferensiasi)}%
+\df{operator diferensial} $D^{\bs\alpha} = \bigl(\frac{\partial}{\partial x_1}\bigr)^{\alpha_1} \dots
+\bigl(\frac{\partial}{\partial x_n}\bigr)^{\alpha_n}$ berorde $\abs{\bs\alpha}$ yang bekerja pada $u$ dengan
+   \[ D^{\bs\alpha}u(\phi) := (-1)^{\abs{\bs\alpha}}u\bigl(\phi^{(\bs\alpha)}) \]
+untuk setiap fungsi uji $\phi$ pada~$\Omega$.
+ \index{<unopura@$u^{\bs\alpha}$ (notasi multi-indeks untuk diferensiasi)}%
+Notasi alternatif untuk $D^{\bs\alpha}u$ adalah $u^{(\bs\alpha)}$.
+\end{defn}
+
+\begin{exer} Suatu \df{dipol} (dengan momen listrik 1 di titik asal pada $\R$) dapat dipandang sebagai ``limit'' ketika $\epsilon \sto 0^+$
+ \index{dipol}%
+dari suatu sistem $T_\epsilon$ yang terdiri atas dua muatan $-\frac1\epsilon$ dan $\frac1\epsilon$ yang masing-masing ditempatkan di $0$ dan $\epsilon$. Tunjukkan
+bagaimana hal ini dapat mengarahkan kita untuk mendefinisikan dipol secara matematis sebagai $-\delta\,'$. \emph{Petunjuk.} Pandanglah $T_\epsilon$ sebagai
+distribusi $\frac1\epsilon \delta_\epsilon - \frac1\epsilon \delta$.
+\end{exer}
+ 

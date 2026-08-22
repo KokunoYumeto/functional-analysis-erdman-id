@@ -1,0 +1,83 @@
+\section{Solusi Distribusional untuk Persamaan Diferensial Biasa}
+
+\begin{notn} Misalkan $\Omega$ suatu subhimpunan terbuka tak kosong dari $\R$, $n \in \N$, dan $a_0$, $a_1$, \dots $a_n \in \fml C^\infty(\Omega)$.
+Kita meninjau operator diferensial (biasa)
+ \index{diferensial!operator}%
+ \index{operator!diferensial}%
+berikut:
+   \[ L = \sum_{k=0}^n a_k(x)\frac{d^k}{dx^k} \]
+beserta persamaan diferensial (biasa)
+ \index{diferensial!persamaan}%
+ \index{persamaan!diferensial}%
+yang terkait dengannya,
+   \begin{equation}\label{eqn_ODE1}
+        Lu = v
+   \end{equation}
+dengan $u$ dan $v$ distribusi-distribusi pada~$\Omega$. Sehubungan dengan Persamaan~\eqref{eqn_ODE1}, kita juga dapat meninjau dua variasi:
+persamaan
+   \begin{equation}\label{eqn_ODE2}
+        \langle Lu, \phi\rangle = \langle v, \phi\rangle
+   \end{equation}
+dengan $\phi$ suatu fungsi uji, dan persamaan
+   \begin{equation}\label{eqn_ODE3}
+        \langle u, L^*\phi\rangle = \langle v, \phi\rangle
+   \end{equation}
+dengan $\phi$ suatu fungsi uji dan $L^* := \displaystyle\sum_{k=0}^n (-1)^k \frac{d^k(a_k\phi)}{dx^k}$ merupakan
+ \index{adjoin!formal}%
+ \index{adjoin formal}%
+\df{adjoin formal} dari~$L$.
+\end{notn}
+
+\begin{defn} Andaikan bahwa dalam persamaan-persamaan di atas distribusi $v$ diberikan. Jika terdapat distribusi regular $u$ yang
+memenuhi~\eqref{eqn_ODE1}, kita mengatakan bahwa $u$ merupakan solusi
+ \index{solusi klasik}%
+ \index{solusi!klasik}%
+\df{klasik} bagi persamaan diferensial itu. Jika $u$ merupakan distribusi regular yang bersesuaian dengan suatu fungsi yang
+\emph{tidak} memenuhi~\eqref{eqn_ODE1} dalam pengertian klasik, tetapi \emph{memenuhi}~\eqref{eqn_ODE2} untuk setiap fungsi uji~$\phi$,
+maka kita mengatakan bahwa $u$ merupakan solusi
+ \index{lemah!solusi}%
+ \index{solusi!lemah}%
+\df{lemah} bagi persamaan diferensial itu. Selanjutnya, jika $u$ merupakan distribusi singular yang memenuhi~\eqref{eqn_ODE3} untuk setiap fungsi
+uji~$\phi$, kita mengatakan bahwa $u$ merupakan solusi
+ \index{solusi distribusional}%
+ \index{solusi!distribusional}%
+\df{distribusional} bagi persamaan diferensial itu. Keluarga solusi
+ \index{solusi diperumum}%
+ \index{solusi!diperumum}%
+\df{diperumum} mencakup semua solusi klasik, lemah, dan distribusional.
+\end{defn}
+
+\begin{exam} Solusi diperumum bagi persamaan $\dfrac{du}{dx} = 0$ pada~$\R$ hanyalah distribusi konstan (yakni,
+distribusi regular yang berasal dari fungsi konstan). Jadi, setiap solusi diperumum merupakan solusi klasik.
+\end{exam}
+
+\begin{proof}[\emph{Petunjuk untuk bukti}] Andaikan $u$ suatu solusi diperumum bagi persamaan itu. Pilih suatu fungsi uji $\sbsb\phi 0$ sedemikian
+sehingga $\int_\R \sbsb\phi 0 = 1$. Misalkan $\phi$ suatu fungsi uji sebarang pada~$\R$. Definisikan
+   \[ \psi(x) = \phi(x) - \sbsb\phi 0(x)\int_\R \phi \]
+untuk semua $x \in \R$. Amati bahwa $\langle u,\psi \rangle = 0$, lalu hitung $\langle u,\phi \rangle$.  \ns
+\end{proof}
+
+\begin{exam} Distribusi Heaviside adalah solusi lemah persamaan diferensial $x\dfrac{du}{dx}~=~0$ pada~$\R$. Tentu saja,
+distribusi-distribusi konstan merupakan solusi klasik.
+\end{exam}
+
+\begin{exam} Distribusi Dirac $\delta$ merupakan solusi distribusional bagi persamaan diferensial $x^2\dfrac{du}{dx} = 0$ pada~$\R$.
+(Distribusi Heaviside merupakan solusi lemah; dan distribusi-distribusi konstan merupakan solusi klasik.)
+\end{exam}
+
+\begin{exam} Untuk $p = 0,1,2,\dots$, turunan ke-$p$, $\dfrac{d^p\delta}{dx^p}$, dari distribusi delta Dirac merupakan solusi
+bagi persamaan diferensial $x^{p+2}\dfrac{du}{dx} = 0$ pada~$\R$.
+\end{exam}
+
+\begin{exer} Carilah suatu solusi distribusional bagi persamaan diferensial $x \dfrac{du}{dx} + u = 0$ pada~$\R$.
+\end{exer}
+
+
+
+
+
+
+
+
+
+

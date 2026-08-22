@@ -515,3 +515,59 @@ Mathematical source repairs:
 No upstream contact occurs during production. These entries are held for the
 single deduplicated post-corpus report only if that report is separately
 authorized.
+
+## Chapter 10
+
+The following 16 source candidates are adjudicated and applied in
+`source/id-ID/distributions-id.tex`. The exact machine-verifiable ledger is
+`provenance/SOURCE_CORRECTIONS_CH10.json`; it binds every inclusive source and
+target line range, correction class, normalized snippet hash, and required
+target anchor.
+
+Mechanical source repairs:
+
+1. `distributions.tex:54`: replace “if this system” by the intended “of this
+   system.”
+2. `distributions.tex:98`: supply the missing verb in “we will [be]
+   interested.”
+3. `distributions.tex:119`: state directly that the topology on `X_i` is the
+   restriction of `\sfml T_{i+1}`, rather than using the malformed
+   restriction-of-sets wording.
+4. `distributions.tex:341`: repair the number agreement in “every test
+   functions.”
+5. `distributions.tex:393`: supply the missing relation in “generated [by] the
+   family.”
+
+Semantic and TeX source repairs:
+
+6. `distributions.tex:405`: replace raw less-than/greater-than delimiters by
+   semantic angle-bracket commands in the distributional-pairing formula.
+7. `distributions.tex:456`: call `fu` a functional rather than a function
+   before establishing that it is a distribution.
+
+Mathematical source repairs:
+
+8. `distributions.tex:29`: quantify the universal-property condition over the
+   directed index set `D`, not `\N`.
+9. `distributions.tex:57--73`: replace the false product/direct-sum quotient
+   hint by the standard direct-sum quotient construction
+   `W=\bigoplus_{i\in D}V_i`, relation span `N`, quotient `L=W/N`, and
+   canonical maps. An independent universal-property review passed.
+10. `distributions.tex:121`: restore the omitted subscript in the connecting
+    morphism `\phi_{ji}`.
+11. `distributions.tex:252--255`: require `f` to be locally integrable with
+    respect to the stated regular Borel measure.
+12. `distributions.tex:509`: restore the missing backslash in the integration
+    domain `\R`.
+13. `distributions.tex:559`: apply the convolution theorem to the transform of
+    `f\ast g`, not to the pointwise product `fg`.
+14. `distributions.tex:566`: type a general scalar-valued function with
+    codomain `\K`, rather than only `\R`.
+15. `distributions.tex:766`: restore the missing backslash in the integration
+    domain `\R`.
+16. `distributions.tex:778`: use the same lowercase derivative order `p` in
+    numerator and denominator.
+
+No upstream contact occurs during production. These entries are held for the
+single deduplicated post-corpus report only if that report is separately
+authorized.

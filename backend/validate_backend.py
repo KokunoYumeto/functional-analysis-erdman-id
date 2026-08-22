@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate the deterministic Chapter 1--9 backend and its manifest."""
+"""Validate the deterministic Chapter 1--10 backend and its manifest."""
 
 from __future__ import annotations
 
@@ -139,6 +139,26 @@ CH09_UNIT_SUFFIX_LOCK = (
     4_178,
     "1812c471ebe0120e85ce9b533bc7adc537778c216d6549fe852ec8d1056a967c",
 )
+CH10_PREFIX_LOCKS = {
+    "semantic_units.jsonl": (887_156, "69cb894f6bb796ab1195ec8a7f13614c8f80e37df1b33662baf6582ad997815f"),
+    "segments.jsonl": (998_274, "b81f691f34a99d02652395a753a751e8794921d2bc779dee63f239717b5f83e8"),
+    "relations.jsonl": (1_231_458, "6ade8249fca5a8d89e22f17bfbb427314a83997a0d5511bbf8c7900ef36c7d4b"),
+    "formula_map.jsonl": (4_119_919, "1c7c702cde9cbd02d4246a35117e8129530559818ddcf5915933f8d287f14952"),
+    "exercise_support.jsonl": (19_302, "396af34f24d13d81c98b698838d7ffc92ce403e822534df682b24bac05b76814"),
+    "index_terms.csv": (364_586, "8b6be5ff9f2c48868feef6328e615efc0fd5b10d1b7e5645a23f281d4d7bed90"),
+    "artifacts.jsonl": (46_109, "941a6e92c90182c33da4a0eaa2cc9d2a87046bdda1f3a054a83b9b770a45b56d"),
+    "qa_events.jsonl": (64_088, "d6c6f48a9078dd2bed9e7417111bbe2c4308942c1cdd8e2e15c0640b379caed4"),
+    "corrections.jsonl": (126_130, "319a20d4d18a632b71a93aed15b6e6f533b23fa622a73bb26cce6aff35ff7b91"),
+    "terminology.jsonl": (98_578, "98d69653ba962b1f88f84e9de28e13b9fa1c8f3fcbfbdc319e89b182f68a2144"),
+}
+CH10_UNIT_PREFIX_LOCK = (
+    12_022,
+    "297418f7329522e269bb7c66997665167e1ce8034a60dd2b06b34ddfceff0e4f",
+)
+CH10_UNIT_SUFFIX_LOCK = (
+    3_731,
+    "cfdb40e6debfad35ab5a0adaf8c7f0e6c2a6518ce1d7d3193e90e8b7f09cf6bc",
+)
 
 
 def sha(path: Path) -> str:
@@ -275,11 +295,28 @@ def verify_ch09_prefixes() -> None:
             raise ValueError(f"{name} Chapter 1--8 byte prefix changed")
     unit_lines = (BACKEND / "units.jsonl").read_bytes().splitlines(keepends=True)
     prefix = b"".join(unit_lines[:8])
-    suffix = b"".join(unit_lines[9:])
+    # Chapter 10 has now replaced its queued row; preserve only the still-queued
+    # Chapter 11--bridge suffix while the Chapter 1--8/Chapter 9 boundaries are
+    # independently locked by the historical and current prefix checks.
+    suffix = b"".join(unit_lines[10:])
     if (len(prefix), sha_bytes(prefix)) != CH09_UNIT_PREFIX_LOCK:
         raise ValueError("units.jsonl Chapter 1--8 byte prefix changed")
-    if (len(suffix), sha_bytes(suffix)) != CH09_UNIT_SUFFIX_LOCK:
-        raise ValueError("units.jsonl Chapter 10--bridge byte suffix changed")
+    if (len(suffix), sha_bytes(suffix)) != CH10_UNIT_SUFFIX_LOCK:
+        raise ValueError("units.jsonl Chapter 11--bridge byte suffix changed")
+
+
+def verify_ch10_prefixes() -> None:
+    for name, (size, expected_sha) in CH10_PREFIX_LOCKS.items():
+        data = (BACKEND / name).read_bytes()
+        if len(data) < size or sha_bytes(data[:size]) != expected_sha:
+            raise ValueError(f"{name} Chapter 1--9 byte prefix changed")
+    unit_lines = (BACKEND / "units.jsonl").read_bytes().splitlines(keepends=True)
+    prefix = b"".join(unit_lines[:9])
+    suffix = b"".join(unit_lines[10:])
+    if (len(prefix), sha_bytes(prefix)) != CH10_UNIT_PREFIX_LOCK:
+        raise ValueError("units.jsonl Chapter 1--9 byte prefix changed")
+    if (len(suffix), sha_bytes(suffix)) != CH10_UNIT_SUFFIX_LOCK:
+        raise ValueError("units.jsonl Chapter 11--bridge byte suffix changed")
 
 
 def register_id(ids: dict[str, str], record_id: str, location: str) -> None:
@@ -309,6 +346,7 @@ def main() -> None:
     verify_ch06_prefixes()
     verify_ch08_prefixes()
     verify_ch09_prefixes()
+    verify_ch10_prefixes()
     generated_paths = [BACKEND / name for name in GENERATED]
     before = hashes(generated_paths)
     run_one = subprocess.run(
@@ -325,6 +363,7 @@ def main() -> None:
     verify_ch06_prefixes()
     verify_ch08_prefixes()
     verify_ch09_prefixes()
+    verify_ch10_prefixes()
     run_two = subprocess.run(
         [sys.executable, str(BACKEND / "generate_backend.py")],
         cwd=ROOT,
@@ -339,6 +378,7 @@ def main() -> None:
     verify_ch06_prefixes()
     verify_ch08_prefixes()
     verify_ch09_prefixes()
+    verify_ch10_prefixes()
     if before != after_one:
         raise ValueError("canonical generator differs from checked-in backend outputs")
     if after_one != after_two or run_one.stdout != run_two.stdout:
@@ -787,24 +827,72 @@ def main() -> None:
     ):
         raise ValueError("Chapter 9 target authority file mismatch")
 
+    chapter_ten = chapter_units[9]
+    chapter_ten_expected = {
+        "source_bytes": 42703,
+        "source_lines": 894,
+        "source_sha256": "31f38daee49b9abfcd513a1c4a3f78414b122e469c6ac2d559c0b73ecbc082f8",
+        "target_bytes": 42627,
+        "target_lines": 876,
+        "target_sha256": "6456f9def822da572e117f3ec368931f0bfb441840aa0785be1df6080bbb6840",
+        "target_title": "Distribusi",
+        "course_role": "advanced_continuation",
+        "translation_state": "admitted",
+        "qa_state": "passed",
+        "source_corrections": 16,
+        "build_master_path": "source/id-ID/functional-analysis-id-through-ch10.tex",
+        "build_master_bytes": 9866,
+        "build_master_lines": 336,
+        "build_master_sha256": "5de05f7a154bea99d11924fc21dbbf7495c8642d5a3c58e48e0fdd053dd400b4",
+        "artifact_path": "output/pdf/analisis-fungsional-dan-aljabar-operator-id-bab-1-10.pdf",
+        "artifact_bytes": 1796056,
+        "artifact_pages": 153,
+        "artifact_sha256": "1f793d022efeafae1c69b4f36a9b992031f77bf343154e585dc95ba543d72ebc",
+        "artifact_state": "canonical_output_copy_present_and_frozen",
+        "qa_receipt_id": "QA-CH10-ADMISSION-20260822",
+        "receipt_document_state": "present",
+        "receipt_path": "provenance/CH10_BUILD_AND_QA_RECEIPT.md",
+        "receipt_sha256": "2a4d7a6379b1cc4f634fd45d75413133670c134d9b3ba55c363ff273645b9c1f",
+        "admission_state": "admitted",
+        "publication_state": "pending",
+        "rights_id": "RIGHTS-ERDMAN-CC-BY-SA-4.0",
+    }
+    for field, expected in chapter_ten_expected.items():
+        if chapter_ten.get(field) != expected:
+            raise ValueError(f"Chapter 10 {field} invariant failed")
+    source_bytes = (ROOT / "source" / "upstream" / "distributions.tex").read_bytes()
+    target_bytes = (ROOT / "source" / "id-ID" / "distributions-id.tex").read_bytes()
+    if (len(source_bytes), len(source_bytes.splitlines()), sha_bytes(source_bytes)) != (
+        42703,
+        894,
+        "31f38daee49b9abfcd513a1c4a3f78414b122e469c6ac2d559c0b73ecbc082f8",
+    ):
+        raise ValueError("Chapter 10 source authority file mismatch")
+    if (len(target_bytes), len(target_bytes.splitlines()), sha_bytes(target_bytes)) != (
+        42627,
+        876,
+        "6456f9def822da572e117f3ec368931f0bfb441840aa0785be1df6080bbb6840",
+    ):
+        raise ValueError("Chapter 10 target authority file mismatch")
+
     expected_counts = {
         "units.jsonl": 18,
-        "semantic_units.jsonl": 1063,
-        "segments.jsonl": 1265,
-        "relations.jsonl": 4692,
-        "formula_map.jsonl": 6869,
-        "exercise_support.jsonl": 37,
-        "artifacts.jsonl": 77,
-        "qa_events.jsonl": 68,
-        "corrections.jsonl": 156,
-        "terminology.jsonl": 255,
+        "semantic_units.jsonl": 1179,
+        "segments.jsonl": 1397,
+        "relations.jsonl": 5215,
+        "formula_map.jsonl": 7517,
+        "exercise_support.jsonl": 48,
+        "artifacts.jsonl": 88,
+        "qa_events.jsonl": 76,
+        "corrections.jsonl": 172,
+        "terminology.jsonl": 283,
         "terminology_qa.jsonl": 7,
     }
     for name, count in expected_counts.items():
         if len(records_by_file[name]) != count:
             raise ValueError(f"{name} expected {count}, got {len(records_by_file[name])}")
-    if len(term_rows) != 1423:
-        raise ValueError(f"index_terms.csv expected 1423 rows, got {len(term_rows)}")
+    if len(term_rows) != 1524:
+        raise ValueError(f"index_terms.csv expected 1524 rows, got {len(term_rows)}")
 
     chapter_two_counts = {
         "semantic_units.jsonl": 34,
@@ -1133,6 +1221,56 @@ def main() -> None:
     ]:
         raise ValueError("Chapter 9 ordered section titles changed")
 
+    chapter_ten_counts = {
+        "semantic_units.jsonl": 116,
+        "segments.jsonl": 132,
+        "relations.jsonl": 523,
+        "formula_map.jsonl": 648,
+        "exercise_support.jsonl": 11,
+    }
+    for name, count in chapter_ten_counts.items():
+        actual = sum(
+            record["id"].startswith("FAOA-2015-CH10-")
+            for record in records_by_file[name]
+        )
+        if actual != count:
+            raise ValueError(f"{name} Chapter 10 expected {count}, got {actual}")
+    chapter_ten_terms = [
+        row for row in term_rows if row["id"].startswith("FAOA-2015-CH10-")
+    ]
+    if len(chapter_ten_terms) != 101:
+        raise ValueError("Chapter 10 index-term projection invariant failed")
+    chapter_ten_semantic = [
+        record
+        for record in records_by_file["semantic_units.jsonl"]
+        if record["id"].startswith("FAOA-2015-CH10-")
+    ]
+    chapter_ten_segments = [
+        record
+        for record in records_by_file["segments.jsonl"]
+        if record["id"].startswith("FAOA-2015-CH10-")
+    ]
+    if any(
+        record.get("translation_state") != "admitted"
+        or record.get("qa_state") != "passed"
+        for record in chapter_ten_semantic + chapter_ten_segments
+    ):
+        raise ValueError("Chapter 10 semantic/segment admission state differs")
+    chapter_ten_sections = [
+        (record.get("source_title_tex"), record.get("target_title_tex"))
+        for record in chapter_ten_semantic
+        if record["unit_kind"] == "section"
+    ]
+    if chapter_ten_sections != [
+        ("Inductive Limits", "Limit Induktif"),
+        ("$LF$-spaces", "Ruang-$LF$"),
+        ("Distributions", "Distribusi"),
+        ("Convolution", "Konvolusi"),
+        ("Distributional Solutions to Ordinary Differential Equations", "Solusi Distribusional untuk Persamaan Diferensial Biasa"),
+        ("The Fourier Transform", "Transformasi Fourier"),
+    ]:
+        raise ValueError("Chapter 10 ordered section titles changed")
+
     formula_records = records_by_file["formula_map.jsonl"]
     source_formula_count = sum(len(record["source_formula_ids"]) for record in formula_records)
     target_formula_count = sum(len(record["target_formula_ids"]) for record in formula_records)
@@ -1143,7 +1281,7 @@ def main() -> None:
         "preserved_math_key_after_localized_text_substitution",
     }
     exact_formula_count = sum(record["alignment"] in exact_alignment_kinds for record in formula_records)
-    if (source_formula_count, target_formula_count, exact_formula_count) != (6867, 6874, 6746):
+    if (source_formula_count, target_formula_count, exact_formula_count) != (7518, 7522, 7371):
         raise ValueError("combined formula-map coverage invariant failed")
     chapter_two_formula = [
         record for record in formula_records if record["id"].startswith("FAOA-2015-CH02-")
@@ -2113,33 +2251,28 @@ def main() -> None:
             raise ValueError(f"missing artifact {artifact['path']}")
         if artifact.get("artifact_kind") == "source_corrections_ledger":
             data = path.read_bytes()
-            if artifact.get("unit_id") == "FAOA-2015-CH09":
-                historical_size = artifact["bytes"]
-                if (
-                    len(data) < historical_size
-                    or sha_bytes(data[:historical_size]) != artifact["sha256"]
-                ):
-                    raise ValueError(f"append-only artifact prefix mismatch {artifact['id']}")
-            else:
-                # The Chapter 9 boundary source-ordered the growing prose
-                # ledger. Historical chapter artifact records remain frozen
-                # in the protected Chapter 1--8 backend prefix; validate the
-                # exact current ledger once instead of pretending its old
-                # byte offsets are still append-only prefixes.
-                headings = [
-                    line
-                    for line in data.decode("utf-8").splitlines()
-                    if line.startswith("## Chapter ")
+            # Historical artifact records retain their boundary hashes, while
+            # this cumulative human-readable ledger is rewritten into a
+            # chapter-indexed document at later admissions. Validate the exact
+            # current identity once rather than claiming byte-prefix continuity.
+            headings = [
+                line
+                for line in data.decode("utf-8").splitlines()
+                if line.startswith("## Chapter ")
+            ]
+            if (
+                (len(data), sha_bytes(data))
+                != (
+                    32495,
+                    "8bd1be45b70a5e2395e67c20f192f89fc658f3d158d8ff7bb9b1e9cef77b947b",
+                )
+                or headings != [
+                    "## Chapter 1", "## Chapter 2", "## Chapter 3", "## Chapter 4",
+                    "## Chapter 5", "## Chapter 6", "## Chapter 7", "## Chapter 8",
+                    "## Chapter 9", "## Chapter 10",
                 ]
-                if (
-                    (len(data), sha_bytes(data))
-                    != (
-                        29933,
-                        "8854271d5a35eaddc3fc1141f7a2fc1e100796652a30fb52b257fb5b34c9d514",
-                    )
-                    or headings != [f"## Chapter {number}" for number in range(1, 10)]
-                ):
-                    raise ValueError("source-ordered Chapters 1--9 correction ledger changed")
+            ):
+                raise ValueError("chapter-indexed Chapters 1--10 correction ledger changed")
             continue
         if path.stat().st_size != artifact["bytes"] or sha(path) != artifact["sha256"]:
             raise ValueError(f"artifact mismatch {artifact['id']}")
@@ -4045,6 +4178,309 @@ def main() -> None:
         raise ValueError("Chapter 9 defined-term closure changed")
     if [int(row["source_order"]) for row in chapter_nine_terms] != list(range(1, 92)):
         raise ValueError("Chapter 9 index occurrence order changed")
+
+    chapter_ten_formula = [
+        record
+        for record in formula_records
+        if record["id"].startswith("FAOA-2015-CH10-")
+    ]
+    chapter_ten_alignment_counts: dict[str, int] = {}
+    for record in chapter_ten_formula:
+        alignment = record["alignment"]
+        chapter_ten_alignment_counts[alignment] = (
+            chapter_ten_alignment_counts.get(alignment, 0) + 1
+        )
+    if chapter_ten_alignment_counts != {
+        "preserved_exact_after_text_aware_whitespace_normalization": 623,
+        "preserved_exact_after_text_aware_whitespace_normalization_reordered": 1,
+        "preserved_math_key_after_localized_text_substitution": 1,
+        "localized_math_text_reviewed": 8,
+        "reviewed_source_correction_group_primary": 1,
+        "reviewed_target_only_source_correction_group_member": 5,
+        "reviewed_source_correction": 9,
+    }:
+        raise ValueError("Chapter 10 formula-alignment inventory changed")
+    chapter_ten_source_formula_list = [
+        formula_id
+        for record in chapter_ten_formula
+        for formula_id in record["source_formula_ids"]
+    ]
+    chapter_ten_target_formula_list = [
+        formula_id
+        for record in chapter_ten_formula
+        for formula_id in record["target_formula_ids"]
+    ]
+    if len(chapter_ten_source_formula_list) != 651 or set(chapter_ten_source_formula_list) != {
+        f"FAOA-2015-CH10-SRC-MATH-{number:04d}" for number in range(1, 652)
+    } or chapter_ten_target_formula_list != [
+        f"FAOA-2015-CH10-ID-MATH-{number:04d}" for number in range(1, 649)
+    ]:
+        raise ValueError("Chapter 10 stable formula-ID closure changed")
+    expected_chapter_ten_formula_corrections = {
+        42: "FAOA-2015-CH10-CORR-001",
+        **{number: "FAOA-2015-CH10-CORR-003" for number in range(63, 69)},
+        86: "FAOA-2015-CH10-CORR-005",
+        88: "FAOA-2015-CH10-CORR-006",
+        330: "FAOA-2015-CH10-CORR-010",
+        404: "FAOA-2015-CH10-CORR-012",
+        438: "FAOA-2015-CH10-CORR-013",
+        443: "FAOA-2015-CH10-CORR-014",
+        592: "FAOA-2015-CH10-CORR-015",
+        602: "FAOA-2015-CH10-CORR-016",
+        603: "FAOA-2015-CH10-CORR-016",
+    }
+    actual_chapter_ten_formula_corrections = {
+        int(record["id"].rsplit("-", 1)[1]): record["correction_id"]
+        for record in chapter_ten_formula
+        if record.get("correction_id")
+    }
+    if actual_chapter_ten_formula_corrections != expected_chapter_ten_formula_corrections:
+        raise ValueError("Chapter 10 formula-to-correction binding changed")
+    direct_group = [
+        record
+        for record in chapter_ten_formula
+        if record.get("replacement_group_id") == "FAOA-2015-CH10-CORR-003-MATH-GROUP"
+    ]
+    expected_group_source_ids = [
+        f"FAOA-2015-CH10-SRC-MATH-{number:04d}" for number in range(63, 72)
+    ]
+    expected_group_target_ids = [
+        f"FAOA-2015-CH10-ID-MATH-{number:04d}" for number in range(63, 69)
+    ]
+    if [record["id"] for record in direct_group] != [
+        f"FAOA-2015-CH10-MATHMAP-{number:04d}" for number in range(63, 69)
+    ] or direct_group[0].get("source_formula_ids") != expected_group_source_ids or any(
+        record.get("source_formula_ids") for record in direct_group[1:]
+    ) or any(
+        record.get("replacement_group_source_formula_ids") != expected_group_source_ids
+        or record.get("replacement_group_target_formula_ids") != expected_group_target_ids
+        for record in direct_group
+    ):
+        raise ValueError("Chapter 10 direct-limit formula replacement group changed")
+    if {
+        int(record["id"].rsplit("-", 1)[1])
+        for record in chapter_ten_formula
+        if record["alignment"] == "localized_math_text_reviewed"
+    } != {251, 252, 259, 260, 261, 265, 266, 267} or {
+        int(record["id"].rsplit("-", 1)[1])
+        for record in chapter_ten_formula
+        if record["alignment"] == "preserved_math_key_after_localized_text_substitution"
+    } != {186}:
+        raise ValueError("Chapter 10 localized math-text maps changed")
+    moved_formula = chapter_ten_formula[85]
+    if moved_formula["id"] != "FAOA-2015-CH10-MATHMAP-0086" or moved_formula.get(
+        "source_formula_ids"
+    ) != ["FAOA-2015-CH10-SRC-MATH-0090"] or moved_formula.get(
+        "sequence_opcode"
+    ) != "move":
+        raise ValueError("Chapter 10 reordered topology formula changed")
+
+    chapter_ten_relations = [
+        record
+        for record in records_by_file["relations.jsonl"]
+        if record["id"].startswith("FAOA-2015-CH10-")
+    ]
+    chapter_ten_relation_types: dict[str, int] = {}
+    for record in chapter_ten_relations:
+        relation_type = record["relation_type"]
+        chapter_ten_relation_types[relation_type] = (
+            chapter_ten_relation_types.get(relation_type, 0) + 1
+        )
+    if chapter_ten_relation_types != {
+        "contains": 116,
+        "translates": 132,
+        "precedes": 131,
+        "declares_label": 18,
+        "xref": 20,
+        "cites": 29,
+        "hints": 3,
+        "uses_term": 35,
+        "licensed_under": 1,
+        "has_artifact": 11,
+        "terminology_evidence": 3,
+        "has_qa_event": 8,
+        "documents_correction": 16,
+    }:
+        raise ValueError("Chapter 10 relation-type inventory changed")
+    chapter_ten_xrefs = [
+        record for record in chapter_ten_relations if record["relation_type"] == "xref"
+    ]
+    chapter_ten_xref_resolutions: dict[str, int] = {}
+    chapter_ten_xref_surfaces: dict[str, int] = {}
+    for record in chapter_ten_xrefs:
+        resolution = record["resolution"]
+        surface = record["target_surface"]
+        chapter_ten_xref_resolutions[resolution] = chapter_ten_xref_resolutions.get(resolution, 0) + 1
+        chapter_ten_xref_surfaces[surface] = chapter_ten_xref_surfaces.get(surface, 0) + 1
+    if chapter_ten_xref_resolutions != {"local": 15, "admitted_prior_unit": 5} or chapter_ten_xref_surfaces != {"ref": 13, "eqref": 7}:
+        raise ValueError("Chapter 10 reference closure changed")
+    chapter_ten_hints = [
+        (record["from_id"], record["to_id"])
+        for record in chapter_ten_relations
+        if record["relation_type"] == "hints"
+    ]
+    if chapter_ten_hints != [
+        ("FAOA-2015-CH10-NODE-0006", "FAOA-2015-CH10-NODE-0005"),
+        ("FAOA-2015-CH10-NODE-0031", "FAOA-2015-CH10-NODE-0030"),
+        ("FAOA-2015-CH10-NODE-0095", "FAOA-2015-CH10-NODE-0094"),
+    ]:
+        raise ValueError("Chapter 10 proof-hint topology changed")
+
+    chapter_ten_artifacts = [
+        record
+        for record in artifact_records
+        if record.get("unit_id") == "FAOA-2015-CH10"
+    ]
+    expected_chapter_ten_artifact_ids = [
+        "ARTIFACT-FAOA-ID-CH10-TARGET-TEX",
+        "ARTIFACT-FAOA-ID-THROUGH-CH10-MASTER",
+        "ARTIFACT-FAOA-ID-THROUGH-CH10-PDF",
+        "ARTIFACT-FAOA-ID-CH10-STRUCTURAL-CHECKER",
+        "ARTIFACT-FAOA-ID-CH10-TRANSLATION-REPORT",
+        "ARTIFACT-FAOA-ID-CH10-CORRECTIONS-LEDGER",
+        "ARTIFACT-FAOA-ID-CH10-PROSE-CORRECTIONS-LEDGER",
+        "ARTIFACT-FAOA-ID-CH10-RENDER-MANIFEST",
+        "ARTIFACT-FAOA-ID-CH10-CONTACT-SHEET",
+        "ARTIFACT-FAOA-ID-CH10-VISUAL-ACCESSIBILITY-AUDIT",
+        "ARTIFACT-FAOA-ID-CH10-QA-RECEIPT",
+    ]
+    if [record["id"] for record in chapter_ten_artifacts] != expected_chapter_ten_artifact_ids:
+        raise ValueError("Chapter 10 artifact inventory changed")
+    if any(
+        record.get("qa_receipt_id") != "QA-CH10-ADMISSION-20260822"
+        or record.get("receipt_path") != "provenance/CH10_BUILD_AND_QA_RECEIPT.md"
+        or record.get("receipt_sha256") != "2a4d7a6379b1cc4f634fd45d75413133670c134d9b3ba55c363ff273645b9c1f"
+        for record in chapter_ten_artifacts
+    ):
+        raise ValueError("Chapter 10 artifacts are not receipt-bound")
+    chapter_ten_artifact_identities = {
+        record["id"]: (record["path"], record["bytes"], record["sha256"])
+        for record in chapter_ten_artifacts
+    }
+    if chapter_ten_artifact_identities != {
+        "ARTIFACT-FAOA-ID-CH10-TARGET-TEX": ("source/id-ID/distributions-id.tex", 42627, "6456f9def822da572e117f3ec368931f0bfb441840aa0785be1df6080bbb6840"),
+        "ARTIFACT-FAOA-ID-THROUGH-CH10-MASTER": ("source/id-ID/functional-analysis-id-through-ch10.tex", 9866, "5de05f7a154bea99d11924fc21dbbf7495c8642d5a3c58e48e0fdd053dd400b4"),
+        "ARTIFACT-FAOA-ID-THROUGH-CH10-PDF": ("output/pdf/analisis-fungsional-dan-aljabar-operator-id-bab-1-10.pdf", 1796056, "1f793d022efeafae1c69b4f36a9b992031f77bf343154e585dc95ba543d72ebc"),
+        "ARTIFACT-FAOA-ID-CH10-STRUCTURAL-CHECKER": ("qa/check_ch10_translation.py", 16387, "fa247c00608997da81d65bdcadc0bfa916060a0bb8858c24e5f0a54ac5aa75db"),
+        "ARTIFACT-FAOA-ID-CH10-TRANSLATION-REPORT": ("qa/ch10-translation-report.json", 1089, "8b472e7b803cfb566e08c4ff3f1e464f7564520faf2f9115f3b57e7042c1218d"),
+        "ARTIFACT-FAOA-ID-CH10-CORRECTIONS-LEDGER": ("provenance/SOURCE_CORRECTIONS_CH10.json", 11858, "c5010ce91ae98d3c9b3637fe6a553f4df7d1ba524faa75b1f4fb42b0b036c948"),
+        "ARTIFACT-FAOA-ID-CH10-PROSE-CORRECTIONS-LEDGER": ("provenance/SOURCE_CORRECTIONS.md", 32495, "8bd1be45b70a5e2395e67c20f192f89fc658f3d158d8ff7bb9b1e9cef77b947b"),
+        "ARTIFACT-FAOA-ID-CH10-RENDER-MANIFEST": ("provenance/CH10_RENDER_MANIFEST.csv", 29798, "b1dd863b6b2441e0a49bf9fe3248b759c9889f0a74654fbe060d868f60cfb7ca"),
+        "ARTIFACT-FAOA-ID-CH10-CONTACT-SHEET": ("provenance/CH10_CONTACT_SHEET.png", 4463573, "e5b14686ad4ce088d02ba819e3df14621936dd888b429b92a9506e53ce9d34f6"),
+        "ARTIFACT-FAOA-ID-CH10-VISUAL-ACCESSIBILITY-AUDIT": ("qa/CH10_FINAL_PDF_VISUAL_ACCESSIBILITY_AUDIT.md", 7203, "5d5ff18e230a8fc1d2aace1b801b53487ebb409c5bdb3bc6e600056b73a75bea"),
+        "ARTIFACT-FAOA-ID-CH10-QA-RECEIPT": ("provenance/CH10_BUILD_AND_QA_RECEIPT.md", 10338, "2a4d7a6379b1cc4f634fd45d75413133670c134d9b3ba55c363ff273645b9c1f"),
+    }:
+        raise ValueError("Chapter 10 public/local artifact identities changed")
+
+    chapter_ten_qa = [
+        record
+        for record in records_by_file["qa_events.jsonl"]
+        if record.get("unit_id") == "FAOA-2015-CH10"
+    ]
+    if [record["id"] for record in chapter_ten_qa] != [
+        "QA-CH10-STRUCTURAL-20260822",
+        "QA-CH10-MATH-20260822",
+        "QA-CH10-LANGUAGE-20260822",
+        "QA-CH10-BUILD-20260822",
+        "QA-CH10-VISUAL-20260822",
+        "QA-CH10-ACCESSIBILITY-20260822",
+        "QA-CH10-RIGHTS-20260822",
+        "QA-CH10-ADMISSION-20260822",
+    ] or any(
+        record.get("result") != "pass"
+        or record.get("qa_receipt_id") != "QA-CH10-ADMISSION-20260822"
+        or record.get("model_id") != "OpenAI Codex gpt-5.6-sol, Ultra"
+        for record in chapter_ten_qa
+    ):
+        raise ValueError("Chapter 10 typed QA event closure changed")
+    if chapter_ten_qa[-1].get("decision") != "admitted" or chapter_ten_qa[-1].get(
+        "all_required_admission_gates"
+    ) != "pass":
+        raise ValueError("Chapter 10 admission event changed")
+
+    chapter_ten_corrections = [
+        record
+        for record in records_by_file["corrections.jsonl"]
+        if record.get("unit_id") == "FAOA-2015-CH10"
+    ]
+    if [record["id"] for record in chapter_ten_corrections] != [
+        f"FAOA-2015-CH10-CORR-{number:03d}" for number in range(1, 17)
+    ]:
+        raise ValueError("Chapter 10 correction stable-ID sequence changed")
+    chapter_ten_correction_classes: dict[str, int] = {}
+    for record in chapter_ten_corrections:
+        correction_type = record["correction_type"]
+        chapter_ten_correction_classes[correction_type] = (
+            chapter_ten_correction_classes.get(correction_type, 0) + 1
+        )
+    if chapter_ten_correction_classes != {
+        "mathematical_source_repair": 9,
+        "mechanical_source_repair": 5,
+        "semantic_tex_source_repair": 1,
+        "semantic_source_repair": 1,
+    } or any(
+        record.get("ledger_sha256") != "c5010ce91ae98d3c9b3637fe6a553f4df7d1ba524faa75b1f4fb42b0b036c948"
+        for record in chapter_ten_corrections
+    ):
+        raise ValueError("Chapter 10 correction provenance changed")
+
+    chapter_ten_new_term_ids = [
+        "TERM-DIRECTED-SYSTEM", "TERM-INDUCTIVE-LIMIT", "TERM-DIRECT-LIMIT",
+        "TERM-STRONG-TOPOLOGY", "TERM-STRICT-INDUCTIVE-SEQUENCE",
+        "TERM-STRICT-INDUCTIVE-LIMIT", "TERM-INDUCTIVE-LIMIT-TOPOLOGY",
+        "TERM-LF-SPACE", "TERM-LOCALLY-INTEGRABLE", "TERM-DISTRIBUTION",
+        "TERM-SINGULAR", "TERM-DIRAC-MEASURE", "TERM-DIRAC-DELTA-DISTRIBUTION-AT-A",
+        "TERM-HEAVISIDE-FUNCTION", "TERM-HEAVISIDE-DISTRIBUTION", "TERM-DERIVATIVE",
+        "TERM-DIFFERENTIAL-OPERATOR", "TERM-DIPOLE", "TERM-NORMALIZED-LEBESGUE-MEASURE",
+        "TERM-CONVOLUTION", "TERM-FOURIER-TRANSFORM", "TERM-FORMAL-ADJOINT",
+        "TERM-CLASSICAL", "TERM-WEAK", "TERM-DISTRIBUTIONAL", "TERM-GENERALIZED",
+        "TERM-TEMPERED-DISTRIBUTIONS", "TERM-TEMPERATE-DISTRIBUTIONS",
+    ]
+    chapter_ten_new_terms = [
+        record
+        for record in records_by_file["terminology.jsonl"]
+        if record["id"] in chapter_ten_new_term_ids
+    ]
+    if [record["id"] for record in chapter_ten_new_terms] != chapter_ten_new_term_ids:
+        raise ValueError("Chapter 10 bounded terminology inventory changed")
+    terms_by_id_ch10 = {record["id"]: record for record in chapter_ten_new_terms}
+    if terms_by_id_ch10["TERM-TEMPERED-DISTRIBUTIONS"].get("preferred") != "distribusi tempered" or terms_by_id_ch10["TERM-TEMPERATE-DISTRIBUTIONS"].get("preferred") != "distribusi temperate" or terms_by_id_ch10["TERM-TEMPERATE-DISTRIBUTIONS"].get("canonical_term_id") != "TERM-TEMPERED-DISTRIBUTIONS" or any(
+        record.get("terminology_decision_sha256") != "03005aa60200768a05c700e7d9d8cfa969034204e37ecffbd8b67126c5c66329"
+        for record in (
+            terms_by_id_ch10["TERM-TEMPERED-DISTRIBUTIONS"],
+            terms_by_id_ch10["TERM-TEMPERATE-DISTRIBUTIONS"],
+        )
+    ):
+        raise ValueError("Chapter 10 tempered-distribution terminology binding changed")
+    chapter_ten_term_relations = [
+        record
+        for record in chapter_ten_relations
+        if record["id"].startswith("FAOA-2015-CH10-REL-TERM-")
+        and "EVIDENCE" not in record["id"]
+    ]
+    if len(chapter_ten_term_relations) != 35 or any(
+        record["to_id"] not in ids for record in chapter_ten_term_relations
+    ):
+        raise ValueError("Chapter 10 defined-term closure changed")
+    if [int(row["source_order"]) for row in chapter_ten_terms] != list(range(1, 102)):
+        raise ValueError("Chapter 10 index occurrence order changed")
+
+    chapter_ten_exercises = [
+        record
+        for record in records_by_file["exercise_support.jsonl"]
+        if record["id"].startswith("FAOA-2015-CH10-")
+    ]
+    expected_inline_hint_lines = [None, None, None, None, None, [383], [425], [432], [441], [670], None]
+    if [record["id"] for record in chapter_ten_exercises] != [
+        f"FAOA-2015-CH10-EXERCISE-SUPPORT-{number:03d}" for number in range(1, 12)
+    ] or [record.get("upstream_inline_hint_source_lines") for record in chapter_ten_exercises] != expected_inline_hint_lines or any(
+        record.get("upstream_hint_ids")
+        or record.get("upstream_answer_state") != "absent"
+        or record.get("upstream_solution_state") != "absent"
+        or record.get("provenance") != "separately_authored_not_Erdman"
+        for record in chapter_ten_exercises
+    ):
+        raise ValueError("Chapter 10 exercise-support semantics changed")
 
     terminology_qa = records_by_file["terminology_qa.jsonl"]
     expected_terminology_qa_ids = [
