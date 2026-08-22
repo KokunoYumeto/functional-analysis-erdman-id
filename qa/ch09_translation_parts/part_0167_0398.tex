@@ -1,0 +1,231 @@
+\section{Topologi Kompatibel}
+
+\begin{defn} Misalkan $\sfml T$ suatu topologi pada ruang vektor~$X$.  Kita mengatakan bahwa $\sfml T$
+ \index{kompatibel}%
+\df{kompatibel} dengan struktur linear pada $X$ jika operasi penjumlahan $A\colon X \times X \sto X\colon (x,y) \mapsto x + y$
+dan perkalian skalar $M\colon \K \times X \sto X\colon (\alpha,x) \mapsto \alpha x$ kontinu.  (Di sini, $X \times X$ dan
+$\K \times X$ diperlengkapi dengan topologi hasil kali.)
+
+Jika $X$ adalah ruang vektor yang dilengkapi dengan topologi $\sfml T$ yang kompatibel dengan struktur linearnya, kita mengatakan bahwa pasangan
+$(X,\sfml T)$ adalah suatu
+ \index{topologis!ruang vektor}%
+ \index{vektor!ruang!topologis}%
+ \index{ruang!vektor topologis}%
+\df{ruang vektor topologis}.  (Sebagaimana tentu Anda duga, kita hampir selalu akan tetap menggunakan singkatan baku yang tidak logis seperti
+``Misalkan $X$ suatu ruang vektor topologis \dots''.)  Kita lambangkan dengan $\cat{TVS}$ kategori ruang-ruang vektor topologis
+ \index{kategori!$\cat{TVS}$ sebagai suatu}%
+ \index{TVS@$\cat{TVS}$!kategori}%
+dan pemetaan linear kontinu.
+\end{defn}
+
+\begin{exam} Misalkan $X$ ruang vektor tak nol.  Topologi diskret pada $X$ tidak kompatibel dengan struktur linear pada~$X$.
+\end{exam}
+
+\begin{prop} Misalkan $X$ ruang vektor topologis, $a \in X$, dan $\alpha \in \K$.
+   \begin{enumerate}[label=\rm{(\alph*)}]
+    \item Pemetaan $T_a\colon x \mapsto x + a$
+ \index{translasi}%
+(\df{translasi} oleh~$a$) dari $X$ ke dirinya sendiri merupakan suatu homeomorfisme.
+    \item Jika $\alpha \ne 0$, pemetaan $x \mapsto \alpha x$ dari $X$ ke dirinya sendiri merupakan suatu homeomorfisme.
+   \end{enumerate}
+\end{prop}
+
+\begin{cor} Suatu himpunan $U$ adalah lingkungan titik $x$ dalam ruang vektor topologis jika dan hanya jika $-x + U$ adalah lingkungan~$\vc 0$.
+\end{cor}
+
+\begin{cor} Misalkan $\sfml U$ suatu basis filter bagi filter lingkungan di titik asal dalam ruang vektor topologis~$X$.  Suatu subhimpunan $V$ dari $X$
+terbuka jika dan hanya jika untuk setiap $x \in V$ terdapat $U \in \sfml U$ sedemikian sehingga $x + U \subseteq V$.
+\end{cor}
+
+Korolari sebelumnya menyatakan bahwa topologi suatu ruang vektor topologis sepenuhnya ditentukan oleh suatu basis filter bagi
+filter lingkungan di titik asal ruang tersebut.  Basis filter semacam itu kita sebut
+ \index{lokal!basis}%
+ \index{basis!lokal}%
+\df{basis lokal} (bagi topologi tersebut).
+
+\begin{prop} Jika $U$ adalah lingkungan titik asal dalam ruang vektor topologis dan $0 \ne \lambda \in \K$, maka $\lambda U$ adalah
+lingkungan titik asal.
+\end{prop}
+
+\begin{prop} Dalam ruang vektor topologis, setiap lingkungan $\vc 0$ memuat suatu lingkungan seimbang dari~$\vc 0$.
+\end{prop}
+
+\begin{prop} Dalam ruang vektor topologis, setiap lingkungan $\vc 0$ bersifat menyerap.
+\end{prop}
+
+\begin{prop} Jika $V$ adalah lingkungan $\vc 0$ dalam ruang vektor topologis, maka terdapat lingkungan $U$ dari $\vc 0$
+sedemikian sehingga $U + U \subseteq V$.
+\end{prop}
+
+Proposisi berikutnya merupakan (hampir) kebalikan dari ketiga proposisi sebelumnya.
+
+\begin{prop}\label{prop_fbase_induces_top} Misalkan $X$ ruang vektor dan $\sfml U$ suatu basis filter pada $X$ yang memenuhi syarat-syarat berikut:
+   \begin{enumerate}[label=\rm{(\alph*)}]
+     \item setiap anggota $\sfml U$ seimbang;
+     \item setiap anggota $\sfml U$ bersifat menyerap; dan
+     \item untuk setiap $V \in \sfml U$ terdapat $U \in \sfml U$ sedemikian sehingga $U + U \subseteq V$.
+   \end{enumerate}
+Maka terdapat topologi $\sfml T$ pada $X$ yang menjadikan $X$ suatu ruang vektor topologis dan $\sfml U$ suatu basis lokal bagi~$\sfml T$.
+\end{prop}
+
+\begin{exam} Dalam ruang linear bernorma, keluarga $\{C_r(\vc 0)\colon r > 0\}$ yang terdiri atas bola-bola tertutup berpusat di titik asal merupakan basis lokal bagi
+topologi pada ruang tersebut.
+\end{exam}
+
+\begin{exam} Misalkan $\Omega$ suatu subhimpunan terbuka tak kosong dari $\R^n$.  Untuk setiap subhimpunan kompak $K \subseteq \Omega$ dan setiap $\epsilon > 0$, misalkan
+$U_{K,\epsilon} = \{ f \in \fml C(\Omega)\colon \abs{f(x)} \le \epsilon \text{ jika } x \in K\}$.  Maka keluarga semua
+himpunan $U_{K,\epsilon}$ tersebut merupakan basis lokal bagi suatu topologi pada~$\fml C(\Omega)$.  Topologi ini adalah
+ \index{topologi!konvergensi seragam pada himpunan-himpunan kompak}%
+ \index{seragam!konvergensi!pada himpunan-himpunan kompak}%
+ \index{konvergensi!seragam!pada himpunan-himpunan kompak}%
+ \index{himpunan-himpunan kompak!topologi konvergensi seragam pada}%
+\df{topologi konvergensi seragam pada himpunan-himpunan kompak}.
+\end{exam}
+
+\begin{prop} Misalkan $A$ suatu subhimpunan dari ruang vektor topologis dan $0 \ne \alpha \in \K$.  Maka $\alpha \clo A = \clo{\alpha A}$.
+\end{prop}
+
+\begin{prop} Misalkan $S$ suatu himpunan dalam ruang vektor topologis.
+   \begin{enumerate}[label=\rm{(\alph*)}]
+    \item Jika $S$ seimbang, demikian pula tutupannya.
+    \item Selubung seimbang dari $S$ mungkin tidak tertutup sekalipun $S$ sendiri tertutup.
+   \end{enumerate}
+\end{prop}
+
+\begin{proof}[\emph{Petunjuk untuk bukti}] Untuk (b), misalkan $S$ adalah hiperbola di $\R^2$ yang persamaannya $xy = 1$.  \ns
+\end{proof}
+
+\begin{prop} Jika $M$ merupakan subruang vektor dari suatu ruang vektor topologis, maka~$\clo M$ juga merupakan subruang vektor.
+\end{prop}
+
+Jelas bahwa setiap himpunan penyerap dalam ruang vektor topologis harus memuat titik asal.  Namun, contoh berikut menunjukkan bahwa
+himpunan tersebut belum tentu memuat suatu lingkungan titik asal.
+
+\begin{exam}[Apel Schatz] Dalam ruang vektor real $\R^2$, himpunan
+    \[ C_1\bigl((-1,0)\bigr) \cup C_1\bigl((1,0)\bigr) \cup \bigl(\{0\} \times [-1,1]\bigr) \]
+bersifat menyerap, tetapi bukan merupakan lingkungan titik asal.
+\end{exam}
+
+Hasil berikut menyatakan bahwa dalam ruang vektor topologis, himpunan kompak dan himpunan tertutup dapat dipisahkan oleh himpunan terbuka jika keduanya saling lepas.
+
+\begin{prop} Jika $K$ dan $C$ adalah dua subhimpunan tak kosong yang saling lepas dalam ruang vektor topologis $X$, dengan $K$ kompak dan $C$ tertutup, maka terdapat
+lingkungan $V$ dari titik asal sedemikian sehingga $(K + V) \cap (C + V)~=~\emptyset$.
+\end{prop}
+
+\begin{cor} Jika $K$ adalah subhimpunan kompak dari ruang vektor topologis Hausdorff $X$ dan $C$ adalah subhimpunan tertutup dari~$X$, maka $K + C$
+tertutup di~$X$.
+\end{cor}
+
+\begin{proof}[\emph{Petunjuk untuk bukti}] Misalkan $x \in (K + C)^c$.  Tinjau himpunan $x - K$ dan~$C$.  \ns
+\end{proof}
+
+\begin{cor} Setiap anggota suatu basis lokal $\sfml B$ bagi ruang vektor topologis memuat tutupan suatu anggota~$\sfml B$.
+\end{cor}
+
+\begin{prop} Misalkan $X$ ruang vektor topologis.  Maka pernyataan-pernyataan berikut ekuivalen.
+  \begin{enumerate}[label=\rm{(\alph*)}]
+    \item $\{\vc 0\}$ adalah himpunan tertutup di~$X$.
+    \item $\{x\}$ adalah himpunan tertutup untuk setiap $x \in X$.
+    \item Untuk setiap $x \ne 0$ di $X$, terdapat lingkungan titik asal yang tidak memuat $x$.
+    \item $\bigcap \sfml U = \{0\}$, dengan $\sfml U$ suatu basis lokal bagi~$X$.
+    \item $X$ adalah Hausdorff
+  \end{enumerate}
+\end{prop}
+
+\begin{defn} Ruang topologis disebut
+ \index{regular!ruang topologis}%
+ \index{topologis!ruang!regular}%
+\df{regular} jika titik-titik dan himpunan-himpunan tertutup dapat dipisahkan oleh himpunan terbuka; yaitu, jika $C$ adalah subhimpunan tertutup dari ruang tersebut dan $x$ adalah titik
+dari ruang tersebut yang tidak berada dalam $C$, maka terdapat himpunan terbuka $U$ dan $V$ yang saling lepas sedemikian sehingga $C \subseteq U$ dan $x \in V$.
+\end{defn}
+
+\begin{prop} Setiap ruang vektor topologis Hausdorff bersifat regular.
+\end{prop}
+
+\begin{cor} Jika $X$ adalah ruang vektor topologis yang setiap titiknya merupakan himpunan tertutup, maka $X$ bersifat regular.
+\end{cor}
+
+\begin{prop} Misalkan $X$ ruang vektor topologis Hausdorff.  Jika $M$ adalah subruang dari $X$ dan $F$ adalah subruang vektor berdimensi hingga
+dari $X$, maka $M + F$ tertutup di~$X$. (Khususnya, $F$ tertutup.)
+\end{prop}
+
+\begin{defn} Suatu subhimpunan $B$ dari ruang vektor topologis disebut
+ \index{terbatas!himpunan dalam suatu TVS}%
+\df{terbatas} jika untuk setiap lingkungan $U$ dari $\vc 0$ dalam ruang tersebut terdapat $\alpha > 0$ sedemikian sehingga $B \subseteq \alpha U$.
+\end{defn}
+
+\begin{prop} Suatu subhimpunan dari ruang vektor topologis bersifat terbatas jika dan hanya jika diserap oleh setiap lingkungan~$\vc 0$.
+\end{prop}
+
+\begin{prop} Suatu subhimpunan $B$ dari ruang vektor topologis bersifat terbatas jika dan hanya jika $\alpha_n x_n \sto \vc 0$ kapan pun $(x_n)$ adalah
+barisan vektor dalam $B$ dan $(\alpha_n)$ adalah barisan skalar dalam $c_0$.
+\end{prop}
+
+\begin{prop} Jika suatu subhimpunan dari ruang vektor topologis bersifat terbatas, maka tutupannya juga terbatas.
+\end{prop}
+
+\begin{prop} Jika subhimpunan $A$ dan $B$ dari ruang vektor topologis bersifat terbatas, maka $A \cup B$ juga terbatas.
+\end{prop}
+
+\begin{prop} Jika subhimpunan $A$ dan $B$ dari ruang vektor topologis bersifat terbatas, maka $A + B$ juga terbatas.
+\end{prop}
+
+\begin{prop} Setiap subhimpunan kompak dari ruang vektor topologis adalah terbatas.
+\end{prop}
+
+Seperti halnya pada ruang linear bernorma, kita mengatakan bahwa pemetaan linear bersifat \emph{terbatas} jika memetakan himpunan terbatas ke himpunan terbatas.
+
+\begin{defn} Suatu pemetaan linear $T\colon X \sto Y$ antara ruang-ruang vektor topologis disebut
+ \index{terbatas!pemetaan linear}%
+\df{terbatas} jika $T^\sto(B)$ merupakan subhimpunan terbatas dari $Y$ kapan pun $B$ merupakan subhimpunan terbatas dari~$X$.
+\end{defn}
+
+\begin{prop} Setiap pemetaan linear kontinu antara ruang-ruang vektor topologis bersifat terbatas.
+\end{prop}
+
+\begin{defn} Suatu filter $\sfml F$ pada subhimpunan $A$ dari ruang vektor topologis $X$ adalah
+ \index{Cauchy!filter}%
+ \index{filter!Cauchy}%
+\df{filter Cauchy} jika untuk setiap lingkungan $U$ dari titik asal dalam $X$ terdapat $B \in \sfml F$ sedemikian sehingga
+   \[ B - B \subseteq U\,. \]
+\end{defn}
+
+\begin{prop} Pada ruang vektor topologis, setiap filter yang konvergen merupakan filter Cauchy.
+\end{prop}
+
+\begin{defn} Suatu subhimpunan $A$ dari ruang vektor topologis $X$ disebut
+ \index{lengkap!ruang vektor topologis}%
+ \index{topologis!ruang vektor!lengkap}%
+ \index{ruang!vektor topologis!lengkap}%
+\df{lengkap} jika setiap filter Cauchy pada $A$ konvergen ke suatu titik di~$A$.
+\end{defn}
+
+\begin{prop} Setiap subhimpunan lengkap dari ruang vektor topologis Hausdorff adalah tertutup.
+\end{prop}
+
+\begin{prop} Jika $C$ merupakan subhimpunan tertutup dari suatu himpunan lengkap dalam ruang vektor topologis, maka $C$ lengkap.
+\end{prop}
+
+
+
+\begin{prop} Suatu pemetaan linear $T\colon X \sto Y$ antara ruang-ruang vektor topologis bersifat kontinu jika dan hanya jika pemetaan tersebut kontinu di nol.
+\end{prop}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

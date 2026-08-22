@@ -1,0 +1,216 @@
+\section{Hasil Bagi}
+
+\begin{conv} Seperti halnya pada ruang Hilbert dan Banach, kata ``subruang'' dalam konteks ruang vektor topologis
+ \index{subruang!dari ruang vektor topologis}%
+ \index{konvensi!subruang ruang vektor topologis adalah tertutup}%
+berarti \emph{subruang vektor tertutup}.
+\end{conv}
+
+\begin{defn} Misalkan $M$ suatu subruang vektor dari ruang vektor topologis~$X$ dan $\pi\colon X \sto X/M \colon x \mapsto [x]$
+adalah pemetaan hasil bagi yang biasa. Pada ruang vektor hasil bagi $X/M$ kita definisikan suatu topologi, yang kita sebut
+ \index{hasil bagi!topologi}%
+ \index{hasil bagi!ruang vektor topologis}%
+ \index{topologis!ruang vektor!hasil bagi}%
+\df{topologi hasil bagi}, dengan menetapkan filter lingkungan di titik asal pada~$X/M$ sebagai citra oleh $\pi$ dari
+filter lingkungan di titik asal pada~$X$. Artinya, kita menyatakan suatu subhimpunan $V$ dari $X/M$ sebagai lingkungan $\vc 0$ jika,
+dan hanya jika, terdapat suatu lingkungan $U$ dari titik asal di $X$ sedemikian sehingga $V = \pi^{\sto}(U)$.
+\end{defn}
+
+\begin{prop} Misalkan $M$ suatu subruang vektor dari ruang vektor topologis~$X$. Jika $X/M$ diberi topologi hasil bagi, maka
+pemetaan hasil bagi $\pi\colon X \sto X/M$ merupakan pemetaan terbuka sekaligus kontinu.
+\end{prop}
+
+\begin{exam} Misalkan $M$ adalah sumbu~$y$ dalam ruang vektor topologis $\R^2$ (dengan topologinya yang biasa). Identifikasikan $\R^2/M$ dengan
+sumbu~$x$. Meskipun pemetaan hasil bagi memetakan himpunan terbuka ke himpunan terbuka, hiperbola $\{(x,y) \in \R^2\colon xy = 1\}$ menunjukkan
+bahwa $\pi$ tidak harus memetakan himpunan tertutup ke himpunan tertutup.
+\end{exam}
+
+\begin{prop}\label{prop_quotient_top_strong} Misalkan $M$ suatu subruang vektor dari ruang vektor topologis~$X$. Topologi hasil bagi
+pada $X/M$ adalah topologi terbesar yang membuat pemetaan hasil bagi kontinu.
+\end{prop}
+
+Proposisi berikut menjamin bahwa topologi hasil bagi, sebagaimana didefinisikan di atas, menjadikan ruang vektor hasil bagi suatu ruang vektor topologis.
+
+\begin{prop} Misalkan $M$ suatu subruang vektor dari ruang vektor topologis~$X$. Topologi hasil bagi pada $X/M$ kompatibel dengan
+operasi-operasi ruang vektor pada ruang tersebut.
+\end{prop}
+
+\begin{prop} Jika $M$ suatu subruang vektor dari ruang vektor topologis~$X$, maka ruang hasil bagi $X/M$ bersifat Hausdorff jika dan hanya
+jika $M$ tertutup dalam~$X$.
+\end{prop}
+
+\begin{exer} Jelaskan pula bagaimana proposisi sebelumnya memungkinkan kita mengaitkan suatu ruang lain yang bersifat Hausdorff dengan
+suatu ruang vektor topologis non-Hausdorff.
+\end{exer}
+
+\begin{prop} Misalkan $T\colon X \sto Y$ suatu pemetaan linear antara ruang-ruang vektor topologis dan $M$ suatu subruang dari $X$. Jika
+ \index{hasil bagi!teorema!untuk $\cat{TVS}$}%
+$M \subseteq \ker T$, maka terdapat fungsi unik $\wt T\colon X/M \sto Y$ sedemikian sehingga $T = \wt T \circ \pi$ (dengan $\pi$
+adalah pemetaan hasil bagi). Fungsi $\wt T$ bersifat linear; fungsi ini kontinu jika dan hanya jika $T$ kontinu; fungsi ini terbuka jika dan hanya jika $T$~terbuka.
+\end{prop}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Ruang Konveks Lokal dan Seminorma}
+
+\begin{prop} Dalam suatu ruang vektor topologis, tutupan suatu himpunan konveks adalah konveks.
+\end{prop}
+
+\begin{prop} Dalam suatu ruang vektor topologis, setiap lingkungan konveks dari $\vc 0$ memuat suatu lingkungan seimbang dan konveks dari~$\vc 0$.
+\end{prop}
+
+\begin{prop} Suatu subhimpunan tertutup $C$ dari ruang vektor topologis bersifat konveks jika dan hanya jika $\frac12(x + y)$ termasuk dalam $C$ setiap kali $x$ dan $y$ juga demikian.
+\end{prop}
+
+\begin{prop} Jika suatu subhimpunan dari ruang vektor topologis bersifat konveks, maka tutupan dan interiornya juga konveks.
+\end{prop}
+
+\begin{defn} Suatu ruang vektor topologis disebut
+ \index{lokal!kekonveksan}%
+ \index{konveks!lokal}%
+\df{konveks lokal} jika ruang tersebut memiliki basis lokal yang terdiri atas himpunan-himpunan konveks. Untuk ringkasnya, suatu ruang vektor topologis
+yang konveks lokal cukup kita sebut sebagai
+ \index{lokal!ruang konveks}%
+\df{ruang konveks lokal}.
+\end{defn}
+
+\begin{prop} Jika $p$ suatu seminorma pada ruang vektor, maka $p(\vc 0) = 0$.
+ \index{seminorma!sifat-sifat elementer}%
+\end{prop}
+
+\begin{prop} Jika $p$ suatu seminorma pada ruang vektor $V$, maka $\abs{p(x) - p(y)} \le p(x - y)$ untuk semua $x$, $y \in V$.
+\end{prop}
+
+\begin{cor} Jika $p$ suatu seminorma pada ruang vektor $V$, maka $p(x) \ge 0$ untuk semua $x \in V$.
+\end{cor}
+
+\begin{prop} Jika $p$ suatu seminorma pada ruang vektor $V$, maka $p^{\gets}(\{0\})$ adalah subruang vektor dari~$V$.
+\end{prop}
+
+\begin{defn} Misalkan $p$ suatu seminorma pada ruang vektor $V$ dan $\epsilon > 0$. Himpunan
+ \index{B@$B_{p,\epsilon}$, $B_p$ (semibola terbuka yang ditentukan oleh~$p$)}%
+$B_{p,\epsilon} := p^{\gets}\bigl([0,\epsilon)\bigr)$ kita sebut
+ \index{terbuka!semibola}%
+ \index{semibola}%
+\df{semibola terbuka} berjari-jari $\epsilon$ di titik asal yang ditentukan oleh~$p$. Demikian pula, himpunan
+\index{C@$C_{p,\epsilon}$, $C_p$ (semibola tertutup yang ditentukan oleh~$p$)}%
+$C_{p,\epsilon} := p^{\gets}\bigl([0,\epsilon]\bigr)$ adalah
+ \index{tertutup!semibola}%
+\df{semibola tertutup} berjari-jari $\epsilon$ di titik asal yang ditentukan oleh~$p$. Untuk semibola terbuka dan tertutup berjari-jari satu yang ditentukan
+oleh $p$, gunakan masing-masing notasi $B_p$ dan $C_p$.
+\end{defn}
+
+\begin{prop} Misalkan $\fml P$ suatu keluarga seminorma pada ruang vektor~$V$. Keluarga $\sfml U$ dari semua irisan hingga dari semibola-semibola terbuka
+di titik asal $V$ menginduksi suatu topologi (yang tidak harus Hausdorff) pada $V$ yang kompatibel dengan struktur linear $V$ dan yang terhadapnya
+$\sfml U$ merupakan suatu basis lokal.
+\end{prop}
+
+\begin{proof}[\emph{Petunjuk untuk bukti}] Proposisi~\ref{prop_fbase_induces_top}.  \ns
+\end{proof}
+
+\begin{prop} Misalkan $p$ seminorma pada ruang vektor topologis~$X$. Pernyataan berikut ekuivalen:
+   \begin{enumerate}[label=\rm{(\alph*)}]
+     \item $B_p$ terbuka dalam~$X$;
+     \item $p$ kontinu di titik asal; dan
+     \item $p$ kontinu.
+   \end{enumerate}
+\end{prop}
+
+\begin{prop} Jika $p$ dan $q$ merupakan seminorma kontinu pada suatu ruang vektor topologis, maka $p + q$ dan~$\max\{p,q\}$ juga demikian.
+\end{prop}
+
+\begin{exam} Misalkan $N$ suatu subhimpunan yang bersifat menyerap, seimbang, dan konveks dari ruang vektor~$V$. Definisikan
+   \[ \sbsb \mu N\colon V \sto \R \colon x \mapsto \inf\{\lambda > 0\colon x \in \lambda N\}. \]
+Fungsi $\sbsb \mu N$ adalah seminorma pada~$V$. Fungsi ini disebut
+ \index{Minkowski!fungsional}%
+ \index{fungsional!Minkowski}%
+ \index{mu@$\sbsb \mu N$ (fungsional Minkowski untuk~$N$)}%
+\df{fungsional Minkowski} dari~$N$.
+\end{exam}
+
+\begin{prop} Jika $N$ suatu himpunan penyerap, seimbang, dan konveks dalam ruang vektor~$V$ dan $\sbsb \mu N$ adalah fungsional Minkowski dari $N$, maka
+     \[ B_{\sbsb \mu{\!N}} \subseteq N \subseteq C_{\sbsb \mu{\!N}} \]
+dan fungsional-fungsional Minkowski yang dibangkitkan oleh ketiga himpunan $B_{\sbsb \mu{\!N}}$, $N$, dan $C_{\sbsb \mu{\!N}}$ semuanya identik.
+\end{prop}
+
+\begin{prop} Jika $N$ suatu himpunan penyerap, seimbang, dan konveks dalam ruang vektor~$V$ dan $\sbsb \mu N$ adalah fungsional Minkowski dari $N$, maka
+$\sbsb \mu N$ kontinu jika dan hanya jika $N$ merupakan lingkungan nol; dalam hal ini
+  \[ B_{\sbsb \mu{\!N}} = \intr N \quad \text{dan} \quad  C_{\sbsb \mu{\!N}} = \clo N. \]
+\end{prop}
+
+\begin{cor} Misalkan $N$ suatu subhimpunan tertutup yang bersifat menyerap, seimbang, dan konveks dari ruang vektor topologis~$X$. Maka fungsional Minkowski
+$\sbsb \mu N$ adalah seminorma unik pada $X$ sedemikian sehingga $N = C_{\sbsb \mu{\!N}}$.
+\end{cor}
+
+\begin{prop} Misalkan $p$ suatu seminorma pada ruang vektor $V$. Maka himpunan $B_p$ bersifat menyerap, seimbang, dan konveks. Selain itu, $p = \sbsb \mu{B_p}$.
+\end{prop}
+
+\begin{defn} Suatu keluarga seminorma $\fml P$ pada ruang vektor $V$ disebut
+ \index{pemisah!keluarga seminorma}%
+\df{pemisah} jika untuk setiap $x \in V$ dengan $x \ne \vc 0$ terdapat $p \in \fml P$ sedemikian sehingga $p(x) \ne 0$.
+\end{defn}
+
+\begin{prop} Dalam suatu ruang vektor topologis Hausdorff, misalkan $\sfml B$ suatu basis lokal yang terdiri atas himpunan terbuka, seimbang, dan konveks. Maka
+$\{\sbsb \mu{\!N}\colon N \in \sfml B\}$ adalah suatu keluarga seminorma pemisah pada ruang tersebut; setiap anggotanya kontinu, dan
+$N = B_{\sbsb \mu{\!N}}$ berlaku untuk setiap $N \in \sfml B$.
+\end{prop}
+
+Proposisi berikut memperlihatkan bagaimana banyak ruang konveks lokal yang paling penting muncul---dari suatu keluarga
+seminorma pemisah.
+
+\begin{prop}\label{prop_clbase_from_snorms} Misalkan $\fml P$ suatu keluarga seminorma pemisah pada ruang vektor~$V$. Untuk setiap
+$p \in \fml P$ dan setiap $n \in \N$, misalkan $U_{p,n} = p^{\gets}\bigl([0,\frac1n)\bigr)$. Maka keluarga semua irisan hingga
+dari himpunan-himpunan $U_{p,n}$ membentuk suatu basis lokal yang seimbang dan konveks bagi suatu topologi pada $V$ yang menjadikan $V$
+suatu ruang konveks lokal dan setiap seminorma dalam $\fml P$ kontinu.
+\end{prop}
+
+\begin{exam}\label{X_LCS1} Misalkan $X$ suatu ruang Hausdorff yang kompak lokal. Untuk setiap subhimpunan kompak tak kosong $K$ dari $X$, definisikan
+   \[ \sbsb pK\colon \fml C(X) \sto \R\colon f \mapsto \sup\{\abs{f(x)}\colon x \in K\}. \]
+Maka keluarga $\fml P$ dari semua $\sbsb pK$, dengan $K$ suatu subhimpunan kompak tak kosong dari $X$, merupakan suatu keluarga seminorma
+yang menjadikan $\fml C(X)$ suatu ruang konveks lokal.
+\end{exam}
+
+\begin{prop} Suatu pemetaan linear $T\colon V \sto W$ dari suatu ruang vektor topologis ke suatu ruang konveks lokal bersifat kontinu jika dan hanya jika
+$p \circ T$ merupakan seminorma kontinu pada $V$ untuk setiap seminorma kontinu $p$ pada~$W$.
+\end{prop}
+
+\begin{prop} Misalkan $f$ suatu fungsional linear kontinu pada subruang $M$ dari ruang konveks lokal~$X$. Maka $f$ dapat diperluas menjadi suatu
+fungsional linear kontinu pada seluruh~$X$.
+\end{prop}
+
+
+
+\begin{proof} Lihat~\cite{Conway:1990}, Proposisi IV.5.13.   \ns
+\end{proof}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

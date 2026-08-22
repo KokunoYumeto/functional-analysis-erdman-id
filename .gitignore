@@ -27,6 +27,8 @@
 /qa/CH05_BACKMATTER_CONTACT.png
 /qa/build-through-ch06-a/
 /qa/renders/ch06-final/
+/qa/build-through-ch09-a/
+/qa/renders/ch09-final/
 
 # TeX intermediates
 *.aux

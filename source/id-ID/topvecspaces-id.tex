@@ -1,0 +1,804 @@
+\chapter{RUANG VEKTOR TOPOLOGIS}
+
+\section{Himpunan Seimbang dan Himpunan Penyerap}
+
+\begin{defn} Suatu himpunan $S$ di dalam ruang vektor disebut
+ \index{seimbang}%
+\df{seimbang} (atau \df{melingkar}) jika $\Dsk S \subseteq S$.
+\end{defn}
+
+\begin{notn} Misalkan $\Dsk$ menyatakan cakram satuan tertutup
+ \index{D@$\Dsk$ (cakram satuan tertutup di~$\C$)}%
+pada bidang kompleks $\{z \in \C\colon \abs z \le 1\}$.
+\end{notn}
+
+\begin{prop} Misalkan $B$ suatu subhimpunan seimbang dari sebuah ruang vektor. Jika $\alpha$ dan $\beta$ adalah skalar sedemikian sehingga $\abs\alpha \le \abs\beta$,
+maka $\alpha B \subseteq \beta B$.
+\end{prop}
+
+\begin{cor} Jika $B$ suatu subhimpunan seimbang dari sebuah ruang vektor dan $\abs\lambda =1$, maka $\lambda B = B$.
+\end{cor}
+
+\begin{defn} Jika $S$ suatu subhimpunan dari sebuah ruang vektor, maka himpunan $\Dsk S$ adalah
+ \index{seimbang!selubung}%
+ \index{selubung!seimbang}%
+\df{selubung seimbang} dari~$S$.
+\end{defn}
+
+\begin{prop} Misalkan $S$ suatu subhimpunan dari ruang vektor~$V$.  Maka selubung seimbang dari $S$ adalah irisan semua
+subhimpunan seimbang dari $V$ yang memuat~$S$; jadi, himpunan itu adalah subhimpunan seimbang terkecil dari $V$ yang memuat~$S$.
+\end{prop}
+
+\begin{defn} Suatu subhimpunan $A$ dari ruang vektor $V$
+ \index{menyerap}%
+\df{menyerap} suatu subhimpunan $B \subseteq V$ jika terdapat $M > 0$ sedemikian sehingga $B \subseteq tA$ setiap kali $\abs t \ge M$.
+Himpunan $A$ bersifat
+ \index{menyerap}%
+\df{menyerap} (atau \df{radial}) jika himpunan itu menyerap setiap himpunan beranggota satu (secara ekuivalen, setiap himpunan hingga).
+\end{defn}
+
+Jadi, secara longgar, suatu himpunan bersifat menyerap jika setiap vektor dalam ruang tersebut termuat dalam suatu hasil dilatasi yang sesuai dari himpunan itu.
+
+\begin{exam} Misalkan $B$ adalah gabungan sumbu-$x$ dan sumbu-$y$ dalam ruang vektor riil $\R^2$.  Maka $B$ seimbang, tetapi tidak konveks.
+\end{exam}
+
+\begin{exam} Dalam ruang vektor $\C$, sebuah elips dengan salah satu fokusnya di titik asal merupakan contoh himpunan penyerap yang tidak seimbang.
+\end{exam}
+
+\begin{exam} Dalam ruang vektor $\C^2$, himpunan $\Dsk \times \{0\}$ seimbang, tetapi tidak menyerap.
+\end{exam}
+
+\begin{prop} Suatu himpunan seimbang $B$ dalam ruang vektor $V$ bersifat menyerap jika dan hanya jika untuk setiap $x \in V$ terdapat skalar
+$\alpha \ne 0$ sedemikian sehingga $\alpha x \in B$.
+\end{prop}
+
+
+
+
+
+
+
+
+
+
+
+\section{Filter}
+
+Dalam mempelajari ruang vektor topologis, penggunaan bahasa \emph{filter} memudahkan kita mencirikan sifat-sifat topologis
+ruang-ruang tersebut.  Bahasa ini merupakan sarana alternatif bagi jaring, tetapi sebagian besar ekuivalen dengannya, dan terutama berguna dalam situasi (nonmetrik) ketika barisan
+tidak lagi banyak membantu.
+
+Secara kasar, sebuah \emph{filter} adalah keluarga tak kosong dari himpunan-himpunan tak kosong yang tertutup terhadap irisan berhingga dan pengambilan superhimpunan.
+
+\begin{defn} Suatu keluarga tak kosong $\sfml F$ dari subhimpunan-subhimpunan tak kosong dari suatu himpunan $S$ disebut
+ \index{filter!pada suatu himpunan}%
+\df{filter} pada $S$ jika
+   \begin{enumerate}[label=(\alph*)]
+     \item $A$, $B \in \sfml F$ mengakibatkan $A \cap B \in \sfml F$, dan
+     \item jika $A \in \sfml F$ dan $A \subseteq B$, maka $B \in \sfml F$.
+   \end{enumerate}
+\end{defn}
+
+\begin{exam} Salah satu contoh filter yang sederhana (dan, bagi keperluan kita, terpenting) adalah keluarga semua lingkungan suatu titik $a$ di sebuah
+ruang topologis.  Keluarga ini adalah
+ \index{lingkungan!filter pada suatu titik}%
+ \index{filter!lingkungan}%
+\df{filter lingkungan} pada~$a$. Filter ini akan
+ \index{N@$\sfml N_a$ (filter lingkungan pada~$a$)}%
+dilambangkan dengan $\sfml N_a$.
+\end{exam}
+
+\begin{defn} Suatu keluarga tak kosong $\sfml B$ yang terdiri atas subhimpunan-subhimpunan tak kosong dari himpunan $S$ disebut
+ \index{basis filter}%
+\df{basis filter} pada $S$ jika untuk setiap $A$, $B \in \sfml B$ terdapat $C \in \sfml B$ sedemikian sehingga $C \subseteq A \cap B$.
+
+Kita mengatakan bahwa suatu subkeluarga $\sfml B$ dari filter $\sfml F$ adalah
+ \index{basis filter!bagi suatu filter}%
+ \index{basis!bagi suatu filter}%
+\df{basis filter bagi} $\sfml F$ jika setiap anggota $\sfml F$ memuat suatu anggota~$\sfml B$.  (Penting untuk memeriksa bahwa
+setiap subkeluarga seperti itu memang merupakan basis filter.)
+\end{defn}
+
+\begin{exam} Setiap filter adalah basis filter.
+\end{exam}
+
+\begin{exam} Misalkan $a$ sebuah titik dalam ruang topologis.  Setiap basis lingkungan pada $a$ adalah basis filter bagi filter $\sfml N_a$
+yang terdiri atas semua lingkungan~$a$. Secara khusus, keluarga semua lingkungan terbuka dari $a$ adalah basis filter bagi~$\sfml N_a$.
+\end{exam}
+
+\begin{exam} Misalkan $\sfml B$ suatu basis filter pada himpunan $S$. Maka keluarga $\sfml F$ yang terdiri atas semua himpunan yang memuat anggota $\sfml B$
+adalah filter pada $S$, dan $\sfml B$ adalah basis filter bagi~$\sfml F$.  Filter ini akan kita sebut filter yang
+ \index{filter!yang dibangkitkan oleh suatu basis filter}%
+\df{dibangkitkan oleh}~$\sfml B$.
+\end{exam}
+
+\begin{defn} Suatu basis filter (khususnya, suatu filter) $\sfml B$ pada ruang topologis $X$
+ \index{konvergensi!suatu filter}%
+ \index{filter!konvergensi suatu}%
+ \index{konvergensi!suatu basis filter}%
+ \index{basis filter!konvergensi suatu}%
+ \index{limit!suatu basis filter}%
+\df{konvergen} ke sebuah titik $a \in X$ jika setiap anggota $N$ dari $\sfml N_a$, yaitu filter lingkungan pada $a$, memuat suatu anggota~$\sfml B$.
+Dalam hal ini, kita
+ \index{<arrowto@$\sfml B \sto a$ (konvergensi suatu basis filter)}%
+menuliskan $\sfml B \sto a$.
+\end{defn}
+
+\begin{prop} Suatu basis filter pada ruang topologis Hausdorff konvergen ke paling banyak satu titik.
+\end{prop}
+
+\begin{exam} Misalkan $(x_\lambda)$ sebuah jaring dalam himpunan~$S$ dan $\sfml F$ keluarga semua $A \subseteq S$ sedemikian sehingga jaring $(x_\lambda)$
+pada akhirnya berada di~$A$.  Maka $\sfml F$ adalah filter pada~$S$.  Kita akan menyebutnya filter yang
+ \index{filter!yang dibangkitkan oleh suatu jaring}%
+\df{dibangkitkan oleh} jaring~$(x_\lambda)$.
+\end{exam}
+
+\begin{prop} Misalkan $(x_\lambda)$ suatu jaring dalam ruang topologis~$X$, misalkan $\sfml F$ filter yang dibangkitkan oleh~$(x_\lambda)$,
+dan $a \in X$.  Maka $\sfml F \sto a$ jika dan hanya jika $x_\lambda \sto a$.
+\end{prop}
+
+\begin{exam} Misalkan $\sfml B$ suatu basis filter pada himpunan~$S$.  Misalkan $D$ himpunan semua pasangan terurut $(b,B)$ sedemikian sehingga $b \in B \in \sfml B$.
+Untuk $(b_1,B_1)$, $(b_2,B_2) \in D$, definisikan $(b_1,B_1) \le (b_2,B_2)$ jika $B_2 \subseteq B_1$.  Ini membuat $D$ menjadi himpunan terarah.  Sekarang bentuklah
+sebuah jaring dalam $S$ dengan mendefinisikan
+   \[ x\colon D \sto S\colon (b,B) \mapsto b \]
+yakni, tetapkan $x_\lambda = b$ untuk setiap $\lambda = (b,B) \in D$.  Maka $\bigl(x_\lambda\bigr)_{\lambda \in D}$ adalah sebuah jaring dalam~$S$.  Jaring ini adalah jaring yang
+ \index{jaring!yang dibangkitkan oleh suatu basis filter}%
+ \index{jaring!yang didasarkan pada suatu basis filter}%
+\df{dibangkitkan oleh} (atau \df{didasarkan pada}) basis filter~$\sfml B$.
+\end{exam}
+
+\begin{prop} Misalkan $\sfml B$ suatu basis filter pada ruang topologis $X$, misalkan $(x_\lambda)$ adalah jaring yang dibangkitkan oleh $\sfml B$, dan misalkan $a \in X$.
+Maka $x_\lambda \sto a$ jika dan hanya jika $\sfml B \sto a$.
+\end{prop}
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Topologi Kompatibel}
+
+\begin{defn} Misalkan $\sfml T$ suatu topologi pada ruang vektor~$X$.  Kita mengatakan bahwa $\sfml T$
+ \index{kompatibel}%
+\df{kompatibel} dengan struktur linear pada $X$ jika operasi penjumlahan $A\colon X \times X \sto X\colon (x,y) \mapsto x + y$
+dan perkalian skalar $M\colon \K \times X \sto X\colon (\alpha,x) \mapsto \alpha x$ kontinu.  (Di sini, $X \times X$ dan
+$\K \times X$ diperlengkapi dengan topologi hasil kali.)
+
+Jika $X$ adalah ruang vektor yang dilengkapi dengan topologi $\sfml T$ yang kompatibel dengan struktur linearnya, kita mengatakan bahwa pasangan
+$(X,\sfml T)$ adalah suatu
+ \index{topologis!ruang vektor}%
+ \index{vektor!ruang!topologis}%
+ \index{ruang!vektor topologis}%
+\df{ruang vektor topologis}.  (Sebagaimana tentu Anda duga, kita hampir selalu akan tetap menggunakan singkatan baku yang tidak logis seperti
+``Misalkan $X$ suatu ruang vektor topologis \dots''.)  Kita lambangkan dengan $\cat{TVS}$ kategori ruang-ruang vektor topologis
+ \index{kategori!$\cat{TVS}$ sebagai suatu}%
+ \index{TVS@$\cat{TVS}$!kategori}%
+dan pemetaan linear kontinu.
+\end{defn}
+
+\begin{exam} Misalkan $X$ ruang vektor tak nol.  Topologi diskret pada $X$ tidak kompatibel dengan struktur linear pada~$X$.
+\end{exam}
+
+\begin{prop} Misalkan $X$ ruang vektor topologis, $a \in X$, dan $\alpha \in \K$.
+   \begin{enumerate}[label=\rm{(\alph*)}]
+    \item Pemetaan $T_a\colon x \mapsto x + a$
+ \index{translasi}%
+(\df{translasi} oleh~$a$) dari $X$ ke dirinya sendiri merupakan suatu homeomorfisme.
+    \item Jika $\alpha \ne 0$, pemetaan $x \mapsto \alpha x$ dari $X$ ke dirinya sendiri merupakan suatu homeomorfisme.
+   \end{enumerate}
+\end{prop}
+
+\begin{cor} Suatu himpunan $U$ adalah lingkungan titik $x$ dalam ruang vektor topologis jika dan hanya jika $-x + U$ adalah lingkungan~$\vc 0$.
+\end{cor}
+
+\begin{cor} Misalkan $\sfml U$ suatu basis filter bagi filter lingkungan di titik asal dalam ruang vektor topologis~$X$.  Suatu subhimpunan $V$ dari $X$
+terbuka jika dan hanya jika untuk setiap $x \in V$ terdapat $U \in \sfml U$ sedemikian sehingga $x + U \subseteq V$.
+\end{cor}
+
+Korolari sebelumnya menyatakan bahwa topologi suatu ruang vektor topologis sepenuhnya ditentukan oleh suatu basis filter bagi
+filter lingkungan di titik asal ruang tersebut.  Basis filter semacam itu kita sebut
+ \index{lokal!basis}%
+ \index{basis!lokal}%
+\df{basis lokal} (bagi topologi tersebut).
+
+\begin{prop} Jika $U$ adalah lingkungan titik asal dalam ruang vektor topologis dan $0 \ne \lambda \in \K$, maka $\lambda U$ adalah
+lingkungan titik asal.
+\end{prop}
+
+\begin{prop} Dalam ruang vektor topologis, setiap lingkungan $\vc 0$ memuat suatu lingkungan seimbang dari~$\vc 0$.
+\end{prop}
+
+\begin{prop} Dalam ruang vektor topologis, setiap lingkungan $\vc 0$ bersifat menyerap.
+\end{prop}
+
+\begin{prop} Jika $V$ adalah lingkungan $\vc 0$ dalam ruang vektor topologis, maka terdapat lingkungan $U$ dari $\vc 0$
+sedemikian sehingga $U + U \subseteq V$.
+\end{prop}
+
+Proposisi berikutnya merupakan (hampir) kebalikan dari ketiga proposisi sebelumnya.
+
+\begin{prop}\label{prop_fbase_induces_top} Misalkan $X$ ruang vektor dan $\sfml U$ suatu basis filter pada $X$ yang memenuhi syarat-syarat berikut:
+   \begin{enumerate}[label=\rm{(\alph*)}]
+     \item setiap anggota $\sfml U$ seimbang;
+     \item setiap anggota $\sfml U$ bersifat menyerap; dan
+     \item untuk setiap $V \in \sfml U$ terdapat $U \in \sfml U$ sedemikian sehingga $U + U \subseteq V$.
+   \end{enumerate}
+Maka terdapat topologi $\sfml T$ pada $X$ yang menjadikan $X$ suatu ruang vektor topologis dan $\sfml U$ suatu basis lokal bagi~$\sfml T$.
+\end{prop}
+
+\begin{exam} Dalam ruang linear bernorma, keluarga $\{C_r(\vc 0)\colon r > 0\}$ yang terdiri atas bola-bola tertutup berpusat di titik asal merupakan basis lokal bagi
+topologi pada ruang tersebut.
+\end{exam}
+
+\begin{exam} Misalkan $\Omega$ suatu subhimpunan terbuka tak kosong dari $\R^n$.  Untuk setiap subhimpunan kompak $K \subseteq \Omega$ dan setiap $\epsilon > 0$, misalkan
+$U_{K,\epsilon} = \{ f \in \fml C(\Omega)\colon \abs{f(x)} \le \epsilon \text{ jika } x \in K\}$.  Maka keluarga semua
+himpunan $U_{K,\epsilon}$ tersebut merupakan basis lokal bagi suatu topologi pada~$\fml C(\Omega)$.  Topologi ini adalah
+ \index{topologi!konvergensi seragam pada himpunan-himpunan kompak}%
+ \index{seragam!konvergensi!pada himpunan-himpunan kompak}%
+ \index{konvergensi!seragam!pada himpunan-himpunan kompak}%
+ \index{himpunan-himpunan kompak!topologi konvergensi seragam pada}%
+\df{topologi konvergensi seragam pada himpunan-himpunan kompak}.
+\end{exam}
+
+\begin{prop} Misalkan $A$ suatu subhimpunan dari ruang vektor topologis dan $0 \ne \alpha \in \K$.  Maka $\alpha \clo A = \clo{\alpha A}$.
+\end{prop}
+
+\begin{prop} Misalkan $S$ suatu himpunan dalam ruang vektor topologis.
+   \begin{enumerate}[label=\rm{(\alph*)}]
+    \item Jika $S$ seimbang, demikian pula tutupannya.
+    \item Selubung seimbang dari $S$ mungkin tidak tertutup sekalipun $S$ sendiri tertutup.
+   \end{enumerate}
+\end{prop}
+
+\begin{proof}[\emph{Petunjuk untuk bukti}] Untuk (b), misalkan $S$ adalah hiperbola di $\R^2$ yang persamaannya $xy = 1$.  \ns
+\end{proof}
+
+\begin{prop} Jika $M$ merupakan subruang vektor dari suatu ruang vektor topologis, maka~$\clo M$ juga merupakan subruang vektor.
+\end{prop}
+
+Jelas bahwa setiap himpunan penyerap dalam ruang vektor topologis harus memuat titik asal.  Namun, contoh berikut menunjukkan bahwa
+himpunan tersebut belum tentu memuat suatu lingkungan titik asal.
+
+\begin{exam}[Apel Schatz] Dalam ruang vektor real $\R^2$, himpunan
+    \[ C_1\bigl((-1,0)\bigr) \cup C_1\bigl((1,0)\bigr) \cup \bigl(\{0\} \times [-1,1]\bigr) \]
+bersifat menyerap, tetapi bukan merupakan lingkungan titik asal.
+\end{exam}
+
+Hasil berikut menyatakan bahwa dalam ruang vektor topologis, himpunan kompak dan himpunan tertutup dapat dipisahkan oleh himpunan terbuka jika keduanya saling lepas.
+
+\begin{prop} Jika $K$ dan $C$ adalah dua subhimpunan tak kosong yang saling lepas dalam ruang vektor topologis $X$, dengan $K$ kompak dan $C$ tertutup, maka terdapat
+lingkungan $V$ dari titik asal sedemikian sehingga $(K + V) \cap (C + V)~=~\emptyset$.
+\end{prop}
+
+\begin{cor} Jika $K$ adalah subhimpunan kompak dari ruang vektor topologis Hausdorff $X$ dan $C$ adalah subhimpunan tertutup dari~$X$, maka $K + C$
+tertutup di~$X$.
+\end{cor}
+
+\begin{proof}[\emph{Petunjuk untuk bukti}] Misalkan $x \in (K + C)^c$.  Tinjau himpunan $x - K$ dan~$C$.  \ns
+\end{proof}
+
+\begin{cor} Setiap anggota suatu basis lokal $\sfml B$ bagi ruang vektor topologis memuat tutupan suatu anggota~$\sfml B$.
+\end{cor}
+
+\begin{prop} Misalkan $X$ ruang vektor topologis.  Maka pernyataan-pernyataan berikut ekuivalen.
+  \begin{enumerate}[label=\rm{(\alph*)}]
+    \item $\{\vc 0\}$ adalah himpunan tertutup di~$X$.
+    \item $\{x\}$ adalah himpunan tertutup untuk setiap $x \in X$.
+    \item Untuk setiap $x \ne 0$ di $X$, terdapat lingkungan titik asal yang tidak memuat $x$.
+    \item $\bigcap \sfml U = \{0\}$, dengan $\sfml U$ suatu basis lokal bagi~$X$.
+    \item $X$ adalah Hausdorff
+  \end{enumerate}
+\end{prop}
+
+\begin{defn} Ruang topologis disebut
+ \index{regular!ruang topologis}%
+ \index{topologis!ruang!regular}%
+\df{regular} jika titik-titik dan himpunan-himpunan tertutup dapat dipisahkan oleh himpunan terbuka; yaitu, jika $C$ adalah subhimpunan tertutup dari ruang tersebut dan $x$ adalah titik
+dari ruang tersebut yang tidak berada dalam $C$, maka terdapat himpunan terbuka $U$ dan $V$ yang saling lepas sedemikian sehingga $C \subseteq U$ dan $x \in V$.
+\end{defn}
+
+\begin{prop} Setiap ruang vektor topologis Hausdorff bersifat regular.
+\end{prop}
+
+\begin{cor} Jika $X$ adalah ruang vektor topologis yang setiap titiknya merupakan himpunan tertutup, maka $X$ bersifat regular.
+\end{cor}
+
+\begin{prop} Misalkan $X$ ruang vektor topologis Hausdorff.  Jika $M$ adalah subruang dari $X$ dan $F$ adalah subruang vektor berdimensi hingga
+dari $X$, maka $M + F$ tertutup di~$X$. (Khususnya, $F$ tertutup.)
+\end{prop}
+
+\begin{defn} Suatu subhimpunan $B$ dari ruang vektor topologis disebut
+ \index{terbatas!himpunan dalam suatu TVS}%
+\df{terbatas} jika untuk setiap lingkungan $U$ dari $\vc 0$ dalam ruang tersebut terdapat $\alpha > 0$ sedemikian sehingga $B \subseteq \alpha U$.
+\end{defn}
+
+\begin{prop} Suatu subhimpunan dari ruang vektor topologis bersifat terbatas jika dan hanya jika diserap oleh setiap lingkungan~$\vc 0$.
+\end{prop}
+
+\begin{prop} Suatu subhimpunan $B$ dari ruang vektor topologis bersifat terbatas jika dan hanya jika $\alpha_n x_n \sto \vc 0$ kapan pun $(x_n)$ adalah
+barisan vektor dalam $B$ dan $(\alpha_n)$ adalah barisan skalar dalam $c_0$.
+\end{prop}
+
+\begin{prop} Jika suatu subhimpunan dari ruang vektor topologis bersifat terbatas, maka tutupannya juga terbatas.
+\end{prop}
+
+\begin{prop} Jika subhimpunan $A$ dan $B$ dari ruang vektor topologis bersifat terbatas, maka $A \cup B$ juga terbatas.
+\end{prop}
+
+\begin{prop} Jika subhimpunan $A$ dan $B$ dari ruang vektor topologis bersifat terbatas, maka $A + B$ juga terbatas.
+\end{prop}
+
+\begin{prop} Setiap subhimpunan kompak dari ruang vektor topologis adalah terbatas.
+\end{prop}
+
+Seperti halnya pada ruang linear bernorma, kita mengatakan bahwa pemetaan linear bersifat \emph{terbatas} jika memetakan himpunan terbatas ke himpunan terbatas.
+
+\begin{defn} Suatu pemetaan linear $T\colon X \sto Y$ antara ruang-ruang vektor topologis disebut
+ \index{terbatas!pemetaan linear}%
+\df{terbatas} jika $T^\sto(B)$ merupakan subhimpunan terbatas dari $Y$ kapan pun $B$ merupakan subhimpunan terbatas dari~$X$.
+\end{defn}
+
+\begin{prop} Setiap pemetaan linear kontinu antara ruang-ruang vektor topologis bersifat terbatas.
+\end{prop}
+
+\begin{defn} Suatu filter $\sfml F$ pada subhimpunan $A$ dari ruang vektor topologis $X$ adalah
+ \index{Cauchy!filter}%
+ \index{filter!Cauchy}%
+\df{filter Cauchy} jika untuk setiap lingkungan $U$ dari titik asal dalam $X$ terdapat $B \in \sfml F$ sedemikian sehingga
+   \[ B - B \subseteq U\,. \]
+\end{defn}
+
+\begin{prop} Pada ruang vektor topologis, setiap filter yang konvergen merupakan filter Cauchy.
+\end{prop}
+
+\begin{defn} Suatu subhimpunan $A$ dari ruang vektor topologis $X$ disebut
+ \index{lengkap!ruang vektor topologis}%
+ \index{topologis!ruang vektor!lengkap}%
+ \index{ruang!vektor topologis!lengkap}%
+\df{lengkap} jika setiap filter Cauchy pada $A$ konvergen ke suatu titik di~$A$.
+\end{defn}
+
+\begin{prop} Setiap subhimpunan lengkap dari ruang vektor topologis Hausdorff adalah tertutup.
+\end{prop}
+
+\begin{prop} Jika $C$ merupakan subhimpunan tertutup dari suatu himpunan lengkap dalam ruang vektor topologis, maka $C$ lengkap.
+\end{prop}
+
+
+
+\begin{prop} Suatu pemetaan linear $T\colon X \sto Y$ antara ruang-ruang vektor topologis bersifat kontinu jika dan hanya jika pemetaan tersebut kontinu di nol.
+\end{prop}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Hasil Bagi}
+
+\begin{conv} Seperti halnya pada ruang Hilbert dan Banach, kata ``subruang'' dalam konteks ruang vektor topologis
+ \index{subruang!dari ruang vektor topologis}%
+ \index{konvensi!subruang ruang vektor topologis adalah tertutup}%
+berarti \emph{subruang vektor tertutup}.
+\end{conv}
+
+\begin{defn} Misalkan $M$ suatu subruang vektor dari ruang vektor topologis~$X$ dan $\pi\colon X \sto X/M \colon x \mapsto [x]$
+adalah pemetaan hasil bagi yang biasa. Pada ruang vektor hasil bagi $X/M$ kita definisikan suatu topologi, yang kita sebut
+ \index{hasil bagi!topologi}%
+ \index{hasil bagi!ruang vektor topologis}%
+ \index{topologis!ruang vektor!hasil bagi}%
+\df{topologi hasil bagi}, dengan menetapkan filter lingkungan di titik asal pada~$X/M$ sebagai citra oleh $\pi$ dari
+filter lingkungan di titik asal pada~$X$. Artinya, kita menyatakan suatu subhimpunan $V$ dari $X/M$ sebagai lingkungan $\vc 0$ jika,
+dan hanya jika, terdapat suatu lingkungan $U$ dari titik asal di $X$ sedemikian sehingga $V = \pi^{\sto}(U)$.
+\end{defn}
+
+\begin{prop} Misalkan $M$ suatu subruang vektor dari ruang vektor topologis~$X$. Jika $X/M$ diberi topologi hasil bagi, maka
+pemetaan hasil bagi $\pi\colon X \sto X/M$ merupakan pemetaan terbuka sekaligus kontinu.
+\end{prop}
+
+\begin{exam} Misalkan $M$ adalah sumbu~$y$ dalam ruang vektor topologis $\R^2$ (dengan topologinya yang biasa). Identifikasikan $\R^2/M$ dengan
+sumbu~$x$. Meskipun pemetaan hasil bagi memetakan himpunan terbuka ke himpunan terbuka, hiperbola $\{(x,y) \in \R^2\colon xy = 1\}$ menunjukkan
+bahwa $\pi$ tidak harus memetakan himpunan tertutup ke himpunan tertutup.
+\end{exam}
+
+\begin{prop}\label{prop_quotient_top_strong} Misalkan $M$ suatu subruang vektor dari ruang vektor topologis~$X$. Topologi hasil bagi
+pada $X/M$ adalah topologi terbesar yang membuat pemetaan hasil bagi kontinu.
+\end{prop}
+
+Proposisi berikut menjamin bahwa topologi hasil bagi, sebagaimana didefinisikan di atas, menjadikan ruang vektor hasil bagi suatu ruang vektor topologis.
+
+\begin{prop} Misalkan $M$ suatu subruang vektor dari ruang vektor topologis~$X$. Topologi hasil bagi pada $X/M$ kompatibel dengan
+operasi-operasi ruang vektor pada ruang tersebut.
+\end{prop}
+
+\begin{prop} Jika $M$ suatu subruang vektor dari ruang vektor topologis~$X$, maka ruang hasil bagi $X/M$ bersifat Hausdorff jika dan hanya
+jika $M$ tertutup dalam~$X$.
+\end{prop}
+
+\begin{exer} Jelaskan pula bagaimana proposisi sebelumnya memungkinkan kita mengaitkan suatu ruang lain yang bersifat Hausdorff dengan
+suatu ruang vektor topologis non-Hausdorff.
+\end{exer}
+
+\begin{prop} Misalkan $T\colon X \sto Y$ suatu pemetaan linear antara ruang-ruang vektor topologis dan $M$ suatu subruang dari $X$. Jika
+ \index{hasil bagi!teorema!untuk $\cat{TVS}$}%
+$M \subseteq \ker T$, maka terdapat fungsi unik $\wt T\colon X/M \sto Y$ sedemikian sehingga $T = \wt T \circ \pi$ (dengan $\pi$
+adalah pemetaan hasil bagi). Fungsi $\wt T$ bersifat linear; fungsi ini kontinu jika dan hanya jika $T$ kontinu; fungsi ini terbuka jika dan hanya jika $T$~terbuka.
+\end{prop}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Ruang Konveks Lokal dan Seminorma}
+
+\begin{prop} Dalam suatu ruang vektor topologis, tutupan suatu himpunan konveks adalah konveks.
+\end{prop}
+
+\begin{prop} Dalam suatu ruang vektor topologis, setiap lingkungan konveks dari $\vc 0$ memuat suatu lingkungan seimbang dan konveks dari~$\vc 0$.
+\end{prop}
+
+\begin{prop} Suatu subhimpunan tertutup $C$ dari ruang vektor topologis bersifat konveks jika dan hanya jika $\frac12(x + y)$ termasuk dalam $C$ setiap kali $x$ dan $y$ juga demikian.
+\end{prop}
+
+\begin{prop} Jika suatu subhimpunan dari ruang vektor topologis bersifat konveks, maka tutupan dan interiornya juga konveks.
+\end{prop}
+
+\begin{defn} Suatu ruang vektor topologis disebut
+ \index{lokal!kekonveksan}%
+ \index{konveks!lokal}%
+\df{konveks lokal} jika ruang tersebut memiliki basis lokal yang terdiri atas himpunan-himpunan konveks. Untuk ringkasnya, suatu ruang vektor topologis
+yang konveks lokal cukup kita sebut sebagai
+ \index{lokal!ruang konveks}%
+\df{ruang konveks lokal}.
+\end{defn}
+
+\begin{prop} Jika $p$ suatu seminorma pada ruang vektor, maka $p(\vc 0) = 0$.
+ \index{seminorma!sifat-sifat elementer}%
+\end{prop}
+
+\begin{prop} Jika $p$ suatu seminorma pada ruang vektor $V$, maka $\abs{p(x) - p(y)} \le p(x - y)$ untuk semua $x$, $y \in V$.
+\end{prop}
+
+\begin{cor} Jika $p$ suatu seminorma pada ruang vektor $V$, maka $p(x) \ge 0$ untuk semua $x \in V$.
+\end{cor}
+
+\begin{prop} Jika $p$ suatu seminorma pada ruang vektor $V$, maka $p^{\gets}(\{0\})$ adalah subruang vektor dari~$V$.
+\end{prop}
+
+\begin{defn} Misalkan $p$ suatu seminorma pada ruang vektor $V$ dan $\epsilon > 0$. Himpunan
+ \index{B@$B_{p,\epsilon}$, $B_p$ (semibola terbuka yang ditentukan oleh~$p$)}%
+$B_{p,\epsilon} := p^{\gets}\bigl([0,\epsilon)\bigr)$ kita sebut
+ \index{terbuka!semibola}%
+ \index{semibola}%
+\df{semibola terbuka} berjari-jari $\epsilon$ di titik asal yang ditentukan oleh~$p$. Demikian pula, himpunan
+\index{C@$C_{p,\epsilon}$, $C_p$ (semibola tertutup yang ditentukan oleh~$p$)}%
+$C_{p,\epsilon} := p^{\gets}\bigl([0,\epsilon]\bigr)$ adalah
+ \index{tertutup!semibola}%
+\df{semibola tertutup} berjari-jari $\epsilon$ di titik asal yang ditentukan oleh~$p$. Untuk semibola terbuka dan tertutup berjari-jari satu yang ditentukan
+oleh $p$, gunakan masing-masing notasi $B_p$ dan $C_p$.
+\end{defn}
+
+\begin{prop} Misalkan $\fml P$ suatu keluarga seminorma pada ruang vektor~$V$. Keluarga $\sfml U$ dari semua irisan hingga dari semibola-semibola terbuka
+di titik asal $V$ menginduksi suatu topologi (yang tidak harus Hausdorff) pada $V$ yang kompatibel dengan struktur linear $V$ dan yang terhadapnya
+$\sfml U$ merupakan suatu basis lokal.
+\end{prop}
+
+\begin{proof}[\emph{Petunjuk untuk bukti}] Proposisi~\ref{prop_fbase_induces_top}.  \ns
+\end{proof}
+
+\begin{prop} Misalkan $p$ seminorma pada ruang vektor topologis~$X$. Pernyataan berikut ekuivalen:
+   \begin{enumerate}[label=\rm{(\alph*)}]
+     \item $B_p$ terbuka dalam~$X$;
+     \item $p$ kontinu di titik asal; dan
+     \item $p$ kontinu.
+   \end{enumerate}
+\end{prop}
+
+\begin{prop} Jika $p$ dan $q$ merupakan seminorma kontinu pada suatu ruang vektor topologis, maka $p + q$ dan~$\max\{p,q\}$ juga demikian.
+\end{prop}
+
+\begin{exam} Misalkan $N$ suatu subhimpunan yang bersifat menyerap, seimbang, dan konveks dari ruang vektor~$V$. Definisikan
+   \[ \sbsb \mu N\colon V \sto \R \colon x \mapsto \inf\{\lambda > 0\colon x \in \lambda N\}. \]
+Fungsi $\sbsb \mu N$ adalah seminorma pada~$V$. Fungsi ini disebut
+ \index{Minkowski!fungsional}%
+ \index{fungsional!Minkowski}%
+ \index{mu@$\sbsb \mu N$ (fungsional Minkowski untuk~$N$)}%
+\df{fungsional Minkowski} dari~$N$.
+\end{exam}
+
+\begin{prop} Jika $N$ suatu himpunan penyerap, seimbang, dan konveks dalam ruang vektor~$V$ dan $\sbsb \mu N$ adalah fungsional Minkowski dari $N$, maka
+     \[ B_{\sbsb \mu{\!N}} \subseteq N \subseteq C_{\sbsb \mu{\!N}} \]
+dan fungsional-fungsional Minkowski yang dibangkitkan oleh ketiga himpunan $B_{\sbsb \mu{\!N}}$, $N$, dan $C_{\sbsb \mu{\!N}}$ semuanya identik.
+\end{prop}
+
+\begin{prop} Jika $N$ suatu himpunan penyerap, seimbang, dan konveks dalam ruang vektor~$V$ dan $\sbsb \mu N$ adalah fungsional Minkowski dari $N$, maka
+$\sbsb \mu N$ kontinu jika dan hanya jika $N$ merupakan lingkungan nol; dalam hal ini
+  \[ B_{\sbsb \mu{\!N}} = \intr N \quad \text{dan} \quad  C_{\sbsb \mu{\!N}} = \clo N. \]
+\end{prop}
+
+\begin{cor} Misalkan $N$ suatu subhimpunan tertutup yang bersifat menyerap, seimbang, dan konveks dari ruang vektor topologis~$X$. Maka fungsional Minkowski
+$\sbsb \mu N$ adalah seminorma unik pada $X$ sedemikian sehingga $N = C_{\sbsb \mu{\!N}}$.
+\end{cor}
+
+\begin{prop} Misalkan $p$ suatu seminorma pada ruang vektor $V$. Maka himpunan $B_p$ bersifat menyerap, seimbang, dan konveks. Selain itu, $p = \sbsb \mu{B_p}$.
+\end{prop}
+
+\begin{defn} Suatu keluarga seminorma $\fml P$ pada ruang vektor $V$ disebut
+ \index{pemisah!keluarga seminorma}%
+\df{pemisah} jika untuk setiap $x \in V$ dengan $x \ne \vc 0$ terdapat $p \in \fml P$ sedemikian sehingga $p(x) \ne 0$.
+\end{defn}
+
+\begin{prop} Dalam suatu ruang vektor topologis Hausdorff, misalkan $\sfml B$ suatu basis lokal yang terdiri atas himpunan terbuka, seimbang, dan konveks. Maka
+$\{\sbsb \mu{\!N}\colon N \in \sfml B\}$ adalah suatu keluarga seminorma pemisah pada ruang tersebut; setiap anggotanya kontinu, dan
+$N = B_{\sbsb \mu{\!N}}$ berlaku untuk setiap $N \in \sfml B$.
+\end{prop}
+
+Proposisi berikut memperlihatkan bagaimana banyak ruang konveks lokal yang paling penting muncul---dari suatu keluarga
+seminorma pemisah.
+
+\begin{prop}\label{prop_clbase_from_snorms} Misalkan $\fml P$ suatu keluarga seminorma pemisah pada ruang vektor~$V$. Untuk setiap
+$p \in \fml P$ dan setiap $n \in \N$, misalkan $U_{p,n} = p^{\gets}\bigl([0,\frac1n)\bigr)$. Maka keluarga semua irisan hingga
+dari himpunan-himpunan $U_{p,n}$ membentuk suatu basis lokal yang seimbang dan konveks bagi suatu topologi pada $V$ yang menjadikan $V$
+suatu ruang konveks lokal dan setiap seminorma dalam $\fml P$ kontinu.
+\end{prop}
+
+\begin{exam}\label{X_LCS1} Misalkan $X$ suatu ruang Hausdorff yang kompak lokal. Untuk setiap subhimpunan kompak tak kosong $K$ dari $X$, definisikan
+   \[ \sbsb pK\colon \fml C(X) \sto \R\colon f \mapsto \sup\{\abs{f(x)}\colon x \in K\}. \]
+Maka keluarga $\fml P$ dari semua $\sbsb pK$, dengan $K$ suatu subhimpunan kompak tak kosong dari $X$, merupakan suatu keluarga seminorma
+yang menjadikan $\fml C(X)$ suatu ruang konveks lokal.
+\end{exam}
+
+\begin{prop} Suatu pemetaan linear $T\colon V \sto W$ dari suatu ruang vektor topologis ke suatu ruang konveks lokal bersifat kontinu jika dan hanya jika
+$p \circ T$ merupakan seminorma kontinu pada $V$ untuk setiap seminorma kontinu $p$ pada~$W$.
+\end{prop}
+
+\begin{prop} Misalkan $f$ suatu fungsional linear kontinu pada subruang $M$ dari ruang konveks lokal~$X$. Maka $f$ dapat diperluas menjadi suatu
+fungsional linear kontinu pada seluruh~$X$.
+\end{prop}
+
+
+
+\begin{proof} Lihat~\cite{Conway:1990}, Proposisi IV.5.13.   \ns
+\end{proof}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Ruang Fr\'echet}
+
+\begin{defn} Ruang topologis $(X,\sfml T)$ disebut
+ \index{dapat dimetrikkan}%
+\df{dapat dimetrikkan} jika terdapat suatu metrik $d$ pada $X$ sedemikian sehingga topologi yang dibangkitkan oleh $d$ adalah~$\sfml T$.
+\end{defn}
+
+\begin{defn} Suatu metrik $d$ pada ruang vektor $V$ disebut
+ \index{translasi!invarian}%
+ \index{invarian!terhadap translasi}%
+\df{invarian terhadap translasi} jika
+   \[ d(x,y) = d(x + a, y + a) \]
+untuk semua $x$, $y$, dan $a$ di~$V$.
+\end{defn}
+
+\begin{prop} Misalkan $(X,\sfml T)$ ruang vektor topologis Hausdorff yang memiliki basis lokal terhitung. Maka terdapat metrik
+invarian terhadap translasi $d$ pada $X$ yang membangkitkan topologi $\sfml T$ dan yang bola-bola terbukanya di titik asal seimbang. Jika $X$ ruang konveks lokal,
+maka $d$ dapat dipilih sedemikian sehingga, selain itu, bola-bola terbukanya konveks.
+\end{prop}
+
+\begin{proof} Lihat \cite{Rudin:1991}, Teorema 1.24.  \ns
+\end{proof}
+
+\begin{exam}\label{X_metric_from_seminorms} Misalkan $\{p_n\colon n \in \N\}$ suatu keluarga seminorma pemisah terhitung pada ruang
+vektor~$X$, dan misalkan $\sfml T$ topologi pada $X$ yang dijamin oleh Proposisi~\ref{prop_clbase_from_snorms}. Dalam hal ini kita dapat secara eksplisit
+mendefinisikan suatu metrik invarian terhadap translasi pada $X$ yang menginduksi topologi~$\sfml T$. Untuk setiap barisan $\bigl(\alpha_k\bigr) \in c_0$
+dengan $\alpha_k>0$ untuk setiap $k\in\N$, suatu metrik dengan sifat-sifat yang diinginkan diberikan oleh
+   \[ d(x,y) = \max_{k \in \N}\biggl\{\frac{\alpha_k p_k(x-y)}{1 + p_k(x-y)}\biggr\}. \]
+\end{exam}
+
+\begin{proof} Lihat \cite{Rudin:1991}, Catatan 1.38(c).  \ns
+\end{proof}
+
+\begin{defn} Sebuah
+ \index{ruang Fr\'echet}%
+\df{ruang Fr\'echet} adalah ruang konveks lokal yang lengkap dan dapat dimetrikkan.
+\end{defn}
+
+\begin{notn} Misalkan $A$ dan $B$ subhimpunan suatu ruang topologis. Kita menulis
+ \index{<binrell@$A \prec B$ ($\clo A \subseteq \intr B$)}%
+$A\prec B$ jika $\clo A \subseteq \intr B$.
+\end{notn}
+
+\begin{prop} Pernyataan berikut berlaku untuk subhimpunan $A$, $B$, dan $C$ dari suatu ruang topologis:
+ \begin{enumerate}
+  \item[(a)] jika $A \prec B$ dan $B \prec C$, maka $A \prec C$;
+  \item[(b)] jika $A \prec C$ dan $B \prec C$, maka $A \cup B \prec C$; dan
+  \item[(c)] jika $A \prec B$ dan $A \prec C$, maka $A \prec B \cap C$.
+ \end{enumerate}
+\end{prop}
+
+Berikut adalah hasil standar dari topologi elementer.
+
+\begin{prop}\label{prop_open_lim_cpt} Misalkan $\Omega$ subhimpunan terbuka tak kosong dari $\R^n$. Maka terdapat suatu barisan
+$(K_n)$ yang terdiri atas subhimpunan kompak tak kosong dari $\Omega$ sedemikian sehingga $K_i \prec K_j$ setiap kali $i < j$ dan
+\smash[b]{$\bigcup\limits_{i=1}^\infty K_i = \Omega$}.
+\end{prop}
+
+\begin{proof} Lihat \cite{Treves:1967}, Lema 10.1.  \ns
+\end{proof}
+
+\begin{exam} Misalkan $\Omega$ subhimpunan terbuka tak kosong dari suatu ruang Euklides $\R^n$, dan misalkan $\fml C(\Omega)$ keluarga semua
+fungsi kontinu bernilai skalar pada~$\Omega$. Berdasarkan proposisi sebelumnya, kita dapat menuliskan $\Omega$ sebagai gabungan suatu koleksi
+terhitung himpunan kompak tak kosong $K_1$, $K_2$, \dots sedemikian sehingga $K_i \prec K_j$ setiap kali $i < j$. Untuk setiap $n \in \N$ dan
+$f \in \fml C(\Omega)$, misalkan $p_n(f) = \sup\{\abs{f(x)}\colon  x \in K_n\}$ seperti dalam Contoh~\ref{X_LCS1}. Menurut
+Proposisi~\ref{prop_clbase_from_snorms}, keluarga seminorma ini menjadikan $\fml C(\Omega)$ ruang konveks lokal. Misalkan
+$\sfml T$ topologi yang dihasilkan pada ruang ini. Berdasarkan Contoh~\ref{X_metric_from_seminorms}, fungsi
+   \[ d(f,g) = \max_{k \in \N}\frac{2^{-k}p_k(f-g)}{1 + p_k(f-g)} \]
+mendefinisikan suatu metrik pada $\fml C(\Omega)$ yang menginduksi topologi~$\sfml T$. Dengan metrik ini,
+$\fml C(\Omega)$ adalah ruang Fr\'echet.
+\end{exam}
+
+\begin{notn}[Notasi multi-indeks]\label{mi_notn} Misalkan $\Omega$ subhimpunan terbuka dari suatu ruang Euklides~$\R^n$. Kita akan meninjau
+fungsi-fungsi bernilai skalar yang dapat didiferensialkan
+ \index{notasi multi-indeks}%
+tak hingga pada $\Omega$; yakni fungsi pada $\Omega$ yang memiliki turunan untuk setiap orde di tiap titik~$\Omega$. Kita
+akan menyebut fungsi-fungsi demikian sebagai
+ \index{fungsi mulus}%
+fungsi \df{mulus} pada~$\Omega$. Kelas semua fungsi mulus pada $\Omega$ dinotasikan dengan
+ \index{C@$\fml C^\infty(\Omega)$!fungsi yang dapat didiferensialkan tak hingga}%
+$\fml C^\infty(\Omega)$.
+
+Kelas penting lain yang akan kita tinjau
+ \index{C@$\fml C^\infty_c(\Omega)$!fungsi yang dapat didiferensialkan tak hingga dengan tumpuan kompak}%
+adalah $\fml C_c^\infty(\Omega)$, yaitu keluarga semua fungsi bernilai skalar pada $\Omega$ yang dapat didiferensialkan tak hingga dan memiliki tumpuan kompak;
+yakni fungsi yang bernilai nol di luar suatu subhimpunan kompak dari~$\Omega$. Fungsi-fungsi dalam keluarga ini sering disebut
+ \index{fungsi uji}%
+\df{fungsi uji} pada~$\Omega$. Notasi lain yang lebih singkat,
+ \index{D@$\fml D(\Omega)$!ruang fungsi uji; fungsi yang dapat didiferensialkan tak hingga dengan tumpuan kompak}%
+yang lazim digunakan untuk keluarga ini adalah~$\fml D(\Omega)$.
+
+Kita akan menaruh perhatian pada operator diferensial pada ruang~$\fml D(\Omega)$. Misalkan $\bs\alpha = (\alpha_1, \dots, \alpha_n)$ suatu
+ \index{multi-indeks}%
+\df{multi-indeks}, yaitu suatu tupel-$n$ bilangan bulat dengan setiap $\alpha_k \ge 0$, dan misalkan
+  \[ D^{\bs\alpha} = \biggl(\frac{\partial}{\partial x_1}\biggr)^{\alpha_1} \dots
+                                                     \biggl(\frac{\partial}{\partial x_n}\biggr)^{\alpha_n}. \]
+Yang dimaksud dengan
+\index{D@$D^{\bs\alpha}$ (notasi multi-indeks untuk diferensiasi)}%
+ \index{orde!multi-indeks}%
+ \index{operator diferensial!yang bekerja pada fungsi mulus}%
+\df{orde} operator diferensial $D^{\bs\alpha}$ adalah $\abs{\bs\alpha} := \sum_{k=1}^n \alpha_k$. (Ketika
+$\abs{\bs\alpha} = 0$, kita memahami $D^{\bs\alpha}(f) = f$ untuk setiap fungsi~$f$.) Notasi alternatif untuk
+ \index{<unopura@$f^{\bs\alpha}$ (notasi multi-indeks untuk diferensiasi)}%
+$D^{\bs\alpha}f$ adalah~$f^{(\bs\alpha)}$.
+\end{notn}
+
+\begin{exam}\label{X_smooth_fcns_Frechet} Pada keluarga $\fml C^\infty(\Omega)$ dari fungsi-fungsi mulus pada suatu subhimpunan terbuka $\Omega$ dari
+ruang Euklides~$\R^n$, definisikan keluarga seminorma $\{\sbsb{p}{K,j}\}$. Untuk setiap subhimpunan kompak $K$ dari $\Omega$ dan setiap
+$j \in \N$, misalkan
+   \[ \sbsb{p}{K,j}(f) = \sup\{\abs{D^{\bs\alpha}f(x)}\colon x \in K \text{ dan } \abs{\bs\alpha} \le j\}. \]
+Keluarga seminorma ini menjadikan $\fml C^\infty(\Omega)$ ruang Fr\'echet. Topologi yang dihasilkan pada $\fml C^\infty(\Omega)$
+kadang-kadang disebut
+ \index{topologi!konvergensi seragam pada himpunan-himpunan kompak}%
+ \index{seragam!konvergensi!pada himpunan-himpunan kompak}%
+ \index{himpunan kompak!topologi konvergensi seragam pada}%
+ \index{konvergensi!seragam!pada himpunan-himpunan kompak}%
+\emph{topologi konvergensi seragam pada himpunan-himpunan kompak bagi fungsi-fungsi tersebut dan semua turunannya}.
+\end{exam}
+
+\begin{proof}[\emph{Petunjuk untuk bukti}] Untuk melihat bahwa ruang ini dapat dimetrikkan, gunakan Contoh~\ref{X_metric_from_seminorms} dan
+Proposisi~\ref{prop_open_lim_cpt}.  \ns
+\end{proof}
+
+\begin{exam}\label{Schwartz_space} Misalkan $n \in \N$. Nyatakan dengan $\fml S = \fml S(\R^n)$
+ \index{S@$\fml S = \fml S(\R^n)$ (ruang Schwartz)!sebagai ruang Fr\'echet}%
+ruang semua fungsi mulus $f$ yang didefinisikan pada seluruh~$\R^n$ dan memenuhi
+   \[ \lim_{\norm x \sto \infty}{\norm x}^k \abs{D^{\bs\alpha}f(x)} = 0 \]
+untuk semua multi-indeks $\bs\alpha = (\alpha_1,\dots,\alpha_n) \in \N^n$ dan semua bilangan bulat $k \ge 0$. Fungsi-fungsi demikian sering disebut
+sebagai
+ \index{fungsi yang menurun cepat}%
+ \index{fungsi!menurun cepat}%
+ \index{turunan!fungsi dengan turunan yang menurun cepat}%
+ \index{ruang!fungsi yang menurun cepat}%
+\emph{fungsi dengan turunan yang menurun cepat}, atau lebih singkat lagi, \emph{fungsi yang menurun cepat}. Pada $\fml S$ kita gunakan
+topologi yang didefinisikan oleh seminorma-seminorma
+   \[ \sbsb p{m,k}(f) := \sup_{\abs{\bs\alpha} \le m}\bigl\{\sup_{x \in \R^n} \{(1 + {\norm x}^2)^k \abs{(D^{\bs\alpha}f)(x)}\}\bigr\} \]
+untuk $k$, $m = 0,1,2,\dots$. Ruang yang dihasilkan adalah ruang Fr\'echet yang disebut
+ \index{ruang Schwartz}%
+ \index{ruang!Schwartz}%
+\df{ruang Schwartz} dari~$\R^n$.
+\end{exam}
+
+\begin{proof}[\emph{Petunjuk untuk bukti}] Untuk bukti kelengkapan, lihat~\cite{Treves:1967}, Contoh IV, halaman 92--94. \ns
+\end{proof}
+
+\begin{prop} Suatu fungsi uji $\psi$ pada $\R$ merupakan turunan dari fungsi uji lain jika dan hanya jika $\int_{-\infty}^\infty\psi = 0$.
+\end{prop}
+
+\begin{prop} Misalkan $F$ ruang Fr\'echet yang topologinya diinduksi oleh suatu metrik invarian terhadap translasi. Maka setiap subhimpunan terbatas
+dari $F$ memiliki diameter hingga.
+\end{prop}
+
+\begin{exam} Tinjau ruang Fr\'echet $\R$ dengan topologi yang diinduksi oleh metrik invarian terhadap translasi
+\smash[b]{$d(x,y) = \dfrac{\abs{x - y}}{1 + \abs{x - y}}$}. Maka himpunan bilangan asli $\N$ memiliki diameter hingga, tetapi tidak terbatas.
+\end{exam}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\endinput

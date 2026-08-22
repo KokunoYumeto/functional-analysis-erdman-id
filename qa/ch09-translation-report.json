@@ -1,0 +1,347 @@
+{
+  "schema_version": "o008.ch09-translation-report.v2",
+  "unit_id": "FAOA-2015-CH09",
+  "source": {
+    "bytes": 35022,
+    "lf": 806,
+    "sha256": "62bc645c9d0972856913098d90d4baec7a8b0f470d4d380a880416f64cd5bce4"
+  },
+  "target": {
+    "bytes": 37705,
+    "lf": 804,
+    "sha256": "791868776a07f4c854f1c13d295da23a2559b88dcac48523fb0390e1e5330ee1"
+  },
+  "master": {
+    "bytes": 9780,
+    "lf": 335,
+    "sha256": "acba53fd01601ecd49516c01fb00e38af7bfcafbbbff0358a87dea864c591e3f"
+  },
+  "source_correction_ledger": {
+    "path": "provenance/SOURCE_CORRECTIONS_CH09.json",
+    "bytes": 14917,
+    "lf": 278,
+    "sha256": "861b96347a0ab045861042c782209d284f2811f0eaa21c85200745d11de882e9",
+    "record_count": 26,
+    "class_counts": {
+      "MECHANICAL_SOURCE_REPAIR": 17,
+      "MATHEMATICAL_SOURCE_REPAIR": 9
+    },
+    "proof_role_sha256": "3b7911927320fca619207eaccdb578d16c620f5e0be76c9848ca436dbc2cb3f8"
+  },
+  "counts": {
+    "environment_pairs": 126,
+    "labels": 9,
+    "references": 7,
+    "citations": 5,
+    "indexes": 91,
+    "defined_terms": 40,
+    "items": 20,
+    "exercises": 1,
+    "proof_stubs": 9,
+    "source_math_surfaces": 603,
+    "target_math_surfaces": 606
+  },
+  "math_edits": [
+    {
+      "signature": [
+        "replace",
+        139,
+        139,
+        139,
+        139,
+        [
+          "dollar-inline"
+        ],
+        [
+          "69a68e8c03928fa27f8b4dc0cfd4cb7e3e6f22b04147ca824ab9b7c7cc8c6d7b"
+        ],
+        [
+          "dollar-inline"
+        ],
+        [
+          "b5be4be6feb2ea2b4deb659f2f5ae5013827e740b6372d809039af77a227d8a3"
+        ]
+      ],
+      "classification": "MECHANICAL_SOURCE_REPAIR"
+    },
+    {
+      "signature": [
+        "replace",
+        186,
+        189,
+        186,
+        189,
+        [
+          "dollar-inline",
+          "dollar-inline",
+          "dollar-inline",
+          "dollar-inline"
+        ],
+        [
+          "d6da38a8c2a5f916ec09a2c4963d0b127de1d580e2adf8315a67dd1ab337ba8a",
+          "d6da38a8c2a5f916ec09a2c4963d0b127de1d580e2adf8315a67dd1ab337ba8a",
+          "b37b747b1464466b16b228f30289e34ffda36d182a11a46dd22dfeb967a25f9f",
+          "0eb6169ceb1bfa0ca369f9a14660be2f4e8a2d8e5a2d9aac2c8d4d87ce318d81"
+        ],
+        [
+          "dollar-inline",
+          "dollar-inline",
+          "dollar-inline",
+          "dollar-inline"
+        ],
+        [
+          "0b3603ec8eba31106c573f01f3db67050a1ae2dc50c7912a830dfedbc243d579",
+          "0b3603ec8eba31106c573f01f3db67050a1ae2dc50c7912a830dfedbc243d579",
+          "4870269d4403344f46cc3fb912d9817b4ebdf48a5b2b90bcd8d4b8c60a1dd9e6",
+          "dd55722ad10403d30c4de6022e28e9581713478c86b0df173729d4c5b6cbf690"
+        ]
+      ],
+      "classification": "MECHANICAL_SOURCE_REPAIR"
+    },
+    {
+      "signature": [
+        "replace",
+        293,
+        293,
+        293,
+        293,
+        [
+          "dollar-inline"
+        ],
+        [
+          "6885a724018a3fee41b170646831e18a1edbf8907db9c0cff5c69cd9b3ba37de"
+        ],
+        [
+          "dollar-inline"
+        ],
+        [
+          "08d0d7c9a4f28a0f6b8a4b6e0ef16c83fe25ddf8e75c67ce08393540029a196e"
+        ]
+      ],
+      "classification": "MATHEMATICAL_SOURCE_REPAIR"
+    },
+    {
+      "signature": [
+        "replace",
+        439,
+        439,
+        439,
+        440,
+        [
+          "dollar-inline"
+        ],
+        [
+          "858979f0c33c5f45e30780b82e2fa00184311296fbb7ef6bf3f4a6007c9b9cb1"
+        ],
+        [
+          "dollar-inline",
+          "dollar-inline"
+        ],
+        [
+          "42f6ec152799fc6e3b876ef24d1e070722a6faf171b6b4b7bf988e89731d6386",
+          "500f66bd1674bb5da37498ca094209b2899fcd50ad889a5cb969ec3951dcb1b2"
+        ]
+      ],
+      "classification": "MATHEMATICAL_SOURCE_REPAIR"
+    },
+    {
+      "signature": [
+        "replace",
+        458,
+        458,
+        459,
+        459,
+        [
+          "bracket-display"
+        ],
+        [
+          "f5a24ecbf8bf5bc355f5683180c88893ba9e838c5d9b42c67da36c3ef8a7a8c1"
+        ],
+        [
+          "bracket-display"
+        ],
+        [
+          "bf856c18e0de59addce51f3ce6e1e61a40fdbdea3ae24f986785193b4e64422b"
+        ]
+      ],
+      "classification": "MATHEMATICAL_SOURCE_REPAIR"
+    },
+    {
+      "signature": [
+        "replace",
+        469,
+        469,
+        470,
+        470,
+        [
+          "dollar-inline"
+        ],
+        [
+          "148de9c5a7a44d19e56cd9ae1a554bf67847afb0c58f6e12fa29ac7ddfca9940"
+        ],
+        [
+          "dollar-inline"
+        ],
+        [
+          "252f10c83610ebca1a059c0bae8255eba2f95be4d1d7bcfa89d7248a82d9f111"
+        ]
+      ],
+      "classification": "MATHEMATICAL_SOURCE_REPAIR"
+    },
+    {
+      "signature": [
+        "replace",
+        472,
+        472,
+        473,
+        473,
+        [
+          "dollar-inline"
+        ],
+        [
+          "148de9c5a7a44d19e56cd9ae1a554bf67847afb0c58f6e12fa29ac7ddfca9940"
+        ],
+        [
+          "dollar-inline"
+        ],
+        [
+          "252f10c83610ebca1a059c0bae8255eba2f95be4d1d7bcfa89d7248a82d9f111"
+        ]
+      ],
+      "classification": "MATHEMATICAL_SOURCE_REPAIR"
+    },
+    {
+      "signature": [
+        "replace",
+        476,
+        476,
+        477,
+        477,
+        [
+          "dollar-inline"
+        ],
+        [
+          "5c28c862257830e8f8c86fa87888b62aa241283f3632bf3f119cbce5bd31f20a"
+        ],
+        [
+          "dollar-inline"
+        ],
+        [
+          "4b68ab3847feda7d6c62c1fbcbeebfa35eab7351ed5e78f4ddadea5df64b8015"
+        ]
+      ],
+      "classification": "MECHANICAL_SOURCE_REPAIR"
+    },
+    {
+      "signature": [
+        "replace",
+        488,
+        488,
+        489,
+        489,
+        [
+          "dollar-inline"
+        ],
+        [
+          "de5a6f78116eca62d7fc5ce159d23ae6b889b365a1739ad2cf36f925a140d0cc"
+        ],
+        [
+          "dollar-inline"
+        ],
+        [
+          "4b68ab3847feda7d6c62c1fbcbeebfa35eab7351ed5e78f4ddadea5df64b8015"
+        ]
+      ],
+      "classification": "MECHANICAL_SOURCE_REPAIR"
+    },
+    {
+      "signature": [
+        "insert",
+        499,
+        498,
+        500,
+        501,
+        [],
+        [],
+        [
+          "dollar-inline",
+          "dollar-inline"
+        ],
+        [
+          "381fe9d7a547de1891512eb62bfeec60dbfbc93380f7d8bfa76d9514a826efb5",
+          "b5575ec9772b36edaf294ce02cf245c7901c90f58787f5ac3a4ed76e89ed279c"
+        ]
+      ],
+      "classification": "MATHEMATICAL_SOURCE_REPAIR"
+    },
+    {
+      "signature": [
+        "replace",
+        583,
+        583,
+        586,
+        586,
+        [
+          "dollar-inline"
+        ],
+        [
+          "771b7e4ffe989355177c87a2e7affd08f7f9b8ddffb09ef01c5f2ab7faea1041"
+        ],
+        [
+          "dollar-inline"
+        ],
+        [
+          "44a58c3c1d63a65690e0364eb267a1d09e49955f060994f0b042d87ccd65741c"
+        ]
+      ],
+      "classification": "MECHANICAL_SOURCE_REPAIR"
+    },
+    {
+      "signature": [
+        "replace",
+        589,
+        589,
+        592,
+        592,
+        [
+          "dollar-inline"
+        ],
+        [
+          "ecd933270ba29506ebf966f6ffb143b9ca19ad20e0f4d15abc20130d88800b11"
+        ],
+        [
+          "dollar-inline"
+        ],
+        [
+          "385db61e36ff30ce3143fa5c4534cb7cc3f0638a44f905c1dc46a29099ab4247"
+        ]
+      ],
+      "classification": "MECHANICAL_SOURCE_REPAIR"
+    },
+    {
+      "signature": [
+        "replace",
+        592,
+        592,
+        595,
+        595,
+        [
+          "bracket-display"
+        ],
+        [
+          "be8c0bace0aae9b1b0d91258ca4f3ca000dfdf65f9c978482c5f9086ea1b9cfe"
+        ],
+        [
+          "bracket-display"
+        ],
+        [
+          "8b8b660e2e29a79e6d22944f9b5e56893ee31f2df2d81f78f675fa2e401af707"
+        ]
+      ],
+      "classification": "MATHEMATICAL_SOURCE_REPAIR"
+    }
+  ],
+  "visible_english_residue": [],
+  "errors": [],
+  "result": "pass"
+}

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate all deterministic backend projections in chapter order."""
+"""Regenerate the current backend from its frozen Chapter 1--8 byte prefix."""
 
 from __future__ import annotations
 
@@ -26,14 +26,10 @@ def run_generator(name: str) -> None:
 
 
 def main() -> None:
-    run_generator("generate_ch01_backend.py")
-    run_generator("generate_ch02_backend.py")
-    run_generator("generate_ch03_backend.py")
-    run_generator("generate_ch04_backend.py")
-    run_generator("generate_ch05_backend.py")
-    run_generator("generate_ch06_backend.py")
-    run_generator("generate_ch07_backend.py")
-    run_generator("generate_ch08_backend.py")
+    # Earlier chapter projections are immutable inputs to the append-only
+    # Chapter 9 generator. Replaying their historical checkers would wrongly
+    # revalidate obsolete whole-ledger hashes after later chapter appends.
+    run_generator("generate_ch09_backend.py")
 
 
 if __name__ == "__main__":

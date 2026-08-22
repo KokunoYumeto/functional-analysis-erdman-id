@@ -1,0 +1,165 @@
+\chapter{RUANG VEKTOR TOPOLOGIS}
+
+\section{Himpunan Seimbang dan Himpunan Penyerap}
+
+\begin{defn} Suatu himpunan $S$ di dalam ruang vektor disebut
+ \index{seimbang}%
+\df{seimbang} (atau \df{melingkar}) jika $\Dsk S \subseteq S$.
+\end{defn}
+
+\begin{notn} Misalkan $\Dsk$ menyatakan cakram satuan tertutup
+ \index{D@$\Dsk$ (cakram satuan tertutup di~$\C$)}%
+pada bidang kompleks $\{z \in \C\colon \abs z \le 1\}$.
+\end{notn}
+
+\begin{prop} Misalkan $B$ suatu subhimpunan seimbang dari sebuah ruang vektor. Jika $\alpha$ dan $\beta$ adalah skalar sedemikian sehingga $\abs\alpha \le \abs\beta$,
+maka $\alpha B \subseteq \beta B$.
+\end{prop}
+
+\begin{cor} Jika $B$ suatu subhimpunan seimbang dari sebuah ruang vektor dan $\abs\lambda =1$, maka $\lambda B = B$.
+\end{cor}
+
+\begin{defn} Jika $S$ suatu subhimpunan dari sebuah ruang vektor, maka himpunan $\Dsk S$ adalah
+ \index{seimbang!selubung}%
+ \index{selubung!seimbang}%
+\df{selubung seimbang} dari~$S$.
+\end{defn}
+
+\begin{prop} Misalkan $S$ suatu subhimpunan dari ruang vektor~$V$.  Maka selubung seimbang dari $S$ adalah irisan semua
+subhimpunan seimbang dari $V$ yang memuat~$S$; jadi, himpunan itu adalah subhimpunan seimbang terkecil dari $V$ yang memuat~$S$.
+\end{prop}
+
+\begin{defn} Suatu subhimpunan $A$ dari ruang vektor $V$
+ \index{menyerap}%
+\df{menyerap} suatu subhimpunan $B \subseteq V$ jika terdapat $M > 0$ sedemikian sehingga $B \subseteq tA$ setiap kali $\abs t \ge M$.
+Himpunan $A$ bersifat
+ \index{menyerap}%
+\df{menyerap} (atau \df{radial}) jika himpunan itu menyerap setiap himpunan beranggota satu (secara ekuivalen, setiap himpunan hingga).
+\end{defn}
+
+Jadi, secara longgar, suatu himpunan bersifat menyerap jika setiap vektor dalam ruang tersebut termuat dalam suatu hasil dilatasi yang sesuai dari himpunan itu.
+
+\begin{exam} Misalkan $B$ adalah gabungan sumbu-$x$ dan sumbu-$y$ dalam ruang vektor riil $\R^2$.  Maka $B$ seimbang, tetapi tidak konveks.
+\end{exam}
+
+\begin{exam} Dalam ruang vektor $\C$, sebuah elips dengan salah satu fokusnya di titik asal merupakan contoh himpunan penyerap yang tidak seimbang.
+\end{exam}
+
+\begin{exam} Dalam ruang vektor $\C^2$, himpunan $\Dsk \times \{0\}$ seimbang, tetapi tidak menyerap.
+\end{exam}
+
+\begin{prop} Suatu himpunan seimbang $B$ dalam ruang vektor $V$ bersifat menyerap jika dan hanya jika untuk setiap $x \in V$ terdapat skalar
+$\alpha \ne 0$ sedemikian sehingga $\alpha x \in B$.
+\end{prop}
+
+
+
+
+
+
+
+
+
+
+
+\section{Filter}
+
+Dalam mempelajari ruang vektor topologis, penggunaan bahasa \emph{filter} memudahkan kita mencirikan sifat-sifat topologis
+ruang-ruang tersebut.  Bahasa ini merupakan sarana alternatif bagi jaring, tetapi sebagian besar ekuivalen dengannya, dan terutama berguna dalam situasi (nonmetrik) ketika barisan
+tidak lagi banyak membantu.
+
+Secara kasar, sebuah \emph{filter} adalah keluarga tak kosong dari himpunan-himpunan tak kosong yang tertutup terhadap irisan berhingga dan pengambilan superhimpunan.
+
+\begin{defn} Suatu keluarga tak kosong $\sfml F$ dari subhimpunan-subhimpunan tak kosong dari suatu himpunan $S$ disebut
+ \index{filter!pada suatu himpunan}%
+\df{filter} pada $S$ jika
+   \begin{enumerate}[label=(\alph*)]
+     \item $A$, $B \in \sfml F$ mengakibatkan $A \cap B \in \sfml F$, dan
+     \item jika $A \in \sfml F$ dan $A \subseteq B$, maka $B \in \sfml F$.
+   \end{enumerate}
+\end{defn}
+
+\begin{exam} Salah satu contoh filter yang sederhana (dan, bagi keperluan kita, terpenting) adalah keluarga semua lingkungan suatu titik $a$ di sebuah
+ruang topologis.  Keluarga ini adalah
+ \index{lingkungan!filter pada suatu titik}%
+ \index{filter!lingkungan}%
+\df{filter lingkungan} pada~$a$. Filter ini akan
+ \index{N@$\sfml N_a$ (filter lingkungan pada~$a$)}%
+dilambangkan dengan $\sfml N_a$.
+\end{exam}
+
+\begin{defn} Suatu keluarga tak kosong $\sfml B$ yang terdiri atas subhimpunan-subhimpunan tak kosong dari himpunan $S$ disebut
+ \index{basis filter}%
+\df{basis filter} pada $S$ jika untuk setiap $A$, $B \in \sfml B$ terdapat $C \in \sfml B$ sedemikian sehingga $C \subseteq A \cap B$.
+
+Kita mengatakan bahwa suatu subkeluarga $\sfml B$ dari filter $\sfml F$ adalah
+ \index{basis filter!bagi suatu filter}%
+ \index{basis!bagi suatu filter}%
+\df{basis filter bagi} $\sfml F$ jika setiap anggota $\sfml F$ memuat suatu anggota~$\sfml B$.  (Penting untuk memeriksa bahwa
+setiap subkeluarga seperti itu memang merupakan basis filter.)
+\end{defn}
+
+\begin{exam} Setiap filter adalah basis filter.
+\end{exam}
+
+\begin{exam} Misalkan $a$ sebuah titik dalam ruang topologis.  Setiap basis lingkungan pada $a$ adalah basis filter bagi filter $\sfml N_a$
+yang terdiri atas semua lingkungan~$a$. Secara khusus, keluarga semua lingkungan terbuka dari $a$ adalah basis filter bagi~$\sfml N_a$.
+\end{exam}
+
+\begin{exam} Misalkan $\sfml B$ suatu basis filter pada himpunan $S$. Maka keluarga $\sfml F$ yang terdiri atas semua himpunan yang memuat anggota $\sfml B$
+adalah filter pada $S$, dan $\sfml B$ adalah basis filter bagi~$\sfml F$.  Filter ini akan kita sebut filter yang
+ \index{filter!yang dibangkitkan oleh suatu basis filter}%
+\df{dibangkitkan oleh}~$\sfml B$.
+\end{exam}
+
+\begin{defn} Suatu basis filter (khususnya, suatu filter) $\sfml B$ pada ruang topologis $X$
+ \index{konvergensi!suatu filter}%
+ \index{filter!konvergensi suatu}%
+ \index{konvergensi!suatu basis filter}%
+ \index{basis filter!konvergensi suatu}%
+ \index{limit!suatu basis filter}%
+\df{konvergen} ke sebuah titik $a \in X$ jika setiap anggota $N$ dari $\sfml N_a$, yaitu filter lingkungan pada $a$, memuat suatu anggota~$\sfml B$.
+Dalam hal ini, kita
+ \index{<arrowto@$\sfml B \sto a$ (konvergensi suatu basis filter)}%
+menuliskan $\sfml B \sto a$.
+\end{defn}
+
+\begin{prop} Suatu basis filter pada ruang topologis Hausdorff konvergen ke paling banyak satu titik.
+\end{prop}
+
+\begin{exam} Misalkan $(x_\lambda)$ sebuah jaring dalam himpunan~$S$ dan $\sfml F$ keluarga semua $A \subseteq S$ sedemikian sehingga jaring $(x_\lambda)$
+pada akhirnya berada di~$A$.  Maka $\sfml F$ adalah filter pada~$S$.  Kita akan menyebutnya filter yang
+ \index{filter!yang dibangkitkan oleh suatu jaring}%
+\df{dibangkitkan oleh} jaring~$(x_\lambda)$.
+\end{exam}
+
+\begin{prop} Misalkan $(x_\lambda)$ suatu jaring dalam ruang topologis~$X$, misalkan $\sfml F$ filter yang dibangkitkan oleh~$(x_\lambda)$,
+dan $a \in X$.  Maka $\sfml F \sto a$ jika dan hanya jika $x_\lambda \sto a$.
+\end{prop}
+
+\begin{exam} Misalkan $\sfml B$ suatu basis filter pada himpunan~$S$.  Misalkan $D$ himpunan semua pasangan terurut $(b,B)$ sedemikian sehingga $b \in B \in \sfml B$.
+Untuk $(b_1,B_1)$, $(b_2,B_2) \in D$, definisikan $(b_1,B_1) \le (b_2,B_2)$ jika $B_2 \subseteq B_1$.  Ini membuat $D$ menjadi himpunan terarah.  Sekarang bentuklah
+sebuah jaring dalam $S$ dengan mendefinisikan
+   \[ x\colon D \sto S\colon (b,B) \mapsto b \]
+yakni, tetapkan $x_\lambda = b$ untuk setiap $\lambda = (b,B) \in D$.  Maka $\bigl(x_\lambda\bigr)_{\lambda \in D}$ adalah sebuah jaring dalam~$S$.  Jaring ini adalah jaring yang
+ \index{jaring!yang dibangkitkan oleh suatu basis filter}%
+ \index{jaring!yang didasarkan pada suatu basis filter}%
+\df{dibangkitkan oleh} (atau \df{didasarkan pada}) basis filter~$\sfml B$.
+\end{exam}
+
+\begin{prop} Misalkan $\sfml B$ suatu basis filter pada ruang topologis $X$, misalkan $(x_\lambda)$ adalah jaring yang dibangkitkan oleh $\sfml B$, dan misalkan $a \in X$.
+Maka $x_\lambda \sto a$ jika dan hanya jika $\sfml B \sto a$.
+\end{prop}
+
+
+
+
+
+
+
+
+
+
+
+
+

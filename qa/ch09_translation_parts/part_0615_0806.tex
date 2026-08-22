@@ -1,0 +1,192 @@
+\section{Ruang Fr\'echet}
+
+\begin{defn} Ruang topologis $(X,\sfml T)$ disebut
+ \index{dapat dimetrikkan}%
+\df{dapat dimetrikkan} jika terdapat suatu metrik $d$ pada $X$ sedemikian sehingga topologi yang dibangkitkan oleh $d$ adalah~$\sfml T$.
+\end{defn}
+
+\begin{defn} Suatu metrik $d$ pada ruang vektor $V$ disebut
+ \index{translasi!invarian}%
+ \index{invarian!terhadap translasi}%
+\df{invarian terhadap translasi} jika
+   \[ d(x,y) = d(x + a, y + a) \]
+untuk semua $x$, $y$, dan $a$ di~$V$.
+\end{defn}
+
+\begin{prop} Misalkan $(X,\sfml T)$ ruang vektor topologis Hausdorff yang memiliki basis lokal terhitung. Maka terdapat metrik
+invarian terhadap translasi $d$ pada $X$ yang membangkitkan topologi $\sfml T$ dan yang bola-bola terbukanya di titik asal seimbang. Jika $X$ ruang konveks lokal,
+maka $d$ dapat dipilih sedemikian sehingga, selain itu, bola-bola terbukanya konveks.
+\end{prop}
+
+\begin{proof} Lihat \cite{Rudin:1991}, Teorema 1.24.  \ns
+\end{proof}
+
+\begin{exam}\label{X_metric_from_seminorms} Misalkan $\{p_n\colon n \in \N\}$ suatu keluarga seminorma pemisah terhitung pada ruang
+vektor~$X$, dan misalkan $\sfml T$ topologi pada $X$ yang dijamin oleh Proposisi~\ref{prop_clbase_from_snorms}. Dalam hal ini kita dapat secara eksplisit
+mendefinisikan suatu metrik invarian terhadap translasi pada $X$ yang menginduksi topologi~$\sfml T$. Untuk setiap barisan $\bigl(\alpha_k\bigr) \in c_0$
+dengan $\alpha_k>0$ untuk setiap $k\in\N$, suatu metrik dengan sifat-sifat yang diinginkan diberikan oleh
+   \[ d(x,y) = \max_{k \in \N}\biggl\{\frac{\alpha_k p_k(x-y)}{1 + p_k(x-y)}\biggr\}. \]
+\end{exam}
+
+\begin{proof} Lihat \cite{Rudin:1991}, Catatan 1.38(c).  \ns
+\end{proof}
+
+\begin{defn} Sebuah
+ \index{ruang Fr\'echet}%
+\df{ruang Fr\'echet} adalah ruang konveks lokal yang lengkap dan dapat dimetrikkan.
+\end{defn}
+
+\begin{notn} Misalkan $A$ dan $B$ subhimpunan suatu ruang topologis. Kita menulis
+ \index{<binrell@$A \prec B$ ($\clo A \subseteq \intr B$)}%
+$A\prec B$ jika $\clo A \subseteq \intr B$.
+\end{notn}
+
+\begin{prop} Pernyataan berikut berlaku untuk subhimpunan $A$, $B$, dan $C$ dari suatu ruang topologis:
+ \begin{enumerate}
+  \item[(a)] jika $A \prec B$ dan $B \prec C$, maka $A \prec C$;
+  \item[(b)] jika $A \prec C$ dan $B \prec C$, maka $A \cup B \prec C$; dan
+  \item[(c)] jika $A \prec B$ dan $A \prec C$, maka $A \prec B \cap C$.
+ \end{enumerate}
+\end{prop}
+
+Berikut adalah hasil standar dari topologi elementer.
+
+\begin{prop}\label{prop_open_lim_cpt} Misalkan $\Omega$ subhimpunan terbuka tak kosong dari $\R^n$. Maka terdapat suatu barisan
+$(K_n)$ yang terdiri atas subhimpunan kompak tak kosong dari $\Omega$ sedemikian sehingga $K_i \prec K_j$ setiap kali $i < j$ dan
+\smash[b]{$\bigcup\limits_{i=1}^\infty K_i = \Omega$}.
+\end{prop}
+
+\begin{proof} Lihat \cite{Treves:1967}, Lema 10.1.  \ns
+\end{proof}
+
+\begin{exam} Misalkan $\Omega$ subhimpunan terbuka tak kosong dari suatu ruang Euklides $\R^n$, dan misalkan $\fml C(\Omega)$ keluarga semua
+fungsi kontinu bernilai skalar pada~$\Omega$. Berdasarkan proposisi sebelumnya, kita dapat menuliskan $\Omega$ sebagai gabungan suatu koleksi
+terhitung himpunan kompak tak kosong $K_1$, $K_2$, \dots sedemikian sehingga $K_i \prec K_j$ setiap kali $i < j$. Untuk setiap $n \in \N$ dan
+$f \in \fml C(\Omega)$, misalkan $p_n(f) = \sup\{\abs{f(x)}\colon  x \in K_n\}$ seperti dalam Contoh~\ref{X_LCS1}. Menurut
+Proposisi~\ref{prop_clbase_from_snorms}, keluarga seminorma ini menjadikan $\fml C(\Omega)$ ruang konveks lokal. Misalkan
+$\sfml T$ topologi yang dihasilkan pada ruang ini. Berdasarkan Contoh~\ref{X_metric_from_seminorms}, fungsi
+   \[ d(f,g) = \max_{k \in \N}\frac{2^{-k}p_k(f-g)}{1 + p_k(f-g)} \]
+mendefinisikan suatu metrik pada $\fml C(\Omega)$ yang menginduksi topologi~$\sfml T$. Dengan metrik ini,
+$\fml C(\Omega)$ adalah ruang Fr\'echet.
+\end{exam}
+
+\begin{notn}[Notasi multi-indeks]\label{mi_notn} Misalkan $\Omega$ subhimpunan terbuka dari suatu ruang Euklides~$\R^n$. Kita akan meninjau
+fungsi-fungsi bernilai skalar yang dapat didiferensialkan
+ \index{notasi multi-indeks}%
+tak hingga pada $\Omega$; yakni fungsi pada $\Omega$ yang memiliki turunan untuk setiap orde di tiap titik~$\Omega$. Kita
+akan menyebut fungsi-fungsi demikian sebagai
+ \index{fungsi mulus}%
+fungsi \df{mulus} pada~$\Omega$. Kelas semua fungsi mulus pada $\Omega$ dinotasikan dengan
+ \index{C@$\fml C^\infty(\Omega)$!fungsi yang dapat didiferensialkan tak hingga}%
+$\fml C^\infty(\Omega)$.
+
+Kelas penting lain yang akan kita tinjau
+ \index{C@$\fml C^\infty_c(\Omega)$!fungsi yang dapat didiferensialkan tak hingga dengan tumpuan kompak}%
+adalah $\fml C_c^\infty(\Omega)$, yaitu keluarga semua fungsi bernilai skalar pada $\Omega$ yang dapat didiferensialkan tak hingga dan memiliki tumpuan kompak;
+yakni fungsi yang bernilai nol di luar suatu subhimpunan kompak dari~$\Omega$. Fungsi-fungsi dalam keluarga ini sering disebut
+ \index{fungsi uji}%
+\df{fungsi uji} pada~$\Omega$. Notasi lain yang lebih singkat,
+ \index{D@$\fml D(\Omega)$!ruang fungsi uji; fungsi yang dapat didiferensialkan tak hingga dengan tumpuan kompak}%
+yang lazim digunakan untuk keluarga ini adalah~$\fml D(\Omega)$.
+
+Kita akan menaruh perhatian pada operator diferensial pada ruang~$\fml D(\Omega)$. Misalkan $\bs\alpha = (\alpha_1, \dots, \alpha_n)$ suatu
+ \index{multi-indeks}%
+\df{multi-indeks}, yaitu suatu tupel-$n$ bilangan bulat dengan setiap $\alpha_k \ge 0$, dan misalkan
+  \[ D^{\bs\alpha} = \biggl(\frac{\partial}{\partial x_1}\biggr)^{\alpha_1} \dots
+                                                     \biggl(\frac{\partial}{\partial x_n}\biggr)^{\alpha_n}. \]
+Yang dimaksud dengan
+\index{D@$D^{\bs\alpha}$ (notasi multi-indeks untuk diferensiasi)}%
+ \index{orde!multi-indeks}%
+ \index{operator diferensial!yang bekerja pada fungsi mulus}%
+\df{orde} operator diferensial $D^{\bs\alpha}$ adalah $\abs{\bs\alpha} := \sum_{k=1}^n \alpha_k$. (Ketika
+$\abs{\bs\alpha} = 0$, kita memahami $D^{\bs\alpha}(f) = f$ untuk setiap fungsi~$f$.) Notasi alternatif untuk
+ \index{<unopura@$f^{\bs\alpha}$ (notasi multi-indeks untuk diferensiasi)}%
+$D^{\bs\alpha}f$ adalah~$f^{(\bs\alpha)}$.
+\end{notn}
+
+\begin{exam}\label{X_smooth_fcns_Frechet} Pada keluarga $\fml C^\infty(\Omega)$ dari fungsi-fungsi mulus pada suatu subhimpunan terbuka $\Omega$ dari
+ruang Euklides~$\R^n$, definisikan keluarga seminorma $\{\sbsb{p}{K,j}\}$. Untuk setiap subhimpunan kompak $K$ dari $\Omega$ dan setiap
+$j \in \N$, misalkan
+   \[ \sbsb{p}{K,j}(f) = \sup\{\abs{D^{\bs\alpha}f(x)}\colon x \in K \text{ dan } \abs{\bs\alpha} \le j\}. \]
+Keluarga seminorma ini menjadikan $\fml C^\infty(\Omega)$ ruang Fr\'echet. Topologi yang dihasilkan pada $\fml C^\infty(\Omega)$
+kadang-kadang disebut
+ \index{topologi!konvergensi seragam pada himpunan-himpunan kompak}%
+ \index{seragam!konvergensi!pada himpunan-himpunan kompak}%
+ \index{himpunan kompak!topologi konvergensi seragam pada}%
+ \index{konvergensi!seragam!pada himpunan-himpunan kompak}%
+\emph{topologi konvergensi seragam pada himpunan-himpunan kompak bagi fungsi-fungsi tersebut dan semua turunannya}.
+\end{exam}
+
+\begin{proof}[\emph{Petunjuk untuk bukti}] Untuk melihat bahwa ruang ini dapat dimetrikkan, gunakan Contoh~\ref{X_metric_from_seminorms} dan
+Proposisi~\ref{prop_open_lim_cpt}.  \ns
+\end{proof}
+
+\begin{exam}\label{Schwartz_space} Misalkan $n \in \N$. Nyatakan dengan $\fml S = \fml S(\R^n)$
+ \index{S@$\fml S = \fml S(\R^n)$ (ruang Schwartz)!sebagai ruang Fr\'echet}%
+ruang semua fungsi mulus $f$ yang didefinisikan pada seluruh~$\R^n$ dan memenuhi
+   \[ \lim_{\norm x \sto \infty}{\norm x}^k \abs{D^{\bs\alpha}f(x)} = 0 \]
+untuk semua multi-indeks $\bs\alpha = (\alpha_1,\dots,\alpha_n) \in \N^n$ dan semua bilangan bulat $k \ge 0$. Fungsi-fungsi demikian sering disebut
+sebagai
+ \index{fungsi yang menurun cepat}%
+ \index{fungsi!menurun cepat}%
+ \index{turunan!fungsi dengan turunan yang menurun cepat}%
+ \index{ruang!fungsi yang menurun cepat}%
+\emph{fungsi dengan turunan yang menurun cepat}, atau lebih singkat lagi, \emph{fungsi yang menurun cepat}. Pada $\fml S$ kita gunakan
+topologi yang didefinisikan oleh seminorma-seminorma
+   \[ \sbsb p{m,k}(f) := \sup_{\abs{\bs\alpha} \le m}\bigl\{\sup_{x \in \R^n} \{(1 + {\norm x}^2)^k \abs{(D^{\bs\alpha}f)(x)}\}\bigr\} \]
+untuk $k$, $m = 0,1,2,\dots$. Ruang yang dihasilkan adalah ruang Fr\'echet yang disebut
+ \index{ruang Schwartz}%
+ \index{ruang!Schwartz}%
+\df{ruang Schwartz} dari~$\R^n$.
+\end{exam}
+
+\begin{proof}[\emph{Petunjuk untuk bukti}] Untuk bukti kelengkapan, lihat~\cite{Treves:1967}, Contoh IV, halaman 92--94. \ns
+\end{proof}
+
+\begin{prop} Suatu fungsi uji $\psi$ pada $\R$ merupakan turunan dari fungsi uji lain jika dan hanya jika $\int_{-\infty}^\infty\psi = 0$.
+\end{prop}
+
+\begin{prop} Misalkan $F$ ruang Fr\'echet yang topologinya diinduksi oleh suatu metrik invarian terhadap translasi. Maka setiap subhimpunan terbatas
+dari $F$ memiliki diameter hingga.
+\end{prop}
+
+\begin{exam} Tinjau ruang Fr\'echet $\R$ dengan topologi yang diinduksi oleh metrik invarian terhadap translasi
+\smash[b]{$d(x,y) = \dfrac{\abs{x - y}}{1 + \abs{x - y}}$}. Maka himpunan bilangan asli $\N$ memiliki diameter hingga, tetapi tidak terbatas.
+\end{exam}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\endinput
