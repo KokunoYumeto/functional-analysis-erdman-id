@@ -1,0 +1,1351 @@
+\chapter{RUANG HILBERT}
+
+Untuk fakta-fakta paling mendasar tentang ruang Hilbert, saya tidak dapat memikirkan pengantar yang lebih baik daripada dua bab pertama
+dari buku klasik Halmos~\cite{Halmos:1951}.  Pengantar lain yang baik adalah~\cite{Young:1988}.  Bab 3 dan 9 dari~\cite{Kreyszig:1978}
+serta bab 4 dari~\cite{Ha:2006} mungkin juga berguna bagi Anda.  Sebagai langkah awal menuju penjelajahan yang lebih serius
+atas seluk-beluk ruang Hilbert, lihat~\cite{Conway:1990}, \cite{Conway:2000}, dan~\cite{Helmberg:1969}.
+
+
+\section{Definisi dan Contoh}
+
+Ruang Hilbert adalah \emph{ruang hasil kali dalam lengkap}.  Secara lebih terperinci:
+\begin{defn} Dalam proposisi~\ref{00015025} kita menunjukkan bagaimana hasil kali dalam pada suatu ruang vektor menginduksi norma pada ruang itu dan dalam
+proposisi~\ref{0001503} bagaimana norma tersebut selanjutnya menginduksi metrik.  Jika suatu ruang hasil kali dalam lengkap terhadap metrik ini,
+ruang itu disebut
+  \index{Hilbert!ruang}%
+  \index{ruang!Hilbert}%
+\df{ruang Hilbert}.  Demikian pula,
+  \index{Banach!ruang}%
+  \index{ruang!Banach}%
+\df{ruang Banach} adalah ruang linear bernorma lengkap dan
+  \index{Banach!aljabar}%
+  \index{aljabar!Banach}%
+\df{aljabar Banach} adalah aljabar bernorma lengkap.
+\end{defn}
+
+\begin{exam} Dengan hasil kali dalam yang didefinisikan dalam
+ \index{K@$\K^n$!sebagai ruang Hilbert}%
+ \index{Hilbert!ruang!$\K^n$ sebagai}%
+contoh~\ref{000150012}, $\K^n$ merupakan ruang Hilbert.
+\end{exam}
+
+\begin{exam}\label{exam150013} Dengan hasil kali dalam yang diberikan dalam
+ \index{l@$l_2 = l_2(\N)$!sebagai ruang Hilbert}%
+ \index{l@$l_2(\Z)$!sebagai ruang Hilbert}%
+ \index{Hilbert!ruang!$l_2 = l_2(\N)$, $l_2(\Z)$ sebagai}%
+ \index{l@$l_2 = l_2(\N)$!barisan yang kuadratnya dapat dijumlahkan}%
+ \index{l@$l_2 = l_2(\N)$!sebagai ruang hasil kali dalam}%
+ \index{hasil kali dalam!ruang!$l_2$ sebagai}%
+contoh~\ref{000150013}, $l_2 = l_2(\N)$ dan $l_2(\Z)$ merupakan ruang Hilbert.
+\end{exam}
+
+\begin{exam} Dengan hasil kali dalam yang didefinisikan dalam contoh~\ref{000150014}, $\fml C([a,b])$ \emph{bukan} ruang Hilbert.
+\end{exam}
+
+\begin{exam}\label{exam_CX} Misalkan $\fml C(X) = \fml C(X,\C)$ adalah keluarga semua fungsi kontinu bernilai kompleks pada ruang
+Hausdorff kompak~$X$.  Dengan
+ \index{seragam!norma!pada $\fml C(X)$}%
+ \index{norma!seragam}%
+ \index{C@$\fml C(X)$!sebagai ruang Banach}%
+ \index{C@$\fml C(X)$!fungsi kontinu bernilai kompleks pada~$X$}%
+\df{norma seragam}
+   \[ \norm f_u := \sup\{\abs{f(x)}\colon x \in X\} \]
+$\fml C(X)$ merupakan ruang Banach.  Jika ruang $X$ tidak kompak, dengan cara yang sama kita dapat menjadikan $\fml C_b(X)$, yakni himpunan
+ \index{C@$\fml C_b(X)$!sebagai ruang Banach}%
+semua fungsi kontinu bernilai kompleks yang \emph{terbatas} pada $X$ sebagai ruang Banach.
+Jika medan skalarnya adalah $\R$, kita akan
+ \index{C@$\fml C(X,\R)$!fungsi kontinu bernilai real pada~$X$}%
+ \index{C@$\fml C(X,\R)$!sebagai ruang Banach}%
+menuliskan $\fml C(X,\R)$ untuk keluarga fungsi kontinu bernilai real pada~$X$.  Keluarga ini juga merupakan ruang Banach.
+\end{exam}
+
+\begin{exam}\label{000213} Ruang hasil kali dalam $l_c$ yang terdiri atas semua barisan $(a_n)$ bilangan kompleks yang pada akhirnya bernilai nol
+(lihat contoh~\ref{exam13122}) bukan ruang Hilbert.
+\end{exam}
+
+\begin{exam}\label{00022} Misalkan $\mu$ adalah ukuran positif pada suatu $\sigma$-aljabar $\sfml A$ yang terdiri atas
+subhimpunan-subhimpunan dari himpunan~$S$.  Jika Anda belum mengenal teori ukuran umum, pengantar singkat tentang ukuran Lebesgue
+pada garis real seharusnya memadai untuk contoh-contoh yang muncul dalam catatan ini.  Suatu fungsi bernilai kompleks $f$ pada $S$ disebut
+ \index{terukur}%
+\df{terukur} jika prapeta oleh $f$ dari setiap himpunan Borel (secara ekuivalen, setiap himpunan
+terbuka) di $\C$ termasuk dalam~$\sfml A$. Kita mendefinisikan relasi ekuivalensi $\sim$ pada keluarga
+fungsi terukur bernilai kompleks dengan menetapkan $f \sim g$ apabila $f$ dan $g$ berbeda pada suatu himpunan
+berukuran nol, yaitu apabila $\mu(\{x \in S\colon f(x) \ne g(x)\}) = 0$.  Kita menggunakan
+notasi konvensional dan menyatakan kelas ekuivalensi yang memuat $f$ dengan $f$ itu sendiri (alih-alih
+dengan sesuatu yang lebih logis seperti~$[f]$).  Keluarga (kelas-kelas ekuivalensi dari) fungsi
+terukur bernilai kompleks pada $S$ dinyatakan dengan $\fml M(S,\mu)$. Suatu fungsi $f \in \fml M(S,\mu)$ disebut
+ \index{terintegralkan kuadrat}%
+ \index{M@$\fml M(S,\mu)$ (kelas ekuivalensi fungsi terukur)}%
+ \index{L@$\fml L_2(S,\mu)$!fungsi terintegralkan kuadrat}%
+\df{terintegralkan kuadrat} jika $\int_S \abs{f(x)}^2\,d\mu(x) < \infty$.  Keluarga
+(kelas-kelas ekuivalensi dari) fungsi terintegralkan kuadrat pada $S$ dinyatakan dengan~$\lfs 2(S,\mu)$.
+ \index{L@$\lfs 2(S,\mu)$!kelas fungsi terintegralkan kuadrat}%
+ \index{L@$\lfs 2(S,\mu)$!sebagai ruang Hilbert}%
+ \index{Hilbert!ruang!$\lfs 2(S,\mu)$ sebagai}%
+Untuk setiap $f$, $g \in \lfs 2(S,\mu)$, definisikan
+   \[ \langle f,g \rangle := \int_S f(x) \conj{g(x)}\,d\mu(x)\,. \]
+Dengan hasil kali dalam ini (dan operasi ruang vektor titik demi titik yang sudah jelas), $\lfs 2(S,\mu)$ merupakan ruang Hilbert.
+\end{exam}
+
+\begin{exam}\label{exam_L1S} Gunakan notasi seperti dalam contoh sebelumnya.  Suatu fungsi $f \in \fml M(S,\mu)$ disebut
+ \index{terintegralkan}%
+ \index{L@$\fml L_1(S,\mu)$!fungsi terintegralkan}%
+\df{terintegralkan} jika $\int_S \abs{f(x)}\,d\mu(x) < \infty$.  Keluarga
+(kelas-kelas ekuivalensi dari) fungsi terintegralkan pada $S$ dinyatakan dengan~$\lfs 1(S,\mu)$.
+ \index{L@$\lfs 1(S,\mu)$!kelas fungsi terintegralkan}%
+ \index{L@$\lfs 1(S,\mu)$!sebagai ruang Banach}%
+ \index{Banach!ruang!$\lfs 1(S,\mu)$ sebagai}%
+Untuk setiap $f \in \lfs 1(S,\mu)$, definisikan
+    \[ {\norm f}_1 := \int_S \abs{f(x)}\,d\mu(x)\,. \]
+Dengan norma ini (dan operasi ruang vektor titik demi titik yang sudah jelas), $\lfs 1(S,\mu)$ merupakan ruang Banach.
+\end{exam}
+
+\begin{defn} Jika $J$ adalah sembarang interval di $\R$, suatu fungsi bernilai real (atau kompleks) $f$ pada $J$ disebut
+ \index{mutlak!kekontinuan!fungsi}%
+ \index{kekontinuan!mutlak!fungsi}%
+ \index{kontinu!mutlak}%
+\df{kontinu mutlak} jika memenuhi syarat berikut:
+  \quote untuk setiap $\epsilon > 0$ terdapat $\delta > 0$ sedemikian
+ sehingga jika $(a_1,b_1), \dots,(a_n,b_n)$ \\
+ merupakan subinterval-subinterval tak kosong yang saling lepas dari $J$ dengan $\sum_{k=1}^n(b_k - a_k) < \delta$, \\
+ maka $\sum_{k=1}^n\abs{f(b_k) - f(a_k)}~<~\epsilon$.
+  \endquote
+\end{defn}
+
+\begin{exam}\label{exam_Hsp_abs_cont} Misalkan $\lambda$ adalah ukuran Lebesgue pada interval $[0,1]$ dan $H$ adalah himpunan semua
+fungsi kontinu mutlak pada $[0,1]$ sedemikian sehingga $f\,'$ termasuk dalam $\lfs 2([0,1],\lambda)$ dan $f(0) = 0$.
+ \index{Hilbert!ruang!fungsi kontinu mutlak}%
+ \index{mutlak!fungsi kontinu!ruang Hilbert}%
+Untuk $f$ dan $g$ dalam $H$, definisikan
+   \[ \langle f,g \rangle = \int_0^1 f\,'(t)\clo{g\,'(t)}\,dt. \]
+Ini merupakan hasil kali dalam pada $H$ yang menjadikan $H$ ruang Hilbert.
+\end{exam}
+
+\begin{exam} Jika $H$ dan $K$ merupakan ruang Hilbert, jumlah langsung (ortogonal eksternal) keduanya $H \oplus K$
+ \index{Hilbert!ruang!jumlah langsung ruang Hilbert sebagai}%
+ \index{langsung!jumlah!ruang Hilbert}%
+(sebagaimana didefinisikan dalam~\ref{0001504}) juga merupakan ruang Hilbert.
+\end{exam}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Penjumlahan Tak Berurutan}
+
+Mendefinisikan \emph{penjumlahan tak berurutan} dalam ruang linear bernorma tidak lebih sulit daripada dalam~$\R$.  Kita memperumum
+definisi~\ref{def_summable_R}.
+
+\begin{defn} Misalkan $V$ adalah ruang linear bernorma dan $A \subseteq V$.
+Untuk setiap $F \in \fin A$, definisikan
+  \[ \sbsb sF = \sum F\]
+di mana $\sum F$ adalah jumlah dari vektor-vektor (yang berhingga banyaknya) dalam~$F$.
+Dengan demikian, $s = \bigl(\sbsb sF\bigr)_{F \in \fin A}$ adalah jaring dalam~$V$. Jika jaring ini konvergen, himpunan
+$A$ disebut
+ \index{dapat dijumlahkan!himpunan vektor}%
+\df{dapat dijumlahkan}; limit jaring tersebut adalah
+ \index{jumlah!himpunan yang dapat dijumlahkan}%
+ \index{<sum@$\sum A$ (jumlah suatu himpunan vektor)}%
+\df{jumlah} dari $A$ dan dinyatakan dengan~$\sum A$. Jika $\{\norm a\colon a \in A\}$ dapat dijumlahkan, kita mengatakan bahwa himpunan $A$
+ \index{mutlak!dapat dijumlahkan}%
+ \index{dapat dijumlahkan!secara mutlak}%
+\df{dapat dijumlahkan secara mutlak}.
+
+Untuk mengakomodasi jumlah yang memuat vektor yang sama lebih dari satu kali, kita perlu menggunakan keluarga vektor terindeks.  Keluarga demikian
+memerlukan pendekatan yang sedikit berbeda. Misalkan, sebagai contoh, $A = \bigl(x_i\bigr)_{i \in I}$ dengan $I$
+sebagai sembarang himpunan indeks. Maka untuk setiap $F \in \fin I$,
+  \[ \sbsb sF = \sum_{i \in F}x_i . \]
+Seperti di atas, $s$ adalah jaring dalam~$V$. Jika jaring ini konvergen, $\bigl(x_i\bigr)_{i \in I}$ merupakan
+ \index{dapat dijumlahkan!keluarga vektor terindeks}%
+keluarga yang dapat dijumlahkan dan limitnya adalah
+ \index{jumlah!keluarga terindeks}%
+ \index{<sum@$\sum_{i \in I} x_i$ (jumlah suatu keluarga terindeks)}%
+jumlah keluarga terindeks tersebut, yang dinyatakan dengan $\sum_{i \in I} x_i$.  Cara lain untuk mengatakan bahwa $\bigl(x_i\bigr)_{i \in I}$
+dapat dijumlahkan adalah dengan mengatakan bahwa ``deret'' $\sum_{i \in I}x_i$
+ \index{konvergensi!deret tak hingga}%
+ \index{jumlah!deret tak hingga}%
+\df{konvergen} atau bahwa ``jumlah'' $\sum_{i \in I}x_i$ \df{ada}.  Suatu keluarga terindeks $\bigl(x_i\bigr)_{i \in I}$
+ \index{mutlak!dapat dijumlahkan}%
+ \index{dapat dijumlahkan!secara mutlak}%
+\df{dapat dijumlahkan secara mutlak} jika keluarga terindeks $\bigl(\norm{x_i}\bigr)_{i \in I}$ dapat dijumlahkan.  Cara lain untuk mengatakan
+bahwa $\bigl(x_i\bigr)_{i \in I}$ dapat dijumlahkan secara mutlak adalah dengan mengatakan bahwa ``deret'' $\sum_{i \in I}x_i$
+ \index{konvergensi!mutlak}%
+ \index{mutlak!konvergensi}%
+\df{konvergen mutlak}.
+
+Seperti biasa, barisan diperlakukan sebagai kasus tersendiri.  Misalkan $(a_k)$ adalah barisan dalam~$V$.  Jika deret tak hingga
+$\sum_{k=1}^\infty a_k$ (yaitu, barisan
+ \index{parsial!jumlah}%
+ \index{jumlah!parsial}%
+ \index{deret tak hingga!jumlah parsial}%
+ \index{deret!tak hingga}%
+jumlah parsial $s_n = \sum_{k=1}^n a_k$) konvergen ke suatu
+vektor $b$ dalam $V$, kita mengatakan bahwa barisan $(a_k)$
+ \index{deret tak hingga!dalam ruang linear bernorma}%
+ \index{dapat dijumlahkan!barisan}%
+ \index{barisan!dapat dijumlahkan}%
+\df{dapat dijumlahkan} atau, secara ekuivalen, bahwa deret $\sum_{k=1}^\infty a_k$ merupakan
+ \index{konvergensi!deret}%
+ \index{deret!konvergen}%
+\df{deret konvergen}.  Vektor $b$ disebut
+ \index{jumlah!deret tak hingga}%
+ \index{deret!jumlah}%
+ \index{deret tak hingga!jumlah}%
+\df{jumlah} deret $\sum_{k=1}^\infty a_k$ dan kita menulis
+  \[ \sum_{k=1}^\infty a_k = b\,. \]
+Jelas bahwa syarat perlu dan cukup agar suatu deret $\sum_{k=1}^\infty a_k$
+konvergen atau, secara ekuivalen, agar barisan $(a_k)$ dapat dijumlahkan, adalah adanya suatu
+vektor $b$ dalam $V$ sedemikian sehingga
+  \begin{equation}\label{cond_ser_conv}
+     \biggnorm{b - \sum_{k=1}^n a_k} \sto 0 \qquad \text{ketika} \qquad n \sto \infty.
+  \end{equation}
+\end{defn}
+
+\begin{prop}\label{prop_abs_sum_implies_sum} Suatu ruang linear bernorma $V$ lengkap jika dan hanya jika setiap barisan yang
+dapat dijumlahkan secara mutlak dalam $V$ dapat dijumlahkan.
+\end{prop}
+
+\begin{proof}[\emph{Petunjuk pembuktian}] Misalkan $(x_n)$ adalah barisan Cauchy dalam suatu ruang linear bernorma tempat setiap barisan yang
+dapat dijumlahkan secara mutlak juga dapat dijumlahkan.  Carilah suatu subbarisan $\bigl(x_{n_k}\bigr)$ dari $(x_n)$ sedemikian sehingga $\norm{x_n - x_m} < 2^{-k}$
+apabila $m$, $n \ge n_k$.  Jika kita menetapkan $y_1 = x_{n_1}$ dan $y_j = x_{n_j} - x_{n_{j-1}}$ untuk $j > 1$, maka $(y_j)$
+dapat dijumlahkan secara mutlak.   \ns
+\end{proof}
+
+\begin{prop} Jika $\bigl(x_i\bigr)_{i \in I}$ dan $\bigl(y_i\bigr)_{i \in I}$ merupakan
+keluarga terindeks yang dapat dijumlahkan dalam suatu ruang linear bernorma dan $\alpha$ adalah skalar, maka
+$\bigl(\alpha x_i\bigr)_{i \in I}$ dan $\bigl(x_i + y_i\bigr)_{i \in I}$
+dapat dijumlahkan; selain itu,
+  \[ \sum_{i \in I} \alpha x_i = \alpha \, \sum_{i \in I} x_i \]
+dan
+  \[ \sum_{i \in I} x_i + \sum_{i \in I} y_i =
+                         \sum_{i \in I} (x_i + y_i). \]
+\end{prop}
+
+\begin{rem} Dalam buku teks sering dijumpai suatu versi dari
+``proposisi'' berikut.
+\vskip 10 pt
+\begin{quote}
+Jika $\sum_{i \in I}x_i = u$ dan $\sum_{i \in I}x_i = v$ dalam suatu
+ruang Hilbert (atau Banach), maka $u = v$.
+\end{quote}
+
+ \vskip 10 pt
+\noindent (Saya pernah melihat bukti sepanjang 6 baris untuk pernyataan ini.) Pernyataan ini merupakan
+konsekuensi sepele dari hasil yang mana?
+\end{rem}
+
+\begin{prop} Jika $\bigl(x_i\bigr)_{i \in I}$ adalah keluarga terindeks vektor yang dapat dijumlahkan dalam ruang Hilbert $H$ dan
+$y$ adalah vektor dalam $H$, maka $\bigl(\langle x_i,y \rangle\bigr)_{i \in I}$ adalah keluarga terindeks skalar yang dapat dijumlahkan dan
+   \[ \sum_{i \in I}\langle x_i,y \rangle  = \biggl < \sum_{i \in I} x_i, y \biggr >. \]
+\end{prop}
+
+Berikut ini merupakan perumuman dari contoh~\ref{exam150013}.
+
+\begin{exam} Misalkan $I$ adalah sembarang himpunan tak kosong dan $l^2(I)$ adalah himpunan semua fungsi bernilai kompleks $x$ pada $I$ sedemikian sehingga
+$\sum_{i \in I}\abs{x_i}^2 < \infty$. Untuk semua $x$, $y \in l^2(I)$, definisikan
+    \[ \langle x,y \rangle = \sum_{i \in I}x(i)\conj{y(i)}.\]
+  \begin{enumerate}
+    \item Jika $x \in l^2(I)$, maka $x(i) = 0$ untuk semua indeks $i$, kecuali mungkin indeks-indeks dalam suatu himpunan terhitung.
+    \item Pemetaan $(x,y) \mapsto \langle x,y \rangle$ merupakan hasil kali dalam pada ruang vektor $l^2(I)$.
+    \item Ruang $l^2(I)$ merupakan ruang Hilbert.
+  \end{enumerate}
+\end{exam}
+
+\begin{prop}\label{prop_sum_conv} Misalkan $(x_n)$ adalah barisan dalam suatu ruang Hilbert.  Jika barisan tersebut, ketika dipandang sebagai keluarga terindeks,
+dapat dijumlahkan, maka deret tak hingga $\sum_{k=1}^\infty x_k$ konvergen.
+\end{prop}
+
+\begin{exam} Kebalikan dari proposisi~\ref{prop_sum_conv} tidak berlaku.
+\end{exam}
+
+Jumlah langsung dari dua ruang Hilbert merupakan ruang Hilbert.
+
+\begin{prop} Jika $H$ dan $K$ merupakan ruang Hilbert, maka jumlah langsung (ortogonal) keduanya (sebagaimana didefinisikan dalam~\ref{0001504})
+merupakan ruang Hilbert.
+\end{prop}
+
+Kita juga dapat mengambil hasil kali lebih dari dua ruang Hilbert---bahkan hasil kali suatu keluarga tak hingga ruang Hilbert.
+
+\begin{prop} Misalkan $\bigl(H_i\bigr)_{i \in I}$ adalah keluarga terindeks ruang Hilbert.  Suatu fungsi $x\colon I \sto \bigcup H_i$
+termasuk dalam $H = \D\bigoplus_{i \in I}H_i$ jika $x(i) \in H_i$ untuk setiap $i$ dan jika $\sum_{i \in I}\norm{x(i)}^2 < \infty$.
+Mendefinisikan $\langle \hphantom x, \hphantom y \rangle$ pada $H$ dengan $\langle x, y \rangle := \sum_{i \in I} \langle
+x(i), y(i) \rangle$ menjadikan $H$ ruang Hilbert.
+\end{prop}
+
+\begin{defn} Ruang Hilbert yang didefinisikan dalam proposisi sebelumnya adalah
+ \index{eksternal!jumlah langsung ortogonal}%
+ \index{ortogonal!jumlah langsung!ruang Hilbert}%
+ \index{langsung!jumlah!ruang Hilbert}%
+ \index{Hilbert!ruang!jumlah langsung}%
+ \index{jumlah!langsung}%
+\df{jumlah langsung ortogonal (eksternal)} dari ruang-ruang Hilbert~$H_i$.
+\end{defn}
+
+\begin{exer}  Apakah jumlah langsung yang didefinisikan di atas (dengan morfisme yang sesuai) merupakan hasil kali dalam kategori $\cat{HSp}$
+yang objeknya ruang Hilbert dan morfismenya pemetaan linear terbatas?  Apakah jumlah langsung itu merupakan koproduk?
+\end{exer}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Geometri Ruang Hilbert}
+
+\begin{conv}  Dalam konteks ruang Hilbert, kata ``subruang'' akan selalu berarti
+ \index{konvensi!subruang dari ruang Hilbert bersifat tertutup}%
+ \index{subruang!ruang Hilbert}%
+\emph{subruang vektor tertutup}.  Alasannya adalah bahwa kita ingin agar subruang dari suatu ruang Hilbert merupakan ruang Hilbert tersendiri; dengan kata lain,
+subruang dari suatu ruang Hilbert seharusnya merupakan subobjek dalam kategori ruang Hilbert (dan morfisme yang sesuai).  Untuk menunjukkan bahwa $M$ adalah subruang dari $H$, kita menulis
+ \index{<binrelle@$\preccurlyeq$ (subruang dari ruang Banach atau Hilbert)}%
+$M \preccurlyeq H$.  Subruang vektor (yang tidak harus tertutup) dari suatu ruang Hilbert juga
+ \index{linear!subruang}%
+ \index{vektor!subruang}%
+ \index{linear!manifold}%
+ \index{manifold!linear}%
+disebut \emph{subruang linear} atau \emph{manifold linear}.
+\end{conv}
+
+\begin{defn} Misalkan $A$ adalah subhimpunan tak kosong dari ruang Banach (atau Hilbert)~$B$.  Kita mendefinisikan
+ \index{tertutup!rentang linear}%
+ \index{linear!rentang!tertutup}%
+ \index{<unops@$\bigvee A$ (rentang linear tertutup dari~$A$)}%
+\df{rentang linear tertutup} dari $A$ (dinyatakan dengan $\bigvee A$) sebagai subruang terkecil dari $B$ yang memuat~$A$; yaitu,
+irisan semua subruang dari $B$ yang memuat~$A$.
+\end{defn}
+
+Seperti pada definisi \ref{smplx005def}, \ref{def_interior}, dan \ref{def_closure}, kita perlu menunjukkan bahwa definisi sebelumnya bermakna.
+
+\begin{prop} Definisi sebelumnya bermakna.  Lebih lanjut, suatu vektor berada dalam rentang linear tertutup dari $A$ jika dan hanya jika vektor itu termasuk
+dalam penutupan rentang linear dari~$A$.
+\end{prop}
+
+\begin{thm}[Teorema Vektor Peminimum] Jika $C$ adalah subhimpunan konveks tertutup tak kosong dari suatu
+ \index{teorema vektor peminimum}%
+ruang Hilbert $H$ dan $a \in C^c$, maka terdapat tepat satu $b \in C$ sedemikian sehingga
+$\norm{b - a} \le \norm{x - a}$ untuk setiap $x \in C$.
+ \[\xymatrix{
+     &&&&&{}  \\
+     &&&& x   \\
+     a\ar[rrrru]\ar[rrr] &&& b  \\
+     &&&&&C   \\
+     &&&&{}\ar@{-}@/^3.5pc/[uuuu]       }\]
+\end{thm}
+
+\begin{proof}[\emph{Petunjuk pembuktian}]  Untuk bagian eksistensi, misalkan $d = \inf\{\norm{x - a}\colon x \in C\}$.  Pilih suatu barisan
+$(y_n)$ vektor dalam $C$ sedemikian sehingga $\norm{y_n - a} \sto d$.  Untuk membuktikan bahwa barisan $(y_n)$ adalah barisan Cauchy, terapkan
+\emph{hukum jajaran genjang}~\ref{parallelogram_law} pada vektor $y_m - a$ dan $y_n - a$ untuk $m$, $n \in \N$.  Bagian keunikan
+serupa: terapkan \emph{hukum jajaran genjang} pada vektor $b - a$ dan $c - a$, dengan $b$ dan $c$ sebagai dua vektor yang
+memenuhi kesimpulan teorema.  \ns
+\end{proof}
+
+\begin{exam} Ruang vektor $\R^2$ dengan metrik seragam merupakan ruang Banach. Untuk melihat
+bahwa \emph{Teorema Vektor Peminimum} tidak berlaku dalam ruang ini, ambillah $C$ sebagai
+bola satuan tertutup berpusat di titik asal dan $a$ sebagai titik~$(2,0)$.
+\end{exam}
+
+\begin{exam} Himpunan-himpunan
+   \[ C_1 = \biggl\{f \in \fml C([0,1])\colon \int_0^{1/2}f - \int_{1/2}^1f = 1\biggr\} \qquad \text{dan} \qquad
+                               C_2 = \biggl\{f \in \lfs 1([0,1],\lambda)\colon \int_0^1f = 1\biggr\} \]
+merupakan contoh yang menunjukkan bahwa baik pernyataan eksistensi maupun pernyataan keunikan dalam \emph{Teorema Vektor Peminimum}
+tidak harus berlaku dalam ruang Banach. (Simbol $\lambda$ menyatakan ukuran Lebesgue.)
+\end{exam}
+
+\begin{thm}[Teorema Dekomposisi Vektor]\label{thm_vec_decomp} Misalkan $H$ adalah ruang Hilbert dan
+ \index{vektor!teorema dekomposisi}%
+$M$ adalah subruang (linear tertutup) dari~$H$.
+Maka untuk setiap $x \in H$ terdapat tepat satu pasangan vektor $y \in M$ dan $z \in M^\perp$ sedemikian sehingga $x = y + z$.
+\end{thm}
+
+\begin{proof}[\emph{Petunjuk pembuktian}] Asumsikan $x \notin M$ (jika tidak, hasilnya sepele). Jelaskan bagaimana kita
+mengetahui bahwa terdapat tepat satu vektor $y \in M$ sedemikian sehingga
+   \begin{equation} \norm{x - y} \le \norm{x - m} \end{equation}
+untuk semua $m \in M$.  Jelaskan mengapa, untuk bagian eksistensi dari bukti, cukup dibuktikan
+bahwa $x - y$ tegak lurus terhadap setiap vektor \emph{satuan} $m \in M$.  Jelaskan mengapa benar
+bahwa untuk setiap vektor satuan $m \in M$,
+   \begin{equation} \norm{x - y}^2 \le \norm{x - (y + \lambda m)}^2 \end{equation}
+di mana $\lambda := \langle x - y, m \rangle$.  \ns
+\end{proof}
+
+\begin{cor} Jika $M$ merupakan subruang dari suatu ruang Hilbert~$H$, maka $H = M \oplus M^\perp$.
+\end{cor}
+
+\begin{exam} Hasil sebelumnya menyatakan bahwa setiap subruang dari suatu ruang Hilbert merupakan suku
+langsung. Hasil ini tidak harus benar jika $M$ hanya diasumsikan sebagai subruang linear dari ruang tersebut.
+Sebagai contoh, perhatikan bahwa $M = l_c$ (lihat contoh~\ref{000213}) adalah subruang linear dari
+ruang Hilbert $l_2$ (lihat contoh~\ref{exam150013}), tetapi $M^\perp = \{\vc 0\}$.
+\end{exam}
+
+\begin{cor} Suatu subruang vektor $A$ dari ruang Hilbert $H$ padat dalam $H$ jika dan hanya jika $A^\perp = \{0\}$.
+\end{cor}
+
+\begin{prop} Setiap subruang sejati dari suatu ruang Hilbert memiliki interior kosong.
+\end{prop}
+
+\begin{prop} Jika suatu basis Hamel bagi ruang Hilbert tidak hingga, maka basis tersebut tak terhitung.
+\end{prop}
+
+\begin{proof}[\emph{Petunjuk pembuktian}] Andaikan basis tak hingga terhitungnya ialah $\{e^1, e^2, e^3, \dots \}$.
+Untuk setiap $n \in \N$, misalkan $M_n = \spn\{e^1, e^2, \dots, e^n\}$.  Terapkan \emph{teorema kategori Baire} (lihat~\cite{Erdman:2007},
+teorema 29.3.20) pada $\bigcup_{n=1}^\infty M_n$ dengan mengingat proposisi sebelumnya.   \ns
+\end{proof}
+
+\begin{prop}\label{00023} Misalkan $H$ adalah ruang Hilbert. Maka pernyataan-pernyataan berikut berlaku:
+ \begin{enumerate}
+  \item jika $A \subseteq H$, maka $A \subseteq A^{\perp\perp}$;
+  \item jika $A \subseteq B \subseteq H$, maka $B^\perp \subseteq A^\perp$;
+  \item jika $M$ adalah subruang dari $H$, maka $M = M^{\perp\perp}$; dan
+  \item jika $A \subseteq H$, maka $\bigvee A = A^{\perp\perp}$.
+ \end{enumerate}
+\end{prop}
+
+\begin{prop} Misalkan $M$ dan $N$ adalah subruang dari suatu ruang Hilbert.  Maka
+ \begin{enumerate}
+  \item  $(M + N)^\perp = (M \cup N)^\perp =  M^\perp \cap N^\perp$, dan
+  \item  $(M \cap N)^\perp = \clo{M^\perp + N^\perp}$.
+ \end{enumerate}
+\end{prop}
+
+\begin{prop} Misalkan $V$ adalah ruang linear bernorma.  Terdapat hasil kali dalam pada $V$ yang menginduksi norma pada $V$
+jika dan hanya jika norma tersebut memenuhi \emph{hukum jajaran genjang}~\ref{parallelogram_law}.
+\end{prop}
+
+\begin{proof}[\emph{Petunjuk pembuktian}]  Kita mengatakan bahwa suatu hasil kali dalam $\langle \,\cdot\,\,,\,\cdot\, \rangle$
+pada $V$ menginduksi norma $\norm{\,\cdot\,}$ jika $\norm x = \sqrt{\langle x,x \rangle}$ berlaku untuk setiap $x$ dalam $V$.
+Untuk membuktikan bahwa jika suatu norma memenuhi \emph{hukum jajaran genjang}, maka norma tersebut diinduksi oleh hasil kali dalam,
+gunakan persamaan dalam \emph{identitas polarisasi}~\ref{0001507} sebagai definisi.
+Buktikan terlebih dahulu bahwa $\langle y,x \rangle = \conj{\langle x,y \rangle}$ untuk semua $x$, $y\in V$ dan bahwa
+$\langle x,x \rangle > 0$ apabila $x \ne 0$.  Selanjutnya, untuk sembarang $z \in V$, definisikan fungsi
+$f\colon V \sto \C\colon x \mapsto \langle x,z \rangle$.  Buktikan bahwa
+   \[ f(x + y) + f(x - y) = 2f(x) \tag{$\ast$} \]
+untuk semua $x$, $y \in V$.  Gunakan ini untuk membuktikan bahwa $f(\alpha x) = \alpha f(x)$ untuk semua
+$x \in V$ dan $\alpha \in \R$.  (Mulailah dengan $\alpha$ berupa bilangan asli.)  Kemudian
+tunjukkan bahwa $f$ aditif. (Jika $u$ dan $v$ adalah sembarang anggota $V$, misalkan $x = u + v$
+dan $y = u - v$.  Gunakan~$(\ast)$.)  Terakhir, buktikan bahwa $f(\alpha x) = \alpha f(x)$ untuk
+$\alpha$ kompleks dengan menunjukkan bahwa $f(ix) = i\,f(x)$ untuk semua $x \in V$.  \ns
+\end{proof}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Himpunan Ortonormal dan Basis}\label{sec_onbases}
+\begin{defn} Suatu subhimpunan tak kosong $E$ dari ruang Hilbert bersifat
+ \index{ortonormal}%
+\df{ortonormal} jika $e \perp f$ untuk setiap pasangan vektor berbeda $e$ dan $f$ di $E$, dan
+$\norm e = 1$ untuk setiap $e \in E$.
+\end{defn}
+
+\begin{prop} Dalam ruang hasil kali dalam, setiap himpunan ortonormal bebas linear.
+\end{prop}
+
+\begin{prop}[Pertidaksamaan Bessel]\label{C063141} Misalkan $H$ ruang Hilbert dan $E$ suatu
+ \index{pertidaksamaan Bessel}%
+subhimpunan ortonormal dari~$H$. Untuk setiap $x \in H$,
+  \[ \sum_{e \in E} \norm{\langle x,e \rangle}^2 \le \norm x^2\,. \]
+\end{prop}
+
+\begin{cor} Jika $E$ subhimpunan ortonormal dari ruang Hilbert $H$ dan $x \in H$, maka
+$\{e \in E\colon \langle x,e \rangle~\ne~0\}$ terhitung.
+\end{cor}
+
+\begin{prop}\label{C063144} Misalkan $E$ himpunan ortonormal dalam ruang Hilbert~$H$. Pernyataan-pernyataan
+berikut ekuivalen.
+ \begin{enumerate}
+  \item $E$ adalah himpunan ortonormal maksimal.
+  \item Jika $x \perp E$, maka $x = 0$ ($E$ bersifat \emph{total}).
+ \index{total!himpunan ortonormal}%
+  \item $\bigvee E = H$ ($E$ adalah \emph{himpunan ortonormal lengkap}).
+ \index{lengkap!himpunan ortonormal}%
+  \item $\D x = \sum_{e \in E} \langle x,e \rangle e$ untuk semua $x \in H$. \emph{(Ekspansi
+Fourier)}
+ \index{Fourier!ekspansi}%
+  \item $\D \langle x,y \rangle = \sum_{e \in E} \langle x,e \rangle \langle e,y \rangle$
+untuk semua $x,y \in H$. \emph{(Identitas Parseval.)}
+ \index{identitas Parseval}%
+  \item $\D \norm{x}^2 = \sum_{e \in E} \abs{\langle x,e \rangle}^2$ untuk semua $x \in H$.
+\emph{(Identitas Parseval.)}
+ \end{enumerate}
+\end{prop}
+
+\begin{defn}\label{C063147} Jika $H$ ruang Hilbert, maka himpunan ortonormal $E$ yang memenuhi
+salah satu (dan karenanya semua) kondisi dalam proposisi~\ref{C063144} disebut
+ \index{ortonormal!basis}%
+ \index{basis!ortonormal}%
+\df{basis ortonormal} untuk~$H$ (atau
+ \index{lengkap!himpunan ortonormal}%
+ \index{ortonormal!himpunan!lengkap}%
+\df{himpunan ortonormal lengkap} dalam~$H$, atau
+ \index{Hilbert!ruang!basis untuk}%
+ \index{basis!untuk ruang Hilbert}%
+\df{basis ruang Hilbert} untuk~$H$). Perhatikan bahwa konsep ini sangat berbeda dari
+basis biasa (Hamel) untuk ruang vektor (lihat~\ref{defn_Hamel_basis}). Untuk ruang Hilbert,
+vektor-vektor basis harus memiliki panjang satu dan saling tegak lurus
+(kondisi yang tidak bermakna dalam ruang vektor); tetapi \emph{tidak} disyaratkan bahwa
+setiap vektor dalam ruang tersebut merupakan kombinasi linear dari vektor-vektor basis.
+\end{defn}
+
+\begin{prop} Jika $E$ subhimpunan ortonormal dari ruang Hilbert $H$, maka terdapat
+basis ortonormal untuk $H$ yang memuat~$E$.
+\end{prop}
+
+\begin{cor} Setiap ruang Hilbert tak nol memiliki basis.
+\end{cor}
+
+\begin{prop} Jika $E$ subhimpunan ortonormal dari ruang Hilbert $H$ dan $x \in H$, maka
+$\{\langle x,e \rangle e: e \in E\}$ dapat dijumlahkan.
+\end{prop}
+
+\begin{exam}\label{C063149} Untuk setiap $n \in \N$, misalkan $\vc e^n$ adalah barisan dalam $l_2$ yang
+koordinat ke-$n$-nya bernilai $1$ dan semua koordinat lainnya bernilai~$0$. Maka $\{\vc e^n\colon n \in \N\}$
+adalah basis ortonormal untuk~$l_2$. Basis ini disebut
+ \index{biasa!basis ortonormal untuk~$l_2$}%
+ \index{ortonormal!basis!biasa (atau standar) untuk~$l_2$}%
+ \index{basis!standar (atau biasa)}%
+\df{biasa} (atau
+ \index{standar!basis ortonormal}%
+\df{standar}); basis tersebut adalah \df{basis ortonormal} untuk~$l_2$.
+\end{exam}
+
+\begin{exer} Suatu fungsi $f\colon \R \sto \C$ berbentuk
+   \[ f(t) = a_0 + \sum_{k=1}^n (a_k \cos kt + b_k \sin kt) \]
+dengan $a_0, \dots, a_n, b_1, \dots, b_n$ bilangan kompleks disebut
+ \index{polinom trigonometri}%
+ \index{polinom!trigonometri}%
+\df{polinom trigonometri}.
+ \begin{enumerate}
+  \item Jelaskan mengapa fungsi bernilai kompleks yang $2\pi$-periodik pada garis real $\R$
+sering diidentifikasi dengan fungsi bernilai kompleks pada lingkaran satuan~$\T$.
+  \item Beberapa penulis menyebut \emph{polinom trigonometri} sebagai fungsi berbentuk
+    \[ f(t) = \sum_{k=-n}^n c_k e^{ikt} \]
+ dengan $c_{-n}, \dots, c_{-1}, c_0, c_1, \dots, c_n$ bilangan kompleks. Jelaskan dengan cermat mengapa bentuk ini persis
+sama dengan definisi sebelumnya.
+  \item Jelaskan alasan penggunaan istilah \emph{polinom trigonometri}.
+  \item Buktikan bahwa setiap fungsi kontinu yang $2\pi$-periodik pada $\R$ merupakan limit seragam
+dari suatu barisan polinom trigonometri.
+ \end{enumerate}
+\end{exer}
+
+\begin{prop}\label{prop_unique_onbasis} Misalkan $E$ basis untuk ruang Hilbert $H$ dan $x \in H$.
+Jika $x = \sum_{e \in E} \alpha_e e$, maka $\alpha_e = \langle x,e \rangle$ untuk setiap $e \in E$.
+\end{prop}
+
+\begin{prop} Tinjau ruang Hilbert $\lfs 2([0,2\pi],\C)$ yang terdiri atas (kelas-kelas ekuivalensi dari) fungsi
+ \index{L@$\lfs 2([0,2\pi],\C)$}%
+bernilai kompleks yang terintegralkan kuadrat pada $[0,2\pi]$, dengan hasil kali dalam
+  \[ \langle f,g \rangle = \frac1{2\pi}\int_0^{2\pi} f(x) \conj{g(x)}\,dx. \]
+Untuk setiap bilangan bulat $n$ (positif, negatif, atau nol), misalkan $\vc e^n(x) = e^{inx}$ untuk semua $x
+\in [0,2\pi]$. Maka himpunan fungsi $\vc e^n$ untuk $n \in \Z$ merupakan
+basis ortonormal untuk $\lfs 2([0,2\pi],\C)$.
+\end{prop}
+
+\begin{exam} Jumlah deret tak hingga $\D\sum_{k=1}^\infty \frac1{k^2}$ adalah $\dfrac{\pi^2}6$\,.
+\end{exam}
+
+\begin{proof}[\emph{Petunjuk pembuktian}] Misalkan $f(x) = x$ untuk $0 \le x \le 2\pi$. Pandang $f$ sebagai anggota
+$\lfs 2([0,2\pi])$. Tentukan $\norm{f}$ dengan dua cara. \ns
+\end{proof}
+
+Proposisi berikut memungkinkan kita mendefinisikan gagasan \emph{dimensi} ruang Hilbert. (Pada ruang berdimensi
+hingga, gagasan ini sama dengan konsep dalam ruang vektor.)
+
+\begin{prop} Sebarang dua basis ortonormal dari suatu ruang Hilbert memiliki kardinalitas yang sama (artinya, keduanya
+berkorespondensi satu-satu).
+\end{prop}
+
+\begin{proof} Lihat \cite{Halmos:1951}, halaman 29, Teorema 1. \ns
+\end{proof}
+
+\begin{defn}
+ \index{dimensi}%
+Yang dimaksud dengan \df{dimensi} ruang Hilbert adalah kardinalitas dari sebarang basis ortonormal untuk ruang tersebut.
+\end{defn}
+
+\begin{prop}\label{prop_Schauder_basis_Hsp} Ruang Hilbert separabel jika dan hanya jika ruang tersebut memiliki
+ \index{separabel!ruang Hilbert}%
+ \index{Hilbert!ruang!separabel}%
+basis ortonormal terhitung.
+\end{prop}
+
+\begin{proof} Lihat \cite{Kreyszig:1978}, halaman 171, Teorema 3.6-4. \ns
+\end{proof}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Teorema Riesz--Fr\'echet}
+\begin{exam}\label{000341} Misalkan $H$ ruang Hilbert dan $a \in H$. Definisikan $\psi_a\colon
+H \sto \C\colon x \mapsto \langle x,a \rangle$. Maka $\psi_a \in H^*$.
+\end{exam}
+
+Sekarang kita menggeneralisasi teorema~\ref{0001601} ke ranah berdimensi tak hingga. Hasil ini
+kadang-kadang disebut \emph{Teorema Representasi Riesz} (yang dapat menimbulkan kebingungan dengan
+ \index{representasi!fungsional linear kontinu}%
+ \index{representasi!teorema kecil Riesz}%
+hasil yang lebih substansial mengenai representasi fungsional linear tertentu sebagai ukuran)
+atau \emph{Teorema Representasi Riesz Kecil}. Teorema ini menyatakan bahwa \emph{satu-satunya}
+fungsional linear kontinu pada ruang Hilbert adalah fungsi $\psi_a$ yang didefinisikan dalam~\ref{000341}.
+Dengan kata lain, jika diberikan fungsional linear kontinu $f$ pada ruang Hilbert, terdapat vektor unik
+$a$ dalam ruang tersebut sehingga nilai $f$ pada vektor $x$ dapat dinyatakan hanya dengan mengambil
+hasil kali dalam $x$ dengan~$a$.
+
+\begin{thm}[Teorema Riesz--Fr\'echet]\label{000342} Jika $f \in H^*$ dengan $H$ ruang Hilbert,
+ \index{teorema Riesz--Fr\'echet}%
+maka terdapat vektor unik $a$ dalam $H$ sehingga $f = \psi_a$. Selain itu,
+$\norm a = \norm{\psi_a}$.
+\end{thm}
+
+\begin{proof}[\emph{Petunjuk pembuktian}] Untuk kasus $f \ne 0$, pilih vektor satuan $z$ dalam $(\ker f)^\perp$.
+Perhatikan bahwa untuk setiap $x \in H$, vektor $x - \frac{f(x)}{f(z)}\,z$ termasuk dalam $\ker f$. \ns
+\end{proof}
+
+\begin{cor} Kernel setiap fungsional linear terbatas tak nol pada ruang Hilbert memiliki kodimensi~$1$.
+\end{cor}
+
+\begin{proof}[\emph{Petunjuk pembuktian}]
+ \index{kodimensi}%
+Yang dimaksud dengan \df{kodimensi} suatu subruang dari ruang Hilbert adalah dimensi komplemen ortogonalnya. Pernyataan ini sebenarnya
+merupakan akibat dari \emph{pembuktian} \emph{Teorema Riesz--Fr\'echet}. Dalam pembuktian tersebut kita mendapati bahwa vektor
+yang merepresentasikan fungsional linear terbatas $f$ merupakan kelipatan (tak nol) dari vektor satuan dalam $(\ker f)^\perp$.
+Apa yang akan terjadi jika terdapat dua vektor bebas linear dalam $(\ker f)^\perp$? \ns
+\end{proof}
+
+\begin{defn} Ingat bahwa pemetaan $T\colon V \sto W$ antara ruang-ruang vektor kompleks bersifat
+ \index{linear konjugat}%
+ \index{linear!konjugat}%
+\df{linear konjugat} jika $T(x + y) = Tx + Ty$ dan $T(\alpha x) = \conj{\alpha}\,Tx$ untuk semua
+$x$, $y \in V$ dan $\alpha \in \C$. Pemetaan linear konjugat yang bijektif disebut
+ \index{antiisomorfisme}%
+ \index{isomorfisme!anti-}%
+\df{antiisomorfisme}.
+\end{defn}
+
+\begin{exam}\label{0022057} Untuk ruang Hilbert $H$, pemetaan
+$\psi\colon H \sto H^*\colon a \mapsto \psi_a$ yang didefinisikan dalam contoh~\ref{000341} merupakan
+antiisomorfisme isometrik antara $H$ dan ruang dualnya.
+\end{exam}
+
+\begin{defn} Pemetaan linear konjugat $C\colon V \sto V$ dari ruang vektor ke dirinya sendiri
+yang memenuhi $C^2 = \id V$ disebut
+ \index{konjugasi}
+\df{konjugasi} pada~$V$.
+\end{defn}
+
+\begin{exam} Konjugasi kompleks $z \mapsto \conj z$ merupakan contoh konjugasi dalam
+ruang vektor~$\C$.
+\end{exam}
+
+\begin{exam}\label{0022067} Misalkan $H$ ruang Hilbert dan $E$ basis untuk~$H$. Maka
+pemetaan $x \mapsto \sum_{e \in E}\langle e,x \rangle e$ merupakan konjugasi dan isometri pada~$H$.
+\end{exam}
+
+Istilah ``antiisomorfisme'' agak menyesatkan. Istilah tersebut mengesankan sesuatu yang sama sekali
+berbeda dari isomorfisme. Padahal, antiisomorfisme hampir sebaik isomorfisme.
+Pada intinya, proposisi berikut menyatakan bahwa ruang Hilbert dan ruang dualnya isomorfik
+\emph{karena} keduanya antiisomorfik.
+
+\begin{prop}\label{0022071} Misalkan $H$ ruang Hilbert, $\psi\colon H \sto H^*$ adalah
+antiisomorfisme yang didefinisikan dalam~\ref{000341} (lihat~\ref{0022057}), dan $C$ adalah konjugasi
+yang didefinisikan dalam~\ref{0022067}. Maka komposisi $C \psi^{-1}$ merupakan isomorfisme isometrik
+dari $H^*$ ke~$H$.
+\end{prop}
+
+\begin{cor}\label{cor_Hsp_iso_dual} Setiap ruang Hilbert isomorfik secara isometrik dengan ruang dualnya.
+\end{cor}
+
+\begin{prop} Misalkan $H$ ruang Hilbert dan $\psi\colon H \sto H^*$ antiisomorfisme
+yang didefinisikan dalam~\ref{000341} (lihat~\ref{0022057}). Jika kita mendefinisikan $\langle f,g \rangle :=
+\langle \psi^{-1}g, \psi^{-1}f \rangle$ untuk semua $f$, $g \in H^*$, maka $H^*$ menjadi
+ruang Hilbert yang isomorfik secara isometrik dengan~$H$. Norma yang dihasilkan pada $H^*$ adalah norma
+yang biasa digunakan.
+\end{prop}
+
+\begin{cor} Setiap ruang Hilbert bersifat refleksif.
+\end{cor}
+
+\begin{exam} Misalkan $H$ himpunan semua fungsi bernilai kompleks $f$ yang kontinu mutlak
+pada $[0,1]$ sedemikian sehingga $f(0) = 0$ dan $f' \in
+\lfs 2([0,1],\lambda)$. Definisikan hasil kali dalam pada $H$ dengan
+ \[\langle f,g \rangle := \int_0^1 f'(t)\,\clo{g'(t)}\,dt.\]
+Kita telah mengetahui bahwa $H$ ruang Hilbert (lihat contoh~\ref{exam_Hsp_abs_cont}).
+Tetapkan $t \in (0,1]$. Definisikan
+   \[ E_t\colon H \sto \C\colon f \mapsto f(t). \]
+Maka $E_t$ merupakan fungsional linear terbatas pada~$H$. Berapakah $\norm{E_t}$?
+Vektor $g$ manakah dalam $H$ yang merepresentasikan fungsional~$E_t$?
+\end{exam}
+
+\begin{exer} Pada suatu sore, kawan Anda, Fred R. Dimm, datang membawa masalah. ``Begini,'' katanya,
+``Pada $\lfs 2 = \lfs 2(\R,\R)$, fungsional evaluasi $E_0$, yang mengevaluasi setiap anggota $\lfs 2$
+di~$0$, jelas merupakan fungsional linear terbatas. Jadi, menurut Teorema Representasi Riesz,
+seharusnya ada fungsi $g$ dalam $\lfs 2$ sedemikian sehingga $f(0) = \langle f,g \rangle = \int_{-\infty}^\infty fg$
+untuk semua $f$ dalam~$\lfs 2$. Namun, itu adalah sifat `fungsi~$\delta$', yang katanya
+tidak ada. Di mana letak kesalahan saya?'' Berilah Freddy nasihat (yang membantu).
+\end{exer}
+
+\begin{exer} Masih pada sore yang sama, Freddy kembali. Setelah mempertimbangkan
+nasihat yang Anda berikan (dalam soal sebelumnya), ia merevisi
+pertanyaannya dengan menjadikan domain $E_0$ sebagai himpunan fungsi bernilai real yang terbatas dan
+kontinu pada~$\R$. Dengan sabar Anda
+menjelaskan kepada Freddy bahwa sekarang setidaknya ada dua kekeliruan dalam caranya
+menggunakan `fungsi~$\delta$'. Apakah kedua kekeliruan tersebut?
+\end{exer}
+
+\begin{exer} Mimpi buruk itu berlanjut. Sekarang pukul 23.00 dan Freddy kembali lagi.
+Kali ini (setelah, untungnya, menyerah soal fungsi~$\delta$) ia ingin
+menerapkan teorema representasi pada fungsional ``evaluasi
+pada nol'' pada ruang~$l_2(\Z)$. Dapatkah ia melakukannya? Jelaskan.
+\end{exer}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Topologi Kuat dan Lemah pada Ruang Hilbert}
+Kita mengingat kembali secara singkat definisi dan fakta-fakta penting mengenai \emph{topologi lemah}. Untuk pengantar yang lebih terperinci
+mengenai kelas topologi ini, lihat buku teks topologi mana pun yang baik atau bagian 11.4 dari catatan saya~\cite{Erdman:2007}.
+
+\begin{defn}\label{C021414} Misalkan $S$ suatu himpunan, untuk setiap $\alpha \in A$ (dengan
+$A$ sebarang himpunan indeks) $X_\alpha$ merupakan ruang topologis, dan $f_\alpha
+\colon S \sto X_\alpha$ untuk setiap $\alpha \in A$. Misalkan
+   \[ \sfml S = \{{f_\alpha}^\gets(U_\alpha) \colon \open{U_\alpha}{X_\alpha}
+                                             \text{ dan } \alpha \in A\}\,. \]
+Gunakan keluarga $\sfml S$ sebagai subbasis bagi suatu topologi pada~$S$. Topologi ini disebut
+ \index{lemah!topologi!diinduksi oleh keluarga fungsi}%
+ \index{topologi!lemah!diinduksi oleh keluarga fungsi}%
+\df{topologi lemah} yang diinduksi oleh (atau ditentukan oleh) fungsi-fungsi~$f_\alpha$.
+\end{defn}
+
+\begin{prop}\label{C021421} Dalam topologi lemah (yang didefinisikan di atas) pada himpunan $S$, setiap fungsi $f_\alpha$ kontinu;
+bahkan, topologi lemah adalah topologi paling lemah pada
+ \index{lemah!topologi!karakterisasi}%
+ \index{topologi!lemah!karakterisasi}%
+$S$ yang menjadikan fungsi-fungsi tersebut kontinu.
+\end{prop}
+
+\begin{prop}\label{C021424} Misalkan $X$ ruang topologis dengan topologi lemah yang ditentukan
+oleh keluarga fungsi $\fml F$. Buktikan bahwa fungsi $g\colon W \sto X$, dengan $W$
+ruang topologis, kontinu jika dan hanya jika $f \circ g$ kontinu untuk setiap $f
+\in \fml F$.
+\end{prop}
+
+\begin{defn}\label{C021437} Misalkan $\bigl(A_\lambda\bigr)_{\lambda \in \Lambda}$ keluarga terindeks
+ruang topologis. Topologi lemah pada hasil kali Kartesius $\prod
+A_\lambda$ yang diinduksi oleh keluarga proyeksi koordinat $\pi_\lambda$ (lihat
+definisi~\ref{C015531}) disebut
+ \index{hasil kali!topologi}%
+ \index{topologi!hasil kali}%
+\df{topologi hasil kali}.
+\end{defn}
+
+\begin{prop} Hasil kali dari suatu keluarga ruang Hausdorff adalah Hausdorff.
+\end{prop}
+
+\begin{exam}\label{C031473} Misalkan $Y$ ruang topologis dengan topologi lemah (lihat
+definisi~\ref{C021414}) yang ditentukan oleh keluarga fungsi terindeks $(f_\alpha)_{\alpha \in A}$,
+dengan sifat bahwa, untuk setiap $\alpha \in A$, kodomain $f_\alpha$ berupa ruang topologis~$X_\alpha$.
+Maka jaring $\bigl(y_{{}_\lambda}\bigr)_{\lambda \in \Lambda}$ dalam $Y$
+konvergen ke titik $a \in Y$ jika dan hanya jika
+\mbox{$f_\alpha(y_{{}_\lambda})~\to_{\lambda \in \Lambda}~f_\alpha(a)$} untuk setiap $\alpha
+\in A$.
+\end{exam}
+
+\begin{exam}\label{C031475} Jika $Y = \prod_{\alpha \in A} X_\alpha$ adalah hasil kali dari ruang-ruang topologis tak kosong
+dengan topologi hasil kali (lihat definisi~\ref{C021437}), maka suatu jaring
+$\bigl(\sbsb y\lambda\bigr)$ dalam $Y$ konvergen ke $a \in Y$ jika dan hanya jika $\bigl(\sbsb
+y\lambda\bigr)_\alpha \sto a_\alpha$ untuk setiap $\alpha \in A$.
+\end{exam}
+
+\begin{exam}\label{exam_prod_top_norm} Jika $V$ dan $W$ ruang linear bernorma, maka topologi hasil kali pada
+$V \times W$ sama dengan topologi yang diinduksi oleh norma hasil kali pada $V \oplus W$.
+\end{exam}
+
+Contoh berikut menggambarkan ketidakcukupan barisan ketika kita menangani ruang topologis umum.
+
+\begin{exam} Misalkan $\fml F = \fml F([0,1])$ adalah himpunan semua fungsi $f\colon [0,1] \sto \R$, dan beri
+$\fml F$ topologi hasil kali, yaitu topologi lemah yang ditentukan oleh fungsional-fungsional
+evaluasi
+    \[ E_x\colon \fml F \sto \R\colon f \mapsto f(x) \]
+dengan $x \in [0,1]$. Jadi, lingkungan terbuka dasar dari suatu titik $g \in \fml F$ ditentukan
+oleh himpunan titik hingga $A \in \fin[0,1]$ dan bilangan $\epsilon > 0$:
+  \[ U(g\,;\,A\,;\, \epsilon) := \{f \in \fml F\colon \abs{f(t) - g(t)} < \epsilon
+                           \text{ untuk semua $t \in A$}\}. \]
+(Apa nama yang biasa digunakan untuk topologi ini?) Misalkan $\fml G$ himpunan semua fungsi dalam $\fml F$
+yang bertumpuan hingga. Maka
+  \begin{enumerate}
+    \item fungsi konstan $\vc 1$ termasuk dalam $\clo{\fml G}$,
+    \item terdapat jaring fungsi dalam $\fml G$ yang konvergen ke~$\vc 1$, tetapi
+    \item tidak ada barisan dalam $\fml G$ yang konvergen ke~$\vc 1$.
+  \end{enumerate}
+\end{exam}
+
+\begin{defn} Jaring $(x_{{}_{\sst\lambda}})$ dalam ruang Hilbert $H$ dikatakan
+ \index{konvergensi!dalam ruang Hilbert!lemah}%
+ \index{lemah!konvergensi!dalam ruang Hilbert}%
+\df{konvergen secara lemah} ke titik $a$ dalam $H$ jika $\langle x{{}_{\sst\lambda}}, y \rangle \to \langle a,y \rangle$
+untuk setiap $y \in H$. Dalam hal ini kita menulis $x_{{}_{\sst\lambda}} \to^w a$. Dalam ruang Hilbert, suatu jaring dikatakan
+ \index{konvergensi!dalam ruang Hilbert!kuat}%
+ \index{kuat!konvergensi!dalam ruang Hilbert}%
+\df{konvergen secara kuat} (atau
+ \index{konvergensi!dalam norma}%
+ \index{norma!konvergensi}%
+\df{konvergen dalam norma}) jika jaring tersebut konvergen terhadap topologi yang diinduksi oleh norma. Inilah jenis
+konvergensi yang biasa dalam ruang Hilbert. Jika kita ingin menekankan perbedaan di antara cara-cara konvergensi, kita dapat menulis
+$x_{{}_{\sst\lambda}} \to^s a$ untuk konvergensi kuat.
+\end{defn}
+
+\begin{exer} Jelaskan mengapa topologi pada ruang Hilbert yang dibangkitkan oleh konvergensi lemah jaring sesungguhnya merupakan
+topologi lemah dalam pengertian topologis yang lazim.
+\end{exer}
+
+Ketika kita mengatakan bahwa suatu subhimpunan dari ruang Hilbert $H$ bersifat
+ \index{lemah!ketertutupan}%
+ \index{tertutup!secara lemah}%
+\df{tertutup secara lemah}, maksudnya subhimpunan tersebut tertutup terhadap topologi lemah pada $H$; suatu himpunan bersifat
+ \index{lemah!kekompakan}%
+ \index{kompak!secara lemah}%
+\df{kompak secara lemah} jika kompak dalam topologi lemah pada~$H$; dan seterusnya. Suatu fungsi
+$f\colon H \sto H$ bersifat
+ \index{lemah!kontinuitas}%
+ \index{kontinu!secara lemah}%
+\df{kontinu secara lemah} jika kontinu sebagai pemetaan dari $H$ yang dilengkapi topologi lemah ke $H$
+yang dilengkapi topologi lemah.
+
+\begin{exer} Misalkan $H$ ruang Hilbert dan $(x_{{}_{\sst\lambda}})$ jaring dalam $H$.
+ \begin{enumerate}
+  \item Jika $x_{{}_{\sst\lambda}} \to^s  a$ dalam $H$, maka $x_{{}_{\sst\lambda}} \to^w a$ dalam $H$.
+  \item Topologi kuat (norma) pada $H$ lebih kuat (lebih besar) daripada topologi lemah.
+  \item Tunjukkan dengan contoh bahwa kebalikan dari (a) tidak berlaku.
+  \item Apakah norma pada $H$ kontinu secara lemah?
+  \item Jika $x_{{}_{\sst\lambda}} \to^w  a$ dalam $H$ dan jika $\norm{x_{{}_{\sst\lambda}}} \to \norm{a}$, maka
+$x_{{}_{\sst\lambda}}\to^s a$ dalam~$H$.
+  \item Jika pemetaan linear $T\colon H \sto H$ kontinu (secara kuat), maka pemetaan tersebut kontinu secara lemah.
+ \end{enumerate}
+\end{exer}
+
+\begin{exer} Misalkan $H$ ruang Hilbert berdimensi tak hingga. Tinjau subhimpunan-subhimpunan berikut dari~$H$:
+ \begin{enumerate}[label=\rm{(\alph*)}]
+  \item bola satuan terbuka;
+  \item bola satuan tertutup;
+  \item sfer satuan;
+  \item subruang linear tertutup.
+ \end{enumerate}
+Tentukan untuk setiap himpunan tersebut apakah masing-masing bersifat: tertutup secara kuat, tertutup secara lemah,
+terbuka secara kuat, terbuka secara lemah, kompak secara kuat, kompak secara lemah. (Salah satu bagian
+terlalu sulit untuk saat ini: \emph{Teorema Alaoglu}~\futurexref{6.2.9}{C067441} akan menunjukkan bahwa
+bola satuan tertutup kompak secara lemah.)
+\end{exer}
+
+\begin{exer} Misalkan $\{e^n\colon n \in \N\}$ basis biasa untuk $l_2$. Untuk
+setiap $n \in \N$, misalkan $a_n = \sqrt n\, e^n$. Manakah di antara pernyataan berikut
+yang benar?
+ \begin{enumerate}
+  \item $0$ adalah titik akumulasi lemah dari himpunan
+$\{a_n\colon n \in \N\}$.
+  \item $0$ adalah titik gugus lemah dari barisan~$(a_n)$.
+  \item $0$ adalah limit lemah dari suatu subbarisan dari~$(a_n)$.
+ \end{enumerate}
+\end{exer}
+
+
+
+
+
+
+
+
+
+
+\section{Morfisme Universal}
+Banyak bagian matematika melibatkan pembentukan objek baru dari objek yang sudah ada---misalnya
+hasil kali, koproduk, hasil bagi, pelengkapan, kompaktifikasi, dan unitalisasi.
+Sering kali suatu konstruksi dapat---dan sangat baik jika dapat---dicirikan melalui
+sebuah diagram yang menjelaskan apa yang “dilakukan” oleh objek hasil konstruksi, alih-alih
+menjelaskan apa objek itu atau bagaimana objek tersebut dibangun. Diagram semacam ini disebut
+ \index{universal!pemetaan!diagram}%
+ \index{pemetaan!universal}%
+\df{diagram pemetaan universal}, dan diagram itu menjelaskan
+ \index{universal!pemetaan!sifat}%
+ \index{pemetaan!diagram!universal}%
+\df{sifat universal} objek yang dibangun.
+Secara khusus, suatu konstruksi biasanya dapat dicirikan oleh adanya
+sebuah morfisme tunggal yang memiliki sifat tertentu. Karena morfisme ini beserta
+sifat yang bersesuaian dengannya mencirikan secara tunggal konstruksi tersebut, keduanya masing-masing
+disebut \emph{morfisme universal} dan \emph{sifat universal}. Definisi berikut
+merupakan salah satu cara untuk menjelaskan peran morfisme semacam itu. Jika ini pertama kalinya Anda
+menjumpai konsep \emph{universal}, jangan khawatir karena sifatnya memang cukup abstrak. Menurut saya,
+tidak banyak orang yang langsung merasa nyaman dengan definisi ini sebelum menjumpai setidaknya
+setengah lusin contoh dalam berbagai konteks. (Ada definisi yang bahkan lebih teknis untuk konsep
+penting ini, misalnya \emph{objek awal atau objek terminal dalam kategori koma}. Jika tertarik
+menelusurinya, carilah “universal property” di Wikipedia~\cite{wiki:xxx}.)
+
+\begin{defn}\label{00078} Misalkan $\cat A \to^{\ftr{F}} \cat B$ suatu funktor antara kategori
+$\cat A$ dan $\cat B$, dan misalkan $B$ suatu objek di~$\cat B$. Pasangan $(A,u)$, dengan $A$
+suatu objek di $\cat A$ dan $u$ suatu morfisme di $\cat B$ dari $B$ ke~$\ftr F(A)$, disebut
+ \index{universal!morfisme}%
+ \index{morfisme!universal}%
+\df{morfisme universal} untuk $B$ (terhadap funktor~$\ftr F$) jika untuk setiap
+objek $A'$ di $\cat A$ dan setiap morfisme $B \to^f \ftr F(A')$ di $\cat B$ terdapat
+sebuah morfisme tunggal $A \to^{\tilde f} A'$ di $\cat A$ sehingga diagram berikut komutatif.
+ \begin{equation}\label{00078i}
+   \xy
+     \qtriangle/{>}`{>}`{-->}/[B`\ftr F(A)`\ftr F(A');u`f`\ftr F(\tilde f)]
+     \morphism(1000,500)|r|/{-->}/<0,-500>[A`A';\tilde f]
+   \endxy
+ \end{equation}
+Dalam konteks ini, objek $A$ sering disebut
+ \index{universal!objek}%
+ \index{objek!universal}%
+\df{objek universal} di~$\cat A$.
+\end{defn}
+
+Berikut adalah contoh pertama sifat semacam itu.
+
+\begin{defn} Misalkan $F$ suatu objek dalam kategori konkret $\cat C$, dan
+$\iota\colon S \sto \abs F$ suatu pemetaan inklusi yang domainnya merupakan himpunan tak kosong~$S$.
+Kita mengatakan bahwa objek $F$
+ \index{bebas!objek}%
+ \index{objek!bebas}%
+\df{bebas pada} himpunan $S$ (atau bahwa $F$ adalah \df{objek bebas yang dibangkitkan oleh}~$S$)
+jika untuk setiap objek $A$ di $\cat C$ dan setiap pemetaan $f\colon S \sto \abs A$ terdapat
+sebuah morfisme tunggal $\widetilde f_\iota\colon F \sto A$ di $\cat C$ sehingga
+$\abs{\wt f_\iota} \circ \iota = f$.
+ \[\xy
+     \qtriangle/{>}`{>}`{-->}/[S`\abs F`\abs A;\iota`f`\abs{\wt f_\iota}]
+     \morphism(1000,500)|r|/{-->}/<0,-500>[F`A;\widetilde f_\iota]
+   \endxy\]
+Kita akan menaruh perhatian pada
+ \index{bebas!ruang vektor}%
+ \index{ruang!vektor!bebas}%
+\df{ruang vektor bebas}, yaitu objek bebas dalam kategori $\cat{VEC}$ yang objeknya adalah
+ruang vektor dan morfismenya adalah pemetaan linear. Tentu saja, sekadar
+\emph{mendefinisikan} suatu konsep tidak menjamin keberadaannya. Ternyata ruang vektor bebas
+memang ada pada setiap himpunan. (Lihat contoh~\ref{ump001z}.)
+\end{defn}
+
+\vskip 5 pt
+
+\begin{exer} Dalam definisi sebelumnya, rujukan kepada funktor pelupa sering
+dihilangkan dan diagram yang menyertainya sering digambar sebagai berikut:
+ \[\xy
+     \qtriangle/{>}`{>}`{-->}/[S`F`A;\iota`f`\wt f_\iota]
+   \endxy\]
+Diagram ini tentu terlihat jauh lebih sederhana. Menurut Anda, mengapa saya memilih versi yang
+lebih rumit?
+\end{exer}
+
+\vskip 5 pt
+
+\begin{prop} Jika dua objek dalam suatu kategori konkret bebas pada himpunan yang sama,
+maka kedua objek tersebut isomorfik.
+\end{prop}
+
+\vskip 5 pt
+
+\begin{defn} Misalkan $A$ subhimpunan dari himpunan tak kosong~$S$, dan misalkan $\K$
+adalah $\R$ atau~$\C$. Definisikan $\sbsb\chi A \colon S \sto \K$, yaitu
+ \index{karakteristik!fungsi}%
+ \index{<@$\sbsb{\chi}{A}$ (fungsi karakteristik dari $A$)}%
+ \index{fungsi!karakteristik}%
+\df{fungsi karakteristik} dari~$A$, dengan
+  \[ \sbsb{\chi}{A}(x) = \begin{cases}
+                                  1, &\text{jika $x \in A$} \\
+                                  0, &\text{selain itu}
+                              \end{cases} \]
+\end{defn}
+
+\begin{exam}\label{ump001z} Jika $S$ adalah sebarang himpunan tak kosong,
+maka terdapat ruang vektor $V$ atas~$\K$ yang bebas pada~$S$. Ruang vektor ini
+unik (hingga isomorfisme).
+\end{exam}
+
+\begin{proof}[\emph{Petunjuk pembuktian}] Untuk himpunan $S$, ambil $V$ sebagai himpunan
+semua fungsi bernilai $\K$ pada $S$ yang bertumpuan hingga. Definisikan penjumlahan dan
+perkalian skalar secara titik demi titik. Pemetaan $\iota\colon s \mapsto \sbsb \chi {\{s\}}$
+yang membawa setiap unsur $s \in S$ ke fungsi karakteristik dari~$\{s\}$ adalah injeksi
+yang diinginkan. Untuk membuktikan bahwa $V$ bebas pada $S$, tunjukkan bahwa untuk setiap
+ruang vektor $W$ dan setiap fungsi \hbox{$S~\to^{f}~\abs W$} terdapat pemetaan linear
+tunggal $V \to^{\wt f} W$ yang membuat diagram berikut komutatif.
+ \[\xy
+     \qtriangle/{>}`{>}`{-->}/[S`\abs V`\abs W;\iota`f`\abs{\wt f}]
+     \morphism(1100,500)|r|/{-->}/<0,-500>[V`W;\wt f]
+   \endxy\]
+\ns \end{proof}
+
+\begin{prop} Setiap ruang vektor adalah bebas.
+\end{prop}
+
+\begin{proof}[\emph{Petunjuk pembuktian}] Tentu saja, sebagian dari persoalannya adalah
+menentukan himpunan $S$ yang membuat ruang vektor tersebut bebas. \ns
+\end{proof}
+
+
+\begin{exam} Misalkan $S$ suatu himpunan tak kosong dan $S' = S \cup \{\vc 1\}$, dengan
+$\vc 1$ suatu unsur yang tidak termasuk dalam~$S$. Sebuah
+ \index{kata}%
+\df{kata} dalam bahasa~$S$ adalah suatu barisan $s$ berunsur di $S'$ yang akhirnya selalu
+bernilai $\vc 1$ dan memenuhi syarat: jika $s_k = \vc 1$, maka $s_{k+1} = \vc 1$.
+Barisan konstan $(\vc 1, \vc 1, \vc 1, \dots)$ disebut
+ \index{kata kosong}%
+ \index{kata!kosong}%
+\df{kata kosong}. Misalkan $F$ adalah himpunan semua kata dalam bahasa~$S$. Andaikan
+$s = (s_1, \dots, s_m, \vc 1, \vc 1, \dots)$ dan
+$t = (t_1, \dots, t_n, \vc 1, \vc 1, \dots)$ adalah kata (dengan
+$s_1$, \dots, $s_m$, $t_1$, \dots, $t_n \in S$). Definisikan
+   \[ s \ast t := (s_1, \dots, s_m, t_1, \dots, t_n, \vc 1, \vc 1, \dots). \]
+Operasi ini disebut
+ \index{konkatenasi}%
+\df{konkatenasi}. Mudah dilihat bahwa himpunan $F$ dengan operasi konkatenasi merupakan
+ \index{monoid}%
+monoid (semigrup dengan unsur identitas), dengan kata kosong sebagai unsur identitas. Inilah
+ \index{bebas!monoid}%
+ \index{monoid!bebas}%
+\df{monoid bebas} yang dibangkitkan oleh~$S$. Jika kata kosong dikeluarkan, kita memperoleh
+ \index{bebas!semigrup}%
+ \index{semigrup!bebas}%
+\df{semigrup bebas} yang dibangkitkan oleh~$S$. Diagram terkait adalah
+ \[\xy
+     \qtriangle/{>}`{>}`{-->}/[S`\abs F`\abs G;\iota`f`\abs{\tilde f}]
+     \morphism(1100,500)|r|/{-->}/<0,-500>[F`G;\tilde f]
+   \endxy\]
+di mana $\iota$ adalah injeksi yang jelas $s \mapsto (s,\vc1, \vc 1, \dots)$
+(biasanya diperlakukan sebagai pemetaan inklusi), $G$ adalah sebarang semigrup,
+$f\colon S \sto G$ adalah sebarang fungsi, dan $\abs{\hphantom{O}}$ adalah funktor pelupa
+dari kategori monoid dan homomorfisme (atau kategori semigrup dan homomorfisme) ke kategori
+$\cat{SET}$.
+\end{exam}
+
+\begin{exam} Ingat kembali penyajian biasa untuk koproduk dua objek dalam suatu kategori
+dari definisi~\ref{C015611}. Jika $A_1$ dan $A_2$ adalah dua objek dalam kategori $\cat C$,
+maka sebuah
+ \index{koproduk}%
+\df{koproduk} dari $A_1$ dan $A_2$ adalah tripel $(Q,\iota_1,\iota_2)$, dengan $Q$ suatu
+objek di $\cat C$ dan $A_k \to^{\iota_k} Q$ ($k = 1,2$) morfisme di $\cat C$, yang memenuhi
+syarat berikut: jika $B$ adalah sebarang objek di $\cat C$ dan
+$A_k \to^{f_k} B$ ($k = 1$,$2$) adalah sebarang morfisme di~$\cat C$, maka terdapat sebuah
+morfisme tunggal $Q \to^f B$ di $\cat C$ yang membuat diagram berikut komutatif.
+  \begin{equation}
+    \xy
+      \Atrianglepair/<-`<-`<-`>`<-/[B`A_1`Q`A_2;f_1`f`f_2`\iota_1`\iota_2]
+    \endxy
+   \end{equation}
+
+Sekilas mungkin tidak jelas bahwa konstruksi ini bersifat \emph{universal} dalam arti
+definisi~\ref{00078}. Untuk melihatnya, misalkan $\ftr D$ adalah funktor diagonal dari
+kategori $\cat C$ ke kategori pasangan $\cat{C^2}$ (lihat contoh~\ref{0007606}).
+Andaikan $(Q,\iota_1,\iota_2)$ adalah koproduk objek $A_1$ dan $A_2$ di $\cat C$ dalam
+pengertian di atas. Maka $A = (A_1,A_2)$ adalah objek di $\cat{C^2}$,
+$A \to^{\iota} \ftr D(Q)$ adalah morfisme di $\cat{C^2}$, dan pasangan
+$(Q,\iota)$ bersifat universal dalam arti~\ref{00078}. Diagram yang bersesuaian dengan
+diagram~\eqref{00078i} adalah
+ \begin{equation}
+   \xy
+     \qtriangle/{>}`{>}`{-->}/[A`\ftr D(Q)`\ftr D(B);\iota`f`\ftr D(\tilde f)]
+     \morphism(1000,500)|r|/{-->}/<0,-500>[Q`B;\tilde f]
+   \endxy
+ \end{equation}
+di mana $B$ adalah sebarang objek di $\cat C$ dan, untuk $k = 1,2$,
+$A_k \to^{f_k} B$ adalah sebarang morfisme di $\cat C$, sehingga
+$f = (f_1,f_2)$ merupakan morfisme di $\cat{C^2}$.
+\end{exam}
+
+\begin{exam} Koproduk dua objek $H$ dan $K$ dalam kategori $\cat{HIL}$, yaitu kategori
+ \index{koproduk!dalam $\cat{HIL}$}%
+ \index{hil@$\cat{HIL}$!koproduk dalam}%
+ruang Hilbert dan pemetaan linear terbatas (dan, secara lebih umum, dalam kategori ruang
+hasil kali dalam dan pemetaan linear), adalah jumlah langsung ortogonal eksternalnya
+$H \oplus K$ (lihat~\ref{0001504}).
+\end{exam}
+
+
+\begin{exam}\label{00078036} Misalkan $A$ dan $B$ ruang Banach. Pada hasil kali Kartesius
+ \index{koproduk!dalam $\cat{BAN_\infty}$}%
+ \index{ban@$\cat{BAN_\infty}$!koproduk dalam}%
+$A \times B$, definisikan penjumlahan dan perkalian skalar secara titik demi titik. Untuk
+setiap $(a,b) \in A \times B$, tetapkan $\norm{(a,b)} = \max\{\norm a,\norm b\}$. Dengan
+demikian, $A \times B$ menjadi ruang Banach yang dinotasikan dengan $A \oplus B$ dan
+disebut
+ \index{jumlah!langsung!ruang Banach}%
+\df{jumlah langsung} dari $A$ dan~$B$. Jumlah langsung ini merupakan koproduk dalam
+kategori topologis $\cat{BAN_\infty}$ dari ruang Banach, tetapi bukan dalam kategori
+geometris yang bersesuaian, yaitu~$\cat{BAN_1}$.
+\end{exam}
+
+\begin{exam}\label{00078037} Untuk membangun koproduk dalam kategori geometris
+ \index{koproduk!dalam $\cat{BAN_1}$}%
+ \index{ban@$\cat{BAN_1}$!koproduk dalam}%
+$\cat{BAN_1}$ dari ruang Banach, definisikan operasi ruang vektor secara titik demi titik
+pada $A \times B$, tetapi gunakan norma
+$\norm{(a,b)}_1 = \norm a + \norm b$ untuk setiap $(a,b) \in A \times B$.
+\end{exam}
+
+Hampir setiap konsep dalam teori kategori memiliki konsep dual---konsep yang diperoleh
+dengan membalik arah semua panah. Sebagai contoh, kita dapat membalik semua panah dalam
+diagram~\eqref{00078i}.
+
+
+\begin{defn}\label{000781} Misalkan $\cat A \to^{\ftr{F}} \cat B$ suatu funktor antara
+kategori $\cat A$ dan $\cat B$, dan misalkan $B$ suatu objek di~$\cat B$. Pasangan $(A,u)$,
+dengan $A$ suatu objek di $\cat A$ dan $u$ suatu morfisme di $\cat B$ dari $\ftr F(A)$
+ke~$B$, disebut
+ \index{kouniversal!morfisme}%
+ \index{morfisme!kouniversal}%
+\df{morfisme kouniversal untuk $B$ (terhadap~$\ftr F$)} jika untuk setiap objek $A'$ di
+$\cat A$ dan setiap morfisme $\ftr F(A') \to^f B$ di $\cat B$ terdapat sebuah morfisme
+tunggal $A' \to^{\tilde f} A$ di $\cat A$ sehingga diagram berikut komutatif.
+ \begin{equation}\label{000781i}
+   \xy
+     \qtriangle/{<-}`{<-}`{<--}/[B`\ftr F(A)`\ftr F(A');u`f`\ftr F(\tilde f)]
+     \morphism(1000,500)|r|/{<--}/<0,-500>[A`A';\tilde f]
+   \endxy
+ \end{equation}
+Sebagian penulis membalik konvensi ini dan menyebut morfisme dalam~\ref{00078}
+\emph{kouniversal}, sedangkan morfisme yang didefinisikan di sini disebut
+\emph{universal}. Penulis lain, termasuk penulis buku ini, menyebut keduanya
+\emph{morfisme universal}.
+\end{defn}
+
+\begin{conv} Morfisme dari kedua jenis yang didefinisikan dalam~\ref{00078}
+dan~\ref{000781} akan disebut
+ \index{konvensi!tentang universalitas}%
+\emph{morfisme universal}.
+\end{conv}
+
+\begin{exam}\label{0007812} Ingat kembali pendekatan kategoris terhadap hasil kali dari
+definisi~\ref{C015511}. Jika $A_1$ dan $A_2$ adalah dua objek dalam kategori $\cat C$,
+maka sebuah
+ \index{hasil kali}%
+\df{hasil kali} dari $A_1$ dan $A_2$ adalah tripel $(P,\pi_1,\pi_2)$, dengan $P$ suatu
+objek di $\cat C$ dan $P \to^{\pi_k} A_k$ ($k = 1,2$) morfisme di $\cat C$, yang memenuhi
+syarat berikut: jika $B$ adalah sebarang objek di $\cat C$ dan
+$B \to^{f_k} A_k$ ($k = 1,2$) adalah sebarang morfisme di~$\cat C$, maka terdapat sebuah
+morfisme tunggal $B \to^f P$ di $\cat C$ yang membuat diagram berikut komutatif.
+  \begin{equation}
+    \xy
+      \Atrianglepair/>`>`>`<-`>/[B`A_1`P`A_2;f_1`f`f_2`\pi_1`\pi_2]
+    \endxy
+   \end{equation}
+Konstruksi ini bersifat (ko)universal dalam arti definisi~\ref{000781}.
+\end{exam}
+
+\begin{exam} Hasil kali dua objek $H$ dan $K$ dalam kategori $\cat{HIL}$, yaitu kategori
+ \index{hasil kali!dalam $\cat{HIL}$}%
+ \index{hil@$\cat{HIL}$!hasil kali dalam}%
+ruang Hilbert dan pemetaan linear terbatas (dan, secara lebih umum, dalam kategori ruang
+hasil kali dalam dan pemetaan linear), adalah jumlah langsung ortogonal eksternalnya
+$H \oplus K$ (lihat~\ref{0001504}).
+\end{exam}
+
+
+\begin{exam} Jika $A$ dan $B$ adalah aljabar Banach, jumlah langsungnya $A \oplus B$
+merupakan
+ \index{hasil kali!dalam $\cat{BA_\infty}$}%
+ \index{ba@$\cat{BA_\infty}$!hasil kali dalam}%
+ \index{hasil kali!dalam $\cat{BA_1}$}%
+ \index{ba@$\cat{BA_1}$!hasil kali dalam}%
+hasil kali dalam kategori topologis maupun geometris dari aljabar Banach, yaitu
+$\cat{BA_\infty}$ dan $\cat{BA_1}$. Bandingkan dengan keadaan yang dibahas dalam
+contoh~\ref{00078036} dan~\ref{00078037}.
+\end{exam}
+
+Konstruksi universal dalam kategori apa pun menghasilkan objek yang unik hingga isomorfisme.
+
+\begin{prop}\label{C035562} Objek universal dalam suatu kategori
+ \index{universal!objek!keunikan}%
+pada hakikatnya unik.
+\end{prop}
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Pelengkapan Ruang Hasil Kali Dalam}
+Sedikit tinjauan ulang tentang pelengkapan ruang metrik akan berguna di sini. Kadang-kadang
+kita mungkin tergoda untuk menganggap bahwa pelengkapan suatu ruang metrik $M$ adalah ruang
+metrik lengkap yang memiliki subhimpunan padat yang homeomorfik dengan $M$. Masalah dengan
+pencirian ini adalah bahwa pencirian tersebut dapat menghasilkan dua “pelengkapan” ruang
+metrik yang bahkan tidak homeomorfik.
+
+\begin{exam} Misalkan $M$ adalah interval $(0,\infty)$ dengan metrik biasa. Terdapat dua
+ruang metrik lengkap $N_1$ dan $N_2$ sehingga
+  \begin{enumerate}
+    \item $N_1$ dan $N_2$ \emph{tidak} homeomorfik,
+    \item $M$ homeomorfik dengan suatu subhimpunan padat dari $N_1$, dan
+    \item $M$ homeomorfik dengan suatu subhimpunan padat dari~$N_2$.
+  \end{enumerate}
+\end{exam}
+
+Berikut adalah definisi yang tepat.
+
+\begin{defn}\label{C035511} Misalkan $M$ dan $N$ ruang metrik. Kita mengatakan bahwa $N$
+adalah
+ \index{pelengkapan!ruang metrik}%
+ \index{metrik!ruang!pelengkapan}%
+\df{pelengkapan} dari $M$ jika $N$ lengkap dan $M$ isometrik dengan suatu subhimpunan
+padat dari~$N$.
+\end{defn}
+
+Dalam konstruksi bilangan real dari bilangan rasional, salah satu pendekatan adalah
+memperlakukan himpunan bilangan rasional sebagai ruang metrik dan mendefinisikan himpunan
+bilangan real sebagai pelengkapannya. Salah satu cara baku untuk menghasilkan pelengkapan
+memakai kelas-kelas ekuivalensi barisan Cauchy bilangan rasional. Teknik ini berlaku pula
+untuk ruang metrik: cara elementer untuk melengkapi sebarang ruang metrik dimulai dengan
+mendefinisikan relasi ekuivalensi pada himpunan barisan Cauchy yang berunsur di ruang
+tersebut. Berikut adalah pendekatan yang sedikit kurang elementer, tetapi jauh lebih sederhana.
+
+\begin{prop} Setiap ruang metrik $M$ isometrik dengan suatu subruang dari~$\fml B(M)$.
+\end{prop}
+
+\begin{proof}[\emph{Petunjuk pembuktian}] Jika $(M,d)$ adalah ruang metrik, tetapkan
+$a \in M$. Untuk setiap $x \in M$, definisikan $\phi_x\colon M \sto \R$ dengan
+$\phi_x(u) = d(x,u) - d(u,a)$. Tunjukkan terlebih dahulu bahwa
+$\phi_x \in \fml B(M)$ untuk setiap $x \in M$. Kemudian tunjukkan bahwa
+$\phi\colon M \sto \fml B(M)$ adalah isometri. \ns
+\end{proof}
+
+\begin{cor}\label{C035521} Setiap ruang metrik mempunyai pelengkapan.
+\end{cor}
+
+Proposisi berikut menunjukkan bahwa pelengkapan ruang metrik bersifat universal dalam
+arti definisi~\ref{00078}. Kategori yang dimaksud dalam hasil ini adalah kategori semua
+ruang metrik dan pemetaan kontinu seragam, beserta subkategorinya yang terdiri atas semua
+ruang metrik lengkap dan pemetaan kontinu seragam. Di sini, funktor pelupa
+$\abs{\hphantom{O}}$ hanya melupakan kelengkapan objek (dan tidak mengubah morfisme).
+
+\begin{prop}\label{C035557} Misalkan $M$ ruang metrik dan $\clo M$ pelengkapannya. Jika
+$N$ ruang metrik lengkap dan $f\colon M \sto N$ kontinu seragam, maka terdapat sebuah
+fungsi kontinu seragam tunggal $\clo f\colon \clo M \sto N$ yang membuat diagram berikut
+komutatif.
+ \[\xy
+     \qtriangle/{>}`{>}`{-->}/[M`\abs{\clo M}`\abs N;\iota`f`\abs{\clo f}]
+     \morphism(1100,500)|r|/{-->}/<0,-500>[\clo M`N;\clo f]
+   \endxy\]
+\end{prop}
+
+Akibat berikut dari proposisi~\ref{C035557} dan~\ref{C035562} memungkinkan kita berbicara
+tentang \emph{pelengkapan} suatu ruang metrik.
+
+\begin{cor}\label{C035564} Pelengkapan ruang metrik unik (hingga isometri).
+\end{cor}
+
+Sekarang, bagaimana dengan pelengkapan ruang hasil kali dalam? Seperti telah kita lihat,
+setiap ruang hasil kali dalam adalah ruang metrik, sehingga ruang itu mempunyai pelengkapan
+(sebagai ruang metrik). Pertanyaannya: apakah pelengkapan ini merupakan ruang Hilbert?
+Jawabannya, dengan senang hati, adalah \emph{ya}.
+
+\begin{thm} Misalkan $V$ ruang hasil kali dalam dan $H$ pelengkapannya sebagai ruang
+metrik. Maka terdapat hasil kali dalam pada $H$ yang
+  \begin{enumerate}
+    \item merupakan perpanjangan dari hasil kali dalam pada~$V$, dan
+    \item menginduksi metrik pada~$H$.
+  \end{enumerate}
+\end{thm}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\endinput

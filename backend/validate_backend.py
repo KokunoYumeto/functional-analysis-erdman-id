@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate and manifest the deterministic admitted Chapter 1--3 backend."""
+"""Validate the deterministic Chapter 1--4 backend and its manifest."""
 
 from __future__ import annotations
 
@@ -328,23 +328,69 @@ def main() -> None:
     ):
         raise ValueError("Chapter 3 target authority file mismatch")
 
+    chapter_four = chapter_units[3]
+    chapter_four_expected = {
+        "source_bytes": 60217,
+        "source_lines": 1340,
+        "source_sha256": "80fd8fd190beefde7787139be67ce29b9d9cce2d68ff66489aa1e4a93b54c740",
+        "target_bytes": 62947,
+        "target_lines": 1351,
+        "target_sha256": "b8e728e1f26a66ec2a420373e6104e3db4e5c954d7001acda1c13eb348322215",
+        "course_role": "D20_core",
+        "translation_state": "admitted",
+        "qa_state": "passed",
+        "source_corrections": 22,
+        "build_master_path": "source/id-ID/functional-analysis-id-through-ch04.tex",
+        "build_master_bytes": 9348,
+        "build_master_sha256": "598bd1f91096a2e0e19314995f44f79f246ca06cad6328ce9e996af074ceff6c",
+        "artifact_path": "output/pdf/analisis-fungsional-dan-aljabar-operator-id-bab-1-4.pdf",
+        "artifact_bytes": 1249703,
+        "artifact_pages": 75,
+        "artifact_sha256": "716e3524060f64e4728b4d3d8c1a2b906f377ec4e3b3a3cd1ef3e61759a3dd94",
+        "qa_receipt_id": "QA-CH04-ADMISSION-20260822",
+        "receipt_document_state": "present",
+        "receipt_path": "provenance/CH04_BUILD_AND_QA_RECEIPT.md",
+        "receipt_sha256": "5f82abac5f7283e95ea20699b437234a4ef3b2f60520dc1b10c7a2dc9187ba07",
+        "publication_state": "pending",
+        "rights_id": "RIGHTS-ERDMAN-CC-BY-SA-4.0",
+    }
+    for field, expected in chapter_four_expected.items():
+        if chapter_four.get(field) != expected:
+            raise ValueError(f"Chapter 4 {field} invariant failed")
+    source_path = ROOT / "source" / "upstream" / "Hilbert_spaces.tex"
+    target_path = ROOT / "source" / "id-ID" / "Hilbert_spaces-id.tex"
+    source_bytes = source_path.read_bytes()
+    target_bytes = target_path.read_bytes()
+    if (len(source_bytes), len(source_bytes.splitlines()), sha_bytes(source_bytes)) != (
+        60217,
+        1340,
+        "80fd8fd190beefde7787139be67ce29b9d9cce2d68ff66489aa1e4a93b54c740",
+    ):
+        raise ValueError("Chapter 4 source authority file mismatch")
+    if (len(target_bytes), len(target_bytes.splitlines()), sha_bytes(target_bytes)) != (
+        62947,
+        1351,
+        "b8e728e1f26a66ec2a420373e6104e3db4e5c954d7001acda1c13eb348322215",
+    ):
+        raise ValueError("Chapter 4 target authority file mismatch")
+
     expected_counts = {
         "units.jsonl": 18,
-        "semantic_units.jsonl": 345,
-        "segments.jsonl": 423,
-        "relations.jsonl": 1294,
-        "formula_map.jsonl": 2738,
-        "exercise_support.jsonl": 13,
-        "artifacts.jsonl": 19,
-        "qa_events.jsonl": 20,
-        "corrections.jsonl": 46,
-        "terminology.jsonl": 56,
+        "semantic_units.jsonl": 475,
+        "segments.jsonl": 583,
+        "relations.jsonl": 1964,
+        "formula_map.jsonl": 3555,
+        "exercise_support.jsonl": 23,
+        "artifacts.jsonl": 28,
+        "qa_events.jsonl": 28,
+        "corrections.jsonl": 68,
+        "terminology.jsonl": 109,
     }
     for name, count in expected_counts.items():
         if len(records_by_file[name]) != count:
             raise ValueError(f"{name} expected {count}, got {len(records_by_file[name])}")
-    if len(term_rows) != 668:
-        raise ValueError(f"index_terms.csv expected 668 rows, got {len(term_rows)}")
+    if len(term_rows) != 845:
+        raise ValueError(f"index_terms.csv expected 845 rows, got {len(term_rows)}")
 
     chapter_two_counts = {
         "semantic_units.jsonl": 34,
@@ -407,15 +453,47 @@ def main() -> None:
     ):
         raise ValueError("Chapter 3 semantic/segment admission state is not reconciled")
 
+    chapter_four_counts = {
+        "semantic_units.jsonl": 130,
+        "segments.jsonl": 160,
+        "relations.jsonl": 670,
+        "formula_map.jsonl": 817,
+        "exercise_support.jsonl": 10,
+    }
+    for name, count in chapter_four_counts.items():
+        actual = sum(record["id"].startswith("FAOA-2015-CH04-") for record in records_by_file[name])
+        if actual != count:
+            raise ValueError(f"{name} Chapter 4 expected {count}, got {actual}")
+    chapter_four_terms = [row for row in term_rows if row["id"].startswith("FAOA-2015-CH04-")]
+    if len(chapter_four_terms) != 177:
+        raise ValueError("Chapter 4 index-term projection invariant failed")
+    chapter_four_semantic = [
+        record
+        for record in records_by_file["semantic_units.jsonl"]
+        if record["id"].startswith("FAOA-2015-CH04-")
+    ]
+    chapter_four_segments = [
+        record
+        for record in records_by_file["segments.jsonl"]
+        if record["id"].startswith("FAOA-2015-CH04-")
+    ]
+    if any(
+        record.get("translation_state") != "admitted"
+        or record.get("qa_state") != "passed"
+        for record in chapter_four_semantic + chapter_four_segments
+    ):
+        raise ValueError("Chapter 4 semantic/segment admission state is not reconciled")
+
     formula_records = records_by_file["formula_map.jsonl"]
     source_formula_count = sum(len(record["source_formula_ids"]) for record in formula_records)
     target_formula_count = sum(len(record["target_formula_ids"]) for record in formula_records)
     exact_alignment_kinds = {
         "preserved_exact_after_whitespace_normalization",
         "preserved_exact_after_text_aware_whitespace_normalization",
+        "preserved_exact_after_text_aware_whitespace_normalization_reordered",
     }
     exact_formula_count = sum(record["alignment"] in exact_alignment_kinds for record in formula_records)
-    if (source_formula_count, target_formula_count, exact_formula_count) != (2742, 2743, 2695):
+    if (source_formula_count, target_formula_count, exact_formula_count) != (3559, 3560, 3497):
         raise ValueError("combined formula-map coverage invariant failed")
     chapter_two_formula = [
         record for record in formula_records if record["id"].startswith("FAOA-2015-CH02-")
@@ -460,6 +538,41 @@ def main() -> None:
         record["sequence_opcode"] != "replace" for record in chapter_three_deviations
     ):
         raise ValueError("Chapter 3 reviewed formula-deviation inventory changed")
+
+    chapter_four_formula = [
+        record for record in formula_records if record["id"].startswith("FAOA-2015-CH04-")
+    ]
+    chapter_four_formula_counts = (
+        sum(len(record["source_formula_ids"]) for record in chapter_four_formula),
+        sum(len(record["target_formula_ids"]) for record in chapter_four_formula),
+        sum(record["alignment"] in exact_alignment_kinds for record in chapter_four_formula),
+        sum(record.get("math_key_alignment") == "equal" for record in chapter_four_formula),
+    )
+    if chapter_four_formula_counts != (817, 817, 802, 807):
+        raise ValueError("Chapter 4 formula-map coverage invariant failed")
+    chapter_four_alignment_counts = {
+        alignment: sum(record["alignment"] == alignment for record in chapter_four_formula)
+        for alignment in {
+            "preserved_exact_after_text_aware_whitespace_normalization",
+            "preserved_exact_after_text_aware_whitespace_normalization_reordered",
+            "localized_math_text_preserved_math_key",
+            "localized_math_key_reviewed",
+            "reviewed_source_correction",
+        }
+    }
+    if chapter_four_alignment_counts != {
+        "preserved_exact_after_text_aware_whitespace_normalization": 787,
+        "preserved_exact_after_text_aware_whitespace_normalization_reordered": 15,
+        "localized_math_text_preserved_math_key": 5,
+        "localized_math_key_reviewed": 1,
+        "reviewed_source_correction": 9,
+    }:
+        raise ValueError("Chapter 4 reviewed formula-alignment inventory changed")
+    if any(
+        len(record["source_formula_ids"]) != 1 or len(record["target_formula_ids"]) != 1
+        for record in chapter_four_formula
+    ):
+        raise ValueError("Chapter 4 formula map is not one-to-one")
 
     chapter_two_xrefs = [
         record
@@ -513,6 +626,108 @@ def main() -> None:
     if len(chapter_three_eqrefs) != 1 or chapter_three_eqrefs[0].get("source_local_id") != "eq_HBTI":
         raise ValueError("Chapter 3 equation-reference invariant failed")
 
+    chapter_four_relations = [
+        record
+        for record in records_by_file["relations.jsonl"]
+        if record["id"].startswith("FAOA-2015-CH04-")
+    ]
+    chapter_four_xrefs = [
+        record
+        for record in chapter_four_relations
+        if record["id"].startswith("FAOA-2015-CH04-REL-XREF-")
+    ]
+    chapter_four_resolution_counts = {
+        resolution: sum(record["resolution"] == resolution for record in chapter_four_xrefs)
+        for resolution in ("local", "admitted_prior_unit", "pending_later_source_unit")
+    }
+    if len(chapter_four_xrefs) != 51 or chapter_four_resolution_counts != {
+        "local": 27,
+        "admitted_prior_unit": 23,
+        "pending_later_source_unit": 1,
+    }:
+        raise ValueError("Chapter 4 reference-resolution inventory changed")
+    chapter_four_future = [
+        record
+        for record in chapter_four_xrefs
+        if record["resolution"] == "pending_later_source_unit"
+    ]
+    if (
+        chapter_four_future[0].get("source_local_id") != "C067441"
+        or chapter_four_future[0].get("to_id") != "ERDMAN-FAOA-2015-LABEL-C067441"
+        or chapter_four_future[0].get("target_surface") != "futurexref"
+    ):
+        raise ValueError("Chapter 4 future reference endpoint changed")
+    if any(
+        record["to_id"] not in ids
+        for record in chapter_four_xrefs
+        if record["resolution"] != "pending_later_source_unit"
+    ):
+        raise ValueError("Chapter 4 admitted/local reference endpoint is unresolved")
+    chapter_four_eqrefs = [
+        record
+        for record in chapter_four_relations
+        if record["id"].startswith("FAOA-2015-CH04-REL-EQREF-")
+    ]
+    if len(chapter_four_eqrefs) != 2 or any(
+        record.get("source_local_id") != "00078i"
+        or record.get("resolution") != "local"
+        or record.get("to_id") not in ids
+        for record in chapter_four_eqrefs
+    ):
+        raise ValueError("Chapter 4 equation-reference invariant failed")
+    chapter_four_relation_type_counts = {
+        relation_type: sum(record["relation_type"] == relation_type for record in chapter_four_relations)
+        for relation_type in {
+            "contains",
+            "translates",
+            "precedes",
+            "declares_label",
+            "xref",
+            "cites",
+            "hints",
+            "uses_term",
+            "licensed_under",
+            "has_artifact",
+            "terminology_evidence",
+            "has_qa_event",
+            "documents_correction",
+        }
+    }
+    if chapter_four_relation_type_counts != {
+        "contains": 130,
+        "translates": 160,
+        "precedes": 159,
+        "declares_label": 44,
+        "xref": 53,
+        "cites": 12,
+        "hints": 11,
+        "uses_term": 59,
+        "licensed_under": 1,
+        "has_artifact": 9,
+        "terminology_evidence": 2,
+        "has_qa_event": 8,
+        "documents_correction": 22,
+    }:
+        raise ValueError("Chapter 4 relation-type inventory changed")
+    chapter_four_term_evidence = [
+        record
+        for record in chapter_four_relations
+        if record.get("relation_type") == "terminology_evidence"
+    ]
+    if [
+        (record["id"], record["to_id"]) for record in chapter_four_term_evidence
+    ] != [
+        (
+            "FAOA-2015-CH04-REL-TERM-EVIDENCE-0001",
+            "ARTIFACT-FAOA-ID-CH04-TARGET-TEX",
+        ),
+        (
+            "FAOA-2015-CH04-REL-TERM-EVIDENCE-0002",
+            "ARTIFACT-FAOA-ID-CH04-QA-RECEIPT",
+        ),
+    ]:
+        raise ValueError("Chapter 4 public terminology-evidence links changed")
+
     artifact_records = records_by_file["artifacts.jsonl"]
     chapter_two_artifacts = [
         record for record in artifact_records if record.get("unit_id") == "FAOA-2015-CH02"
@@ -554,6 +769,39 @@ def main() -> None:
         for record in chapter_three_artifacts
     ):
         raise ValueError("Chapter 3 artifacts are not bound to the admission receipt")
+    chapter_four_artifacts = [
+        record for record in artifact_records if record.get("unit_id") == "FAOA-2015-CH04"
+    ]
+    expected_chapter_four_artifact_ids = [
+        "ARTIFACT-FAOA-ID-CH04-TARGET-TEX",
+        "ARTIFACT-FAOA-ID-THROUGH-CH04-MASTER",
+        "ARTIFACT-FAOA-ID-THROUGH-CH04-PDF",
+        "ARTIFACT-FAOA-ID-CH04-STRUCTURAL-CHECKER",
+        "ARTIFACT-FAOA-ID-CH04-RENDER-MANIFEST",
+        "ARTIFACT-FAOA-ID-CH04-CONTACT-SHEET",
+        "ARTIFACT-FAOA-ID-CH04-VISUAL-ACCESSIBILITY-AUDIT",
+        "ARTIFACT-FAOA-ID-CH04-QA-RECEIPT",
+        "ARTIFACT-FAOA-ID-CH04-CORRECTIONS-LEDGER",
+    ]
+    if [record["id"] for record in chapter_four_artifacts] != expected_chapter_four_artifact_ids:
+        raise ValueError("Chapter 4 admitted artifact inventory changed")
+    if len(chapter_four_artifacts) != 9 or any(
+        record.get("path", "").startswith("00_control/") for record in chapter_four_artifacts
+    ):
+        raise ValueError("Chapter 4 public artifact closure includes a private control")
+    if any(
+        record.get("qa_receipt_id") != "QA-CH04-ADMISSION-20260822"
+        or record.get("receipt_document_state") != "present"
+        for record in chapter_four_artifacts
+    ):
+        raise ValueError("Chapter 4 artifacts are not bound to the admission receipt")
+    accessibility_artifact = chapter_four_artifacts[6]
+    if (
+        accessibility_artifact.get("visual_result") != "pass"
+        or accessibility_artifact.get("fully_accessible_pdf_claim") != "fail"
+        or accessibility_artifact.get("accessible_html_or_tagged_pdf_state") != "pending"
+    ):
+        raise ValueError("Chapter 4 accessibility limitation is not represented honestly")
     for artifact in artifact_records:
         path = ROOT / artifact["path"]
         if not path.is_file():
@@ -679,6 +927,98 @@ def main() -> None:
     ):
         raise ValueError("Chapter 3 admission event is incomplete")
 
+    chapter_four_qa = [
+        record
+        for record in records_by_file["qa_events.jsonl"]
+        if record.get("unit_id") == "FAOA-2015-CH04"
+    ]
+    expected_chapter_four_qa_ids = [
+        "QA-CH04-STRUCTURAL-20260822",
+        "QA-CH04-MATH-20260822",
+        "QA-CH04-LANGUAGE-20260822",
+        "QA-CH04-BUILD-20260822",
+        "QA-CH04-VISUAL-20260822",
+        "QA-CH04-ACCESSIBILITY-20260822",
+        "QA-CH04-RIGHTS-20260822",
+        "QA-CH04-ADMISSION-20260822",
+    ]
+    expected_chapter_four_qa_types = [
+        "unit_structural",
+        "unit_mathematical",
+        "unit_language",
+        "cumulative_build",
+        "cumulative_visual",
+        "cumulative_accessibility",
+        "unit_rights_privacy",
+        "unit_admission",
+    ]
+    if [record["id"] for record in chapter_four_qa] != expected_chapter_four_qa_ids:
+        raise ValueError("Chapter 4 typed QA event inventory changed")
+    if [record["qa_type"] for record in chapter_four_qa] != expected_chapter_four_qa_types:
+        raise ValueError("Chapter 4 typed QA event kinds changed")
+    if any(
+        record.get("qa_receipt_id") != "QA-CH04-ADMISSION-20260822"
+        or record.get("receipt_document_state") != "present"
+        or record.get("receipt_path") != "provenance/CH04_BUILD_AND_QA_RECEIPT.md"
+        or record.get("receipt_sha256")
+        != "5f82abac5f7283e95ea20699b437234a4ef3b2f60520dc1b10c7a2dc9187ba07"
+        for record in chapter_four_qa
+    ):
+        raise ValueError("Chapter 4 QA events are not bound to the admission receipt")
+    if any(record.get("result") != "pass" for record in chapter_four_qa[:5]):
+        raise ValueError("Chapter 4 structural/math/language/build/visual gates did not pass")
+    accessibility_event = chapter_four_qa[5]
+    if (
+        accessibility_event.get("result") != "fail"
+        or accessibility_event.get("failure_scope") != "claim_of_fully_accessible_pdf"
+        or accessibility_event.get("tagged_pdf") is not False
+        or accessibility_event.get("math_diagram_unicode_maps_complete") is not False
+        or accessibility_event.get("admission_blocker_for_visual_pdf_boundary") is not False
+        or accessibility_event.get("accessible_html_or_tagged_pdf_state") != "pending"
+    ):
+        raise ValueError("Chapter 4 accessibility QA event is incomplete")
+    if chapter_four_qa[6].get("result") != "pass":
+        raise ValueError("Chapter 4 rights/privacy gate did not pass")
+    structural_event = chapter_four_qa[0]
+    if (
+        structural_event.get("semantic_anchors") != 131
+        or structural_event.get("semantic_units") != 130
+        or structural_event.get("segments") != 160
+        or structural_event.get("labels") != 44
+        or structural_event.get("references") != 53
+        or structural_event.get("ordinary_target_references") != 50
+        or structural_event.get("future_target_references") != 1
+        or structural_event.get("equation_references") != 2
+        or structural_event.get("index_terms") != 177
+        or structural_event.get("defined_terms") != 59
+    ):
+        raise ValueError("Chapter 4 structural QA metadata is inconsistent")
+    math_event = chapter_four_qa[1]
+    if (
+        math_event.get("source_math_surfaces") != 817
+        or math_event.get("target_math_surfaces") != 817
+        or math_event.get("exact_normalized_alignments") != 802
+        or math_event.get("math_key_equal_alignments") != 807
+        or math_event.get("localized_reorderings") != 15
+        or math_event.get("localized_math_text_alignments") != 6
+        or math_event.get("reviewed_source_corrections") != 9
+        or math_event.get("formula_map_records") != 817
+    ):
+        raise ValueError("Chapter 4 mathematical QA metadata is inconsistent")
+    admission = chapter_four_qa[-1]
+    if (
+        admission.get("result") != "pass"
+        or admission.get("decision") != "admitted"
+        or admission.get("typed_qa_event_ids") != expected_chapter_four_qa_ids[:-1]
+        or admission.get("all_required_admission_gates") != "pass"
+        or admission.get("accessibility_remediation_state") != "pending_nonblocking"
+        or admission.get("publication_state") != "pending"
+        or admission.get("receipt_document_state") != "present"
+        or admission.get("receipt_sha256")
+        != "5f82abac5f7283e95ea20699b437234a4ef3b2f60520dc1b10c7a2dc9187ba07"
+    ):
+        raise ValueError("Chapter 4 admission event is incomplete")
+
     chapter_two_corrections = [
         record
         for record in records_by_file["corrections.jsonl"]
@@ -716,6 +1056,31 @@ def main() -> None:
         for record in chapter_three_corrections
     ):
         raise ValueError("Chapter 3 corrections are not bound to the admitted evidence")
+
+    chapter_four_corrections = [
+        record
+        for record in records_by_file["corrections.jsonl"]
+        if record.get("unit_id") == "FAOA-2015-CH04"
+    ]
+    if [record["id"] for record in chapter_four_corrections] != [
+        f"FAOA-2015-CH04-CORR-{number:03d}" for number in range(1, 23)
+    ]:
+        raise ValueError("Chapter 4 correction inventory changed")
+    if any(
+        record.get("qa_receipt_id") != "QA-CH04-ADMISSION-20260822"
+        or record.get("receipt_document_state") != "present"
+        or record.get("receipt_path") != "provenance/CH04_BUILD_AND_QA_RECEIPT.md"
+        or record.get("receipt_sha256")
+        != "5f82abac5f7283e95ea20699b437234a4ef3b2f60520dc1b10c7a2dc9187ba07"
+        or record.get("ledger_sha256")
+        != "8909a33f5ed5dd37065fb4c3afb08e4e0659d17ef1d1a2b8f1d7f307ed1eef2d"
+        or record.get("ledger_section_sha256")
+        != "961806d5d229310c8063dc8941c8d4fd1caeabafe65bb9fa7df9045c17f53fe3"
+        or record.get("upstream_report")
+        != "deferred_until_complete_and_separately_authorized"
+        for record in chapter_four_corrections
+    ):
+        raise ValueError("Chapter 4 corrections are not bound to admitted evidence")
 
     expected_chapter_two_term_ids = [
         "TERM-CATEGORY",
@@ -784,6 +1149,86 @@ def main() -> None:
         for record in chapter_three_terminology
     ):
         raise ValueError("Chapter 3 terminology provenance changed")
+
+    expected_chapter_four_term_ids = [
+        "TERM-HILBERT-SPACE",
+        "TERM-BANACH-SPACE",
+        "TERM-BANACH-ALGEBRA",
+        "TERM-UNIFORM-NORM",
+        "TERM-MEASURABLE",
+        "TERM-SQUARE-INTEGRABLE",
+        "TERM-INTEGRABLE",
+        "TERM-ABSOLUTELY-CONTINUOUS",
+        "TERM-SUMMABLE",
+        "TERM-SUM",
+        "TERM-ABSOLUTELY-SUMMABLE",
+        "TERM-CONVERGES",
+        "TERM-EXISTS",
+        "TERM-ABSOLUTELY-CONVERGENT",
+        "TERM-CONVERGENT-SERIES",
+        "TERM-EXTERNAL-ORTHOGONAL-DIRECT-SUM",
+        "TERM-CLOSED-LINEAR-SPAN",
+        "TERM-ORTHONORMAL",
+        "TERM-ORTHONORMAL-BASIS",
+        "TERM-COMPLETE-ORTHONORMAL-SET",
+        "TERM-HILBERT-SPACE-BASIS",
+        "TERM-USUAL",
+        "TERM-STANDARD",
+        "TERM-TRIGONOMETRIC-POLYNOMIAL",
+        "TERM-DIMENSION",
+        "TERM-CODIMENSION",
+        "TERM-CONJUGATE-LINEAR",
+        "TERM-ANTI-ISOMORPHISM",
+        "TERM-CONJUGATION",
+        "TERM-WEAK-TOPOLOGY",
+        "TERM-PRODUCT-TOPOLOGY",
+        "TERM-CONVERGE-WEAKLY",
+        "TERM-CONVERGE-STRONGLY",
+        "TERM-CONVERGE-IN-NORM",
+        "TERM-WEAKLY-CLOSED",
+        "TERM-WEAKLY-COMPACT",
+        "TERM-WEAKLY-CONTINUOUS",
+        "TERM-UNIVERSAL-MAPPING-DIAGRAM",
+        "TERM-UNIVERSAL-PROPERTY",
+        "TERM-UNIVERSAL-MORPHISM",
+        "TERM-UNIVERSAL-OBJECT",
+        "TERM-FREE-ON",
+        "TERM-FREE-OBJECT-GENERATED-BY",
+        "TERM-FREE-VECTOR-SPACES",
+        "TERM-CHARACTERISTIC-FUNCTION",
+        "TERM-WORD",
+        "TERM-EMPTY-WORD",
+        "TERM-CONCATENATION",
+        "TERM-FREE-MONOID",
+        "TERM-FREE-SEMIGROUP",
+        "TERM-CO-UNIVERSAL-MORPHISM",
+        "TERM-CATEGORICAL-PRODUCT",
+        "TERM-COMPLETION",
+    ]
+    chapter_four_terminology = [
+        record
+        for record in records_by_file["terminology.jsonl"]
+        if record["id"] in expected_chapter_four_term_ids
+    ]
+    if [record["id"] for record in chapter_four_terminology] != expected_chapter_four_term_ids:
+        raise ValueError("Chapter 4 bounded terminology inventory changed")
+    if any(
+        record.get("locale") != "id-ID"
+        or record.get("evidence")
+        != "FAOA-2015-CH04 admitted target source/id-ID/Hilbert_spaces-id.tex; backend/index_terms.csv; provenance/CH04_BUILD_AND_QA_RECEIPT.md"
+        for record in chapter_four_terminology
+    ):
+        raise ValueError("Chapter 4 terminology provenance changed")
+    chapter_four_term_relations = [
+        record
+        for record in records_by_file["relations.jsonl"]
+        if record.get("relation_type") == "uses_term"
+        and record["id"].startswith("FAOA-2015-CH04-REL-TERM-")
+    ]
+    if len(chapter_four_term_relations) != 59 or any(
+        record.get("to_id") not in ids for record in chapter_four_term_relations
+    ):
+        raise ValueError("Chapter 4 defined-term relationships changed")
 
     for path in backend_files():
         data = path.read_bytes()

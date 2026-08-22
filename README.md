@@ -6,12 +6,13 @@ John M. Erdman, *Functional Analysis and Operator Algebras: An Introduction*
 
 ## Baca edisi saat ini
 
-[Buka PDF kumulatif Bab 1--3](output/pdf/analisis-fungsional-dan-aljabar-operator-id-bab-1-3.pdf)
+[Buka PDF kumulatif Bab 1--4](output/pdf/analisis-fungsional-dan-aljabar-operator-id-bab-1-4.pdf)
 
-Bab 1, Bab 2, dan Bab 3 telah diterjemahkan lengkap dan melewati pemeriksaan struktur,
-matematika, residu bahasa, hak komponen, dua build bersih yang menghasilkan PDF
-identik, serta inspeksi visual seluruh 57 halaman. PDF ini merupakan batas
-produksi ketiga, bukan edisi lengkap. [PDF Bab 1--2](output/pdf/analisis-fungsional-dan-aljabar-operator-id-bab-1-2.pdf)
+Bab 1 sampai Bab 4 telah diterjemahkan lengkap dan melewati pemeriksaan struktur,
+matematika, residu bahasa, hak komponen, build bersih berulang yang menghasilkan
+PDF identik, serta inspeksi visual seluruh 75 halaman. PDF ini merupakan batas
+produksi keempat, bukan edisi lengkap. [PDF Bab 1--3](output/pdf/analisis-fungsional-dan-aljabar-operator-id-bab-1-3.pdf),
+[PDF Bab 1--2](output/pdf/analisis-fungsional-dan-aljabar-operator-id-bab-1-2.pdf),
 dan [PDF Unit 1](output/pdf/analisis-fungsional-dan-aljabar-operator-id-unit-1.pdf)
 tetap tersedia sebagai artefak batas sebelumnya.
 
@@ -20,7 +21,7 @@ tetap tersedia sebagai artefak batas sebelumnya.
 Edisi yang dipilih mencakup seluruh buku 17 bab, kata pengantar, bibliografi,
 dan indeks. Bab 1–8 membentuk rute inti D20; Bab 9–17 merupakan lanjutan
 analisis fungsional dan aljabar operator. Penandaan kurikuler tidak menghapus
-isi sumber. Pekerjaan berikutnya dimulai pada Bab 4, ruang Hilbert.
+isi sumber. Pekerjaan berikutnya dimulai pada Bab 5, operator pada ruang Hilbert.
 
 Sumber resmi:
 
@@ -41,8 +42,9 @@ mengalir ulang; nomor halaman bukan pengenal tetap.
 
 ## Aksesibilitas
 
-PDF kumulatif Bab 1--3 memiliki metadata, bookmark, tautan silang, dan indeks,
-tetapi belum merupakan PDF bertag. Reader HTML semantik dan aksesibel adalah
+PDF kumulatif Bab 1--4 memiliki metadata, bookmark, tautan silang, dan indeks,
+tetapi belum merupakan PDF bertag; peta Unicode beberapa font matematika dan
+diagram lama juga belum lengkap. Reader HTML semantik dan aksesibel adalah
 keluaran wajib edisi lengkap dan masih dalam pengerjaan. Tidak ada klaim
 aksesibilitas yang melampaui keadaan ini.
 

@@ -1,0 +1,1340 @@
+\chapter{HILBERT SPACES}
+
+For the most elementary facts about Hilbert spaces I can think of no better introduction than the first two chapters
+of Halmos's classic text~\cite{Halmos:1951}.  Another good introduction is~\cite{Young:1988}.  You may also find
+chapters 3 and 9 of~\cite{Kreyszig:1978} and chapter 4 of~\cite{Ha:2006} helpful.  For a start towards more serious
+explorations into the mysteries of Hilbert space look at~\cite{Conway:1990}, \cite{Conway:2000}, and~\cite{Helmberg:1969}.
+
+
+\section{Definition and Examples}
+
+A Hilbert space is a \emph{complete inner product space}.  In more detail:
+\begin{defn} In proposition~\ref{00015025} we showed how an inner product on a vector space induces a norm on the space and in
+proposition~\ref{0001503} how a norm in turn induces a metric.  If an inner product space is complete with respect to this metric
+it is a
+  \index{Hilbert!space}%
+  \index{space!Hilbert}%
+\df{Hilbert space}.  Similarly, a
+  \index{Banach!space}%
+  \index{space!Banach}%
+\df{Banach space} is a complete normed linear space and a
+  \index{Banach!algebra}%
+  \index{algebra!Banach}%
+\df{Banach algebra} is a complete normed algebra.
+\end{defn}
+
+\begin{exam} Under the inner product defined in
+ \index{K@$\K^n$!as a Hilbert space}%
+ \index{Hilbert!space!$\K^n$ as a}%
+example~\ref{000150012} $\K^n$ is a Hilbert space.
+\end{exam}
+
+\begin{exam}\label{exam150013} Under the inner products in
+ \index{l@$l_2 = l_2(\N)$!as a Hilbert space}%
+ \index{l@$l_2(\Z)$!as a Hilbert space}%
+ \index{Hilbert!space!$l_2 = l_2(\N)$, $l_2(\Z)$ as a}%
+example~\ref{000150013} $l_2 = l_2(\N)$ and $l_2(\Z)$ are Hilbert spaces.
+\end{exam}
+
+\begin{exam} Under the inner product defined in example~\ref{000150014} $\fml C([a,b])$ is \emph{not} a Hilbert space.
+\end{exam}
+
+\begin{exam}\label{exam_CX} Let $\fml C(X) = \fml C(X,\C)$ be the family of all continuous complex valued functions on a compact
+Hausdorff space~$X$.  Under the
+ \index{uniform!norm!on $\fml C(X)$}%
+ \index{norm!uniform}%
+ \index{C@$\fml C(X)$!as a Banach space}%
+ \index{C@$\fml C(X)$!continuous complex valued functions on~$X$}%
+\df{uniform norm}
+   \[ \norm f_u := \sup\{\abs{f(x)}\colon 0 \le x \le 1\} \]
+$\fml C(X)$ is a Banach space.  If the space $X$ is not compact we can make the set $\fml C_b(X)$
+ \index{C@$\fml C_b(X)$!as a Banach space}%
+of all \emph{bounded} continuous complex valued functions on $X$ into a Banach space in the same way.
+When the scalar field is $\R$ we will
+ \index{C@$\fml C(X,\R)$!continuous real valued functions on~$X$}%
+ \index{C@$\fml C(X,\R)$!as a Banach space}%
+write $\fml C(X,\R)$ for the family of continuous real valued functions on~$X$.  It too is a Banach space.
+\end{exam}
+
+\begin{exam}\label{000213} The inner product space $l_c$ of all sequences $(a_n)$ of complex numbers which are eventually zero
+(see example~\ref{exam13122}) is not a Hilbert space.
+\end{exam}
+
+\begin{exam}\label{00022} Let $\mu$ be a positive measure on a $\sigma$-algebra $\sfml A$ of
+subsets of a set~$S$.  If you are unacquainted with general measure theory, a casual introduction to Lebesgue measure
+on the real line should suffice for examples which appear in these notes.  A complex valued function $f$ on $S$ is
+ \index{measurable}%
+\df{measurable} if the inverse image under $f$ of every Borel set (equivalently, every open
+set) in $\C$ belongs to~$\sfml A$. We define an equivalence relation $\sim$ on the family of
+measurable complex valued functions by setting $f \sim g$ whenever $f$ and $g$ differ on a set
+of measure zero, that is, whenever $\mu(\{x \in S\colon f(x) \ne g(x)\}) = 0$.  We adopt
+conventional notation and denote the equivalence class containing $f$ by $f$ itself (rather
+than something more logical such as~$[f]$).  We denote the family of (equivalence classes of)
+measurable complex valued functions on $S$ by $\fml M(S,\mu)$. A function $f \in \fml M(S,\mu)$ is
+ \index{square integrable}%
+ \index{M@$\fml M(S,\mu)$ (equivalence classes of measurable functions)}%
+ \index{L@$\fml L_2(S,\mu)$!square integrable functions}%
+\df{square integrable} if $\int_S \abs{f(x)}^2\,d\mu(x) < \infty$.  We denote the family of
+(equivalence classes of) square integrable functions on $S$ by~$\lfs 2(S,\mu)$.
+ \index{L@$\lfs 2(S,\mu)$!classes of square integrable functions}%
+ \index{L@$\lfs 2(S,\mu)$!as a Hilbert space}%
+ \index{Hilbert!space!$\lfs 2(S,\mu)$ as a}%
+For every $f$, $g \in \lfs 2(S,\mu)$ define
+   \[ \langle f,g \rangle := \int_S f(x) \conj{g(x)}\,d\mu(x)\,. \]
+With this inner product (and the obvious pointwise vector space operations) $\lfs 2(S,\mu)$ is a Hilbert space.
+\end{exam}
+
+\begin{exam}\label{exam_L1S} Notation as in the preceding example.  A function $f \in \fml M(S,\mu)$ is
+ \index{integrable}%
+ \index{L@$\fml L_1(S,\mu)$!integrable functions}%
+\df{integrable} if $\int_S \abs{f(x)}\,d\mu(x) < \infty$.  We denote the family of
+(equivalence classes of) integrable functions on $S$ by~$\lfs 1(S,\mu)$.
+ \index{L@$\lfs 1(S,\mu)$!classes of integrable functions}%
+ \index{L@$\lfs 1(S,\mu)$!as a Banach space}%
+ \index{Banach!space!$\lfs 1(S,\mu)$ as a}%
+For every $f \in \lfs 1(S,\mu)$ define
+    \[ {\norm f}_1 := \int_S \abs{f(x)}\,d\mu(x)\,. \]
+With this norm (and the obvious pointwise vector space operations) $\lfs 1(S,\mu)$ is a Banach space.
+\end{exam}
+
+\begin{defn} If $J$ is any interval in $\R$ a real (or complex) valued function $f$ on $J$ is
+ \index{absolute!continuity!of a function}%
+ \index{continuity!absolute!of a function}%
+ \index{absolutely!continuous}%
+\df{absolutely continuous} if it satisfies the following condition:
+  \quote for every $\epsilon > 0$ there exists $\delta > 0$ such
+ that if $(a_1,b_1), \dots,(a_n,b_n)$ \\
+ are disjoint nonempty subintervals of $J$ with $\sum_{k=1}^n(b_k - a_k) < \delta$, \\
+ then $\sum_{k=1}^n\abs{f(b_k) - f(a_k)}~<~\epsilon$.
+  \endquote
+\end{defn}
+
+\begin{exam}\label{exam_Hsp_abs_cont} Let $\lambda$ be Lebesgue measure on the interval $[0,1]$ and $H$ be the set of all
+absolutely continuous functions on $[0,1]$ such that $f\,'$ belongs to $\lfs 2([0,1],\lambda)$ and $f(0) = 0$.
+ \index{Hilbert!space!of absolutely continuous functions}%
+ \index{absolutely!continuous functions!Hilbert space of}%
+For $f$ and $g$ in $H$ define
+   \[ \langle f,g \rangle = \int_0^1 f\,'(t)\clo{g\,'(t)}\,dt. \]
+This is an inner product on $H$ under which $H$ becomes a Hilbert space.
+\end{exam}
+
+\begin{exam} If $H$ and $K$ are Hilbert spaces, then their (external orthogonal) direct sum $H \oplus K$
+ \index{Hilbert!space!direct sum of Hilbert spaces as a}%
+ \index{direct!sum!of Hilbert spaces}%
+(as defined in~\ref{0001504}) is also a Hilbert space.
+\end{exam}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Unordered Summation}
+
+Defining \emph{unordered summation} is no more difficult in normed linear spaces than in~$\R$.  We generalize
+definition~\ref{def_summable_R}.
+
+\begin{defn} Let $V$ be a normed linear space and $A \subseteq V$.
+For every $F \in \fin A$ define
+  \[ \sbsb sF = \sum F\]
+where $\sum F$ is the sum of the (finitely many) vectors belonging to~$F$.
+Then $s = \bigl(\sbsb sF\bigr)_{F \in \fin A}$ is a net in~$V$. If this net converges, the set
+$A$ is said to be
+ \index{summable!set of vectors}%
+\df{summable}; the limit of the net is the
+ \index{sum!of a summable set}%
+ \index{<sum@$\sum A$ (sum of a set of vectors)}%
+\df{sum} of $A$ and is denoted by~$\sum A$. If $\{\norm a\colon a \in A\}$ is summable, we say that the set $A$ is
+ \index{absolutely!summable}%
+ \index{summable!absolutely}%
+\df{absolutely summable}.
+
+To accommodate sums in which the same vector appears more than once, we need to make use of indexed families of vectors.  They
+require a slightly different approach. Suppose, for example, that $A = \bigl(x_i\bigr)_{i \in I}$ where $I$ is
+an arbitrary index set. Then for each $F \in \fin I$
+  \[ \sbsb sF = \sum_{i \in F}x_i . \]
+As above $s$ is a net in~$V$. If it converges $\bigl(x_i\bigr)_{i \in I}$ is
+ \index{summable!indexed family of vectors}%
+summable and its limit is the
+ \index{sum!of an indexed family}%
+ \index{<sum@$\sum_{i \in I} x_i$ (sum of an indexed family)}%
+sum of the indexed family, and is denoted by $\sum_{i \in I} x_i$.  An alternative way of saying that $\bigl(x_i\bigr)_{i \in I}$
+is summable is to say that the ``series'' $\sum_{i \in I}x_i$
+ \index{convergence!of infinite series}%
+ \index{sum!of an infinite series}%
+\df{converges} or that the ``sum'' $\sum_{i \in I}x_i$ \df{exists}.  An indexed family $\bigl(x_i\bigr)_{i \in I}$ is
+ \index{absolutely!summable}%
+ \index{summable!absolutely}%
+\df{absolutely summable} if the indexed family $\bigl(\norm{x_i}\bigr)_{i \in I}$ is summable.  An alternative way of saying
+that $\bigl(x_i\bigr)_{i \in I}$ is absolutely summable is to say that the ``series'' $\sum_{i \in I}x_i$ is
+ \index{convergence!absolute}%
+ \index{absolute!convergence}%
+\df{absolutely convergent}.
+
+Sequences, as usual, are treated as a separate case.  Let $(a_k)$ be a sequence in~$V$.  If the infinite series
+$\sum_{k=1}^\infty a_k$ (that is, the sequence of
+ \index{partial!sum}%
+ \index{sum!partial}%
+ \index{infinite series!partial sum of an}%
+ \index{series!infinite}%
+partial sums $s_n = \sum_{k=1}^n a_k$) converges to a
+vector $b$ in $V$, then we say that the sequence $(a_k)$ is
+ \index{infinite series!in a normed linear space}%
+ \index{summable!sequence}%
+ \index{sequence!summable}%
+\df{summable} or, equivalently, that the series $\sum_{k=1}^\infty a_k$ is a
+ \index{convergence!of a series}%
+ \index{series!convergent}%
+\df{convergent series}.  The vector $b$ is called the
+ \index{sum!of an infinite series}%
+ \index{series!sum of a}%
+ \index{infinite series!sum of an}%
+\df{sum} of the series $\sum_{k=1}^\infty a_k$ and we write
+  \[ \sum_{k=1}^\infty a_k = b\,. \]
+It is clear that a necessary and sufficient condition for a series $\sum_{k=1}^\infty a_k$ to
+be convergent or, equivalently, for the sequence $(a_k)$ to be summable, is that there exist a
+vector $b$ in $V$ such that
+  \begin{equation}\label{cond_ser_conv}
+     \biggnorm{b - \sum_{k=1}^n a_k} \sto 0 \qquad \text{as} \qquad n \sto \infty.
+  \end{equation}
+\end{defn}
+
+\begin{prop}\label{prop_abs_sum_implies_sum} A normed linear space $V$ is complete if and only if every absolutely
+summable sequence in $V$ is summable.
+\end{prop}
+
+\begin{proof}[\emph{Hint for proof}] Let $(x_n)$ be a Cauchy sequence in a normed linear space in which every absolutely
+summable sequence is summable.  Find a subsequence $\bigl(x_{n_k}\bigr)$ of $(x_n)$ such that $\norm{x_n - x_m} < 2^{-k}$
+whenever $m$, $n \ge n_k$.  If we let $y_1 = x_{n_1}$ and $y_j = x_{n_j} - x_{n_{j-i}}$ for $j > 1$, then $(y_j)$ is
+absolutely summable.   \ns
+\end{proof}
+
+\begin{prop} If $\bigl(x_i\bigr)_{i \in I}$ and $\bigl(y_i\bigr)_{i \in I}$ are
+summable indexed families in a normed linear space and $\alpha$ is a scalar, then
+$\bigl(\alpha x_i\bigr)_{i \in I}$ and $\bigl(x_i + y_i\bigr)_{i \in I}$
+are summable; and
+  \[ \sum_{i \in I} \alpha x_i = \alpha \, \sum_{i \in I} x_i \]
+and
+  \[ \sum_{i \in I} x_i + \sum_{i \in I} y_i =
+                         \sum_{i \in I} (x_i + y_i). \]
+\end{prop}
+
+\begin{rem} One frequently finds some version of the
+following ``proposition'' in textbooks.
+\vskip 10 pt
+\begin{quote}
+If $\sum_{i \in I}x_i = u$ and $\sum_{i \in I}x_i = v$ in a
+Hilbert (or Banach) space, then $u = v$.
+\end{quote}
+
+ \vskip 10 pt
+\noindent (I once saw a 6 line proof of this.) Of which result is
+this a trivial consequence?
+\end{rem}
+
+\begin{prop} If $\bigl(x_i\bigr)_{i \in I}$ is a summable indexed family of vectors in a Hilbert space $H$ and
+$y$ is a vector in $H$, then $\bigl(\langle x_i,y \rangle\bigr)_{i \in I}$ is a summable indexed family of scalars and
+   \[ \sum_{i \in I}\langle x_i,y \rangle  = \biggl < \sum_{i \in I} x_i, y \biggr >. \]
+\end{prop}
+
+The following is a generalization of example~\ref{exam150013}.
+
+\begin{exam} Let $I$ be an arbitrary nonempty set and $l^2(I)$ be the set of all complex valued functions $x$ on $I$ such that
+$\sum_{i \in I}\abs{x_i}^2 < \infty$. For all $x$, $y \in l^2(I)$ define
+    \[ \langle x,y \rangle = \sum_{i \in I}x(i)\conj{y(i)}.\]
+  \begin{enumerate}
+    \item If $x \in l^2(I)$, then $x(i) = 0$ for all but countably many $i$.
+    \item The map $(x,y) \mapsto \langle x,y \rangle$ is an inner product on the vector space $l^2(I)$.
+    \item The space $l^2(I)$ is a Hilbert space.
+  \end{enumerate}
+\end{exam}
+
+\begin{prop}\label{prop_sum_conv} Let $(x_n)$ be a sequence in a Hilbert space.  If the sequence regarded as an indexed family
+is summable, then the infinite series $\sum_{k=1}^\infty x_k$ converges.
+\end{prop}
+
+\begin{exam} The converse of proposition~\ref{prop_sum_conv} does not hold.
+\end{exam}
+
+The direct sum of two Hilbert spaces is a Hilbert space.
+
+\begin{prop} If $H$ and $K$ are Hilbert spaces, then their (orthogonal) direct sum (as defined in~\ref{0001504})
+is a Hilbert space.
+\end{prop}
+
+We can also take the product of more than two Hilbert spaces---even an infinite family of them.
+
+\begin{prop} Let $\bigl(H_i\bigr)_{i \in I}$ be an indexed family of Hilbert spaces.  A function $x\colon I \sto \bigcup H_i$
+belongs to $H = \D\bigoplus_{i \in I}H_i$ if $x(i) \in H_i$ for every $i$ and if $\sum_{i \in I}\norm{x(i)}^2 < \infty$.
+Defining $\langle \hphantom x, \hphantom y \rangle$ on $H$ by $\langle x, y \rangle := \sum_{i \in I} \langle
+x(i), y(i) \rangle$ makes $H$ into an Hilbert space.
+\end{prop}
+
+\begin{defn} The Hilbert space defined in the preceding proposition is the
+ \index{external!othogonal direct sum}%
+ \index{orthogonal!direct sum!of Hilbert spaces}%
+ \index{direct!sum!of Hilbert spaces}%
+ \index{Hilbert!space!direct sum}%
+ \index{sum!direct}%
+\df{(external orthogonal) direct sum} of the Hilbert spaces~$H_i$.
+\end{defn}
+
+\begin{exer}  Is the direct sum defined above (with appropriate morphisms) a product in the category $\cat{HSp}$
+of Hilbert spaces and bounded linear maps?  Is it a coproduct?
+\end{exer}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Hilbert space Geometry}
+
+\begin{conv}  In the context of Hilbert spaces the word ``subspace'' will always mean
+ \index{conventions!subspaces of Hilbert spaces are closed}%
+ \index{subspace!of a Hilbert space}%
+\emph{closed vector subspace}.  The reason for this is that we want a subspace of a Hilbert space to be a Hilbert space in its own right; that is to say,
+a subspace of a Hilbert space should be a subobject in the category of Hilbert spaces (and appropriate morphisms).  To indicate that $M$ is a subspace of $H$ we write
+ \index{<binrelle@$\preccurlyeq$ (subspace of a Banach or Hilbert space)}%
+$M \preccurlyeq H$.  A (not necessarily closed) vector subspace of a Hilbert space is also
+ \index{linear!subspace}%
+ \index{vector!subspace}%
+ \index{linear!manifold}%
+ \index{manifold!linear}%
+called a \emph{linear subspace} or a \emph{linear manifold}.
+\end{conv}
+
+\begin{defn} Let $A$ be a nonempty subset of a Banach (or Hilbert) space~$B$.  We define the
+ \index{closed!linear span}%
+ \index{linear!span!closed}%
+ \index{<unops@$\bigvee A$ (closed linear span of~$A$)}%
+\df{closed linear span} of $A$ (denoted by $\bigvee A$) to be the smallest subspace of $B$ containing~$A$; that is, the
+intersection of all subspaces of $B$ which contain~$A$.
+\end{defn}
+
+As with definitions \ref{smplx005def}, \ref{def_interior}, and \ref{def_closure}, we need to show that the preceding one makes sense.
+
+\begin{prop} The preceding definition makes sense.  Furthermore, a vector is in the closed linear span of $A$ if and only if it belongs
+to the closure of the linear span of~$A$.
+\end{prop}
+
+\begin{thm}[Minimizing Vector Theorem] If $C$ is a nonempty closed convex subset of a
+ \index{minimizing vector theorem}%
+Hilbert space $H$ and $a \in C^c$, then there exists a unique $b \in C$ such that
+$\norm{b - a} \le \norm{x - a}$ for every $x \in C$.
+ \[\xymatrix{
+     &&&&&{}  \\
+     &&&& x   \\
+     a\ar[rrrru]\ar[rrr] &&& b  \\
+     &&&&&C   \\
+     &&&&{}\ar@{-}@/^3.5pc/[uuuu]       }\]
+\end{thm}
+
+\begin{proof}[\emph{Hint for proof}]  For the existence part let $d = \inf\{\norm{x - a}\colon x \in C\}$.  Choose a sequence
+$(y_n)$ of vectors in $C$ such that $\norm{y_n - a} \sto d$.  To prove that the sequence $(y_n)$ is Cauchy, apply the
+\emph{parallelogram law}~\ref{parallelogram_law} to the vectors $y_m - a$ and $y_n - a$ for $m$, $n \in \N$.  The uniqueness
+part is similar: apply the \emph{parallelogram law} to the vectors $b - a$ and $c - a$ where $b$ and $c$ are two vectors
+satisfying the conclusion of the theorem.  \ns
+\end{proof}
+
+\begin{exam} The vector space $\R^2$ under the uniform metric is a Banach space. To see
+that in this space the \emph{minimizing vector theorem} does not hold take $C$ to be the
+closed unit ball about the origin and $a$ to be the point~$(2,0)$.
+\end{exam}
+
+\begin{exam} The sets
+   \[ C_1 = \biggl\{f \in \fml C([0,1])\colon \int_0^{1/2}f - \int_{1/2}^1f = 1\biggr\} \qquad \text{and} \qquad
+                              C_2 = \biggl\{f \in \lfs 1([0,1],\lambda)\colon \int_0^1f = 1\biggr\} \]
+are examples that show that neither the existence nor the uniqueness claims of the \emph{minimizing vector theorem}
+necessarily holds in a Banach space. (The symbol $\lambda$ denotes Lebesgue measure.)
+\end{exam}
+
+\begin{thm}[Vector Decomposition Theorem]\label{thm_vec_decomp} Let $H$ be a Hilbert space and
+ \index{vector!decomposition theorem}%
+$M$ be a (closed linear) subspace of~$H$.
+Then for every $x \in H$ there exist unique vectors $y \in M$ and $z \in M^\perp$ such that $x = y + z$.
+\end{thm}
+
+\begin{proof}[\emph{Hint for proof}] Assume $x \notin M$ (otherwise the result is trivial). Explain how we
+know that there exists a unique vector $y \in M$ such that
+   \begin{equation} \norm{x - y} \le \norm{x - m} \end{equation}
+for all $m \in M$.  Explain why it is enough, for the existence part of the proof, to prove
+that $x - y$ is perpendicular to every \emph{unit} vector $m \in M$.  Explain why it is true
+that for every unit vector $m \in M$
+   \begin{equation} \norm{x - y}^2 \le \norm{x - (y + \lambda m)}^2 \end{equation}
+where $\lambda := \langle x - y, m \rangle$.  \ns
+\end{proof}
+
+\begin{cor} If $M$ is a subspace of a Hilbert space~$H$, then $H = M \oplus M^\perp$.
+\end{cor}
+
+\begin{exam}The preceding result says that every subspace of a Hilbert space is a direct
+summand. This result need not be true if $M$ is assumed to be just a linear subspace of the space.
+For example, notice that $M = l_c$ (see example~\ref{000213}) is a linear subspace of the
+Hilbert space $l_2$ (see example~\ref{exam150013}) but $M^\perp = \{\vc 0\}$.
+\end{exam}
+
+\begin{cor} A vector subspace $A$ of a Hilbert space $H$ is dense in $H$ if and only if $A^\perp = \{0\}$.
+\end{cor}
+
+\begin{prop} Every proper subspace of a Hilbert space has empty interior.
+\end{prop}
+
+\begin{prop} If a Hamel basis for a Hilbert space is not finite, then it is uncountable.
+\end{prop}
+
+\begin{proof}[\emph{Hint for proof}] Suppose the space has a countably infinite basis $\{e^1, e^2, e^3, \dots \}$.
+For each $n \in \N$ let $M_n = \spn\{e^1, e^2, \dots, e^n\}$.  Apply the \emph{Baire category theorem} (see~\cite{Erdman:2007},
+theorem 29.3.20) to $\bigcup_{n=1}^\infty M_n$ keeping in mind the preceding proposition.   \ns
+\end{proof}
+
+\begin{prop}\label{00023} Let $H$ be a Hilbert space. Then the following hold:
+ \begin{enumerate}
+  \item if $A \subseteq H$, then $A \subseteq A^{\perp\perp}$;
+  \item if $A \subseteq B \subseteq H$, then $B^\perp \subseteq A^\perp$;
+  \item if $M$ is a subspace of $H$, then $M = M^{\perp\perp}$; and
+  \item if $A \subseteq H$, then $\bigvee A = A^{\perp\perp}$.
+ \end{enumerate}
+\end{prop}
+
+\begin{prop} Let $M$ and $N$ be subspaces of a Hilbert space.  Then
+ \begin{enumerate}
+  \item  $(M + N)^\perp = (M \cup N)^\perp =  M^\perp \cap N^\perp$, and
+  \item  $(M \cap N)^\perp = M^\perp + N^\perp$.
+ \end{enumerate}
+\end{prop}
+
+\begin{prop} Let $V$ be a normed linear space.  There exists an inner product on $V$ which induces the norm on $V$
+if and only if the norm satisfies the \emph{parallelogram law}~\ref{parallelogram_law}.
+\end{prop}
+
+\begin{proof}[\emph{Hint for proof}]  We say that an inner product $\langle \,\cdot\,\,,\,\cdot\, \rangle$
+on $V$ induces the norm $\norm{\,\cdot\,}$ if $\norm x = \sqrt{\langle x,x \rangle}$ holds for every $x$ in $V$.)
+To prove that if a norm satisfies the \emph{parallelogram law} then it is induced by an inner product,
+use the equation in the \emph{polarization identity}~\ref{0001507} as a definition.
+Prove first that $\langle y,x \rangle = \conj{\langle x,y \rangle}$ for all $x$, $y\in V$ and that
+$\langle x,x \rangle > 0$ whenever $x \ne 0$.  Next, for arbitrary $z \in V$, define a function
+$f\colon V \sto \C\colon x \mapsto \langle x,z \rangle$.  Prove that
+   \[ f(x + y) + f(x - y) = 2f(x) \tag{$\ast$} \]
+for all $x$, $y \in V$.  Use this to prove that $f(\alpha x) = \alpha f(x)$ for all
+$x \in V$ and $\alpha \in \R$.  (Start with $\alpha$ being a natural number.)  Then
+show that $f$ is additive. (If $u$ and $v$ are arbitrary elements of $V$ let $x = u + v$
+and $y = u - v$.  Use~$(\ast)$.)  Finally prove that $f(\alpha x) = \alpha f(x)$ for
+complex $\alpha$ by showing that $f(ix) = i\,f(x)$ for all $x \in V$.  \ns
+\end{proof}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Orthonormal Sets and Bases}\label{sec_onbases}
+\begin{defn} A nonempty subset $E$ of a Hilbert space is
+ \index{orthonormal}%
+\df{orthonormal} if $e \perp f$ for every pair of distinct vectors $e$ and $f$ in $E$ and
+$\norm e = 1$ for every $e \in E$.
+\end{defn}
+
+\begin{prop} In an inner product space every orthonormal set is linearly independent.
+\end{prop}
+
+\begin{prop}[Bessel's inequality]\label{C063141} Let $H$ be a Hilbert space and $E$ be an
+ \index{Bessel's inequality}%
+orthonormal subset of~$H$.  For every $x \in H$
+  \[ \sum_{e \in E} \norm{\langle x,e \rangle}^2 \le \norm x^2\,. \]
+\end{prop}
+
+\begin{cor} If $E$ is an orthonormal subset of a Hilbert space $H$ and $x \in H$, then
+$\{e \in E\colon \langle x,e \rangle~\ne~0\}$ is countable.
+\end{cor}
+
+\begin{prop}\label{C063144} Let $E$ be an orthonormal set in a Hilbert space~$H$. Then the
+following are equivalent.
+ \begin{enumerate}
+  \item $E$ is a maximal orthonormal set.
+  \item If $x \perp E$, then $x = 0$ ($E$ is \emph{total}).
+ \index{total!orthonormal set}%
+  \item $\bigvee E = H$ ($E$ is a \emph{complete orthonormal set}).
+ \index{complete!orthonormal set}%
+  \item $\D x = \sum_{e \in E} \langle x,e \rangle e$ for all $x \in H$. \emph{(Fourier
+expansion)}
+ \index{Fourier!expansion}%
+  \item $\D \langle x,y \rangle = \sum_{e \in E} \langle x,e \rangle \langle e,y \rangle$
+for all $x,y \in H$. \emph{(Parseval's identity.)}
+ \index{Parseval's identity}%
+  \item $\D \norm{x}^2 = \sum_{e \in E} \abs{\langle x,e \rangle}^2$ for all $x \in H$.
+\emph{(Parseval's identity.)}
+ \end{enumerate}
+\end{prop}
+
+\begin{defn}\label{C063147} If $H$ is a Hilbert space, then an orthonormal set $E$ satisfying
+any one (hence all) of the conditions in proposition~\ref{C063144} is called an
+ \index{orthonormal!basis}%
+ \index{basis!orthonormal}%
+\df{orthonormal basis} for~$H$ (or a
+ \index{complete!orthonormal set}%
+ \index{orthonormal!set!complete}%
+\df{complete orthonormal set} in~$H$, or a
+ \index{Hilbert!space!basis for}%
+ \index{basis!for a Hilbert space}%
+\df{Hilbert space basis} for~$H$).  Notice that this is a very different thing from the
+usual (Hamel) basis for a vector space (see~\ref{defn_Hamel_basis}).  For a Hilbert space
+the basis vectors are required to be of length one and to be mutually perpendicular
+(conditions which make no sense in a vector space); but it is \emph{not} necessary that
+every vector in the space be a linear combination of the basis vectors.
+\end{defn}
+
+\begin{prop} If $E$ is an orthonormal subset of a Hilbert space $H$, then there exists an
+orthonormal basis for $H$ which contains~$E$.
+\end{prop}
+
+\begin{cor} Every nonzero Hilbert space has a basis.
+\end{cor}
+
+\begin{prop}  If $E$ is an orthonormal subset of a Hilbert space $H$ and $x \in H$, then
+$\{\langle x,e \rangle e: e \in E\}$ is summable.
+\end{prop}
+
+\begin{exam}\label{C063149} For each $n \in \N$ let $\vc e^n$ be the sequence in $l_2$ whose
+$n^{\text{th}}$ coordinate is $1$ and all the other coordinates are~$0$. Then $\{\vc e^n\colon n \in \N\}$
+is an orthonormal basis for~$l_2$.  This is the
+ \index{usual!orthonormal basis for~$l_2$}%
+ \index{orthonormal!basis!usual (or standard) for~$l_2$}%
+ \index{basis!standard (or usual)}%
+\df{usual} (or
+ \index{standard!orthonormal basis}%
+\df{standard}) \df{orthonormal basis} for~$l_2$.
+\end{exam}
+
+\begin{exer} A function $f\colon \R \sto \C$ of the form
+   \[ f(t) = a_0 + \sum_{k=1}^n (a_k \cos kt + b_k \sin kt) \]
+where $a_0, \dots, a_n, b_1, \dots, b_n$ are complex numbers is a
+ \index{trigonometric polynomial}%
+ \index{polynomial!trigonometric}%
+\df{trigonometric polynomial}.
+ \begin{enumerate}
+  \item Explain why complex valued $2\pi$-periodic functions on the real line $\R$ are
+often identified with complex valued functions on the unit circle~$\T$.
+  \item Some authors say that a \emph{trigonometric polynomial} is a function of the form
+    \[ f(t) = \sum_{k=-n}^n c_k e^{ikt} \]
+where $c_1, \dots, c_n$ are complex numbers. Explain carefully why this is exactly the
+same as the preceding definition.
+  \item Justify the use of the term \emph{trigonometric polynomial}.
+  \item Prove that every continuous $2\pi$-periodic function on $\R$ is the uniform limit
+of a sequence of trigonometric polynomials.
+ \end{enumerate}
+\end{exer}
+
+\begin{prop}\label{prop_unique_onbasis} Let $E$ be a basis for a Hilbert space $H$ and $x \in H$. 
+If $x = \sum_{e \in E} \alpha_e e$, then $\alpha_e = \langle x,e \rangle$ for each $e \in E$.
+\end{prop}
+
+\begin{prop} Consider the Hilbert space $\lfs 2([0,2\pi],\C)$ of (equivalence classes of complex valued,
+ \index{L@$\lfs 2([0,2\pi],\C)$}%
+square integrable functions on $[0,2\pi]$ with inner product
+  \[ \langle f,g \rangle = \frac1{2\pi}\int_0^{2\pi} f(x) \conj{g(x)}\,dx. \]
+For every integer $n$ (positive, negative, or zero) let $\vc e^n(x) = e^{inx}$ for all $x
+\in [0,2\pi]$.  Then the set of these functions $\vc e^n$ for $n \in \Z$ is an
+orthonormal basis for $\lfs 2([0,2\pi],\C)$.
+\end{prop}
+
+\begin{exam} The sum of the infinite series $\D\sum_{k=1}^\infty \frac1{k^2}$ is $\dfrac{\pi^2}6$\,.
+\end{exam}
+
+\begin{proof}[\emph{Hint for proof}]   Let $f(x) = x$ for $0 \le x \le 2\pi$.  Regard $f$ as a member of
+$\lfs 2([0,2\pi])$.  Find $\norm{f}$ in two ways.  \ns
+\end{proof}
+
+The next proposition allows us to define the notion of the \emph{dimension} of a Hilbert space.  (In finite dimensional
+spaces it agrees with the vector space concept.)
+
+\begin{prop} Any two orthonormal bases of a Hilbert space have the same cardinality (that is, they are in
+one-to-one correspondence).
+\end{prop}
+
+\begin{proof}  See \cite{Halmos:1951}, page 29, Theorem 1.   \ns
+\end{proof}
+
+\begin{defn} The
+ \index{dimension}%
+\df{dimension} of a Hilbert space is the cardinality of any orthonormal basis for the space.
+\end{defn}
+
+\begin{prop}\label{prop_Schauder_basis_Hsp} A Hilbert space is separable if and only if it has a
+ \index{separable!Hilbert space}%
+ \index{Hilbert!space!separable}%
+countable orthonormal basis.
+\end{prop}
+
+\begin{proof}  See \cite{Kreyszig:1978}, page 171, Theorem 3.6-4.   \ns
+\end{proof}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{The Riesz-Fr\'echet Theorem}
+\begin{exam}\label{000341} Let $H$ be a Hilbert space and $a \in H$.  Define $\psi_a\colon
+H \sto \C\colon x \mapsto \langle x,a \rangle$.  Then $\psi_a \in H^*$.
+\end{exam}
+
+Now we generalize theorem~\ref{0001601} to the infinite dimensional setting. This result
+is sometimes called the \emph{Riesz representation theorem} (which invites confusion with
+ \index{representation!of continuous linear functionals}%
+ \index{representation!Riesz's little theorem}%
+the more substantial result about representing  certain linear functionals as measures)
+or the \emph{little Riesz representation theorem}.  This theorem says that the \emph{only}
+continuous linear functionals on a Hilbert space are the functions $\psi_a$ defined in~\ref{000341}.
+In other words, given a continuous linear functional $f$ on a Hilbert space there is a unique vector
+$a$ in the space such that the action of $f$ on a vector $x$ can be represented simply by taking the
+inner product of $x$ with~$a$.
+
+\begin{thm}[Riesz-Fr\'echet Theorem]\label{000342} If $f \in H^*$ where $H$ is a Hilbert
+ \index{Riesz-Fr\'echet theorem}%
+space, then there exists a unique vector $a$ in $H$ such that $f = \psi_a$. Furthermore,
+$\norm a = \norm{\psi_a}$.
+\end{thm}
+
+\begin{proof}[\emph{Hint for proof}] For the case $f \ne 0$, choose a unit vector $z$ in $(\ker f)^\perp$.
+Notice that for every $x \in H$ the vector $x - \frac{f(x)}{f(z)}\,z$ belongs to $\ker f$.  \ns
+\end{proof}
+
+\begin{cor} The kernel of every nonzero bounded linear functional on a Hilbert space has codimension~$1$.
+\end{cor}
+
+\begin{proof}[\emph{Hint for proof}] The
+ \index{codimension}%
+\df{codimension} of a subspace of a Hilbert space is the dimension of its orthogonal complement.  This is really
+a corollary to the \emph{proof} of the \emph{Riesz-Fr\'echet theorem}.  In our proof we found that the vector
+representing the bounded linear functional $f$ was a (nonzero) multiple of a unit vector in $(\ker f)^\perp$.
+What would happen if there were two linearly independent vectors in $(\ker f)^\perp$?   \ns
+\end{proof}
+
+\begin{defn} Recall that a mapping $T\colon V \sto W$ between complex vector spaces is
+ \index{conjugate linear}%
+ \index{linear!conjugate}%
+\df{conjugate linear} if $T(x + y) = Tx + Ty$ and $T(\alpha x) = \conj{\alpha}\,Tx$ for all
+$x$, $y \in V$ and $\alpha \in \C$. A bijective conjugate linear map is an
+ \index{anti-isomorphism}%
+ \index{isomorphism!anti-}%
+\df{anti-isomorphism}.
+\end{defn}
+
+\begin{exam}\label{0022057} For a Hilbert space $H$, the mapping
+$\psi\colon H \sto H^*\colon a \mapsto \psi_a$ defined in example~\ref{000341} is an
+isometric anti-isomorphism between $H$ and its dual space.
+\end{exam}
+
+\begin{defn} A conjugate linear mapping $C\colon V \sto V$ from a vector space into itself
+which satisfies $C^2 = \id V$ is called a
+ \index{conjugation}
+\df{conjugation} on~$V$.
+\end{defn}
+
+\begin{exam} Complex conjugation $z \mapsto \conj z$ is an example of a conjugation in the
+vector space~$\C$.
+\end{exam}
+
+\begin{exam}\label{0022067} Let $H$ be a Hilbert space and $E$ be a basis for~$H$.  Then the
+map $x \mapsto \sum_{e \in E}\langle e,x \rangle e$ is a conjugation and an isometry on~$H$.
+\end{exam}
+
+The term ``anti-isomorphism'' is a bit misleading. It suggests something entirely
+different from an isomorphism.  In fact, an anti-isomorphism is nearly as good as an
+isomorphism. The next proposition says in essence that a Hilbert space and its dual are
+isomorphic \emph{because} they are anti-isomorphic.
+
+\begin{prop}\label{0022071} Let $H$ be a Hilbert space, $\psi\colon H \sto H^*$ be the
+anti-isomorphism defined in~\ref{000341} (see~\ref{0022057}), and $C$ be the conjugation
+defined in~\ref{0022067}. Then the composite $C \psi^{-1}$ is an isometric isomorphism
+from $H^*$ onto~$H$.
+\end{prop}
+
+\begin{cor}\label{cor_Hsp_iso_dual} Every Hilbert space is isometrically isomorphic to its dual.
+\end{cor}
+
+\begin{prop} Let $H$ be a Hilbert space and $\psi\colon H \sto H^*$ be the anti-isomorphism
+defined in~\ref{000341} (see~\ref{0022057}).  If we define $\langle f,g \rangle :=
+\langle \psi^{-1}g, \psi^{-1}f \rangle$ for all $f$, $g \in H^*$, then $H^*$ becomes a
+Hilbert space isometrically isomorphic to~$H$.  The resulting norm on $H^*$ is its usual
+norm.
+\end{prop}
+
+\begin{cor} Every Hilbert space is reflexive.
+\end{cor}
+
+\begin{exam} Let $H$ be the collection of all absolutely continuous complex
+valued functions $f$ on $[0,1]$ such that $f(0) = 0$ and $f' \in
+\lfs 2([0,1],\lambda)$.  Define an inner product on $H$ by
+ \[\langle f,g \rangle := \int_0^1 f'(t)\,\clo{g'(t)}\,dt.\]
+We already know that $H$ is a Hilbert space (see example~\ref{exam_Hsp_abs_cont})
+Fix $t \in (0,1]$.  Define
+   \[ E_t\colon H \sto \C\colon f \mapsto f(t). \]
+Then $E_t$ is a bounded linear functional on~$H$. What is its $\norm{E_t}$?
+What vector $g$ in $H$ represents the functional~$E_t$?
+\end{exam}
+
+\begin{exer} One afternoon your pal Fred R. Dimm comes to you with a problem. ``Look,'' he says,
+``On $\lfs 2 = \lfs 2(\R,\R)$ the evaluation functional $E_0$, which evaluates each member of $\lfs 2$
+at~$0$, is clearly a bounded linear functional.  So by the Riesz representation theorem there
+should be some function $g$ in $\lfs 2$ such that $f(0) = \langle f,g \rangle = \int_{-\infty}^\infty fg$
+for all $f$ in~$\lfs 2$.  But that's a property of the `$\delta$-function', which I was told
+doesn't exist.  What am I doing wrong?'' Give Freddy some (helpful) advice.
+\end{exer}
+
+\begin{exer} Later the same afternoon Freddy's back.  After considering the
+advice you gave him (in the preceding problem) he has revised his
+question by letting the domain of $E_0$ be the set of bounded
+continuous real valued functions defined on~$\R$.  Patiently you
+explain to Freddy that there are now at least two things wrong his
+invocation of the `$\delta$-function'.  What are they?
+\end{exer}
+
+\begin{exer} The nightmare continues. It's 11 P. M. and Freddy's back again.
+This time (happily having given up on $\delta$-functions) he wants
+to apply the representation theorem to the functional ``evaluation
+at zero'' on the space~$l_2(\Z)$.  Can he do it?  Explain.
+\end{exer}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Strong and Weak Topologies on Hilbert Spaces}
+We recall briefly the definition and crucial facts about \emph{weak topologies}.  For a more detailed introduction
+to this class of topologies see any good textbook on topology or section 11.4 of my notes~\cite{Erdman:2007}.
+
+\begin{defn}\label{C021414} Suppose that $S$ is a set, that for every $\alpha \in A$ (where
+$A$ is an arbitrary index set) $X_\alpha$ is a topological space, and that $f_\alpha
+\colon S \sto X_\alpha$ for every $\alpha \in A$. Let
+   \[ \sfml S = \{{f_\alpha}^\gets(U_\alpha) \colon \open{U_\alpha}{X_\alpha}
+                                             \text{ and } \alpha \in A\}\,. \]
+Use the family $\sfml S$ as a subbase for a topology on~$S$.  This topology is called the
+ \index{weak!topology!induced by a family of functions}%
+ \index{topology!weak!induced by a family of functions}%
+\df{weak topology} induced by (or determined by) the functions~$f_\alpha$.
+\end{defn}
+
+\begin{prop}\label{C021421} Under the weak topology (defined above) on a set $S$ each of the functions $f_\alpha$ is continuous;
+in fact the weak topology is  the weakest topology on
+ \index{weak!topology!characterization of}%
+ \index{topology!weak!characterization of}%
+$S$ under which these functions are continuous.
+\end{prop}
+
+\begin{prop}\label{C021424}  Let $X$ be a topological space with the weak topology determined
+by a family $\fml F$ of functions. Prove that a function $g\colon W \sto X$, where $W$ is
+a topological space, is continuous if and only if $f \circ g$ is continuous for every $f
+\in \fml F$.
+\end{prop}
+
+\begin{defn}\label{C021437}  Let $\bigl(A_\lambda\bigr)_{\lambda \in \Lambda}$ be an indexed
+family of topological spaces. The weak topology on the Cartesian product $\prod
+A_\lambda$ induced by the family of coordinate projections $\pi_\lambda$ (see
+definition~\ref{C015531}) is called the
+ \index{product!topology}%
+ \index{topology!product}%
+\df{product topology}.
+\end{defn}
+
+\begin{prop} The product of a family of Hausdorff spaces is Hausdorff.
+\end{prop}
+
+\begin{exam}\label{C031473} Let $Y$ be a topological space with the weak topology (see
+definition~\ref{C021414}) determined by an indexed family $(f_\alpha)_{\alpha \in A}$ of
+functions where for each $\alpha \in A$ the codomain of $f_\alpha$ is a topological
+space~$X_\alpha$. Then a net $\bigl(y_{{}_\lambda}\bigr)_{\lambda \in \Lambda}$ in $Y$
+converges to a point $a \in Y$ if and only if
+\mbox{$f_\alpha(y_{{}_\lambda})~\to_{\lambda \in \Lambda}~f_\alpha(a)$} for every $\alpha
+\in A$.
+\end{exam}
+
+\begin{exam}\label{C031475} If $Y = \prod_{\alpha \in A} X_\alpha$ is a product of nonempty
+topological spaces with the product topology (see definition~\ref{C021437}), then a net
+$\bigl(\sbsb y\lambda\bigr)$ in $Y$ converges to $a \in Y$ if and only if $\bigl(\sbsb
+y\lambda\bigr)_\alpha \sto a_\alpha$ for every $\alpha \in A$.
+\end{exam}
+
+\begin{exam}\label{exam_prod_top_norm} If $V$ and $W$ are normed linear spaces, then the product topology on
+$V \times W$ is the same as the topology induced by the product norm on $V \oplus W$.
+\end{exam}
+
+The next example illustrates the inadequacy of sequences when dealing with general topological spaces.
+
+\begin{exam} Let $\fml F = \fml F([0,1])$ be the set of all functions $f\colon [0,1] \sto \R$ and give
+$\fml F$ the product topology, that is, the weak topology determined by the evaluation
+functionals
+    \[ E_x\colon \fml F \sto [0,1]\colon f \mapsto f(x) \]
+where $x \in [0,1]$.  Thus a basic open neighborhood of a point $g \in \fml F$ is determined
+by a finite set of points $A \in \fin[0.1]$ and a number $\epsilon > 0$:
+  \[ U(g\,;\,A\,;\, \epsilon) := \{f \in \fml F\colon \abs{f(t) - g(t)} < \epsilon
+                           \text{ for all $t \in A$}\}. \]
+(What is usual name for this topology?) Let $\fml G$ be the set of all functions in $\fml F$
+having finite support. Then
+  \begin{enumerate}
+    \item the constant function $\vc 1$ belongs to $\clo{\fml G}$,
+    \item there is a net of functions in $\fml G$ which converges to~$\vc 1$, but
+    \item no sequence in $\fml G$ converges to~$\vc 1$.
+  \end{enumerate}
+\end{exam}
+
+\begin{defn} A net $(x_{{}_{\sst\lambda}})$ in a Hilbert space $H$ is said to
+ \index{convergence!in Hilbert space!weak}%
+ \index{weak!convergence!in Hilbert space}%
+\df{converge weakly} to a point $a$ in $H$ if $\langle x{{}_{\sst\lambda}}, y \rangle \to \langle a,y \rangle$
+for every $y \in H$. In this case we write $x_{{}_{\sst\lambda}} \to^w a$. In a Hilbert space a net is said to
+ \index{convergence!in Hilbert space!strong}%
+ \index{strong!convergence!in Hilbert space}%
+\df{converge strongly} (or
+ \index{convergence!in norm}%
+ \index{norm!convergence}%
+\df{converge in norm}) if it converges with respect to the topology induced by the norm. This is the usual type of
+convergence in a Hilbert space. If we wish to emphasize a distinction between modes of convergence we may write
+$x_{{}_{\sst\lambda}} \to^s a$ for strong convergence.
+\end{defn}
+
+\begin{exer} Explain why the topology on a Hilbert space generated by the weak convergence of nets is in fact a
+weak topology in the usual topological sense of the term.
+\end{exer}
+
+When we say that a subset of a Hilbert space $H$ is
+ \index{weak!closure}%
+ \index{closed!weakly}%
+\df{weakly closed} we mean that it is closed with respect to the weak topology on $H$; a set is
+ \index{weak!compactness}%
+ \index{compact!weakly}%
+\df{weakly compact} if it is compact in the weak topology on~$H$; and so on. A function
+$f\colon H \sto H$ is
+ \index{weak!continuity}%
+ \index{continuous!weakly}%
+\df{weakly continuous} if it is continuous as a map from $H$ with the weak topology into $H$
+with the weak topology.
+
+\begin{exer} Let $H$ be a Hilbert space and $(x_{{}_{\sst\lambda}})$ be a net in $H$.
+ \begin{enumerate}
+  \item If $x_{{}_{\sst\lambda}} \to^s  a$ in $H$, then $x_{{}_{\sst\lambda}} \to^w a$ in $H$
+  \item The strong (norm) topology on $H$ is stronger (bigger) than the weak topology.
+  \item Show by example that the converse of (a) does not hold.
+  \item Is the norm on $H$ weakly continuous?
+  \item If $x_{{}_{\sst\lambda}} \to^w  a$ in $H$ and if $\norm{x_{{}_{\sst\lambda}}} \to \norm{a}$, then
+$x_{{}_{\sst\lambda}}\to^s a$ in~$H$.
+  \item If a linear map $T\colon H \sto H$ is (strongly) continuous, then it is weakly continuous.
+ \end{enumerate}
+\end{exer}
+
+\begin{exer} Let $H$ be an infinite dimensional Hilbert space. Consider the following subsets of~$H$:
+ \begin{enumerate}[label=\rm{(\alph*)}]
+  \item the open unit ball;
+  \item the closed unit ball;
+  \item the unit sphere;
+  \item a closed linear subspace.
+ \end{enumerate}
+Determine for each of these sets whether it is each of the following: strongly closed, weakly
+closed, strongly open, weakly open, strongly compact, weakly compact.  (One part of this is
+too hard at the moment: \emph{Alaoglu's theorem}~\ref{C067441} will tell us that the
+closed unit ball is weakly compact.)
+\end{exer}
+
+\begin{exer} Let $\{e^n\colon n \in \N\}$ be the usual basis for $l_2$. For
+each $n \in \N$ let $a_n = \sqrt n\, e^n$.  Which of the following
+are correct?
+ \begin{enumerate}
+  \item $0$ is a weak accumulation point of the set
+$\{a_n\colon n \in \N\}$.
+  \item $0$ is a weak cluster point of the sequence~$(a_n)$.
+  \item $0$ is the weak limit of a subsequence of~$(a_n)$.
+ \end{enumerate}
+\end{exer}
+
+
+
+
+
+
+
+
+
+
+\section{Universal Morphisms}
+Much of mathematics involves the construction of new objects from old ones---things such
+as products, coproducts, quotients, completions, compactifications, and unitizations.
+Often it is possible---and highly desirable---to characterize such a construction by
+means of a diagram which describes what the constructed object ``does'' rather than
+telling what it ``is'' or how it is constructed.  Such a diagram is a
+ \index{universal!mapping!diagram}%
+ \index{mapping!universal}%
+\df{universal mapping diagram} and it describes the
+ \index{universal!mapping!property}%
+ \index{mapping!diagram!universal}%
+\df{universal property} of the object being constructed.
+In particular it is usually possible to characterize such a construction by the existence
+of a unique morphism having some particular property. Because this morphism and its
+corresponding property uniquely characterize the construction in question, they are referred to as a
+\emph{universal morphism} and a \emph{universal property}, respectively. The following definition
+is one way of describing the action of such a morphism.  If this is your first meeting with the
+concept of \emph{universal} don't be alarmed by its rather abstract nature.  Few people, I think,
+feel comfortable with this definition until they have encountered a half dozen or more examples in
+different contexts.  (There exist even more technical definitions for this important concept. For
+example, \emph{an initial or terminal object in a comma category}. To unravel this, if you are
+interested, search for ``universal property'' in Wikipedia~\cite{wiki:xxx}.)
+
+\begin{defn}\label{00078} Let $\cat A \to^{\ftr{F}} \cat B$ be a functor between categories
+$\cat A$ and $\cat B$ and $B$ be an object in~$\cat B$.  A pair $(A,u)$ with $A$ an
+object in $\cat A$ and $u$ a $\cat B$-morphism from $B$ to~$\ftr F(A)$ is a
+ \index{universal!morphism}%
+ \index{morphism!universal}%
+\df{universal morphism} for $B$ (with respect to the functor~$\ftr F$) if for every
+object $A'$ in $\cat A$ and every $\cat B$-morphism $B \to^f \ftr F(A')$ there exists a
+unique $\cat A$-morphism $A \to^{\tilde f} A'$ such that the following diagram commutes.
+ \begin{equation}\label{00078i}
+   \xy
+     \qtriangle/{>}`{>}`{-->}/[B`\ftr F(A)`\ftr F(A');u`f`\ftr F(\tilde f)]
+     \morphism(1000,500)|r|/{-->}/<0,-500>[A`A';\tilde f]
+   \endxy
+ \end{equation}
+In this context the object $A$ is often referred to as a
+ \index{universal!object}%
+ \index{object!universal}%
+\df{universal object} in~$\cat A$.
+\end{defn}
+
+Here is a first example of such a property.
+
+\begin{defn} Let $F$ be an object in a concrete category $\cat C$ and
+$\iota\colon S \sto \abs F$ be an inclusion map whose domain is a nonempty set~$S$.  We say that the
+object $F$ is
+ \index{free!object}%
+ \index{object!free}%
+\df{free on} the set $S$ (or that $F$ is the \df{free object generated by}~$S$) if for
+every object $A$ in $\cat C$ and every map $f\colon S \sto \abs A$ there exists a unique
+morphism $\widetilde f_\iota\colon F \sto A$ in $\cat C$ such that $\abs{\wt f_\iota}
+\circ \iota = f$.
+ \[\xy
+     \qtriangle/{>}`{>}`{-->}/[S`\abs F`\abs A;\iota`f`\abs{\wt f_\iota}]
+     \morphism(1000,500)|r|/{-->}/<0,-500>[F`A;\widetilde f_\iota]
+   \endxy\]
+We will be interested in
+ \index{free!vector space}%
+ \index{vector!space!free}%
+\df{free vector spaces}; that is, free objects in the category $\cat{VEC}$ of vector
+spaces and linear maps.  Naturally, merely \emph{defining} a concept does not guarantee
+its existence. It turns out, in fact, that free vector spaces exist on arbitrary sets.
+(See exercise~\ref{ump001z}.)
+\end{defn}
+
+\vskip 5 pt
+
+\begin{exer} In the preceding definition reference to the forgetful functor is often
+omitted and the accompanying diagram is often drawn as follows:
+ \[\xy
+     \qtriangle/{>}`{>}`{-->}/[S`F`A;\iota`f`\wt f_\iota]
+   \endxy\]
+It certainly looks a lot simpler.  Why do you suppose I opted for the more complicated
+version?
+\end{exer}
+
+\vskip 5 pt
+
+\begin{prop} If two objects in some concrete category are free on the same set,
+then they are isomorphic.
+\end{prop}
+
+\vskip 5 pt
+
+\begin{defn} Let $A$ be a subset of a nonempty set~$S$ and $\K$ be either $\R$ or~$\C$. Define
+$\sbsb\chi A \colon S \sto \K$, the
+ \index{characteristic!function}%
+ \index{<@$\sbsb{\chi}{A}$ (characteristic function of $A$)}%
+ \index{function!characteristic}%
+\df{characteristic function} of~$A$, by
+  \[ \sbsb{\chi}{A}(x) = \begin{cases}
+                                  1, &\text{if $x \in A$} \\
+                                  0, &\text{otherwise}
+                              \end{cases} \]
+\end{defn}
+
+\begin{exam}\label{ump001z} If $S$ is an arbitrary nonempty set,
+then there exists a vector space $V$ over~$\K$ which is free on~$S$.  This vector space
+is unique (up to isomorphism).
+\end{exam}
+
+\begin{proof}[\emph{Hint for proof}] Given the set $S$ let $V$ be the set of all
+$\K$-valued functions on $S$ which have finite support. Define addition and scalar
+multiplication pointwise. The map $\iota\colon s \mapsto \sbsb \chi {\{s\}}$ of each
+element $s \in S$ to the characteristic function of~$\{s\}$ is the desired injection. To
+verify that $V$ is free over $S$ it must be shown that for every vector space $W$ and
+every function \hbox{$S~\to^{f}~\abs W$} there exists a unique linear map $V \to^{\wt f}
+W$ which makes the following diagram commute.
+ \[\xy
+ \index{l@$l_2 = l_2(\N)$!square summable sequences}%
+ \index{l@$l_2 = l_2(\N)$!as an inner product space}%
+ \index{inner product!space!$l_2$ as a}%
+     \qtriangle/{>}`{>}`{-->}/[S`\abs V`\abs W;\iota`f`\abs{\wt f}]
+     \morphism(1100,500)|r|/{-->}/<0,-500>[V`W;\wt f]
+   \endxy\]
+\ns \end{proof}
+
+\begin{prop} Every vector space is free.
+\end{prop}
+
+\begin{proof}[\emph{Hint for proof}] Of course, part of the problem is to specify a set
+$S$ on which the given vector space is free. \ns
+\end{proof}
+
+
+\begin{exam} Let $S$ be a nonempty set and let $S' = S \cup \{\vc 1\}$ where $\vc 1$ is any
+element not belonging to~$S$.  A
+ \index{word}%
+\df{word} in the language~$S$ is a sequence $s$ of elements of $S'$ which is eventually
+$\vc 1$ and satisfies: if $s_k = \vc 1$, then $s_{k+1} = \vc 1$.  The constant sequence
+$(\vc 1, \vc 1, \vc 1, \dots)$ is called the
+ \index{empty word}%
+ \index{word!empty}%
+\df{empty word}. Let $F$ be the set of all words of members in the language~$S$. Suppose
+that $s = (s_1, \dots, s_m, \vc 1, \vc 1, \dots)$ and $t = (t_1, \dots, t_n, \vc 1, \vc
+1, \dots)$ are words (where $s_1$, \dots, $s_m$, $t_1$, \dots, $t_n \in S$).  Define
+   \[ x \ast y := (s_1, \dots, s_m, t_1, \dots, t_n, \vc 1, \vc 1, \dots). \]
+This operation is called
+ \index{concatenation}%
+\df{concatenation}. It is not difficult to see that the set $F$ under concatenation is a
+ \index{monoid}%
+monoid (a semigroup with identity) where the empty word is the identity element.  This is the
+ \index{free!monoid}%
+ \index{monoid!free}%
+\df{free monoid} generated by~$S$.  If we exclude the empty word we have the
+ \index{free!semigroup}%
+ \index{semigroup!free}%
+\df{free semigroup} generated by~$S$. The associated diagram is
+ \[\xy
+     \qtriangle/{>}`{>}`{-->}/[S`\abs F`\abs G;\iota`f`\abs{\tilde f}]
+     \morphism(1100,500)|r|/{-->}/<0,-500>[F`G;\tilde f]
+   \endxy\]
+where $\iota$ is the obvious injection $s \mapsto (s,\vc1, \vc 1, \dots)$ (usually
+treated as an inclusion mapping), $G$ is an arbitrary semigroup, $f\colon S \sto G$ is an
+arbitrary function, and $\abs{\hphantom{O}}$ is the forgetful functor from the category of monoids and
+homomorphisms (or the category of semigroups and homomorphisms) to the category
+$\cat{SET}$.
+\end{exam}
+
+\begin{exam} Recall from definition~\ref{C015611} the usual presentation of the coproduct of two objects in a category. If
+$A_1$ and $A_2$ are two objects in a category $\cat C$, then a
+ \index{coproduct}%
+\df{coproduct} of $A_1$ and $A_2$ is a triple $(Q,\iota_1,\iota_2)$ with $Q$ an object in
+$\cat C$ and $A_k \to^{\iota_k} Q$ ($k = 1,2$) morphisms in $\cat C$ which satisfies the
+following condition: if $B$ is an arbitrary object in $\cat C$ and $A_k \to^{f_k} B$ ($k
+= 1$,$2$) are arbitrary morphisms in~$\cat C$, then there exists a unique $\cat C$-morphism
+$Q \to^f B$ which makes the following diagram commute.
+  \begin{equation}
+    \xy
+      \Atrianglepair/<-`<-`<-`>`<-/[B`A_1`Q`A_2;f_1`f`f_2`\iota_1`\iota_2]
+    \endxy
+   \end{equation}
+
+It may not be obvious at first glance that this construction is \emph{universal} in the
+sense of definition~\ref{00078}.  To see that it in fact is, let $\ftr D$ be the diagonal
+functor from a category $\cat C$ to the category of pairs $\cat{C^2}$ (see
+example~\ref{0007606}). Suppose that $(Q,\iota_1,\iota_2)$ is a coproduct of the $\cat
+C$-objects $A_1$ and $A_2$ in the sense defined above.  Then $A = (A_1,A_2)$ is an object
+in $\cat{C^2}$, $A \to^{\iota} \ftr D(Q)$ is a $\cat{C^2}$-morphism, and the pair
+$(A,\iota)$ is universal in the sense of~\ref{00078}.  The diagram corresponding to
+diagram~\eqref{00078i} is
+ \begin{equation}
+   \xy
+     \qtriangle/{>}`{>}`{-->}/[A`\ftr D(Q)`\ftr D(B);\iota`f`\ftr D(\tilde f)]
+     \morphism(1000,500)|r|/{-->}/<0,-500>[Q`B;\tilde f]
+   \endxy
+ \end{equation}
+where $B$ is an arbitrary object in $\cat C$ and (for $k = 1,2$) $A_k \to^{f_k} B$ are
+arbitrary $\cat C$-morphisms so that $f = (f_1,f_2)$ is a $\cat{C^2}$-morphism.
+\end{exam}
+
+\begin{exam} The coproduct of two objects $H$ and $K$ in the category $\cat{HIL}$ of
+ \index{coproduct!in $\cat{HIL}$}%
+ \index{hil@$\cat{HIL}$!coproducts in}%
+Hilbert spaces and bounded linear maps (and more generally in the category of inner
+product spaces and linear maps) is their (external orthogonal) direct sum $H \oplus K$
+(see~\ref{0001504}).
+\end{exam}
+
+
+\begin{exam}\label{00078036} Let $A$ and $B$ be Banach spaces. On the Cartesian
+ \index{coproduct!in $\cat{BAN_\infty}$}%
+ \index{ban@$\cat{BAN_\infty}$!coproducts in}%
+product $A \times B$ define addition and scalar multiplication pointwise. For every
+$(a,b) \in A \times B$ let $\norm{(a,b)} = \max\{\norm a,\norm b\}$. This makes $A \times
+B$ into a Banach space, which is denoted by $A \oplus B$ and is called the
+ \index{direct!sum!of Banach spaces}%
+\df{direct sum} of $A$ and~$B$.  The direct sum is a coproduct in the topological
+category $\cat{BAN_\infty}$ of Banach spaces but not in the corresponding geometrical
+category~$\cat{BAN_1}$.
+\end{exam}
+
+\begin{exam}\label{00078037} To construct a coproduct on the geometrical category
+ \index{coproduct!in $\cat{BAN_1}$}%
+ \index{ban@$\cat{BAN_1}$!coproducts in}%
+$\cat{BAN_1}$ of Banach spaces define the vector space operations pointwise on $A \times
+B$ but as a norm use $\norm{(a,b)}_1 = \norm a + \norm b$ for all $(a,b) \in A \times B$.
+\end{exam}
+
+Virtually everything in category theory has a dual concept---one that is obtained by
+reversing all the arrows. We can, for example, reverse all the arrows in
+diagram~\eqref{00078i}.
+
+
+\begin{defn}\label{000781} Let $\cat A \to^{\ftr{F}} \cat B$ be a functor between categories
+$\cat A$ and $\cat B$ and $B$ be an object in~$\cat B$.  A pair $(A,u)$ with $A$ an
+object in $\cat A$ and $u$ a $\cat B$-morphism from $\ftr F(A)$ to~$B$  is a
+ \index{co-universal!morphism}%
+ \index{morphism!co-universal}%
+\df{co-universal morphism for $B$ (with respect to}~$\ftr F$) if for every object $A'$ in
+$\cat A$ and every $\cat B$-morphism $\ftr F(A') \to^f B$ there exists a unique $\cat
+A$-morphism $A' \to^{\tilde f} A$ such that the following diagram commutes.
+ \begin{equation}\label{000781i}
+   \xy
+     \qtriangle/{<-}`{<-}`{<--}/[B`\ftr F(A)`\ftr F(A');u`f`\ftr F(\tilde f)]
+     \morphism(1000,500)|r|/{<--}/<0,-500>[A`A';\tilde f]
+   \endxy
+ \end{equation}
+Some authors reverse the convention and call the morphism in~\ref{00078}
+\emph{co-universal} and the one here \emph{universal}.  Other authors, this one included,
+call both \emph{universal morphisms}.
+\end{defn}
+
+\begin{conv} Morphisms of both the types defined in~\ref{00078} and~\ref{000781} will
+ \index{conventions!about universality}%
+be referred to as \emph{universal morphisms}.
+\end{conv}
+
+\begin{exam}\label{0007812} Recall from definition~\ref{C015511} the categorical approach to products.  If
+$A_1$ and $A_2$ are two objects in a category $\cat C$, then a
+ \index{product}%
+\df{product} of $A_1$ and $A_2$ is a triple $(P,\pi_1,\pi_2)$ with $P$ an object in $\cat
+C$ and $Q \to^{\iota_k} A_k$ ($k = 1,2$) morphisms in $\cat C$ which satisfies the
+following condition: if $B$ is an arbitrary object in $\cat C$ and $B \to^{f_k} A_k$ ($k
+= 1,2$) are arbitrary morphisms in~$\cat C$, then there exists a unique $\cat C$-morphism
+$B \to^f P$ which makes the following diagram commute.
+  \begin{equation}
+    \xy
+      \Atrianglepair/>`>`>`<-`>/[B`A_1`P`A_2;f_1`f`f_2`\pi_1`\pi_2]
+    \endxy
+   \end{equation}
+This is (co)-universal in the sense of definition~\ref{000781}.
+\end{exam}
+
+\begin{exam} The product of two objects $H$ and $K$ in the category $\cat{HIL}$ of
+ \index{product!in $\cat{HIL}$}%
+ \index{hil@$\cat{HIL}$!products in}%
+Hilbert spaces and bounded linear maps (and more generally in the category of inner
+product spaces and linear maps) is their (external orthogonal) direct sum $H \oplus K$
+(see~\ref{0001504}).
+\end{exam}
+
+
+\begin{exam} If $A$ and $B$ are Banach algebras their direct sum $A \oplus B$ is a
+ \index{product!in $\cat{BA_\infty}$}%
+ \index{ba@$\cat{BA_\infty}$!products in}%
+ \index{product!in $\cat{BA_1}$}%
+ \index{ba@$\cat{BA_1}$!products in}%
+product in both the topological and geometric categories, $\cat{BA_\infty}$ and
+$\cat{BA_1}$, of Banach algebras.  Compare this to the situation discussed in
+examples~\ref{00078036} and~\ref{00078037}.
+\end{exam}
+
+Universal constructions in any category whatever produce objects that are unique up to isomorphism.
+
+\begin{prop}\label{C035562} Universal objects in a category are
+ \index{universal!object!uniqueness of}%
+essentially unique.
+\end{prop}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Completion of an Inner Product Space}
+A little review of the topic of completion of metric spaces may be useful here.  Occasionally
+it may be tempting to think that the completion of a metric space $M$ is a complete metric space
+of which some dense subset is homeomorphic to $M$.  The problem with this characterization is that
+it may very well produce two ``completions'' of a metric space which are not even homeomorphic.
+
+\begin{exam} Let $M$ be the interval $(0,\infty)$ with its usual metric. There exist two complete
+metric spaces $N_1$ and $N_2$ such that
+  \begin{enumerate}
+    \item $N_1$ and $N_2$ are \emph{not} homeomorphic,
+    \item $M$ is homeomorphic to a dense subset of $N_1$, and
+    \item $M$ is homeomorphic to a dense subset of~$N_2$.
+  \end{enumerate}
+\end{exam}
+
+Here is the correct definition.
+
+\begin{defn}\label{C035511} Let $M$ and $N$ be metric spaces.  We say that $N$ is a
+ \index{completion!of a metric space}%
+ \index{metric!space!completion of a}%
+\df{completion} of $M$ if $N$ is complete and $M$ is isometric to a dense subset of~$N$.
+\end{defn}
+
+In the construction of the real numbers from the rationals one approach is to treat the
+set of rationals as a metric space and define the set of reals to be its completion. One
+standard way of producing the completion involves equivalence classes of Cauchy sequences
+of rational numbers. This technique extends to metric spaces: an elementary way of
+completing an arbitrary metric space starts with defining an equivalence relation on the
+set of Cauchy sequences of elements of the space.  Here is a slightly less elementary but
+considerably simpler approach.
+
+\begin{prop} Every metric space $M$ is isometric to subspace of~$\fml B(M)$.
+\end{prop}
+
+\begin{proof}[\emph{Hint for proof}] If $(M,d)$ is a metric space fix $a \in M$. For each
+$x \in M$ define $\phi_x\colon M \sto \R$ by $\phi_x(u) = d(x,u) - d(u,a)$.  Show first
+that $\phi_x \in \fml B(M)$ for every $x \in M$.  Then show that $\phi\colon M \sto \fml
+B(M)$ is an isometry. \ns
+\end{proof}
+
+\begin{cor}\label{C035521} Every metric space has a completion.
+\end{cor}
+
+The next proposition shows that the completion of a metric space is universal in the sense of
+definition~\ref{00078}.  In this result the categories of interest are the category of all metric spaces
+and uniformly continuous maps and its subcategory consisting of all complete metric spaces and uniformly
+continuous maps.  Here the forgetful functor $\abs{\hphantom{O}}$ forgets only about completeness of objects
+(and does not alter morphisms).
+
+\begin{prop}\label{C035557} Let $M$ be a metric space and $\clo M$ be its completion. If $N$
+is a complete metric space and $f\colon M \sto N$ is uniformly continuous, then there
+exists a unique uniformly continuous function $\clo f\colon \clo M \sto N$ which makes
+the following diagram commute.
+ \[\xy
+     \qtriangle/{>}`{>}`{-->}/[M`\abs{\clo M}`\abs N;\iota`f`\abs{\clo f}]
+     \morphism(1100,500)|r|/{-->}/<0,-500>[\clo M`N;\clo f]
+   \endxy\]
+\end{prop}
+
+The following consequence of propositions~\ref{C035557} and~\ref{C035562} allows us to
+speak of \emph{the} completion of a metric space.
+
+\begin{cor}\label{C035564} Metric space completions are unique (up to isometry).
+\end{cor}
+
+Now, what about the completion of inner product spaces?  As we have seen, every inner product space is a
+metric space; so it has a (metric space) completion.  The question is: Is this completion a Hilbert space?
+The answer is, happily, \emph{yes}.
+
+\begin{thm} Let $V$ be an inner product space and $H$ be its metric space completion.  Then there exists
+an inner product on $H$ which
+  \begin{enumerate}
+    \item is an extension of the one on~$V$ and
+    \item induces the metric on~$H$.
+  \end{enumerate}
+\end{thm}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\endinput

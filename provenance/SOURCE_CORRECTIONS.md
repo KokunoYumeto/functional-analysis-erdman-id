@@ -129,3 +129,67 @@ language audit: `tutupan`, `mempertahankan norma`, functional
 `perpanjangan`, `kekontinuan`, Hausdorff uniqueness, coproduct phrasing,
 interior/tutupan definitions, and isolated Indonesian grammar. Those
 translation choices do not alter source mathematics.
+
+## Chapter 4
+
+The following source candidates have been adjudicated, applied, and
+mechanically rechecked in `source/id-ID/Hilbert_spaces-id.tex`; identifiers,
+citations, diagram grammar, and source order otherwise remain unchanged.
+
+1. `Hilbert_spaces.tex:49`: take the supremum over `x in X`, not over the
+   unrelated interval `[0,1]`, in the uniform norm on `C(X)`.
+2. `Hilbert_spaces.tex:220`: use `x_{n_{j-1}}`, not the expression with the
+   unbound index `i`, in the telescoping subsequence difference.
+3. `Hilbert_spaces.tex:282`: repair the English article naturally in the
+   Indonesian sentence; no mathematical surface changes.
+4. `Hilbert_spaces.tex:286`: correct the index-key spelling of `orthogonal` and
+   translate its reader-facing text.
+5. `Hilbert_spaces.tex:380--381`: use plural agreement for the two claims,
+   expressed naturally in Indonesian.
+6. `Hilbert_spaces.tex:403`: restore the missing token boundary after the
+   example environment opening.
+7. `Hilbert_spaces.tex:432--436`: close the right-hand side of
+   `(M cap N)^perp = M^perp + N^perp`; the sum of two closed subspaces need not
+   be closed.
+8. `Hilbert_spaces.tex:443--444`: remove the unmatched closing parenthesis at
+   the end of the norm-induction sentence.
+9. `Hilbert_spaces.tex:560--563`: quantify all coefficients
+   `c_{-n},...,c_n`, not only `c_1,...,c_n`, for the displayed trigonometric
+   polynomial.
+10. `Hilbert_spaces.tex:728--729`: supply the missing sentence-ending period
+    before the evaluation-functional construction.
+11. `Hilbert_spaces.tex:747--748`: restore the missing relation in “wrong with
+    his invocation,” expressed naturally in Indonesian.
+12. `Hilbert_spaces.tex:847`: type the evaluation functional into `R`, not
+    `[0,1]`, because the function family is real-valued.
+13. `Hilbert_spaces.tex:849`: correct the finite-subset interval from `[0.1]`
+    to `[0,1]`.
+14. `Hilbert_spaces.tex:852`: supply the missing article in the parenthetical
+    question, expressed naturally in Indonesian.
+15. `Hilbert_spaces.tex:959`: retain the resolving bibliography key
+    `wiki:xxx` and the source's search suggestion, but keep its mutable target
+    and placeholder-like key recorded as a citation-quality warning.
+16. `Hilbert_spaces.tex:1002`: call `ump001z` the following example, not an
+    exercise; the label belongs to an `exam` environment.
+17. `Hilbert_spaces.tex:1049--1051`: move the three misplaced `l_2` index hooks
+    from the free-vector-space diagram to the Chapter 4 `l_2` discussion,
+    retaining all three hooks rather than silently dropping them.
+18. `Hilbert_spaces.tex:1074--1076`: define concatenation as `s ast t`, using
+    the words introduced immediately before it, rather than undefined `x,y`.
+19. `Hilbert_spaces.tex:1118--1119`: identify `(Q,iota)` as the universal pair;
+    `Q` is the source-category object in the stated universal morphism.
+20. `Hilbert_spaces.tex:1169`: include `F` within the defined-term boundary for
+    “co-universal morphism for B (with respect to F).”
+21. `Hilbert_spaces.tex:1188--1200`: use the declared product object and maps
+    `P ->^{pi_k} A_k`, not the coproduct variables `Q,iota_k`.
+22. `Hilbert_spaces.tex:1275`: supply the missing article in “a subspace,”
+    expressed naturally in Indonesian.
+
+The cumulative Chapter 1--4 reader also renders the intentional future
+reference `C067441` as `\futurexref{6.2.9}{C067441}`. This preserves the exact
+label target and the official printed theorem number while avoiding a broken
+link until Chapter 6 enters the reader.
+
+No upstream contact occurs during production. These entries are held for the
+single deduplicated post-corpus report only if that report is separately
+authorized.

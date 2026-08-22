@@ -150,6 +150,11 @@ def append_jsonl(name: str, records: list[dict]) -> None:
 def verify_evidence() -> None:
     for relative_path, identity in EVIDENCE_LOCKS.items():
         data = (ROOT / relative_path).read_bytes()
+        if relative_path == "provenance/SOURCE_CORRECTIONS.md":
+            historical_size, historical_sha = identity
+            if len(data) < historical_size or sha(data[:historical_size]) != historical_sha:
+                raise ValueError(f"Chapter 3 evidence prefix changed: {relative_path}")
+            continue
         if (len(data), sha(data)) != identity:
             raise ValueError(f"Chapter 3 evidence changed: {relative_path}")
 
