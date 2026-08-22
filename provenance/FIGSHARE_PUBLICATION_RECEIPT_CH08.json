@@ -1,0 +1,126 @@
+{
+  "schema_version": "o008.figshare-publication-receipt.v1",
+  "recorded_date": "2026-08-22",
+  "release_boundary": "FAOA-2015-CH01-through-CH08",
+  "edition_state": "in_progress_chapters_1_8_of_17",
+  "canonical_release": {
+    "repository": "Zenodo",
+    "record_url": "https://zenodo.org/records/22059740",
+    "version_doi": "10.5281/zenodo.22059740",
+    "concept_doi": "10.5281/zenodo.22059739",
+    "license": "CC BY-SA 4.0",
+    "version": "2026.08.22-ch08",
+    "files": [
+      {
+        "filename": "analisis-fungsional-dan-aljabar-operator-id-bab-1-8.pdf",
+        "bytes": 1593249,
+        "sha256": "fb6488691e2127bc0b8e3f94f38033eb3bdbe0c61efedc66c07de8f3b3444fbd"
+      },
+      {
+        "filename": "functional-analysis-erdman-id-2026.08.22-ch08-source-backend.zip",
+        "bytes": 36171230,
+        "sha256": "c7f9ba81b17c9ee2924feaf82ff49a2df5164559cfbe77a4a656065576b5648e"
+      },
+      {
+        "filename": "SHA256SUMS.txt",
+        "bytes": 290,
+        "sha256": "890a6e391b8648bbbd80a7c474028c46e1d06616f2fbf204cd3c7b3bd57120bc"
+      }
+    ]
+  },
+  "license_route": {
+    "required_release_license": "CC BY-SA 4.0",
+    "figshare_available_license_names": [
+      "CC BY 4.0",
+      "CC0",
+      "MIT",
+      "GPL",
+      "GPL 2.0+",
+      "GPL 3.0+",
+      "Apache 2.0"
+    ],
+    "exact_release_license_available": false,
+    "decision": "Publish a CC0 metadata/link record with zero release files; do not substitute a false license or mirror the CC BY-SA 4.0 bytes on Figshare.",
+    "cc0_scope": "Figshare metadata/link record only"
+  },
+  "figshare_article": {
+    "article_id": 33314709,
+    "title": "Analisis Fungsional dan Aljabar Operator: Suatu Pengantar — Edisi Bahasa Indonesia (rekaman metadata)",
+    "defined_type": "online resource",
+    "status": "public",
+    "version": 1,
+    "doi": "10.6084/m9.figshare.33314709.v1",
+    "public_url": "https://figshare.com/articles/online_resource/Analisis_Fungsional_dan_Aljabar_Operator_Suatu_Pengantar_Edisi_Bahasa_Indonesia_rekaman_metadata_/33314709",
+    "public_api_url": "https://api.figshare.com/v2/articles/33314709",
+    "published_date_utc": "2026-08-22T17:54:30Z",
+    "license": "CC0",
+    "file_count": 0,
+    "project_id": 280296,
+    "project_url": "https://figshare.com/projects/Open_and_Share-Alike_Educational_Materials_Translations/280296",
+    "project_membership_anonymously_verified": true,
+    "description_checks": {
+      "metadata_link_only_visible": true,
+      "eight_of_seventeen_scope_visible": true,
+      "chapters_9_17_pending_visible": true,
+      "accessible_html_pending_visible": true,
+      "canonical_zenodo_doi_visible": true,
+      "three_file_names_sizes_hashes_visible": true,
+      "erdman_attribution_visible": true,
+      "translation_change_disclosure_visible": true,
+      "non_endorsement_visible": true
+    }
+  },
+  "figshare_collection": {
+    "collection_id": 8668413,
+    "title": "Indonesian Open Mathematics Editions",
+    "concept_doi": "10.6084/m9.figshare.c.8668413",
+    "transaction_readback_version": 5,
+    "transaction_readback_doi": "10.6084/m9.figshare.c.8668413.v5",
+    "transaction_readback_published_date_utc": "2026-08-22T17:55:48Z",
+    "transaction_readback_article_count": 5,
+    "later_independent_readback_version": 7,
+    "later_independent_readback_doi": "10.6084/m9.figshare.c.8668413.v7",
+    "later_independent_readback_published_date_utc": "2026-08-22T17:57:42Z",
+    "later_independent_readback_article_count": 7,
+    "later_independent_readback_membership_verified": true,
+    "association_method": "additive POST; no replacement of existing collection members",
+    "article_membership_anonymously_verified": true,
+    "collection_publish_http_status": 201,
+    "shared_collection_note": "The public collection was changing concurrently. This receipt claims only the additive association of article 33314709 and its presence in immutable public versions 5 and 7; it does not attribute other collection changes to O008."
+  },
+  "anonymous_readback": {
+    "article_api_bytes": 5015,
+    "article_api_sha256": "385c1b5651cd858d576e250c19f79a12afc15bfe14e7c65e1bbd38e73023ee86",
+    "project_articles_api_bytes": 4713,
+    "project_articles_api_sha256": "bcf62dad7675ce7b540e69e6273f788c373c5777cee30f89c6f2c6d2c7e1cdfe",
+    "collection_api_bytes": 1589,
+    "collection_api_sha256": "343b1649c2320e5919bfcc37a16cf643fe4b3f924d42ff80239a262e784f6644",
+    "collection_articles_api_bytes": 4607,
+    "collection_articles_api_sha256": "16c98b0e446a98623f4e8c46d9b49ac5a781ee97cf011b5a5972728c33d6ee37",
+    "independent_collection_v7_api_url": "https://api.figshare.com/v2/collections/8668413/versions/7?resource_doi=10.6084%2Fm9.figshare.c.8668413.v7",
+    "independent_collection_v7_api_bytes": 1589,
+    "independent_collection_v7_api_sha256": "b5a30f3b951dc9bcc3fd57c166d523f5176dae2ac83a12ffef8b5fa64b9bad9b",
+    "independent_collection_v7_articles_capture_bytes": 6319,
+    "independent_collection_v7_articles_capture_sha256": "676207d27a5f02be88c4cd0e3426199efc3c0068586a4167866aefd6ee769f50",
+    "article_doi_http_status": 202,
+    "article_doi_effective_url": "https://figshare.com/articles/online_resource/Analisis_Fungsional_dan_Aljabar_Operator_Suatu_Pengantar_Edisi_Bahasa_Indonesia_rekaman_metadata_/33314709/1",
+    "datacite_article_state": "findable",
+    "datacite_collection_version_doi": "10.6084/m9.figshare.c.8668413.v7",
+    "datacite_collection_state": "findable",
+    "all_required_checks_pass": true
+  },
+  "verification": {
+    "article_publish_http_status": 201,
+    "collection_association_http_status": 201,
+    "collection_publish_http_status": 201,
+    "public_article_readback": true,
+    "public_project_membership_readback": true,
+    "public_collection_membership_readback": true,
+    "independent_zenodo_three_file_stream_readback": true,
+    "independent_zenodo_file_mismatches": 0,
+    "false_license_substitution": false,
+    "release_bytes_uploaded_to_figshare": false,
+    "credential_material_recorded": false,
+    "result": "pass"
+  }
+}
