@@ -1,0 +1,57 @@
+{
+  "schema_version": "o008.github-publication-receipt.v1",
+  "recorded_date": "2026-08-22",
+  "repository": "https://github.com/KokunoYumeto/functional-analysis-erdman-id",
+  "branch": "main",
+  "content_commit": "07945cb9682b57f8200bdcf096c5d092f81f75b2",
+  "content_tree": "a5da21aba51c100e29080d0f415e9c03ed35f916",
+  "push_result": "success",
+  "remote_main_after_push": "07945cb9682b57f8200bdcf096c5d092f81f75b2",
+  "boundary": "one-time Indonesian terminology QA passed; Chapter 10 inventory translation-ready",
+  "reader_change": "none",
+  "reader_republication": "not_required_at_metadata_only_boundary",
+  "public_readback": {
+    "transport": "anonymous HTTPS from raw.githubusercontent.com at immutable content commit",
+    "result": "pass",
+    "files": [
+      {
+        "path": "README.md",
+        "bytes": 4701,
+        "sha256": "cfb593f52b153c94df1b698ea311427ab325d32b497a629203c82042673642e3"
+      },
+      {
+        "path": "backend/terminology_qa.jsonl",
+        "bytes": 9232,
+        "sha256": "0be61180b43ca8e314bc3323696a0836ed82f505153444373584d1ac640cc3c8"
+      },
+      {
+        "path": "backend/BACKEND_MANIFEST.csv",
+        "bytes": 2834,
+        "sha256": "13b5cd1f5e5cfb59717bfd74e42048095bcfba95fcfb4981dfa2717c2da3621d"
+      },
+      {
+        "path": "qa/terminology_evidence/undip-jfma-2020-dunford/TERMINOLOGY_QA_REPORT.md",
+        "bytes": 9317,
+        "sha256": "c7618249a3d9f273044a408e44438e2db710d5b5f46856ea5280bf247583858d"
+      },
+      {
+        "path": "qa/terminology_evidence/undip-jfma-2020-dunford/jfma-v3n1-7874.pdf",
+        "bytes": 1007587,
+        "sha256": "6bc61be69f974e1598ec168504aa7b1925cf55a75dfc15100139bfcd586b0ff8"
+      },
+      {
+        "path": "provenance/CH10_SOURCE_INVENTORY.json",
+        "bytes": 15690,
+        "sha256": "b8d73079421a3d132a2e375cf2605297a9f4a68123e9394ab86cba035e8ab76d"
+      },
+      {
+        "path": "provenance/INDONESIAN_TERMINOLOGY_QA_RECEIPT_20260822.md",
+        "bytes": 4507,
+        "sha256": "49a373c5c41cc82c665c456925649254885eb07ee35ec3730538cf2057c4dea3"
+      }
+    ]
+  },
+  "model_provenance": "OpenAI Codex gpt-5.6-sol, Ultra",
+  "upstream_contact": "none",
+  "credential_material_present": false
+}
