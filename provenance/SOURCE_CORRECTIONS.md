@@ -351,3 +351,56 @@ remain exact `futurexref` endpoints until those chapters enter the reader.
 No upstream contact occurs during production. These entries are held for the
 single deduplicated post-corpus report only if that report is separately
 authorized.
+
+## Chapter 7
+
+The following source candidates are adjudicated and applied in
+`source/id-ID/compact_operators-id.tex`. The target preserves the complete
+ordered environment, label, reference, citation, exercise, proof, hint, index,
+defined-term, and formula topology except for the explicitly classified
+corrections and reader-facing localizations locked by
+`qa/check_ch07_translation.py`.
+
+1. `compact_operators.tex:22--26`: retain both proposition environments exactly
+   as published, while repairing the first copy's “its is complete” wording
+   naturally in Indonesian. The duplicate remains visible because deleting it
+   would change source topology.
+2. `compact_operators.tex:117`: supply the missing article in “k be
+   square-integrable function,” expressed naturally in Indonesian.
+3. `compact_operators.tex:127--129`: close the parenthetical reference to the
+   earlier example.
+4. `compact_operators.tex:137`: use `\ofml K(B)`, matching the Banach space
+   introduced by the example, rather than the undefined `\ofml K(H)`.
+5. `compact_operators.tex:162--165`: remove the duplicated “that” construction
+   naturally in Indonesian without changing the assertion.
+6. `compact_operators.tex:299`: remove the stray closing parenthesis following
+   the definition of the final space.
+7. `compact_operators.tex:397--400`: require `\alpha\ge 0` in the homogeneity
+   formula. At this point the trace has been defined only for positive
+   operators, so arbitrary `\alpha\in\K` would take `\alpha T` outside the
+   stated domain.
+8. `compact_operators.tex:422`: use `e^k=Uf^k`, not `e^k=Tf^k`; the preceding
+   sentence introduces `U` as the unique unitary carrying one orthonormal basis
+   to the other.
+9. `compact_operators.tex:425--430`: replace both instances of “is” by “if” in
+   the defining conditions for a cone and a proper cone.
+10. `compact_operators.tex:436--437`: bind the separable Hilbert space as `H`
+    before the example forms the operator algebra `\ofml B(H)`.
+11. `compact_operators.tex:497`: insert the missing comma in
+    `\{e_1, \dots, e_n\}`.
+
+The opening reference to the end of Chapter 5 is intentional and remains
+unchanged: Chapter 7 resumes the operator-theoretic work after the intervening
+Banach-space foundations in Chapter 6. The cumulative reader now resolves the
+earlier Chapter 5 reference `chap_cpt_ops` normally. The three genuine later
+references remain exact, honest pending endpoints:
+`\futurexref{12.3.16}{00152171}`,
+`\futurexref{12.3.17}{00152181}`, and
+`\futurexref{11.5.7}{X_sqroot_op}`. TeX-only `\allowbreak` opportunities in
+the long citation-only polar-decomposition proof are a layout reflow, not a
+source correction; they remove a measured 2.28432-point overfull line without
+changing visible content.
+
+No upstream contact occurs during production. These entries are held for the
+single deduplicated post-corpus report only if that report is separately
+authorized.

@@ -1,11 +1,10 @@
 #!/usr/bin/env python3
-"""Append deterministic Chapter 6 backend records after locked Chapters 1--5.
+"""Append deterministic Chapter 7 backend records after locked Chapters 1--6.
 
-Chapter 1--5 projections are immutable byte prefixes. Chapter 6 is admitted:
-its source/target checker, deterministic build, public reader/render evidence,
-formal visual/accessibility audit, rights/privacy closure, and admission
-receipt are all hash-bound while semantic accessibility remediation remains a
-nonblocking edition-level deliverable.
+Chapter 7 has a frozen complete translation, append-only source-correction
+ledger, passed reader evidence, and an exact admission receipt.  This generator
+records the admitted locale-neutral source/target topology while preserving the
+honest edition-level accessibility and publication limitations.
 """
 
 from __future__ import annotations
@@ -34,125 +33,107 @@ import check_ch06_translation as ch06check  # noqa: E402
 
 
 common = ch06check.common
-SOURCE_PATH = ROOT / "source" / "upstream" / "Banach_spaces.tex"
-TARGET_PATH = ROOT / "source" / "id-ID" / "Banach_spaces-id.tex"
+SOURCE_PATH = ROOT / "source" / "upstream" / "compact_operators.tex"
+TARGET_PATH = ROOT / "source" / "id-ID" / "compact_operators-id.tex"
 SOURCE_ENCODING = "ascii"
 TARGET_ENCODING = "utf-8"
 SCHEMA = "interlanguage-modular-math"
 VERSION = "0.1.0"
 EDITION = "ERDMAN-FAOA-2015"
 TARGET_EDITION = "ERDMAN-FAOA-2015-ID"
-CHAPTER_ID = "FAOA-2015-CH06"
+CHAPTER_ID = "FAOA-2015-CH07"
 RIGHTS = "RIGHTS-ERDMAN-CC-BY-SA-4.0"
-ADMISSION_QA_ID = "QA-CH06-ADMISSION-20260822"
+ADMISSION_QA_ID = "QA-CH07-ADMISSION-20260822"
 
-# Frozen source/target and currently available cumulative evidence.
-SOURCE_SIZE = 79_549
-SOURCE_LINES = 1_605
-SOURCE_SHA = "0f401d088ec3e2d3f2ca4dafa2595a7f0049193a097b6b27af7b247fd433df51"
-TARGET_SIZE = 82_940
-TARGET_LINES = 1_569
-TARGET_SHA = "ca32547e4b47af3444d454476beac71ad8870e88b436dc008e1cb5dbb6755e9c"
-MASTER_SIZE = 9_660
+SOURCE_SIZE = 21_755
+SOURCE_LINES = 517
+SOURCE_SHA = "a1f55b061f526f3e536e5a812f073781777b6f990b662f4a1dba07475152d663"
+TARGET_SIZE = 22_735
+TARGET_LINES = 517
+TARGET_SHA = "8e68cf72e711ac95569883cf64a8f1f6a89ee43a1f85f5319fec6cb54b4f787a"
+
+MASTER_PATH = "source/id-ID/functional-analysis-id-through-ch07.tex"
+MASTER_SIZE = 9_691
 MASTER_LINES = 333
-MASTER_SHA = "92ab981f81488472f2c45271727b6652bfa62227533107725bff08f4416e738a"
-PDF_SIZE = 1_468_946
-PDF_PAGES = 114
-PDF_SHA = "93cfdf76515205ca259c91537a58cfa2b0ae7cab67e4b1b818ac9f5784aaa55c"
-CHECKER_SIZE = 15_728
-CHECKER_SHA = "88412b9799d25e3342894dfb2ecba7e3a90d59232c837ef6d0913689c6778391"
-BUILD_LOG_SIZE = 46_285
-BUILD_LOG_SHA = "d3f234b73aa71121a463b752dd68fa558309ad2056df31d956c2e060814bfeef"
-LEDGER_SIZE = 20_716
-LEDGER_SHA = "7de8a5892b865af84c9f5d1d4c37ec6b3112b3e099685dae243108006dc94b01"
-LEDGER_PRIOR_SIZE = 16_450
-LEDGER_PRIOR_SHA = "2408e045efb307602fbe8540efcb6307944d01d7ace610d78e4341856a0e35b7"
-LEDGER_SECTION_SIZE = 4_266
-LEDGER_SECTION_SHA = "51c26be9d5346ced5707d0ce91e2ed27f313c60666aab81155dafd572cde2118"
-BUILD_PDF_PATH = "qa/build-through-ch06-a/functional-analysis-id-through-ch06.pdf"
-BUILD_LOG_PATH = "qa/build-through-ch06-a/functional-analysis-id-through-ch06.log"
-FINAL_PDF_PATH = "output/pdf/analisis-fungsional-dan-aljabar-operator-id-bab-1-6.pdf"
-RENDER_MANIFEST_PATH = "provenance/CH06_RENDER_MANIFEST.csv"
-RENDER_MANIFEST_SIZE = 22_218
-RENDER_MANIFEST_SHA = "ba63bc106be574414792ac6bc37b76483a01491822fca4745962e8ff9e407db8"
-CONTACT_SHEET_PATH = "provenance/CH06_CONTACT_SHEET.png"
-CONTACT_SHEET_SIZE = 3_339_772
-CONTACT_SHEET_SHA = "1b5aaad85c2c13651c51d92d6452eb21fca892b641abe87c3991e95bc4f1bedf"
-AUDIT_PATH = "qa/CH06_FINAL_PDF_VISUAL_ACCESSIBILITY_AUDIT.md"
-AUDIT_SIZE = 5_197
-AUDIT_SHA = "3da448996dba97de722ccc48eaa7590a5a9d2f462dcaa4766aecd153139d528b"
-RECEIPT_PATH: str | None = "provenance/CH06_BUILD_AND_QA_RECEIPT.md"
-RECEIPT_SIZE: int | None = 9_867
-RECEIPT_LINES = 178
-RECEIPT_SHA: str | None = "acc110923270c2918ca7aa1a6a2c839ae4c99504133e60c20d44a906b5830293"
+MASTER_SHA = "c639253fab59df7b51002058b414d8d64c92d77f12e95e88068decafd0d138b9"
+FINAL_PDF_PATH = "output/pdf/analisis-fungsional-dan-aljabar-operator-id-bab-1-7.pdf"
+PDF_SIZE = 1_530_677
+PDF_PAGES = 121
+PDF_SHA = "a7ddaef324bd356d258cb47195f524e027ba54a696cb8d38a8358bb8d0a2d7ff"
+CHECKER_PATH = "qa/check_ch07_translation.py"
+CHECKER_SIZE = 21_468
+CHECKER_LINES = 535
+CHECKER_SHA = "392d2842c99fd1a54faaf671b2256ef41a896335edd2c2fe5d973f13d63e1363"
+RENDER_MANIFEST_PATH = "provenance/CH07_RENDER_MANIFEST.csv"
+RENDER_MANIFEST_SIZE = 23_608
+RENDER_MANIFEST_ROWS = 121
+RENDER_MANIFEST_SHA = "b2fa453d7b96b51826aadddf2e8151144d6deae1d093dfa34841ab589ef464ed"
+CONTACT_SHEET_PATH = "provenance/CH07_CONTACT_SHEET.png"
+CONTACT_SHEET_SIZE = 3_549_427
+CONTACT_SHEET_SHA = "b52f348c29cdaa1cebd87c280ac0c01fad919e72a8f595ba2c48cb78ac283564"
+AUDIT_PATH = "qa/CH07_FINAL_PDF_VISUAL_ACCESSIBILITY_AUDIT.md"
+AUDIT_SIZE = 6_182
+AUDIT_LINES = 110
+AUDIT_SHA = "c71c7b9bce1133d7c10bab8cf2e3bb4c310a8ceb701672ced87bbd6a412012f5"
+RECEIPT_PATH = "provenance/CH07_BUILD_AND_QA_RECEIPT.md"
+RECEIPT_SIZE = 9_855
+RECEIPT_LINES = 181
+RECEIPT_SHA = "8c9e7afa90c27a748de6b2f44c1725ed467ba7f8e4f3960a0009459a25b0b525"
 
+LEDGER_PATH = "provenance/SOURCE_CORRECTIONS.md"
+LEDGER_SIZE = 23_661
+LEDGER_SHA = "285f20b012926002bb9085dab91b06cee3e0808bf7881b598a276c643ad8eea7"
+LEDGER_PRIOR_SIZE = 20_716
+LEDGER_PRIOR_SHA = "7de8a5892b865af84c9f5d1d4c37ec6b3112b3e099685dae243108006dc94b01"
+LEDGER_SECTION_SIZE = 2_945
+LEDGER_SECTION_SHA = "9f262ed1003bf8824a0485c68caf117170458fb27651491a86d7b911797a4c6d"
+
+PUBLIC_EVIDENCE_LOCKS = {
+    "source/id-ID/compact_operators-id.tex": (TARGET_SIZE, TARGET_SHA),
+    MASTER_PATH: (MASTER_SIZE, MASTER_SHA),
+    FINAL_PDF_PATH: (PDF_SIZE, PDF_SHA),
+    CHECKER_PATH: (CHECKER_SIZE, CHECKER_SHA),
+    RENDER_MANIFEST_PATH: (RENDER_MANIFEST_SIZE, RENDER_MANIFEST_SHA),
+    CONTACT_SHEET_PATH: (CONTACT_SHEET_SIZE, CONTACT_SHEET_SHA),
+    AUDIT_PATH: (AUDIT_SIZE, AUDIT_SHA),
+    RECEIPT_PATH: (RECEIPT_SIZE, RECEIPT_SHA),
+}
+
+# Exact canonical Chapter 1--6 byte prefixes.  Chapter 7 may only append.
 PREFIX_LOCKS = {
-    "semantic_units.jsonl": (510448, "566655e3f1a662b94156a4316d2915f9d332948e60ab7f6ee337ebdc1d1287ce"),
-    "segments.jsonl": (584376, "8e474b281db34de922c5fddb017ab6229bba5f6538acf1170c63ef382e854ade"),
-    "relations.jsonl": (679917, "d0bc5aecb93cdef3b0c8b8727f2b4414187119d45b6cee7fbe1c4cce8168c0ef"),
-    "formula_map.jsonl": (2482098, "4864f830135cb60bd00144eae55e5d93f093cd3c6c01ad2474d092faa77ed22e"),
-    "exercise_support.jsonl": (13689, "5f77abb0d5b396a3e747d5906a750acac1b0c200c3858aeebc93581f487a704b"),
-    "index_terms.csv": (257545, "99e0e2354f6866448f1b9e0c1bc5ea8357bfa130e8fad72efb7a2dddf30ad1c6"),
-    "artifacts.jsonl": (18795, "cdb9459ce39642e8a9199c7a16e2e8bcb9e368722e187e01c13103cb5302f7fa"),
-    "qa_events.jsonl": (28862, "fc69b8098bd3acd909e665a17ec40b7a20208fe14d74e8ac7b84dba0845033c8"),
-    "corrections.jsonl": (63360, "770b70c91d7dd85801059e4add075961270689f94a63fa96b1c2ae753461f275"),
-    "terminology.jsonl": (57228, "255890655e18f76ca4df8d3a9e02180b8fa99aa51129b3c9e73290b75f8f3a21"),
+    "semantic_units.jsonl": (650_244, "2fa15e508b1aa18e707484b7c5109b643900dcc8f59f4dae1e8543b0159c4ed2"),
+    "segments.jsonl": (747_490, "7f65fe4d47ffdbb902235ad1fbb8c574c51b8f2154ab8e02564cf1a00aba39d3"),
+    "relations.jsonl": (905_248, "6716f53995ec4da47e68bef0dde091820f9968e7a486bdda15a924fe91870e7e"),
+    "formula_map.jsonl": (3_243_961, "82e264d01ce8174973eb19b2079ac69ed613af36984ed967beb0ab5ca2f9b0fe"),
+    "exercise_support.jsonl": (17_083, "f13f4e3f23495100508057b19e4e49fc6674f3a7126a13e50d804165d3a284f1"),
+    "index_terms.csv": (298_201, "5a3630fc62e82ef04ca2c6ae58b500b1881b0b607c5c5540ca30ccda1e3080fe"),
+    "artifacts.jsonl": (24_928, "a09bfa4b671574a140652d5ae5a7a67d9b63a50622a71bc72347c00e4412e199"),
+    "qa_events.jsonl": (38_259, "9e65e57fdbcc2b566c63bfc8c2683d3b08418c9c36512d1ccf0f887c4daf50d6"),
+    "corrections.jsonl": (80_587, "ad8e7a2d8837f09182ccedc5a875bef0b7285b5fa3e6ddab64c8252b6cbe37b4"),
+    "terminology.jsonl": (71_021, "e82539683deb4d4ab46c5f0e1f3613ede9ba9cc7fb4b0700f08673108b2f653a"),
 }
 UNIT_PREFIX_LOCK = (
-    6_179,
-    "06bd36d86a525d3e0669081e2a3b9a41e6ea826ac21317778028eab55f5402d7",
+    7_621,
+    "30d340d0d1070d18d8999ab929c36234b89ef7b762e04b185631e4ad3d0f6d0f",
 )
 UNIT_SUFFIX_LOCK = (
     5_070,
     "85461fc1bc771ed2b472f63a50424c51a12da34faa5336a26fb7ae658c74101a",
 )
 
-PUBLIC_EVIDENCE_LOCKS = {
-    "source/id-ID/Banach_spaces-id.tex": (TARGET_SIZE, TARGET_SHA),
-    "source/id-ID/functional-analysis-id-through-ch06.tex": (MASTER_SIZE, MASTER_SHA),
-    "qa/check_ch06_translation.py": (CHECKER_SIZE, CHECKER_SHA),
-    FINAL_PDF_PATH: (PDF_SIZE, PDF_SHA),
-    RENDER_MANIFEST_PATH: (RENDER_MANIFEST_SIZE, RENDER_MANIFEST_SHA),
-    CONTACT_SHEET_PATH: (CONTACT_SHEET_SIZE, CONTACT_SHEET_SHA),
-    AUDIT_PATH: (AUDIT_SIZE, AUDIT_SHA),
-    "provenance/SOURCE_CORRECTIONS.md": (LEDGER_SIZE, LEDGER_SHA),
-}
-LOCAL_EVIDENCE_LOCKS = {
-    BUILD_PDF_PATH: (PDF_SIZE, PDF_SHA),
-    BUILD_LOG_PATH: (BUILD_LOG_SIZE, BUILD_LOG_SHA),
-}
-
 
 def sha(data: bytes) -> str:
     return hashlib.sha256(data).hexdigest()
-
-
-def receipt_bound() -> bool:
-    values = (RECEIPT_PATH, RECEIPT_SIZE, RECEIPT_SHA)
-    return all(value is not None for value in values)
-
-
-def admission_fields() -> dict[str, object]:
-    fields: dict[str, object] = {
-        "qa_receipt_id": ADMISSION_QA_ID,
-        "receipt_document_state": "present" if receipt_bound() else "pending",
-    }
-    if receipt_bound():
-        fields |= {
-            "receipt_path": RECEIPT_PATH,
-            "receipt_sha256": RECEIPT_SHA,
-        }
-    return fields
 
 
 def locked_prefix(name: str) -> bytes:
     size, expected_sha = PREFIX_LOCKS[name]
     data = (BACKEND / name).read_bytes()
     if len(data) < size:
-        raise ValueError(f"{name} is shorter than its locked Chapter 1--5 prefix")
+        raise ValueError(f"{name} is shorter than its locked Chapter 1--6 prefix")
     prefix = data[:size]
     if sha(prefix) != expected_sha or not prefix.endswith(b"\n"):
-        raise ValueError(f"{name} Chapter 1--5 prefix changed")
+        raise ValueError(f"{name} Chapter 1--6 prefix changed")
     return prefix
 
 
@@ -166,33 +147,47 @@ def append_jsonl(name: str, records: list[dict]) -> None:
 
 
 def verify_evidence() -> None:
+    source = SOURCE_PATH.read_bytes()
+    target = TARGET_PATH.read_bytes()
+    if (len(source), len(source.splitlines()), sha(source)) != (
+        SOURCE_SIZE,
+        SOURCE_LINES,
+        SOURCE_SHA,
+    ):
+        raise ValueError("Chapter 7 source authority changed")
+    if (len(target), len(target.splitlines()), sha(target)) != (
+        TARGET_SIZE,
+        TARGET_LINES,
+        TARGET_SHA,
+    ):
+        raise ValueError("Chapter 7 target candidate changed")
     for relative_path, (size, expected_sha) in PUBLIC_EVIDENCE_LOCKS.items():
         data = (ROOT / relative_path).read_bytes()
-        if relative_path == "provenance/SOURCE_CORRECTIONS.md":
-            if len(data) < size or sha(data[:size]) != expected_sha:
-                raise ValueError("Chapter 6 correction-ledger prefix changed")
-            if sha(data[:LEDGER_PRIOR_SIZE]) != LEDGER_PRIOR_SHA:
-                raise ValueError("Chapter 1--5 correction-ledger prefix changed")
-            section = data[LEDGER_PRIOR_SIZE:LEDGER_SIZE]
-            if (
-                len(section) != LEDGER_SECTION_SIZE
-                or not section.startswith(b"## Chapter 6\n")
-                or sha(section) != LEDGER_SECTION_SHA
-            ):
-                raise ValueError("Chapter 6 correction-ledger section changed")
-            continue
         if (len(data), sha(data)) != (size, expected_sha):
-            raise ValueError(f"Chapter 6 evidence changed: {relative_path}")
-    for relative_path, (size, expected_sha) in LOCAL_EVIDENCE_LOCKS.items():
-        data = (ROOT / relative_path).read_bytes()
-        if (len(data), sha(data)) != (size, expected_sha):
-            raise ValueError(f"Chapter 6 fixed-path build evidence changed: {relative_path}")
-    if receipt_bound():
-        data = (ROOT / str(RECEIPT_PATH)).read_bytes()
-        if (len(data), sha(data)) != (RECEIPT_SIZE, RECEIPT_SHA):
-            raise ValueError("Chapter 6 admission receipt changed")
-        if data.count(b"\n") != RECEIPT_LINES or b"\r" in data:
-            raise ValueError("Chapter 6 admission receipt line-ending closure changed")
+            raise ValueError(f"Chapter 7 evidence changed: {relative_path}")
+    if len((ROOT / MASTER_PATH).read_bytes().splitlines()) != MASTER_LINES:
+        raise ValueError("Chapter 7 cumulative master line count changed")
+    if len((ROOT / CHECKER_PATH).read_bytes().splitlines()) != CHECKER_LINES:
+        raise ValueError("Chapter 7 checker line count changed")
+    if len((ROOT / AUDIT_PATH).read_bytes().splitlines()) != AUDIT_LINES:
+        raise ValueError("Chapter 7 audit line count changed")
+    receipt = (ROOT / RECEIPT_PATH).read_bytes()
+    if len(receipt.splitlines()) != RECEIPT_LINES or receipt.count(b"\n") != RECEIPT_LINES:
+        raise ValueError("Chapter 7 admission receipt line count changed")
+    if len((ROOT / RENDER_MANIFEST_PATH).read_bytes().splitlines()) != RENDER_MANIFEST_ROWS + 1:
+        raise ValueError("Chapter 7 render-manifest row count changed")
+    ledger = (ROOT / LEDGER_PATH).read_bytes()
+    if len(ledger) < LEDGER_SIZE or sha(ledger[:LEDGER_SIZE]) != LEDGER_SHA:
+        raise ValueError("Chapter 7 correction-ledger prefix changed")
+    if sha(ledger[:LEDGER_PRIOR_SIZE]) != LEDGER_PRIOR_SHA:
+        raise ValueError("Chapter 1--6 correction-ledger prefix changed")
+    section = ledger[LEDGER_PRIOR_SIZE:LEDGER_SIZE]
+    if (
+        len(section) != LEDGER_SECTION_SIZE
+        or not section.startswith(b"\n## Chapter 7\n")
+        or sha(section) != LEDGER_SECTION_SHA
+    ):
+        raise ValueError("Chapter 7 correction-ledger section changed")
 
 
 def unit_boundaries() -> tuple[bytes, bytes]:
@@ -204,48 +199,41 @@ def unit_boundaries() -> tuple[bytes, bytes]:
         raise ValueError("units.jsonl ordered unit closure changed")
     if [json.loads(line)["id"] for line in lines] != expected_ids:
         raise ValueError("units.jsonl ordered unit IDs changed")
-    prefix = b"".join(lines[:5])
-    middle = lines[5]
-    suffix = b"".join(lines[6:])
-    later_suffix = b"".join(lines[7:])
+    prefix = b"".join(lines[:6])
+    middle = lines[6]
+    suffix = b"".join(lines[7:])
     if (len(prefix), sha(prefix)) != UNIT_PREFIX_LOCK:
-        raise ValueError("units.jsonl Chapter 1--5 prefix changed")
-    if json.loads(lines[6]).get("id") != "FAOA-2015-CH07":
-        raise ValueError("units.jsonl Chapter 7 boundary changed")
-    if (len(later_suffix), sha(later_suffix)) != UNIT_SUFFIX_LOCK:
+        raise ValueError("units.jsonl Chapter 1--6 prefix changed")
+    if (len(suffix), sha(suffix)) != UNIT_SUFFIX_LOCK:
         raise ValueError("units.jsonl Chapter 8--bridge suffix changed")
     if json.loads(middle).get("id") != CHAPTER_ID:
-        raise ValueError("units.jsonl Chapter 6 replacement boundary changed")
+        raise ValueError("units.jsonl Chapter 7 replacement boundary changed")
     return prefix, suffix
 
 
-def chapter_six_unit() -> dict:
-    state = "admitted" if receipt_bound() else "complete_pending_admission"
+def chapter_seven_unit() -> dict:
     return {
         "schema": SCHEMA,
         "schema_version": VERSION,
         "record_type": "unit",
         "id": CHAPTER_ID,
         "edition_id": EDITION,
-        "order": 6,
-        "source_path": "Banach_spaces.tex",
+        "order": 7,
+        "source_path": "compact_operators.tex",
         "source_bytes": SOURCE_SIZE,
         "source_lines": SOURCE_LINES,
         "source_sha256": SOURCE_SHA,
-        "source_title": "BANACH SPACES",
-        "target_path": "source/id-ID/Banach_spaces-id.tex",
+        "source_title": "COMPACT OPERATORS",
+        "target_path": "source/id-ID/compact_operators-id.tex",
         "target_bytes": TARGET_SIZE,
         "target_lines": TARGET_LINES,
         "target_sha256": TARGET_SHA,
-        "target_title": "Ruang Banach",
+        "target_title": "Operator Kompak",
         "course_role": "d20_core",
-        "translation_state": state,
-        "qa_state": (
-            "passed" if receipt_bound()
-            else "structural_math_language_build_passed_visual_rights_admission_pending"
-        ),
-        "source_corrections": 20,
-        "build_master_path": "source/id-ID/functional-analysis-id-through-ch06.tex",
+        "translation_state": "admitted",
+        "qa_state": "passed",
+        "source_corrections": 11,
+        "build_master_path": MASTER_PATH,
         "build_master_bytes": MASTER_SIZE,
         "build_master_lines": MASTER_LINES,
         "build_master_sha256": MASTER_SHA,
@@ -254,7 +242,10 @@ def chapter_six_unit() -> dict:
         "artifact_pages": PDF_PAGES,
         "artifact_sha256": PDF_SHA,
         "artifact_state": "canonical_output_copy_present_and_fixed_path_gate_passed",
-        **admission_fields(),
+        "qa_receipt_id": ADMISSION_QA_ID,
+        "receipt_document_state": "present",
+        "receipt_path": RECEIPT_PATH,
+        "receipt_sha256": RECEIPT_SHA,
         "publication_state": "pending",
         "rights_id": RIGHTS,
     }
@@ -263,44 +254,49 @@ def chapter_six_unit() -> dict:
 def rewrite_units() -> None:
     prefix, suffix = unit_boundaries()
     encoded = (
-        json.dumps(chapter_six_unit(), ensure_ascii=False, separators=(",", ":")) + "\n"
+        json.dumps(chapter_seven_unit(), ensure_ascii=False, separators=(",", ":"))
+        + "\n"
     ).encode("utf-8")
     (BACKEND / "units.jsonl").write_bytes(prefix + encoded + suffix)
 
 
 def artifact_records() -> list[dict]:
-    common_fields = {
+    fields = {
         "schema": SCHEMA,
         "schema_version": VERSION,
         "record_type": "artifact",
         "unit_id": CHAPTER_ID,
-        **admission_fields(),
+        "qa_receipt_id": ADMISSION_QA_ID,
+        "receipt_document_state": "present",
+        "receipt_path": RECEIPT_PATH,
+        "receipt_sha256": RECEIPT_SHA,
     }
     return [
-        common_fields
+        fields
         | {
-            "id": "ARTIFACT-FAOA-ID-CH06-TARGET-TEX",
+            "id": "ARTIFACT-FAOA-ID-CH07-TARGET-TEX",
             "artifact_kind": "admitted_translation_source",
-            "path": "source/id-ID/Banach_spaces-id.tex",
+            "path": "source/id-ID/compact_operators-id.tex",
             "bytes": TARGET_SIZE,
             "lines": TARGET_LINES,
             "sha256": TARGET_SHA,
             "locale": "id-ID",
+            "admission_state": "admitted",
         },
-        common_fields
+        fields
         | {
-            "id": "ARTIFACT-FAOA-ID-THROUGH-CH06-MASTER",
+            "id": "ARTIFACT-FAOA-ID-THROUGH-CH07-MASTER",
             "artifact_kind": "cumulative_TeX_master",
-            "path": "source/id-ID/functional-analysis-id-through-ch06.tex",
+            "path": MASTER_PATH,
             "bytes": MASTER_SIZE,
             "lines": MASTER_LINES,
             "sha256": MASTER_SHA,
             "cumulative_through_unit_id": CHAPTER_ID,
             "locale": "id-ID",
         },
-        common_fields
+        fields
         | {
-            "id": "ARTIFACT-FAOA-ID-THROUGH-CH06-PDF",
+            "id": "ARTIFACT-FAOA-ID-THROUGH-CH07-PDF",
             "artifact_kind": "canonical_cumulative_reader_pdf",
             "path": FINAL_PDF_PATH,
             "bytes": PDF_SIZE,
@@ -310,32 +306,33 @@ def artifact_records() -> list[dict]:
             "locale": "id-ID",
             "pdf_lang": "id-ID",
             "fixed_path_replays_byte_identical": True,
-            "fixed_path_build_path": BUILD_PDF_PATH,
+            "fixed_path_build_path": "qa/build-through-ch07-a/functional-analysis-id-through-ch07.pdf",
             "final_output_copy_state": "present_byte_identical",
             "publication_state": "pending",
         },
-        common_fields
+        fields
         | {
-            "id": "ARTIFACT-FAOA-ID-CH06-STRUCTURAL-CHECKER",
+            "id": "ARTIFACT-FAOA-ID-CH07-STRUCTURAL-CHECKER",
             "artifact_kind": "structural_math_language_checker",
-            "path": "qa/check_ch06_translation.py",
+            "path": CHECKER_PATH,
             "bytes": CHECKER_SIZE,
+            "lines": CHECKER_LINES,
             "sha256": CHECKER_SHA,
         },
-        common_fields
+        fields
         | {
-            "id": "ARTIFACT-FAOA-ID-CH06-RENDER-MANIFEST",
+            "id": "ARTIFACT-FAOA-ID-CH07-RENDER-MANIFEST",
             "artifact_kind": "visual_QA_render_manifest",
             "path": RENDER_MANIFEST_PATH,
             "bytes": RENDER_MANIFEST_SIZE,
             "sha256": RENDER_MANIFEST_SHA,
-            "rows": PDF_PAGES,
+            "rows": RENDER_MANIFEST_ROWS,
             "render_pages": PDF_PAGES,
             "uniform_pixel_dimensions": "1275x1650",
         },
-        common_fields
+        fields
         | {
-            "id": "ARTIFACT-FAOA-ID-CH06-CONTACT-SHEET",
+            "id": "ARTIFACT-FAOA-ID-CH07-CONTACT-SHEET",
             "artifact_kind": "visual_QA_contact_sheet",
             "path": CONTACT_SHEET_PATH,
             "bytes": CONTACT_SHEET_SIZE,
@@ -343,12 +340,13 @@ def artifact_records() -> list[dict]:
             "visual_pages": PDF_PAGES,
             "all_pages_inspected": True,
         },
-        common_fields
+        fields
         | {
-            "id": "ARTIFACT-FAOA-ID-CH06-VISUAL-ACCESSIBILITY-AUDIT",
+            "id": "ARTIFACT-FAOA-ID-CH07-VISUAL-ACCESSIBILITY-AUDIT",
             "artifact_kind": "visual_accessibility_audit",
             "path": AUDIT_PATH,
             "bytes": AUDIT_SIZE,
+            "lines": AUDIT_LINES,
             "sha256": AUDIT_SHA,
             "visual_result": "pass",
             "accessibility_gate_result": "pass",
@@ -357,9 +355,9 @@ def artifact_records() -> list[dict]:
             "accessibility_remediation_state": "pending_nonblocking",
             "accessible_html_or_tagged_pdf_state": "pending",
         },
-        common_fields
+        fields
         | {
-            "id": "ARTIFACT-FAOA-ID-CH06-QA-RECEIPT",
+            "id": "ARTIFACT-FAOA-ID-CH07-QA-RECEIPT",
             "artifact_kind": "admission_receipt",
             "path": RECEIPT_PATH,
             "bytes": RECEIPT_SIZE,
@@ -367,18 +365,18 @@ def artifact_records() -> list[dict]:
             "sha256": RECEIPT_SHA,
             "decision": "admitted",
         },
-        common_fields
+        fields
         | {
-            "id": "ARTIFACT-FAOA-ID-CH06-CORRECTIONS-LEDGER",
+            "id": "ARTIFACT-FAOA-ID-CH07-CORRECTIONS-LEDGER",
             "artifact_kind": "source_corrections_ledger",
-            "path": "provenance/SOURCE_CORRECTIONS.md",
+            "path": LEDGER_PATH,
             "bytes": LEDGER_SIZE,
             "sha256": LEDGER_SHA,
             "prior_prefix_bytes": LEDGER_PRIOR_SIZE,
             "prior_prefix_sha256": LEDGER_PRIOR_SHA,
             "chapter_section_bytes": LEDGER_SECTION_SIZE,
             "chapter_section_sha256": LEDGER_SECTION_SHA,
-            "chapter_correction_count": 20,
+            "chapter_correction_count": 11,
         },
     ]
 
@@ -386,118 +384,76 @@ def artifact_records() -> list[dict]:
 def correction_records() -> list[dict]:
     specifications: list[tuple[str, str, str]] = [
         (
-            "Banach_spaces.tex:16,60--62,330,403,423,496,502,684,797,909,912,932,1055,1171",
-            "source_language_and_punctuation",
-            "Repair comma and parenthesis defects, typos, token boundaries, articles, conjunctions, and punctuation naturally in Indonesian.",
+            "compact_operators.tex:22--26",
+            "duplicate_environment_source_language",
+            "Preserve both published proposition environments while repairing the first copy's malformed wording naturally in Indonesian.",
         ),
         (
-            "Banach_spaces.tex:128",
-            "future_reference_resolution",
-            r"Render the Chapter 11 endpoint as \futurexref{11.2.20}{000731}.",
+            "compact_operators.tex:117",
+            "missing_article",
+            "Supply the missing article before the square-integrable-function phrase naturally in Indonesian.",
         ),
         (
-            "Banach_spaces.tex:213--214",
-            "annihilator_empty_subset",
-            "Use a subset-of-zero right-hand side in both annihilator biconditionals.",
+            "compact_operators.tex:127--129",
+            "unclosed_parenthesis",
+            "Close the parenthetical reference to the earlier example.",
         ),
         (
-            "Banach_spaces.tex:275",
-            "weak_star_convergence_wording",
-            "State weak-star convergence with the intended pointwise-evaluation wording.",
+            "compact_operators.tex:137",
+            "undefined_compact_operator_space",
+            r"Use \ofml K(B), matching the Banach space introduced by the example, rather than undefined \ofml K(H).",
         ),
         (
-            "Banach_spaces.tex:303--305",
-            "alaoglu_dual_ball",
-            "State Alaoglu's theorem for the closed unit ball of the dual space V*.",
+            "compact_operators.tex:162--165",
+            "duplicated_conjunction",
+            "Remove the duplicated 'that' construction naturally in Indonesian.",
         ),
         (
-            "Banach_spaces.tex:396",
-            "unbound_sequence_term",
-            "Replace the unbound w_o token by w_0.",
+            "compact_operators.tex:299",
+            "stray_parenthesis",
+            "Remove the stray closing parenthesis following the definition of the final space.",
         ),
         (
-            "Banach_spaces.tex:407--410",
-            "category_index",
-            "Replace BAN_1 by BAN_infty in the category notation and index entry.",
+            "compact_operators.tex:397--400",
+            "positive_scalar_domain",
+            r"Require \alpha\ge 0 because the trace is defined here only for positive operators.",
         ),
         (
-            "Banach_spaces.tex:476",
-            "environment_kind",
-            "Refer to the labelled source environment as an example, not an exercise.",
+            "compact_operators.tex:422",
+            "wrong_operator_symbol",
+            r"Use e^k=Uf^k, matching the unique unitary U introduced by the sentence.",
         ),
         (
-            "Banach_spaces.tex:546--549",
-            "proof_hint_markup",
-            "Normalize the emphasized proof-hint heading markup.",
+            "compact_operators.tex:425--430",
+            "defining_condition_conjunction",
+            "Replace both instances of 'is' by 'if' in the cone and proper-cone conditions.",
         ),
         (
-            "Banach_spaces.tex:661--665",
-            "undefined_ambient_algebra",
-            "Bind the ambient Banach algebra A before using it.",
+            "compact_operators.tex:436--437",
+            "unbound_hilbert_space",
+            r"Bind the separable Hilbert space as H before forming \ofml B(H).",
         ),
         (
-            "Banach_spaces.tex:924--925",
-            "sequence_space_and_norm_limit",
-            "Retain c and l_infty as the intended sequence spaces and retain limit 1.",
-        ),
-        (
-            "Banach_spaces.tex:955",
-            "undefined_ambient_banach_space",
-            "Bind the ambient Banach space B.",
-        ),
-        (
-            "Banach_spaces.tex:1205",
-            "subspace_order_symbol",
-            "Replace preceq by preccurlyeq for the subspace order.",
-        ),
-        (
-            "Banach_spaces.tex:1253",
-            "functor_morphism_linearity",
-            "Specify continuous linear maps as the functor morphisms.",
-        ),
-        (
-            "Banach_spaces.tex:1254",
-            "dual_superscript",
-            "Restore the superscript in B^*.",
-        ),
-        (
-            "Banach_spaces.tex:1327",
-            "ambient_space_name",
-            "Use the bound ambient space name B rather than M.",
-        ),
-        (
-            "Banach_spaces.tex:1384",
-            "nonempty_baire_hypothesis",
-            "Require a nonempty complete metric space in the Baire-category hypothesis.",
-        ),
-        (
-            "Banach_spaces.tex:1447",
-            "missing_modulus",
-            "Restore the modulus around a**(f).",
-        ),
-        (
-            "Banach_spaces.tex:1490--1495",
-            "piecewise_right_delimiter",
-            "Use a right-dot delimiter rather than an unmatched right brace.",
-        ),
-        (
-            "Banach_spaces.tex:1566,1574",
-            "operator_topology_index_sort_keys",
-            "Give the strong and uniform operator-topology entries distinct sort keys.",
+            "compact_operators.tex:497",
+            "missing_sequence_comma",
+            r"Insert the missing comma in \{e_1, \dots, e_n\}.",
         ),
     ]
-    if len(specifications) != 20:
-        raise ValueError("Chapter 6 correction specification count changed")
+    if len(specifications) != 11:
+        raise ValueError("Chapter 7 correction specification count changed")
     fields = {
         "schema": SCHEMA,
         "schema_version": VERSION,
         "record_type": "correction",
         "unit_id": CHAPTER_ID,
         "target_disposition": "corrected",
-        "ledger_path": "provenance/SOURCE_CORRECTIONS.md",
+        "ledger_path": LEDGER_PATH,
         "ledger_sha256": LEDGER_SHA,
         "ledger_section_sha256": LEDGER_SECTION_SHA,
-        **admission_fields(),
+        "qa_receipt_id": ADMISSION_QA_ID,
+        "receipt_document_state": "present",
+        "receipt_path": RECEIPT_PATH,
+        "receipt_sha256": RECEIPT_SHA,
         "upstream_report": "deferred_until_complete_and_separately_authorized",
     }
     return [
@@ -512,138 +468,69 @@ def correction_records() -> list[dict]:
     ]
 
 
-# One row per distinct raw source \df hook, in first-occurrence order.
+# One record per new distinct source term.  Established IDs are reused below.
 TERM_SPECS: list[tuple[str, str, str]] = [
-    ("TERM-ADJOINT", "adjoint", "adjoin"),
-    ("TERM-SECOND-DUAL", "second dual", "dual kedua"),
-    ("TERM-SECOND-DUAL-FUNCTOR", "second dual functor", "funktor dual kedua"),
-    ("TERM-NATURAL-TRANSFORMATION", "natural transformation", "transformasi alami"),
-    ("TERM-NATURAL-EQUIVALENCE", "natural equivalence", "ekuivalensi alami"),
-    ("TERM-NATURAL-EMBEDDING", "natural embedding", "pembenaman alami"),
-    ("TERM-REFLEXIVE", "reflexive", "refleksif"),
-    ("TERM-ANNIHILATOR", "annihilator", "anihilator"),
-    ("TERM-PRE-ANNIHILATOR", "pre-annihilator", "praanihilator"),
-    ("TERM-WEAK-TOPOLOGY", "weak topology", "topologi lemah"),
-    ("TERM-WEAK-STAR-TOPOLOGY", r"$w^*$-topology", r"topologi-$w^*$"),
-    ("TERM-UNIVERSAL", "universal", "universal"),
-    ("TERM-OPEN", "open", "terbuka"),
-    ("TERM-BOUNDED-AWAY-FROM-ZERO", "bounded away from zero", "terbatas jauh dari nol"),
-    ("TERM-BOUNDED-BELOW", "bounded below", "terbatas dari bawah"),
-    ("TERM-IDEMPOTENT", "idempotent", "idempoten"),
-    ("TERM-EXACT-AT", "exact at", "eksak di"),
-    ("TERM-EXACT", "exact", "eksak"),
-    ("TERM-SHORT-EXACT-SEQUENCE", "short exact sequence", "barisan eksak pendek"),
-    ("TERM-COKERNEL", "cokernel", "kokernel"),
-    ("TERM-SCHAUDER-BASIS", "Schauder basis", "basis Schauder"),
-    ("TERM-STANDARD", "standard", "standar"),
-    ("TERM-USUAL", "usual", "biasa"),
-    ("TERM-BASIS-VECTORS", "basis vectors", "vektor-vektor basis"),
-    ("TERM-LOCALLY-COMPACT", "locally compact", "kompak lokal"),
-    ("TERM-PROJECTION", "projection", "proyeksi"),
-    (
-        "TERM-PROJECTION-ALONG-KERNEL-ONTO-RANGE",
-        r"along $\ker E$ onto $\ran E$",
-        r"pada $\ran E$ sepanjang $\ker E$",
-    ),
-    ("TERM-COMPLEMENTED", "complemented", "terkomplemen"),
-    (
-        "TERM-BANACH-SPACE-COMPLEMENT",
-        "(Banach space) complement",
-        "komplemen (ruang Banach)",
-    ),
-    ("TERM-COMPLEMENTARY", "complementary", "komplementer"),
-    ("TERM-CODIMENSION", "codimension", "kodimensi"),
-    ("TERM-POINTWISE-BOUNDED", "pointwise bounded", "terbatas titik demi titik"),
-    ("TERM-UNIFORMLY-BOUNDED", "uniformly bounded", "terbatas seragam"),
-    ("TERM-WEAKLY-BOUNDED", "weakly bounded", "terbatas secara lemah"),
-    ("TERM-WEAKLY-CAUCHY", "weakly Cauchy", "Cauchy secara lemah"),
-    ("TERM-CONVERGE-WEAKLY", "converges weakly", "konvergen secara lemah"),
-    (
-        "TERM-WEAKLY-SEQUENTIALLY-COMPLETE",
-        "weakly sequentially complete",
-        "lengkap sekuensial secara lemah",
-    ),
-    (
-        "TERM-CONVERGES-IN-WEAK-OPERATOR-TOPOLOGY",
-        "converges in the weak operator topology",
-        "konvergen dalam topologi operator lemah",
-    ),
-    (
-        "TERM-BOUNDED-IN-WEAK-OPERATOR-TOPOLOGY",
-        "bounded in the weak operator topology",
-        "terbatas dalam topologi operator lemah",
-    ),
-    ("TERM-CONVERGE-STRONGLY", "converges strongly", "konvergen secara kuat"),
-    (
-        "TERM-CONVERGES-IN-STRONG-OPERATOR-TOPOLOGY",
-        "converges in the strong operator topology",
-        "konvergen dalam topologi operator kuat",
-    ),
-    ("TERM-UNIFORM-CONVERGENCE", "uniform convergence", "konvergensi seragam"),
-    (
-        "TERM-CONVERGENCE-IN-UNIFORM-OPERATOR-TOPOLOGY",
-        "convergence in the uniform operator topology",
-        "konvergensi dalam topologi operator seragam",
-    ),
+    ("TERM-TOTALLY-BOUNDED", "totally bounded", "terbatas total"),
+    ("TERM-RELATIVELY-COMPACT", "relatively compact", "kompak relatif"),
+    ("TERM-CSTAR-ALGEBRA", r"$C^\ast$-algebra", r"aljabar-$C^\ast$"),
+    ("TERM-CSTAR-NORM", "$C^*$-norm", "norma-$C^*$"),
+    ("TERM-CSTAR-SUBALGEBRA", "$C^*$-subalgebra", "subaljabar-$C^*$"),
+    ("TERM-PARTIAL-ISOMETRY", "partial isometry", "isometri parsial"),
+    ("TERM-INITIAL", "initial", "awal"),
+    ("TERM-SUPPORT", "support", "tumpuan"),
+    ("TERM-FINAL", "final", "akhir"),
+    ("TERM-SPACE", "space", "ruang"),
+    ("TERM-FINAL-SPACE", "final space", "ruang akhir"),
+    ("TERM-TRACE", "trace", "jejak"),
+    ("TERM-SIMILAR", "similar", "serupa"),
+    ("TERM-CONE", "cone", "kerucut"),
+    ("TERM-PROPER-CONE", "proper", "proper"),
+    ("TERM-TRACE-CLASS", "trace class", "kelas jejak"),
+    ("TERM-HILBERT-SCHMIDT", "Hilbert-Schmidt", "Hilbert--Schmidt"),
 ]
 EXISTING_TERM_IDS = {
-    "adjoint": "TERM-ADJOINT",
-    "weak topology": "TERM-WEAK-TOPOLOGY",
-    "bounded away from zero": "TERM-BOUNDED-AWAY-FROM-ZERO",
-    "bounded below": "TERM-BOUNDED-BELOW",
-    "standard": "TERM-STANDARD",
-    "usual": "TERM-USUAL",
+    "weakly continuous": "TERM-WEAKLY-CONTINUOUS",
+    "compact": "TERM-COMPACT",
     "projection": "TERM-PROJECTION",
-    "codimension": "TERM-CODIMENSION",
-    "converges weakly": "TERM-CONVERGE-WEAKLY",
-    "converges strongly": "TERM-CONVERGE-STRONGLY",
+    "range": "TERM-RANGE",
 }
 
 
 def term_id_map() -> dict[str, str]:
-    mapping = {source: stable_id for stable_id, source, _ in TERM_SPECS}
-    if len(mapping) != 43:
-        raise ValueError("Chapter 6 distinct defined-term inventory changed")
+    mapping = EXISTING_TERM_IDS | {
+        source: stable_id for stable_id, source, _preferred in TERM_SPECS
+    }
+    if len(mapping) != 21:
+        raise ValueError("Chapter 7 distinct defined-term inventory changed")
     return mapping
 
 
 def terminology_records() -> list[dict]:
-    records: list[dict] = []
-    emitted: set[str] = set()
+    records = []
     for stable_id, source_term, preferred in TERM_SPECS:
-        if source_term in EXISTING_TERM_IDS or stable_id in emitted:
-            continue
-        emitted.add(stable_id)
-        records.append(
-            {
-                "schema": SCHEMA,
-                "schema_version": VERSION,
-                "record_type": "term",
-                "id": stable_id,
-                "source_term": source_term,
-                "locale": "id-ID",
-                "preferred": preferred,
-                "variants": [],
-                "rejected": [],
-                "scope": "Banach spaces, duality, and operator topologies",
-                "evidence": "FAOA-2015-CH06 final target source/id-ID/Banach_spaces-id.tex; backend/index_terms.csv; qa/check_ch06_translation.py",
-            }
-        )
-    if len(records) != 33:
-        raise ValueError(f"Chapter 6 new terminology record count changed: {len(records)}")
+        record = {
+            "schema": SCHEMA,
+            "schema_version": VERSION,
+            "record_type": "term",
+            "id": stable_id,
+            "source_term": source_term,
+            "locale": "id-ID",
+            "preferred": preferred,
+            "variants": [],
+            "rejected": [],
+            "scope": "compact operators, partial isometries, and trace ideals",
+            "evidence": "FAOA-2015-CH07 target source/id-ID/compact_operators-id.tex and backend/index_terms.csv",
+        }
+        if stable_id == "TERM-PROPER-CONE":
+            record["scope"] = "proper cones in ordered vector spaces"
+            record["rejected"] = ["wajar"]
+        records.append(record)
+    if len(records) != 17:
+        raise ValueError("Chapter 7 new terminology record count changed")
     return records
 
 
 def qa_records(formula_summary: dict[str, object]) -> list[dict]:
-    typed_ids = [
-        "QA-CH06-STRUCTURAL-20260822",
-        "QA-CH06-MATH-20260822",
-        "QA-CH06-LANGUAGE-20260822",
-        "QA-CH06-BUILD-20260822",
-        "QA-CH06-VISUAL-20260822",
-        "QA-CH06-ACCESSIBILITY-20260822",
-        "QA-CH06-RIGHTS-20260822",
-    ]
     common_fields = {
         "schema": SCHEMA,
         "schema_version": VERSION,
@@ -651,56 +538,57 @@ def qa_records(formula_summary: dict[str, object]) -> list[dict]:
         "unit_id": CHAPTER_ID,
         "timestamp": "2026-08-22",
         "responsible_workflow": "Codex",
-        **admission_fields(),
+        "qa_receipt_id": ADMISSION_QA_ID,
+        "receipt_document_state": "present",
+        "receipt_path": RECEIPT_PATH,
+        "receipt_sha256": RECEIPT_SHA,
     }
     return [
         common_fields
         | {
-            "id": typed_ids[0],
+            "id": "QA-CH07-STRUCTURAL-20260822",
             "qa_type": "unit_structural",
             "result": "pass",
-            "witness": "qa/check_ch06_translation.py",
+            "witness": CHECKER_PATH,
             "witness_sha256": CHECKER_SHA,
-            "semantic_anchors": 167,
-            "semantic_units": 166,
-            "segments": 206,
-            "all_environment_pairs": 178,
-            "semantic_environment_anchors": 159,
-            "sections": 7,
-            "labels": 56,
-            "references": 80,
-            "ordinary_target_references": 79,
-            "future_target_references": 1,
-            "equation_references": 2,
-            "citations": 13,
-            "index_terms": 155,
-            "defined_terms": 47,
-            "exercise_environments": 6,
-            "proof_environments": 29,
-            "proof_hints": 28,
-            "ordinary_proofs": 1,
+            "semantic_anchors": 75,
+            "semantic_units": 74,
+            "segments": 85,
+            "all_environment_pairs": 72,
+            "semantic_environment_anchors": 70,
+            "sections": 4,
+            "labels": 20,
+            "references": 13,
+            "ordinary_target_references": 10,
+            "future_target_references": 3,
+            "equation_references": 0,
+            "citations": 8,
+            "index_terms": 91,
+            "defined_terms": 26,
+            "exercise_environments": 1,
+            "proof_environments": 9,
+            "proof_hints": 7,
+            "ordinary_proofs": 2,
         },
         common_fields
         | {
-            "id": typed_ids[1],
+            "id": "QA-CH07-MATH-20260822",
             "qa_type": "unit_mathematical",
             "result": "pass",
-            "witness": "qa/check_ch06_translation.py",
+            "witness": CHECKER_PATH,
             "witness_sha256": CHECKER_SHA,
-            "source_math_surfaces": 1_155,
-            "target_math_surfaces": 1_156,
             **formula_summary,
-            "classified_math_edit_blocks": 22,
+            "classified_math_edit_blocks": 8,
             "unexplained_deltas": 0,
             "extractor": "backend/ch03_math.py",
             "extractor_sha256": "6f94fd3d4cf65ac8509544b2dfd381798ea7251b4557dbdf8165b3a6ebcea0f3",
         },
         common_fields
         | {
-            "id": typed_ids[2],
+            "id": "QA-CH07-LANGUAGE-20260822",
             "qa_type": "unit_language",
             "result": "pass",
-            "witness": "qa/check_ch06_translation.py",
+            "witness": CHECKER_PATH,
             "witness_sha256": CHECKER_SHA,
             "severity_counts": {"P1": 0, "P2": 0, "P3": 0},
             "unintended_english_prose": 0,
@@ -709,25 +597,26 @@ def qa_records(formula_summary: dict[str, object]) -> list[dict]:
         },
         common_fields
         | {
-            "id": typed_ids[3],
+            "id": "QA-CH07-BUILD-20260822",
             "qa_type": "cumulative_build",
             "result": "pass",
             "witness": FINAL_PDF_PATH,
             "witness_sha256": PDF_SHA,
-            "master_artifact_id": "ARTIFACT-FAOA-ID-THROUGH-CH06-MASTER",
-            "pdf_artifact_id": "ARTIFACT-FAOA-ID-THROUGH-CH06-PDF",
-            "fixed_path_clean_builds_byte_identical": True,
-            "fixed_path_build_pdf_path": BUILD_PDF_PATH,
-            "final_output_copy_state": "present_byte_identical",
+            "master_artifact_id": "ARTIFACT-FAOA-ID-THROUGH-CH07-MASTER",
+            "pdf_artifact_id": "ARTIFACT-FAOA-ID-THROUGH-CH07-PDF",
             "pages": PDF_PAGES,
-            "local_build_log_path": BUILD_LOG_PATH,
-            "local_build_log_bytes": BUILD_LOG_SIZE,
-            "local_build_log_sha256": BUILD_LOG_SHA,
+            "canonical_output_copy_state": "present_byte_identical",
+            "fixed_path_clean_builds_byte_identical": True,
+            "fixed_path_build_pdf_path": "qa/build-through-ch07-a/functional-analysis-id-through-ch07.pdf",
+            "local_build_log_path": "qa/build-through-ch07-a/functional-analysis-id-through-ch07.log",
+            "local_build_log_bytes": 47_575,
+            "local_build_log_sha256": "35cf19763a0e6b8336ad962f49940791d17dad89d4b55451e10dd65e8f923af5",
             "local_build_log_publication_state": "excluded_ignored_build_intermediate",
+            "admission_receipt_state": "present",
         },
         common_fields
         | {
-            "id": typed_ids[4],
+            "id": "QA-CH07-VISUAL-20260822",
             "qa_type": "cumulative_visual",
             "result": "pass",
             "decision": "visual_render_navigation_pass",
@@ -737,53 +626,48 @@ def qa_records(formula_summary: dict[str, object]) -> list[dict]:
             "pages_inspected": PDF_PAGES,
             "uniform_pixel_dimensions": "1275x1650",
             "outer_5px_edge_ink_pages": 0,
-            "rendered_png_bytes": 40_224_010,
-            "word_boxes": 54_378,
+            "rendered_png_bytes": 42_779_126,
+            "word_boxes": 57_431,
             "out_of_bounds_word_boxes": 0,
-            "intentional_blank_versos": [20, 48, 78, 100, 102],
+            "intentional_blank_versos": [20, 48, 78, 100, 108],
             "visual_defects": 0,
-            "render_manifest_state": "present",
             "render_manifest_sha256": RENDER_MANIFEST_SHA,
-            "contact_sheet_state": "present",
             "contact_sheet_sha256": CONTACT_SHEET_SHA,
-            "render_manifest_artifact_id": "ARTIFACT-FAOA-ID-CH06-RENDER-MANIFEST",
-            "contact_sheet_artifact_id": "ARTIFACT-FAOA-ID-CH06-CONTACT-SHEET",
         },
         common_fields
         | {
-            "id": typed_ids[5],
+            "id": "QA-CH07-ACCESSIBILITY-20260822",
             "qa_type": "cumulative_accessibility",
             "result": "pass",
             "decision": "honest_chapter_boundary_accessibility_pass",
             "witness": AUDIT_PATH,
             "witness_sha256": AUDIT_SHA,
-            "visual_accessibility_artifact_id": "ARTIFACT-FAOA-ID-CH06-VISUAL-ACCESSIBILITY-AUDIT",
             "tagged_pdf": False,
             "fully_accessible_pdf_claim": False,
             "unicode_mapped_font_resources": 43,
             "total_font_resources": 43,
-            "text_extraction_bytes": 436_932,
-            "text_extraction_sha256": "d9fa66b1ec42ede6ab4247f81eb70361c274922cb5d3eeaacf0616fc30235c4c",
+            "text_extraction_bytes": 463_585,
+            "text_extraction_sha256": "aad0d057d0a8bd51bc9e39ea90da922b635c590b0c3746d8c82b7181fda6d6c1",
             "replacement_characters": 0,
-            "resolved_internal_links": 1_500,
-            "named_destinations": 1_052,
-            "outline_entries": 42,
+            "resolved_internal_links": 1_620,
+            "named_destinations": 1_132,
+            "outline_entries": 47,
             "semantic_accessibility_state": "remediation_required",
-            "accessibility_remediation_state": "pending_nonblocking",
             "accessible_html_or_tagged_pdf_state": "pending",
             "admission_blocker_for_chapter_boundary": False,
         },
         common_fields
         | {
-            "id": typed_ids[6],
+            "id": "QA-CH07-RIGHTS-20260822",
             "qa_type": "unit_rights_privacy",
             "result": "pass",
-            "decision": "rights_component_privacy_closure_pass",
-            "witness": RECEIPT_PATH,
-            "witness_sha256": RECEIPT_SHA,
+            "decision": "rights_wrapper_and_public_path_closure_pass",
+            "witness": CHECKER_PATH,
+            "witness_sha256": CHECKER_SHA,
+            "supplementary_witness": AUDIT_PATH,
+            "supplementary_witness_sha256": AUDIT_SHA,
             "rights_id": RIGHTS,
             "attribution_change_notice_sharealike_nonendorsement": "present",
-            "excluded_components_absent": True,
             "private_control_paths_absent_from_public_artifacts": True,
             "credential_or_token_residue": 0,
         },
@@ -791,8 +675,8 @@ def qa_records(formula_summary: dict[str, object]) -> list[dict]:
         | {
             "id": ADMISSION_QA_ID,
             "qa_type": "unit_admission",
-            "result": "pass" if receipt_bound() else "pending",
-            "decision": "admitted" if receipt_bound() else "pending_receipt_and_open_gates",
+            "result": "pass",
+            "decision": "admitted",
             "source_sha256": SOURCE_SHA,
             "target_sha256": TARGET_SHA,
             "build_master_sha256": MASTER_SHA,
@@ -801,7 +685,17 @@ def qa_records(formula_summary: dict[str, object]) -> list[dict]:
             "contact_sheet_sha256": CONTACT_SHEET_SHA,
             "visual_accessibility_audit_sha256": AUDIT_SHA,
             "corrections_ledger_sha256": LEDGER_SHA,
-            "typed_qa_event_ids": typed_ids,
+            "receipt_path": RECEIPT_PATH,
+            "receipt_sha256": RECEIPT_SHA,
+            "typed_qa_event_ids": [
+                "QA-CH07-STRUCTURAL-20260822",
+                "QA-CH07-MATH-20260822",
+                "QA-CH07-LANGUAGE-20260822",
+                "QA-CH07-BUILD-20260822",
+                "QA-CH07-VISUAL-20260822",
+                "QA-CH07-ACCESSIBILITY-20260822",
+                "QA-CH07-RIGHTS-20260822",
+            ],
             "required_admission_gate_results": {
                 "unit_structural": "pass",
                 "unit_mathematical": "pass",
@@ -810,10 +704,9 @@ def qa_records(formula_summary: dict[str, object]) -> list[dict]:
                 "cumulative_visual": "pass",
                 "cumulative_accessibility": "pass",
                 "unit_rights_privacy": "pass",
+                "admission_receipt": "pass",
             },
-            "all_required_admission_gates": "pass" if receipt_bound() else "pending",
-            "accessibility_remediation_state": "pending_nonblocking",
-            "accessible_html_or_tagged_pdf_state": "pending",
+            "all_required_admission_gates": "pass",
             "publication_state": "pending",
         },
     ]
@@ -831,32 +724,23 @@ def prior_label_map() -> dict[str, str]:
 
 
 CORRECTION_FORMULAS = {
-    165: f"{CHAPTER_ID}-CORR-003",
-    167: f"{CHAPTER_ID}-CORR-003",
-    316: f"{CHAPTER_ID}-CORR-006",
-    330: f"{CHAPTER_ID}-CORR-007",
-    531: f"{CHAPTER_ID}-CORR-010",
-    686: f"{CHAPTER_ID}-CORR-011",
-    710: f"{CHAPTER_ID}-CORR-012",
-    894: f"{CHAPTER_ID}-CORR-013",
-    927: f"{CHAPTER_ID}-CORR-015",
-    965: f"{CHAPTER_ID}-CORR-016",
-    1065: f"{CHAPTER_ID}-CORR-018",
-    1093: f"{CHAPTER_ID}-CORR-019",
+    69: f"{CHAPTER_ID}-CORR-004",
+    249: f"{CHAPTER_ID}-CORR-007",
+    263: f"{CHAPTER_ID}-CORR-008",
+    267: f"{CHAPTER_ID}-CORR-009",
+    275: f"{CHAPTER_ID}-CORR-010",
+    309: f"{CHAPTER_ID}-CORR-011",
 }
-LOCALIZED_KEY_DIFFERENCES = {133, 134, 670, 722, 1091, 1092}
-REORDERED_FORMULAS = {834, 857, 906}
-TARGET_ONLY_FORMULAS = {531, 710}
-CONSOLIDATED_FORMULAS = {686}
+REORDERED_FORMULAS = {91, 92, 93}
+CONSOLIDATED_SOURCE_CORRECTION_FORMULAS = {267}
+TARGET_ONLY_FORMULAS = {275}
 
 
 def build_math_pairs(source: str, target: str) -> tuple[list[dict], dict[str, object]]:
     source_math = ch03_math.extract_math(source, SOURCE_ENCODING)
     target_math = ch03_math.extract_math(target, TARGET_ENCODING)
-    if (len(source_math), len(target_math)) != (1_155, 1_156):
-        raise ValueError("Chapter 6 math-surface count changed")
-    if ch06check.math_edit_signature(source_math, target_math) != ch06check.EXPECTED_MATH_EDITS:
-        raise ValueError("Chapter 6 mathematical edit-block lock changed")
+    if (len(source_math), len(target_math)) != (309, 309):
+        raise ValueError("Chapter 7 math-surface count changed")
     source_keys = [ch03_math.math_key(record["normalized"]) for record in source_math]
     target_keys = [ch03_math.math_key(record["normalized"]) for record in target_math]
     mapping: list[list[int] | None] = [None] * len(target_math)
@@ -868,18 +752,18 @@ def build_math_pairs(source: str, target: str) -> tuple[list[dict], dict[str, ob
                 range(i1, i2), range(j1, j2), strict=True
             ):
                 mapping[target_index] = [source_index]
-    mapping[530] = []
-    mapping[685] = [685, 686]
-    mapping[709] = []
-    mapping[833] = [833]
-    mapping[856] = [856]
-    mapping[905] = [905]
+    # Natural Indonesian order moves CSA after its noun phrase.
+    mapping[92] = [90]
+    # One target V carries the two source occurrences in the repaired cone definition.
+    mapping[266] = [266, 267]
+    # Binding H is an explicit target-only source correction.
+    mapping[274] = []
     if any(value is None for value in mapping):
-        raise ValueError("Chapter 6 target formula coverage is incomplete")
+        raise ValueError("Chapter 7 target formula coverage is incomplete")
     complete_mapping = [value for value in mapping if value is not None]
     used_sources = [index for group in complete_mapping for index in group]
     if sorted(used_sources) != list(range(len(source_math))):
-        raise ValueError("Chapter 6 source formula coverage is not one-to-one")
+        raise ValueError("Chapter 7 source formula coverage is incomplete")
 
     counts: collections.Counter[str] = collections.Counter()
     records: list[dict] = []
@@ -901,18 +785,14 @@ def build_math_pairs(source: str, target: str) -> tuple[list[dict], dict[str, ob
                 if number in REORDERED_FORMULAS
                 else "preserved_exact_after_text_aware_whitespace_normalization"
             )
-        elif key_equal:
-            alignment = "localized_math_text_preserved_math_key"
-        elif number in LOCALIZED_KEY_DIFFERENCES:
-            alignment = "localized_math_key_reviewed"
         elif number in TARGET_ONLY_FORMULAS:
             alignment = "reviewed_target_only_source_correction"
-        elif number in CONSOLIDATED_FORMULAS:
+        elif number in CONSOLIDATED_SOURCE_CORRECTION_FORMULAS:
             alignment = "reviewed_consolidated_source_correction"
         elif number in CORRECTION_FORMULAS:
             alignment = "reviewed_source_correction"
         else:
-            raise ValueError(f"unexpected Chapter 6 formula delta at target {number}")
+            raise ValueError(f"unexpected Chapter 7 formula delta at target {number}")
         counts[alignment] += 1
         if not source_indexes:
             ordinal_alignment = "source_absent"
@@ -933,8 +813,6 @@ def build_math_pairs(source: str, target: str) -> tuple[list[dict], dict[str, ob
             "math_key_alignment": (
                 "equal"
                 if key_equal
-                else "localized_difference"
-                if number in LOCALIZED_KEY_DIFFERENCES
                 else "target_only"
                 if not source_indexes
                 else "reviewed_difference"
@@ -960,76 +838,77 @@ def build_math_pairs(source: str, target: str) -> tuple[list[dict], dict[str, ob
                 "correction_disposition": "not_a_source_correction",
                 "qa_state": "passed",
             }
-        elif number in LOCALIZED_KEY_DIFFERENCES:
+        elif number in CONSOLIDATED_SOURCE_CORRECTION_FORMULAS:
             record |= {
-                "sequence_opcode": "replace",
-                "delta_class": "localized_math_text",
-                "correction_disposition": "not_a_source_correction",
+                "sequence_opcode": "merge",
+                "delta_class": "source_correction",
+                "correction_id": CORRECTION_FORMULAS[number],
+                "correction_disposition": "corrected",
+                "review_witness": LEDGER_PATH,
                 "qa_state": "passed",
             }
         elif number in CORRECTION_FORMULAS:
             record |= {
-                "sequence_opcode": (
-                    "insert"
-                    if number in TARGET_ONLY_FORMULAS
-                    else "merge"
-                    if number in CONSOLIDATED_FORMULAS
-                    else "replace"
-                ),
+                "sequence_opcode": "insert" if number in TARGET_ONLY_FORMULAS else "replace",
                 "delta_class": "source_correction",
                 "correction_id": CORRECTION_FORMULAS[number],
                 "correction_disposition": "corrected",
-                "review_witness": "provenance/SOURCE_CORRECTIONS.md and qa/check_ch06_translation.py",
+                "review_witness": LEDGER_PATH,
                 "qa_state": "passed",
             }
         records.append(record)
     expected_counts = {
-        "preserved_exact_after_text_aware_whitespace_normalization": 1_128,
+        "preserved_exact_after_text_aware_whitespace_normalization": 300,
         "preserved_exact_after_text_aware_whitespace_normalization_reordered": 3,
-        "localized_math_text_preserved_math_key": 7,
-        "localized_math_key_reviewed": 6,
-        "reviewed_source_correction": 9,
-        "reviewed_target_only_source_correction": 2,
+        "reviewed_source_correction": 4,
         "reviewed_consolidated_source_correction": 1,
+        "reviewed_target_only_source_correction": 1,
     }
     if dict(counts) != expected_counts:
-        raise ValueError(f"Chapter 6 formula alignment counts changed: {dict(counts)}")
+        raise ValueError(f"Chapter 7 formula alignment counts changed: {dict(counts)}")
     return records, {
-        "exact_normalized_alignments": 1_131,
-        "math_key_equal_alignments": 1_138,
-        "localized_math_text_alignments": 7,
-        "localized_math_key_differences": 6,
-        "reviewed_source_correction_maps": 12,
-        "target_only_source_corrections": 2,
+        "source_math_surfaces": 309,
+        "target_math_surfaces": 309,
+        "exact_normalized_alignments": 303,
+        "reviewed_source_correction_maps": 6,
+        "target_only_source_corrections": 1,
         "consolidated_source_corrections": 1,
         "localization_phrase_reorderings": 3,
-        "formula_map_records": 1_156,
+        "formula_map_records": 309,
     }
+
+
+def write_manifest() -> None:
+    paths = sorted(
+        [
+            path
+            for path in BACKEND.iterdir()
+            if path.is_file()
+            and path.name != "BACKEND_MANIFEST.csv"
+            and not path.name.endswith(".pyc")
+        ],
+        key=lambda path: path.name.casefold(),
+    )
+    buffer = io.StringIO(newline="")
+    writer = csv.writer(buffer, lineterminator="\n")
+    writer.writerow(["relative_path", "bytes", "sha256"])
+    for path in paths:
+        data = path.read_bytes()
+        writer.writerow([path.name, len(data), sha(data)])
+    (BACKEND / "BACKEND_MANIFEST.csv").write_text(
+        buffer.getvalue(), encoding="utf-8", newline=""
+    )
 
 
 def main() -> None:
-    source_bytes = SOURCE_PATH.read_bytes()
-    target_bytes = TARGET_PATH.read_bytes()
-    if (len(source_bytes), len(source_bytes.splitlines()), sha(source_bytes)) != (
-        SOURCE_SIZE,
-        SOURCE_LINES,
-        SOURCE_SHA,
-    ):
-        raise ValueError("Chapter 6 source authority changed")
-    if (len(target_bytes), len(target_bytes.splitlines()), sha(target_bytes)) != (
-        TARGET_SIZE,
-        TARGET_LINES,
-        TARGET_SHA,
-    ):
-        raise ValueError("final Chapter 6 target lock changed")
-    source = source_bytes.decode(SOURCE_ENCODING)
-    target = target_bytes.decode(TARGET_ENCODING)
     verify_evidence()
     for name in PREFIX_LOCKS:
         locked_prefix(name)
     unit_boundaries()
+    source = SOURCE_PATH.read_text(encoding=SOURCE_ENCODING)
+    target = TARGET_PATH.read_text(encoding=TARGET_ENCODING)
     checker_run = subprocess.run(
-        [sys.executable, str(ROOT / "qa" / "check_ch06_translation.py")],
+        [sys.executable, str(ROOT / CHECKER_PATH)],
         cwd=ROOT,
         check=True,
         capture_output=True,
@@ -1037,20 +916,20 @@ def main() -> None:
     )
     checker_result = json.loads(checker_run.stdout)
     if checker_result.get("result") != "pass":
-        raise ValueError("Chapter 6 checker did not return its locked pass result")
+        raise ValueError("Chapter 7 checker did not return its frozen pass result")
 
     source_anchors = ch01.parse_anchors(source)
     target_anchors = ch01.parse_anchors(target)
-    if len(source_anchors) != 167 or [
+    if len(source_anchors) != 75 or [
         ch01.anchor_signature(anchor) for anchor in source_anchors
     ] != [ch01.anchor_signature(anchor) for anchor in target_anchors]:
-        raise ValueError("Chapter 6 semantic anchor topology differs")
+        raise ValueError("Chapter 7 semantic anchor topology differs")
     source_labels = common.macro(source, "label")
     target_labels = common.macro(target, "label")
-    if len(source_labels) != 56 or [item["argument"] for item in source_labels] != [
+    if len(source_labels) != 20 or [item["argument"] for item in source_labels] != [
         item["argument"] for item in target_labels
     ]:
-        raise ValueError("Chapter 6 label sequence differs")
+        raise ValueError("Chapter 7 label sequence differs")
 
     semantic_units: list[dict] = []
     segment_records: list[dict] = []
@@ -1061,7 +940,8 @@ def main() -> None:
     current_section_by_anchor: list[str] = []
     section_number = 0
     node_number = 0
-    state = "admitted" if receipt_bound() else "complete_pending_admission"
+    state = "admitted"
+    qa_state = "passed"
     for source_anchor, target_anchor in zip(
         source_anchors, target_anchors, strict=True
     ):
@@ -1102,11 +982,11 @@ def main() -> None:
                 "order_in_chapter": len(semantic_units) + 1,
                 "edition_id": EDITION,
                 "target_edition_id": TARGET_EDITION,
-                "source_path": "source/upstream/Banach_spaces.tex",
+                "source_path": "source/upstream/compact_operators.tex",
                 "source_line_start": source_fragment["line_start"],
                 "source_line_end": source_fragment["line_end"],
                 "source_fragment_sha256": source_fragment["sha256"],
-                "target_path": "source/id-ID/Banach_spaces-id.tex",
+                "target_path": "source/id-ID/compact_operators-id.tex",
                 "target_line_start": target_fragment["line_start"],
                 "target_line_end": target_fragment["line_end"],
                 "target_fragment_sha256": target_fragment["sha256"],
@@ -1115,7 +995,7 @@ def main() -> None:
                 "target_title_tex": target_anchor.get("title"),
                 "locale": "id-ID",
                 "translation_state": state,
-                "qa_state": "passed",
+                "qa_state": qa_state,
                 "rights_id": RIGHTS,
             }
         )
@@ -1130,8 +1010,8 @@ def main() -> None:
                 "to_id": unit_id,
             }
         )
-    if (len(semantic_units), section_number, node_number) != (166, 7, 159):
-        raise ValueError("Chapter 6 semantic-unit topology invariant failed")
+    if (len(semantic_units), section_number, node_number) != (74, 4, 70):
+        raise ValueError("Chapter 7 semantic-unit topology invariant failed")
 
     source_parts: list[tuple[int, int, str, str]] = []
     target_parts: list[tuple[int, int, str, str]] = []
@@ -1169,8 +1049,8 @@ def main() -> None:
         if source_raw or target_raw:
             source_parts.append((previous_source, len(source), "prose", previous_parent))
             target_parts.append((previous_target, len(target), "prose", previous_parent))
-    if len(source_parts) != 206 or len(target_parts) != 206:
-        raise ValueError("Chapter 6 source/target segment count differs from 206")
+    if len(source_parts) != 85 or len(target_parts) != 85:
+        raise ValueError("Chapter 7 source/target segment count differs from 85")
 
     for number, (source_part, target_part) in enumerate(
         zip(source_parts, target_parts, strict=True), 1
@@ -1178,7 +1058,7 @@ def main() -> None:
         source_start, source_end, role, parent_id = source_part
         target_start, target_end, target_role, target_parent = target_part
         if role != target_role or parent_id != target_parent:
-            raise ValueError("Chapter 6 source/target segment role differs")
+            raise ValueError("Chapter 7 source/target segment role differs")
         source_fragment = ch01.fragment(source, source_start, source_end, SOURCE_ENCODING)
         target_fragment = ch01.fragment(target, target_start, target_end, TARGET_ENCODING)
         segment_id = f"{CHAPTER_ID}-SEG-{number:04d}"
@@ -1191,12 +1071,12 @@ def main() -> None:
                 "parent_id": parent_id,
                 "order": number,
                 "segment_role": role,
-                "source_path": "source/upstream/Banach_spaces.tex",
+                "source_path": "source/upstream/compact_operators.tex",
                 "source_line_start": source_fragment["line_start"],
                 "source_line_end": source_fragment["line_end"],
                 "source_bytes": source_fragment["bytes"],
                 "source_sha256": source_fragment["sha256"],
-                "target_path": "source/id-ID/Banach_spaces-id.tex",
+                "target_path": "source/id-ID/compact_operators-id.tex",
                 "target_line_start": target_fragment["line_start"],
                 "target_line_end": target_fragment["line_end"],
                 "target_bytes": target_fragment["bytes"],
@@ -1205,7 +1085,7 @@ def main() -> None:
                 "target_edition_id": TARGET_EDITION,
                 "locale": "id-ID",
                 "translation_state": state,
-                "qa_state": "passed",
+                "qa_state": qa_state,
                 "rights_id": RIGHTS,
                 "_source_start": source_start,
                 "_source_end": source_end,
@@ -1257,24 +1137,27 @@ def main() -> None:
                 "label_id": f"ERDMAN-FAOA-2015-LABEL-{occurrence['argument']}",
             }
         )
-    if len(local_label_map) != 56:
-        raise ValueError("Chapter 6 local label map changed")
+    if len(local_label_map) != 20:
+        raise ValueError("Chapter 7 local label map changed")
 
     source_refs = common.macro(source, "ref")
     target_refs = common.macro(target, "ref")
-    if len(source_refs) != 80 or len(target_refs) != 79:
-        raise ValueError("Chapter 6 ordinary reference count changed")
+    future_labels = {"00152171", "00152181", "X_sqroot_op"}
+    if len(source_refs) != 13 or len(target_refs) != 10:
+        raise ValueError("Chapter 7 reference count changed")
     if [item["argument"] for item in target_refs] != [
-        item["argument"] for item in source_refs if item["argument"] != "000731"
+        item["argument"] for item in source_refs if item["argument"] not in future_labels
     ]:
-        raise ValueError("Chapter 6 target ordinary reference sequence changed")
+        raise ValueError("Chapter 7 target ordinary reference sequence changed")
     future_matches = list(
         re.finditer(r"\\futurexref\{([^{}]*)\}\{([^{}]+)\}", ch01.active_same_length(target))
     )
     if [(match.group(1), match.group(2)) for match in future_matches] != [
-        ("11.2.20", "000731")
+        ("12.3.16", "00152171"),
+        ("12.3.17", "00152181"),
+        ("11.5.7", "X_sqroot_op"),
     ]:
-        raise ValueError("Chapter 6 futurexref endpoint changed")
+        raise ValueError("Chapter 7 futurexref endpoints changed")
     prior_labels = prior_label_map()
     reference_counts: collections.Counter[str] = collections.Counter()
     for number, occurrence in enumerate(source_refs, 1):
@@ -1287,12 +1170,12 @@ def main() -> None:
             to_id = prior_labels[label]
             resolution = "admitted_prior_unit"
             target_surface = "ref"
-        elif label == "000731":
-            to_id = "ERDMAN-FAOA-2015-LABEL-000731"
+        elif label in future_labels:
+            to_id = f"ERDMAN-FAOA-2015-LABEL-{label}"
             resolution = "pending_later_source_unit"
             target_surface = "futurexref"
         else:
-            raise ValueError(f"unexpected unresolved Chapter 6 reference: {label}")
+            raise ValueError(f"unexpected unresolved Chapter 7 reference: {label}")
         reference_counts[resolution] += 1
         relations.append(
             {
@@ -1311,46 +1194,20 @@ def main() -> None:
             }
         )
     if dict(reference_counts) != {
-        "admitted_prior_unit": 32,
-        "local": 47,
-        "pending_later_source_unit": 1,
+        "admitted_prior_unit": 6,
+        "local": 4,
+        "pending_later_source_unit": 3,
     }:
-        raise ValueError(f"Chapter 6 reference-resolution counts changed: {dict(reference_counts)}")
-
-    source_eqrefs = common.macro(source, "eqref")
-    target_eqrefs = common.macro(target, "eqref")
-    if [item["argument"] for item in source_eqrefs] != [
-        "eqn_exactCD_Bbar",
-        "eqn_exactCD_Bbar",
-    ] or [item["argument"] for item in target_eqrefs] != [
-        "eqn_exactCD_Bbar",
-        "eqn_exactCD_Bbar",
-    ]:
-        raise ValueError("Chapter 6 eqref sequence differs")
-    for number, occurrence in enumerate(source_eqrefs, 1):
-        relations.append(
-            {
-                "schema": SCHEMA,
-                "schema_version": VERSION,
-                "record_type": "relation",
-                "id": f"{CHAPTER_ID}-REL-EQREF-{number:04d}",
-                "relation_type": "xref",
-                "from_id": ch01.containing_segment(
-                    segment_records, occurrence["start"], "source"
-                ),
-                "to_id": local_label_map[occurrence["argument"]],
-                "source_local_id": occurrence["argument"],
-                "resolution": "local",
-                "target_surface": "eqref",
-            }
-        )
+        raise ValueError(f"Chapter 7 reference-resolution counts changed: {dict(reference_counts)}")
+    if common.macro(source, "eqref") or common.macro(target, "eqref"):
+        raise ValueError("Chapter 7 unexpectedly contains equation references")
 
     source_cites = common.macro(source, "cite")
     target_cites = common.macro(target, "cite")
-    if len(source_cites) != 13 or [item["argument"] for item in source_cites] != [
+    if len(source_cites) != 8 or [item["argument"] for item in source_cites] != [
         item["argument"] for item in target_cites
     ]:
-        raise ValueError("Chapter 6 citation sequence differs")
+        raise ValueError("Chapter 7 citation sequence differs")
     cite_key_count = 0
     for occurrence_number, occurrence in enumerate(source_cites, 1):
         for key in [item.strip() for item in occurrence["argument"].split(",")]:
@@ -1369,8 +1226,8 @@ def main() -> None:
                     "source_local_id": key,
                 }
             )
-    if cite_key_count != 13:
-        raise ValueError("Chapter 6 citation-key count changed")
+    if cite_key_count != 8:
+        raise ValueError("Chapter 7 citation-key count changed")
 
     previous_statement: str | None = None
     hint_ids_by_statement: dict[str, list[str]] = collections.defaultdict(list)
@@ -1384,7 +1241,7 @@ def main() -> None:
         if "Hint for proof" not in (record.get("source_title_tex") or ""):
             continue
         if previous_statement is None:
-            raise ValueError("Chapter 6 proof hint lacks a preceding statement")
+            raise ValueError("Chapter 7 proof hint lacks a preceding statement")
         hint_relations += 1
         hint_ids_by_statement[previous_statement].append(record["id"])
         relations.append(
@@ -1398,20 +1255,32 @@ def main() -> None:
                 "to_id": previous_statement,
             }
         )
-    if (proof_count, hint_relations) != (29, 28):
-        raise ValueError("Chapter 6 proof/proof-hint topology changed")
+    if (proof_count, hint_relations) != (9, 7):
+        raise ValueError("Chapter 7 proof/proof-hint topology changed")
 
     source_df = common.macro(source, "df")
     target_df = common.macro(target, "df")
+    if len(source_df) != 26 or len(target_df) != 26:
+        raise ValueError("Chapter 7 defined-term occurrence count changed")
+    # Source and Indonesian phrases are semantically paired despite deliberate
+    # local reordering around nested projection/support definitions.
+    target_df_order = list(range(9)) + [10, 11, 9, 13, 14, 12, 16, 17, 15] + list(range(18, 26))
+    expected_target_terms = [
+        "terbatas total", "terbatas total", "kompak relatif",
+        "kontinu secara lemah", "kompak", r"aljabar-$C^\ast$",
+        "norma-$C^*$", "subaljabar-$C^*$", "isometri parsial",
+        "awal", "tumpuan", "proyeksi", "akhir", "jangkauan", "proyeksi",
+        "awal", "tumpuan", "ruang", "ruang akhir", "jejak", "serupa",
+        "jejak", "kerucut", "proper", "kelas jejak", "Hilbert--Schmidt",
+    ]
+    paired_target_df = [target_df[index] for index in target_df_order]
+    if [record["argument"] for record in paired_target_df] != expected_target_terms:
+        raise ValueError("Chapter 7 semantic defined-term pairing changed")
     term_ids = term_id_map()
-    if (
-        len(source_df) != 47
-        or len(target_df) != 47
-        or set(term_ids) != {record["argument"] for record in source_df}
-    ):
-        raise ValueError("Chapter 6 defined-term inventory changed")
+    if set(term_ids) != {record["argument"] for record in source_df}:
+        raise ValueError("Chapter 7 distinct defined-term inventory changed")
     for number, (source_term, target_term) in enumerate(
-        zip(source_df, target_df, strict=True), 1
+        zip(source_df, paired_target_df, strict=True), 1
     ):
         relations.append(
             {
@@ -1433,12 +1302,12 @@ def main() -> None:
     source_terms = common.macro(source, "index")
     target_terms = common.macro(target, "index")
     if (
-        len(source_terms) != 155
-        or len(target_terms) != 155
+        len(source_terms) != 91
+        or len(target_terms) != 91
         or [common.index_signature(item["argument"]) for item in source_terms]
         != [common.index_signature(item["argument"]) for item in target_terms]
     ):
-        raise ValueError("Chapter 6 index-term alignment changed")
+        raise ValueError("Chapter 7 index-term alignment changed")
     term_buffer = io.StringIO(newline="")
     term_writer = csv.writer(term_buffer, lineterminator="\n")
     for number, (source_term, target_term) in enumerate(
@@ -1463,73 +1332,59 @@ def main() -> None:
 
     formula_records, formula_summary = build_math_pairs(source, target)
     exercises: list[dict] = []
-    expected_inline_hint_lines = {2: 464, 3: 489, 6: 1461}
     for record in semantic_units:
         if record["unit_kind"] != "exer":
             continue
         number = len(exercises) + 1
         start, end = anchor_bounds[record["id"]]
         fragment = source[start:end]
-        hint_match = re.search(r"\\emph\{Hint(?:[.:])?\}", fragment)
-        hint_line = source.count("\n", 0, start + hint_match.start()) + 1 if hint_match else None
-        if hint_line != expected_inline_hint_lines.get(number):
-            raise ValueError(f"Chapter 6 exercise {number} inline-hint state changed")
-        exercise_record = {
-            "schema": SCHEMA,
-            "schema_version": VERSION,
-            "record_type": "exercise_support",
-            "id": f"{CHAPTER_ID}-EXERCISE-SUPPORT-{number:03d}",
-            "exercise_unit_id": record["id"],
-            "source_exercise_order": number,
-            "upstream_hint_ids": hint_ids_by_statement.get(record["id"], []),
-            "upstream_inline_hint_state": "present" if hint_line else "absent",
-            "upstream_answer_state": "absent",
-            "upstream_solution_state": "absent",
-            "original_solution_id": f"O001-{CHAPTER_ID}-EX-{number:03d}-SOLUTION",
-            "original_solution_state": "queued_in_O001",
-            "original_rights_id": "RIGHTS-ORIGINAL-CC-BY-SA-4.0",
-            "provenance": "separately_authored_not_Erdman",
-        }
-        if hint_line:
-            exercise_record["upstream_inline_hint_source_lines"] = [hint_line]
-        exercises.append(exercise_record)
-    if len(exercises) != 6 or any(record["upstream_hint_ids"] for record in exercises):
-        raise ValueError("Chapter 6 exercise-support topology changed")
+        if re.search(r"\\emph\{Hint(?:[.:])?\}", fragment):
+            raise ValueError("Chapter 7 exercise inline-hint state changed")
+        exercises.append(
+            {
+                "schema": SCHEMA,
+                "schema_version": VERSION,
+                "record_type": "exercise_support",
+                "id": f"{CHAPTER_ID}-EXERCISE-SUPPORT-{number:03d}",
+                "exercise_unit_id": record["id"],
+                "source_exercise_order": number,
+                "upstream_hint_ids": hint_ids_by_statement.get(record["id"], []),
+                "upstream_inline_hint_state": "absent",
+                "upstream_answer_state": "absent",
+                "upstream_solution_state": "absent",
+                "original_solution_id": f"O001-{CHAPTER_ID}-EX-{number:03d}-SOLUTION",
+                "original_solution_state": "queued_in_O001",
+                "original_rights_id": "RIGHTS-ORIGINAL-CC-BY-SA-4.0",
+                "provenance": "separately_authored_not_Erdman",
+            }
+        )
+    if len(exercises) != 1 or exercises[0]["upstream_hint_ids"]:
+        raise ValueError("Chapter 7 exercise-support topology changed")
     if any(
         kind == "begin" and environment in {"answer", "solution"}
         for kind, environment in common.env_sequence(source)
     ):
-        raise ValueError("Chapter 6 unexpectedly contains a source answer or solution")
+        raise ValueError("Chapter 7 unexpectedly contains a source answer or solution")
 
-    # Close two append-only pending xrefs from already-admitted chapters.
-    for number, (label, pending_relation_id) in enumerate(
-        (
-            ("C069414", "FAOA-2015-CH02-REL-XREF-0001"),
-            ("C067441", "FAOA-2015-CH04-REL-XREF-0034"),
-        ),
-        1,
-    ):
-        relations.append(
-            {
-                "schema": SCHEMA,
-                "schema_version": VERSION,
-                "record_type": "relation",
-                "id": f"{CHAPTER_ID}-REL-RESOLVES-{number:04d}",
-                "relation_type": "resolves_pending_reference",
-                "from_id": local_label_map[label],
-                "to_id": pending_relation_id,
-                "source_local_id": label,
-                "stable_label_id": f"ERDMAN-FAOA-2015-LABEL-{label}",
-                "resolution": "declared_in_current_unit",
-            }
-        )
+    relations.append(
+        {
+            "schema": SCHEMA,
+            "schema_version": VERSION,
+            "record_type": "relation",
+            "id": f"{CHAPTER_ID}-REL-RESOLVES-0001",
+            "relation_type": "resolves_pending_reference",
+            "from_id": local_label_map["chap_cpt_ops"],
+            "to_id": "FAOA-2015-CH05-REL-XREF-0010",
+            "source_local_id": "chap_cpt_ops",
+            "stable_label_id": "ERDMAN-FAOA-2015-LABEL-chap_cpt_ops",
+            "resolution": "declared_in_current_unit",
+        }
+    )
 
     artifacts = artifact_records()
     corrections = correction_records()
     terms = terminology_records()
     qa = qa_records(formula_summary)
-    if (len(artifacts), len(corrections), len(terms), len(qa)) != (9, 20, 33, 8):
-        raise ValueError("Chapter 6 evidence record counts changed")
     relation_common = {
         "schema": SCHEMA,
         "schema_version": VERSION,
@@ -1555,8 +1410,8 @@ def main() -> None:
         )
     for number, artifact_id in enumerate(
         (
-            "ARTIFACT-FAOA-ID-CH06-TARGET-TEX",
-            "ARTIFACT-FAOA-ID-CH06-STRUCTURAL-CHECKER",
+            "ARTIFACT-FAOA-ID-CH07-TARGET-TEX",
+            "ARTIFACT-FAOA-ID-CH07-STRUCTURAL-CHECKER",
         ),
         1,
     ):
@@ -1566,7 +1421,7 @@ def main() -> None:
                 "id": f"{CHAPTER_ID}-REL-TERM-EVIDENCE-{number:04d}",
                 "relation_type": "terminology_evidence",
                 "to_id": artifact_id,
-                "evidence_scope": "all Chapter 6 terminology records and occurrences",
+                "evidence_scope": "all Chapter 7 terminology records and occurrences",
             }
         )
     for number, event in enumerate(qa, 1):
@@ -1587,8 +1442,8 @@ def main() -> None:
                 "to_id": correction["id"],
             }
         )
-    if len(relations) != 845:
-        raise ValueError(f"Chapter 6 relation invariant failed: {len(relations)}")
+    if len(relations) != 349:
+        raise ValueError(f"Chapter 7 relation invariant failed: {len(relations)}")
 
     for record in segment_records:
         for key in ("_source_start", "_source_end", "_target_start", "_target_end"):
@@ -1606,6 +1461,7 @@ def main() -> None:
     append_jsonl("qa_events.jsonl", qa)
     append_jsonl("corrections.jsonl", corrections)
     append_jsonl("terminology.jsonl", terms)
+    write_manifest()
 
     print(
         json.dumps(
@@ -1620,8 +1476,7 @@ def main() -> None:
                 "local_references": reference_counts["local"],
                 "admitted_prior_references": reference_counts["admitted_prior_unit"],
                 "future_references": reference_counts["pending_later_source_unit"],
-                "closed_prior_pending_references": 2,
-                "eqrefs": len(source_eqrefs),
+                "closed_prior_pending_references": 1,
                 "cites": cite_key_count,
                 "index_terms": len(source_terms),
                 "defined_terms": len(source_df),
@@ -1634,9 +1489,9 @@ def main() -> None:
                 "terminology_records": len(terms),
                 "artifacts": len(artifacts),
                 "qa_events": len(qa),
-                "receipt_document_state": "present" if receipt_bound() else "pending",
+                "receipt_document_state": "present",
                 "translation_state": state,
-                "qa_state": chapter_six_unit()["qa_state"],
+                "qa_state": qa_state,
                 **formula_summary,
             },
             sort_keys=True,

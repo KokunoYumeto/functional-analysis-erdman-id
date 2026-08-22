@@ -1,0 +1,120 @@
+
+
+
+
+
+\begin{thm}[Dekomposisi Polar]\label{0022287} Jika $T$ suatu operator pada ruang
+ \index{dekomposisi polar}%
+ \index{dekomposisi!polar}%
+Hilbert $H$, maka terdapat isometri parsial $V$ pada $H$ sedemikian sehingga
+ \begin{enumerate}
+    \item[(i)] ruang awal $V$ adalah $(\ker T)^\perp$,
+    \item[(ii)] ruang akhir $V$ adalah $\clo{\ran T}$, dan
+    \item[(iii)] $T = V\abs T$.
+ \end{enumerate}
+Dekomposisi $T$ ini unik dalam arti bahwa jika $T = V_0P$ dengan $V_0$ suatu
+isometri parsial dan $P$ suatu operator positif sedemikian sehingga $\ker V_0 = \ker P$, maka $P =
+\abs T$ dan $V_0 = V$.
+\end{thm}
+
+\begin{proof} Lihat \cite{Conway:1990}, VIII.3.11;\allowbreak \cite{Davidson:1996}, teorema I.8.1;
+\allowbreak \cite{KadisonR:1983}, teorema 6.1.2;\allowbreak \cite{Murphy:1990}, teorema 2.3.4;
+atau~\cite{Pedersen:1995}, teorema 3.2.17. \ns
+\end{proof}
+
+\begin{cor} Jika $T$ adalah suatu
+  \index{dekomposisi polar!dari operator invertibel}%
+ \index{operator!invertibel!dekomposisi polar dari}%
+ \index{invertibel!operator!dekomposisi polar dari}%
+operator invertibel pada suatu ruang Hilbert, maka isometri parsial dalam dekomposisi polar
+(lihat~\ref{0022287}) bersifat uniter.
+\end{cor}
+
+\begin{prop} Jika $T$ adalah suatu
+ \index{dekomposisi polar!dari operator normal}%
+ \index{operator!normal!dekomposisi polar dari}%
+ \index{normal!operator!dekomposisi polar dari}%
+operator normal pada suatu ruang Hilbert $H$, maka terdapat operator uniter $U$ pada $H$
+yang berkomutasi dengan $T$ dan memenuhi $T = U\abs T$.
+\end{prop}
+
+\begin{proof} Lihat \cite{Pedersen:1995}, proposisi 3.2.20.\ns \end{proof}
+
+\begin{exer} Misalkan $(S, \fml A,\mu)$ suatu ruang ukur $\sigma$-hingga dan $\phi \in
+L_\infty(\mu)$. Tentukan dekomposisi polar dari
+ \index{operator perkalian!dekomposisi polar dari}%
+ \index{operator!perkalian!dekomposisi polar dari}%
+ \index{dekomposisi polar!dari operator perkalian}%
+operator perkalian $M_\phi$ (lihat contoh~\ref{C063527}).
+\end{exer}
+
+
+
+
+
+
+
+
+
+\section{Operator Kelas Jejak}
+
+Mari kita mulai dengan meninjau beberapa sifat standar \emph{jejak} suatu matriks $n \times n$.
+
+\begin{defn}\label{tr0113} Misalkan $a = [a_{ij}] \in \mathbf M_n$. Definisikan $\tr a$, yaitu
+ \index{jejak!dari suatu matriks}%
+ \index{matriks!jejak dari suatu}%
+ \index{tr@$\tr$ (jejak)}%
+\df{jejak} dari $a$, dengan
+  \[ \tr a = \sum_{i = 1}^n a_{ii}. \]
+\end{defn}
+
+\begin{prop}\label{tr0117} Fungsi $\tr\colon \mathbf M_n \sto \C$ bersifat linear.
+\end{prop}
+
+\begin{prop}\label{tr0121} Jika $a$, $b \in \mathbf M_n$, maka $\tr (ab) = \tr (ba)$.
+\end{prop}
+
+Jejak bersifat invarian terhadap keserupaan. Dua matriks $n \times n$, yaitu $a$ dan $b$, disebut
+ \index{serupa!matriks}%
+ \index{matriks!serupa}%
+\df{serupa} jika terdapat matriks invertibel $s$ sedemikian sehingga $b = sas^{-1}$.
+
+\begin{prop}\label{tr0124} Matriks-matriks dalam $\mathbf M_n$ yang serupa mempunyai jejak yang sama.
+\end{prop}
+
+\begin{defn}\label{tr0211} Misalkan $H$ suatu ruang Hilbert separabel, $(e_n)$ suatu basis ortonormal bagi~$H$, dan $T$
+suatu operator positif pada~$H$. Definisikan
+ \index{jejak}%
+ \index{tr@$\tr$ (jejak)}%
+\df{jejak} dari~$T$~dengan
+    \[ \tr T:=\sum_{k=1}^\infty \langle Te_k,e_k \rangle. \]
+(Jejak tidak harus berhingga.)
+\end{defn}
+
+\begin{prop} Jika $S$ dan $T$ merupakan operator positif pada suatu ruang Hilbert separabel dan $\alpha \ge 0$, maka
+   \[  \tr(S + T) = \tr S + \tr T \]
+dan
+   \[ \tr(\alpha T) = \alpha \tr T. \]
+\end{prop}
+
+\begin{prop} Jika $T$ suatu operator pada ruang Hilbert separabel, maka $\tr(T^*T) = \tr(TT^*)$.
+\end{prop}
+
+Untuk menunjukkan bahwa definisi jejak operator positif yang diberikan di atas tidak bergantung pada basis ortonormal yang dipilih bagi
+ruang Hilbert tersebut, kita memerlukan suatu hasil (yang diberikan berikut ini) yang bergantung pada fakta yang muncul kemudian dalam catatan ini: setiap operator positif pada ruang Hilbert
+memiliki akar kuadrat (positif) (lihat contoh~\futurexref{11.5.7}{X_sqroot_op}).
+
+\begin{prop}\label{tr0221} Pada keluarga operator positif di suatu ruang Hilbert separabel $H$, jejak bersifat invarian terhadap ekuivalensi uniter;
+yakni, jika $T$ operator positif dan $U$ uniter, maka $\tr T = \tr(UTU^*)$.
+\end{prop}
+
+\begin{proof}[\emph{Petunjuk untuk bukti}] Dalam proposisi sebelumnya, ambil $S = UT^{\frac12}$.    \ns
+\end{proof}
+
+\begin{prop}\label{tr0224} Definisi \emph{jejak}~\ref{tr0211} dari suatu operator positif pada ruang Hilbert separabel tidak bergantung
+pada pemilihan basis ortonormal bagi ruang tersebut.
+\end{prop}
+
+\begin{proof}[\emph{Petunjuk untuk bukti}] Misalkan $(e^k)$ dan $(f^k)$ basis-basis ortonormal bagi ruang tersebut dan $T$ suatu operator positif
+pada ruang itu. Ambil $U$ sebagai operator uniter unik yang memenuhi $e^k = Uf^k$ untuk setiap $k \in \N$.  \ns
+\end{proof}

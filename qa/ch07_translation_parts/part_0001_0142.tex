@@ -1,0 +1,142 @@
+\chapter{OPERATOR KOMPAK}\label{chap_cpt_ops}
+
+\section{Definisi dan Sifat-Sifat Dasar}
+
+Kita akan melanjutkan pembahasan dari akhir Bab 5 dengan mempelajari kelas-kelas operator.
+Konteks kita akan sedikit lebih umum; dalam hal operator kompak, kita akan
+meninjau operator pada ruang Banach.  Pertama, mari kita ingat kembali beberapa definisi dan
+fakta dasar dari kalkulus lanjut (atau mata kuliah pengantar analisis).
+
+\begin{defn} Suatu subhimpunan $A$ dari ruang metrik $M$ disebut
+ \index{total!keterbatasan}%
+ \index{terbatas!total}%
+\df{terbatas total} jika untuk setiap $\epsilon > 0$ terdapat suatu subhimpunan hingga $F$ dari $A$
+sedemikian sehingga untuk setiap $a \in A$ terdapat titik $x \in F$ yang memenuhi $d(x,a) < \epsilon$.
+Untuk ruang linear bernorma, definisi ini dapat dirumuskan kembali: Suatu subhimpunan $A$ dari ruang linear
+bernorma $V$ disebut \df{terbatas total} jika untuk setiap bola terbuka $B$ di sekitar nol dalam $V$ terdapat
+suatu subhimpunan hingga $F$ dari $A$ sedemikian sehingga $A \subseteq F + B$.  Hal ini memiliki parafrasa yang kurang lebih baku:
+Suatu ruang bersifat terbatas total jika dapat diawasi oleh sejumlah hingga polisi dengan jarak pandang
+sependek apa pun.  (Sebagian penulis menyebut sifat ini \emph{prakompak}.)
+\end{defn}
+
+\begin{prop} Suatu ruang metrik bersifat kompak jika dan hanya jika ruang itu lengkap dan terbatas total.
+\end{prop}
+
+\begin{prop} Suatu ruang metrik bersifat kompak jika dan hanya jika ruang itu lengkap dan terbatas total.
+\end{prop}
+
+\begin{defn} Suatu subhimpunan $A$ dari ruang topologis $X$ disebut
+ \index{kompak!relatif}%
+ \index{relatif kompak}%
+\df{kompak relatif} jika tutupannya kompak.
+\end{defn}
+
+\begin{prop} Dalam ruang metrik, setiap himpunan kompak relatif adalah terbatas total.
+\end{prop}
+
+Dalam ruang metrik lengkap, kebalikannya berlaku.
+
+\begin{prop} Dalam ruang metrik lengkap, setiap himpunan terbatas total adalah kompak relatif.
+\end{prop}
+
+\begin{prop} Dalam ruang metrik, setiap himpunan terbatas total adalah separabel.
+\end{prop}
+
+\begin{thm}[Teorema Arzel\`a-Ascoli]\label{AAThm} Misalkan $X$ ruang Hausdorff kompak. Suatu subhimpunan $\fml F$
+dari $\fml C(X)$ terbatas total apabila subhimpunan itu terbatas (secara seragam) dan ekuikontinu.
+\end{thm}
+
+Berikutnya kita akan membandingkan topologi \emph{lemah} dan \emph{kuat} pada ruang linear bernorma.
+Istilah
+ \index{lemah!\emph{vs.} topologi kuat pada ruang linear bernorma}%
+ \index{topologi!lemah!\emph{vs.} kuat pada ruang linear bernorma}%
+ \index{kuat!\emph{vs.} topologi lemah pada ruang linear bernorma}%
+ \index{konvensi!pada ruang linear bernorma \emph{topologi kuat} merujuk pada topologi norma}%
+\emph{topologi lemah} akan merujuk pada topologi lemah biasa yang ditentukan oleh fungsional linear terbatas
+pada ruang tersebut sebagaimana didefinisikan dalam~\ref{C067434}, sedangkan \emph{topologi kuat} akan merujuk pada topologi norma pada ruang tersebut.
+Namun, perlu diingat bahwa kata ``kuat'' dalam konteks ruang linear bernorma, jika ditilik secara ketat,
+sesungguhnya mubazir.  Kata itu digunakan semata-mata sebagai penegasan.  Misalnya, banyak penulis akan menyatakan proposisi berikut sebagai:
+\emph{Setiap barisan yang konvergen secara lemah dalam ruang linear bernorma adalah terbatas.}
+
+\begin{prop} Setiap barisan yang konvergen secara lemah dalam ruang linear bernorma adalah terbatas secara kuat.
+\end{prop}
+
+\begin{proof}[\emph{Petunjuk untuk bukti}] Gunakan \emph{prinsip keterbatasan seragam}~\ref{thm_PUB}. \ns
+\end{proof}
+
+\begin{defn} Kita mengatakan bahwa suatu pemetaan linear $T\colon V \sto W$ bersifat
+ \index{lemah!kekontinuan}%
+ \index{kontinu!secara lemah}%
+ \index{linear!pemetaan!kekontinuan lemah suatu}%
+\df{kontinu secara lemah} jika pemetaan itu membawa jaring yang konvergen secara lemah ke jaring yang konvergen secara lemah.
+\end{defn}
+
+\begin{prop} Setiap pemetaan linear yang kontinu (secara kuat) antara ruang-ruang linear bernorma bersifat kontinu secara lemah.
+\end{prop}
+
+\begin{defn} Suatu pemetaan linear $T\colon V \sto W$ antara ruang-ruang linear bernorma disebut
+ \index{kompak!pemetaan linear}%
+ \index{linear!pemetaan!kompak}%
+ \index{operator!kompak}%
+\df{kompak} jika pemetaan itu membawa himpunan terbatas ke himpunan kompak relatif. Secara ekuivalen, $T$ bersifat kompak jika pemetaan itu
+memetakan bola satuan tertutup dalam $V$ ke suatu himpunan kompak relatif dalam~$W$.   Keluarga semua pemetaan linear kompak
+dari $V$ ke $W$ dinotasikan
+ \index{K@$\ofml K(V,W)$!keluarga pemetaan linear kompak}%
+ \index{K@$\ofml K(V)$!keluarga operator kompak}%
+dengan~$\ofml K(V,W)$; dan kita tulis $\ofml K(V)$ untuk~$\ofml K(V,V)$.
+\end{defn}
+
+\begin{prop} Setiap pemetaan linear kompak bersifat terbatas.
+\end{prop}
+
+\begin{prop} Suatu pemetaan linear $T\colon V \sto W$ antara ruang-ruang linear bernorma bersifat kompak jika dan hanya jika pemetaan itu membawa
+setiap barisan terbatas dalam $V$ ke suatu barisan dalam $W$ yang memiliki subbarisan konvergen.
+\end{prop}
+
+\begin{exam} Setiap operator berperingkat hingga pada ruang Banach bersifat kompak.
+\end{exam}
+
+\begin{exam} Setiap fungsional linear terbatas pada ruang Banach $B$ merupakan pemetaan linear kompak dari $B$ ke~$\K$.
+\end{exam}
+
+\begin{exam} Misalkan $C$ ruang Banach $\fml C([0,1])$ dan $k \in \fml C([0,1] \times [0,1])$.  Untuk setiap $f \in C$
+ \index{integral!operator}%
+ \index{operator!integral}%
+definisikan fungsi $Kf$ pada $[0,1]$ dengan
+   \[ Kf(x) = \int_0^1 k(x,y)f(y)\,dy\,. \]
+Maka operator integral $K$ merupakan operator kompak pada~$C$.
+\end{exam}
+
+\begin{proof}[\emph{Petunjuk untuk bukti}] Gunakan \emph{teorema Arzel\`a-Ascoli}~\ref{AAThm}.  \ns
+\end{proof}
+
+\begin{exam}\label{X_square_int_kernel} Misalkan $H$ ruang Hilbert $\lfs2{[0,1]}$ yang terdiri atas (kelas-kelas ekuivalensi) fungsi yang
+terintegralkan kuadrat pada $[0,1]$ terhadap ukuran Lebesgue dan
+ \index{integral!operator}%
+ \index{operator!integral}%
+$k$ suatu fungsi yang terintegralkan kuadrat
+pada $[0,1] \times [0,1]$.  Untuk setiap $f \in H$ definisikan fungsi $Kf$ pada $[0,1]$ dengan
+   \[ Kf(x) = \int_0^1 k(x,y)f(y)\,dy\,. \]
+Maka operator integral $K$ merupakan operator kompak pada~$H$.
+\end{exam}
+
+\begin{prop} Suatu operator pada ruang Hilbert bersifat kompak jika dan hanya jika operator itu memetakan bola satuan tertutup dalam ruang tersebut
+ke suatu himpunan kompak.
+\end{prop}
+
+\begin{cor}\label{cor_id_op_not_cpt} Operator identitas pada ruang Hilbert berdimensi tak hingga tidak kompak.
+(Lihat contoh~\ref{X_l2ball_not_cpt}.)
+\end{cor}
+
+\begin{exam} Jika $B$ ruang Banach, keluarga $\ofml B(B)$ dari operator pada $B$ merupakan
+ \index{Banach!aljabar!$\ofml B(B)$ sebagai suatu}%
+ \index{B@$\ofml B(V)$!sebagai aljabar Banach beridentitas}%
+aljabar Banach beridentitas dan
+ \index{K@$\ofml K(V)$!sebagai ideal tertutup sejati}%
+keluarga $\ofml K(B)$ dari operator kompak pada $B$ merupakan ideal tertutup dalam~$\ofml B(B)$.
+Jika $B$ berdimensi tak hingga, ideal $\ofml K(B)$ adalah sejati.
+\end{exam}
+
+\begin{prop} Misalkan $T\colon B \sto C$ suatu pemetaan linear terbatas antara ruang-ruang Banach. Maka $T$ bersifat kompak
+jika dan hanya jika $T^*$ bersifat kompak.
+\end{prop}

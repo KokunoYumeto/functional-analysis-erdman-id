@@ -1,0 +1,161 @@
+
+\begin{defn}\label{0013} Suatu
+ \index{C*@aljabar-$C^*$}%
+ \index{aljabar!$C^*$-}%
+\df{aljabar-$C^\ast$} adalah aljabar Banach $A$ dengan involusi yang memenuhi
+   \[ \norm{a^*a} = \norm{a}^2 \]
+untuk setiap $a \in A$.  Sifat norma ini biasanya disebut
+ \index{C*@syarat-$C^*$}%
+\emph{syarat-$C^*$}. Norma aljabar yang memenuhi syarat ini adalah
+ \index{C*@norma-$C^*$}%
+ \index{norma!$C^*$-}%
+\df{norma-$C^*$}.  Suatu
+ \index{C*@subaljabar-$C^*$}%
+ \index{subaljabar!$C^*$-}%
+\df{subaljabar-$C^*$} dari aljabar-$C^*$ $A$ adalah subaljabar-$*\,$ tertutup dari~$A$.
+
+Kita menyatakan kategori aljabar-$C^*$ dan homomorfisme-$*\,$ dengan $\cat{CSA}$.
+ \index{kategori!$\cat{CSA}$ sebagai suatu}%
+ \index{CSA@$\cat{CSA}$!kategori}%
+Sepintas mungkin tampak aneh bahwa dalam kategori ini, yang objek-objeknya memiliki sifat aljabar sekaligus topologis,
+morfismenya hanya disyaratkan mempertahankan struktur aljabar. Namun, ternyata
+setiap morfisme dalam $\cat{CSA}$ secara otomatis kontinu---bahkan, kontraktif (lihat
+proposisi~\futurexref{12.3.16}{00152171})---dan
+ \index{morfisme bijektif!dapat dibalik!dalam $\cat{CSA}$}%
+setiap morfisme injektif merupakan isometri (lihat proposisi~\futurexref{12.3.17}{00152181}).  Jelas bahwa
+(seperti pada definisi~\ref{00109}) setiap morfisme bijektif dalam kategori ini merupakan isomorfisme. Dengan demikian, setiap homomorfisme-$*\,$ bijektif
+merupakan isomorfisme-$*\,$ isometrik.
+\end{defn}
+
+\begin{exam} Ruang vektor $\C$ dari bilangan kompleks, dengan perkalian bilangan kompleks biasa
+ \index{C*@aljabar-$C^*$!$\C$ sebagai suatu}%
+ \index{C@$\C$!sebagai aljabar-$C^*$}%
+dan konjugasi kompleks $z \mapsto \conj z$ sebagai involusi, merupakan aljabar-$C^*$
+komutatif beridentitas.
+\end{exam}
+
+\begin{exam} Jika $X$ suatu ruang Hausdorff kompak, aljabar $\fml C(X)$ dari fungsi kontinu
+ \index{C*@aljabar-$C^*$!$\fml C(X)$ sebagai suatu}%
+ \index{C@$\fml C(X)$!sebagai aljabar-$C^*$}%
+bernilai kompleks pada $X$ merupakan aljabar-$C^*$ komutatif beridentitas apabila involusinya
+diambil sebagai konjugasi kompleks.
+\end{exam}
+
+\begin{exam} Jika $X$ suatu ruang Hausdorff kompak lokal, aljabar Banach
+ \index{C*@aljabar-$C^*$!$\fml C_0(X)$ sebagai suatu}%
+ \index{C@$\fml C_0(X)$!sebagai aljabar-$C^*$}%
+$\fml C_0(X) = \fml C_0(X,\C)$ dari fungsi kontinu bernilai kompleks pada $X$ yang lenyap
+di tak hingga merupakan aljabar-$C^*$ komutatif (tidak mesti beridentitas) apabila involusinya
+diambil sebagai konjugasi kompleks.
+\end{exam}
+
+\begin{exam} Jika $(X,\mu)$ suatu ruang ukur, aljabar $\lfs\infty(X,\mu)$ dari
+ \index{C*@aljabar-$C^*$!$L_\infty(S)$ sebagai suatu}%
+ \index{L@$\lfs\infty(S)$!sebagai aljabar-$C^*$}%
+fungsi terukur bernilai kompleks yang terbatas secara esensial pada $X$ (sekali lagi dengan konjugasi
+kompleks sebagai involusi) merupakan aljabar-$C^*$.  (Secara teknis, tentu saja, anggota
+$\lfs\infty(X,\mu)$ adalah kelas-kelas ekuivalensi fungsi yang berbeda pada himpunan-himpunan berukuran nol.)
+\end{exam}
+
+\begin{exam}\label{001305fa} Aljabar $\ofml B(H)$ dari operator linear terbatas pada ruang Hilbert
+ \index{C*@aljabar-$C^*$!$\ofml B(H)$ sebagai suatu}%
+ \index{B@$\ofml B(V)$!sebagai aljabar-$C^*$}%
+$H$ merupakan aljabar-$C^*$ beridentitas.  Keluarga $\ofml K(H)$ dari operator kompak merupakan ideal-$*\,$ tertutup
+dalam aljabar tersebut.
+\end{exam}
+
+\begin{exam}\label{001306} Sebagai kasus khusus dari contoh sebelumnya, perhatikan bahwa himpunan
+ \index{C*@aljabar-$C^*$!M@$\mathbf M_n$ sebagai suatu}%
+ \index{Ma@$\mathbf M_n = \M n\C$!sebagai aljabar-$C^*$}%
+$\mathbf M_n$ dari matriks bilangan kompleks berukuran $n \times n$ merupakan aljabar-$C^*$ beridentitas.
+\end{exam}
+
+\begin{prop}\label{prop_K_is_clo_FR} Dalam ruang Hilbert $H$, ideal $\ofml K(H)$ dari operator kompak merupakan tutupan
+ideal $\ofml{FR}(H)$ dari operator berperingkat hingga.
+\end{prop}
+
+Selama kira-kira satu dasawarsa sebelum Perang Dunia Kedua, sejumlah matematikawan Polandia terkemuka berkumpul secara teratur di kedai
+kopi di Lwow untuk membahas hasil dan mengajukan masalah.  Mula-mula mereka bertemu di \emph{Caf\'e Roma}, kemudian di
+\emph{Scottish Caf\'e}.  Pada 1935 Stefan Banach menyediakan buku catatan berjilid tempat mereka dapat menuliskan masalah-masalah tersebut.
+Dari sinilah \emph{Scottish Book}~\cite{Mauldin:1981} yang kini terkenal bermula.  Pada 6 November 1936, Stanislaw Mazur
+menuliskan Masalah 153, yang dikenal sebagai \emph{masalah aproksimasi}; pada intinya masalah itu menanyakan apakah proposisi sebelumnya
+berlaku untuk ruang Banach.  Dapatkah setiap operator kompak pada ruang Banach diaproksimasi dalam norma oleh operator berperingkat hingga?
+Sebagai hadiah bagi pemecah masalah ini, Mazur menawarkan seekor angsa hidup (tergolong salah satu hadiah paling murah hati yang dijanjikan dalam
+\emph{Scottish Book}).  Masalah tersebut tetap terbuka selama beberapa dasawarsa, hingga pada 1972 Per Enflo memberikan jawaban negatif,
+setelah berhasil menemukan ruang Banach refleksif separabel yang di dalamnya aproksimasi semacam itu gagal.  Dalam sebuah upacara yang diadakan
+tahun itu di Warsawa, Enflo menerima angsa hidupnya dari Mazur sendiri.  Hasil tersebut diterbitkan dalam Acta
+Mathematica~\cite{Enflo:1973} pada~1973.
+
+\begin{exam} Operator diagonal $\diag(1,\frac12,\frac13,\dots)$ merupakan operator kompak pada ruang Hilbert~$l_2$.
+\end{exam}
+
+
+
+
+
+
+
+
+
+
+
+\section{Isometri Parsial}
+\begin{defn}  Suatu elemen $v$ dari aljabar-$C^*$ $A$ disebut
+ \index{parsial!isometri}%
+\df{isometri parsial} jika $v^*v$ merupakan proyeksi dalam~$A$.  (Karena $v^*v$ selalu
+swaadjoin, cukup disyaratkan bahwa $v^*v$ idempoten.)  Elemen $v^*v$ adalah
+\df{proyeksi}
+ \index{awal!proyeksi}%
+ \index{proyeksi!awal}%
+ \index{parsial!isometri!proyeksi awal dari suatu}%
+\df{awal} (atau
+ \index{tumpuan!proyeksi}%
+ \index{proyeksi!tumpuan}%
+ \index{parsial!isometri!proyeksi tumpuan dari suatu}%
+\df{tumpuan}) dari~$v$, sedangkan $vv^*$ adalah \df{proyeksi}
+ \index{akhir!proyeksi}%
+ \index{proyeksi!akhir}%
+ \index{parsial!isometri!proyeksi akhir dari suatu}%
+\df{akhir} (atau
+ \index{jangkauan!proyeksi}%
+ \index{proyeksi!jangkauan}%
+ \index{parsial!isometri!proyeksi jangkauan dari suatu}%
+\df{jangkauan}) dari~$v$.  (Sebagai konsekuensi langsung dari proposisi berikutnya,
+jika $v$ suatu isometri parsial, maka $vv^*$ memang merupakan proyeksi.)
+\end{defn}
+
+\begin{prop}\label{pi0111} Jika $v$ suatu isometri parsial dalam aljabar-$C^*$, maka
+ \begin{enumerate}[label=\rm{(\alph*)}]
+  \item $vv^*v = v$\,; dan
+  \item $v^*$ merupakan isometri parsial.
+ \end{enumerate}
+\end{prop}
+
+\begin{proof}[\emph{Petunjuk untuk bukti}] Misalkan $z = v - vv^*v$ dan tinjau $z^*z$.  \ns
+\end{proof}
+
+\begin{prop}\label{pi0114} Misalkan $v$ suatu isometri parsial dalam aljabar-$C^*$~$A$.  Maka proyeksi awalnya
+$p$ adalah proyeksi terkecil (terhadap urutan parsial~$\preceq$
+pada $\fml P(A)$\,) sedemikian sehingga $vp = v$, dan proyeksi akhirnya $q$ adalah proyeksi
+terkecil sedemikian sehingga $qv = v$.
+\end{prop}
+
+\begin{prop}\label{pi0117} Jika $V$ suatu isometri parsial pada ruang Hilbert $H$ (yakni, jika $V$ suatu isometri parsial
+dalam aljabar-$C^*$~$\ofml B(H)$\,), maka proyeksi awal $V^*V$ adalah
+proyeksi dari $H$ pada $(\ker V)^\perp$, dan proyeksi akhir $VV^*$ adalah proyeksi
+dari $H$ pada~$\ran V$.
+\end{prop}
+
+Berdasarkan hasil sebelumnya, $(\ker V)^\perp$ disebut
+ \index{awal!ruang}%
+ \index{ruang!awal}%
+ \index{ruang!tumpuan}%
+ \index{tumpuan!ruang}%
+\df{ruang} \df{awal} (atau \df{tumpuan}) dari~$V$, sedangkan $\ran V$ kadang-kadang disebut
+ \index{akhir!ruang}%
+ \index{ruang!akhir}%
+\df{ruang akhir} dari~$V$.
+
+\begin{prop}\label{pi0121} Suatu operator pada ruang Hilbert merupakan isometri parsial jika dan hanya jika operator tersebut merupakan
+isometri pada komplemen ortogonal dari kernelnya.
+\end{prop}

@@ -1,0 +1,517 @@
+\chapter{OPERATOR KOMPAK}\label{chap_cpt_ops}
+
+\section{Definisi dan Sifat-Sifat Dasar}
+
+Kita akan melanjutkan pembahasan dari akhir Bab 5 dengan mempelajari kelas-kelas operator.
+Konteks kita akan sedikit lebih umum; dalam hal operator kompak, kita akan
+meninjau operator pada ruang Banach.  Pertama, mari kita ingat kembali beberapa definisi dan
+fakta dasar dari kalkulus lanjut (atau mata kuliah pengantar analisis).
+
+\begin{defn} Suatu subhimpunan $A$ dari ruang metrik $M$ disebut
+ \index{total!keterbatasan}%
+ \index{terbatas!total}%
+\df{terbatas total} jika untuk setiap $\epsilon > 0$ terdapat suatu subhimpunan hingga $F$ dari $A$
+sedemikian sehingga untuk setiap $a \in A$ terdapat titik $x \in F$ yang memenuhi $d(x,a) < \epsilon$.
+Untuk ruang linear bernorma, definisi ini dapat dirumuskan kembali: Suatu subhimpunan $A$ dari ruang linear
+bernorma $V$ disebut \df{terbatas total} jika untuk setiap bola terbuka $B$ di sekitar nol dalam $V$ terdapat
+suatu subhimpunan hingga $F$ dari $A$ sedemikian sehingga $A \subseteq F + B$.  Hal ini memiliki parafrasa yang kurang lebih baku:
+Suatu ruang bersifat terbatas total jika dapat diawasi oleh sejumlah hingga polisi dengan jarak pandang
+sependek apa pun.  (Sebagian penulis menyebut sifat ini \emph{prakompak}.)
+\end{defn}
+
+\begin{prop} Suatu ruang metrik bersifat kompak jika dan hanya jika ruang itu lengkap dan terbatas total.
+\end{prop}
+
+\begin{prop} Suatu ruang metrik bersifat kompak jika dan hanya jika ruang itu lengkap dan terbatas total.
+\end{prop}
+
+\begin{defn} Suatu subhimpunan $A$ dari ruang topologis $X$ disebut
+ \index{kompak!relatif}%
+ \index{relatif kompak}%
+\df{kompak relatif} jika tutupannya kompak.
+\end{defn}
+
+\begin{prop} Dalam ruang metrik, setiap himpunan kompak relatif adalah terbatas total.
+\end{prop}
+
+Dalam ruang metrik lengkap, kebalikannya berlaku.
+
+\begin{prop} Dalam ruang metrik lengkap, setiap himpunan terbatas total adalah kompak relatif.
+\end{prop}
+
+\begin{prop} Dalam ruang metrik, setiap himpunan terbatas total adalah separabel.
+\end{prop}
+
+\begin{thm}[Teorema Arzel\`a-Ascoli]\label{AAThm} Misalkan $X$ ruang Hausdorff kompak. Suatu subhimpunan $\fml F$
+dari $\fml C(X)$ terbatas total apabila subhimpunan itu terbatas (secara seragam) dan ekuikontinu.
+\end{thm}
+
+Berikutnya kita akan membandingkan topologi \emph{lemah} dan \emph{kuat} pada ruang linear bernorma.
+Istilah
+ \index{lemah!\emph{vs.} topologi kuat pada ruang linear bernorma}%
+ \index{topologi!lemah!\emph{vs.} kuat pada ruang linear bernorma}%
+ \index{kuat!\emph{vs.} topologi lemah pada ruang linear bernorma}%
+ \index{konvensi!pada ruang linear bernorma \emph{topologi kuat} merujuk pada topologi norma}%
+\emph{topologi lemah} akan merujuk pada topologi lemah biasa yang ditentukan oleh fungsional linear terbatas
+pada ruang tersebut sebagaimana didefinisikan dalam~\ref{C067434}, sedangkan \emph{topologi kuat} akan merujuk pada topologi norma pada ruang tersebut.
+Namun, perlu diingat bahwa kata ``kuat'' dalam konteks ruang linear bernorma, jika ditilik secara ketat,
+sesungguhnya mubazir.  Kata itu digunakan semata-mata sebagai penegasan.  Misalnya, banyak penulis akan menyatakan proposisi berikut sebagai:
+\emph{Setiap barisan yang konvergen secara lemah dalam ruang linear bernorma adalah terbatas.}
+
+\begin{prop} Setiap barisan yang konvergen secara lemah dalam ruang linear bernorma adalah terbatas secara kuat.
+\end{prop}
+
+\begin{proof}[\emph{Petunjuk untuk bukti}] Gunakan \emph{prinsip keterbatasan seragam}~\ref{thm_PUB}. \ns
+\end{proof}
+
+\begin{defn} Kita mengatakan bahwa suatu pemetaan linear $T\colon V \sto W$ bersifat
+ \index{lemah!kekontinuan}%
+ \index{kontinu!secara lemah}%
+ \index{linear!pemetaan!kekontinuan lemah suatu}%
+\df{kontinu secara lemah} jika pemetaan itu membawa jaring yang konvergen secara lemah ke jaring yang konvergen secara lemah.
+\end{defn}
+
+\begin{prop} Setiap pemetaan linear yang kontinu (secara kuat) antara ruang-ruang linear bernorma bersifat kontinu secara lemah.
+\end{prop}
+
+\begin{defn} Suatu pemetaan linear $T\colon V \sto W$ antara ruang-ruang linear bernorma disebut
+ \index{kompak!pemetaan linear}%
+ \index{linear!pemetaan!kompak}%
+ \index{operator!kompak}%
+\df{kompak} jika pemetaan itu membawa himpunan terbatas ke himpunan kompak relatif. Secara ekuivalen, $T$ bersifat kompak jika pemetaan itu
+memetakan bola satuan tertutup dalam $V$ ke suatu himpunan kompak relatif dalam~$W$.   Keluarga semua pemetaan linear kompak
+dari $V$ ke $W$ dinotasikan
+ \index{K@$\ofml K(V,W)$!keluarga pemetaan linear kompak}%
+ \index{K@$\ofml K(V)$!keluarga operator kompak}%
+dengan~$\ofml K(V,W)$; dan kita tulis $\ofml K(V)$ untuk~$\ofml K(V,V)$.
+\end{defn}
+
+\begin{prop} Setiap pemetaan linear kompak bersifat terbatas.
+\end{prop}
+
+\begin{prop} Suatu pemetaan linear $T\colon V \sto W$ antara ruang-ruang linear bernorma bersifat kompak jika dan hanya jika pemetaan itu membawa
+setiap barisan terbatas dalam $V$ ke suatu barisan dalam $W$ yang memiliki subbarisan konvergen.
+\end{prop}
+
+\begin{exam} Setiap operator berperingkat hingga pada ruang Banach bersifat kompak.
+\end{exam}
+
+\begin{exam} Setiap fungsional linear terbatas pada ruang Banach $B$ merupakan pemetaan linear kompak dari $B$ ke~$\K$.
+\end{exam}
+
+\begin{exam} Misalkan $C$ ruang Banach $\fml C([0,1])$ dan $k \in \fml C([0,1] \times [0,1])$.  Untuk setiap $f \in C$
+ \index{integral!operator}%
+ \index{operator!integral}%
+definisikan fungsi $Kf$ pada $[0,1]$ dengan
+   \[ Kf(x) = \int_0^1 k(x,y)f(y)\,dy\,. \]
+Maka operator integral $K$ merupakan operator kompak pada~$C$.
+\end{exam}
+
+\begin{proof}[\emph{Petunjuk untuk bukti}] Gunakan \emph{teorema Arzel\`a-Ascoli}~\ref{AAThm}.  \ns
+\end{proof}
+
+\begin{exam}\label{X_square_int_kernel} Misalkan $H$ ruang Hilbert $\lfs2{[0,1]}$ yang terdiri atas (kelas-kelas ekuivalensi) fungsi yang
+terintegralkan kuadrat pada $[0,1]$ terhadap ukuran Lebesgue dan
+ \index{integral!operator}%
+ \index{operator!integral}%
+$k$ suatu fungsi yang terintegralkan kuadrat
+pada $[0,1] \times [0,1]$.  Untuk setiap $f \in H$ definisikan fungsi $Kf$ pada $[0,1]$ dengan
+   \[ Kf(x) = \int_0^1 k(x,y)f(y)\,dy\,. \]
+Maka operator integral $K$ merupakan operator kompak pada~$H$.
+\end{exam}
+
+\begin{prop} Suatu operator pada ruang Hilbert bersifat kompak jika dan hanya jika operator itu memetakan bola satuan tertutup dalam ruang tersebut
+ke suatu himpunan kompak.
+\end{prop}
+
+\begin{cor}\label{cor_id_op_not_cpt} Operator identitas pada ruang Hilbert berdimensi tak hingga tidak kompak.
+(Lihat contoh~\ref{X_l2ball_not_cpt}.)
+\end{cor}
+
+\begin{exam} Jika $B$ ruang Banach, keluarga $\ofml B(B)$ dari operator pada $B$ merupakan
+ \index{Banach!aljabar!$\ofml B(B)$ sebagai suatu}%
+ \index{B@$\ofml B(V)$!sebagai aljabar Banach beridentitas}%
+aljabar Banach beridentitas dan
+ \index{K@$\ofml K(V)$!sebagai ideal tertutup sejati}%
+keluarga $\ofml K(B)$ dari operator kompak pada $B$ merupakan ideal tertutup dalam~$\ofml B(B)$.
+Jika $B$ berdimensi tak hingga, ideal $\ofml K(B)$ adalah sejati.
+\end{exam}
+
+\begin{prop} Misalkan $T\colon B \sto C$ suatu pemetaan linear terbatas antara ruang-ruang Banach. Maka $T$ bersifat kompak
+jika dan hanya jika $T^*$ bersifat kompak.
+\end{prop}
+
+\begin{defn}\label{0013} Suatu
+ \index{C*@aljabar-$C^*$}%
+ \index{aljabar!$C^*$-}%
+\df{aljabar-$C^\ast$} adalah aljabar Banach $A$ dengan involusi yang memenuhi
+   \[ \norm{a^*a} = \norm{a}^2 \]
+untuk setiap $a \in A$.  Sifat norma ini biasanya disebut
+ \index{C*@syarat-$C^*$}%
+\emph{syarat-$C^*$}. Norma aljabar yang memenuhi syarat ini adalah
+ \index{C*@norma-$C^*$}%
+ \index{norma!$C^*$-}%
+\df{norma-$C^*$}.  Suatu
+ \index{C*@subaljabar-$C^*$}%
+ \index{subaljabar!$C^*$-}%
+\df{subaljabar-$C^*$} dari aljabar-$C^*$ $A$ adalah subaljabar-$*\,$ tertutup dari~$A$.
+
+Kita menyatakan kategori aljabar-$C^*$ dan homomorfisme-$*\,$ dengan $\cat{CSA}$.
+ \index{kategori!$\cat{CSA}$ sebagai suatu}%
+ \index{CSA@$\cat{CSA}$!kategori}%
+Sepintas mungkin tampak aneh bahwa dalam kategori ini, yang objek-objeknya memiliki sifat aljabar sekaligus topologis,
+morfismenya hanya disyaratkan mempertahankan struktur aljabar. Namun, ternyata
+setiap morfisme dalam $\cat{CSA}$ secara otomatis kontinu---bahkan, kontraktif (lihat
+proposisi~\futurexref{12.3.16}{00152171})---dan
+ \index{morfisme bijektif!dapat dibalik!dalam $\cat{CSA}$}%
+setiap morfisme injektif merupakan isometri (lihat proposisi~\futurexref{12.3.17}{00152181}).  Jelas bahwa
+(seperti pada definisi~\ref{00109}) setiap morfisme bijektif dalam kategori ini merupakan isomorfisme. Dengan demikian, setiap homomorfisme-$*\,$ bijektif
+merupakan isomorfisme-$*\,$ isometrik.
+\end{defn}
+
+\begin{exam} Ruang vektor $\C$ dari bilangan kompleks, dengan perkalian bilangan kompleks biasa
+ \index{C*@aljabar-$C^*$!$\C$ sebagai suatu}%
+ \index{C@$\C$!sebagai aljabar-$C^*$}%
+dan konjugasi kompleks $z \mapsto \conj z$ sebagai involusi, merupakan aljabar-$C^*$
+komutatif beridentitas.
+\end{exam}
+
+\begin{exam} Jika $X$ suatu ruang Hausdorff kompak, aljabar $\fml C(X)$ dari fungsi kontinu
+ \index{C*@aljabar-$C^*$!$\fml C(X)$ sebagai suatu}%
+ \index{C@$\fml C(X)$!sebagai aljabar-$C^*$}%
+bernilai kompleks pada $X$ merupakan aljabar-$C^*$ komutatif beridentitas apabila involusinya
+diambil sebagai konjugasi kompleks.
+\end{exam}
+
+\begin{exam} Jika $X$ suatu ruang Hausdorff kompak lokal, aljabar Banach
+ \index{C*@aljabar-$C^*$!$\fml C_0(X)$ sebagai suatu}%
+ \index{C@$\fml C_0(X)$!sebagai aljabar-$C^*$}%
+$\fml C_0(X) = \fml C_0(X,\C)$ dari fungsi kontinu bernilai kompleks pada $X$ yang lenyap
+di tak hingga merupakan aljabar-$C^*$ komutatif (tidak mesti beridentitas) apabila involusinya
+diambil sebagai konjugasi kompleks.
+\end{exam}
+
+\begin{exam} Jika $(X,\mu)$ suatu ruang ukur, aljabar $\lfs\infty(X,\mu)$ dari
+ \index{C*@aljabar-$C^*$!$L_\infty(S)$ sebagai suatu}%
+ \index{L@$\lfs\infty(S)$!sebagai aljabar-$C^*$}%
+fungsi terukur bernilai kompleks yang terbatas secara esensial pada $X$ (sekali lagi dengan konjugasi
+kompleks sebagai involusi) merupakan aljabar-$C^*$.  (Secara teknis, tentu saja, anggota
+$\lfs\infty(X,\mu)$ adalah kelas-kelas ekuivalensi fungsi yang berbeda pada himpunan-himpunan berukuran nol.)
+\end{exam}
+
+\begin{exam}\label{001305fa} Aljabar $\ofml B(H)$ dari operator linear terbatas pada ruang Hilbert
+ \index{C*@aljabar-$C^*$!$\ofml B(H)$ sebagai suatu}%
+ \index{B@$\ofml B(V)$!sebagai aljabar-$C^*$}%
+$H$ merupakan aljabar-$C^*$ beridentitas.  Keluarga $\ofml K(H)$ dari operator kompak merupakan ideal-$*\,$ tertutup
+dalam aljabar tersebut.
+\end{exam}
+
+\begin{exam}\label{001306} Sebagai kasus khusus dari contoh sebelumnya, perhatikan bahwa himpunan
+ \index{C*@aljabar-$C^*$!M@$\mathbf M_n$ sebagai suatu}%
+ \index{Ma@$\mathbf M_n = \M n\C$!sebagai aljabar-$C^*$}%
+$\mathbf M_n$ dari matriks bilangan kompleks berukuran $n \times n$ merupakan aljabar-$C^*$ beridentitas.
+\end{exam}
+
+\begin{prop}\label{prop_K_is_clo_FR} Dalam ruang Hilbert $H$, ideal $\ofml K(H)$ dari operator kompak merupakan tutupan
+ideal $\ofml{FR}(H)$ dari operator berperingkat hingga.
+\end{prop}
+
+Selama kira-kira satu dasawarsa sebelum Perang Dunia Kedua, sejumlah matematikawan Polandia terkemuka berkumpul secara teratur di kedai
+kopi di Lwow untuk membahas hasil dan mengajukan masalah.  Mula-mula mereka bertemu di \emph{Caf\'e Roma}, kemudian di
+\emph{Scottish Caf\'e}.  Pada 1935 Stefan Banach menyediakan buku catatan berjilid tempat mereka dapat menuliskan masalah-masalah tersebut.
+Dari sinilah \emph{Scottish Book}~\cite{Mauldin:1981} yang kini terkenal bermula.  Pada 6 November 1936, Stanislaw Mazur
+menuliskan Masalah 153, yang dikenal sebagai \emph{masalah aproksimasi}; pada intinya masalah itu menanyakan apakah proposisi sebelumnya
+berlaku untuk ruang Banach.  Dapatkah setiap operator kompak pada ruang Banach diaproksimasi dalam norma oleh operator berperingkat hingga?
+Sebagai hadiah bagi pemecah masalah ini, Mazur menawarkan seekor angsa hidup (tergolong salah satu hadiah paling murah hati yang dijanjikan dalam
+\emph{Scottish Book}).  Masalah tersebut tetap terbuka selama beberapa dasawarsa, hingga pada 1972 Per Enflo memberikan jawaban negatif,
+setelah berhasil menemukan ruang Banach refleksif separabel yang di dalamnya aproksimasi semacam itu gagal.  Dalam sebuah upacara yang diadakan
+tahun itu di Warsawa, Enflo menerima angsa hidupnya dari Mazur sendiri.  Hasil tersebut diterbitkan dalam Acta
+Mathematica~\cite{Enflo:1973} pada~1973.
+
+\begin{exam} Operator diagonal $\diag(1,\frac12,\frac13,\dots)$ merupakan operator kompak pada ruang Hilbert~$l_2$.
+\end{exam}
+
+
+
+
+
+
+
+
+
+
+
+\section{Isometri Parsial}
+\begin{defn}  Suatu elemen $v$ dari aljabar-$C^*$ $A$ disebut
+ \index{parsial!isometri}%
+\df{isometri parsial} jika $v^*v$ merupakan proyeksi dalam~$A$.  (Karena $v^*v$ selalu
+swaadjoin, cukup disyaratkan bahwa $v^*v$ idempoten.)  Elemen $v^*v$ adalah
+\df{proyeksi}
+ \index{awal!proyeksi}%
+ \index{proyeksi!awal}%
+ \index{parsial!isometri!proyeksi awal dari suatu}%
+\df{awal} (atau
+ \index{tumpuan!proyeksi}%
+ \index{proyeksi!tumpuan}%
+ \index{parsial!isometri!proyeksi tumpuan dari suatu}%
+\df{tumpuan}) dari~$v$, sedangkan $vv^*$ adalah \df{proyeksi}
+ \index{akhir!proyeksi}%
+ \index{proyeksi!akhir}%
+ \index{parsial!isometri!proyeksi akhir dari suatu}%
+\df{akhir} (atau
+ \index{jangkauan!proyeksi}%
+ \index{proyeksi!jangkauan}%
+ \index{parsial!isometri!proyeksi jangkauan dari suatu}%
+\df{jangkauan}) dari~$v$.  (Sebagai konsekuensi langsung dari proposisi berikutnya,
+jika $v$ suatu isometri parsial, maka $vv^*$ memang merupakan proyeksi.)
+\end{defn}
+
+\begin{prop}\label{pi0111} Jika $v$ suatu isometri parsial dalam aljabar-$C^*$, maka
+ \begin{enumerate}[label=\rm{(\alph*)}]
+  \item $vv^*v = v$\,; dan
+  \item $v^*$ merupakan isometri parsial.
+ \end{enumerate}
+\end{prop}
+
+\begin{proof}[\emph{Petunjuk untuk bukti}] Misalkan $z = v - vv^*v$ dan tinjau $z^*z$.  \ns
+\end{proof}
+
+\begin{prop}\label{pi0114} Misalkan $v$ suatu isometri parsial dalam aljabar-$C^*$~$A$.  Maka proyeksi awalnya
+$p$ adalah proyeksi terkecil (terhadap urutan parsial~$\preceq$
+pada $\fml P(A)$\,) sedemikian sehingga $vp = v$, dan proyeksi akhirnya $q$ adalah proyeksi
+terkecil sedemikian sehingga $qv = v$.
+\end{prop}
+
+\begin{prop}\label{pi0117} Jika $V$ suatu isometri parsial pada ruang Hilbert $H$ (yakni, jika $V$ suatu isometri parsial
+dalam aljabar-$C^*$~$\ofml B(H)$\,), maka proyeksi awal $V^*V$ adalah
+proyeksi dari $H$ pada $(\ker V)^\perp$, dan proyeksi akhir $VV^*$ adalah proyeksi
+dari $H$ pada~$\ran V$.
+\end{prop}
+
+Berdasarkan hasil sebelumnya, $(\ker V)^\perp$ disebut
+ \index{awal!ruang}%
+ \index{ruang!awal}%
+ \index{ruang!tumpuan}%
+ \index{tumpuan!ruang}%
+\df{ruang} \df{awal} (atau \df{tumpuan}) dari~$V$, sedangkan $\ran V$ kadang-kadang disebut
+ \index{akhir!ruang}%
+ \index{ruang!akhir}%
+\df{ruang akhir} dari~$V$.
+
+\begin{prop}\label{pi0121} Suatu operator pada ruang Hilbert merupakan isometri parsial jika dan hanya jika operator tersebut merupakan
+isometri pada komplemen ortogonal dari kernelnya.
+\end{prop}
+
+
+
+
+
+\begin{thm}[Dekomposisi Polar]\label{0022287} Jika $T$ suatu operator pada ruang
+ \index{dekomposisi polar}%
+ \index{dekomposisi!polar}%
+Hilbert $H$, maka terdapat isometri parsial $V$ pada $H$ sedemikian sehingga
+ \begin{enumerate}
+    \item[(i)] ruang awal $V$ adalah $(\ker T)^\perp$,
+    \item[(ii)] ruang akhir $V$ adalah $\clo{\ran T}$, dan
+    \item[(iii)] $T = V\abs T$.
+ \end{enumerate}
+Dekomposisi $T$ ini unik dalam arti bahwa jika $T = V_0P$ dengan $V_0$ suatu
+isometri parsial dan $P$ suatu operator positif sedemikian sehingga $\ker V_0 = \ker P$, maka $P =
+\abs T$ dan $V_0 = V$.
+\end{thm}
+
+\begin{proof} Lihat \cite{Conway:1990}, VIII.3.11;\allowbreak \cite{Davidson:1996}, teorema I.8.1;
+\allowbreak \cite{KadisonR:1983}, teorema 6.1.2;\allowbreak \cite{Murphy:1990}, teorema 2.3.4;
+atau~\cite{Pedersen:1995}, teorema 3.2.17. \ns
+\end{proof}
+
+\begin{cor} Jika $T$ adalah suatu
+  \index{dekomposisi polar!dari operator invertibel}%
+ \index{operator!invertibel!dekomposisi polar dari}%
+ \index{invertibel!operator!dekomposisi polar dari}%
+operator invertibel pada suatu ruang Hilbert, maka isometri parsial dalam dekomposisi polar
+(lihat~\ref{0022287}) bersifat uniter.
+\end{cor}
+
+\begin{prop} Jika $T$ adalah suatu
+ \index{dekomposisi polar!dari operator normal}%
+ \index{operator!normal!dekomposisi polar dari}%
+ \index{normal!operator!dekomposisi polar dari}%
+operator normal pada suatu ruang Hilbert $H$, maka terdapat operator uniter $U$ pada $H$
+yang berkomutasi dengan $T$ dan memenuhi $T = U\abs T$.
+\end{prop}
+
+\begin{proof} Lihat \cite{Pedersen:1995}, proposisi 3.2.20.\ns \end{proof}
+
+\begin{exer} Misalkan $(S, \fml A,\mu)$ suatu ruang ukur $\sigma$-hingga dan $\phi \in
+L_\infty(\mu)$. Tentukan dekomposisi polar dari
+ \index{operator perkalian!dekomposisi polar dari}%
+ \index{operator!perkalian!dekomposisi polar dari}%
+ \index{dekomposisi polar!dari operator perkalian}%
+operator perkalian $M_\phi$ (lihat contoh~\ref{C063527}).
+\end{exer}
+
+
+
+
+
+
+
+
+
+\section{Operator Kelas Jejak}
+
+Mari kita mulai dengan meninjau beberapa sifat standar \emph{jejak} suatu matriks $n \times n$.
+
+\begin{defn}\label{tr0113} Misalkan $a = [a_{ij}] \in \mathbf M_n$. Definisikan $\tr a$, yaitu
+ \index{jejak!dari suatu matriks}%
+ \index{matriks!jejak dari suatu}%
+ \index{tr@$\tr$ (jejak)}%
+\df{jejak} dari $a$, dengan
+  \[ \tr a = \sum_{i = 1}^n a_{ii}. \]
+\end{defn}
+
+\begin{prop}\label{tr0117} Fungsi $\tr\colon \mathbf M_n \sto \C$ bersifat linear.
+\end{prop}
+
+\begin{prop}\label{tr0121} Jika $a$, $b \in \mathbf M_n$, maka $\tr (ab) = \tr (ba)$.
+\end{prop}
+
+Jejak bersifat invarian terhadap keserupaan. Dua matriks $n \times n$, yaitu $a$ dan $b$, disebut
+ \index{serupa!matriks}%
+ \index{matriks!serupa}%
+\df{serupa} jika terdapat matriks invertibel $s$ sedemikian sehingga $b = sas^{-1}$.
+
+\begin{prop}\label{tr0124} Matriks-matriks dalam $\mathbf M_n$ yang serupa mempunyai jejak yang sama.
+\end{prop}
+
+\begin{defn}\label{tr0211} Misalkan $H$ suatu ruang Hilbert separabel, $(e_n)$ suatu basis ortonormal bagi~$H$, dan $T$
+suatu operator positif pada~$H$. Definisikan
+ \index{jejak}%
+ \index{tr@$\tr$ (jejak)}%
+\df{jejak} dari~$T$~dengan
+    \[ \tr T:=\sum_{k=1}^\infty \langle Te_k,e_k \rangle. \]
+(Jejak tidak harus berhingga.)
+\end{defn}
+
+\begin{prop} Jika $S$ dan $T$ merupakan operator positif pada suatu ruang Hilbert separabel dan $\alpha \ge 0$, maka
+   \[  \tr(S + T) = \tr S + \tr T \]
+dan
+   \[ \tr(\alpha T) = \alpha \tr T. \]
+\end{prop}
+
+\begin{prop} Jika $T$ suatu operator pada ruang Hilbert separabel, maka $\tr(T^*T) = \tr(TT^*)$.
+\end{prop}
+
+Untuk menunjukkan bahwa definisi jejak operator positif yang diberikan di atas tidak bergantung pada basis ortonormal yang dipilih bagi
+ruang Hilbert tersebut, kita memerlukan suatu hasil (yang diberikan berikut ini) yang bergantung pada fakta yang muncul kemudian dalam catatan ini: setiap operator positif pada ruang Hilbert
+memiliki akar kuadrat (positif) (lihat contoh~\futurexref{11.5.7}{X_sqroot_op}).
+
+\begin{prop}\label{tr0221} Pada keluarga operator positif di suatu ruang Hilbert separabel $H$, jejak bersifat invarian terhadap ekuivalensi uniter;
+yakni, jika $T$ operator positif dan $U$ uniter, maka $\tr T = \tr(UTU^*)$.
+\end{prop}
+
+\begin{proof}[\emph{Petunjuk untuk bukti}] Dalam proposisi sebelumnya, ambil $S = UT^{\frac12}$.    \ns
+\end{proof}
+
+\begin{prop}\label{tr0224} Definisi \emph{jejak}~\ref{tr0211} dari suatu operator positif pada ruang Hilbert separabel tidak bergantung
+pada pemilihan basis ortonormal bagi ruang tersebut.
+\end{prop}
+
+\begin{proof}[\emph{Petunjuk untuk bukti}] Misalkan $(e^k)$ dan $(f^k)$ basis-basis ortonormal bagi ruang tersebut dan $T$ suatu operator positif
+pada ruang itu. Ambil $U$ sebagai operator uniter unik yang memenuhi $e^k = Uf^k$ untuk setiap $k \in \N$.  \ns
+\end{proof}
+
+\begin{defn} Misalkan $V$ suatu ruang vektor. Suatu subhimpunan $C$ dari $V$ disebut
+ \index{kerucut}%
+\df{kerucut} jika $\alpha C \subseteq C$ untuk setiap $\alpha \ge 0$. Suatu kerucut $C$ dalam $V$ disebut
+ \index{kerucut!proper}%
+ \index{proper!kerucut}%
+\df{proper} jika $C \cap (-C) = \{\vc 0\}$.
+\end{defn}
+
+ \begin{prop} Suatu kerucut $C$ dalam ruang vektor bersifat konveks jika dan hanya jika $C + C \subseteq C$.
+\end{prop}
+
+\begin{exam} Pada suatu ruang Hilbert separabel $H$, keluarga semua operator positif dengan jejak hingga membentuk kerucut konveks proper dalam ruang
+vektor~$\ofml B(H)$.
+\end{exam}
+
+\begin{defn} Dalam ruang Hilbert separabel $H$, subruang linear dari $\ofml B(H)$ yang direntang oleh operator-operator positif dengan jejak hingga
+adalah keluarga $\ofml T(H)$ dari operator
+ \index{jejak!kelas}%
+ \index{operator!kelas jejak}%
+ \index{T@$\ofml T(H)$ (operator kelas jejak pada~$H$)}%
+\df{kelas jejak} pada~$H$.
+\end{defn}
+
+\begin{prop} Misalkan $H$ ruang Hilbert separabel dengan basis ortonormal~$(e_n)$. Jika $T$ operator kelas jejak pada $H$, maka
+   \[ \tr T = \sum_{k=1}^\infty \langle Te_k,e_k \rangle \]
+dan deret di ruas kanan konvergen mutlak.
+\end{prop}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Operator Hilbert--Schmidt}
+
+\begin{defn} Suatu operator $A$ pada ruang Hilbert separabel $H$ adalah operator
+ \index{Hilbert!--Schmidt, operator}%
+ \index{operator!Hilbert--Schmidt}%
+\df{Hilbert--Schmidt} jika $A^*A$ termasuk kelas jejak; yakni, jika $\sum_{k=1}^\infty \norm{Ae_k}^2 < \infty$,
+dengan $(e_k)$ suatu basis ortonormal untuk~$H$. Keluarga semua operator Hilbert--Schmidt pada $H$
+ \index{HS@$\ofml{HS}(H)$ (operator Hilbert--Schmidt pada~$H$)}%
+dinyatakan dengan~$\ofml{HS}(H)$.
+\end{defn}
+
+\begin{prop} Jika $H$ ruang Hilbert separabel, maka keluarga operator Hilbert--Schmidt pada $H$ merupakan ideal
+dua sisi dalam~$\ofml B(H)$.
+\end{prop}
+
+\begin{exam} Keluarga operator Hilbert--Schmidt pada suatu ruang Hilbert $H$ dapat dijadikan ruang hasil kali dalam.
+\end{exam}
+
+\begin{proof}[\emph{Petunjuk untuk bukti}] Polarisasi. Jika $A$, $B \in \ofml{HS}(H)$,
+tinjau $\sum_{k=0}^3 i^k \bigl(A + i^kB\bigr)^*(A + i^kB)$. \ns
+\end{proof}
+
+\begin{exam} Hasil kali dalam yang didefinisikan dalam contoh sebelumnya menjadikan $\ofml{HS}(H)$ suatu ruang Hilbert.
+\end{exam}
+
+\begin{prop} Pada ruang Hilbert separabel, setiap operator Hilbert--Schmidt bersifat kompak.
+\end{prop}
+
+\begin{proof}[\emph{Petunjuk untuk bukti}] Jika $(e_k)$ suatu basis ortonormal untuk ruang Hilbert tersebut, tinjau
+operator $F_n := AP_n$, dengan $P_n$ proyeksi pada rentang linear $\{e_1, \dots, e_n\}$. \ns
+\end{proof}
+
+\begin{exam} Operator integral yang didefinisikan dalam contoh~\ref{X_square_int_kernel} merupakan operator Hilbert--Schmidt.
+\end{exam}
+
+\begin{exam}
+    Operator Volterra yang didefinisikan dalam contoh~\ref{000319} merupakan operator Hilbert--Schmidt.
+\end{exam}
+
+
+
+
+
+
+
+
+
+
+
+\endinput

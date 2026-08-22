@@ -1,0 +1,94 @@
+
+\begin{defn} Misalkan $V$ suatu ruang vektor. Suatu subhimpunan $C$ dari $V$ disebut
+ \index{kerucut}%
+\df{kerucut} jika $\alpha C \subseteq C$ untuk setiap $\alpha \ge 0$. Suatu kerucut $C$ dalam $V$ disebut
+ \index{kerucut!proper}%
+ \index{proper!kerucut}%
+\df{proper} jika $C \cap (-C) = \{\vc 0\}$.
+\end{defn}
+
+ \begin{prop} Suatu kerucut $C$ dalam ruang vektor bersifat konveks jika dan hanya jika $C + C \subseteq C$.
+\end{prop}
+
+\begin{exam} Pada suatu ruang Hilbert separabel $H$, keluarga semua operator positif dengan jejak hingga membentuk kerucut konveks proper dalam ruang
+vektor~$\ofml B(H)$.
+\end{exam}
+
+\begin{defn} Dalam ruang Hilbert separabel $H$, subruang linear dari $\ofml B(H)$ yang direntang oleh operator-operator positif dengan jejak hingga
+adalah keluarga $\ofml T(H)$ dari operator
+ \index{jejak!kelas}%
+ \index{operator!kelas jejak}%
+ \index{T@$\ofml T(H)$ (operator kelas jejak pada~$H$)}%
+\df{kelas jejak} pada~$H$.
+\end{defn}
+
+\begin{prop} Misalkan $H$ ruang Hilbert separabel dengan basis ortonormal~$(e_n)$. Jika $T$ operator kelas jejak pada $H$, maka
+   \[ \tr T = \sum_{k=1}^\infty \langle Te_k,e_k \rangle \]
+dan deret di ruas kanan konvergen mutlak.
+\end{prop}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Operator Hilbert--Schmidt}
+
+\begin{defn} Suatu operator $A$ pada ruang Hilbert separabel $H$ adalah operator
+ \index{Hilbert!--Schmidt, operator}%
+ \index{operator!Hilbert--Schmidt}%
+\df{Hilbert--Schmidt} jika $A^*A$ termasuk kelas jejak; yakni, jika $\sum_{k=1}^\infty \norm{Ae_k}^2 < \infty$,
+dengan $(e_k)$ suatu basis ortonormal untuk~$H$. Keluarga semua operator Hilbert--Schmidt pada $H$
+ \index{HS@$\ofml{HS}(H)$ (operator Hilbert--Schmidt pada~$H$)}%
+dinyatakan dengan~$\ofml{HS}(H)$.
+\end{defn}
+
+\begin{prop} Jika $H$ ruang Hilbert separabel, maka keluarga operator Hilbert--Schmidt pada $H$ merupakan ideal
+dua sisi dalam~$\ofml B(H)$.
+\end{prop}
+
+\begin{exam} Keluarga operator Hilbert--Schmidt pada suatu ruang Hilbert $H$ dapat dijadikan ruang hasil kali dalam.
+\end{exam}
+
+\begin{proof}[\emph{Petunjuk untuk bukti}] Polarisasi. Jika $A$, $B \in \ofml{HS}(H)$,
+tinjau $\sum_{k=0}^3 i^k \bigl(A + i^kB\bigr)^*(A + i^kB)$. \ns
+\end{proof}
+
+\begin{exam} Hasil kali dalam yang didefinisikan dalam contoh sebelumnya menjadikan $\ofml{HS}(H)$ suatu ruang Hilbert.
+\end{exam}
+
+\begin{prop} Pada ruang Hilbert separabel, setiap operator Hilbert--Schmidt bersifat kompak.
+\end{prop}
+
+\begin{proof}[\emph{Petunjuk untuk bukti}] Jika $(e_k)$ suatu basis ortonormal untuk ruang Hilbert tersebut, tinjau
+operator $F_n := AP_n$, dengan $P_n$ proyeksi pada rentang linear $\{e_1, \dots, e_n\}$. \ns
+\end{proof}
+
+\begin{exam} Operator integral yang didefinisikan dalam contoh~\ref{X_square_int_kernel} merupakan operator Hilbert--Schmidt.
+\end{exam}
+
+\begin{exam}
+    Operator Volterra yang didefinisikan dalam contoh~\ref{000319} merupakan operator Hilbert--Schmidt.
+\end{exam}
+
+
+
+
+
+
+
+
+
+
+
+\endinput

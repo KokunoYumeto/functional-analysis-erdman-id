@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate the deterministic Chapter 1--6 backend and its manifest."""
+"""Validate the deterministic Chapter 1--7 backend and its manifest."""
 
 from __future__ import annotations
 
@@ -76,6 +76,26 @@ CH05_UNIT_PREFIX_LOCK = (
 CH06_UNIT_SUFFIX_LOCK = (
     5511,
     "2bd13cb93dffbaa5903d15779ec5191ad22b1c9a7b6dd52235edd50f8f5613b1",
+)
+CH06_PREFIX_LOCKS = {
+    "semantic_units.jsonl": (650_244, "2fa15e508b1aa18e707484b7c5109b643900dcc8f59f4dae1e8543b0159c4ed2"),
+    "segments.jsonl": (747_490, "7f65fe4d47ffdbb902235ad1fbb8c574c51b8f2154ab8e02564cf1a00aba39d3"),
+    "relations.jsonl": (905_248, "6716f53995ec4da47e68bef0dde091820f9968e7a486bdda15a924fe91870e7e"),
+    "formula_map.jsonl": (3_243_961, "82e264d01ce8174973eb19b2079ac69ed613af36984ed967beb0ab5ca2f9b0fe"),
+    "exercise_support.jsonl": (17_083, "f13f4e3f23495100508057b19e4e49fc6674f3a7126a13e50d804165d3a284f1"),
+    "index_terms.csv": (298_201, "5a3630fc62e82ef04ca2c6ae58b500b1881b0b607c5c5540ca30ccda1e3080fe"),
+    "artifacts.jsonl": (24_928, "a09bfa4b671574a140652d5ae5a7a67d9b63a50622a71bc72347c00e4412e199"),
+    "qa_events.jsonl": (38_259, "9e65e57fdbcc2b566c63bfc8c2683d3b08418c9c36512d1ccf0f887c4daf50d6"),
+    "corrections.jsonl": (80_587, "ad8e7a2d8837f09182ccedc5a875bef0b7285b5fa3e6ddab64c8252b6cbe37b4"),
+    "terminology.jsonl": (71_021, "e82539683deb4d4ab46c5f0e1f3613ede9ba9cc7fb4b0700f08673108b2f653a"),
+}
+CH06_UNIT_PREFIX_LOCK = (
+    7_621,
+    "30d340d0d1070d18d8999ab929c36234b89ef7b762e04b185631e4ad3d0f6d0f",
+)
+CH07_UNIT_SUFFIX_LOCK = (
+    5_070,
+    "85461fc1bc771ed2b472f63a50424c51a12da34faa5336a26fb7ae658c74101a",
 )
 
 
@@ -180,11 +200,22 @@ def verify_ch05_prefixes() -> None:
             raise ValueError(f"{name} Chapter 1--5 byte prefix changed")
     unit_lines = (BACKEND / "units.jsonl").read_bytes().splitlines(keepends=True)
     prefix = b"".join(unit_lines[:5])
-    suffix = b"".join(unit_lines[6:])
     if (len(prefix), sha_bytes(prefix)) != CH05_UNIT_PREFIX_LOCK:
         raise ValueError("units.jsonl Chapter 1--5 byte prefix changed")
-    if (len(suffix), sha_bytes(suffix)) != CH06_UNIT_SUFFIX_LOCK:
-        raise ValueError("units.jsonl Chapter 7--bridge byte suffix changed")
+
+
+def verify_ch06_prefixes() -> None:
+    for name, (size, expected_sha) in CH06_PREFIX_LOCKS.items():
+        data = (BACKEND / name).read_bytes()
+        if len(data) < size or sha_bytes(data[:size]) != expected_sha:
+            raise ValueError(f"{name} Chapter 1--6 byte prefix changed")
+    unit_lines = (BACKEND / "units.jsonl").read_bytes().splitlines(keepends=True)
+    prefix = b"".join(unit_lines[:6])
+    suffix = b"".join(unit_lines[7:])
+    if (len(prefix), sha_bytes(prefix)) != CH06_UNIT_PREFIX_LOCK:
+        raise ValueError("units.jsonl Chapter 1--6 byte prefix changed")
+    if (len(suffix), sha_bytes(suffix)) != CH07_UNIT_SUFFIX_LOCK:
+        raise ValueError("units.jsonl Chapter 8--bridge byte suffix changed")
 
 
 def register_id(ids: dict[str, str], record_id: str, location: str) -> None:
@@ -211,6 +242,7 @@ def main() -> None:
     verify_ch01_prefixes()
     verify_ch04_prefixes()
     verify_ch05_prefixes()
+    verify_ch06_prefixes()
     generated_paths = [BACKEND / name for name in GENERATED]
     before = hashes(generated_paths)
     run_one = subprocess.run(
@@ -224,6 +256,7 @@ def main() -> None:
     verify_ch01_prefixes()
     verify_ch04_prefixes()
     verify_ch05_prefixes()
+    verify_ch06_prefixes()
     run_two = subprocess.run(
         [sys.executable, str(BACKEND / "generate_backend.py")],
         cwd=ROOT,
@@ -235,6 +268,7 @@ def main() -> None:
     verify_ch01_prefixes()
     verify_ch04_prefixes()
     verify_ch05_prefixes()
+    verify_ch06_prefixes()
     if before != after_one:
         raise ValueError("canonical generator differs from checked-in backend outputs")
     if after_one != after_two or run_one.stdout != run_two.stdout:
@@ -536,23 +570,72 @@ def main() -> None:
     ):
         raise ValueError("Chapter 6 target authority file mismatch")
 
+    chapter_seven = chapter_units[6]
+    chapter_seven_expected = {
+        "source_bytes": 21755,
+        "source_lines": 517,
+        "source_sha256": "a1f55b061f526f3e536e5a812f073781777b6f990b662f4a1dba07475152d663",
+        "target_bytes": 22735,
+        "target_lines": 517,
+        "target_sha256": "8e68cf72e711ac95569883cf64a8f1f6a89ee43a1f85f5319fec6cb54b4f787a",
+        "target_title": "Operator Kompak",
+        "course_role": "d20_core",
+        "translation_state": "admitted",
+        "qa_state": "passed",
+        "source_corrections": 11,
+        "build_master_path": "source/id-ID/functional-analysis-id-through-ch07.tex",
+        "build_master_bytes": 9691,
+        "build_master_lines": 333,
+        "build_master_sha256": "c639253fab59df7b51002058b414d8d64c92d77f12e95e88068decafd0d138b9",
+        "artifact_path": "output/pdf/analisis-fungsional-dan-aljabar-operator-id-bab-1-7.pdf",
+        "artifact_bytes": 1530677,
+        "artifact_pages": 121,
+        "artifact_sha256": "a7ddaef324bd356d258cb47195f524e027ba54a696cb8d38a8358bb8d0a2d7ff",
+        "artifact_state": "canonical_output_copy_present_and_fixed_path_gate_passed",
+        "qa_receipt_id": "QA-CH07-ADMISSION-20260822",
+        "receipt_document_state": "present",
+        "receipt_path": "provenance/CH07_BUILD_AND_QA_RECEIPT.md",
+        "receipt_sha256": "8c9e7afa90c27a748de6b2f44c1725ed467ba7f8e4f3960a0009459a25b0b525",
+        "publication_state": "pending",
+        "rights_id": "RIGHTS-ERDMAN-CC-BY-SA-4.0",
+    }
+    for field, expected in chapter_seven_expected.items():
+        if chapter_seven.get(field) != expected:
+            raise ValueError(f"Chapter 7 {field} invariant failed")
+    source_path = ROOT / "source" / "upstream" / "compact_operators.tex"
+    target_path = ROOT / "source" / "id-ID" / "compact_operators-id.tex"
+    source_bytes = source_path.read_bytes()
+    target_bytes = target_path.read_bytes()
+    if (len(source_bytes), len(source_bytes.splitlines()), sha_bytes(source_bytes)) != (
+        21755,
+        517,
+        "a1f55b061f526f3e536e5a812f073781777b6f990b662f4a1dba07475152d663",
+    ):
+        raise ValueError("Chapter 7 source authority file mismatch")
+    if (len(target_bytes), len(target_bytes.splitlines()), sha_bytes(target_bytes)) != (
+        22735,
+        517,
+        "8e68cf72e711ac95569883cf64a8f1f6a89ee43a1f85f5319fec6cb54b4f787a",
+    ):
+        raise ValueError("Chapter 7 target authority file mismatch")
+
     expected_counts = {
         "units.jsonl": 18,
-        "semantic_units.jsonl": 778,
-        "segments.jsonl": 947,
-        "relations.jsonl": 3442,
-        "formula_map.jsonl": 5538,
-        "exercise_support.jsonl": 33,
-        "artifacts.jsonl": 46,
-        "qa_events.jsonl": 44,
-        "corrections.jsonl": 111,
-        "terminology.jsonl": 186,
+        "semantic_units.jsonl": 852,
+        "segments.jsonl": 1032,
+        "relations.jsonl": 3791,
+        "formula_map.jsonl": 5847,
+        "exercise_support.jsonl": 34,
+        "artifacts.jsonl": 55,
+        "qa_events.jsonl": 52,
+        "corrections.jsonl": 122,
+        "terminology.jsonl": 203,
     }
     for name, count in expected_counts.items():
         if len(records_by_file[name]) != count:
             raise ValueError(f"{name} expected {count}, got {len(records_by_file[name])}")
-    if len(term_rows) != 1168:
-        raise ValueError(f"index_terms.csv expected 1168 rows, got {len(term_rows)}")
+    if len(term_rows) != 1259:
+        raise ValueError(f"index_terms.csv expected 1259 rows, got {len(term_rows)}")
 
     chapter_two_counts = {
         "semantic_units.jsonl": 34,
@@ -736,6 +819,55 @@ def main() -> None:
     if chapter_six_sections != expected_chapter_six_sections:
         raise ValueError("Chapter 6 ordered section titles changed")
 
+    chapter_seven_counts = {
+        "semantic_units.jsonl": 74,
+        "segments.jsonl": 85,
+        "relations.jsonl": 349,
+        "formula_map.jsonl": 309,
+        "exercise_support.jsonl": 1,
+    }
+    for name, count in chapter_seven_counts.items():
+        actual = sum(
+            record["id"].startswith("FAOA-2015-CH07-")
+            for record in records_by_file[name]
+        )
+        if actual != count:
+            raise ValueError(f"{name} Chapter 7 expected {count}, got {actual}")
+    chapter_seven_terms = [
+        row for row in term_rows if row["id"].startswith("FAOA-2015-CH07-")
+    ]
+    if len(chapter_seven_terms) != 91:
+        raise ValueError("Chapter 7 index-term projection invariant failed")
+    chapter_seven_semantic = [
+        record
+        for record in records_by_file["semantic_units.jsonl"]
+        if record["id"].startswith("FAOA-2015-CH07-")
+    ]
+    chapter_seven_segments = [
+        record
+        for record in records_by_file["segments.jsonl"]
+        if record["id"].startswith("FAOA-2015-CH07-")
+    ]
+    if any(
+        record.get("translation_state") != "admitted"
+        or record.get("qa_state") != "passed"
+        for record in chapter_seven_semantic + chapter_seven_segments
+    ):
+        raise ValueError("Chapter 7 semantic/segment admitted state is not reconciled")
+    expected_chapter_seven_sections = [
+        ("Definition and Elementary Properties", "Definisi dan Sifat-Sifat Dasar"),
+        ("Partial Isometries", "Isometri Parsial"),
+        ("Trace Class Operators", "Operator Kelas Jejak"),
+        ("Hilbert-Schmidt Operators", "Operator Hilbert--Schmidt"),
+    ]
+    chapter_seven_sections = [
+        (record.get("source_title_tex"), record.get("target_title_tex"))
+        for record in chapter_seven_semantic
+        if record["unit_kind"] == "section"
+    ]
+    if chapter_seven_sections != expected_chapter_seven_sections:
+        raise ValueError("Chapter 7 ordered section titles changed")
+
     formula_records = records_by_file["formula_map.jsonl"]
     source_formula_count = sum(len(record["source_formula_ids"]) for record in formula_records)
     target_formula_count = sum(len(record["target_formula_ids"]) for record in formula_records)
@@ -745,7 +877,7 @@ def main() -> None:
         "preserved_exact_after_text_aware_whitespace_normalization_reordered",
     }
     exact_formula_count = sum(record["alignment"] in exact_alignment_kinds for record in formula_records)
-    if (source_formula_count, target_formula_count, exact_formula_count) != (5541, 5543, 5444):
+    if (source_formula_count, target_formula_count, exact_formula_count) != (5850, 5852, 5747):
         raise ValueError("combined formula-map coverage invariant failed")
     chapter_two_formula = [
         record for record in formula_records if record["id"].startswith("FAOA-2015-CH02-")
@@ -953,6 +1085,78 @@ def main() -> None:
         or record.get("delta_class") == "localization_phrase_reordering"
     ):
         raise ValueError("Chapter 6 localization-only math deltas became corrections")
+
+    chapter_seven_formula = [
+        record for record in formula_records if record["id"].startswith("FAOA-2015-CH07-")
+    ]
+    chapter_seven_formula_counts = (
+        sum(len(record["source_formula_ids"]) for record in chapter_seven_formula),
+        sum(len(record["target_formula_ids"]) for record in chapter_seven_formula),
+        sum(record["alignment"] in exact_alignment_kinds for record in chapter_seven_formula),
+        sum(record.get("math_key_alignment") == "equal" for record in chapter_seven_formula),
+    )
+    if chapter_seven_formula_counts != (309, 309, 303, 303):
+        raise ValueError("Chapter 7 formula-map coverage invariant failed")
+    chapter_seven_alignment_counts = {
+        alignment: sum(record["alignment"] == alignment for record in chapter_seven_formula)
+        for alignment in {
+            "preserved_exact_after_text_aware_whitespace_normalization",
+            "preserved_exact_after_text_aware_whitespace_normalization_reordered",
+            "reviewed_source_correction",
+            "reviewed_target_only_source_correction",
+            "reviewed_consolidated_source_correction",
+        }
+    }
+    if chapter_seven_alignment_counts != {
+        "preserved_exact_after_text_aware_whitespace_normalization": 300,
+        "preserved_exact_after_text_aware_whitespace_normalization_reordered": 3,
+        "reviewed_source_correction": 4,
+        "reviewed_target_only_source_correction": 1,
+        "reviewed_consolidated_source_correction": 1,
+    }:
+        raise ValueError("Chapter 7 reviewed formula-alignment inventory changed")
+    chapter_seven_source_formula_ids = [
+        formula_id
+        for record in chapter_seven_formula
+        for formula_id in record["source_formula_ids"]
+    ]
+    chapter_seven_target_formula_ids = [
+        formula_id
+        for record in chapter_seven_formula
+        for formula_id in record["target_formula_ids"]
+    ]
+    if sorted(chapter_seven_source_formula_ids) != [
+        f"FAOA-2015-CH07-SRC-MATH-{number:04d}" for number in range(1, 310)
+    ] or chapter_seven_target_formula_ids != [
+        f"FAOA-2015-CH07-ID-MATH-{number:04d}" for number in range(1, 310)
+    ]:
+        raise ValueError("Chapter 7 stable source/target formula coverage changed")
+    chapter_seven_correction_formula_ids = {
+        69: "FAOA-2015-CH07-CORR-004",
+        249: "FAOA-2015-CH07-CORR-007",
+        263: "FAOA-2015-CH07-CORR-008",
+        267: "FAOA-2015-CH07-CORR-009",
+        275: "FAOA-2015-CH07-CORR-010",
+        309: "FAOA-2015-CH07-CORR-011",
+    }
+    if {
+        int(record["id"].rsplit("-", 1)[1]): record.get("correction_id")
+        for record in chapter_seven_formula
+        if record.get("correction_id")
+    } != chapter_seven_correction_formula_ids:
+        raise ValueError("Chapter 7 formula-to-correction binding changed")
+    if [
+        int(record["id"].rsplit("-", 1)[1])
+        for record in chapter_seven_formula
+        if record.get("sequence_opcode") == "reorder"
+    ] != [91, 92, 93]:
+        raise ValueError("Chapter 7 localization-only formula reorderings changed")
+    if any(
+        record.get("correction_id")
+        for record in chapter_seven_formula
+        if record.get("delta_class") == "localization_phrase_reordering"
+    ):
+        raise ValueError("Chapter 7 localization-only formula reorderings became corrections")
 
     chapter_two_xrefs = [
         record
@@ -2510,7 +2714,7 @@ def main() -> None:
         "TERM-UNIFORM-CONVERGENCE",
         "TERM-CONVERGENCE-IN-UNIFORM-OPERATOR-TOPOLOGY",
     ]
-    chapter_six_terminology = records_by_file["terminology.jsonl"][153:]
+    chapter_six_terminology = records_by_file["terminology.jsonl"][153:186]
     if [record["id"] for record in chapter_six_terminology] != expected_chapter_six_term_ids:
         raise ValueError("Chapter 6 bounded terminology inventory changed")
     if any(
@@ -2601,6 +2805,358 @@ def main() -> None:
         for record in chapter_six_exercises
     ):
         raise ValueError("Chapter 6 exercise-support semantics changed")
+
+    chapter_seven_relations = [
+        record
+        for record in records_by_file["relations.jsonl"]
+        if record["id"].startswith("FAOA-2015-CH07-")
+    ]
+    chapter_seven_relation_type_counts = {
+        relation_type: sum(
+            record["relation_type"] == relation_type
+            for record in chapter_seven_relations
+        )
+        for relation_type in {
+            "contains", "translates", "precedes", "declares_label", "xref",
+            "cites", "hints", "uses_term", "resolves_pending_reference",
+            "licensed_under", "has_artifact", "terminology_evidence",
+            "has_qa_event", "documents_correction",
+        }
+    }
+    if chapter_seven_relation_type_counts != {
+        "contains": 74,
+        "translates": 85,
+        "precedes": 84,
+        "declares_label": 20,
+        "xref": 13,
+        "cites": 8,
+        "hints": 7,
+        "uses_term": 26,
+        "resolves_pending_reference": 1,
+        "licensed_under": 1,
+        "has_artifact": 9,
+        "terminology_evidence": 2,
+        "has_qa_event": 8,
+        "documents_correction": 11,
+    }:
+        raise ValueError("Chapter 7 relation-type inventory changed")
+    chapter_seven_xrefs = [
+        record
+        for record in chapter_seven_relations
+        if record["id"].startswith("FAOA-2015-CH07-REL-XREF-")
+    ]
+    chapter_seven_resolution_counts = {
+        resolution: sum(record["resolution"] == resolution for record in chapter_seven_xrefs)
+        for resolution in ("local", "admitted_prior_unit", "pending_later_source_unit")
+    }
+    if chapter_seven_resolution_counts != {
+        "local": 4,
+        "admitted_prior_unit": 6,
+        "pending_later_source_unit": 3,
+    }:
+        raise ValueError("Chapter 7 reference-resolution inventory changed")
+    chapter_seven_future = [
+        record
+        for record in chapter_seven_xrefs
+        if record["resolution"] == "pending_later_source_unit"
+    ]
+    if [
+        (record["source_local_id"], record["to_id"], record["target_surface"])
+        for record in chapter_seven_future
+    ] != [
+        ("00152171", "ERDMAN-FAOA-2015-LABEL-00152171", "futurexref"),
+        ("00152181", "ERDMAN-FAOA-2015-LABEL-00152181", "futurexref"),
+        ("X_sqroot_op", "ERDMAN-FAOA-2015-LABEL-X_sqroot_op", "futurexref"),
+    ]:
+        raise ValueError("Chapter 7 future reference endpoints changed")
+    if any(
+        record["to_id"] not in ids
+        for record in chapter_seven_xrefs
+        if record["resolution"] != "pending_later_source_unit"
+    ):
+        raise ValueError("Chapter 7 admitted/local reference endpoint is unresolved")
+    chapter_seven_pending_closures = [
+        record
+        for record in chapter_seven_relations
+        if record.get("relation_type") == "resolves_pending_reference"
+    ]
+    if [
+        (record.get("source_local_id"), record.get("to_id"), record.get("resolution"))
+        for record in chapter_seven_pending_closures
+    ] != [
+        ("chap_cpt_ops", "FAOA-2015-CH05-REL-XREF-0010", "declared_in_current_unit")
+    ] or chapter_seven_pending_closures[0].get("from_id") not in ids:
+        raise ValueError("Chapter 7 append-only prior-xref closure changed")
+    chapter_seven_term_evidence = [
+        record
+        for record in chapter_seven_relations
+        if record.get("relation_type") == "terminology_evidence"
+    ]
+    if [(record["id"], record["to_id"]) for record in chapter_seven_term_evidence] != [
+        ("FAOA-2015-CH07-REL-TERM-EVIDENCE-0001", "ARTIFACT-FAOA-ID-CH07-TARGET-TEX"),
+        ("FAOA-2015-CH07-REL-TERM-EVIDENCE-0002", "ARTIFACT-FAOA-ID-CH07-STRUCTURAL-CHECKER"),
+    ]:
+        raise ValueError("Chapter 7 terminology-evidence links changed")
+
+    chapter_seven_artifacts = [
+        record for record in artifact_records if record.get("unit_id") == "FAOA-2015-CH07"
+    ]
+    expected_chapter_seven_artifact_ids = [
+        "ARTIFACT-FAOA-ID-CH07-TARGET-TEX",
+        "ARTIFACT-FAOA-ID-THROUGH-CH07-MASTER",
+        "ARTIFACT-FAOA-ID-THROUGH-CH07-PDF",
+        "ARTIFACT-FAOA-ID-CH07-STRUCTURAL-CHECKER",
+        "ARTIFACT-FAOA-ID-CH07-RENDER-MANIFEST",
+        "ARTIFACT-FAOA-ID-CH07-CONTACT-SHEET",
+        "ARTIFACT-FAOA-ID-CH07-VISUAL-ACCESSIBILITY-AUDIT",
+        "ARTIFACT-FAOA-ID-CH07-QA-RECEIPT",
+        "ARTIFACT-FAOA-ID-CH07-CORRECTIONS-LEDGER",
+    ]
+    if [record["id"] for record in chapter_seven_artifacts] != expected_chapter_seven_artifact_ids:
+        raise ValueError("Chapter 7 artifact inventory changed")
+    if any(
+        record.get("receipt_document_state") != "present"
+        or record.get("qa_receipt_id") != "QA-CH07-ADMISSION-20260822"
+        or record.get("receipt_path") != "provenance/CH07_BUILD_AND_QA_RECEIPT.md"
+        or record.get("receipt_sha256")
+        != "8c9e7afa90c27a748de6b2f44c1725ed467ba7f8e4f3960a0009459a25b0b525"
+        for record in chapter_seven_artifacts
+    ):
+        raise ValueError("Chapter 7 artifacts are not bound to the admission receipt")
+    chapter_seven_artifact_identities = {
+        record["id"]: (record["path"], record["bytes"], record["sha256"])
+        for record in chapter_seven_artifacts
+    }
+    fixed_chapter_seven_artifacts = {
+        "ARTIFACT-FAOA-ID-CH07-TARGET-TEX": (
+            "source/id-ID/compact_operators-id.tex", 22735,
+            "8e68cf72e711ac95569883cf64a8f1f6a89ee43a1f85f5319fec6cb54b4f787a",
+        ),
+        "ARTIFACT-FAOA-ID-THROUGH-CH07-MASTER": (
+            "source/id-ID/functional-analysis-id-through-ch07.tex", 9691,
+            "c639253fab59df7b51002058b414d8d64c92d77f12e95e88068decafd0d138b9",
+        ),
+        "ARTIFACT-FAOA-ID-THROUGH-CH07-PDF": (
+            "output/pdf/analisis-fungsional-dan-aljabar-operator-id-bab-1-7.pdf", 1530677,
+            "a7ddaef324bd356d258cb47195f524e027ba54a696cb8d38a8358bb8d0a2d7ff",
+        ),
+        "ARTIFACT-FAOA-ID-CH07-STRUCTURAL-CHECKER": (
+            "qa/check_ch07_translation.py", 21468,
+            "392d2842c99fd1a54faaf671b2256ef41a896335edd2c2fe5d973f13d63e1363",
+        ),
+        "ARTIFACT-FAOA-ID-CH07-RENDER-MANIFEST": (
+            "provenance/CH07_RENDER_MANIFEST.csv", 23608,
+            "b2fa453d7b96b51826aadddf2e8151144d6deae1d093dfa34841ab589ef464ed",
+        ),
+        "ARTIFACT-FAOA-ID-CH07-CONTACT-SHEET": (
+            "provenance/CH07_CONTACT_SHEET.png", 3549427,
+            "b52f348c29cdaa1cebd87c280ac0c01fad919e72a8f595ba2c48cb78ac283564",
+        ),
+        "ARTIFACT-FAOA-ID-CH07-VISUAL-ACCESSIBILITY-AUDIT": (
+            "qa/CH07_FINAL_PDF_VISUAL_ACCESSIBILITY_AUDIT.md", 6182,
+            "c71c7b9bce1133d7c10bab8cf2e3bb4c310a8ceb701672ced87bbd6a412012f5",
+        ),
+        "ARTIFACT-FAOA-ID-CH07-QA-RECEIPT": (
+            "provenance/CH07_BUILD_AND_QA_RECEIPT.md", 9855,
+            "8c9e7afa90c27a748de6b2f44c1725ed467ba7f8e4f3960a0009459a25b0b525",
+        ),
+        "ARTIFACT-FAOA-ID-CH07-CORRECTIONS-LEDGER": (
+            "provenance/SOURCE_CORRECTIONS.md", 23661,
+            "285f20b012926002bb9085dab91b06cee3e0808bf7881b598a276c643ad8eea7",
+        ),
+    }
+    if any(
+        chapter_seven_artifact_identities[artifact_id] != identity
+        for artifact_id, identity in fixed_chapter_seven_artifacts.items()
+    ):
+        raise ValueError("Chapter 7 bound artifact identities changed")
+    chapter_seven_accessibility_artifact = chapter_seven_artifacts[6]
+    if (
+        chapter_seven_accessibility_artifact.get("visual_result") != "pass"
+        or chapter_seven_accessibility_artifact.get("accessibility_gate_result") != "pass"
+        or chapter_seven_accessibility_artifact.get("fully_accessible_pdf_claim") != "fail"
+        or chapter_seven_accessibility_artifact.get("tagged_pdf") is not False
+        or chapter_seven_accessibility_artifact.get("accessible_html_or_tagged_pdf_state") != "pending"
+    ):
+        raise ValueError("Chapter 7 accessibility limitation is not represented honestly")
+    chapter_seven_pdf_artifact = chapter_seven_artifacts[2]
+    if (
+        chapter_seven_pdf_artifact.get("fixed_path_replays_byte_identical") is not True
+        or chapter_seven_pdf_artifact.get("fixed_path_build_path")
+        != "qa/build-through-ch07-a/functional-analysis-id-through-ch07.pdf"
+        or chapter_seven_pdf_artifact.get("final_output_copy_state")
+        != "present_byte_identical"
+    ):
+        raise ValueError("Chapter 7 fixed-path PDF replay binding changed")
+    chapter_seven_receipt_artifact = chapter_seven_artifacts[7]
+    if (
+        chapter_seven_receipt_artifact.get("artifact_kind") != "admission_receipt"
+        or chapter_seven_receipt_artifact.get("decision") != "admitted"
+        or chapter_seven_receipt_artifact.get("lines") != 181
+    ):
+        raise ValueError("Chapter 7 admission-receipt artifact metadata changed")
+
+    chapter_seven_qa = [
+        record
+        for record in records_by_file["qa_events.jsonl"]
+        if record.get("unit_id") == "FAOA-2015-CH07"
+    ]
+    expected_chapter_seven_qa_ids = [
+        "QA-CH07-STRUCTURAL-20260822",
+        "QA-CH07-MATH-20260822",
+        "QA-CH07-LANGUAGE-20260822",
+        "QA-CH07-BUILD-20260822",
+        "QA-CH07-VISUAL-20260822",
+        "QA-CH07-ACCESSIBILITY-20260822",
+        "QA-CH07-RIGHTS-20260822",
+        "QA-CH07-ADMISSION-20260822",
+    ]
+    if [record["id"] for record in chapter_seven_qa] != expected_chapter_seven_qa_ids:
+        raise ValueError("Chapter 7 typed QA event inventory changed")
+    if any(
+        record.get("qa_receipt_id") != "QA-CH07-ADMISSION-20260822"
+        or record.get("receipt_document_state") != "present"
+        or record.get("receipt_path") != "provenance/CH07_BUILD_AND_QA_RECEIPT.md"
+        or record.get("receipt_sha256")
+        != "8c9e7afa90c27a748de6b2f44c1725ed467ba7f8e4f3960a0009459a25b0b525"
+        for record in chapter_seven_qa
+    ):
+        raise ValueError("Chapter 7 QA events are not bound to the admission receipt")
+    if any(record.get("result") != "pass" for record in chapter_seven_qa):
+        raise ValueError("Chapter 7 QA gates are not passed")
+    chapter_seven_admission = chapter_seven_qa[-1]
+    if (
+        chapter_seven_admission.get("result") != "pass"
+        or chapter_seven_admission.get("decision") != "admitted"
+        or chapter_seven_admission.get("all_required_admission_gates") != "pass"
+        or chapter_seven_admission.get("typed_qa_event_ids") != expected_chapter_seven_qa_ids[:-1]
+        or chapter_seven_admission.get("required_admission_gate_results", {}).get(
+            "admission_receipt"
+        ) != "pass"
+        or chapter_seven_admission.get("receipt_path")
+        != "provenance/CH07_BUILD_AND_QA_RECEIPT.md"
+        or chapter_seven_admission.get("receipt_sha256")
+        != "8c9e7afa90c27a748de6b2f44c1725ed467ba7f8e4f3960a0009459a25b0b525"
+    ):
+        raise ValueError("Chapter 7 admission event is not fully receipt-bound")
+    if (
+        chapter_seven_qa[0].get("semantic_units") != 74
+        or chapter_seven_qa[0].get("segments") != 85
+        or chapter_seven_qa[0].get("proof_hints") != 7
+        or chapter_seven_qa[1].get("formula_map_records") != 309
+        or chapter_seven_qa[1].get("reviewed_source_correction_maps") != 6
+        or chapter_seven_qa[3].get("fixed_path_clean_builds_byte_identical") is not True
+        or chapter_seven_qa[3].get("local_build_log_bytes") != 47575
+        or chapter_seven_qa[3].get("local_build_log_sha256")
+        != "35cf19763a0e6b8336ad962f49940791d17dad89d4b55451e10dd65e8f923af5"
+        or chapter_seven_qa[4].get("pages_inspected") != 121
+        or chapter_seven_qa[5].get("tagged_pdf") is not False
+    ):
+        raise ValueError("Chapter 7 QA metadata is inconsistent")
+
+    chapter_seven_corrections = [
+        record
+        for record in records_by_file["corrections.jsonl"]
+        if record.get("unit_id") == "FAOA-2015-CH07"
+    ]
+    if [record["id"] for record in chapter_seven_corrections] != [
+        f"FAOA-2015-CH07-CORR-{number:03d}" for number in range(1, 12)
+    ]:
+        raise ValueError("Chapter 7 correction inventory changed")
+    expected_chapter_seven_locators = [
+        "compact_operators.tex:22--26",
+        "compact_operators.tex:117",
+        "compact_operators.tex:127--129",
+        "compact_operators.tex:137",
+        "compact_operators.tex:162--165",
+        "compact_operators.tex:299",
+        "compact_operators.tex:397--400",
+        "compact_operators.tex:422",
+        "compact_operators.tex:425--430",
+        "compact_operators.tex:436--437",
+        "compact_operators.tex:497",
+    ]
+    if [record["source_locator"] for record in chapter_seven_corrections] != expected_chapter_seven_locators:
+        raise ValueError("Chapter 7 correction locators changed")
+    if any(
+        record.get("ledger_sha256")
+        != "285f20b012926002bb9085dab91b06cee3e0808bf7881b598a276c643ad8eea7"
+        or record.get("ledger_section_sha256")
+        != "9f262ed1003bf8824a0485c68caf117170458fb27651491a86d7b911797a4c6d"
+        or record.get("qa_receipt_id") != "QA-CH07-ADMISSION-20260822"
+        or record.get("receipt_document_state") != "present"
+        or record.get("receipt_path") != "provenance/CH07_BUILD_AND_QA_RECEIPT.md"
+        or record.get("receipt_sha256")
+        != "8c9e7afa90c27a748de6b2f44c1725ed467ba7f8e4f3960a0009459a25b0b525"
+        for record in chapter_seven_corrections
+    ):
+        raise ValueError("Chapter 7 correction evidence binding changed")
+
+    chapter_seven_new_term_ids = [
+        "TERM-TOTALLY-BOUNDED",
+        "TERM-RELATIVELY-COMPACT",
+        "TERM-CSTAR-ALGEBRA",
+        "TERM-CSTAR-NORM",
+        "TERM-CSTAR-SUBALGEBRA",
+        "TERM-PARTIAL-ISOMETRY",
+        "TERM-INITIAL",
+        "TERM-SUPPORT",
+        "TERM-FINAL",
+        "TERM-SPACE",
+        "TERM-FINAL-SPACE",
+        "TERM-TRACE",
+        "TERM-SIMILAR",
+        "TERM-CONE",
+        "TERM-PROPER-CONE",
+        "TERM-TRACE-CLASS",
+        "TERM-HILBERT-SCHMIDT",
+    ]
+    terminology_records = records_by_file["terminology.jsonl"]
+    chapter_seven_new_terms = [
+        record for record in terminology_records if record["id"] in chapter_seven_new_term_ids
+    ]
+    if [record["id"] for record in chapter_seven_new_terms] != chapter_seven_new_term_ids:
+        raise ValueError("Chapter 7 bounded terminology inventory changed")
+    proper_cone = next(
+        record for record in chapter_seven_new_terms if record["id"] == "TERM-PROPER-CONE"
+    )
+    if proper_cone.get("preferred") != "proper" or proper_cone.get("rejected") != ["wajar"]:
+        raise ValueError("Chapter 7 proper-cone terminology decision changed")
+    chapter_seven_term_relations = [
+        record
+        for record in chapter_seven_relations
+        if record["id"].startswith("FAOA-2015-CH07-REL-TERM-")
+        and "EVIDENCE" not in record["id"]
+    ]
+    if len(chapter_seven_term_relations) != 26 or any(
+        record["to_id"] not in ids for record in chapter_seven_term_relations
+    ):
+        raise ValueError("Chapter 7 defined-term relationships changed")
+
+    chapter_seven_exercises = [
+        record
+        for record in records_by_file["exercise_support.jsonl"]
+        if record["id"].startswith("FAOA-2015-CH07-")
+    ]
+    if [record["id"] for record in chapter_seven_exercises] != [
+        "FAOA-2015-CH07-EXERCISE-SUPPORT-001"
+    ]:
+        raise ValueError("Chapter 7 exercise-support inventory changed")
+    if (
+        chapter_seven_exercises[0].get("upstream_hint_ids") != []
+        or chapter_seven_exercises[0].get("upstream_inline_hint_state") != "absent"
+        or chapter_seven_exercises[0].get("upstream_answer_state") != "absent"
+        or chapter_seven_exercises[0].get("upstream_solution_state") != "absent"
+        or chapter_seven_exercises[0].get("original_solution_state") != "queued_in_O001"
+        or chapter_seven_exercises[0].get("provenance") != "separately_authored_not_Erdman"
+    ):
+        raise ValueError("Chapter 7 exercise-support semantics changed")
+
+    canonical_text = json.dumps(all_records, ensure_ascii=False) + json.dumps(
+        term_rows, ensure_ascii=False
+    )
+    if "00_control" in canonical_text or str(ROOT) in canonical_text or r"C:\Users" in canonical_text:
+        raise ValueError("private or absolute task-local path leaked into canonical backend exports")
 
     for path in backend_files():
         data = path.read_bytes()
