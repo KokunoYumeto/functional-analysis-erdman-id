@@ -74,7 +74,7 @@ def main() -> None:
         )
 
     mojibake_signatures = ["Ã", "Â", "â€", "ï¿½", "�"]
-    local_path_patterns = [r"[A-Za-z]:\\", r"file:/+", r"Users[/\\]Floris"]
+    local_path_patterns = [r"[A-Za-z]:\\", r"file:/+", r"Users[/\\][^/\\]+"]
     info_fields = {}
     for line in INFO.read_text(encoding="utf-8").splitlines():
         if ":" in line:
