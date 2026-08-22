@@ -1,0 +1,100 @@
+
+\begin{exam} Misalkan $X$ suatu ruang topologis sembarang. Jika $f$ suatu elemen dari
+ \index{spektrum!dari fungsi kontinu terbatas}%
+aljabar $\fml C_b(X)$ yang terdiri atas fungsi-fungsi kontinu terbatas bernilai kompleks pada $X$, maka
+spektrum $f$ adalah tutupan jangkauannya.
+\end{exam}
+
+\begin{exam} Misalkan $S$ suatu ruang ukur positif dan $f \in \lfs{\infty}{S}$ suatu
+(kelas ekuivalensi) fungsi yang terbatas secara esensial pada~$S$. Maka
+ \index{spektrum!dari fungsi terbatas secara esensial}%
+spektrum $f$ adalah jangkauan esensialnya.
+\end{exam}
+
+\begin{exam} Keluarga $\mathbf M_3$ dari matriks bilangan kompleks berukuran $3 \times 3$ merupakan aljabar
+beridentitas di bawah operasi matriks yang biasa. Spektrum matriks $\begin{bmatrix} 5
+& -6 & -6 \\ -1 & 4 & 2 \\ 3 & -6 & -4 \end{bmatrix}$ adalah $\{1,2\}$.
+\end{exam}
+
+\begin{prop} Misalkan $a$ suatu elemen dari aljabar beridentitas sedemikian sehingga $a^2 = \vc 1$.
+ \index{spektrum!dari elemen yang kuadratnya $1$}%
+Maka salah satu dari hal berikut berlaku:
+ \begin{enumerate}[label=\rm{(\alph*)}]
+  \item $a = \vc 1$, dan dalam hal ini $\sigma(a) = \{1\}$; atau
+  \item $a = -\vc 1$, dan dalam hal ini $\sigma(a) = \{-1\}$; atau
+  \item $\sigma(a) = \{-1,1\}$.
+ \end{enumerate}
+\end{prop}
+
+\begin{proof}[\emph{Petunjuk untuk bukti}] Pada (c), untuk membuktikan $\sigma(a) \subseteq \{-1,1\}$,
+tinjau $\D\frac1{1 - \lambda^2}(a + \lambda \mathbf 1).$  \ns
+\end{proof}
+
+\begin{prop} Ingat bahwa suatu elemen $a$ dari aljabar disebut
+ \index{idempoten}%
+ \index{spektrum!dari elemen idempoten}%
+\df{idempoten} jika $a^2 = a$. Misalkan $a$ suatu elemen idempoten dari aljabar beridentitas. Maka
+salah satu dari hal berikut berlaku:
+ \begin{enumerate}[label=\rm{(\alph*)}]
+  \item $a = \vc 1$, dan dalam hal ini $\sigma(a) = \{1\}$; atau
+  \item $a = \vc 0$, dan dalam hal ini $\sigma(a) = \{0\}$; atau
+  \item $\sigma(a) = \{0,1\}$.
+ \end{enumerate}
+\end{prop}
+
+\begin{proof}[\emph{Petunjuk untuk bukti}] Pada (c), untuk membuktikan $\sigma(a) \subseteq \{0,1\}$,
+tinjau $\D \frac1{\lambda - \lambda^2}\bigl(a + (\lambda - 1)\vc 1\bigr).$ \ns
+\end{proof}
+
+\begin{prop} Misalkan $a$ suatu elemen invertibel dari aljabar beridentitas. Maka suatu bilangan kompleks
+tak nol $\lambda$ termasuk dalam spektrum $a$ jika dan hanya jika $1/\lambda$ termasuk dalam
+spektrum~$a^{-1}$.
+\end{prop}
+
+Proposisi berikut merupakan akibat langsung dari proposisi~\ref{000526}.
+
+\begin{prop}\label{000575} Jika $a$ dan $b$ elemen-elemen dari suatu aljabar beridentitas, maka,
+kecuali mungkin untuk $0$, spektrum $ab$ dan spektrum $ba$ sama.
+\end{prop}
+
+\begin{defn}\label{C035854} Suatu pemetaan $f \colon A \sto B$ antara aljabar-aljabar Banach disebut
+ \index{Banach!aljabar!homomorfisme}%
+ \index{homomorfisme!aljabar Banach}%
+\df{homomorfisme (aljabar Banach)} jika pemetaan tersebut sekaligus merupakan homomorfisme
+aljabar dan pemetaan kontinu antara $A$ dan $B$. Kita menotasikan kategori
+ \index{BALG@$\cat{BALG}$!kategori}%
+ \index{kategori!$\cat{BALG}$ sebagai}%
+aljabar Banach dan homomorfisme aljabar kontinu dengan $\cat{BALG}$.
+\end{defn}
+
+\begin{prop} Misalkan $A$ dan $B$ aljabar-aljabar Banach. Maka
+ \index{langsung!jumlah!aljabar Banach}%
+ \index{Banach!aljabar!jumlah langsung}%
+\df{jumlah langsung} dari $A$ dan $B$, yang dinotasikan dengan $A \oplus B$, didefinisikan sebagai himpunan $A
+\times B$ yang dilengkapi dengan operasi titik demi titik:
+   \begin{enumerate}[label=\rm{(\alph*)}]
+     \item $(a,b) + (a',b') = (a + a',b + b')$;
+     \item $(a,b)\,(a',b') = (aa',bb')$;
+     \item $\alpha(a,b) = (\alpha a,\alpha b)$
+   \end{enumerate}
+untuk $a$,$a' \in A$, $b$,$b' \in B$, dan $\alpha \in \C$. Seperti dalam~\ref{C023414}, definisikan
+$\norm{(a,b)} = \norm a + \norm b$. Hal ini menjadikan $A \oplus B$ suatu aljabar Banach.
+\end{prop}
+
+\begin{exer} Identifikasi hasil kali dan koproduk (jika ada) dalam kategori $\cat{BALG}$
+yang objeknya aljabar Banach
+ \index{hasil kali!dalam $\cat{BALG}$}%
+ \index{Banach!aljabar!hasil kali}%
+ \index{Banach!aljabar!koproduk}%
+ \index{koproduk!dalam $\cat{BALG}$}%
+ \index{BALG@$\cat{BALG}$!hasil kali dan koproduk dalam}%
+dan morfismenya homomorfisme aljabar kontinu, serta dalam kategori yang objeknya aljabar Banach dan
+morfismenya homomorfisme aljabar kontraktif. (Di sini,
+ \index{kontraktif}%
+\emph{kontraktif} berarti $\norm{Tx} \le \norm x$ untuk setiap~$x$.)
+\end{exer}
+
+\begin{prop} Dalam suatu aljabar Banach $A$, operasi penjumlahan dan perkalian (yang dipandang sebagai
+pemetaan dari $A \oplus A$ ke $A$) bersifat kontinu, dan perkalian skalar (yang dipandang sebagai pemetaan dari
+$\K \oplus A$ ke $A$) juga bersifat kontinu.
+\end{prop}

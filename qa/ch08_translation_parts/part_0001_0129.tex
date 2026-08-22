@@ -1,0 +1,129 @@
+\chapter{BEBERAPA TEORI SPEKTRAL}\label{spectrum}
+
+Dalam bab ini, untuk pertama kalinya kita akan menganggap, kecuali dinyatakan lain, bahwa ruang
+vektor dan aljabar berskalar kompleks, bukan real. Sebagian besar alasan untuk hal ini
+ \index{konvensi!dalam bab~\ref{spectrum} skalar bersifat kompleks}%
+adalah perlunya menggunakan \emph{teorema Liouville}~\ref{C073131} untuk membuktikan
+proposisi~\ref{C073134}.
+
+\section{Spektrum}
+
+\begin{defn} Suatu elemen $a$ dari aljabar beridentitas $A$ disebut
+ \index{invertibel!kiri!dalam aljabar}%
+\df{invertibel kiri} jika terdapat elemen $a_l$ dalam $A$ (disebut \df{invers kiri}
+dari~$a$) sedemikian sehingga $a_l a = \vc 1$, dan disebut
+ \index{invertibel!kanan!dalam aljabar}%
+\df{invertibel kanan} jika terdapat elemen $a_r$ dalam $A$ (disebut \df{invers
+kanan} dari~$a$) sedemikian sehingga $aa_r = \vc 1$. Elemen tersebut disebut
+ \index{invertibel!dalam aljabar}%
+\df{invertibel} jika elemen itu sekaligus invertibel kiri dan invertibel kanan. Himpunan semua
+elemen invertibel dari $A$ dinotasikan
+ \index{invertibel@$\inv A$ (elemen invertibel dalam aljabar)}%
+dengan~$\inv A$.
+\end{defn}
+
+Suatu elemen dari aljabar beridentitas memiliki paling banyak satu invers perkalian. Bahkan,
+berlaku pernyataan yang lebih kuat berikut.
+
+\begin{prop}\label{000521} Jika suatu elemen dari aljabar beridentitas memiliki invers kiri dan
+invers kanan, maka kedua invers tersebut sama (sehingga elemen itu invertibel).
+\end{prop}
+
+Jika suatu elemen $a$ dari aljabar beridentitas invertibel, inversnya yang unik dinotasikan
+dengan~$a^{-1}$.
+
+\begin{prop} Jika $a$ elemen invertibel dari suatu aljabar beridentitas, maka $a^{-1}$ juga
+ \index{invers!dari suatu invers}%
+invertibel dan
+   \[ \bigl(a^{-1}\bigr)^{-1} = a\,. \]
+\end{prop}
+
+\begin{prop} Jika $a$ dan $b$ elemen-elemen invertibel dari suatu aljabar beridentitas, maka hasil kali
+ \index{invers!dari suatu hasil kali}%
+$ab$ juga invertibel dan
+  \[ (ab)^{-1} = b^{-1}a^{-1}\,. \]
+\end{prop}
+
+\begin{prop}\label{000524} Jika $a$ dan $b$ elemen-elemen invertibel dari suatu aljabar beridentitas,
+ \index{invers!selisih antara}%
+maka
+  \[ a^{-1} - b^{-1} = a^{-1}(b - a)b^{-1}\,. \]
+\end{prop}
+
+\begin{prop} Misalkan $a$ dan $b$ elemen-elemen dari suatu aljabar beridentitas. Jika $ab$ dan
+$ba$ keduanya invertibel, maka $a$ dan $b$ juga invertibel.
+\end{prop}
+
+\begin{proof}[\emph{Petunjuk untuk bukti}] Gunakan proposisi~\ref{000521}. \ns \end{proof}
+
+\begin{cor} Misalkan $a$ elemen dari suatu aljabar-$*\,$ beridentitas. Maka $a$ invertibel jika dan hanya jika $a^*a$ dan $aa^*$
+invertibel; dalam hal ini,
+   \[ a^{-1} = \bigl(a^*a\bigr)^{-1}a^* = a^*\big(aa^*\bigr)^{-1}\,. \]
+\end{cor}
+
+\begin{prop}\label{000526} Misalkan $a$ dan $b$ elemen-elemen dari suatu aljabar beridentitas. Maka
+$\vc 1 - ab$ invertibel jika dan hanya jika $\vc 1 - ba$ invertibel.
+\end{prop}
+
+\begin{proof} Jika $\vc 1 - ab$ invertibel, maka $\vc 1 + b(\vc 1 - ab)^{-1}a$ adalah
+invers dari $\vc 1 - ba$.
+\end{proof}
+
+\begin{exam} Contoh paling sederhana dari aljabar kompleks ialah keluarga $\C$ dari bilangan
+kompleks. Aljabar ini beridentitas sekaligus komutatif.
+\end{exam}
+
+\begin{exam}\label{000532} Jika $X$ suatu ruang topologis tak kosong, maka keluarga $\fml C(X)$
+dari semua fungsi kontinu bernilai kompleks pada $X$ merupakan suatu
+ \index{C@$\fml C(X)$!sebagai aljabar beridentitas}%
+aljabar di bawah operasi penjumlahan, perkalian skalar, dan perkalian titik demi titik yang biasa.
+Aljabar ini beridentitas sekaligus komutatif.
+\end{exam}
+
+\begin{exam} Jika $X$ suatu ruang Hausdorff kompak lokal yang tidak kompak, maka (di bawah
+operasi titik demi titik) keluarga $\fml C_0(X)$ dari semua fungsi kontinu bernilai kompleks
+pada $X$ yang lenyap di tak hingga merupakan aljabar komutatif.
+Namun, keluarga ini \emph{bukan} suatu
+ \index{C@$\fml C_0(X)$!sebagai aljabar tanpa identitas}%
+aljabar beridentitas.
+\end{exam}
+
+\begin{exam}\label{000533} Keluarga
+ \index{Ma@$\mathbf M_n = \M n\C$!matriks bilangan kompleks berukuran $n \times n$}%
+$\mathbf M_n$ dari matriks bilangan kompleks berukuran $n \times n$ merupakan
+ \index{Ma@$\mathbf M_n = \M n\C$!sebagai aljabar beridentitas}%
+aljabar beridentitas di bawah operasi penjumlahan, perkalian skalar, dan perkalian matriks yang biasa.
+Aljabar ini tidak komutatif jika $n > 1$.
+\end{exam}
+
+\begin{exam}\label{000533a} Misalkan $A$ suatu aljabar. Jadikan keluarga
+ \index{Ma@$\M nA$!matriks elemen aljabar berukuran $n \times n$}%
+$\M n{A}$ dari matriks elemen $A$ berukuran $n \times n$ sebagai suatu
+ \index{Ma@$\M nA$!sebagai aljabar}%
+aljabar dengan menggunakan aturan operasi matriks yang sama dengan aturan untuk~$\mathbf M_n$.
+Dengan demikian, $\mathbf M_n$ hanyalah $\M n\C$. Aljabar $\M nA$ beridentitas jika dan hanya jika $A$ beridentitas.
+\end{exam}
+
+\begin{exam}\label{000534} Jika $V$ suatu ruang linear bernorma, maka
+ \index{B@$\ofml B(V)$!sebagai aljabar beridentitas}%
+$\ofml B(V)$ merupakan aljabar beridentitas. Jika $\dim V~>~1$, aljabar tersebut tidak komutatif.
+\end{exam}
+
+\begin{defn}\label{000535} Misalkan $a$ elemen dari aljabar beridentitas~$A$. Maka
+ \index{spektrum}%
+\df{spektrum} dari $a$, yang dinotasikan dengan
+ \index{sigma@$\sigma_A(a)$ atau $\sigma(a)$ (spektrum dari~$a$)}%
+$\sigma_A(a)$ atau cukup $\sigma(a)$, adalah himpunan semua bilangan kompleks $\lambda$ sedemikian sehingga
+$a - \lambda\vc 1$ tidak invertibel.
+\end{defn}
+
+\begin{exam} Jika $z$ suatu elemen dari aljabar bilangan kompleks $\C$, maka
+ \index{spektrum!dari bilangan kompleks}%
+$\sigma(z) = \{z\}$.
+\end{exam}
+
+\begin{exam}\label{0005712} Misalkan $X$ suatu ruang Hausdorff kompak. Jika $f$ suatu elemen
+ \index{spektrum!dari fungsi kontinu}%
+dari aljabar $\fml C(X)$ yang terdiri atas fungsi-fungsi kontinu bernilai kompleks pada $X$, maka
+spektrum $f$ adalah jangkauannya.
+\end{exam}

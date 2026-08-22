@@ -1,0 +1,1605 @@
+\chapter{BANACH SPACES}
+
+\section{Natural Transformations}
+ Recall that if $V$ is a normed linear space its
+ \index{dual!space}%
+ \index{space!dual}%
+ \index{<unopurstar@$V^*$ (dual space of a normed linear space)}%
+\emph{dual space} $V^*$ is the set of all continuous linear functionals on~$V$.  On $V^*$ addition and
+scalar multiplication are defined pointwise. The norm is the usual operator norm: if $f \in V^*$, then
+ \[ \norm{f} := \inf\{M > 0\colon \abs{f(x)} \le M\norm{x}\quad \text{for all $x \in V$}\} = \sup\{\abs{f(x)}\colon \norm{x} \le 1\}. \]
+Under the metric induced by this norm the dual space $V^*$ is complete and thus is a Banach space.
+
+\begin{defn}\label{defn_nls_adjoint} If $T\colon V \sto W$ is a continuous linear map between normed linear spaces,
+ \index{<unopurstar@$T^*$ (normed linear space adjoint)}%
+$T^*\colon W^* \sto V^*$ is defined as for vector spaces: $T^*(g) = g\,T$ for every
+$g \in W^*$.  The map $T^*$, is called the
+ \index{adjoint!of a linear map!between normed linear spaces}%
+ \index{linear!map!adjoint of a}%
+\df{adjoint} of~$T$.
+\end{defn}
+
+\begin{exam}\label{exam_dual_functor} The adjoint $T^*$ of a bounded linear map between normed linear spaces $V$ and 
+$W$ is itself a bounded linear map between $W^*$ and~$V^*$. In the category of normed linear spaces and continuous linear
+ \index{functor!duality}%
+ \index{duality functor}%
+maps the pair of maps $V \mapsto V^*$ (object map) and $T \mapsto T^*$ (morphism map) is a contravariant
+functor from $\cat{NLS_\infty}$ to itself.
+\end{exam}
+
+Notice that the preceding definition~\ref{defn_nls_adjoint} differs from the definition of the adjoint of a mapping
+between Hilbert spaces (see~\ref{def000926}).  Since every Hilbert space is a normed linear space, this could conceivably
+generate confusion.  It is worthwhile convincing oneself of a simple fact: because of the anti-isomorphism (and consequent
+isomorphism) between a Hilbert space and its dual provided by the \emph{Riesz-Fr\'echet theorem} (see~\ref{0022057}
+and~\ref{cor_Hsp_iso_dual}) the normed linear space adjoint of a bounded linear map is \emph{very} similar (although
+certainly not identical) to its Hilbert space adjoint.
+
+\begin{exam}\label{C057717}
+The dual $V^{**}$ of the dual $V^*$ of a normed linear space $V$ is the \df{second dual} of~$V$
+ \index{dual!second}%
+and $T^{**} := \bigl(T^*\bigr)^*$ is a bounded linear map of $V^{**}$ into~$W^{**}$.  On the category
+$\cat{BAN_{\boldsymbol\infty}}$ of Banach spaces and bounded linear transformations the
+ \index{second!dual!functor for normed linear spaces}%
+ \index{functor!second dual!for normed linear spaces}%
+\df{second dual functor} comprises the object map $B \mapsto B^{**}$ and the morphism map $T \mapsto T^{**}$.
+It is a covariant functor.
+\end{exam}
+
+\begin{defn}\label{defn_nat_transf} Let $\cat A$ and $\cat B$ be categories and $F$,$G \colon \cat A \sto \cat B$ be
+covariant functors.  A
+ \index{natural!transformation}%
+ \index{transformation!natural}%
+\df{natural transformation} from $F$ to $G$ is a map $\tau$ which assigns to each object
+$A$ in $\cat A$ a morphism $\tau_A \colon F(A) \sto G(A)$ in $\cat B$ in such a way that
+for every morphism $\alpha \colon A \sto A'$ in $\cat A$ the following diagram commutes.
+   \[ \CD
+      F(A) @>  F(\alpha)>>  F(A')  \\
+         @V\tau_AVV                @VV\tau_{A'}V  \\
+      G(A) @>> G(\alpha)>  G(A')
+   \endCD \]
+We denote such a transformation by $\tau \colon F \sto G$. (The definition of a natural
+transformation between two contravariant functors should be obvious: just reverse the
+horizontal arrows in the preceding diagram.
+
+A natural transformation $\tau \colon  F \sto G$ is a
+ \index{natural!equivalence}%
+ \index{equivalence!natural}%
+\df{natural equivalence} if each morphism $\tau_A$ is an isomorphism in~$\cat B$.
+\end{defn}
+
+\begin{defn}\label{defn_nat_embed} If $V$ is a normed linear space, then the map $\sbsb{\tau}V \colon V \sto V^{**} \colon x
+\mapsto x^{**}$ where $x^{**}(f) = f(x)$ for all $f \in V^*$ is called the
+ \index{tauv@$\sbsb{\tau}V$ (natural embedding of normed linear spaces)}%
+ \index{natural!embedding!for normed linear spaces}%
+ \index{embedding!natural}%
+\df{natural embedding} of $V$ into~$V^{**}$. (It is not altogether obvious that this mapping is
+injective. We will show that it is in proposition~\ref{C067137}.)
+\end{defn}
+
+\begin{exam}\label{exam_2dual_nat} In the category $\cat{BAN_{\boldsymbol\infty}}$ of Banach spaces
+and bounded linear transformations let $I$ be the identity functor and $(\,\cdot\,)^{**}$ be the
+second dual functor.  Then the
+ \index{natural!embedding!as a functor}%
+ \index{functor!the natural embedding as a}%
+ \index{taub@$\tau_B$ (natural embedding of $B$ into $B^{**}$)}%
+\emph{natural embedding} $\tau$ is a natural transformation from $I$ to~$(\,\cdot\,)^{**}$.
+\end{exam}
+
+\begin{exam} Explain exactly what is meant when people say that the isomorphism
+    \[ \fml C(X \uplus Y) \cong \fml C(X) \times \fml C(Y) \]
+is a natural equivalence.  The categories involved are $\cat{CpH}$ (compact Hausdorff
+spaces and continuous maps) and $\cat{BAN_\infty}$ (Banach spaces and bounded linear
+transformations).
+\end{exam}
+
+\begin{exam}\label{C057724} On the category $\cat{CpH}$ of compact Hausdorff spaces and
+continuous maps let $I$ be the identity functor and let $\fml C^*$ be the functor which
+takes a compact Hausdorff space $X$ to the Banach space $\fml (C(X))^*$ and takes a
+continuous function $\phi\colon X \sto Y$ between compact Hausdorff spaces to the
+contractive linear transformation $\fml C^*\phi = (\fml C\phi)^*$. Define the
+ \index{evaluation!map}%
+\emph{evaluation map} $E$ by
+  \[ E_X\colon X \sto \fml C^*(X)\colon x \mapsto E_X(x) \]
+where $(E_X(x))(f) = f(x)$ for all $f \in \fml C(X)$.  (This notation can be cumbersome.  In practice, one usually writes
+just $E_x$ for $E_X(x)$.  Thus we have $E_x(f) = f(x)$, which certainly looks better than $(E_X(x))(f) = f(x)$.  In most
+contexts it seems unlikely that confusion will result from this simplification of notation.)
+ \begin{enumerate}
+  \item[(a)]  Notice that this definition does make sense. If $x \in X$, then $E_X(x)$ really
+does belong to~$\fml C^*(X)$.
+  \item[(b)] Show that the map $E$ makes the following diagram commute
+     \[ \xymatrix@+30pt{{X}\ar[r]^*+{\phi} \ar[d]_*+{E_X}
+            & {Y} \ar[d]^*+{E_Y} \\
+          {\fml C^*(X)} \ar[r]_*+{\fml C^*(\phi)} & {\fml C^*(Y)}   }
+     \]
+ \end{enumerate}
+\end{exam}
+
+The preceding example may seem a bit disappointing.  It seems very much as if we are
+attempting to establish a natural transformation between the identity functor (on
+$\cat{CpH}$) and the $\fml C^*$ functor.  The problem, of course, is that the two
+functors have different target categories.  This is a question we will deal with later.
+The evaluation map $E_X\colon X \sto \fml C^*(X)$ is certainly not surjective.
+Notice, for example, that every functional of the form $E_X(x)$
+preserves multiplication (as well as addition and scalar multiplication). A consequence
+of this turns out to be that such functionals all live on the unit sphere of $\fml C^*(X)$.
+With a new topology (the so-called \emph{weak-star topology}---see~\ref{C067434}) on
+$\fml C^*(X)$ the range of $E_X$ turns out to be a compact Hausdorff space which is naturally
+equivalent to $X$ itself.  Even more remarkably, we will eventually show that the range of $E_X$
+can be regarded as the maximal ideal space of the algebra~$\fml C(X)$. (See~\ref{000731}.)
+
+\begin{prop}\label{C067137} If $V$ is a normed linear space the natural embedding
+$\sbsb{\tau}V \colon V \sto V^{**}\colon x \mapsto x^{**}$ (defined in~\ref{defn_nat_embed})
+is an isometric linear map.
+\end{prop}
+
+\begin{defn} A Banach space $B$ is
+ \index{reflexive!Banach space}%
+\df{reflexive} if the natural embedding $\sbsb{\tau}B\colon B \sto B^{**}$ (defined in the preceding proposition) is onto.
+\end{defn}
+
+Example~\ref{exam_2dual_nat} shows that in the category of Banach spaces and bounded linear
+maps, the mapping $\tau\colon B \mapsto \sbsb{\tau}B$ is a natural transformation from the
+identity functor to the second dual functor.  Invoking the \emph{Hahn-Banach theorem} we can
+say more.
+
+\begin{prop} In the category of reflexive Banach spaces and bounded linear maps the mapping
+$\tau\colon B \mapsto \sbsb{\tau}B$ is a natural equivalence between the identity and second
+dual functors.
+\end{prop}
+
+\begin{exam} Every Hilbert space is reflexive.
+\end{exam}
+
+\begin{exer} Let $V$ and $W$ be normed linear spaces, $U$ be a nonempty convex subset of $V$,
+and $f \colon U \sto W$.  Without using any form of the \emph{mean value theorem} show
+that if $df = \vc 0$ on $U$, then $f$ is constant on~$U$.  (For the definition of $df$, the
+\emph{differential} of~$f$, see sections 13.1--2 in my notes~\cite{Erdman:2007}.)
+\end{exer}
+
+\begin{exam}\label{C067181} Let $l_\infty$ be the Banach space of all bounded sequences of
+real numbers and $c$ be the subspace of $l_\infty$ comprising all sequences $x = (x_n)$
+such that $\lim_{n \sto \infty} x_n$ exists. Define
+  \[ f\colon c \sto \R\colon x \mapsto \lim_{n\sto \infty} x_n. \]
+Then $f$ is a continuous linear functional on $c$ and $\norm f = 1$.  By the
+\emph{Hahn-Banach theorem} $f$ has an extension to $\wh f \in {l_\infty}^*$ with
+$\norm{\wh f} = 1$. For every
+subset $A$ of $\N$ define a sequence $\bigl(x^A_n\bigr)$ by $x^A_n = \left\{%
+\begin{array}{ll}
+    1, & \hbox{if $n \in A$;} \\
+    0, & \hbox{if $n \notin A$.} \\
+\end{array}%
+\right.$ Next define $ \mu\colon \sfml P(\N) \sto \R \colon A \mapsto \wh
+f\bigl(x^A_n\bigr)$. Then $\mu$ is a finitely additive set function but is not countably
+additive.
+\end{exam}
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Alaoglu's Theorem}
+\begin{notn} Let $V$ be a normed linear space, $M \subseteq V$, and $F \subseteq V^\ast$.
+Then we define
+ \begin{align*}
+         M^\perp &:= \{f \in V^*\colon f(x)=0 \text{ for all $x \in M$}\} \\
+         F_\perp &:= \{x \in V\colon f(x)=0 \text{ for all $f \in F$}\}
+  \end{align*}
+One may read $M^\perp$ as ``M perp'' or ``M upper perp''; and $F_\perp$ is ``F perp'' or ``F lower perp''.
+The set $M^\perp$ is the
+ \index{annihilator}%
+ \index{<unopur@$M^\perp$ (annihilator of a set)}%
+\df{annihilator} of~$M$ and $F_\perp$ is the
+ \index{pre-annihilator}%
+ \index{<unopvr@$F_\perp$ (pre-annihilator of a set)}%
+\df{pre-annihilator} of~$F$.
+\end{notn}
+
+\begin{prop}[Annihilators]  Let $B$ be a Banach space, $M \subseteq B$, and $F \subseteq B^*$. Then
+ \begin{enumerate}[label=\rm{(\alph*)}]
+  \item If $M \subseteq N \subseteq B$, then $N^\perp \subseteq M^\perp$.
+  \item If $F \subseteq G \subseteq B^*$, then $G_\perp \subseteq F_\perp$.
+  \item $M^\perp$ is a closed linear subspace of $B^*$.
+  \item $F_\perp$ is a closed linear subspace of $B$.
+  \item $M \subseteq M^\perp{}_\perp$.
+  \item $F \subseteq F_\perp{}^\perp$.
+  \item $M^\perp{}_\perp = \bigvee M$.
+  \item $M^\perp = B^*$ if and only if $M = \{0\}$.
+  \item $F_\perp = B$ if and only if $F = \{0\}$.
+  \item If $M$ is a linear subspace of $B$, then $M^\perp = \{0\}$ if and only if $M$ is
+dense in $B$.
+  \item\label{Fpp_reflexive_case} If $B$ is reflexive, then $F_\perp{}^\perp = \bigvee F$.
+ \end{enumerate}
+\end{prop}
+
+\begin{proof}[\emph{Hint for proof}] For (k) show that $\tau(F_\perp) = F^\perp$ (where $\tau$ is the
+natural embedding) and that therefore $F_\perp{}^\perp = F^\perp{}_\perp$.  \ns
+\end{proof}
+
+\begin{exam} Let $B$ be a Banach space that is \emph{not} reflexive.  Let $F = \ran \tau$ (where $\tau$ is the
+natural embedding).  Then $F_\perp{}^\perp = B^{**} \ne \bigvee F$, so it is clear that~\ref{Fpp_reflexive_case}
+in the preceding proposition need not hold in the nonreflexive case.
+\end{exam}
+
+The next result is the Banach space analog of the \emph{fundamental theorem of linear algebra}~\ref{00016025} and
+proposition~\ref{prop_ker_adj_perp_ran_op}.
+
+\begin{prop}\label{prop_FTLA_Bsp} Let $T \in \ofml B(B,C)$ where $B$ and $C$ are Banach spaces. Then
+ \begin{enumerate}[label=\rm{(\alph*)}]
+  \item $\ker T^\ast = (\ran T)^\perp$.
+  \item $\ker T = (\ran T^*)_\perp$.
+\vskip 3 pt
+  \item $\clo{\ran T} = (\ker T^*)_\perp$.
+\vskip 3 pt
+  \item $\clo{\ran T^*} \subseteq (\ker T)^\perp$.
+ \end{enumerate}
+\end{prop}
+
+\begin{exam} An example of a Banach space operator $T$ for which $\clo{\ran T^*}$ and $(\ker T)^\perp$ are different
+is given in exercise 7, page 243 of~\cite{BrownP:1970}.
+\end{exam}
+
+The following example is of course a trivial consequence of proposition~\ref{00015032}, but try to give a simple
+direct proof.
+
+\begin{exam}\label{X_l2ball_not_cpt} The closed unit ball in $l_2$ is not compact.
+\end{exam}
+
+The usual norm topology on normed linear spaces turns out to be much too large for some applications.  As we have seen
+it has so many open sets that the closed unit ball is not compact (except in the finite dimensional case). On the
+other hand, too few open sets (the indiscrete topology, as an extreme example) would destroy duality theory by failing
+to provide a plentiful supply of continuous linear functionals.  The so-called \emph{weak-star topology} (defined
+below) on the dual of a normed linear space turns out to be just the right size.  It has enough open sets to guarantee
+a vigorous duality theory and few enough open sets to make the closed unit ball compact
+(see \emph{Alaoglu's theorem}~\ref{C067441}).
+
+\begin{defn}\label{C067434} Let $V$ be a normed linear space. The
+ \index{weak!topology!on normed spaces}%
+ \index{topology!weak!on normed linear spaces}%
+\df{weak topology} on $V$ is the weak topology induced by the elements of~$V^*$. (So, of
+course, the weak topology on the dual space $V^*$ is the weak topology induced by the
+elements of~$V^{**}$.) When a net $(x_\lambda)$ converges weakly to a vector $a$ in $V$
+we write
+ \index{<arrowright@$x_\lambda \to^w a$ (weak convergence)}%
+$x_\lambda \to^w a$. The
+ \index{w*@$w^*$-topology (weak star topology)}%
+ \index{topology!weak star}%
+\df{$w^*$-topology} (pronounced \emph{weak star topology}) on the dual space $V^*$ is the
+weak topology induced by the elements of $\ran \tau$ where $\tau$ is the natural
+injection of $V$ into~$V^{**}$.  When a net $(f_\lambda)$ converges weakly to a vector $g$
+in $V^*$ we write
+ \index{<arrowright@$f_\lambda \to^{w^*} g$ (weak star convergence)}%
+$f_\lambda \to^{w^*} g$. Notice that when a Banach space $B$ is reflexive (in particular, for Hilbert
+spaces) the weak and weak star topologies on $B^*$ are identical.
+\end{defn}
+
+\begin{prop} Let $f \in V^*$ where $V$ is a Banach space.  For every $\epsilon > 0$ and every
+finite subset $F \subseteq V$ define
+  \[ U(f;F;\epsilon)
+           = \{g \in V^*\colon \abs{f(x) - g(x)} < \epsilon \text{ for all $x \in F$}\}. \]
+The family of all such sets is a base for the $w^*$-topology on~$V^*$.
+\end{prop}
+
+The next result, \emph{Alaoglu's theorem}, asserting the $w^*$-compactness of the closed unit ball in the
+dual of a normed linear space $V$ is one of the most useful theorems in functional analysis.  Thus
+at first it may seem somewhat surprising that it is so hard to find a complete and carefully explained
+proof of this result.  The standard proof is in a sense very simple; it is basically just recognizing
+that the members of a family $\fml F$ of scalar valued functions can be regarded either
+  \begin{enumerate}
+     \item[(i)] as functions defined on an uncountable product of compact subsets of the scalar field, or alternatively
+     \item[(ii)] as members of the closed unit ball of~$V^*$.
+  \end{enumerate}
+The crux of the proof is convincing yourself that the convergence of a net of such functions in the product space
+is exactly ``the same thing'' as its $w^*$-convergence in the closed unit ball of~$V^*$.  Trying simultaneously to
+identify and distinguish between two sets of functions is notationally challenging.  So my best advice is to work through
+it yourself until you see how ingenious, but basically simple, the argument is.
+
+\begin{thm}[Alaoglu's theorem]\label{C067441} The closed unit ball of a normed linear space is
+ \index{Alaoglu's theorem}%
+compact in the $w^*$-topology.
+\end{thm}
+
+\begin{proof}[\emph{Hint for proof}] Let $V$ be a normed linear space and denote by $[V^*]_1$ the closed unit ball of its
+dual space.  For each $x \in V$ define $D_x = \{\lambda \in \K \colon \abs\lambda \le \norm x\}$.  The product
+\smash[b]{$\mathbf P = \prod\limits_{x \in V} D_x$} is compact by \emph{Tychonoff's theorem}.  Consider the function
+   \[ \Phi\colon [V^*]_1 \sto \mathbf P \colon f \mapsto \bigl(f(x)\bigr)_{x \in V} \]
+where $[V^*]_1$ has the $w^*$-topology and $\mathbf P$ has the product topology (see~\ref{C021437}).  Here we have written
+$\bigl(f(x)\bigr)_{x \in V}$ for the indexed family of numbers (or generalized sequence) rather than the more usual
+$\bigl(f_x\bigr)_{x \in V}$.  (For more on indexed families see~\cite{Erdman:2007}, section~7.2.)  It is easy to see that
+$\Phi$ is injective.  To show that it is continuous let $\bigl(f_\lambda\bigr)_{\lambda \in \Lambda}$ be a net in $[V^*]_1$
+and $g$ be a function in $[V^*]_1$ such that $f_\lambda \to^{w^*} g$.  Notice that this happens if and only if
+$\pi_x(f_\lambda) \sto \pi_x(g)$ for every $x \in V$ (where $\pi_x$ is a coordinate projection on~$\mathbf P$---see~\ref{C015531}).
+Finally, let $\bigl(f_\lambda\bigr)_{\lambda \in \Lambda}$ be a net in $[V^*]_1$ such that $\bigl(\Phi(f_\lambda)\bigr)_{\lambda \in \Lambda}$
+converges in~$\mathbf P$.  Show that the net $\bigl(f_\lambda(x)\bigr)_{\lambda \in \Lambda}$ converges in $\K$ for every $x \in V$.
+Let $g(x) = \lim\limits_\lambda f_\lambda(x)$ for all $x \in V$ and prove that $g$ is linear, that $\norm g \le 1$, that
+$f_\lambda \to^{w^*} g$ in $[V^*]_1$, and that $\Phi(f_\lambda) \sto \Phi(g)$ in~$\mathbf P$.  \ns
+\end{proof}
+
+To the best of my knowledge the most reader-friendly version of this standard proof can be found in~\cite{BrownP:1977}, Theorem 15.11.
+A much shorter, much easier notationally, much slicker, and much less edifying proof is available in~\cite{Pedersen:1995}, theorem 2.5.2.
+I find it less edifying because of its reliance on universal nets.  A net in a set $S$ is
+ \index{universal!net}%
+ \index{net!universal}%
+\df{universal} if for every subset $T$ of $S$ the net is either eventually in $T$ or eventually in its complement. Despite the fact that
+every net can be shown to have a universal subnet, even to find a singe nontrivial example of a universal net (that is, one that is not
+eventually constant) requires the \emph{axiom of choice}.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{The Open Mapping Theorem}\label{C0694}
+A question one can (and should) ask of any concrete category is whether every bijective morphism is necessarily an
+isomorphism.  In some categories the answer is trivially \emph{yes} (for example, in $\cat{VEC}$).  In other
+categories the answer is trivially \emph{no} (in $\cat{TOP}$, for example, consider the identity map from the
+reals with the discrete topology to the reals with their usual topology).  Frequently in categories which arise in
+studying analysis, algebra is tugging enthusiastically in one direction while topology is vigorously resisting, pulling
+in the other.  Here the question can become quite fascinating---and the answer definitely nontrivial.  In the category
+$\cat{BAN_\infty}$ of Banach spaces and continuous linear maps, the question turns out to be intriguingly deep.  In this
+case algebra prevails; the answer is affirmative.  It turns out to be a direct consequence of the celebrated \emph{open
+mapping theorem}.  Notice as you work through the following proof of this result that for the map in question
+completeness of domain and completeness of codomain are both essential---and for quite different reasons.
+
+\begin{defn} A mapping $f \colon X \sto Y$ between topological spaces is
+ \index{open!mapping}%
+ \index{mapping!open}%
+\df{open} if it takes open sets to open sets; that is, $f$ is an open mapping provided that $f^{\sto}(U)$ is open in $Y$
+whenever $U$ is open in~$X$.
+\end{defn}
+
+The \emph{open mapping theorem} says that continuous linear surjections between Banach spaces are always open mappings.
+There is one technical detail that makes the proof of this result a bit tricky.  Suppose that $T$ is a continuous linear
+map from a Banach space $B$ into a normed linear space~$V$ and $R$ is the image under $T$ of an open ball around the
+origin in~$B$.  We will need to know that if the closure of $R$ contains some open ball about the origin in $V$, then
+$R$ itself contains the same ball. It will be convenient to isolate this crucial bit of information in the next proposition.
+
+\begin{notn} In a normed linear space $V$ we denote by
+ \index{<unop@$(V)_r$ (open ball of radius $r$ about the origin)}%
+$(V)_r$ the open ball about the origin in $V$ of radius~$r$.
+\end{notn}
+
+\begin{prop}\label{prop_for_OMT} Let $T\colon B \sto V$ be a continuous linear map from a Banach space into a normed linear space.
+If $r$, $s > 0$ and $(V)_s \subseteq \clo{T\bigl(\,(B)_r\,\bigr)}$, then $(V)_s \subseteq T\bigl(\,(B)_r\,\bigr)$.
+\end{prop}
+
+\begin{proof}[\emph{Hint for proof}] First verify that without loss of generality we may assume that $r = s = 1$.  Thus
+our hypothesis is that $(V)_1 \subseteq \clo{T\bigl(\,(B)_1\,\bigr)}$.
+
+Let $z \in (V)_1$.  The proof is complete if we can show that $z \in T\bigl(\,(B)_1\,\bigr)$.  Choose $\delta > 0$ such
+that $\norm z < 1 - \delta$ and let $y = (1 - \delta)^{-1}z$.  Construct a sequence $(v_k)_{k=0}^\infty$ of vectors in~$V$
+which satisfy
+   \begin{enumerate}
+     \item[(i)] $\norm{y - v_k} < \delta^k$ for $k = 0,1,2,\dots$ and
+     \item[(ii)] $v_k - v_{k-1} \in T\bigl(\,\delta^{k-1}(B)_1\,\bigr)$ for $k = 1,2,3,\dots$.
+   \end{enumerate}
+To this end, start with $v_0 = \vc 0$. Use the hypothesis to conclude that $y - v_0 \in \clo{T\bigl(\,(B)_1\,\bigr)}$ and
+that therefore there is a vector $w_0 \in T\bigl(\,(B)_1\,\bigr)$ such that $\norm{(y - v_0) - w_o} < \delta$.  Let
+$v_1 = v_0 + w_0$ and check that (i) and (ii) hold for $k = 1$.
+
+Then find $w_1 \in T\bigl(\,\delta (B)_1\,\bigr)$ so that $\norm{(y - v_1) - w_1} < \delta^2$ and let $v_2 = v_1 + w_1$.
+Check that (i) and (ii) hold for $k= 2$.  Proceed inductively.
+
+For each $n \in \N$ choose a vector $u_n \in \delta^{n-1}(B)_1$ such that $T(u_n) = v_n - v_{n-1}$. Show that the sequence
+$(u_n)$ is summable (use\ref{prop_abs_sum_implies_sum}) and let $x = \sum_{n=1}^\infty u_n$.  Conclude the proof by showing
+that $Tx = y$  and that $z \in T\bigl(\,(B)_1\,\bigr)$.   \ns
+\end{proof}
+
+\begin{thm}[Open mapping theorem]\label{C069414} Every bounded linear surjection between
+ \index{open!mapping!theorem}%
+ \index{bijective morphisms!are invertible!in $\cat{BAN_1}$}%
+Banach spaces is an open mapping.
+\end{thm}
+
+\begin{proof}[\emph{Hint for proof}] Suppose that $T\colon B \sto C$ is a bounded linear surjection between Banach spaces.
+Start by verifying the following claim: All we need to show is that $T\bigl((B)_1\bigr)$ contains an open ball about the
+origin in~$C$.  Suppose for the moment we know that such a ball exists.  Call it~$W$.  Given an open subset $U$ of $B$, we
+wish to show that its image under $T$ is open in~$C$.  To this end take an arbitrary point $y$ in $T(U)$ and choose an $x$
+in $U$ such that $y = Tx$.  Since $U - x$ is a neighborhood of the origin in $B$, we can find a number $r > 0$ such that
+$r\,(B)_1 \subseteq U - x$.  Verify that $T(U)$ is open by proving that $y + rW \subseteq T(U)$.
+
+To establish the claim above, let $V = T\bigl((B)_1\bigr)$ and notice that since $T$ is surjective, $C = T(B) =
+\bigcup_{k=1}^\infty k\clo V$.  Use the version of the \emph{Baire category theorem} which says that if a nonempty
+complete metric space is the union of a sequence of closed sets, then at least one of these sets has nonempty interior.
+(See, for example, Theorem 29.3.21 in\cite{Erdman:2007}.)  Choose $k \in \N$ so that $\bigl(k\clo V\bigr)^o \neq \emptyset$.
+Thus there exists $y \in \clo V$ and $r > 0$ such that $y + (C)_r \subseteq k\clo V$.  It is not hard to see from the
+convexity of $k\clo V$ that $(C)_r \subseteq k\clo V$.  (Write an arbitrary point $z$ in $(C)_r$ as
+$\frac12(y + z) + \frac12(-y + z)$.) Now you have $(C)_{r/k} \subseteq \clo V$.  Use proposition~\ref{prop_for_OMT}.
+\ns \end{proof}
+
+\begin{cor}\label{C069417} Every bounded linear bijection between Banach spaces is an
+isomorphism.
+\end{cor}
+
+\begin{cor} Every bounded linear surjection between Banach spaces
+ \index{BAN@$\cat{BAN_\infty}$!quotients in}%
+ \index{quotient!map!in $\cat{BAN_\infty}$}%
+is a quotient map in~$\cat{BAN_\infty}$.
+\end{cor}
+
+\begin{exam} Let $\fml C_u$ be the set of continuous real valued functions on $[0,1]$ under
+the uniform norm and $\fml C_1$ be the same set of functions under the $\mathrm{L_1}$ norm
+(\,$\norm{f}_1 = \int_0^1\abs{f}\,d\lambda$\,). Then the identity map $I\colon \fml C_u
+\sto \fml C_1$ is a continuous linear bijection but is not open. (Why does this not
+contradict the \emph{open mapping theorem}?)
+\end{exam}
+
+\begin{exam} Let $l$ be the set of sequences of real numbers that are eventually zero,
+$V$ be $l$ equipped with the $l_1$ norm, and $W$ be $l$ with the uniform norm.  The
+identity map $I\colon V \sto W$ is a bounded linear bijection but is not an isomorphism.
+\end{exam}
+
+\begin{exam} The mapping $T\colon \R^2 \sto \R\colon (x,y) \mapsto x$ shows that although
+bounded linear surjections between Banach spaces map open sets to open sets they need not
+map closed sets to closed sets.
+\end{exam}
+
+\begin{prop} Let $V$ be a vector space and suppose that $\norm{\cdot}_1$ and
+$\norm{\cdot}_2$ are norms on~$V$ whose corresponding topologies are $\ofml T_1$
+and~$\ofml T_2$.  If $V$ is complete with respect to both norms and if $\ofml T_1
+\supseteq \ofml T_2$, then $\ofml T_1 = \ofml T_2$.
+\end{prop}
+
+\begin{exer} Does there exist a sequence $(a_n)$ of complex numbers satisfying the
+following condition: a sequence $(x_n)$ in $\C$ is absolutely summable if and only if
+$(a_nx_n)$ is bounded? \emph{Hint.} Consider $ T\colon l_\infty \sto l_1\colon (x_n)
+\mapsto (x_n/a_n)$.
+\end{exer}
+
+\begin{exam}\label{C069431} Let $\fml C^2([a,b])$ be the family of all twice continuously
+differentiable real valued functions on the interval $[a,b]$. Regard it as a vector space
+in the usual fashion. For each $f \in \fml C^2([a,b])$ define
+    \[ \norm{f} = \norm{f}_u + \norm{f'}_u + \norm{f''}_u\,. \]
+This is in fact a norm and under this norm $\fml C^2([a,b])$ is a Banach space.
+\end{exam}
+
+\begin{exam}\label{C069432} Let $\fml C^2([a,b])$ be the Banach space given in
+exercise~\ref{C069431}, and $p_0$ and $p_1$ be members of $\fml C([a,b])$.   Define
+  \[T\colon C^2([a,b]) \sto C([a,b])\colon
+                      f \mapsto f'' + p_1f' + p_0f.\]
+Then $T$ is a bounded linear map.
+\end{exam}
+
+\begin{exer} Consider a differential equation of the form
+   \[ y'' + p_1\,y' + p_0\,y = q  \tag{$\ast$} \]
+where $p_0$, $p_1$, and $q$ are (fixed) continuous real valued functions on the interval
+$[a,b]$.  Make precise, and prove, the assertion that \emph{the solutions to $(\ast)$
+depend continuously on the initial values}.  You may use without proof a standard
+theorem: For every point $c$ in $[a,b]$ and every pair of real numbers $a_0$ and $a_1$,
+there exists a unique solution of $(\ast)$ such that $y(c) = a_0$ and $y'(c) = a_1$.
+\emph{Hint.} For a fixed $c \in [a,b]$ consider the map
+  \[ S\colon \fml C^2([a,b]) \sto \fml C([a,b]) \times \R^2 \colon
+                                        f \mapsto \bigl(Tf,f(c),f'(c)\bigr) \]
+where $\fml C^2([a,b])$ is the Banach space of example~\ref{C069431} and $T$ is the
+bounded linear map of example~\ref{C069432}.
+\end{exer}
+
+\begin{defn} An bounded linear map  $T\colon V \sto W$ between normed linear spaces  is
+ \index{bounded!away from zero}%
+\df{bounded away from zero} (or
+ \index{bounded!below}%
+\df{bounded below}) if there exists a number $\delta > 0$ such that $\norm{Tx} \ge
+\delta\norm{x}$ for all $x \in V$. (Recall that the word ``bounded'' means one thing when
+modifying a linear map and and something quite different when applied to a general
+function; so does the expression ``bounded away from zero''. See
+definition~\ref{def_bdd_away_zero}.)
+\end{defn}
+
+\begin{prop} A bounded linear map between Banach spaces is bounded away from zero if and
+only if it has closed range and zero kernel.
+\end{prop}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{The Closed Graph Theorem}
+A simple necessary and sufficient condition for a linear map $T\colon B \sto C$ between Banach spaces
+to be continuous is that its graph be closed.  In one direction this is almost obvious.  The converse is
+called the \emph{closed graph theorem}.  When we ask for the graph of $T$ to be
+ \index{graph!closed}%
+``closed'' we mean closed as a subset of $B \times C$ with the product topology.  Recall (from~\ref{exam_prod_top_norm})
+that the topology on the direct sum $B \oplus C$ induced by the product norm is the same as the product topology on $B \times C$.
+
+\begin{exer} If $T\colon B \sto C$ is a continuous linear map between Banach spaces, then its graph is closed.
+\end{exer}
+
+\begin{thm}[Closed graph theorem]\label{thm_CGT} Let $T\colon B \sto C$ be a linear map between Banach
+ \index{closed!graph theorem}%
+spaces.  If the graph of $T$ is closed, then $T$ is continuous.
+\end{thm}
+
+\begin{proof}[Hint for proof] Let $G = \{(x,Tx)\colon x \in B\}$ be the graph of~$T$. Apply
+(corollary~\ref{C069417} of) the \emph{open mapping theorem} to the map
+  \[ \pi\colon G \sto B\colon (x,Tx) \mapsto x\,. \]
+\ns \end{proof}
+
+The next proposition gives a very simple necessary and sufficient condition for the graph of a linear map between Banach
+spaces to be closed.
+
+\begin{prop}\label{prop_nasc_closed_graph} Let $T\colon B \sto C$ be a linear mapping between Banach spaces. Then $T$ is
+continuous if and only if the following condition is satisfied:
+   \[ \text{if $x_n \sto 0$ in $B$ and $Tx_n \sto c$ in $C$, then $c = 0$.} \]
+\end{prop}
+
+\begin{prop} Suppose $T \colon B \sto C$ is a linear map between Banach spaces such that if
+$x_n \sto 0$ in $B$ then $(g \circ T)(x_n) \sto 0$ for every $g \in C^*$.  Then $T$ is
+bounded.
+\end{prop}
+
+\begin{prop} Let $T \colon B \sto C$ be a linear function between Banach spaces. Define
+$T^*f = f \circ T$ for every $f \in C^*$.  If $T^*$ maps $C^*$ into $B^*$, then $T$ is
+continuous.
+\end{prop}
+
+\begin{defn}\label{C069624} A linear map $T$ from a vector space into itself is
+ \index{idempotent}%
+\df{idempotent} if $T^2 = T$.
+\end{defn}
+
+\begin{prop}\label{prop_cont_idem_op} An idempotent linear map from a Banach space into itself is
+continuous if and only if it has closed kernel and range.
+\end{prop}
+
+\begin{proof}[\emph{Hint for proof}] For the ``if'' part, use proposition~\ref{prop_nasc_closed_graph}.  \ns
+\end{proof}
+
+The next proposition is a useful application of the \emph{closed graph theorem} to Hilbert space operators.
+
+\begin{prop} Let $H$ be a Hilbert space and $S$ and $T$ be functions from $H$ into itself such that
+    \[ \langle Sx,y \rangle = \langle x,Ty \rangle \]
+for all $x$, $y \in H$.  Then $S$ and $T$ are bounded linear operators.
+\end{prop}
+
+\begin{proof}[\emph{Hint for proof}] To verify the linearity of the map $S$ consider the inner product of the vectors
+$S(\alpha x + \beta y) - \alpha Sx - \beta Sy$ and $z$, where $x$, $y$, $z \in H$ and $\alpha$, $\beta \in \K$.
+To establish the continuity of $S$, show that its graph is closed.  \ns
+\end{proof}
+
+Recall that in the preceding proposition the operator $T$ is the \emph{(Hilbert space) adjoint} of $S$;
+that is, $T = S^*$.
+
+\begin{defn} Let $a < b$ in~$\R$. A function $f\colon [a,b] \sto \R$ is
+ \index{continuously differentiable}%
+ \index{differentiable!continuously}%
+continuously differentiable if it is differentiable on (an open set containing) $[a,b]$
+and its derivative $f\,'$ is continuous on~$[a,b]$.  The set of all continuously
+differentiable real valued functions on $[a,b]$ is denoted by $\fml C^1(\,[a,b]\,)$.
+\end{defn}
+
+\begin{exam} Let $D\colon \fml C^1(\,[0,1]\,) \sto C(\,[0,1]\,)\colon f \mapsto f\,'$ where
+both $C^1(\,[0,1]\,)$ and $C(\,[0,1]\,)$ are equipped with the uniform norm. The mapping
+$D$ is linear and has closed graph but is not continuous.  (Why does this not contradict
+the \emph{closed graph theorem}?  What can we conclude about~$\fml C^1(\,[0,1]\,)$?)
+\end{exam}
+
+\begin{prop} Suppose that $S\colon A \sto B$ and $T\colon B \sto C$ are linear maps between
+Banach spaces and that $T$ is bounded and injective.  Then $S$ is bounded if and only if $TS$ is.
+\end{prop}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Banach Space Duality}
+
+\begin{conv}\label{conv_subsp_Bsp} In the context of Banach spaces we adopt the same convention for the use of the word
+``subspace'' we used for Hilbert spaces.  The word ``subspace'' will always mean
+ \index{subspace!of a Banach space}%
+ \index{conventions!subspaces of Banach spaces are closed}%
+\emph{closed vector subspace}.  To indicate that $M$ is a subspace of a Banach space $B$ we write
+ \index{<binrelle@$\preccurlyeq$ (subspace of a Banach or Hilbert space)}%
+$M \preccurlyeq B$.
+\end{conv}
+
+\begin{prop} If $M$ is a subspace of a Banach space $B$,
+ \index{quotient!Banach space}%
+ \index{Banach!space!quotient}%
+ \index{space!quotient!Banach}%
+then the quotient normed linear space $B/M$ is also a Banach space.
+\end{prop}
+
+\begin{proof}[\emph{Hint for proof}] To show that $B/M$ is complete it suffices to show that from an
+arbitrary Cauchy sequence $(u_n)$ in $B/M$ we can extract a convergent subsequence.  To this end
+notice that if $(u_n)$ is Cauchy, then for every $k \in \N$ there exists $N_k \in \N$ such that
+$\norm{u_n - u_m} < 2^{-k}$ whenever $m$, $n \ge N_k$.  Now use induction. Choose $n_1 = N_1$.
+Having chosen $n_1$, $n_2$, \dots , $n_k$ so that $n_1 < n_2 < \dots < n_k$ and $N_j \le n_j$ for
+$1 \le j \le k$, choose $n_{k+1} = \max\{N_{k+1}, n_k + 1\}$.  This results in a subsequence
+$\bigl(u_{n_k}\bigr)$ satisfying $\norm{u_{n_k} - u_{n_{k+1}}} < 2^{-k}$ for all $k \in \N$.
+From each equivalence class $u_{n_k}$ choose a vector $x_k$ in $B$ so that $\norm{x_k - x_{k+1}} < 2^{-k+1}$.
+Then proposition~\ref{prop_abs_sum_implies_sum} shows that the sequence $(x_k - x_{k+1})$ is
+summable.  From this conclude that the sequences $(x_k)$ and $\bigl(u_{n_k}\bigr)$ converge.
+(The details of this argument are nicely written out in the proof of theorem 3.4.13 in~\cite{BrownP:1970}.) \ns
+\end{proof}
+
+\begin{prop} If $J$ is a closed ideal in a Banach algebra,
+ \index{quotient!Banach algebra}%
+ \index{Banach!algebra!quotient}%
+ \index{algebra!quotient!Banach}%
+then $A/J$ is a Banach algebra.
+\end{prop}
+
+\begin{thm}[Fundamental quotient theorem for $\cat{BALG}$] Let $A$ and $B$ be Banach algebras
+ \index{BALG@$\cat{BALG}$!quotients in}%
+ \index{quotient!theorem!for $\cat{BALG}$}%
+and $J$ be a proper closed ideal in~$A$. If $\phi$ is a homomorphism from $A$ to $B$ and
+$\ker\phi \supseteq J$, then there exists a unique homomorphism $\wt\phi\colon A/J \sto
+B$ which makes the following diagram commute.
+   \[ \xymatrix@+30pt{A \ar[d]_*+{\pi} \ar[dr]^*+{\phi} & \\
+                           A/J \ar[r]_*+{\widetilde\phi} & B  }\]
+Furthermore, $\wt\phi$ is injective if and only if $\ker\phi = J$; and $\wt\phi$ is
+surjective if and only if $\phi$ is.
+\end{thm}
+
+\begin{prop}\label{C037821} Let $J$ be a proper closed ideal in a unital commutative Banach
+algebra~$A$.  Then $J$ is maximal if and only if $A/J$ is a field.
+\end{prop}
+
+The next proposition specifies quite simple conditions under which a epimorphism between Banach
+spaces turns out to be a factor of other morphisms.  At first glance the usefulness of such a
+result may seem a bit doubtful.  When you prove proposition~\ref{00151231} notice, however, that
+this is \emph{exactly} what you need.
+
+\begin{prop}\label{prop_surj_as_factor} Consider the category of Banach spaces
+and continuous linear maps.  If $T\colon A \sto C$, $R\colon A \sto B$, $R$ is
+surjective, and $\ker R \subseteq \ker T$, then there exists a unique
+$S\colon B \sto  C$ such that $SR = T$. Furthermore, $S$ is injective if and
+only if $\ker R = \ker T$.
+\end{prop}
+
+\begin{proof}[\emph{Hint for proof}] Consider the following commutative diagram.
+Use the \emph{open mapping theorem}.
+ \[\xy
+    \scalefactor{1.4}%
+    \Atrianglepair/>`>`>`<-`>/[A`B`A/\ker R`C;R`\pi`T`\wt R`\wt T]
+ \endxy\]   \ns
+\end{proof}
+
+It is interesting to note that it is possible to state the preceding result in such a way that
+the uniqueness claim is strengthened slightly.  As stated, the conclusion is that there is a
+unique bounded linear map $S$ such that $SR = T$.  With no extra work we could have rephrased
+the proposition as follows.
+
+\begin{prop}\label{prop_surj_as_factor2} Consider the category of Banach spaces
+and continuous linear maps.  If $T\colon A \sto C$, $R\colon A \sto B$, $R$ is
+surjective, and $\ker R \subseteq \ker T$, then there exists a unique function
+$S$ mapping $B$ into $C$ such that $S\circ R = T$.  The function $S$ must be
+bounded and linear.  Furthermore, it is injective if and only if $\ker R = \ker T$.
+\end{prop}
+
+Is it worthwhile stating the fussier, second version of the result? It depends, I think, on
+where one is headed.  It doesn't seem attractive to opt for the longer version solely on the
+grounds that it is more general.  On the other hand, suppose that one later needs the following result.
+
+\begin{prop}\label{prop_factor_blm} If a bounded linear map $T\colon A \sto C$ between Banach spaces can be factored
+into the composite of two functions $T = f \circ R$ where $R \in \ofml B(A,B)$ is surjective,
+then $f \colon B \sto C$ is bounded and linear.
+\end{prop}
+
+\begin{proof}[\emph{Hint for proof}] All that is needed here in order to apply~\ref{prop_surj_as_factor2}
+is to notice that $f(0) = 0$ and therefore $\ker R \subseteq \ker T$.   \ns
+\end{proof}
+
+Since the preceding is an almost obvious corollary of~\ref{prop_surj_as_factor2}, it is nice to have
+this fussier version available.  I suppose that one might argue that while~\ref{prop_factor_blm} may not be
+entirely obvious from the statement of~\ref{prop_surj_as_factor}, it is certainly obvious from its
+proof, so why bother with the more complicated version?  Such things are surely a matter of taste.
+
+\begin{defn}\label{defn_Bsp_exact_seq}  A sequence of Banach spaces and continuous linear maps
+   \[\xymatrix{{\cdots}\ar[r] & B_{n-1}\ar[r]^{T_n}
+          & B_n\ar[r]^{T_{n+1}} & B_{n+1}\ar[r] & {\cdots}
+   }\]
+is said to be
+ \index{sequence!exact}%
+ \index{exact!sequence}%
+\df{exact at} $B_n$ if $\ran T_n = \ker T_{n+1}$. A sequence is \df{exact} if it is
+exact at each of its constituent Banach spaces.  A sequence of Banach spaces and
+continuous linear maps of the form
+   \begin{equation}\label{001500202i}\xymatrix{
+      0 \ar[r] & A \ar[r]^S & B\ar[r]^T & C\ar[r] & 0
+   }\end{equation}
+ \index{sequence!short exact}%
+ \index{short exact sequence}%
+which is exact at $A$, $B$, and $C$ is a \df{short exact sequence}.  (Here $\vc 0$ denotes the trivial zero dimensional
+Banach space, and the unlabeled arrows are the obvious maps.)
+\end{defn}
+
+The preceding definitions were for the
+ \index{BAN@$\cat{BAN_\infty}$!the category}%
+ \index{category!$\cat{BAN_\infty}$ as a}%
+category $\cat{BAN_\infty}$ of Banach spaces and continuous linear maps.  Of course the
+notion of an \emph{exact sequence} makes sense in many situations---for example, in the
+categories of Banach algebras, $C^*$-algebras, Hilbert spaces, vector spaces, Abelian
+groups, and modules, among others.
+
+\begin{prop}\label{00151231} Consider the following diagram in the category of Banach spaces
+and continuous linear maps
+ \[\xymatrix{
+      0\ar[r] & A\ar[d]^f\ar[r]^j & B\ar[d]^g\ar[r]^k
+              & C\ar@{-->}[d]^h \ar[r] & 0 \\
+      0\ar[r] & A'\ar[r]_{j'} & B'\ar[r]_{k'}
+      & C'\ar[r] & 0
+ }\]
+If the rows are exact and the left square commutes, then there exists a unique
+continuous linear map $h\colon C \sto C'$ which makes the right square commute.
+\end{prop}
+
+\begin{prop}[The Five Lemma]\label{00151232}
+ \index{five lemma}%
+Suppose that in the following diagram of Banach spaces and continuous linear maps
+ \[\xymatrix{
+      0\ar[r] & A\ar[d]^f\ar[r]^j & B\ar[d]^g\ar[r]^k
+              & C\ar[d]^h \ar[r] & 0 \\
+      0\ar[r] & A'\ar[r]_{j'} & B'\ar[r]_{k'}
+      & C'\ar[r] & 0
+ }\]
+the rows are exact and the squares commute.  Then the following hold.
+ \begin{enumerate}[label=\rm{(\alph*)}]
+  \item If $g$ is surjective, so is $h$.
+  \item If $f$ is surjective and $\ran j \supseteq \ker g$, then $h$ is injective.
+  \item If $f$ and $h$ are surjective, so is $g$.
+  \item If $f$ and $h$ are injective, so is $g$.
+ \end{enumerate}
+\end{prop}
+
+There are many advantages to working with Hilbert or Banach space operators having closed range.
+One immediate advantage is that we recapture the simplicity of the \emph{fundamental theorem of linear algebra}
+(\ref{00016025}) from the somewhat more complex versions given in proposition~\ref{prop_ker_adj_perp_ran_op}
+and theorem~\ref{prop_FTLA_Bsp}.  On the other hand there are disadvantages.  They do not form a category; the composite
+of two closed range operators may fail to have closed range.
+
+\begin{prop} If a bounded linear map $T\colon B \sto C$ between two Banach spaces has closed range, the so does its
+adjoint~$T^*$ and $\ran T^* = (\ker T)^\perp$.
+\end{prop}
+
+\begin{proof}[\emph{Hint for proof}] Conclude from proposition~\ref{prop_FTLA_Bsp}(d) that one need only show that
+$(\ker T)^\perp \subseteq \ran T^*$.  Let $f$ be an arbitrary functional in $(\ker T)^\perp$. What must be found is a
+functional $g$ in $C^*$ so that $f = T^*g$.  To this end use the \emph{open mapping theorem} to show that the map $\wt T_\ast$
+in the following diagram is invertible. (The maps $T_\ast\colon B \sto \ran T$ and $T$ are exactly the same, except that their
+codomains differ.)
+
+ \[\xy
+    \scalefactor{1.4}%
+    \Atrianglepair/>`>`>`<-`>/[B`\ran T`B/\ker T`\K;T_\ast`\pi`f`\wt{T_\ast}`\wt f]
+ \endxy\]
+
+Let $g_0 := \wt f\,{\wt T_\ast}^{-1}$. Use the \emph{Hahn-Banach theorem} to produce the desired~$g$.   \ns
+\end{proof}
+
+\begin{prop} In the category $\cat{BAN_\infty}$ if the sequence $\xymatrix{A \ar[r]^S & B \ar[r]^T & C}$ is exact at $B$
+and $T$ has closed range, then $\xymatrix{C^* \ar[r]^{T^*} & B^* \ar[r]^{S^*} & A^*}$ is exact at~$B^*$.
+\end{prop}
+
+\begin{defn} A functor from the category of Banach spaces and continuous linear maps into itself is
+ \index{exact!functor}%
+ \index{functor!exact}%
+\df{exact} if it takes short exact sequences to short exact sequences.
+\end{defn}
+
+\begin{exam}\label{exam_dualfunctor_exact} The functor $B \mapsto B^*$, $T \mapsto T^*$ (see~\ref{exam_dual_functor})
+from the category of Banach spaces and continuous linear maps into itself is exact.
+\end{exam}
+
+\begin{exam} Let $B$ be a Banach space and $\sbsb{\tau}B\colon x \mapsto x^{**}$ be the natural embedding from $B$ into~$B^{**}$
+(see definition~\ref{defn_nat_embed}). Then the quotient space $B^{**}/\ran\sbsb{\tau}B$ is a Banach space.
+\end{exam}
+
+\begin{notn} We will denote by $\clo B$ the quotient
+space $B^{**}/\ran \sbsb{\tau}B$ in the preceding example.
+\end{notn}
+
+\begin{prop} If $T\colon B \sto C$ is a continuous linear map between Banach spaces, then there exists a unique continuous linear map
+$\clo T\colon \clo B \sto \clo C$ such that $\clo T(\phi + \ran\sbsb{\tau}B) = (T^{**}\phi) + \ran\sbsb{\tau}C$ for all $\phi \in B^{**}$.
+\end{prop}
+
+\begin{proof}[\emph{Hint for proof}] Apply~\ref{00151231} to the following diagram:
+ \begin{equation}\label{eqn_exactCD_Bbar}\xymatrix{
+      0\ar[r] & B\ar[d]^T\ar[r]^{\sbsb{\tau}B} & B^{**}\ar[d]^{T^{**}}\ar[r]^{\sbsb{\pi}B}
+              & \clo B\ar@{-->}[d]^{\clo T} \ar[r] & 0 \\
+      0\ar[r] & C\ar[r]_{\sbsb{\tau}C} & C^{**}\ar[r]_{\sbsb{\pi}C} & \clo C\ar[r] & 0
+ }\end{equation}  \ns
+\end{proof}
+
+\begin{exam}\label{exam_bar_functor} The pair of maps $B \mapsto \clo B$, $T \mapsto \clo T$ from the 
+category $\cat{BAN_\infty}$ into itself is an
+ \index{<unopu@$B \mapsto \clo B$, $T \mapsto \clo T$ (the functor)}%
+ \index{functor!from a Banach space $B$ to $\clo B$}%
+exact covariant functor.
+\end{exam}
+
+\begin{prop} In the category of Banach spaces and continuous linear maps, if
+the sequence
+ \[\begin{CD}
+  0 \longrightarrow A @> S >> B @> T >> C \longrightarrow 0
+  \end{CD}\]
+is exact, then the following diagram commutes and has exact rows
+and columns.
+ \[\bfig
+    \iiixiii{'7777}[A`A^{**}`\overline A`B`B^{**}`\overline B`C`C^{**}`\overline C;%
+``````S`{S^{**}}`{\overline S}`T`{T^{**}}`{\overline T}]
+  \efig\]
+\end{prop}
+
+\begin{cor} Every subspace of a reflexive Banach space is reflexive.
+\end{cor}
+
+\begin{cor} If $M$ is a subspace of a reflexive Banach space~$B$, then $B/M$ is reflexive.
+\end{cor}
+
+\begin{cor} Let $M$ be a subspace of a Banach space~$B$.  If both $M$ and $B/M$ are reflexive,
+then so is~$B$.
+\end{cor}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{defn} Let $T \in \ofml L(B,C)$, where $B$ and $C$ are Banach spaces.  Define
+$\coker T$, the
+ \index{cokernel}%
+ \index{cokernel@$\coker T$ (the cokernel of $T$)}%
+\df{cokernel} of~$T$, to be $C/\ran T$.
+\end{defn}
+
+
+
+Unmasking the identity of the dual of a Banach space is frequently a bit challenging.  Following are a few
+important examples.  First, however, a word of caution.  Notation for objects living in normed linear spaces
+of sequences can be treacherous.  In dealing with completeness of such spaces,one deals with sequences of
+sequences of complex numbers.  It is a kindness towards the reader (and likely to yourself a month later
+when you try to read something you wrote!) to distinguish notationally between sequences of complex numbers
+and sequences of sequences. There are may ways of accomplishing this: double subscripts, subscripts and
+superscripts, functional notation for complex sequences, \emph{etc.}
+
+Another problematic notation that arises in sequence spaces is $\sum_{k=1}^\infty a_k \vc e^k$, where $\vc e^k$
+is the sequence which is $1$ in the $k^{\text{th}}$ coordinate and $0$ everywhere else. (Recall that in
+example~\ref{C063149} we used these vectors for the usual (or standard) orthonormal basis for the Hilbert
+space~$l_2$.)  There appears to be little confusion that results from regarding $\sum_{k=1}^\infty a_k \vc e^k$
+simply as shorthand for the sequence $(a_k) = (a_1,a_2,a_3,\dots)$ of complex numbers.  If, however, one wishes
+to treat it literally as an infinite series, then care is needed.  In the spaces $\sbsb c0$ and $l_1$, there is
+no problem. It is indeed the limit as $n$ gets large of $\sum_{k=1}^n a_k \vc e^k$.  (Why?)  But in the spaces
+$c$ and $l_\infty$, for example, things go horribly wrong.  To see what can happen, consider the constant sequence
+$(1,1,1,\dots)$ (which belongs to both $c$ and $l_\infty$). Then
+$\lim_{n \sto\infty}\norm{(1,1,1,\dots) - \sum_{k=1}^n \vc e^k}$ fails to approach zero in either case.
+In $c$ the limit is $1$ and in $l_1$ it is~$\infty$.
+
+\begin{exam}\label{exam_dual_C0} The normed linear space $\sbsb c0$ (see~\ref{C0231303})
+ \index{c@$c_0$!as a Banach space}%
+ \index{Banach!space!$c_0$ as a}%
+ \index{l@$l_1$!as the dual of $c_0$}%
+ \index{dual!of $c_0$}%
+is a Banach space and its dual is $l_1$ (see~\ref{C023191}.
+\end{exam}
+
+\begin{proof}[\emph{Hint for proof}] Consider the map
+$T\colon {\sbsb c0}^* \sto l_1\colon f \mapsto \sum_{k=1}^\infty f(\vc e^k)\vc e^k$.
+(Don't forget to show that $T$ really maps into~$l_1$.) Verify that $T$ is an isometric isomorphism.
+To prove that $T$ is surjective, start with a vector $b \in l_1$ and consider the function
+$f\colon \sbsb c0 \sto \C\colon a \mapsto \sum_{k=1}^\infty a_kb_k$.    \ns
+\end{proof}
+
+\begin{cor} The space $l_1$ is a
+ \index{l@$l_1$!as a Banach space}%
+ \index{Banach!space!$l_1$ as a}%
+Banach space.
+\end{cor}
+
+It is interesting that, as it turns out, the spaces $\sbsb c0$ and $c$ are not isometrically isomorphic,
+even though their dual spaces are.  The computation of the dual of $c$ is technically slightly fussier than
+the one for~${\sbsb c0}^{\!*}$.  It may be helpful to consider the \emph{Schauder bases} for these two spaces.
+
+\begin{defn} A sequence $(\vc e^k)$ of vectors in a Banach space is a
+ \index{Schauder basis}%
+ \index{basis!Schauder}%
+\df{Schauder basis} for the space if for every $x \in B$ there exists a unique sequence $(\alpha_k)$ of
+scalars such that $x = \sum_{k=1}^\infty \alpha_k \vc e^k$.
+\end{defn}
+
+Two comments about the preceding definition: The word ``unique'' is very important; and it is not true that
+every Banach space has a Schauder basis.
+
+\begin{exam} An orthonormal basis in a separable Hilbert space is a Schauder basis for the space.  (See
+propositions~\ref{prop_unique_onbasis} and~\ref{prop_Schauder_basis_Hsp}.)
+\end{exam}
+
+\begin{exam}\label{exam_dual_c0} We choose the
+ \index{usual!Schauder basis for~$\sbsb c0$}%
+ \index{Schauder!basis!usual (or standard) for~$\sbsb c0$}%
+ \index{basis!standard (or usual)}%
+\df{standard} (or
+ \index{standard!Schauder basis for $\sbsb c0$}%
+\df{usual}) \df{basis vectors} for $\sbsb c0$ in the same way as for~$l_2$ (see~\ref{C063149}).
+For each $n \in \N$ let $\vc e^n$ be the sequence in $l_2$ whose $n^{\text{th}}$ coordinate is $1$
+and all the other coordinates are~$0$. Then $\{\vc e^n\colon n \in \N\}$ is a Schauder basis
+for~$\sbsb c0$.
+\end{exam}
+
+At first glance the space $c$ of all convergent sequences may seem enormously larger than $\sbsb c0$,
+which contains only those sequences which converge to zero.  After all, corresponding to each vector
+$x$ in $\sbsb c0$ there are uncountably many distinct vectors in $c$ (just add any nonzero complex
+number to each term of the sequence~$x$).  Is it possible for $c$, containing, as it does, uncountably
+many copies of the uncountable collection of members of~$\sbsb c0$, to have a (necessarily countable)
+Schauder basis?  The answer, upon reflection, is \emph{yes}.  All we need to do is add a single element
+to the basis for~$\sbsb c0$ to deal with the translations.
+
+\begin{exam} Let $\vc e^1$, $\vc e^2$, \dots be as in the preceding example~\ref{exam_dual_c0}.  Also
+denote by $\vc 1$ the constant sequence $(1,1,1,\dots)$ in~$c$. Then $(\vc 1, \vc e^1, \vc e^2, \dots)$
+is a Schauder basis for~$c$.
+\end{exam}
+
+\begin{exam}\label{exam_dual_c} The normed linear space $c$ (see~\ref{C0231302})
+ \index{c@$c$!as a Banach space}%
+ \index{Banach!space!$c$ as a}%
+ \index{l@$l_1$!as the dual of $c$}%
+ \index{dual!of $c$}%
+is a Banach space and its dual is $l_1$ (see~\ref{C023191}).
+\end{exam}
+
+\begin{proof}[\emph{Hint for proof}] Observe initially that for every $f \in c^*$ the sequence
+$\bigl(f(\vc e^k)\bigr)$ is absolutely summable and that as a consequence $\sum_{k=1}^\infty a_k f(\vc e^k)$
+converges for every sequence $a = (a_1,a_2,\dots)$ in~$c$.  Also note that each $a \in c$ can be written as
+$a = a_\infty \vc 1 + \sum_{k=1}^\infty (a_k -a_\infty)\vc e^k$ where $a_\infty := \lim_{k \sto \infty}a_k$
+and let $\vc 1 := (1,1,1,\dots)$.  Use this to prove that for every $f \in c^*$
+   \[ \abs{f(a)} \le \biggl[ \abs{\beta_f} + \sum_{k=1}^\infty \abs{f(\vc e^k)} \biggr] {\norm a}_\infty \]
+where $\beta_f := f(\vc 1) - \sum_{k=1}^\infty f(\vc e^k)$.  For $t = (t_0,t_1,t_2,\dots) \in l_1$ and
+$a = (a_1,a_2,a_3,\dots) \in c$ define
+   \[ S_t(a) := t_0 a_\infty + \sum_{k=1}^\infty t_ka_k \]
+and verify that $S\colon t \mapsto S_t$ is a continuous linear map from $l_1$ into~$c^*$.
+Next, for $f \in c^*$ define
+   \[ Tf := (\beta_f, f(\vc e^1), f(\vc e^2), \dots) \]
+and show that $T\colon f \mapsto Tf$ is a linear isometry from $c^*$ into~$l_1$. Now in order to see that $c^*$ and
+$l_1$ are isometrically isomorphic all that is needed is to show that $ST = \id{c^*}$ and $TS = \id{l_1}$.  \ns
+\end{proof}
+
+
+
+
+
+
+
+
+
+
+
+\begin{defn} A topological space is
+ \index{locally!compact}%
+ \index{compact!locally}%
+\df{locally compact} if every point of the space has a compact neighborhood.
+\end{defn}
+
+\begin{notn} Let $X$ be a locally compact space.  A scalar valued function $f$ on $X$ belongs to $\fml C_0(X)$ if
+ \index{C@$\fml C_0(X)$!space of continuous functions which vanish at infinity}%
+it is continuous and vanishes at infinity (that is, if for every number $\epsilon > 0$ there exists a compact subset
+of $X$ outside of which $\abs{f(x)} < \epsilon$).
+\end{notn}
+
+\begin{exam}\label{exam_C0X} If $X$ is a locally compact Hausdorff space, then, under pointwise algebraic operations and the uniform norm,
+ \index{Banach!space!$\fml C_0(X)$ as a}%
+ \index{C@$\fml C_0(X)$!as a Banach space}%
+$\fml C_0(X)$ is a Banach space.
+\end{exam}
+
+We recall one of the most important theorems from real analysis.
+
+\begin{thm}[Riesz representation]\label{C057951} Let $X$ be a locally compact Hausdorff
+ \index{Riesz!representation theorem}%
+space.  If $\phi$ is a bounded linear functional on $\fml C_0(X)$, then there exists a
+unique complex regular Borel measure $\mu$ on $X$ such that
+  \[ \phi(f) = \int_X f\,d\mu \]
+for all $f \in \fml C_0(X)$ and $\norm\mu = \norm\phi$.
+\end{thm}
+
+\begin{proof} This theorem and the following corollary are nicely presented in Appendix C of Conway's
+functional analysis text~\cite{Conway:1990}. See also~\cite{Folland:1984}, theorem 7.17; \cite{HewittS:1965},
+theorems 20.47 and 20.48; \cite{McDonaldW:1999}, theorem 9.16;and \cite{Rudin:1987}, theorem 6.19.  \ns
+\end{proof}
+
+\begin{cor}\label{C057952} If $X$ is a locally compact Hausdorff space, then $\bigl(\fml C_0(X)\,\bigr)^*$
+ \index{dual!of $\fml C_0(X)$}%
+ \index{C@$\fml C_0(X)$!dual of}%
+ \index{M@$\textbf{M}(X)$!as the dual of $\fml C_0(X)$}%
+is isometrically isomorphic to~$\textbf{M}(X)$,
+ \index{M@$\textbf{M}(X)$!regular complex Borel measures on~$X$}%
+the Banach space of all regular complex Borel measures on~$X$.
+\end{cor}
+
+\begin{cor} If $X$ is a locally compact Hausdorff space, then $\textbf{M}(X)$
+ \index{M@$\textbf{M}(X)$!as a Banach space}%
+ \index{Banach!space!$\textbf{M}(X)$ as a}%
+is a Banach space.
+\end{cor}
+
+
+
+
+
+
+
+
+
+
+In~\ref{defn_nls_adjoint} we defined the adjoint of a linear operator between Banach
+spaces and in~\ref{def000926} we defined the adjoint of a Hilbert space
+operator. In the case of an operator on a Hilbert space (which is also a Banach space)
+it is natural to ask what relationship there is, if any, between these two ``adjoints''.
+They certainly can not be equal since the former acts between the dual spaces and the latter
+between the original spaces.  In the next proposition we make use of the anti-isomorphism
+$\psi$ defined in~\ref{000341} (see~\ref{0022057}) to demonstrate that the two adjoints are
+``essentially'' the same.
+
+\begin{prop} Let $T$ be an operator on a Hilbert space $H$ and $\psi$ be the
+anti-isomorphism defined in~\ref{000341}.  If we denote (temporarily) the Banach space
+dual of $T$ by $T'\colon H^* \sto H^*$, then $T' = \psi\, T^* \psi^{-1}$.  That is, the
+following diagram commutes.
+   \[ \xy
+          \Square/{->}`{<-}`{<-}`{->}/[H^*`H^*`H`H;T'`\psi`\psi`T^*]
+      \endxy \]
+\end{prop}
+
+\begin{defn}\label{0022091} Let $A$ be a subset of a Banach space $B$.  Then the
+ \index{annihilator}%
+\df{annihilator} of $A$, denoted
+ \index{<perp@$A^\perp$ (annihilator of a set)}%
+by~$A^\perp$, is $\{f \in B^*\colon f(a) = 0 \text{ for every $a \in A$}\}$.
+\end{defn}
+
+It is possible for the conflict in notations between \ref{0001511} and \ref{0022091} to
+cause confusion. To see that in a Hilbert space the annihilator of a subspace and the
+orthogonal complement of the subspace are ``essentially'' the same thing, use the
+isometric anti-isomorphism $\psi$ between $H$ and $H^*$ discussed in~\ref{0022057} to identify them.
+
+\begin{prop} Let $M$ be a subspace of a Hilbert space $H$. If we (temporarily) denote the
+annihilator of $M$ by~$M^a$, then $M^a = \psi^{\sto}\bigl(M^\perp\bigr)$.
+\end{prop}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Projections and Complemented Subspaces}
+\begin{defn}
+ A bounded linear map from a Banach space into itself is a
+ \index{projection!in a Banach space}%
+ \index{operator!projection}%
+\df{projection} if it is idempotent.  If $E$ is such a map, we say that it is a
+projection \df{along $\ker E$ onto $\ran E$}.
+\end{defn}
+
+Notice that this is most definitely \emph{not} the same thing as a projection in a
+Hilbert space.  Hilbert space projections are \emph{orthogonal projections}; that is,
+they are self-adjoint as well as idempotent.  The range of a Hilbert space projection
+is perpendicular to its kernel.  Since the terms ``orthogonal'', ``self-adjoint'', and
+``perpendicular'' make no sense in Banach spaces, we would not expect the two notions
+of ``projection'' to be identical.  In both cases, however, the projections \emph{are}
+bounded, linear, and idempotent.
+
+\begin{defn}  Let $M$ be a closed linear subspace of a Banach space~$B$.  If there exists a
+closed linear subspace $N$ of $B$ such that $B = M \oplus N$, then we say that $M$ is a
+ \index{complemented subspace}%
+ \index{subspace!complemented}%
+\df{complemented} subspace, that $N$ is its
+ \index{complement!of a Banach subspace}%
+\df{(Banach space) complement}, and that the subspaces $M$ and $N$ are
+\df{complementary}.
+\end{defn}
+
+\begin{prop}\label{C069814} Let $M$ and $N$ be complementary subspaces of a Banach space~$B$. Clearly, each
+element in $B$ can be written uniquely in the form $m + n$ for some $m \in M$ and $n \in
+N$. Define a mapping $E \colon B \sto B$ by $E(m + n) = m$ for $m \in M$ and $n \in N$.
+Then $E$ is the projection along $N$ onto~$M$.
+\end{prop}
+
+\begin{proof}[\emph{Hint for proof}] Use~\ref{prop_cont_idem_op}.  \ns
+\end{proof}
+
+\begin{prop}\label{C069817} If $E$ is a projection on a Banach space $B$, then its kernel and range are
+complementary subspaces of~$B$.
+\end{prop}
+
+The following is an obvious corollary of the two preceding propositions
+
+\begin{cor}\label{cor_compl_ran_proj} A subspace of a Banach space is complemented if and only if it is
+the range of a projection.
+\end{cor}
+
+\begin{prop} Let $B$ be a Banach space.  If $E \colon B \sto B$ is a projection onto a subspace
+$M$ along a subspace $N$, then $I - E$ is a projection onto $N$ along~$M$.
+\end{prop}
+
+\begin{prop}\label{C069824} If $M$ and $N$ are complementary subspaces of a Banach space $B$, then $B/M$ and
+$N$ are isomorphic.
+\end{prop}
+
+\begin{prop}\label{prop_linv_Bsp} Let $T \colon B \sto C$ be a bounded linear map between Banach spaces.
+ \index{left!inverse!of a Banach space operator}%
+If $T$ is injective and $\ran T$ is complemented, then $T$ has a left inverse.
+\end{prop}
+
+\begin{proof}[\emph{Hint for proof}] For this hint we introduce a (somewhat fussy) notation.
+If $f\colon X \sto Y$ is a function between two sets, we define
+$f_\bullet \colon X \sto \ran f\colon x \mapsto f(x)$.  That is, $f_\bullet$ is exactly the same
+function as $f$, except that its codomain is the range of~$f$.
+
+Since $\ran T$ is complemented there exists a projection $E$ from $C$ onto~$\ran T$
+(by~\ref{cor_compl_ran_proj}).  Show that $T_\bullet$ has a continuous inverse.
+Let $S = {T_\bullet}^{-1}E_\bullet$.    \ns
+\end{proof}
+
+\begin{prop}\label{prop_rinv_Bsp} Let $S \colon C \sto B$ be a bounded linear map between Banach spaces.
+ \index{right!inverse!of a Banach space operator}%
+If $S$ is surjective and $\ker S$ is complemented, then $S$ has a right inverse.
+\end{prop}
+
+\begin{proof}[\emph{Hint for proof}] Since $\ker S$ is complemented there exists $N \preceq C$ such that
+$C = N \oplus \ker S$. Show that the restriction of $S$ to $N$ has a continuous inverse and compose this
+inverse with the inclusion mapping of $N$ into~$C$.   \ns
+\end{proof}
+
+The next result serves as a converse to both propositions~\ref{prop_linv_Bsp} and~\ref{prop_rinv_Bsp}.
+
+\begin{prop}\label{C069831} Let $T \colon B \sto C$ and $S\colon C \sto B$ be bounded linear maps between Banach
+spaces.  If $ST = \id B$, then
+ \begin{enumerate}[label=\rm{(\alph*)}]
+  \item[(a)] $S$ is surjective;
+  \item[(b)] $T$ is injective;
+  \item[(c)] $TS$ is a projection along $\ker S$ onto~$\ran T$; and
+  \item[(d)] $C = \ran T \oplus \ker S$.
+ \end{enumerate}
+\end{prop}
+
+\begin{prop} If in the category $\cat{BAN_\infty}$ the sequences
+ \[ \begin{CD} 0 @>>> A @>j>> B @>f>> C @>>> 0
+    \end{CD}\]
+ and
+ \[ \begin{CD} 0 @>>> C @>g>> B @>p>> D @>>> 0
+    \end{CD}\]
+are exact and if $fg = \id{C}$, then $pj$ is an isomorphism from $A$ onto~$D$.
+\end{prop}
+
+\begin{proof}[\emph{Hint for proof}] Use \ref{C069831} to see that $B = \ker p \oplus \ran j$. Consider the map
+$\bigl.p\bigr|_{\ran j}\,j_\bullet$ (notation for $j_\bullet$ as in the hint for~\ref{prop_linv_Bsp}). \ns
+\end{proof}
+
+\begin{prop}\label{prop_merge_exactCD} If in the category $\cat{BAN_\infty}$ the diagrams
+ \begin{equation} \begin{CD} 0 @>>> A @>j>> B @>f>> C @>>> 0  \\
+      @.   @VSVV   @VVUV   @.    @.    \\
+ 0 @>>> A' @>>j'> B' @>>f'> C' @>>> 0
+    \end{CD}\end{equation}
+and
+ \[ \begin{CD} 0 @>>> C @>g>> B @>p>> D @>>> 0   \\
+      @.     @.   @VUVV   @VVTV     @.  \\
+  0 @>>> C' @>>g'> B' @>>p'> D' @>>> 0
+    \end{CD}\]
+commute, if the rows are exact, if $fg = \id{C}$ and if $f'g' = \id{C'}$, then the diagram
+ \[ \begin{CD}  A  @>pj>>  D   \\
+       @VSVV   @VVTV  \\
+     A'  @>>p'j'> D'
+    \end{CD}\]
+commutes and the maps $pj$ and $p'j'$ are isomorphisms.
+\end{prop}
+
+In~\ref{exam_dual_functor} and~\ref{exam_dualfunctor_exact} we saw that in the category of Banach spaces
+and continuous maps the duality functor $B \mapsto B*$, $T \mapsto T^*$ is an exact contravariant functor.
+And in~\ref{exam_bar_functor} we saw that in the same category the pair of maps $B \mapsto \clo B$,
+$T \mapsto \clo T$ is an exact covariant functor.  Composing these two functors creates two new exact 
+contravariant functors, which we will denote by $F$ and $G$:
+  \[ \xymatrix{B\ar[r]^F &{\clo B}^{\,*}}\,,\,\xymatrix{T\ar[r]^F &{\clo T}^{\,*}} \qquad \text{and} \qquad
+           \xymatrix{B\ar[r]^G &\clo{B^*}}\,,\,\xymatrix{T\ar[r]^G &\clo{T^*}}  \]
+It is natural to wonder about the relationship between ${\clo B}^{\,*}$ and $\clo{B^*}$.  The next proposition
+tells us not only that these two spaces are always isomorphic, but they are naturally isomorphic.  That is, the
+ \index{natural!equivalence!of ${\clo B}^{\,*}$ and $\clo{B^*}$}%
+functors $F$ and $G$ are naturally equivalent.
+
+\begin{prop} If $T \in \ofml B(B,C)$, where $B$ and $C$ are Banach spaces, then there exist isomorphisms 
+$\sbsb{\phi}B \colon {\clo B}^{\,*} \sto \clo{B^*}$ and $\sbsb{\phi}C \colon {\clo C}^{\,*} \sto \clo{C^*}$ such that
+   \[ {\clo T}^{\,*} = {\sbsb{\phi}B}^{\!\!\!-1}\,\, \clo{T^*}\,\,\sbsb{\phi}C\,. \]  
+\end{prop}
+
+\begin{proof}[\emph{Hint for proof}] Since the duality functor is exact (see~\ref{exam_dualfunctor_exact}) we may 
+take the dual of the commutative diagram~\eqref{eqn_exactCD_Bbar} to obtain a second commutative diagram with exact
+rows.  Now write down a third commutative diagram by replacing each occurrence of $B$ in the diagram~\eqref{eqn_exactCD_Bbar}
+by~$B^*$.  Check that ${\sbsb{\tau}B}^{\!\!*}\,\sbsb{\tau}{B^*} = \id{B^*}$ so that you can use proposition~\ref{prop_merge_exactCD}
+on the last two diagrams thus obtaining the commutative diagram
+     \[ \xy
+          \Square/{<-}`{->}`{->}`{<-}/[{\clo B}^{\,*}`{\clo C}^{\,*}`\clo{B^*}`\clo{C^*};{\clo T}^{\,*}`\sbsb{\phi}B`\sbsb{\phi}C`\clo{T^*}]
+      \endxy \]
+where $\sbsb{\phi}B := \sbsb{\pi}{B^*}\,{\sbsb{\pi}B}^{\!\!*}$ is an isomorphism.   \ns 
+\end{proof}
+
+\begin{cor} A Banach space is reflexive if and only if its dual is.  
+\end{cor}
+
+\begin{prop}\label{prop_fd_subsp_complm} Every finite dimensional subspace of a Banach space is complemented.
+\end{prop}
+
+\begin{proof}[\emph{Hint for proof}] Let $F$ be a finite dimensional subspace of a Banach space $B$ and let
+$\{\vc e^1, \dots, \vc e^n\}$ be a Hamel basis for~$F$.  Then for each $x \in F$ there exist unique scalars
+$\alpha_1(x)$, \dots , $\alpha_n(x)$ such that $x = \sum_{k=1}^n \alpha_k(x)\vc e^k$. For each $1 \le k \le n$
+verify that $\alpha_k$ is a bounded linear functional, which can be extended to all of~$B$.  Let $N$ be the
+intersection of the kernels of these extensions and show that $B = F \oplus N$.  \ns
+\end{proof}
+
+\begin{defn} Recall that in~\ref{000082} we defined the \emph{codimension} of a subspace of a vector space
+as the dimension of its vector space complement (which always exists by proposition~\ref{0000824}).  We adopt
+the same language for Banach spaces: the
+ \index{codimension}%
+\df{codimension} of any \emph{vector subspace} of a Banach space is the dimension of its \emph{vector space
+complement}.
+\end{defn}
+
+For the following corollary (of proposition~\ref{prop_fd_subsp_complm}) keep in mind the
+convention~\ref{conv_subsp_Bsp} on the use of the word ``subspace'' in the context of Banach spaces.
+
+\begin{cor} In a Banach space every subspace of finite codimension is complemented.
+\end{cor}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Let $M$ be a nonzero subspace of a Banach space~$M$.  Consider the following two properties of the pair $B$ and~~$M$.
+
+\textbf{Property P:} \emph{There exists a projection of norm $1$ from $B$ onto $M$.}
+
+\textbf{Property E:} \emph{For every Banach space $C$, every bounded linear map from $M$ to $C$ can be extended to a bounded
+linear map from $B$ to $C$ without increasing its norm.}
+
+\begin{prop} For a nonzero subspace $M$ of a Banach space $B$, properties \textbf{P} and \textbf{E} are equivalent.
+\end{prop}
+
+\begin{proof}[\emph{Hint for proof}] To show that \textbf{E} implies \textbf{P} start by extending the identity map
+on $M$ to all of~$B$.   \ns
+\end{proof}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{The Principle of Uniform Boundedness}
+\begin{defn} Let $S$ be a set and $V$ be a normed linear space. A family $\fml F$ of
+functions from $S$ into $V$ is
+ \index{pointwise!bounded}%
+ \index{bounded!pointwise}%
+\df{pointwise bounded} if for every $x \in S$ there exists a constant $M_x > 0$ such that
+$\norm{f(x)} \le M_x$ for every $f \in \fml F$.
+\end{defn}
+
+\begin{defn} Let $V$ and $W$ be normed linear spaces. A family $\fml T$ of bounded linear maps
+from $V$ into $W$ is
+ \index{uniformly!bounded}%
+ \index{bounded!uniformly}%
+\df{uniformly bounded} if there exists $M > 0$ such that $\norm T \le M$ for every $T \in
+\fml T$.
+\end{defn}
+
+\begin{exer}\label{C070114} Let $V$ and $W$ be normed linear spaces. If a family $\fml T$ of
+bounded linear maps from $V$ into $W$ is uniformly bounded, then it is pointwise bounded.
+\end{exer}
+
+The \emph{principle of uniform boundedness} is the assertion that the converse
+of~\ref{C070114} holds whenever $V$ is complete.  To prove this we will make use of a
+``local'' analog of this for continuous functions on a complete metric space.  It says, roughly, that if
+a family of real valued functions on a complete metric space is pointwise bounded then it is uniformly
+bounded on some nonempty open subset of the space.
+
+\begin{prop}\label{C070117} Let $M$ be a complete metric space and $\fml F \subseteq \fml C(M,\R)$.
+If for every $x \in M$ there exists a constant $N_x > 0$ such that $\abs{f(x)} \le N_x$ for
+every $f \in \fml F$, then there exists a nonempty open set $U$ in $M$ and  a number $N > 0$ such
+that $\abs{f(u)} \le N$ for every $f \in \fml F$ and every $u \in U$.
+\end{prop}
+
+\begin{proof}[\emph{Hint for proof}] For each natural number $k$ let $A_k =
+\bigcap\{f^{\gets}\bigl(\,[-k,k]\,\bigr)\colon f \in \fml F\}$.  Use the same version of the
+\emph{Baire category theorem} we used in proving the \emph{open mapping theorem} (\ref{C069414})
+to conclude that for at least one $n \in \N$ the set $A_n$ has nonempty
+interior. Let $U = \intr{A_n}$.   \ns
+\end{proof}
+
+\begin{thm}[Principle of uniform boundedness]\label{thm_PUB} Let $B$ be a Banach space and $W$ be a normed linear space.
+ \index{principle!of uniform boundedness}%
+ \index{boundedness!principle of uniform}%
+ \index{uniform!boundedness!principle of}%
+If a family $\ofml T$ of bounded linear maps from $B$ into $W$ is pointwise
+bounded, then it is uniformly bounded.
+\end{thm}
+
+\begin{proof}[\emph{Hint for proof}] For every $T \in \ofml T$ define
+  \[ \sbsb fT\colon B \sto \R\colon x \mapsto \norm{Tx}. \]
+Use the preceding proposition to show that there exist a nonempty open subset $U$ of $B$
+and a constant $M > 0$ such that $\sbsb fT(x) \le M$ for every $T \in \ofml T$ and every
+$x \in U$. Choose a point $a \in B$ and a number $r > 0$ so that $\clo{B_r(a)} \subseteq
+U$. Then verify that
+  \[ \norm{Ty} \le r^{-1}\bigl(\, \sbsb fT(a + ry) + \sbsb fT(a)\,\bigr) \le 2Mr^{-1} \]
+for every $T \in \ofml T$ and every $y \in B$ such that $\norm y \le 1$. \ns
+\end{proof}
+
+\begin{thm}[Banach-Steinhaus]  Let $B$ be a Banach space, $W$ be a normed linear space,
+ \index{Banach-Steinhaus theorem}%
+and $(T_n)$ be a sequence of bounded linear maps from $B$ into~$W$. If the pointwise limit
+$\lim_{n \sto \infty} T_nx$ exists for every $x$ in~$B$, then the map $S\colon B \sto
+W\colon x \mapsto \lim_{n \sto \infty} T_nx$ is a bounded linear transformation.
+\end{thm}
+
+\begin{proof}[\emph{Hint for proof}] For every $x \in B$ the sequence $\bigl(\norm{T_nx}\bigr)_{n=1}^\infty$
+is convergent, therefore bounded. Use~\ref{thm_PUB}.   \ns
+\end{proof}
+
+\begin{defn} A subset $A$ of a normed linear space $V$ is
+ \index{bounded!weakly!set in a normed linear space}%
+ \index{weak!boundedness!in a normed linear space}%
+ \index{w@$w$-bounded}%
+\df{weakly bounded} ($w$-bounded) if $f^{\sto}(A)$ is a bounded subset of the scalar
+field of $V$ for every $f \in V^*$.
+\end{defn}
+
+\begin{prop} A subset $A$ of a Hilbert space $H$ is weakly bounded if and only if for every $y \in H$
+ \index{weak!boundedness!in a Hilbert space}%
+the set $\{\langle a,y \rangle \colon a \in A\}$ is bounded.
+\end{prop}
+
+The preceding proposition is more or less obvious.  The next one is an important consequence of the
+\emph{principle of uniform boundedness}.
+
+\begin{prop}\label{C070131} A subset of a normed linear space is weakly bounded if and only if it
+is bounded.
+\end{prop}
+
+\begin{proof}[\emph{Hint for proof}] If $A$ is a weakly bounded subset of a normed linear space $V$
+and $f \in V^*$, what can you say about $\sup\{a^{**}(f)\colon a \in A\}$?  \ns
+\end{proof}
+
+\begin{exer} Your good friend Fred R. Dimm needs help again.  This time he is worried about
+the assertion (see~\ref{C070131}) that a subset of a normed linear space is bounded if
+and only if it is weakly bounded.  He is considering the sequence $(a^n)$ in the Hilbert
+space $l^2$ defined by $a^n = \sqrt{n}\,\vc e^n$ for each $n \in \N$, where $\{\vc
+e^n\colon n \in \N\}$ is the usual orthonormal basis for~$l_2$ (see
+example~\ref{C063149}).  He sees that it is obviously not bounded (given the usual
+topology on~$l^2$).  But it looks to him as if it is weakly bounded.  If not, he argues, then
+according to the \emph{Riesz-Fr\'echet theorem} \ref{000342} there would exist a sequence $x$ in
+$l^2$ such that the set $\{\abs{\langle a^n,x \rangle}\colon n \in\N\}$ is unbounded. It looks
+to him as if this cannot happen because such a sequence would have to decrease more slowly than
+the sequence $\bigl(n^{-1/2}\bigr)$, which already decreases too slowly to belong to~$l^2$.
+Put Fred's mind to rest by finding him a suitable sequence.  \emph{Hint:} Use a sequence with
+lots of zeros.
+\end{exer}
+
+\begin{defn} A sequence $(x_n)$ in a normed linear space $V$ is
+ \index{weak!Cauchy sequence}%
+ \index{Cauchy!sequence!weak}%
+ \index{sequence!weak Cauchy}%
+\df{weakly Cauchy} if the sequence $(f(x_n))$ is Cauchy for every $f$ in~$V^*$.  The
+sequence
+ \index{weak!convergence!of sequences in a normed linear space}%
+ \index{convergence!weak}%
+ \index{sequence!weak convergence of a}%
+\df{converges weakly} to a point $a \in V$ if $f(x_n) \sto f(a)$ for every $f \in V^*$
+(that is, if it converges in the weak topology induced by the members of~$V^*$). In this
+case we write
+ \index{<arrowtow@$x_n \to^w a$ (weak sequential convergence)}%
+$x_n \to^w a$.  The space $V$ is
+ \index{complete!weakly}%
+ \index{weak!completeness}%
+\df{weakly sequentially complete} if every weakly Cauchy sequence in $V$ converges weakly.
+\end{defn}
+
+\begin{prop} In a normed linear space every weakly Cauchy sequence is bounded.
+\end{prop}
+
+\begin{prop} Every reflexive Banach space is weakly sequentially complete.
+\end{prop}
+
+\begin{exam} Let $f_n(t) = \left\{
+                             \begin{array}{ll}
+                               1 - nt, & \hbox{if $0 \le t \le \frac1n$;} \\
+                               0, & \hbox{if $\frac1n < t \le 1$.}
+                             \end{array}
+                           \right\}$ for every $n \in \N$. The sequence $(f_n)$ of functions shows that the Banach
+space $\fml C([0,1])$ is not w-sequentially complete.
+\end{exam}
+
+\begin{cor} The Banach space $\fml C([0,1])$ is not reflexive.
+\end{cor}
+
+\begin{prop} Let $\fml E$ be an orthonormal basis for a Hilbert space~$H$ and $(x_n)$ be a
+sequence in~$H$. Then $x_n \to^w \vc 0$ if and only if $(x_n)$ is bounded and $\langle
+x_n,e \rangle \sto 0$ for every $e \in \fml E$.
+\end{prop}
+
+\begin{defn} Let $H$ be a Hilbert space.  A net $(T_\lambda)$ in $\ofml B(H)$
+ \index{weak!operator topology!convergence in the}%
+ \index{operator!topology!weak}%
+ \index{topology!weak operator}%
+ \index{weak!convergence!of Hilbert space operators}%
+\df{converges weakly} (or \df{converges in the weak operator topology}) to $S \in \ofml B(H)$ if
+  \[ \langle T_\lambda x,y \rangle \sto \langle Sx,y \rangle \]
+for every $x$, $y \in H$.  In this case we write
+$T_\lambda~\to^{\textbf{WOT}}~S$.
+ \index{<arrowtowot@$T_\lambda~\to^{\textbf{WOT}}~S$}%
+
+A family $\ofml T \subseteq \ofml B(H)$ is
+ \index{weak!boundedness!of a family of Hilbert space operators}%
+ \index{bounded!weakly}
+ \index{bounded!in the weak operator topology}%
+ \index{weak!operator topology!boundedness in}%
+ \index{WOT@\textbf{WOT} (weak operator topology)}%
+\df{weakly bounded} (or \df{bounded in the weak operator topology}) if for every $x$, $y \in H$
+there exists a positive constant $\alpha_{x,y}$ such that
+  \[\abs{\langle Tx,y \rangle} \le \alpha_{x,y}\]
+for every $T \in \ofml T$.
+\end{defn}
+
+It is unfortunate that the preceding definition can be the source of confusion.  Since $\ofml B(H)$ is a
+normed linear space it already has a ``weak'' topology (see~\ref{C067434}).  So how does one deal with two
+different topologies on $\ofml B(H)$ having the same name?  Some authors call the one just defined the
+\emph{weak operator topology} thereby forestalling any possible confusion.  Other writers feel that the
+weak topology in the normed linear space sense is of so little use in operator theory on Hilbert spaces
+that unless specifically modified the phrase \emph{weak topology} in the context of Hilbert space operators
+should be understood to refer to the one just defined. (See, for example, Halmos's comments in the two
+paragraphs preceding Problem 108 in~\cite{Halmos:1982}.)  Similarly, often one sees the phrase \emph{a
+bounded set of Hilbert space operators.}  Unless otherwise qualified, this is intended to say that the set
+in question is \emph{uniformly bounded}.  In any case, be careful of these phrases when reading.
+
+Here is an important consequence of the \emph{principle of uniform boundedness}~\ref{thm_PUB}.
+
+\begin{prop} Every family of Hilbert space operators which is bounded in the weak operator
+topology is uniformly bounded.
+\end{prop}
+
+\begin{proof}[\emph{Hint for proof}] Let $H$ be a Hilbert space and $\ofml T$ a family of operators on~$H$
+which is bounded with respect to the weak operator topology. Use proposition~\ref{C070131} to show, for a
+fixed $y \in H$, that $\{T^*y\colon T \in \ofml T\}$ is a bounded subset of~$H$.  Use this (and~\ref{C070131}
+again) to show that $\{Tx\colon \text{$T \in \ofml T$, $x \in H$, and $\norm x \le 1$}\}$ is bounded in~$H$. \ns
+\end{proof}
+
+As noted above, many writers would shorten the statement of the preceding proposition to:
+\emph{Every weakly bounded family of Hilbert space operators is bounded.}
+
+\begin{defn}
+A net $(T_\lambda)$ in $\ofml B(H)$
+ \index{strong!operator topology!convergence in the}%
+ \index{operator!topology!strong}%
+ \index{topology!strong operator}%
+ \index{strong!convergence!of Hilbert space operators}%
+ \index{SOT@\textbf{SOT} (strong operator topology)}%
+\df{converges strongly} (or \df{converges in the strong operator topology}) to $S \in \ofml B(H)$ if
+  \[ T_\lambda x \sto Sx \]
+for every $x \in H$.  In this case we write $T_\lambda~\to^{\textbf{SOT}}~S$.
+ \index{<arrowtowot@$T_\lambda~\to^{\textbf{SOT}}~S$}%
+
+The usual norm convergence of operators in $\ofml B(H)$ is often referred to as
+ \index{uniform!operator topology!convergence in the}%
+ \index{operator!topology!uniform}%
+ \index{topology!uniform operator}%
+ \index{uniform!convergence!of Hilbert space operators}%
+\df{uniform convergence} (or \df{convergence in the uniform operator topology}).  That is, we write
+ \index{<arrowtowot@$T_\lambda~\sto~S$}%
+$T_\lambda \sto S$ if $\norm{S - T_\lambda}\sto 0$.
+\end{defn}
+
+\begin{prop} Let $H$ be a Hilbert space, $(T_n)$ be a sequence in $\ofml B(H)$,
+and $B \in \ofml B(H)$. Then the following implications hold:
+   \[ T_n \sto B \quad \implies \quad T_n~\to^{\textbf{SOT}}~B
+                                \quad \implies \quad T_n~\to^{\textbf{WOT}}~B. \]
+\end{prop}
+
+\begin{prop} Let $(S_n)$ and $(T_n)$ be sequences of operators on a Hilbert space~$H$. \\
+If $S_n \to^{\textbf{WOT}} A$ and $T_n \to^{\textbf{SOT}} B$, then $S_nT_n \to^{\textbf{WOT}} AB$.
+\end{prop}
+
+\begin{proof}[\emph{Hint for proof}] Write $S_nT_n - AB$ as $S_nT_n - S_nB + S_nB - AB$.  \ns
+\end{proof}
+
+\begin{exam} In the preceding proposition the hypothesis $T_n \to^{\textbf{SOT}} B$ cannot
+be replaced by $T_n~\to^{\textbf{WOT}}~B$.
+\end{exam}
+
+\begin{proof}[\emph{Hint for proof}] Consider powers of the unilateral shift operator.  \ns
+\end{proof}
+
+
+
+
+
+
+
+\endinput
+

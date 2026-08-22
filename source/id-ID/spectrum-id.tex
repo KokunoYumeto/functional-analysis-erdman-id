@@ -1,0 +1,603 @@
+\chapter{BEBERAPA TEORI SPEKTRAL}\label{spectrum}
+
+Dalam bab ini, untuk pertama kalinya kita akan menganggap, kecuali dinyatakan lain, bahwa ruang
+vektor dan aljabar berskalar kompleks, bukan real. Sebagian besar alasan untuk hal ini
+ \index{konvensi!dalam bab~\ref{spectrum} skalar bersifat kompleks}%
+adalah perlunya menggunakan \emph{teorema Liouville}~\ref{C073131} untuk membuktikan
+proposisi~\ref{C073134}.
+
+\section{Spektrum}
+
+\begin{defn} Suatu elemen $a$ dari aljabar beridentitas $A$ disebut
+ \index{invertibel!kiri!dalam aljabar}%
+\df{invertibel kiri} jika terdapat elemen $a_l$ dalam $A$ (disebut \df{invers kiri}
+dari~$a$) sedemikian sehingga $a_l a = \vc 1$, dan disebut
+ \index{invertibel!kanan!dalam aljabar}%
+\df{invertibel kanan} jika terdapat elemen $a_r$ dalam $A$ (disebut \df{invers
+kanan} dari~$a$) sedemikian sehingga $aa_r = \vc 1$. Elemen tersebut disebut
+ \index{invertibel!dalam aljabar}%
+\df{invertibel} jika elemen itu sekaligus invertibel kiri dan invertibel kanan. Himpunan semua
+elemen invertibel dari $A$ dinotasikan
+ \index{invertibel@$\inv A$ (elemen invertibel dalam aljabar)}%
+dengan~$\inv A$.
+\end{defn}
+
+Suatu elemen dari aljabar beridentitas memiliki paling banyak satu invers perkalian. Bahkan,
+berlaku pernyataan yang lebih kuat berikut.
+
+\begin{prop}\label{000521} Jika suatu elemen dari aljabar beridentitas memiliki invers kiri dan
+invers kanan, maka kedua invers tersebut sama (sehingga elemen itu invertibel).
+\end{prop}
+
+Jika suatu elemen $a$ dari aljabar beridentitas invertibel, inversnya yang unik dinotasikan
+dengan~$a^{-1}$.
+
+\begin{prop} Jika $a$ elemen invertibel dari suatu aljabar beridentitas, maka $a^{-1}$ juga
+ \index{invers!dari suatu invers}%
+invertibel dan
+   \[ \bigl(a^{-1}\bigr)^{-1} = a\,. \]
+\end{prop}
+
+\begin{prop} Jika $a$ dan $b$ elemen-elemen invertibel dari suatu aljabar beridentitas, maka hasil kali
+ \index{invers!dari suatu hasil kali}%
+$ab$ juga invertibel dan
+  \[ (ab)^{-1} = b^{-1}a^{-1}\,. \]
+\end{prop}
+
+\begin{prop}\label{000524} Jika $a$ dan $b$ elemen-elemen invertibel dari suatu aljabar beridentitas,
+ \index{invers!selisih antara}%
+maka
+  \[ a^{-1} - b^{-1} = a^{-1}(b - a)b^{-1}\,. \]
+\end{prop}
+
+\begin{prop} Misalkan $a$ dan $b$ elemen-elemen dari suatu aljabar beridentitas. Jika $ab$ dan
+$ba$ keduanya invertibel, maka $a$ dan $b$ juga invertibel.
+\end{prop}
+
+\begin{proof}[\emph{Petunjuk untuk bukti}] Gunakan proposisi~\ref{000521}. \ns \end{proof}
+
+\begin{cor} Misalkan $a$ elemen dari suatu aljabar-$*\,$ beridentitas. Maka $a$ invertibel jika dan hanya jika $a^*a$ dan $aa^*$
+invertibel; dalam hal ini,
+   \[ a^{-1} = \bigl(a^*a\bigr)^{-1}a^* = a^*\big(aa^*\bigr)^{-1}\,. \]
+\end{cor}
+
+\begin{prop}\label{000526} Misalkan $a$ dan $b$ elemen-elemen dari suatu aljabar beridentitas. Maka
+$\vc 1 - ab$ invertibel jika dan hanya jika $\vc 1 - ba$ invertibel.
+\end{prop}
+
+\begin{proof} Jika $\vc 1 - ab$ invertibel, maka $\vc 1 + b(\vc 1 - ab)^{-1}a$ adalah
+invers dari $\vc 1 - ba$.
+\end{proof}
+
+\begin{exam} Contoh paling sederhana dari aljabar kompleks ialah keluarga $\C$ dari bilangan
+kompleks. Aljabar ini beridentitas sekaligus komutatif.
+\end{exam}
+
+\begin{exam}\label{000532} Jika $X$ suatu ruang topologis tak kosong, maka keluarga $\fml C(X)$
+dari semua fungsi kontinu bernilai kompleks pada $X$ merupakan suatu
+ \index{C@$\fml C(X)$!sebagai aljabar beridentitas}%
+aljabar di bawah operasi penjumlahan, perkalian skalar, dan perkalian titik demi titik yang biasa.
+Aljabar ini beridentitas sekaligus komutatif.
+\end{exam}
+
+\begin{exam} Jika $X$ suatu ruang Hausdorff kompak lokal yang tidak kompak, maka (di bawah
+operasi titik demi titik) keluarga $\fml C_0(X)$ dari semua fungsi kontinu bernilai kompleks
+pada $X$ yang lenyap di tak hingga merupakan aljabar komutatif.
+Namun, keluarga ini \emph{bukan} suatu
+ \index{C@$\fml C_0(X)$!sebagai aljabar tanpa identitas}%
+aljabar beridentitas.
+\end{exam}
+
+\begin{exam}\label{000533} Keluarga
+ \index{Ma@$\mathbf M_n = \M n\C$!matriks bilangan kompleks berukuran $n \times n$}%
+$\mathbf M_n$ dari matriks bilangan kompleks berukuran $n \times n$ merupakan
+ \index{Ma@$\mathbf M_n = \M n\C$!sebagai aljabar beridentitas}%
+aljabar beridentitas di bawah operasi penjumlahan, perkalian skalar, dan perkalian matriks yang biasa.
+Aljabar ini tidak komutatif jika $n > 1$.
+\end{exam}
+
+\begin{exam}\label{000533a} Misalkan $A$ suatu aljabar. Jadikan keluarga
+ \index{Ma@$\M nA$!matriks elemen aljabar berukuran $n \times n$}%
+$\M n{A}$ dari matriks elemen $A$ berukuran $n \times n$ sebagai suatu
+ \index{Ma@$\M nA$!sebagai aljabar}%
+aljabar dengan menggunakan aturan operasi matriks yang sama dengan aturan untuk~$\mathbf M_n$.
+Dengan demikian, $\mathbf M_n$ hanyalah $\M n\C$. Aljabar $\M nA$ beridentitas jika dan hanya jika $A$ beridentitas.
+\end{exam}
+
+\begin{exam}\label{000534} Jika $V$ suatu ruang linear bernorma, maka
+ \index{B@$\ofml B(V)$!sebagai aljabar beridentitas}%
+$\ofml B(V)$ merupakan aljabar beridentitas. Jika $\dim V~>~1$, aljabar tersebut tidak komutatif.
+\end{exam}
+
+\begin{defn}\label{000535} Misalkan $a$ elemen dari aljabar beridentitas~$A$. Maka
+ \index{spektrum}%
+\df{spektrum} dari $a$, yang dinotasikan dengan
+ \index{sigma@$\sigma_A(a)$ atau $\sigma(a)$ (spektrum dari~$a$)}%
+$\sigma_A(a)$ atau cukup $\sigma(a)$, adalah himpunan semua bilangan kompleks $\lambda$ sedemikian sehingga
+$a - \lambda\vc 1$ tidak invertibel.
+\end{defn}
+
+\begin{exam} Jika $z$ suatu elemen dari aljabar bilangan kompleks $\C$, maka
+ \index{spektrum!dari bilangan kompleks}%
+$\sigma(z) = \{z\}$.
+\end{exam}
+
+\begin{exam}\label{0005712} Misalkan $X$ suatu ruang Hausdorff kompak. Jika $f$ suatu elemen
+ \index{spektrum!dari fungsi kontinu}%
+dari aljabar $\fml C(X)$ yang terdiri atas fungsi-fungsi kontinu bernilai kompleks pada $X$, maka
+spektrum $f$ adalah jangkauannya.
+\end{exam}
+
+\begin{exam} Misalkan $X$ suatu ruang topologis sembarang. Jika $f$ suatu elemen dari
+ \index{spektrum!dari fungsi kontinu terbatas}%
+aljabar $\fml C_b(X)$ yang terdiri atas fungsi-fungsi kontinu terbatas bernilai kompleks pada $X$, maka
+spektrum $f$ adalah tutupan jangkauannya.
+\end{exam}
+
+\begin{exam} Misalkan $S$ suatu ruang ukur positif dan $f \in \lfs{\infty}{S}$ suatu
+(kelas ekuivalensi) fungsi yang terbatas secara esensial pada~$S$. Maka
+ \index{spektrum!dari fungsi terbatas secara esensial}%
+spektrum $f$ adalah jangkauan esensialnya.
+\end{exam}
+
+\begin{exam} Keluarga $\mathbf M_3$ dari matriks bilangan kompleks berukuran $3 \times 3$ merupakan aljabar
+beridentitas di bawah operasi matriks yang biasa. Spektrum matriks $\begin{bmatrix} 5
+& -6 & -6 \\ -1 & 4 & 2 \\ 3 & -6 & -4 \end{bmatrix}$ adalah $\{1,2\}$.
+\end{exam}
+
+\begin{prop} Misalkan $a$ suatu elemen dari aljabar beridentitas sedemikian sehingga $a^2 = \vc 1$.
+ \index{spektrum!dari elemen yang kuadratnya $1$}%
+Maka salah satu dari hal berikut berlaku:
+ \begin{enumerate}[label=\rm{(\alph*)}]
+  \item $a = \vc 1$, dan dalam hal ini $\sigma(a) = \{1\}$; atau
+  \item $a = -\vc 1$, dan dalam hal ini $\sigma(a) = \{-1\}$; atau
+  \item $\sigma(a) = \{-1,1\}$.
+ \end{enumerate}
+\end{prop}
+
+\begin{proof}[\emph{Petunjuk untuk bukti}] Pada (c), untuk membuktikan $\sigma(a) \subseteq \{-1,1\}$,
+tinjau $\D\frac1{1 - \lambda^2}(a + \lambda \mathbf 1).$  \ns
+\end{proof}
+
+\begin{prop} Ingat bahwa suatu elemen $a$ dari aljabar disebut
+ \index{idempoten}%
+ \index{spektrum!dari elemen idempoten}%
+\df{idempoten} jika $a^2 = a$. Misalkan $a$ suatu elemen idempoten dari aljabar beridentitas. Maka
+salah satu dari hal berikut berlaku:
+ \begin{enumerate}[label=\rm{(\alph*)}]
+  \item $a = \vc 1$, dan dalam hal ini $\sigma(a) = \{1\}$; atau
+  \item $a = \vc 0$, dan dalam hal ini $\sigma(a) = \{0\}$; atau
+  \item $\sigma(a) = \{0,1\}$.
+ \end{enumerate}
+\end{prop}
+
+\begin{proof}[\emph{Petunjuk untuk bukti}] Pada (c), untuk membuktikan $\sigma(a) \subseteq \{0,1\}$,
+tinjau $\D \frac1{\lambda - \lambda^2}\bigl(a + (\lambda - 1)\vc 1\bigr).$ \ns
+\end{proof}
+
+\begin{prop} Misalkan $a$ suatu elemen invertibel dari aljabar beridentitas. Maka suatu bilangan kompleks
+tak nol $\lambda$ termasuk dalam spektrum $a$ jika dan hanya jika $1/\lambda$ termasuk dalam
+spektrum~$a^{-1}$.
+\end{prop}
+
+Proposisi berikut merupakan akibat langsung dari proposisi~\ref{000526}.
+
+\begin{prop}\label{000575} Jika $a$ dan $b$ elemen-elemen dari suatu aljabar beridentitas, maka,
+kecuali mungkin untuk $0$, spektrum $ab$ dan spektrum $ba$ sama.
+\end{prop}
+
+\begin{defn}\label{C035854} Suatu pemetaan $f \colon A \sto B$ antara aljabar-aljabar Banach disebut
+ \index{Banach!aljabar!homomorfisme}%
+ \index{homomorfisme!aljabar Banach}%
+\df{homomorfisme (aljabar Banach)} jika pemetaan tersebut sekaligus merupakan homomorfisme
+aljabar dan pemetaan kontinu antara $A$ dan $B$. Kita menotasikan kategori
+ \index{BALG@$\cat{BALG}$!kategori}%
+ \index{kategori!$\cat{BALG}$ sebagai}%
+aljabar Banach dan homomorfisme aljabar kontinu dengan $\cat{BALG}$.
+\end{defn}
+
+\begin{prop} Misalkan $A$ dan $B$ aljabar-aljabar Banach. Maka
+ \index{langsung!jumlah!aljabar Banach}%
+ \index{Banach!aljabar!jumlah langsung}%
+\df{jumlah langsung} dari $A$ dan $B$, yang dinotasikan dengan $A \oplus B$, didefinisikan sebagai himpunan $A
+\times B$ yang dilengkapi dengan operasi titik demi titik:
+   \begin{enumerate}[label=\rm{(\alph*)}]
+     \item $(a,b) + (a',b') = (a + a',b + b')$;
+     \item $(a,b)\,(a',b') = (aa',bb')$;
+     \item $\alpha(a,b) = (\alpha a,\alpha b)$
+   \end{enumerate}
+untuk $a$,$a' \in A$, $b$,$b' \in B$, dan $\alpha \in \C$. Seperti dalam~\ref{C023414}, definisikan
+$\norm{(a,b)} = \norm a + \norm b$. Hal ini menjadikan $A \oplus B$ suatu aljabar Banach.
+\end{prop}
+
+\begin{exer} Identifikasi hasil kali dan koproduk (jika ada) dalam kategori $\cat{BALG}$
+yang objeknya aljabar Banach
+ \index{hasil kali!dalam $\cat{BALG}$}%
+ \index{Banach!aljabar!hasil kali}%
+ \index{Banach!aljabar!koproduk}%
+ \index{koproduk!dalam $\cat{BALG}$}%
+ \index{BALG@$\cat{BALG}$!hasil kali dan koproduk dalam}%
+dan morfismenya homomorfisme aljabar kontinu, serta dalam kategori yang objeknya aljabar Banach dan
+morfismenya homomorfisme aljabar kontraktif. (Di sini,
+ \index{kontraktif}%
+\emph{kontraktif} berarti $\norm{Tx} \le \norm x$ untuk setiap~$x$.)
+\end{exer}
+
+\begin{prop} Dalam suatu aljabar Banach $A$, operasi penjumlahan dan perkalian (yang dipandang sebagai
+pemetaan dari $A \oplus A$ ke $A$) bersifat kontinu, dan perkalian skalar (yang dipandang sebagai pemetaan dari
+$\K \oplus A$ ke $A$) juga bersifat kontinu.
+\end{prop}
+
+\begin{prop}[Deret Neumann]\label{prop_Neumann_series} Misalkan $a$ suatu elemen dari aljabar Banach beridentitas.
+ \index{deret Neumann}%
+ \index{deret!Neumann}%
+Jika $\norm a < 1$, maka
+$\vc 1 - a \in \inv A$ dan $(\vc 1 - a)^{-1} = \sum_{k=0}^\infty a^k$.
+\end{prop}
+
+\begin{proof}[\emph{Petunjuk untuk bukti}] Tunjukkan bahwa barisan $(\vc 1, a, a^2, \dots)$
+dapat dijumlahkan. (Dalam aljabar beridentitas kita mengartikan $a^0$ sebagai~$\vc 1$.)  \ns
+\end{proof}
+
+\begin{cor}\label{cor_Neumann_series} Jika $a$ suatu elemen dari aljabar Banach beridentitas dengan $\norm{\vc 1 - a} < 1$, maka $a$ invertibel dan
+    \[ \norm{a^{-1}} \le \frac{1}{1 - \norm{\vc 1 - a}}\,.  \]
+\end{cor}
+
+\begin{cor}\label{cor2_Neumann_series} Misalkan $a$ suatu elemen invertibel dari aljabar Banach beridentitas $A$ dan $b \in A$,
+serta $\norm{a - b} < \norm{a^{-1}}^{-1}$. Maka $b$ invertibel dalam~$A$.
+\end{cor}
+
+\begin{proof}[\emph{Petunjuk untuk bukti}] Gunakan korolari sebelumnya untuk menunjukkan bahwa $a^{-1}b$ invertibel.
+\ns \end{proof}
+
+\begin{cor} Jika $a$ termasuk dalam suatu aljabar Banach beridentitas dan $\norm a < 1$, maka
+   \[ \norm{(\vc 1 - a)^{-1} - \vc 1} \le \frac{\norm a}{1 - \norm a}\,. \]
+\end{cor}
+
+\begin{prop}\label{000644fa} Jika $A$ aljabar Banach beridentitas, maka $\open{\inv A}A$.
+\end{prop}
+
+\begin{proof}[\emph{Petunjuk untuk bukti}] Misalkan $a \in \inv A$. Tunjukkan, untuk $h$ yang cukup kecil,
+bahwa $\vc 1 - a^{-1}h$ invertibel.  \ns
+\end{proof}
+
+\begin{prop}\label{000646fa} Misalkan $A$ aljabar Banach beridentitas. Pemetaan $a \mapsto a^{-1}$ dari $\inv A$ ke
+dirinya sendiri merupakan homeomorfisme.
+\end{prop}
+
+\begin{prop} Misalkan $A$ aljabar Banach beridentitas. Pemetaan $r\colon a \mapsto a^{-1}$ dari
+$\inv A$ ke dirinya sendiri bersifat diferensiabel dan pada setiap elemen invertibel $a$, berlaku
+$dr_a(h) = -a^{-1}ha^{-1}$ untuk setiap $h \in A$.
+\end{prop}
+
+\begin{proof}[\emph{Petunjuk untuk bukti}] Untuk pengantar singkat mengenai diferensiasi pada ruang
+berdimensi tak hingga, lihat Bab 13 dari catatan saya~\cite{Erdman:2007} tentang Analisis Real.  \ns
+\end{proof}
+
+\begin{prop}\label{000661} Misalkan $a$ suatu elemen dari aljabar Banach beridentitas~$A$. Maka spektrum $a$
+kompak dan $\abs\lambda \le \norm a$ untuk setiap $\lambda \in \sigma(a)$.
+\end{prop}
+
+\begin{proof}[\emph{Petunjuk untuk bukti}] Gunakan \emph{teorema Heine-Borel}. Untuk membuktikan bahwa
+spektrum tertutup, perhatikan bahwa $(\sigma(a))^c = f^\gets(\inv A)$ dengan $f(\lambda) = a -
+\lambda\mathbf 1$ untuk setiap bilangan kompleks~$\lambda$. Tunjukkan juga bahwa jika $\abs\lambda >
+\norm a$, maka $\mathbf 1 - \lambda^{-1}a$ invertibel.  \ns
+\end{proof}
+
+\begin{defn} Misalkan $a$ suatu elemen dari aljabar Banach beridentitas.
+ \index{resolven!pemetaan}%
+\df{Pemetaan resolven} untuk $a$ didefinisikan oleh
+   \[ R_a \colon \C \setminus \sigma(a) \sto A
+                 \colon \lambda \mapsto (a  - \lambda\vc 1)^{-1}\,. \]
+\end{defn}
+
+\begin{defn} Misalkan $\open U\C$ dan $A$ suatu aljabar Banach beridentitas. Suatu fungsi $f \colon U \sto A$
+ \index{analitik}%
+bersifat \df{analitik} pada $U$ jika
+   \[ f'(a) := \lim_{z \sto a} \frac{f(z) - f(a)}{z - a} \]
+ada untuk setiap $a \in U$. Suatu fungsi bernilai kompleks yang analitik pada seluruh $\C$
+disebut fungsi
+ \index{entire}
+\df{entire}.
+\end{defn}
+
+\begin{prop} Untuk $a$ suatu elemen dari aljabar Banach beridentitas $A$ dan $\phi$ suatu fungsional linear
+terbatas pada~$A$, misalkan $f := \phi \circ R_a \colon \C \setminus \sigma(a) \sto \C$. Maka
+ \begin{enumerate}[label=\rm{(\alph*)}]
+  \item $f$ analitik pada domainnya; dan
+  \item $f(\lambda) \sto 0$ ketika $\abs\lambda \sto \infty$.
+ \end{enumerate}
+\end{prop}
+
+\begin{proof}[\emph{Petunjuk untuk bukti}] Untuk (i), perhatikan bahwa dalam aljabar beridentitas $a^{-1} - b^{-1}
+= a^{-1}(b - a)b^{-1}$.   \ns
+\end{proof}
+
+\begin{thm}[Liouville]\label{C073131} Setiap fungsi entire yang terbatas pada $\C$ bersifat konstan.
+ \index{teorema Liouville}%
+\end{thm}
+
+\begin{proof}[\emph{Komentar tentang bukti}] Pembuktian teorema ini memerlukan sedikit latar belakang
+dalam teori fungsi analitik, yakni materi yang tidak dibahas dalam catatan ini. Teorema
+tersebut tentu dibahas dalam setiap mata kuliah pengantar tentang variabel kompleks. Sebagai contoh, bukti yang
+baik dapat ditemukan dalam \cite{Rudin:1987}, teorema 10.23.   \ns
+\end{proof}
+
+\begin{prop}\label{C073134} Spektrum setiap elemen dari aljabar Banach beridentitas tidak kosong.
+\end{prop}
+
+\begin{proof}[\emph{Petunjuk untuk bukti}] Gunakan argumen kontradiksi. Gunakan \emph{teorema Liouville}~\ref{C073131}
+untuk menunjukkan bahwa $\phi \circ R_a$ konstan bagi setiap fungsional linear terbatas $\phi$ pada~$A$. Kemudian gunakan
+(salah satu versi) \emph{teorema Hahn-Banach} untuk membuktikan bahwa $R_a$ konstan. Mengapa konstanta ini harus~$0$?   \ns
+\end{proof}
+
+\noindent\emph{Catatan.} Penting untuk diingat bahwa kita hanya bekerja dengan aljabar
+\emph{kompleks}. Hasil ini \emph{salah} untuk aljabar Banach real. Contoh
+tandingan sederhana adalah matriks $\begin{bmatrix}0 & 1 \\ -1 & 0 \end{bmatrix}$ yang dipandang sebagai
+elemen aljabar Banach (real) $M_2$ yang terdiri atas semua matriks $2 \times 2$ dengan entri
+bilangan real.
+
+ \vskip 1 pt
+
+\begin{thm}[Gelfand-Mazur]\label{C073141} Jika $A$ aljabar Banach beridentitas yang setiap
+ \index{teorema Gelfand-Mazur}%
+elemen taknolnya invertibel, maka $A$ isomorfik secara isometrik dengan~$\C$.
+\end{thm}
+
+\begin{proof}[\emph{Petunjuk untuk bukti}] Misalkan $B = \{ \lambda\vc 1\colon \lambda \in \C\}$. Gunakan
+proposisi sebelumnya~\ref{C073134} untuk menunjukkan bahwa $B = A$.    \ns
+\end{proof}
+
+Pernyataan berikut merupakan konsekuensi langsung dari \emph{teorema Gelfand-Mazur}
+\ref{C073141} dan proposisi~\ref{C037821}.
+
+\begin{cor}\label{C073147} Jika $I$ ideal maksimal dalam aljabar Banach komutatif beridentitas $A$,
+maka $A/I$ isomorfik secara isometrik dengan~$\C$.
+\end{cor}
+
+\begin{prop}\label{0006703fa} Misalkan $a$ suatu elemen dari aljabar beridentitas. Maka
+   \[ \sigma(a^n) = [\sigma(a)]^n \]
+untuk setiap $n \in \N$. (Notasi $[\sigma(a)]^n$ berarti $\{\lambda^n\colon \lambda \in
+\sigma(a)\}$.)
+\end{prop}
+
+\begin{defn}\label{C073154} Misalkan $a$ suatu elemen dari aljabar beridentitas.
+ \index{spektral!radius}%
+ \index{radius!spektral}%
+\df{radius spektral} dari~$a$, yang dinotasikan dengan $\rho(a)$, didefinisikan sebagai
+$\sup\{\abs\lambda\colon \lambda \in \sigma(a)\}$.
+\end{defn}
+
+\begin{prop}\label{0006703} Jika $a$ suatu elemen dari aljabar Banach beridentitas, maka $\rho(a) \le
+\norm a$ dan $\rho(a^n) = \bigl(\rho(a)\bigr)^n$.
+\end{prop}
+
+\begin{prop} Misalkan $\phi\colon A \sto B$ homomorfisme yang mempertahankan identitas di antara aljabar-aljabar beridentitas. Jika $a$ elemen invertibel dari $A$,
+maka $\phi(a)$ invertibel dalam $B$ dan inversnya adalah~$\phi(a^{-1})$.
+\end{prop}
+
+\begin{cor} Jika $\phi\colon A \sto B$ homomorfisme yang mempertahankan identitas di antara aljabar-aljabar beridentitas, maka
+   \[ \sigma(\phi(a)) \subseteq \sigma(a) \]
+untuk setiap $a \in A$.
+\end{cor}
+
+\begin{cor} Jika $\phi\colon A \sto B$ homomorfisme yang mempertahankan identitas di antara aljabar-aljabar beridentitas, maka
+   \[ \rho(\phi(a)) \le \rho(a) \]
+untuk setiap $a \in A$.
+\end{cor}
+
+\begin{thm}[Rumus radius spektral]\label{C073157} Jika $a$ suatu elemen dari aljabar Banach
+ \index{spektral!radius!rumus untuk}%
+beridentitas, maka
+   \[ \rho(a) = \inf\bigl\{\norm{a^n}^{1/n}\colon n \in \N\bigr\}
+                                = \lim_{n \sto \infty} \norm{a^n}^{1/n}\,. \]
+\end{thm}
+
+\begin{exer} Dengan menggunakan rumus untuk operator Volterra $V$ dalam contoh~\ref{000319} sebagai
+ \index{operator Volterra!dan persamaan integral}%
+ \index{operator!Volterra!dan persamaan integral}%
+acuan, pada ruang Banach~$\fml C([0,1])$ definisikan operator integral melalui rumus $Vf(x)=\int_0^x f(t)\,dt$.
+ \begin{enumerate}
+  \item[(a)] Hitung spektrum operator $V$. (\emph{Petunjuk.} Tunjukkan bahwa $\norm{V^n}
+\le (n!)^{-1}$ untuk setiap $n \in \N$ dan gunakan \emph{rumus radius spektral}.)
+  \item[(b)] Apa implikasi (a) terhadap kemungkinan memperoleh fungsi kontinu $f$ yang
+memenuhi persamaan integral
+   \[ f(x) - \mu\int_0^xf(t)\,dt = h(x), \]
+dengan $\mu$ suatu skalar dan $h$ suatu fungsi kontinu yang diberikan pada~$[0,1]$?
+  \item[(c)] Gunakan gagasan dalam (b) dan uraian deret Neumann untuk $\vc 1 - \mu V$ (lihat
+proposisi~\ref{prop_Neumann_series}) untuk menghitung secara eksplisit (dan dalam bentuk fungsi elementer)
+suatu solusi untuk persamaan integral
+ \[f(x) - {\textstyle \frac12}\int_0^xf(t)\,dt = e^x.\]
+ \end{enumerate}
+\end{exer}
+
+\begin{prop} Misalkan $A$ aljabar Banach beridentitas dan $B$ subaljabar tertutup yang memuat~$\vc 1_A$.
+Maka
+ \begin{enumerate}[label=\rm{(\alph*)}]
+   \item $\inv B$ terbuka sekaligus tertutup dalam $B \cap \inv A$;
+   \item $\sigma_A(b) \subseteq \sigma_B(b)$ untuk setiap $b \in B$; dan
+   \item jika $b \in B$ dan $\sigma_A(b)$ tidak memiliki lubang (yakni, jika komplemennya dalam $\C$
+terhubung), maka $\sigma_A(b) =    \sigma_B(b)$.
+ \end{enumerate}
+\end{prop}
+
+\begin{proof}[\emph{Petunjuk untuk bukti}] Tinjau fungsi
+$f_b\colon (\sigma_A(b))^c \sto B \cap \inv A\colon \lambda \mapsto b - \lambda \vc 1$.   \ns
+\end{proof}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Spektrum Operator Ruang Hilbert}
+\begin{prop} Misalkan $H$ ruang Hilbert dan $T \in \ofml B(H)$ suatu operator swaadjoin. Pernyataan berikut
+ekuivalen:
+ \begin{enumerate}
+    \item[(i)] $\sigma(T) \subseteq [0,\infty)$;
+    \item[(ii)] terdapat operator $S$ pada $H$ sedemikian sehingga $T = S^*S$; dan
+    \item[(iii)] $T$ positif.
+ \end{enumerate}
+\end{prop}
+
+\begin{notn} Jika $A$ adalah himpunan bilangan kompleks, kita
+ \index{<unopurstar@$A^*$ (himpunan konjugat kompleks dari $A \subseteq \C$)}%
+mendefinisikan $A^* := \{\conj\lambda \colon \lambda \in A\}$. Hal ini dilakukan untuk menghindari kerancuan dengan tutupan himpunan~$A$.
+\end{notn}
+
+\begin{prop} Jika $T$ suatu operator ruang Banach, maka $\sigma(T^*) = \sigma(T)$, sedangkan jika operator tersebut merupakan operator ruang Hilbert,
+maka $\sigma(T^*) = (\sigma(T))^*$.
+\end{prop}
+
+Dalam ruang berdimensi hingga, hanya ada satu cara bagi suatu bilangan kompleks $\lambda$ untuk menjadi anggota spektrum suatu operator~$T$.
+Alasannya adalah bahwa hanya ada satu cara suatu operator, dalam hal ini $T - \lambda I$, pada ruang berdimensi hingga dapat gagal
+menjadi invertibel (lihat paragraf sebelum definisi~\ref{defn_similar_vs_ops}). Di sisi lain, ada beberapa cara bagi $\lambda$
+untuk menjadi anggota spektrum suatu operator pada ruang berdimensi tak hingga---karena ada beberapa cara suatu operator dapat gagal
+menjadi invertibel. (Lihat, misalnya, proposisi~\ref{prop_nasc_op_invert}.) Secara historis, hal ini telah melahirkan sejumlah usulan
+taksonomi spektrum suatu operator.
+
+\begin{defn} Misalkan $T$ suatu operator pada ruang Hilbert (atau Banach)~$H$. Suatu bilangan kompleks $\lambda$ termasuk dalam
+ \index{resolven!himpunan}%
+\df{himpunan resolven} dari $T$ jika $T - \lambda I$ invertibel. Himpunan resolven adalah komplemen dari \emph{spektrum}
+$T$. Himpunan bilangan kompleks $\lambda$ yang membuat $T - \lambda I$ tidak injektif disebut
+ \index{spektrum titik}%
+ \index{spektrum!titik}%
+\df{spektrum titik} dari $T$ dan dinotasikan
+ \index{sigma@$\sigma_p(T)$ (spektrum titik dari~$T$)}%
+dengan $\sigma_p(T)$. Anggota spektrum titik dari $T$ adalah
+ \index{nilai eigen}%
+\df{nilai eigen} dari $T$. Himpunan bilangan kompleks $\lambda$ yang membuat $T - \lambda I$ tidak terbatas jauh dari nol disebut
+ \index{spektrum titik aproksimatif}%
+ \index{spektrum!titik aproksimatif}%
+\df{spektrum titik aproksimatif} dari $T$ dan dinotasikan
+ \index{sigma@$\sigma_{ap}(T)$ (spektrum titik aproksimatif dari~$T$)}%
+dengan $\sigma_{ap}(T)$. Himpunan semua bilangan kompleks $\lambda$ sedemikian sehingga tutupan jangkauan $T - \lambda I$ merupakan subruang
+sejati dari $H$ disebut
+ \index{spektrum kompresi}%
+ \index{spektrum!kompresi}%
+\df{spektrum kompresi} dari $T$ dan dinotasikan
+ \index{sigma@$\sigma_c(T)$ (spektrum kompresi dari~$T$)}%
+dengan $\sigma_c(T)$. Adapun
+ \index{spektrum residual}%
+ \index{spektrum!residual}%
+\df{spektrum residual} dari $T$, yang kita notasikan
+ \index{sigma@$\sigma_r(T)$ (spektrum residual dari~$T$)}%
+dengan $\sigma_r(T)$, adalah $\sigma_c(T) \setminus \sigma_p(T)$.
+\end{defn}
+
+\begin{prop} Jika $T$ suatu operator ruang Hilbert, maka $\sigma_p(T) \subseteq \sigma_{ap}(T) \subseteq \sigma(T)$.
+\end{prop}
+
+\begin{prop} Jika $T$ suatu operator ruang Hilbert, maka $\sigma(T) = \sigma_{ap}(T) \cup \sigma_c(T)$.
+\end{prop}
+
+\begin{prop} Jika $T$ suatu operator ruang Hilbert, maka $\sigma_p(T^*) = (\sigma_c(T))^*$.
+\end{prop}
+
+\begin{cor} Jika $T$ suatu operator ruang Hilbert, maka $\sigma(T) = \sigma_{ap}(T) \cup (\sigma_{ap}(T^*))^*$.
+\end{cor}
+
+\begin{thm}[Teorema Pemetaan Spektral]\label{SMThm} Jika $T$ suatu operator ruang Hilbert dan $p$ suatu polinomial, maka
+   \[ \sigma(p(T)) = p(\sigma(T)). \]
+\end{thm}
+
+Teorema sebelumnya berlaku secara lebih umum untuk setiap fungsi analitik yang didefinisikan pada lingkungan spektrum~$T$.
+(Untuk pembuktiannya, lihat~\cite{Conway:1990}, bab VII, teorema 4.10.) Hasil tersebut juga berlaku untuk bagian-bagian spektrum.
+
+\begin{prop} Jika $T$ suatu operator ruang Hilbert dan $p$ suatu polinomial, maka
+   \begin{enumerate}[label=\rm{(\alph*)}]
+     \item $\sigma_p(p(T)) = p(\sigma_p(T))$,
+     \item $\sigma_{ap}(p(T)) = p(\sigma_{ap}(T))$, dan
+     \item $\sigma_c(p(T)) = p(\sigma_c(T))$,
+   \end{enumerate}
+\end{prop}
+
+\begin{prop}
+    Jika $T$ operator invertibel pada ruang Hilbert, maka $\sigma(T^{-1}) = (\sigma(T))^{-1}$.
+\end{prop}
+
+\begin{defn}\label{defn_similar_Hsp_ops} Seperti halnya pada ruang vektor, dua operator $R$ dan $T$ pada ruang Hilbert (atau Banach) $H$ dikatakan
+ \index{serupa!operator}%
+\df{serupa} jika terdapat operator invertibel $S$ pada $H$ sedemikian sehingga $R = STS^{-1}$.
+\end{defn}
+
+\begin{prop} Jika $S$ dan $T$ merupakan operator yang serupa pada ruang Hilbert, maka $\sigma(S) = \sigma(T)$, $\sigma_p(S) = \sigma_p(T)$,
+$\sigma_{ap}(S) = \sigma_{ap}(T)$, dan $\sigma_c(S) = \sigma_c(T)$.
+\end{prop}
+
+\begin{prop} Jika $T$ merupakan operator normal pada ruang Hilbert, maka $\sigma_c(T) = \sigma_p(T)$, sehingga $\sigma_r(T)~=~\emptyset$.
+\end{prop}
+
+\begin{prop} Jika $T$ merupakan operator pada ruang Hilbert, maka $\sigma_{ap}(T)$ tertutup.
+\end{prop}
+
+\begin{exam} Misalkan $D = \diag(a_1,a_2,a_3,\dots)$ merupakan operator diagonal pada ruang Hilbert dan misalkan
+ \index{spektrum!bagian-bagian!operator diagonal}%
+ \index{operator!diagonal!bagian-bagian spektrum}%
+ \index{diagonal!operator!bagian-bagian spektrum}%
+$A = \{a_k\colon k\in\N\}$. Maka
+   \begin{enumerate}[label=(\alph*)]
+     \item $\sigma_p(D) = \sigma_c(D) = A$,
+     \item $\sigma_{ap}(D) = \clo A$, dan
+     \item $\sigma_r(D) = \emptyset$.
+   \end{enumerate}
+\end{exam}
+
+\begin{exam} Misalkan $S$ merupakan operator pergeseran unilateral pada $l_2$
+ \index{spektrum!bagian-bagian!pergeseran unilateral}%
+ \index{operator!pergeseran unilateral!bagian-bagian spektrum}%
+ \index{pergeseran unilateral!bagian-bagian spektrum}%
+(lihat contoh~\ref{C063526}). Maka
+    \begin{enumerate}[label=(\alph*)]
+      \item $\sigma(S) = D$,
+      \item $\sigma_p(S) = \emptyset$,
+      \item $\sigma_{ap}(S) = C$,
+      \item $\sigma_c(S) = B$,
+      \item $\sigma(S^*) = D$,
+      \item $\sigma_p(S^*) = B$,
+      \item $\sigma_{ap}(S^*) = D$, dan
+      \item $\sigma_c(S^*) = \emptyset$.
+    \end{enumerate}
+di mana $B$ adalah cakram satuan terbuka, $D$ adalah cakram satuan tertutup, dan $C$ adalah lingkaran satuan pada bidang kompleks.
+\end{exam}
+
+\begin{exam} Misalkan $(S,\sfml A, \mu)$ merupakan ruang ukuran positif $\sigma$-hingga, $\phi \in L_\infty(S,\mu)$, dan $M_\phi$ merupakan
+ \index{spektrum!bagian-bagian!operator perkalian}%
+ \index{operator!perkalian!bagian-bagian spektrum}%
+ \index{operator perkalian!bagian-bagian spektrum}%
+operator perkalian yang bersesuaian pada ruang Hilbert $\lfs2{S,\mu}$ (lihat contoh~\ref{C063527}). Maka
+spektrum dan spektrum titik aproksimatif dari $M_\phi$ adalah jangkauan esensial~$\phi$, sedangkan spektrum titik
+dan spektrum kompresi dari $M_\phi$ adalah $\{\lambda \in \C\colon \mu(\phi^{\gets}(\{\lambda\})) > 0\}$.
+\end{exam}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\endinput

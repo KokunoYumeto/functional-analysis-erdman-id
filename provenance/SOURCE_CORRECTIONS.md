@@ -404,3 +404,41 @@ changing visible content.
 No upstream contact occurs during production. These entries are held for the
 single deduplicated post-corpus report only if that report is separately
 authorized.
+
+## Chapter 8
+
+The following source candidates are adjudicated for
+`source/id-ID/spectrum-id.tex`. The frozen upstream member remains unchanged.
+The target preserves the complete active source order through `\endinput`, all
+environments, labels, reference and citation endpoints, exercises, proof and
+hint surfaces, index and defined-term hooks, and mathematical topology except
+for the explicitly classified corrections below and reader-facing
+localization.
+
+1. `spectrum.tex:17`: restore the missing word boundary after the closing
+   parenthesis in `of~$a$)such`, expressed naturally in Indonesian.
+2. `spectrum.tex:178--181`: state the equivalence involving `1/\lambda` for
+   `\lambda\ne0`. The surrounding hypothesis says that `a` is invertible, so
+   zero is already outside its spectrum; division by an arbitrary complex
+   scalar was not well defined.
+3. `spectrum.tex:348`: remove the stray closing parenthesis after the reference
+   to Proposition `C073134`.
+4. `spectrum.tex:372`: open the parenthetical expression with `\bigl(` rather
+   than the mismatched right-delimiter command `\bigr(`.
+5. `spectrum.tex:396--412`: define the Volterra operator on `C([0,1])` by the
+   same displayed formula used in Example `000319`, while retaining that
+   example as a formula precedent. The referenced example acts on
+   `L_2([0,1])`; the source's unqualified identification silently changes the
+   operator's domain.
+6. `spectrum.tex:443--450`: bind the self-adjoint operator as acting on a
+   Hilbert space `H` before the statement forms `\ofml B(H)` and `T=S^*S`.
+7. `spectrum.tex:509`: supply *Teorema Pemetaan Spektral* as the theorem
+   environment's optional title (`\begin{thm}[...]`) rather than as an
+   unintended mandatory body group after `\begin{thm}`.
+8. `spectrum.tex:547`: define the diagonal-entry set as
+   `A=\{a_k\colon k\in\N\}`. The published `A=\cup_{k=1}^\infty a_k` attempts
+   to take a union of scalars and is not a valid set definition.
+
+No upstream contact occurs during production. These entries are held for the
+single deduplicated post-corpus report only if that report is separately
+authorized.

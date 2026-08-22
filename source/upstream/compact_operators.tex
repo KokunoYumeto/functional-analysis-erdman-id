@@ -1,0 +1,517 @@
+\chapter{COMPACT OPERATORS}\label{chap_cpt_ops}
+
+\section{Definition and Elementary Properties}
+
+We will pick up where we left off at the end of chapter 5, studying classes of operators.
+Our context will be slightly more general; in the case of compact operators we will be
+looking at operators on Banach spaces.  First, let us recall a few definitions and
+elementary facts from advanced calculus (or a first course in analysis).
+
+\begin{defn} A subset $A$ of a metric space $M$ is
+ \index{total!boundedness}%
+ \index{bounded!totally}%
+\df{totally bounded} if for every $\epsilon > 0$ there exists a finite subset $F$ of $A$
+such that for every $a \in A$ there is a point $x \in F$ such that $d(x,a) < \epsilon$.
+For normed linear spaces this definition may be rephrased: A subset $A$ of a normed linear
+space $V$ is \df{totally bounded} if for every open ball $B$ about zero in $V$ there exists
+a finite subset $F$ of $A$ such that $A \subseteq F + B$.  This has a more or less standard
+paraphrase: A space is totally bounded if it can be kept under surveillance by a finite number
+of arbitrarily near-sighted policemen.  (Some authors call this property \emph{precompact}.)
+\end{defn}
+
+\begin{prop} A metric space is compact if and only if its is complete and totally bounded.
+\end{prop}
+
+\begin{prop} A metric space is compact if and only if it is complete and totally bounded.
+\end{prop}
+
+\begin{defn} A subset $A$ of a topological space $X$ is
+ \index{compact!relatively}%
+ \index{relatively compact}%
+\df{relatively compact} if its closure is compact.
+\end{defn}
+
+\begin{prop} In a metric space every relatively compact set is totally bounded.
+\end{prop}
+
+In a complete metric space the converse is true.
+
+\begin{prop} In a complete metric space every totally bounded set is relatively compact.
+\end{prop}
+
+\begin{prop} In a metric space every totally bounded set is separable.
+\end{prop}
+
+\begin{thm}[Arzel\`a-Ascoli Theorem]\label{AAThm} Let $X$ be a compact Hausdorff space. A subset $\fml F$
+of $\fml C(X)$ is totally bounded whenever it is (uniformly) bounded and equicontinuous.
+\end{thm}
+
+In the following we will be contrasting the \emph{weak} and \emph{strong} topologies on normed linear spaces.
+The term
+ \index{weak!\emph{vs.} strong topologies on normed spaces}%
+ \index{topology!weak!\emph{vs.} strong on normed space}%
+ \index{strong!\emph{vs.} weak topologies on normed spaces}%
+ \index{conventions!on normed spaces \emph{strong topology} refers to the norm topology}%
+\emph{weak topology} will refer to the usual weak topology determined by the bounded linear functionals
+on the space as defined in~\ref{C067434}, while \emph{strong topology} will refer to the norm topology on the space.
+Keep in mind, however, that the modifier ``strong'' in the context of normed linear spaces is, strictly speaking, 
+redundant.  It is used solely for emphasis.  For example, many writers would state the next proposition as: 
+\emph{Every weakly convergent sequence in a normed linear space is bounded.}
+
+\begin{prop} Every weakly convergent sequence in a normed linear space is strongly bounded.
+\end{prop}
+
+\begin{proof}[\emph{Hint for proof}] Use the \emph{principle of uniform boundedness}~\ref{thm_PUB}. \ns
+\end{proof}
+
+\begin{defn} We say that a linear map $T\colon V \sto W$ is
+ \index{weak!continuity}%
+ \index{continuous!weakly}%
+ \index{linear!map!weak continuity of a}%
+\df{weakly continuous} if it takes weakly convergent nets to weakly convergent nets.
+\end{defn}
+
+\begin{prop} Every (strongly) continuous linear map between normed linear spaces is weakly continuous.
+\end{prop}
+
+\begin{defn} A linear map $T\colon V \sto W$ between normed linear spaces is
+ \index{compact!linear map}%
+ \index{linear!map!compact}%
+ \index{operator!compact}%
+\df{compact} if it takes bounded sets to relatively compact sets. Equivalently, $T$ is compact if it
+maps the closed unit ball in $V$ onto a relatively compact set in~$W$.   The family of all compact linear maps
+from $V$ to $W$ is denoted
+ \index{K@$\ofml K(V,W)$!family of compact linear maps}%
+ \index{K@$\ofml K(V)$!family of compact operators}%
+by~$\ofml K(V,W)$; and we write $\ofml K(V)$ for~$\ofml K(V,V)$.
+\end{defn}
+
+\begin{prop} Every compact linear map is bounded.
+\end{prop}
+
+\begin{prop} A linear map $T\colon V \sto W$ between normed linear spaces is compact if and only if it maps
+every bounded sequence in $V$ to a sequence in $W$ which has a convergent subsequence.
+\end{prop}
+
+\begin{exam} Every finite rank operator on a Banach space is compact.
+\end{exam}
+
+\begin{exam} Every bounded linear functional on a Banach space $B$ is a compact linear map from $B$ to~$\K$.
+\end{exam}
+
+\begin{exam} Let $C$ be the Banach space $\fml C([0,1])$ and $k \in \fml C([0,1] \times [0,1])$.  For each $f \in C$
+ \index{integral!operator}%
+ \index{operator!integral}%
+define a function $Kf$ on $[0,1]$ by
+   \[ Kf(x) = \int_0^1 k(x,y)f(y)\,dy\,. \]
+Then the integral operator $K$ is a compact operator on~$C$.
+\end{exam}
+
+\begin{proof}[\emph{Hint for proof}] Use the \emph{Arzel\`a-Ascoli theorem}~\ref{AAThm}.  \ns
+\end{proof}
+
+\begin{exam}\label{X_square_int_kernel} Let $H$ be the Hilbert space $\lfs2{[0,1]}$ of (equivalence classes of) functions which
+are square-integrable on $[0,1]$ with respect to Lebesgue measure and
+ \index{integral!operator}%
+ \index{operator!integral}%
+$k$ be square-integrable function
+on $[0,1] \times [0,1]$.  For each $f \in H$ define a function $Kf$ on $[0,1]$ by
+   \[ Kf(x) = \int_0^1 k(x,y)f(y)\,dy\,. \]
+Then the integral operator $K$ is a compact operator on~$H$.
+\end{exam}
+
+\begin{prop} An operator on a Hilbert space is compact if and only if it maps the closed unit ball in the space
+onto a compact set.
+\end{prop}
+
+\begin{cor}\label{cor_id_op_not_cpt} The identity operator on an infinite dimensional Hilbert space is not compact.
+(See example~\ref{X_l2ball_not_cpt}
+\end{cor}
+
+\begin{exam} If $B$ is a Banach space the family $\ofml B(B)$ of operators on $B$ is a
+ \index{Banach!algebra!$\ofml B(B)$ as a}%
+ \index{B@$\ofml B(V)$!as a unital Banach algebra}%
+unital Banach algebra and the
+ \index{K@$\ofml K(V)$!as a proper closed ideal}%
+family $\ofml K(B)$ of compact operators on $B$ is a closed ideal in~$\ofml B(B)$.
+If $B$ is infinite dimensional the ideal $\ofml K(H)$ is proper.
+\end{exam}
+
+\begin{prop} Let $T\colon B \sto C$ be a bounded linear map between Banach spaces. Then $T$ is compact
+if and only if $T^*$ is.
+\end{prop}
+
+\begin{defn}\label{0013} A
+ \index{C*@$C^*$-algebra}%
+ \index{algebra!$C^*$-}%
+\df{$C^\ast$-algebra} is a Banach algebra $A$ with involution which satisfies
+   \[ \norm{a^*a} = \norm{a}^2 \]
+for every $a \in A$.  This property of the norm is usually referred to as
+ \index{C*@$C^*$-condition}%
+\emph{the $C^*$-condition}. An algebra norm satisfying this condition is a
+ \index{C*@$C^*$-norm}%
+ \index{norm!$C^*$-}%
+\df{$C^*$-norm}.  A
+ \index{C*@$C^*$-subalgebra}%
+ \index{subalgebra!$C^*$-}%
+\df{$C^*$-subalgebra} of a $C^*$-algebra $A$ is a closed $*\,$-subalgebra of~$A$.
+
+We denote by $\cat{CSA}$ the category of $C^*$-algebras and $*\,$-homomorphisms.
+ \index{category!$\cat{CSA}$ as a}%
+ \index{CSA@$\cat{CSA}$!the category}%
+It may seem odd at first that in this category, whose objects have both algebraic and topological properties,
+that the morphisms should be required to preserve only algebraic structure.  Remarkably enough, it turns out
+that every morphism in $\cat{CSA}$ is automatically continuous---in fact, contractive (see
+proposition~\ref{00152171})---and that
+ \index{bijective morphisms!are invertible!in $\cat{CSA}$}%
+every injective morphism is an isometry (see proposition~\ref{00152181}).  It is clear that
+(as in definition~\ref{00109}) every bijective morphism in this category is an isomorphism.  And thus every bijective $*\,$-homomorphism
+is an isometric $*\,$-isomorphism.
+\end{defn}
+
+\begin{exam}  The vector space $\C$ of complex numbers with the usual multiplication
+ \index{C*@$C^*$-algebra!$\C$ as a}%
+ \index{C@$\C$!as a $C^*$-algebra}%
+of complex numbers and complex conjugation $z \mapsto \conj z$ as involution is a unital
+commutative $C^*$-algebra.
+\end{exam}
+
+\begin{exam} If $X$ is a compact Hausdorff space, the algebra $\fml C(X)$ of continuous
+ \index{C*@$C^*$-algebra!$\fml C(X)$ as a}%
+ \index{C@$\fml C(X)$!as a $C^*$-algebra}%
+complex valued functions on $X$ is a unital commutative $C^*$-algebra when involution is
+taken to be complex conjugation.
+\end{exam}
+
+\begin{exam} If $X$ is a locally compact Hausdorff space, the Banach algebra
+ \index{C*@$C^*$-algebra!$\fml C_0(X)$ as a}%
+ \index{C@$\fml C_0(X)$!as a $C^*$-algebra}%
+$\fml C_0(X) = \fml C_0(X,\C)$ of continuous complex valued functions on $X$ which vanish
+at infinity is a (not necessarily unital) commutative $C^*$-algebra when involution is
+taken to be complex conjugation.
+\end{exam}
+
+\begin{exam} If $(X,\mu)$ is a measure space, the algebra $\lfs\infty(X,\mu)$ of
+ \index{C*@$C^*$-algebra!$L_\infty(S)$ as a}%
+ \index{L@$\lfs\infty(S)$!as a $C^*$-algebra}%
+essentially bounded measurable complex valued functions on $X$ (again with complex
+conjugation as involution) is a $C^*$-algebra.  (Technically, of course, the members of
+$\lfs\infty(X,\mu)$ are equivalence classes of functions which differ on sets of measure zero.)
+\end{exam}
+
+\begin{exam}\label{001305fa} The algebra $\ofml B(H)$ of bounded linear operators on a Hilbert space
+ \index{C*@$C^*$-algebra!$\ofml B(H)$ as a}%
+ \index{B@$\ofml B(V)$!as a $C^*$-algebra}%
+$H$ is a unital $C^*$-algebra.  The family $\ofml K(H)$ of compact operators is a closed $*\,$-ideal
+in the algebra.
+\end{exam}
+
+\begin{exam}\label{001306} As a special case of the preceding example note that the set
+ \index{C*@$C^*$-algebra!M@$\mathbf M_n$ as a}%
+ \index{Ma@$\mathbf M_n = \M n\C$!as a $C^*$-algebra}%
+$\mathbf M_n$ of $n \times n$ matrices of complex numbers is a unital $C^*$-algebra.
+\end{exam}
+
+\begin{prop}\label{prop_K_is_clo_FR} In a Hilbert space $H$ the ideal $\ofml K(H)$ of compact operators is the closure of
+the ideal $\ofml{FR}(H)$ of finite rank operators.
+\end{prop}
+
+In the decade or so before the Second World War, some leading Polish mathematicians gathered regularly in coffee
+houses in Lwow to discuss results and propose problems.  First they met in the \emph{Caf\'e Roma} and later in the
+\emph{Scottish Caf\'e}.  In 1935 Stefan Banach produced a bound notebook in which they could write down the problems.
+This was the origin of the now famous \emph{Scottish Book}~\cite{Mauldin:1981}.  On November 6, 1936 Stanislaw Mazur
+wrote down Problem 153, known as the \emph{approximation problem}, which asked, essentially, if the preceding proposition
+holds for Banach spaces.  Can every compact Banach space operator be approximated in norm by finite rank operators?
+Mazur offered as the prize for solving this problem a live goose (one of the more generous prizes promised in the
+\emph{Scottish Book}).  The problem remained open for decades,  until 1972 when it was solved negatively by Per Enflo,
+who succeeded in finding a separable reflexive Banach space in which such an approximation fails.  In a ceremony held
+that year in Warsaw, Enflo received his live goose from Mazur himself.  The result was published in Acta
+Mathematica~\cite{Enflo:1973} in~1973.
+
+\begin{exam} The diagonal operator $\diag(1,\frac12,\frac13,\dots)$ is a compact operator on the Hilbert space~$l_2$.
+\end{exam}
+
+
+
+
+
+
+
+
+
+
+
+\section{Partial Isometries}
+\begin{defn}  An element $v$ of a $C^*$-algebra $A$ is a
+ \index{partial!isometry}%
+\df{partial isometry} if $v^*v$ is a projection in~$A$.  (Since $v^*v$ is always
+self-adjoint, it is enough to require that $v^*v$ be idempotent.)  The element $v^*v$ is
+the
+ \index{initial!projection}%
+ \index{projection!initial}%
+ \index{partial!isometry!initial projection of a}%
+\df{initial} (or
+ \index{support!projection}%
+ \index{projection!support}%
+ \index{partial!isometry!support projection of a}%
+\df{support}) \df{projection} of~$v$ and $vv^*$ is the
+ \index{final!projection}%
+ \index{projection!final}%
+ \index{partial!isometry!final projection of a}%
+\df{final} (or
+ \index{range!projection}%
+ \index{projection!range}%
+ \index{partial!isometry!range projection of a}%
+\df{range}) \df{projection} of~$v$.  (It is an obvious consequence of the next
+proposition that if $v$ is a partial isometry, then $vv^*$ is in fact a projection.)
+\end{defn}
+
+\begin{prop}\label{pi0111} If $v$ is a partial isometry in a $C^*$-algebra, then
+ \begin{enumerate}[label=\rm{(\alph*)}]
+  \item $vv^*v = v$\,; and
+  \item $v^*$ is a partial isometry.
+ \end{enumerate}
+\end{prop}
+
+\begin{proof}[\emph{Hint for proof}] Let $z = v - vv^*v$ and consider $z^*z$.  \ns
+\end{proof}
+
+\begin{prop}\label{pi0114} Let $v$ be a partial isometry in a $C^*$-algebra~$A$.  Then its initial
+projection $p$ is the smallest projection (with respect to the partial ordering~$\preceq$
+on $\fml P(A)$\,) such that $vp = v$ and its final projection $q$ is the smallest
+projection such that $qv = v$.
+\end{prop}
+
+\begin{prop}\label{pi0117} If $V$ is a partial isometry on a Hilbert space $H$ (that is, if $V$ is a partial
+isometry in the $C^*$-algebra~$\ofml B(H)$\,), then the initial projection $V^*V$ is the
+projection of $H$ onto $(\ker V)^\perp$ and the final projection $VV^*$ is the projection
+of $H$ onto~$\ran V$.
+\end{prop}
+
+Because of the preceding result $(\ker V)^\perp$ is called the
+ \index{initial!space}%
+ \index{space!initial}%
+ \index{space!support}%
+ \index{support!space}%
+\df{initial} (or \df{support}) \df{space} of~$V$ and $\ran V$ is sometimes called the
+ \index{final!space}%
+ \index{space!final}%
+\df{final space} of~$V$.)
+
+\begin{prop}\label{pi0121} An operator on a Hilbert space is a partial isometry if and only if it is an
+isometry on the orthogonal complement of its kernel.
+\end{prop}
+
+
+
+
+
+\begin{thm}[Polar Decomposition]\label{0022287} If $T$ is an operator on a Hilbert
+ \index{polar decomposition}%
+ \index{decomposition!polar}%
+space $H$, then there exists a partial isometry $V$ on $H$ such that
+ \begin{enumerate}
+    \item[(i)] the initial space of $V$ is $(\ker T)^\perp$,
+    \item[(ii)] the final space of $V$ is $\clo{\ran T}$, and
+    \item[(iii)] $T = V\abs T$.
+ \end{enumerate}
+This decomposition of $T$ is unique in the sense that if $T = V_0P$ where $V_0$ is a
+partial isometry and $P$ is a positive operator such that $\ker V_0 = \ker P$, then $P =
+\abs T$ and $V_0 = V$.
+\end{thm}
+
+\begin{proof} See \cite{Conway:1990}, VIII.3.11; \cite{Davidson:1996}, theorem I.8.1;
+\cite{KadisonR:1983}, theorem 6.1.2; \cite{Murphy:1990}, theorem 2.3.4;
+or~\cite{Pedersen:1995}, theorem 3.2.17. \ns
+\end{proof}
+
+\begin{cor} If $T$ is an
+  \index{polar decomposition!of an invertible operator}%
+ \index{operator!invertible!polar decomposition of}%
+ \index{invertible!operator!polar decomposition of}%
+invertible operator on a Hilbert space, then the partial isometry in the polar
+decomposition (see~\ref{0022287}) is unitary.
+\end{cor}
+
+\begin{prop} If $T$ is a
+ \index{polar decomposition!of a normal operator}%
+ \index{operator!normal!polar decomposition of}%
+ \index{normal!operator!polar decomposition of}%
+normal operator on a Hilbert space $H$, then there exists a unitary operator $U$ on $H$
+which commutes with $T$ and satisfies $T = U\abs T$.
+\end{prop}
+
+\begin{proof} See \cite{Pedersen:1995}, proposition 3.2.20.\ns \end{proof}
+
+\begin{exer} Let $(S, \fml A,\mu)$ be a $\sigma$-finite measure space and $\phi \in
+L_\infty(\mu)$. Find the polar decomposition of the
+ \index{multiplication operator!polar decomposition of}%
+ \index{operator!multiplication!polar decomposition of}%
+ \index{polar decomposition!of a multiplication operator}%
+multiplication operator $M_\phi$ (see example~\ref{C063527}).
+\end{exer}
+
+
+
+
+
+
+
+
+
+\section{Trace Class Operators}
+
+Let's start by reviewing some of the standard properties of the \emph{trace} of an $n \times n$ matrix.
+
+\begin{defn}\label{tr0113} Let $a = [a_{ij}] \in \mathbf M_n$. Define $\tr a$, the
+ \index{trace!of a matrix}%
+ \index{matrix!trace of a}%
+ \index{tr@$\tr$ (trace)}%
+\df{trace} of $a$ by
+  \[ \tr a = \sum_{i = 1}^n a_{ii}. \]
+\end{defn}
+
+\begin{prop}\label{tr0117} The function $\tr\colon \mathbf M_n \sto \C$ is linear.
+\end{prop}
+
+\begin{prop}\label{tr0121} If $a$, $b \in \mathbf M_n$, then $\tr (ab) = \tr (ba)$.
+\end{prop}
+
+The trace is invariant under similarity.  Two $n \times n$ matrices $a$ and $b$ are
+ \index{similar!matrices}%
+ \index{matrices!similar}%
+\df{similar} if there exists an invertible matrix $s$ such that $b = sas^{-1}$.
+
+\begin{prop}\label{tr0124} If matrices in $\mathbf M_n$ are similar, then they have the same trace.
+\end{prop}
+
+\begin{defn}\label{tr0211} Let $H$ be a separable Hilbert space, $(e_n)$ be an orthonormal basis for~$H$, and $T$ be
+a positive operator on~$H$.  Define the
+ \index{trace}%
+ \index{tr@$\tr$ (trace)}%
+\df{trace} of~$T$~by
+    \[ \tr T:=\sum_{k=1}^\infty \langle Te_k,e_k \rangle. \]
+(The trace is not necessarily finite.)
+\end{defn}
+
+\begin{prop} If $S$ and $T$ are positive operators on a separable Hilbert space and $\alpha \in  \K$, then
+   \[  \tr(S + T) = \tr S + \tr T \]
+and
+   \[ \tr(\alpha T) = \alpha \tr T. \]
+\end{prop}
+
+\begin{prop} If $T$ is an operator on a separable Hilbert space then $\tr(T^*T) = \tr(TT^*)$.
+\end{prop}
+
+To show that the definition given above of the trace of a positive operator does not depend on the orthonormal basis chosen for the
+Hilbert space we will need a result (given next) which depends on a fact which appears later in these notes: every positive Hilbert
+space operator has a (positive) square root (see example~\ref{X_sqroot_op}).
+
+\begin{prop}\label{tr0221} On the family of positive operators on a separable Hilbert space $H$ the trace is invariant under unitary equivalence;
+that is, if $T$ is positive and $U$ is unitary, then $\tr T = \tr(UTU^*)$.
+\end{prop}
+
+\begin{proof}[\emph{Hint for proof}] In the preceding proposition let $S = UT^{\frac12}$.    \ns
+\end{proof}
+
+\begin{prop}\label{tr0224} The definition of the \emph{trace}~\ref{tr0211} of a positive operator on a separable Hilbert space is independent
+of the choice of orthonormal basis for the space.
+\end{prop}
+
+\begin{proof}[\emph{Hint for proof}] Let $(e^k)$ and $(f^k)$ be orthonormal bases for the space and $T$ be a positive operator
+on the space.  Take $U$ to be the unique unitary operator with the property that $e^k = Tf^k$ for each $k \in \N$.  \ns
+\end{proof}
+
+\begin{defn} Let $V$ be a vector space.  A subset $C$ of $V$ is a
+ \index{cone}%
+\df{cone} in $V$ is $\alpha C \subseteq C$ for every $\alpha \ge 0$.  A cone $C$ in $V$ is
+ \index{cone!proper}%
+ \index{proper!cone}%
+\df{proper} is $C \cap (-C) = \{\vc 0\}$.
+\end{defn}
+
+ \begin{prop} A cone $C$ in a vector space is convex if and only if $C + C \subseteq C$.
+\end{prop}
+
+\begin{exam} On a separable Hilbert space the family of all positive operators with finite trace forms a proper convex cone in the vector
+space~$\ofml B(H)$.
+\end{exam}
+
+\begin{defn} In a separable Hilbert space $H$ the linear subspace of $\ofml B(H)$ spanned by the positive operators with finite trace
+is the family $\ofml T(H)$ of
+ \index{trace!class}%
+ \index{operator!trace class}%
+ \index{T@$\ofml T(H)$ (trace class operators on~$H$)}%
+\df{trace class} operators on~$H$.
+\end{defn}
+
+\begin{prop} Let $H$ be a separable Hilbert space with orthonormal basis~$(e_n)$.  If $T$ is a trace class operator on $H$, then
+   \[ \tr T = \sum_{k=1}^\infty \langle Te_k,e_k \rangle \]
+and the sum on the right is absolutely convergent.
+\end{prop}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Hilbert-Schmidt Operators}
+
+\begin{defn} An operator $A$ on a separable Hilbert space $H$ is a
+ \index{Hilbert!-Schmidt operator}%
+ \index{operator!Hilbert-Schmidt}%
+\df{Hilbert-Schmidt} operator if $A^*A$ is of trace class; that is, if $\sum_{k=1}^\infty \norm{Ae_k}^2 < \infty$,
+where $(e_k)$ is an orthonormal basis for~$H$.  The family of all Hilbert-Schmidt operators on $H$ is
+ \index{HS@$\ofml{HS}(H)$ (Hilbert-Schmidt operators on~$H$)}%
+denoted by~$\ofml{HS}(H)$.
+\end{defn}
+
+\begin{prop} If $H$ is a separable Hilbert space, then the family of Hilbert-Schmidt operators on $H$ is a two-sided
+ideal in~$\ofml B(H)$.
+\end{prop}
+
+\begin{exam}  The family of Hilbert-Schmidt operators on a Hilbert space $H$ can be made into an inner product space.
+\end{exam}
+
+\begin{proof}[\emph{Hint for proof}]  Polarization.  If $A$, $B \in \ofml{HS}(H)$,
+consider $\sum_{k=0}^3 i^k \bigl(A + i^kB\bigr)^*(A + i^kB)$.  \ns
+\end{proof}
+
+\begin{exam} The inner product you defined in the preceding example makes $\ofml{HS}(H)$ into a Hilbert space.
+\end{exam}
+
+\begin{prop} On a separable Hilbert space every Hilbert-Schmidt operator is compact.
+\end{prop}
+
+\begin{proof}[\emph{Hint for proof}] If $(e_k)$ is an orthonormal basis for the Hilbert space, consider the
+operators $F_n := AP_n$ where $P_n$ is the projection onto the span of $\{e_1 \dots, e_n\}$. \ns
+\end{proof}
+
+\begin{exam} The integral operator defined in example~\ref{X_square_int_kernel} is a Hilbert-Schmidt operator.
+\end{exam}
+
+\begin{exam}
+    The Volterra operator defined in example~\ref{000319} is a Hilbert-Schmidt operator.
+\end{exam}
+
+
+
+
+
+
+
+
+
+
+
+\endinput

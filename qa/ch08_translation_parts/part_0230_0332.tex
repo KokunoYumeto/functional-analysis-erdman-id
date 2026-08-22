@@ -1,0 +1,103 @@
+
+\begin{prop}[Deret Neumann]\label{prop_Neumann_series} Misalkan $a$ suatu elemen dari aljabar Banach beridentitas.
+ \index{deret Neumann}%
+ \index{deret!Neumann}%
+Jika $\norm a < 1$, maka
+$\vc 1 - a \in \inv A$ dan $(\vc 1 - a)^{-1} = \sum_{k=0}^\infty a^k$.
+\end{prop}
+
+\begin{proof}[\emph{Petunjuk untuk bukti}] Tunjukkan bahwa barisan $(\vc 1, a, a^2, \dots)$
+dapat dijumlahkan. (Dalam aljabar beridentitas kita mengartikan $a^0$ sebagai~$\vc 1$.)  \ns
+\end{proof}
+
+\begin{cor}\label{cor_Neumann_series} Jika $a$ suatu elemen dari aljabar Banach beridentitas dengan $\norm{\vc 1 - a} < 1$, maka $a$ invertibel dan
+    \[ \norm{a^{-1}} \le \frac{1}{1 - \norm{\vc 1 - a}}\,.  \]
+\end{cor}
+
+\begin{cor}\label{cor2_Neumann_series} Misalkan $a$ suatu elemen invertibel dari aljabar Banach beridentitas $A$ dan $b \in A$,
+serta $\norm{a - b} < \norm{a^{-1}}^{-1}$. Maka $b$ invertibel dalam~$A$.
+\end{cor}
+
+\begin{proof}[\emph{Petunjuk untuk bukti}] Gunakan korolari sebelumnya untuk menunjukkan bahwa $a^{-1}b$ invertibel.
+\ns \end{proof}
+
+\begin{cor} Jika $a$ termasuk dalam suatu aljabar Banach beridentitas dan $\norm a < 1$, maka
+   \[ \norm{(\vc 1 - a)^{-1} - \vc 1} \le \frac{\norm a}{1 - \norm a}\,. \]
+\end{cor}
+
+\begin{prop}\label{000644fa} Jika $A$ aljabar Banach beridentitas, maka $\open{\inv A}A$.
+\end{prop}
+
+\begin{proof}[\emph{Petunjuk untuk bukti}] Misalkan $a \in \inv A$. Tunjukkan, untuk $h$ yang cukup kecil,
+bahwa $\vc 1 - a^{-1}h$ invertibel.  \ns
+\end{proof}
+
+\begin{prop}\label{000646fa} Misalkan $A$ aljabar Banach beridentitas. Pemetaan $a \mapsto a^{-1}$ dari $\inv A$ ke
+dirinya sendiri merupakan homeomorfisme.
+\end{prop}
+
+\begin{prop} Misalkan $A$ aljabar Banach beridentitas. Pemetaan $r\colon a \mapsto a^{-1}$ dari
+$\inv A$ ke dirinya sendiri bersifat diferensiabel dan pada setiap elemen invertibel $a$, berlaku
+$dr_a(h) = -a^{-1}ha^{-1}$ untuk setiap $h \in A$.
+\end{prop}
+
+\begin{proof}[\emph{Petunjuk untuk bukti}] Untuk pengantar singkat mengenai diferensiasi pada ruang
+berdimensi tak hingga, lihat Bab 13 dari catatan saya~\cite{Erdman:2007} tentang Analisis Real.  \ns
+\end{proof}
+
+\begin{prop}\label{000661} Misalkan $a$ suatu elemen dari aljabar Banach beridentitas~$A$. Maka spektrum $a$
+kompak dan $\abs\lambda \le \norm a$ untuk setiap $\lambda \in \sigma(a)$.
+\end{prop}
+
+\begin{proof}[\emph{Petunjuk untuk bukti}] Gunakan \emph{teorema Heine-Borel}. Untuk membuktikan bahwa
+spektrum tertutup, perhatikan bahwa $(\sigma(a))^c = f^\gets(\inv A)$ dengan $f(\lambda) = a -
+\lambda\mathbf 1$ untuk setiap bilangan kompleks~$\lambda$. Tunjukkan juga bahwa jika $\abs\lambda >
+\norm a$, maka $\mathbf 1 - \lambda^{-1}a$ invertibel.  \ns
+\end{proof}
+
+\begin{defn} Misalkan $a$ suatu elemen dari aljabar Banach beridentitas.
+ \index{resolven!pemetaan}%
+\df{Pemetaan resolven} untuk $a$ didefinisikan oleh
+   \[ R_a \colon \C \setminus \sigma(a) \sto A
+                 \colon \lambda \mapsto (a  - \lambda\vc 1)^{-1}\,. \]
+\end{defn}
+
+\begin{defn} Misalkan $\open U\C$ dan $A$ suatu aljabar Banach beridentitas. Suatu fungsi $f \colon U \sto A$
+ \index{analitik}%
+bersifat \df{analitik} pada $U$ jika
+   \[ f'(a) := \lim_{z \sto a} \frac{f(z) - f(a)}{z - a} \]
+ada untuk setiap $a \in U$. Suatu fungsi bernilai kompleks yang analitik pada seluruh $\C$
+disebut fungsi
+ \index{entire}
+\df{entire}.
+\end{defn}
+
+\begin{prop} Untuk $a$ suatu elemen dari aljabar Banach beridentitas $A$ dan $\phi$ suatu fungsional linear
+terbatas pada~$A$, misalkan $f := \phi \circ R_a \colon \C \setminus \sigma(a) \sto \C$. Maka
+ \begin{enumerate}[label=\rm{(\alph*)}]
+  \item $f$ analitik pada domainnya; dan
+  \item $f(\lambda) \sto 0$ ketika $\abs\lambda \sto \infty$.
+ \end{enumerate}
+\end{prop}
+
+\begin{proof}[\emph{Petunjuk untuk bukti}] Untuk (i), perhatikan bahwa dalam aljabar beridentitas $a^{-1} - b^{-1}
+= a^{-1}(b - a)b^{-1}$.   \ns
+\end{proof}
+
+\begin{thm}[Liouville]\label{C073131} Setiap fungsi entire yang terbatas pada $\C$ bersifat konstan.
+ \index{teorema Liouville}%
+\end{thm}
+
+\begin{proof}[\emph{Komentar tentang bukti}] Pembuktian teorema ini memerlukan sedikit latar belakang
+dalam teori fungsi analitik, yakni materi yang tidak dibahas dalam catatan ini. Teorema
+tersebut tentu dibahas dalam setiap mata kuliah pengantar tentang variabel kompleks. Sebagai contoh, bukti yang
+baik dapat ditemukan dalam \cite{Rudin:1987}, teorema 10.23.   \ns
+\end{proof}
+
+\begin{prop}\label{C073134} Spektrum setiap elemen dari aljabar Banach beridentitas tidak kosong.
+\end{prop}
+
+\begin{proof}[\emph{Petunjuk untuk bukti}] Gunakan argumen kontradiksi. Gunakan \emph{teorema Liouville}~\ref{C073131}
+untuk menunjukkan bahwa $\phi \circ R_a$ konstan bagi setiap fungsional linear terbatas $\phi$ pada~$A$. Kemudian gunakan
+(salah satu versi) \emph{teorema Hahn-Banach} untuk membuktikan bahwa $R_a$ konstan. Mengapa konstanta ini harus~$0$?   \ns
+\end{proof}

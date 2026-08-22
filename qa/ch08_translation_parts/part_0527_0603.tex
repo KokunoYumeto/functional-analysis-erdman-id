@@ -1,0 +1,77 @@
+
+\begin{defn}\label{defn_similar_Hsp_ops} Seperti halnya pada ruang vektor, dua operator $R$ dan $T$ pada ruang Hilbert (atau Banach) $H$ dikatakan
+ \index{serupa!operator}%
+\df{serupa} jika terdapat operator invertibel $S$ pada $H$ sedemikian sehingga $R = STS^{-1}$.
+\end{defn}
+
+\begin{prop} Jika $S$ dan $T$ merupakan operator yang serupa pada ruang Hilbert, maka $\sigma(S) = \sigma(T)$, $\sigma_p(S) = \sigma_p(T)$,
+$\sigma_{ap}(S) = \sigma_{ap}(T)$, dan $\sigma_c(S) = \sigma_c(T)$.
+\end{prop}
+
+\begin{prop} Jika $T$ merupakan operator normal pada ruang Hilbert, maka $\sigma_c(T) = \sigma_p(T)$, sehingga $\sigma_r(T)~=~\emptyset$.
+\end{prop}
+
+\begin{prop} Jika $T$ merupakan operator pada ruang Hilbert, maka $\sigma_{ap}(T)$ tertutup.
+\end{prop}
+
+\begin{exam} Misalkan $D = \diag(a_1,a_2,a_3,\dots)$ merupakan operator diagonal pada ruang Hilbert dan misalkan
+ \index{spektrum!bagian-bagian!operator diagonal}%
+ \index{operator!diagonal!bagian-bagian spektrum}%
+ \index{diagonal!operator!bagian-bagian spektrum}%
+$A = \{a_k\colon k\in\N\}$. Maka
+   \begin{enumerate}[label=(\alph*)]
+     \item $\sigma_p(D) = \sigma_c(D) = A$,
+     \item $\sigma_{ap}(D) = \clo A$, dan
+     \item $\sigma_r(D) = \emptyset$.
+   \end{enumerate}
+\end{exam}
+
+\begin{exam} Misalkan $S$ merupakan operator pergeseran unilateral pada $l_2$
+ \index{spektrum!bagian-bagian!pergeseran unilateral}%
+ \index{operator!pergeseran unilateral!bagian-bagian spektrum}%
+ \index{pergeseran unilateral!bagian-bagian spektrum}%
+(lihat contoh~\ref{C063526}). Maka
+    \begin{enumerate}[label=(\alph*)]
+      \item $\sigma(S) = D$,
+      \item $\sigma_p(S) = \emptyset$,
+      \item $\sigma_{ap}(S) = C$,
+      \item $\sigma_c(S) = B$,
+      \item $\sigma(S^*) = D$,
+      \item $\sigma_p(S^*) = B$,
+      \item $\sigma_{ap}(S^*) = D$, dan
+      \item $\sigma_c(S^*) = \emptyset$.
+    \end{enumerate}
+di mana $B$ adalah cakram satuan terbuka, $D$ adalah cakram satuan tertutup, dan $C$ adalah lingkaran satuan pada bidang kompleks.
+\end{exam}
+
+\begin{exam} Misalkan $(S,\sfml A, \mu)$ merupakan ruang ukuran positif $\sigma$-hingga, $\phi \in L_\infty(S,\mu)$, dan $M_\phi$ merupakan
+ \index{spektrum!bagian-bagian!operator perkalian}%
+ \index{operator!perkalian!bagian-bagian spektrum}%
+ \index{operator perkalian!bagian-bagian spektrum}%
+operator perkalian yang bersesuaian pada ruang Hilbert $\lfs2{S,\mu}$ (lihat contoh~\ref{C063527}). Maka
+spektrum dan spektrum titik aproksimatif dari $M_\phi$ adalah jangkauan esensial~$\phi$, sedangkan spektrum titik
+dan spektrum kompresi dari $M_\phi$ adalah $\{\lambda \in \C\colon \mu(\phi^{\gets}(\{\lambda\})) > 0\}$.
+\end{exam}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\endinput

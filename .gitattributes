@@ -1,3 +1,6 @@
+# Keep the attributes file itself stable on every platform.
+/.gitattributes text eol=lf
+
 # Render manifests are hash-bound evidence; preserve their exact bytes.
 provenance/*_RENDER_MANIFEST.csv -text
 
@@ -13,7 +16,7 @@ provenance/*_RENDER_MANIFEST.csv -text
 /source/id-ID/*.bib text eol=lf
 /qa/*.py text eol=lf
 /qa/*.md text eol=lf
-/qa/ch06_translation_parts/*.tex text eol=lf
+/qa/ch*_translation_parts/*.tex text eol=lf
 /provenance/*.md text eol=lf
 /README.md text eol=lf
 /BUILD.md text eol=lf

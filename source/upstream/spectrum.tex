@@ -1,0 +1,611 @@
+\chapter{SOME SPECTRAL THEORY}\label{spectrum}
+
+In this chapter we will, for the first time, assume, unless otherwise stated, that vector
+spaces and algebras have complex, rather than real, scalars. A good part of the reason
+ \index{conventions!in chapter~\ref{spectrum} scalars are complex}%
+for this is the necessity of using \emph{Liouville's theorem}~\ref{C073131} to prove
+proposition~\ref{C073134}.
+
+\section{The Spectrum}
+
+\begin{defn} An element $a$ of a unital algebra $A$ is
+ \index{invertible!left!in an algebra}%
+\df{left invertible} if there exists an element $a_l$ in $A$ (called a \df{left inverse}
+of~$a$) such that $a_l a = \vc 1$ and is
+ \index{invertible!right!in an algebra}%
+\df{right invertible} if there exists an element $a_r$ in $A$ (called a \df{right
+inverse} of~$a$)such that $aa_r = \vc 1$. The element is
+ \index{invertible!in an algebra}%
+\df{invertible} if it is both left invertible and right invertible. The set of all
+invertible elements of $A$ is denoted
+ \index{invertible@$\inv A$ (invertible elements in an algebra)}%
+by~$\inv A$.
+\end{defn}
+
+An element of a unital algebra can have at most one multiplicative inverse.  In fact,
+more is true.
+
+\begin{prop}\label{000521} If an element of a unital algebra has both a left inverse and a
+right inverse, then these two inverses are equal (and so the element is invertible).
+\end{prop}
+
+When an element $a$ of a unital algebra is invertible its (unique) inverse is denoted
+by~$a^{-1}$.
+
+\begin{prop} If $a$ is an invertible element of a unital algebra, then $a^{-1}$ is also
+ \index{inverse!of an inverse}%
+invertible and
+   \[ \bigl(a^{-1}\bigr)^{-1} = a\,. \]
+\end{prop}
+
+\begin{prop} If $a$ and $b$ are invertible elements of a unital algebra, then their product
+ \index{inverse!of a product}%
+$ab$ is also invertible and
+  \[ (ab)^{-1} = b^{-1}a^{-1}\,. \]
+\end{prop}
+
+\begin{prop}\label{000524} If $a$ and $b$ are invertible elements of a unital algebra,
+ \index{inverses!difference of}%
+then
+  \[ a^{-1} - b^{-1} = a^{-1}(b - a)b^{-1}\,. \]
+\end{prop}
+
+\begin{prop} Let $a$ and $b$ be elements of a unital algebra.  If both $ab$ and
+$ba$ are invertible, then so are $a$ and $b$.
+\end{prop}
+
+\begin{proof}[\emph{Hint for proof}] Use proposition~\ref{000521}. \ns \end{proof}
+
+\begin{cor} Let $a$ be an element of a unital $*\,$-algebra.  Then $a$ is invertible if and only if $a^*a$ and $aa^*$
+are invertible, in which case
+   \[ a^{-1} = \bigl(a^*a\bigr)^{-1}a^* = a^*\big(aa^*\bigr)^{-1}\,. \]
+\end{cor}
+
+\begin{prop}\label{000526} Let $a$ and $b$ be elements of a unital algebra.  Then
+$\vc 1 - ab$ is invertible if and only if $\vc 1 - ba$ is.
+\end{prop}
+
+\begin{proof} If $\vc 1 - ab$ is invertible, then $\vc 1 + b(\vc 1 - ab)^{-1}a$ is the
+inverse of $\vc 1 - ba$.
+\end{proof}
+
+\begin{exam} The simplest example of a complex algebra is the family $\C$ of complex
+numbers.  It is both unital and commutative.
+\end{exam}
+
+\begin{exam}\label{000532} If $X$ is a nonempty topological space, then the family $\fml C(X)$
+of all continuous complex valued functions on $X$ is an
+ \index{C@$\fml C(X)$!as a unital algebra}%
+algebra under the usual pointwise operations of addition, scalar multiplication, and
+multiplication. It is both unital and commutative.
+\end{exam}
+
+\begin{exam} If $X$ is a locally compact Hausdorff space which is not compact, then (under
+pointwise operations) the family $\fml C_0(X)$ of all continuous complex valued functions
+on $X$ which vanish at infinity is a commutative algebra.
+However, it is \emph{not} a
+ \index{C@$\fml C_0(X)$!as a nonunital algebra}%
+unital algebra.
+\end{exam}
+
+\begin{exam}\label{000533} The family
+ \index{Ma@$\mathbf M_n = \M n\C$!$n \times n$ matrices of complex numbers}%
+$\mathbf M_n$ of $n \times n$ matrices of complex numbers is a
+ \index{Ma@$\mathbf M_n = \M n\C$!as a unital algebra}%
+unital algebra under the usual matrix operations of addition, scalar multiplication, and
+multiplication. It is not commutative when $n > 1$.
+\end{exam}
+
+\begin{exam}\label{000533a} Let $A$ be an algebra. Make the family
+ \index{Ma@$\M nA$!$n \times n$ matrices of elements of an algebra}%
+$\M n{A}$ of $n \times n$ matrices of elements of $A$ into an
+ \index{Ma@$\M nA$!as an algebra}%
+algebra by using the same rules for matrix operations that are used for~$\mathbf M_n$.
+Thus $\mathbf M_n$ is just $\M n\C$. The algebra $\M nA$ is unital if and only if $A$~is.
+\end{exam}
+
+\begin{exam}\label{000534} If $V$ is a normed linear space, then
+ \index{B@$\ofml B(V)$!as a unital algebra}%
+$\ofml B(V)$ is a unital algebra.  If $\dim V~>~1$, the algebra is not commutative.
+\end{exam}
+
+\begin{defn}\label{000535} Let $a$ be an element of a unital algebra~$A$.  The
+ \index{spectrum}%
+\df{spectrum} of $a$, denoted by
+ \index{sigma@$\sigma_A(a)$ or $\sigma(a)$ (spectrum of~$a$)}%
+$\sigma_A(a)$ or just $\sigma(a)$, is the set of all complex numbers $\lambda$ such that
+$a - \lambda\vc 1$ is not invertible.
+\end{defn}
+
+\begin{exam} If $z$ is an element of the algebra $\C$ of complex numbers, then
+ \index{spectrum!of a complex number}%
+$\sigma(z) = \{z\}$.
+\end{exam}
+
+\begin{exam}\label{0005712} Let $X$ be a compact Hausdorff space.  If $f$ is an element
+ \index{spectrum!of a continuous function}%
+of the algebra $\fml C(X)$ of continuous complex valued functions on $X$, then the
+spectrum of $f$ is its range.
+\end{exam}
+
+\begin{exam} Let $X$ be an arbitrary topological space.  If $f$ is an element of the
+ \index{spectrum!of a bounded continuous function}%
+algebra $\fml C_b(X)$ of bounded continuous complex valued functions on $X$, then the
+spectrum of $f$ is the closure of its range.
+\end{exam}
+
+\begin{exam} Let $S$ be a positive measure space and $f \in \lfs{\infty}{S}$ be an
+(equivalence class of) essentially bounded function(s) on~$S$. Then the
+ \index{spectrum!of an essentially bounded function}%
+spectrum of $f$ is its essential range.
+\end{exam}
+
+\begin{exam} The family $\mathbf M_3$ of $3 \times 3$ matrices of complex numbers is a unital
+algebra under the usual matrix operations. The spectrum of the matrix $\begin{bmatrix} 5
+& -6 & -6 \\ -1 & 4 & 2 \\ 3 & -6 & -4 \end{bmatrix}$ is $\{1,2\}$.
+\end{exam}
+
+\begin{prop} Let $a$ be an element of a unital algebra such that $a^2 = \vc 1$.
+ \index{spectrum!of an element whose square is $1$}%
+Then either
+ \begin{enumerate}[label=\rm{(\alph*)}]
+  \item $a = \vc 1$, in which case $\sigma(a) = \{1\}$, or
+  \item $a = -\vc 1$, in which case $\sigma(a) = \{-1\}$, or
+  \item $\sigma(a) = \{-1,1\}$.
+ \end{enumerate}
+\end{prop}
+
+\begin{proof}[\emph{Hint for proof}]  In (c) to prove $\sigma(a) \subseteq \{-1,1\}$,
+consider $\D\frac1{1 - \lambda^2}(a + \lambda \mathbf 1).$  \ns
+\end{proof}
+
+\begin{prop} Recall that an element $a$ of an algebra is
+ \index{idempotent}%
+ \index{spectrum!of an idempotent element}%
+\df{idempotent} if $a^2 = a$. Let $a$ be an idempotent element of a unital algebra. Then
+either
+ \begin{enumerate}[label=\rm{(\alph*)}]
+  \item $a = \vc 1$, in which case $\sigma(a) = \{1\}$, or
+  \item $a = \vc 0$, in which case $\sigma(a) = \{0\}$, or
+  \item $\sigma(a) = \{0,1\}$.
+ \end{enumerate}
+\end{prop}
+
+\begin{proof}[\emph{Hint for proof}] In (c) to prove $\sigma(a) \subseteq \{0,1\}$,
+consider $\D \frac1{\lambda - \lambda^2}\bigl(a + (\lambda - 1)\vc 1\bigr).$ \ns
+\end{proof}
+
+\begin{prop} Let $a$ be an invertible element of a unital algebra. Then a complex number
+$\lambda$ belongs to the spectrum of $a$ if and only if $1/\lambda$ belongs to the
+spectrum of~$a^{-1}$.
+\end{prop}
+
+The next proposition is a simple corollary of proposition~\ref{000526}.
+
+\begin{prop}\label{000575} If $a$ and $b$ are elements of a unital algebra, then,
+except possibly for $0$, the spectra of $ab$ and $ba$ are the same.
+\end{prop}
+
+\begin{defn}\label{C035854} A map $f \colon A \sto B$ between Banach algebras is a
+ \index{Banach!algebra!homomorphism}%
+ \index{homomorphism!of Banach algebras}%
+\df{(Banach algebra) homomorphism} if it is both an algebraic homomorphism and a
+continuous map between $A$ and $B$.  We denote
+ \index{BALG@$\cat{BALG}$!the category}%
+ \index{category!$\cat{BALG}$ as a}%
+by $\cat{BALG}$ the category of Banach algebras and continuous algebra homomorphisms.
+\end{defn}
+
+\begin{prop} Let $A$ and $B$ be Banach algebras.  The
+ \index{direct!sum!of Banach algebras}%
+ \index{Banach!algebra!direct sum}%
+\df{direct sum} of $A$ and $B$, denoted by $A \oplus B$, is defined to be the set $A
+\times B$ equipped with pointwise operations:
+   \begin{enumerate}[label=\rm{(\alph*)}]
+     \item $(a,b) + (a',b') = (a + a',b + b')$;
+     \item $(a,b)\,(a',b') = (aa',bb')$;
+     \item $\alpha(a,b) = (\alpha a,\alpha b)$
+   \end{enumerate}
+for $a$,$a' \in A$, $b$, $b' \in B$, and $\alpha \in \C$. As in~\ref{C023414} define
+$\norm{(a,b)} = \norm a + \norm b$.  This makes $A \oplus B$ into a Banach algebra.
+\end{prop}
+
+\begin{exer} Identify products and coproducts (if they exist) in the category $\cat{BALG}$
+of Banach algebras
+ \index{product!in $\cat{BALG}$}%
+ \index{Banach!algebra!product}%
+ \index{Banach!algebra!coproduct}%
+ \index{coproduct!in $\cat{BALG}$}%
+ \index{BALG@$\cat{BALG}$!products and coproducts in}%
+and continuous algebra homomorphisms and in the category of Banach algebras and
+contractive algebra homomorphisms. (Here
+ \index{contractive}%
+\emph{contractive} means $\norm{Tx} \le \norm x$ for all~$x$.)
+\end{exer}
+
+\begin{prop} In a Banach algebra $A$ the operations of addition and multiplication (regarded as
+maps from $A \oplus A$ to $A$) are continuous and scalar multiplication (regarded as a map from
+$\K \oplus A$ to $A$) is also continuous.
+\end{prop}
+
+\begin{prop}[The Neumann series]\label{prop_Neumann_series} Let $a$ be an element of a unital Banach algebra.
+ \index{Neumann series}%
+ \index{series!Neumann}%
+If $\norm a < 1$, then
+$\vc 1 - a \in \inv A$ and $(\vc 1 - a)^{-1} = \sum_{k=0}^\infty a^k$.
+\end{prop}
+
+\begin{proof}[\emph{Hint for proof}]  Show that the sequence $(\vc 1, a, a^2, \dots)$ is
+summable.  (In a unital algebra we take $a^0$ to mean~$\vc 1$.)  \ns
+\end{proof}
+
+\begin{cor}\label{cor_Neumann_series} If $a$ is an element of a unital Banach algebra with $\norm{\vc 1 - a} < 1$, then $a$ is invertible and
+    \[ \norm{a^{-1}} \le \frac{1}{1 - \norm{\vc 1 - a}}\,.  \]
+\end{cor}
+
+\begin{cor}\label{cor2_Neumann_series} Suppose that $a$ is an invertible element of a unital Banach algebra $A$, that $b \in A$,
+and that $\norm{a - b} < \norm{a^{-1}}^{-1}$.  Then $b$ is invertible in~$A$.
+\end{cor}
+
+\begin{proof}[\emph{Hint for proof}] Use the preceding corollary to show that $a^{-1}b$ is invertible.
+\ns \end{proof}
+
+\begin{cor} If $a$ belongs to a unital Banach algebra and $\norm a < 1$, then
+   \[ \norm{(\vc 1 - a)^{-1} - \vc 1} \le \frac{\norm a}{1 - \norm a}\,. \]
+\end{cor}
+
+\begin{prop}\label{000644fa} If $A$ is a unital Banach algebra, then $\open{\inv A}A$.
+\end{prop}
+
+\begin{proof}[\emph{Hint for proof}] Let $a \in \inv A$.  Show, for sufficiently small $h$,
+that $\vc 1 - a^{-1}h$ is invertible.  \ns
+\end{proof}
+
+\begin{prop}\label{000646fa} Let $A$ be a unital Banach algebra.  The map $a \mapsto a^{-1}$ from $\inv A$ into
+itself is a homeomorphism.
+\end{prop}
+
+\begin{prop} Let $A$ be a unital Banach algebra.  The map $r\colon a \mapsto a^{-1}$ from
+$\inv A$ into itself is differentiable and at each invertible element $a$, we have
+$dr_a(h) = -a^{-1}ha^{-1}$ for all $h \in A$.
+\end{prop}
+
+\begin{proof}[\emph{Hint for proof}] For a quick introduction to differentiation on infinite dimensional
+spaces, see Chapter 13 of my notes~\cite{Erdman:2007} on Real Analysis.  \ns
+\end{proof}
+
+\begin{prop}\label{000661} Let $a$ be an element of a unital Banach algebra~$A$.  Then the spectrum of $a$
+is compact and $\abs\lambda \le \norm a$ for every $\lambda \in \sigma(a)$.
+\end{prop}
+
+\begin{proof}[\emph{Hint for proof}] Use the \emph{Heine-Borel theorem}.  To prove that the
+spectrum is closed notice that $(\sigma(a))^c = f^\gets(\inv A)$ where $f(\lambda) = a -
+\lambda\mathbf 1$ for every complex number~$\lambda$. Also show that if $\abs\lambda >
+\norm a$, then $\mathbf 1 - \lambda^{-1}a$ is invertible.  \ns
+\end{proof}
+
+\begin{defn}  Let $a$ be an element of a unital Banach algebra.  The
+ \index{resolvent!mapping}%
+\df{resolvent mapping} for $a$ is defined by
+   \[ R_a \colon \C \setminus \sigma(a) \sto A
+                 \colon \lambda \mapsto (a  - \lambda\vc 1)^{-1}\,. \]
+\end{defn}
+
+\begin{defn} Let $\open U\C$ and $A$ be a unital Banach algebra. A function $f \colon U \sto A$
+ \index{analytic}%
+is \df{analytic} on $U$ if
+   \[ f'(a) := \lim_{z \sto a} \frac{f(z) - f(a)}{z - a} \]
+exists for every $a \in U$.  A complex valued function which is analytic on all of $\C$
+is an
+ \index{entire}
+\df{entire} function.
+\end{defn}
+
+\begin{prop} For $a$ an element of a unital Banach algebra $A$ and $\phi$ a bounded linear
+functional on~$A$ let $f := \phi \circ R_a \colon \C \setminus \sigma(a) \sto \C$.  Then
+ \begin{enumerate}[label=\rm{(\alph*)}]
+  \item $f$ is analytic on its domain, and
+  \item $f(\lambda) \sto 0$ as $\abs\lambda \sto \infty$.
+ \end{enumerate}
+\end{prop}
+
+\begin{proof}[\emph{Hint for proof}] For (i) notice that in a unital algebra $a^{-1} - b^{-1}
+= a^{-1}(b - a)b^{-1}$.   \ns
+\end{proof}
+
+\begin{thm}[Liouville]\label{C073131} Every bounded entire function on $\C$ is constant.
+ \index{Liouville's theorem}%
+\end{thm}
+
+\begin{proof}[\emph{Comment on proof}] The proof of this theorem requires a little background
+in the theory of analytic functions, material that is not covered in these notes.  The
+theorem would surely be covered in any first course in complex variables.  For example, you can find a
+nice proof in \cite{Rudin:1987}, theorem 10.23.   \ns
+\end{proof}
+
+\begin{prop}\label{C073134} The spectrum of every element of a unital Banach algebra is nonempty.
+\end{prop}
+
+\begin{proof}[\emph{Hint for proof}] Argue by contradiction.  Use \emph{Liouville's theorem}~\ref{C073131}
+to show that $\phi \circ R_a$ is constant for every bounded linear functional $\phi$ on~$A$. Then use
+(a version of) the \emph{Hahn-Banach theorem} to prove that $R_a$ is constant.  Why must this constant be~$0$?   \ns
+\end{proof}
+
+\noindent\emph{Note.} It is important to keep in mind that we are working only with
+\emph{complex} algebras.  This result is \emph{false} for real Banach algebras.  An easy
+counterexample is the matrix $\begin{bmatrix}0 & 1 \\ -1 & 0 \end{bmatrix}$ regarded as
+an element of the (real) Banach algebra $M_2$ of all $2 \times 2$ matrices of real
+numbers.
+
+ \vskip 1 pt
+
+\begin{thm}[Gelfand-Mazur]\label{C073141} If $A$ is a unital Banach algebra in which every
+ \index{Gelfand-Mazur theorem}%
+nonzero element is invertible, then $A$ is isometrically isomorphic to~$\C$.
+\end{thm}
+
+\begin{proof}[\emph{Hint for proof}] Let $B = \{ \lambda\vc 1\colon \lambda \in \C\}$. Use
+the preceding proposition~\ref{C073134}) to show that $B = A$.    \ns
+\end{proof}
+
+The following is an immediate consequence of the \emph{Gelfand-Mazur theorem}
+\ref{C073141} and proposition~\ref{C037821}.
+
+\begin{cor}\label{C073147} If $I$ is a maximal ideal in a commutative unital Banach algebra $A$,
+then $A/I$ is isometrically isomorphic to~$\C$.
+\end{cor}
+
+\begin{prop}\label{0006703fa} Let $a$ be an element of a unital algebra.  Then
+   \[ \sigma(a^n) = [\sigma(a)]^n \]
+for every $n \in \N$.  (The notation $[\sigma(a)]^n$ means $\{\lambda^n\colon \lambda \in
+\sigma(a)\}$.)
+\end{prop}
+
+\begin{defn}\label{C073154}  Let $a$ be an element of a unital algebra.  The
+ \index{spectral!radius}%
+ \index{radius!spectral}%
+\df{spectral radius} of~$a$, denoted by $\rho(a)$, is defined to be
+$\sup\{\abs\lambda\colon \lambda \in \sigma(a)\}$.
+\end{defn}
+
+\begin{prop}\label{0006703} If $a$ is an element of a unital Banach algebra, then $\rho(a) \le
+\norm a$ and $\rho(a^n) = \bigr(\rho(a)\bigr)^n$.
+\end{prop}
+
+\begin{prop} Let $\phi\colon A \sto B$ be a unital homomorphism between unital algebras. If $a$ is an invertible element of $A$,
+then $\phi(a)$ is invertible in $B$ and its inverse is~$\phi(a^{-1})$.
+\end{prop}
+
+\begin{cor} If $\phi\colon A \sto B$ is a unital homomorphism between unital algebras, then
+   \[ \sigma(\phi(a)) \subseteq \sigma(a) \]
+for every $a \in A$.
+\end{cor}
+
+\begin{cor} If  $\phi\colon A \sto B$ is a unital homomorphism between unital algebras, then
+   \[ \rho(\phi(a)) \le \rho(a) \]
+for every $a \in A$.
+\end{cor}
+
+\begin{thm}[Spectral radius formula]\label{C073157} If $a$ is an element of a unital Banach
+ \index{spectral!radius!formula for}%
+algebra, then
+   \[ \rho(a) = \inf\bigl\{\norm{a^n}^{1/n}\colon n \in \N\bigr\}
+                                = \lim_{n \sto \infty} \norm{a^n}^{1/n}\,. \]
+\end{thm}
+
+\begin{exer} The Volterra operator $V$ (defined in example~\ref{000319}) is an
+ \index{Volterra operator!and integral equations}%
+ \index{operator!Volterra!and integral equations}%
+integral operator on the Banach space~$\fml C([0,1])$.
+ \begin{enumerate}
+  \item[(a)] Compute the spectrum of the operator $V$.  (\emph{Hint.} Show that $\norm{V^n}
+\le (n!)^{-1}$ for every $n \in \N$ and use the \emph{spectral radius formula}.)
+  \item[(b)] What does (a) say about the possibility of finding a continuous function $f$ which
+satisfies the integral equation
+   \[ f(x) - \mu\int_0^xf(t)\,dt = h(x), \]
+where $\mu$ is a scalar and $h$ is a given continuous function on~$[0,1]$?
+  \item[(c)] Use the idea in (b) and the Neumann series expansion for $\vc 1 - \mu V$ (see
+proposition~\ref{prop_Neumann_series}) to calculate explicitly (and in terms of elementary functions)
+a solution to the integral equation
+ \[f(x) - {\textstyle \frac12}\int_0^xf(t)\,dt = e^x.\]
+ \end{enumerate}
+\end{exer}
+
+\begin{prop} Let $A$ be a unital Banach algebra and $B$ a closed subalgebra containing~$\vc 1_A$.
+Then
+ \begin{enumerate}[label=\rm{(\alph*)}]
+   \item $\inv B$ is both open and closed in $B \cap \inv A$;
+   \item $\sigma_A(b) \subseteq \sigma_B(b)$ for every $b \in B$; and
+   \item if $b \in B$ and $\sigma_A(b)$ has no holes (that is, if its complement in $\C$ is
+connected), then $\sigma_A(b) =    \sigma_B(b)$.
+ \end{enumerate}
+\end{prop}
+
+\begin{proof}[\emph{Hint for proof}] Consider the function
+$f_b\colon (\sigma_A(b))^c \sto B \cap \inv A\colon \lambda \mapsto b - \lambda \vc 1$.   \ns
+\end{proof}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Spectra of Hilbert Space Operators}
+\begin{prop} For a self-adjoint operator $T$ on a Hilbert space the following are
+equivalent:
+ \begin{enumerate}
+    \item[(i)] $\sigma(T) \subseteq [0,\infty)$;
+    \item[(ii)] there exists an operator $S$ on $H$ such that $T = S^*S$; and
+    \item[(iii)] $T$ is positive.
+ \end{enumerate}
+\end{prop}
+
+\begin{notn} If $A$ is a set of the complex numbers we
+ \index{<unopurstar@$A^*$ (set of complex conjugates of $A \subseteq \C$)}%
+define $A^* := \{\conj\lambda \colon \lambda \in A\}$.  We do this to avoid confusion with the closure of the set~$A$.
+\end{notn}
+
+\begin{prop} If $T$ is a Banach space operator then $\sigma(T^*) = \sigma(T)$, while if it is a Hilbert space
+operator then $\sigma(T^*) = (\sigma(T))^*$.
+\end{prop}
+
+In a finite dimensional space there is only one way that a complex number $\lambda$ can end up in the spectrum of an operator~$T$.
+The reason for this is that there is only one way an operator, in this case $T - \lambda I$, on a finite dimensional space can fail
+to be invertible (see the paragraph before definition~\ref{defn_similar_vs_ops}).  On the other hand there are several ways for $\lambda$
+to get into the spectrum of an operator on an infinite dimensional space---because an operator has several ways in which it may fail
+to be invertible. (See, for example, proposition~\ref{prop_nasc_op_invert}.) Historically this has led to a number of proposed
+taxonomies of the spectrum of an operator.
+
+\begin{defn} Let $T$ be an operator on a Hilbert (or Banach) space~$H$. A complex number $\lambda$ belongs to the
+ \index{resolvent!set}%
+\df{resolvent set} of $T$ if $T - \lambda I$ is invertible. The resolvent set is the complement of the \emph{spectrum}
+of $T$. The set of complex numbers $\lambda$ for which $T - \lambda I$ fails to be injective is the
+ \index{point spectrum}%
+ \index{spectrum!point}%
+\df{point spectrum} of $T$ and is denoted
+ \index{sigma@$\sigma_p(T)$ (point spectrum of~$T$)}%
+by $\sigma_p(T)$. Members of the point spectrum of $T$ are
+ \index{eigenvalue}%
+\df{eigenvalues} of $T$. The set of complex numbers $\lambda$ for which $T - \lambda I$ is not bounded away from zero is the
+ \index{approximate point spectrum}%
+ \index{spectrum!approximate point}%
+\df{approximate point spectrum} of $T$ and is denoted
+ \index{sigma@$\sigma_{ap}(T)$ (approximate point spectrum of~$T$)}%
+by $\sigma_{ap}(T)$. The set of all complex numbers $\lambda$ such that the closure of the range of $T - \lambda I$ is a proper
+subspace of $H$ is the
+ \index{compression spectrum}%
+ \index{spectrum!compression}%
+\df{compression spectrum} of $T$ and is denoted
+ \index{sigma@$\sigma_c(T)$ (compression spectrum of~$T$)}%
+by $\sigma_c(T)$.  The
+ \index{residual spectrum}%
+ \index{spectrum!residual}%
+\df{residual spectrum} of $T$, which we denote
+ \index{sigma@$\sigma_r(T)$ (residual spectrum of~$T$)}%
+by $\sigma_r(T)$, is $\sigma_c(T) \setminus \sigma_p(T)$.
+\end{defn}
+
+\begin{prop} If $T$ is a Hilbert space operator, then $\sigma_p(T) \subseteq \sigma_{ap}(T) \subseteq \sigma(T)$.
+\end{prop}
+
+\begin{prop} If $T$ is a Hilbert space operator, then $\sigma(T) = \sigma_{ap}(T) \cup \sigma_c(T)$.
+\end{prop}
+
+\begin{prop} If $T$ is a Hilbert space operator, then $\sigma_p(T^*) = (\sigma_c(T))^*$.
+\end{prop}
+
+\begin{cor} If $T$ is a Hilbert space operator, then $\sigma(T) = \sigma_{ap}(T) \cup (\sigma_{ap}(T^*))^*$.
+\end{cor}
+
+\begin{thm}{Spectral Mapping Theorem}\label{SMThm} If $T$ is a Hilbert space operator and $p$ is a polynomial, then
+   \[ \sigma(p(T)) = p(\sigma(T)). \]
+\end{thm}
+
+The preceding theorem is true more generally for any analytic function defined in a neighborhood of the spectrum of~$T$.
+(For a proof see~\cite{Conway:1990}, chapter VII, theorem 4.10.)  The result also holds for parts of the spectrum.
+
+\begin{prop} If $T$ is a Hilbert space operator and $p$ is a polynomial, then
+   \begin{enumerate}[label=\rm{(\alph*)}]
+     \item $\sigma_p(p(T)) = p(\sigma_p(T))$,
+     \item $\sigma_{ap}(p(T)) = p(\sigma_{ap}(T))$, and
+     \item $\sigma_c(p(T)) = p(\sigma_c(T))$,
+   \end{enumerate}
+\end{prop}
+
+\begin{prop}
+    If $T$ is an invertible operator on a Hilbert space, then  $\sigma(T^{-1}) = (\sigma(T))^{-1}$.
+\end{prop}
+
+\begin{defn}\label{defn_similar_Hsp_ops} As with vector spaces, two operators $R$ and $T$ on a Hilbert (or Banach) space $H$ are
+ \index{similar!operators}%
+\df{similar} if there exists an invertible operator $S$ on $H$ such that $R = STS^{-1}$.
+\end{defn}
+
+\begin{prop} If $S$ and $T$ are similar operators on a Hilbert space, then $\sigma(S) = \sigma(T)$, $\sigma_p(S) = \sigma_p(T)$,
+$\sigma_{ap}(S) = \sigma_{ap}(T)$, and $\sigma_c(S) = \sigma_c(T)$.
+\end{prop}
+
+\begin{prop} If $T$ is a normal operator on a Hilbert space, then $\sigma_c(T) = \sigma_p(T)$, so that $\sigma_r(T)~=~\emptyset$.
+\end{prop}
+
+\begin{prop} If $T$ is an operator on a Hilbert space, then $\sigma_{ap}(T)$ is closed.
+\end{prop}
+
+\begin{exam} Let $D = \diag(a_1,a_2,a_3,\dots)$ be a diagonal operator on a Hilbert space and let
+ \index{spectral!parts!of a diagonal operator}%
+ \index{operator!diagonal!spectral parts of}%
+ \index{diagonal!operator!spectral parts of}%
+$A = \cup_{k=1}^\infty a_k$. Then
+   \begin{enumerate}[label=(\alph*)]
+     \item $\sigma_p(D) = \sigma_c(D) = A$,
+     \item $\sigma_{ap}(D) = \clo A$, and
+     \item $\sigma_r(D) = \emptyset$.
+   \end{enumerate}
+\end{exam}
+
+\begin{exam} Let $S$ be the unilateral shift operator on $l_2$
+ \index{spectral!parts!of the unilateral shift}%
+ \index{operator!unilateral shift!spectral parts of}%
+ \index{unilateral shift!spectral parts of}%
+(see example~\ref{C063526}). Then
+    \begin{enumerate}[label=(\alph*)]
+      \item $\sigma(S) = D$,
+      \item $\sigma_p(S) = \emptyset$,
+      \item $\sigma_{ap}(S) = C$,
+      \item $\sigma_c(S) = B$,
+      \item $\sigma(S^*) = D$,
+      \item $\sigma_p(S^*) = B$,
+      \item $\sigma_{ap}(S^*) = D$, and
+      \item $\sigma_c(S^*) = \emptyset$.
+    \end{enumerate}
+where $B$ is the open unit disk, $D$ is the closed unit disk, and $C$ is the unit circle in the complex plane.
+\end{exam}
+
+\begin{exam} Let $(S,\sfml A, \mu)$ be a $\sigma$-finite positive measure space, $\phi \in L_\infty(S,\mu)$, and $M_\phi$ be the
+ \index{spectral!parts!of a multiplication operator}%
+ \index{operator!multiplication!spectral parts of}%
+ \index{multiplication operator!spectral parts of}%
+corresponding multiplication operator on the Hilbert space $\lfs2{S,\mu}$ (see example~\ref{C063527}). Then
+the spectrum and the approximate point spectrum of $M_\phi$ are the essential range of~$\phi$, while the point spectrum
+and compression spectrum of $M_\phi$ are $\{\lambda \in \C\colon \mu(\phi^{\gets}(\{\lambda\})) > 0\}$.
+\end{exam}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\endinput
+
+
+
+
+
+
+
+

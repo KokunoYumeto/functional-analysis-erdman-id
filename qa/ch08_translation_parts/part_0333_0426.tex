@@ -1,0 +1,94 @@
+
+\noindent\emph{Catatan.} Penting untuk diingat bahwa kita hanya bekerja dengan aljabar
+\emph{kompleks}. Hasil ini \emph{salah} untuk aljabar Banach real. Contoh
+tandingan sederhana adalah matriks $\begin{bmatrix}0 & 1 \\ -1 & 0 \end{bmatrix}$ yang dipandang sebagai
+elemen aljabar Banach (real) $M_2$ yang terdiri atas semua matriks $2 \times 2$ dengan entri
+bilangan real.
+
+ \vskip 1 pt
+
+\begin{thm}[Gelfand-Mazur]\label{C073141} Jika $A$ aljabar Banach beridentitas yang setiap
+ \index{teorema Gelfand-Mazur}%
+elemen taknolnya invertibel, maka $A$ isomorfik secara isometrik dengan~$\C$.
+\end{thm}
+
+\begin{proof}[\emph{Petunjuk untuk bukti}] Misalkan $B = \{ \lambda\vc 1\colon \lambda \in \C\}$. Gunakan
+proposisi sebelumnya~\ref{C073134} untuk menunjukkan bahwa $B = A$.    \ns
+\end{proof}
+
+Pernyataan berikut merupakan konsekuensi langsung dari \emph{teorema Gelfand-Mazur}
+\ref{C073141} dan proposisi~\ref{C037821}.
+
+\begin{cor}\label{C073147} Jika $I$ ideal maksimal dalam aljabar Banach komutatif beridentitas $A$,
+maka $A/I$ isomorfik secara isometrik dengan~$\C$.
+\end{cor}
+
+\begin{prop}\label{0006703fa} Misalkan $a$ suatu elemen dari aljabar beridentitas. Maka
+   \[ \sigma(a^n) = [\sigma(a)]^n \]
+untuk setiap $n \in \N$. (Notasi $[\sigma(a)]^n$ berarti $\{\lambda^n\colon \lambda \in
+\sigma(a)\}$.)
+\end{prop}
+
+\begin{defn}\label{C073154} Misalkan $a$ suatu elemen dari aljabar beridentitas.
+ \index{spektral!radius}%
+ \index{radius!spektral}%
+\df{radius spektral} dari~$a$, yang dinotasikan dengan $\rho(a)$, didefinisikan sebagai
+$\sup\{\abs\lambda\colon \lambda \in \sigma(a)\}$.
+\end{defn}
+
+\begin{prop}\label{0006703} Jika $a$ suatu elemen dari aljabar Banach beridentitas, maka $\rho(a) \le
+\norm a$ dan $\rho(a^n) = \bigl(\rho(a)\bigr)^n$.
+\end{prop}
+
+\begin{prop} Misalkan $\phi\colon A \sto B$ homomorfisme yang mempertahankan identitas di antara aljabar-aljabar beridentitas. Jika $a$ elemen invertibel dari $A$,
+maka $\phi(a)$ invertibel dalam $B$ dan inversnya adalah~$\phi(a^{-1})$.
+\end{prop}
+
+\begin{cor} Jika $\phi\colon A \sto B$ homomorfisme yang mempertahankan identitas di antara aljabar-aljabar beridentitas, maka
+   \[ \sigma(\phi(a)) \subseteq \sigma(a) \]
+untuk setiap $a \in A$.
+\end{cor}
+
+\begin{cor} Jika $\phi\colon A \sto B$ homomorfisme yang mempertahankan identitas di antara aljabar-aljabar beridentitas, maka
+   \[ \rho(\phi(a)) \le \rho(a) \]
+untuk setiap $a \in A$.
+\end{cor}
+
+\begin{thm}[Rumus radius spektral]\label{C073157} Jika $a$ suatu elemen dari aljabar Banach
+ \index{spektral!radius!rumus untuk}%
+beridentitas, maka
+   \[ \rho(a) = \inf\bigl\{\norm{a^n}^{1/n}\colon n \in \N\bigr\}
+                                = \lim_{n \sto \infty} \norm{a^n}^{1/n}\,. \]
+\end{thm}
+
+\begin{exer} Dengan menggunakan rumus untuk operator Volterra $V$ dalam contoh~\ref{000319} sebagai
+ \index{operator Volterra!dan persamaan integral}%
+ \index{operator!Volterra!dan persamaan integral}%
+acuan, pada ruang Banach~$\fml C([0,1])$ definisikan operator integral melalui rumus $Vf(x)=\int_0^x f(t)\,dt$.
+ \begin{enumerate}
+  \item[(a)] Hitung spektrum operator $V$. (\emph{Petunjuk.} Tunjukkan bahwa $\norm{V^n}
+\le (n!)^{-1}$ untuk setiap $n \in \N$ dan gunakan \emph{rumus radius spektral}.)
+  \item[(b)] Apa implikasi (a) terhadap kemungkinan memperoleh fungsi kontinu $f$ yang
+memenuhi persamaan integral
+   \[ f(x) - \mu\int_0^xf(t)\,dt = h(x), \]
+dengan $\mu$ suatu skalar dan $h$ suatu fungsi kontinu yang diberikan pada~$[0,1]$?
+  \item[(c)] Gunakan gagasan dalam (b) dan uraian deret Neumann untuk $\vc 1 - \mu V$ (lihat
+proposisi~\ref{prop_Neumann_series}) untuk menghitung secara eksplisit (dan dalam bentuk fungsi elementer)
+suatu solusi untuk persamaan integral
+ \[f(x) - {\textstyle \frac12}\int_0^xf(t)\,dt = e^x.\]
+ \end{enumerate}
+\end{exer}
+
+\begin{prop} Misalkan $A$ aljabar Banach beridentitas dan $B$ subaljabar tertutup yang memuat~$\vc 1_A$.
+Maka
+ \begin{enumerate}[label=\rm{(\alph*)}]
+   \item $\inv B$ terbuka sekaligus tertutup dalam $B \cap \inv A$;
+   \item $\sigma_A(b) \subseteq \sigma_B(b)$ untuk setiap $b \in B$; dan
+   \item jika $b \in B$ dan $\sigma_A(b)$ tidak memiliki lubang (yakni, jika komplemennya dalam $\C$
+terhubung), maka $\sigma_A(b) =    \sigma_B(b)$.
+ \end{enumerate}
+\end{prop}
+
+\begin{proof}[\emph{Petunjuk untuk bukti}] Tinjau fungsi
+$f_b\colon (\sigma_A(b))^c \sto B \cap \inv A\colon \lambda \mapsto b - \lambda \vc 1$.   \ns
+\end{proof}

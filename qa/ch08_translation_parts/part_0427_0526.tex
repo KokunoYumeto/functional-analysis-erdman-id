@@ -1,0 +1,100 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Spektrum Operator Ruang Hilbert}
+\begin{prop} Misalkan $H$ ruang Hilbert dan $T \in \ofml B(H)$ suatu operator swaadjoin. Pernyataan berikut
+ekuivalen:
+ \begin{enumerate}
+    \item[(i)] $\sigma(T) \subseteq [0,\infty)$;
+    \item[(ii)] terdapat operator $S$ pada $H$ sedemikian sehingga $T = S^*S$; dan
+    \item[(iii)] $T$ positif.
+ \end{enumerate}
+\end{prop}
+
+\begin{notn} Jika $A$ adalah himpunan bilangan kompleks, kita
+ \index{<unopurstar@$A^*$ (himpunan konjugat kompleks dari $A \subseteq \C$)}%
+mendefinisikan $A^* := \{\conj\lambda \colon \lambda \in A\}$. Hal ini dilakukan untuk menghindari kerancuan dengan tutupan himpunan~$A$.
+\end{notn}
+
+\begin{prop} Jika $T$ suatu operator ruang Banach, maka $\sigma(T^*) = \sigma(T)$, sedangkan jika operator tersebut merupakan operator ruang Hilbert,
+maka $\sigma(T^*) = (\sigma(T))^*$.
+\end{prop}
+
+Dalam ruang berdimensi hingga, hanya ada satu cara bagi suatu bilangan kompleks $\lambda$ untuk menjadi anggota spektrum suatu operator~$T$.
+Alasannya adalah bahwa hanya ada satu cara suatu operator, dalam hal ini $T - \lambda I$, pada ruang berdimensi hingga dapat gagal
+menjadi invertibel (lihat paragraf sebelum definisi~\ref{defn_similar_vs_ops}). Di sisi lain, ada beberapa cara bagi $\lambda$
+untuk menjadi anggota spektrum suatu operator pada ruang berdimensi tak hingga---karena ada beberapa cara suatu operator dapat gagal
+menjadi invertibel. (Lihat, misalnya, proposisi~\ref{prop_nasc_op_invert}.) Secara historis, hal ini telah melahirkan sejumlah usulan
+taksonomi spektrum suatu operator.
+
+\begin{defn} Misalkan $T$ suatu operator pada ruang Hilbert (atau Banach)~$H$. Suatu bilangan kompleks $\lambda$ termasuk dalam
+ \index{resolven!himpunan}%
+\df{himpunan resolven} dari $T$ jika $T - \lambda I$ invertibel. Himpunan resolven adalah komplemen dari \emph{spektrum}
+$T$. Himpunan bilangan kompleks $\lambda$ yang membuat $T - \lambda I$ tidak injektif disebut
+ \index{spektrum titik}%
+ \index{spektrum!titik}%
+\df{spektrum titik} dari $T$ dan dinotasikan
+ \index{sigma@$\sigma_p(T)$ (spektrum titik dari~$T$)}%
+dengan $\sigma_p(T)$. Anggota spektrum titik dari $T$ adalah
+ \index{nilai eigen}%
+\df{nilai eigen} dari $T$. Himpunan bilangan kompleks $\lambda$ yang membuat $T - \lambda I$ tidak terbatas jauh dari nol disebut
+ \index{spektrum titik aproksimatif}%
+ \index{spektrum!titik aproksimatif}%
+\df{spektrum titik aproksimatif} dari $T$ dan dinotasikan
+ \index{sigma@$\sigma_{ap}(T)$ (spektrum titik aproksimatif dari~$T$)}%
+dengan $\sigma_{ap}(T)$. Himpunan semua bilangan kompleks $\lambda$ sedemikian sehingga tutupan jangkauan $T - \lambda I$ merupakan subruang
+sejati dari $H$ disebut
+ \index{spektrum kompresi}%
+ \index{spektrum!kompresi}%
+\df{spektrum kompresi} dari $T$ dan dinotasikan
+ \index{sigma@$\sigma_c(T)$ (spektrum kompresi dari~$T$)}%
+dengan $\sigma_c(T)$. Adapun
+ \index{spektrum residual}%
+ \index{spektrum!residual}%
+\df{spektrum residual} dari $T$, yang kita notasikan
+ \index{sigma@$\sigma_r(T)$ (spektrum residual dari~$T$)}%
+dengan $\sigma_r(T)$, adalah $\sigma_c(T) \setminus \sigma_p(T)$.
+\end{defn}
+
+\begin{prop} Jika $T$ suatu operator ruang Hilbert, maka $\sigma_p(T) \subseteq \sigma_{ap}(T) \subseteq \sigma(T)$.
+\end{prop}
+
+\begin{prop} Jika $T$ suatu operator ruang Hilbert, maka $\sigma(T) = \sigma_{ap}(T) \cup \sigma_c(T)$.
+\end{prop}
+
+\begin{prop} Jika $T$ suatu operator ruang Hilbert, maka $\sigma_p(T^*) = (\sigma_c(T))^*$.
+\end{prop}
+
+\begin{cor} Jika $T$ suatu operator ruang Hilbert, maka $\sigma(T) = \sigma_{ap}(T) \cup (\sigma_{ap}(T^*))^*$.
+\end{cor}
+
+\begin{thm}[Teorema Pemetaan Spektral]\label{SMThm} Jika $T$ suatu operator ruang Hilbert dan $p$ suatu polinomial, maka
+   \[ \sigma(p(T)) = p(\sigma(T)). \]
+\end{thm}
+
+Teorema sebelumnya berlaku secara lebih umum untuk setiap fungsi analitik yang didefinisikan pada lingkungan spektrum~$T$.
+(Untuk pembuktiannya, lihat~\cite{Conway:1990}, bab VII, teorema 4.10.) Hasil tersebut juga berlaku untuk bagian-bagian spektrum.
+
+\begin{prop} Jika $T$ suatu operator ruang Hilbert dan $p$ suatu polinomial, maka
+   \begin{enumerate}[label=\rm{(\alph*)}]
+     \item $\sigma_p(p(T)) = p(\sigma_p(T))$,
+     \item $\sigma_{ap}(p(T)) = p(\sigma_{ap}(T))$, dan
+     \item $\sigma_c(p(T)) = p(\sigma_c(T))$,
+   \end{enumerate}
+\end{prop}
+
+\begin{prop}
+    Jika $T$ operator invertibel pada ruang Hilbert, maka $\sigma(T^{-1}) = (\sigma(T))^{-1}$.
+\end{prop}
