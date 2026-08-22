@@ -25,9 +25,12 @@ tetap tersedia sebagai artefak batas sebelumnya.
 Versi parsial `2026.08.22-ch08` dipertahankan secara mandiri di Zenodo dengan
 [DOI 10.5281/zenodo.22059740](https://doi.org/10.5281/zenodo.22059740). Catatan
 Zenodo tersebut secara eksplisit berstatus **edisi dalam pengerjaan, Bab 1--8
-dari 17 bab**, bukan buku lengkap. Mirror GitHub untuk proyek ini sementara
-tidak dapat diakses karena penangguhan akun; hal itu tidak mengubah status,
-lisensi, atau identitas byte rilis Zenodo.
+dari 17 bab**, bukan buku lengkap. Mirror GitHub ini telah dipulihkan dan
+diverifikasi kembali secara anonim. [Item Figshare
+v2](https://doi.org/10.6084/m9.figshare.33314709.v2) menyediakan tautan pembaca
+langsung ke PDF Zenodo; CC0 di Figshare hanya berlaku untuk metadata dan
+penunjuk tautan, sedangkan seluruh berkas substantif tetap berlisensi CC BY-SA
+4.0.
 
 ## Cakupan
 

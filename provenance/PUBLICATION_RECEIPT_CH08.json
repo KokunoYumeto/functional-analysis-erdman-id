@@ -1,0 +1,74 @@
+{
+  "schema": "interlanguage-publication-receipt",
+  "schema_version": "1.0.0",
+  "publication_id": "ERDMAN-FAOA-2015-ID-CH08-20260822",
+  "publication_state": "content_commit_verified_public",
+  "repository": "KokunoYumeto/functional-analysis-erdman-id",
+  "repository_url": "https://github.com/KokunoYumeto/functional-analysis-erdman-id",
+  "visibility": "public",
+  "default_branch": "main",
+  "content_commit_sha": "5b9b295c4472e515b4e10172c2105fc1eea21492",
+  "content_tree_sha": "6d75bebfa7c02255802fcbc8c57e15ac9d29e7b2",
+  "previous_public_main_sha": "e2790077f819d499cf20a7e902e770751cc1a5a6",
+  "push_result": "e2790077f819d499cf20a7e902e770751cc1a5a6..5b9b295c4472e515b4e10172c2105fc1eea21492 main -> main",
+  "anonymous_remote_head_sha": "5b9b295c4472e515b4e10172c2105fc1eea21492",
+  "anonymous_commit_api_sha": "5b9b295c4472e515b4e10172c2105fc1eea21492",
+  "anonymous_commit_api_tree_sha": "6d75bebfa7c02255802fcbc8c57e15ac9d29e7b2",
+  "anonymous_readback_files": [
+    {
+      "path": "README.md",
+      "bytes": 3895,
+      "sha256": "a6167a1b843a6bc001be1cf6b4093be74efec3897882e819fea52d3d110a3fc7"
+    },
+    {
+      "path": "output/pdf/analisis-fungsional-dan-aljabar-operator-id-bab-1-8.pdf",
+      "bytes": 1593249,
+      "sha256": "fb6488691e2127bc0b8e3f94f38033eb3bdbe0c61efedc66c07de8f3b3444fbd"
+    },
+    {
+      "path": "source/id-ID/spectrum-id.tex",
+      "bytes": 26947,
+      "sha256": "1120da36ebd0793690ecb47b33b921c81376d1bf7d2f03d9821b79356dfd03bc"
+    },
+    {
+      "path": "backend/BACKEND_MANIFEST.csv",
+      "bytes": 2548,
+      "sha256": "4a4850a62fa3b752115843664851283719e1bffa8ab11f58cf02e6060e4d07bb"
+    },
+    {
+      "path": "provenance/CH08_BUILD_AND_QA_RECEIPT.md",
+      "bytes": 9732,
+      "sha256": "fe74240d2ab6bb50fdc9ae3fb019c5dc77cee20250cfb5c46cd9a773b52cac83"
+    },
+    {
+      "path": "provenance/ZENODO_PUBLICATION_RECEIPT_CH08.json",
+      "bytes": 4505,
+      "sha256": "1ea9b7e5c11230666930c8f3ee2967c720ba27e1411d7eb420893d1973b003a8"
+    },
+    {
+      "path": "provenance/FIGSHARE_PUBLICATION_RECEIPT_CH08.json",
+      "bytes": 6055,
+      "sha256": "ae6815ae3164142c6e51b40a379c71934a3e29e819a152a4236b5bde9b6d7dba"
+    }
+  ],
+  "anonymous_readback_missing_files": 0,
+  "anonymous_readback_byte_mismatches": 0,
+  "unit_id": "FAOA-2015-CH08",
+  "source_sha256": "ae68cf224c6218ecd501cc983428cf924a3c361c6324a6b40793b1e9ba44b4dd",
+  "target_sha256": "1120da36ebd0793690ecb47b33b921c81376d1bf7d2f03d9821b79356dfd03bc",
+  "reader_pdf_sha256": "fb6488691e2127bc0b8e3f94f38033eb3bdbe0c61efedc66c07de8f3b3444fbd",
+  "admission_receipt_sha256": "fe74240d2ab6bb50fdc9ae3fb019c5dc77cee20250cfb5c46cd9a773b52cac83",
+  "render_manifest_sha256": "796f36332ef748a4b1a7d8f01b7d75c7ec9da5236640f059d31df14fa3ec3e71",
+  "backend_manifest_sha256": "4a4850a62fa3b752115843664851283719e1bffa8ab11f58cf02e6060e4d07bb",
+  "zenodo_version_doi": "10.5281/zenodo.22059740",
+  "figshare_version_doi_at_content_commit": "10.6084/m9.figshare.33314709.v1",
+  "figshare_reader_first_successor_doi": "10.6084/m9.figshare.33314709.v2",
+  "visual_result": "pass",
+  "fully_accessible_pdf_claim": "fail",
+  "accessible_html_or_tagged_pdf_state": "pending",
+  "whole_edition_state": "in_progress",
+  "next_unit_id": "FAOA-2015-CH09",
+  "published_at": "2026-08-22",
+  "responsible_workflow": "Codex at the user's direction",
+  "credential_material_recorded": false
+}
