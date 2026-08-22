@@ -1,0 +1,79 @@
+{
+  "schema_version": "o008.figshare-publication-receipt.v4",
+  "recorded_date": "2026-08-23",
+  "release_boundary": "FAOA-2015-CH01-through-CH10",
+  "edition_state": "in_progress_chapters_1_10_of_17",
+  "figshare_article": {
+    "article_id": 33314709,
+    "title": "Analisis Fungsional dan Aljabar Operator: Suatu Pengantar — Edisi Bahasa Indonesia (Bab 1–10 dari 17)",
+    "defined_type": "online resource",
+    "status": "public",
+    "version": 4,
+    "doi": "10.6084/m9.figshare.33314709.v4",
+    "doi_url": "https://doi.org/10.6084/m9.figshare.33314709.v4",
+    "public_url": "https://figshare.com/articles/online_resource/33314709",
+    "published_date_utc": "2026-08-22T22:12:08Z",
+    "modified_date_utc": "2026-08-22T22:12:09Z",
+    "description_utf8_bytes": 2302,
+    "description_utf8_sha256": "431c0f0988d37f1012ce894e8dc31a5aef6c90b5f5b0053cd6420ac59cd4bff8",
+    "license_field": "CC0",
+    "license_value": 2,
+    "cc0_scope": "Figshare metadata and external-link pointers only",
+    "substantive_release_license": "CC BY-SA 4.0",
+    "substantive_bytes_uploaded_to_figshare": false,
+    "model_provenance": "OpenAI Codex gpt-5.6-sol, Ultra"
+  },
+  "reader_first_file": {
+    "file_id": 67761810,
+    "filename": "analisis-fungsional-dan-aljabar-operator-id-bab-1-10.pdf",
+    "is_link_only": true,
+    "external_url": "https://zenodo.org/records/22062684/files/analisis-fungsional-dan-aljabar-operator-id-bab-1-10.pdf",
+    "anonymous_stream_bytes": 1796056,
+    "anonymous_stream_sha256": "1f793d022efeafae1c69b4f36a9b992031f77bf343154e585dc95ba543d72ebc",
+    "readback_result": "pass"
+  },
+  "linked_companions": [
+    {"filename":"functional-analysis-erdman-id-2026.08.22-ch10-source-backend.zip","external_url":"https://zenodo.org/records/22062684/files/functional-analysis-erdman-id-2026.08.22-ch10-source-backend.zip","bytes":1862812,"sha256":"5369e20858796bff573632e8b4239a590dc847860fbc28f861423b641e71ef61","readback_result":"pass"},
+    {"filename":"SHA256SUMS.txt","external_url":"https://zenodo.org/records/22062684/files/SHA256SUMS.txt","bytes":254,"sha256":"1eecb167b6f775ef72b8b3be75dec0480f2e59a9e79d72d1a2add80f9a04f3c3","readback_result":"pass"}
+  ],
+  "memberships_and_caps": {
+    "project_id": 280296,
+    "project_url": "https://figshare.com/projects/Open_and_Share-Alike_Educational_Materials_Translations/280296",
+    "project_membership_verified": true,
+    "project_public_article_count": 27,
+    "project_account_article_count": 28,
+    "project_stored_bytes_after_transaction": 212727937,
+    "project_storage_cap_bytes": 20000000000,
+    "collection_id": 8668413,
+    "collection_concept_doi": "10.6084/m9.figshare.c.8668413",
+    "collection_readback_version": 42,
+    "collection_readback_doi": "10.6084/m9.figshare.c.8668413.v42",
+    "collection_public_article_count": 26,
+    "collection_prior_members_preserved": true,
+    "collection_membership_verified": true,
+    "referenced_payload_bytes": 3659122,
+    "task_payload_cap_bytes": 500000000,
+    "caps_pass": true
+  },
+  "description_checks": {
+    "ten_of_seventeen_scope_visible": true,
+    "chapters_11_17_pending_visible": true,
+    "accessible_html_pending_visible": true,
+    "untagged_pdf_boundary_visible": true,
+    "erdman_attribution_visible": true,
+    "translation_change_disclosure_visible": true,
+    "non_endorsement_visible": true,
+    "substantive_cc_by_sa_visible": true,
+    "cc0_metadata_only_scope_visible": true,
+    "zenodo_filenames_sizes_hashes_visible": true,
+    "github_link_visible": true
+  },
+  "anonymous_readback": {
+    "public_api_version": 4,
+    "article_and_linked_reader_live": true,
+    "collection_and_project_membership_live": true,
+    "all_required_metadata_and_stream_checks_pass": true,
+    "credential_material_recorded": false,
+    "result": "pass"
+  }
+}

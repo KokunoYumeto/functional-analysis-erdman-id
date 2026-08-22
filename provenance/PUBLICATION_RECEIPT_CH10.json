@@ -1,0 +1,38 @@
+{
+  "schema_version": "o008.github-publication-receipt.v1",
+  "recorded_date": "2026-08-23",
+  "release_boundary": "FAOA-2015-CH01-through-CH10",
+  "edition_state": "in_progress_chapters_1_10_of_17",
+  "repository": {
+    "url": "https://github.com/KokunoYumeto/functional-analysis-erdman-id",
+    "branch": "main",
+    "previous_public_head": "7e245814483b9439973847e164535c5d90ad67b1",
+    "content_commit": "fdeda0f5fcef09b6794c9f142f1f6822c5bd33e9",
+    "content_tree": "bc89d86f41844205e01966333ae96bb46575ad82",
+    "release_commit": "8f22f835f9a067e28874690752003a97c3d1ef9a",
+    "release_tree": "9a7fcebb5c09ff341ff429afad6bc734ab98c03a",
+    "subjects": [
+      "Add Indonesian Chapter 10 distributions checkpoint",
+      "Generalize local-path privacy checks"
+    ]
+  },
+  "anonymous_readback": {
+    "remote_main_match": true,
+    "remote_main": "8f22f835f9a067e28874690752003a97c3d1ef9a",
+    "commit_tree_match": true,
+    "files": [
+      {"path":"README.md","bytes":4935,"sha256":"73f9feb0de477f8e1dd074aaff36d632bec94aa5e7c0b307464b5941227b31ac","match":true},
+      {"path":"source/id-ID/distributions-id.tex","bytes":42627,"sha256":"6456f9def822da572e117f3ec368931f0bfb441840aa0785be1df6080bbb6840","match":true},
+      {"path":"source/id-ID/functional-analysis-id-through-ch10.tex","bytes":9866,"sha256":"5de05f7a154bea99d11924fc21dbbf7495c8642d5a3c58e48e0fdd053dd400b4","match":true},
+      {"path":"output/pdf/analisis-fungsional-dan-aljabar-operator-id-bab-1-10.pdf","bytes":1796056,"sha256":"1f793d022efeafae1c69b4f36a9b992031f77bf343154e585dc95ba543d72ebc","match":true},
+      {"path":"provenance/CH10_BUILD_AND_QA_RECEIPT.md","bytes":10338,"sha256":"2a4d7a6379b1cc4f634fd45d75413133670c134d9b3ba55c363ff273645b9c1f","match":true},
+      {"path":"provenance/SOURCE_CORRECTIONS.md","bytes":32495,"sha256":"8bd1be45b70a5e2395e67c20f192f89fc658f3d158d8ff7bb9b1e9cef77b947b","match":true},
+      {"path":"provenance/SOURCE_CORRECTIONS_CH10.json","bytes":11858,"sha256":"c5010ce91ae98d3c9b3637fe6a553f4df7d1ba524faa75b1f4fb42b0b036c948","match":true},
+      {"path":"backend/BACKEND_MANIFEST.csv","bytes":2933,"sha256":"ad4067c8b4e0fca62a85fa10ce2afb68156a384f8dc11c0a6c4533c9f3190c6a","match":true}
+    ],
+    "all_checked_files_match": true,
+    "privacy_scan_sensitive_hits": 0,
+    "credential_material_recorded": false,
+    "result": "pass"
+  }
+}

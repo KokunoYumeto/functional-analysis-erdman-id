@@ -24,12 +24,12 @@ tetap tersedia sebagai artefak batas sebelumnya.
 
 ## Preservasi versi
 
-Versi parsial `2026.08.22-ch09` dipertahankan secara mandiri di Zenodo dengan
-[DOI 10.5281/zenodo.22061720](https://doi.org/10.5281/zenodo.22061720). Catatan
-Zenodo tersebut secara eksplisit berstatus **edisi dalam pengerjaan, Bab 1--9
+Versi parsial `2026.08.22-ch10` dipertahankan secara mandiri di Zenodo dengan
+[DOI 10.5281/zenodo.22062684](https://doi.org/10.5281/zenodo.22062684). Catatan
+Zenodo tersebut secara eksplisit berstatus **edisi dalam pengerjaan, Bab 1--10
 dari 17 bab**, bukan buku lengkap. Mirror GitHub ini telah dipulihkan dan
 diverifikasi kembali secara anonim. [Item Figshare
-v3](https://doi.org/10.6084/m9.figshare.33314709.v3) menyediakan tautan pembaca
+v4](https://doi.org/10.6084/m9.figshare.33314709.v4) menyediakan tautan pembaca
 langsung ke PDF Zenodo; CC0 di Figshare hanya berlaku untuk metadata dan
 penunjuk tautan, sedangkan seluruh berkas substantif tetap berlisensi CC BY-SA
 4.0.

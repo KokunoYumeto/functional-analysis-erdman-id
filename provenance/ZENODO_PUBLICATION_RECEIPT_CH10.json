@@ -1,0 +1,83 @@
+{
+  "schema_version": "o008.zenodo-publication-receipt.v1",
+  "recorded_date": "2026-08-23",
+  "release_boundary": "FAOA-2015-CH01-through-CH10",
+  "edition_state": "in_progress_chapters_1_10_of_17",
+  "source_content": {
+    "github_commit": "8f22f835f9a067e28874690752003a97c3d1ef9a",
+    "github_tree": "9a7fcebb5c09ff341ff429afad6bc734ab98c03a"
+  },
+  "zenodo": {
+    "record_id": "22062684",
+    "concept_record_id": "22059739",
+    "version_doi": "10.5281/zenodo.22062684",
+    "concept_doi": "10.5281/zenodo.22059739",
+    "record_url": "https://zenodo.org/records/22062684",
+    "public_api_url": "https://zenodo.org/api/records/22062684",
+    "version": "2026.08.22-ch10",
+    "publication_date": "2026-08-22",
+    "resource_type": "publication-book",
+    "language": "ind",
+    "license": "cc-by-sa-4.0",
+    "access_right": "open",
+    "title": "Analisis Fungsional dan Aljabar Operator: Suatu Pengantar — Edisi Bahasa Indonesia",
+    "creator": "Erdman, John M.",
+    "contributor": "Codex (Other; translation and technical editing at the user's direction)",
+    "model_provenance": "OpenAI Codex gpt-5.6-sol, Ultra",
+    "description_utf8_bytes": 1470,
+    "description_utf8_sha256": "65bc75e43bc419745c3bf6ce0ab6990a5bba5853f3cd77e45e14b6f43c5aff0a",
+    "partial_status_visible": true,
+    "chapters_11_17_pending_visible": true,
+    "non_endorsement_visible": true,
+    "accessible_html_pending_visible": true
+  },
+  "source_archive_verification": {
+    "archive_entries": 197,
+    "tracked_payload_files": 195,
+    "expanded_archive_bytes": 11749294,
+    "expanded_tracked_bytes": 11728029,
+    "compressed_file_bytes": 1862812,
+    "deterministic_packaging_runs": 2,
+    "all_entry_streams_read": true,
+    "duplicate_entries": 0,
+    "forbidden_entries": 0,
+    "sensitive_path_or_identity_hits": 0,
+    "reader_pdf_inside_archive": false,
+    "reader_pdf_uploaded_separately": true
+  },
+  "files": [
+    {
+      "filename": "analisis-fungsional-dan-aljabar-operator-id-bab-1-10.pdf",
+      "bytes": 1796056,
+      "md5": "314e824c89592f6651af4ce5a989eea0",
+      "sha256": "1f793d022efeafae1c69b4f36a9b992031f77bf343154e585dc95ba543d72ebc",
+      "public_download_url": "https://zenodo.org/api/records/22062684/files/analisis-fungsional-dan-aljabar-operator-id-bab-1-10.pdf/content",
+      "anonymous_readback_match": true
+    },
+    {
+      "filename": "functional-analysis-erdman-id-2026.08.22-ch10-source-backend.zip",
+      "bytes": 1862812,
+      "md5": "892cc5bda5889c011eadb34e49db329a",
+      "sha256": "5369e20858796bff573632e8b4239a590dc847860fbc28f861423b641e71ef61",
+      "public_download_url": "https://zenodo.org/api/records/22062684/files/functional-analysis-erdman-id-2026.08.22-ch10-source-backend.zip/content",
+      "anonymous_readback_match": true
+    },
+    {
+      "filename": "SHA256SUMS.txt",
+      "bytes": 254,
+      "md5": "b35808aa20ca7cfe05a7fc314bbd215c",
+      "sha256": "1eecb167b6f775ef72b8b3be75dec0480f2e59a9e79d72d1a2add80f9a04f3c3",
+      "public_download_url": "https://zenodo.org/api/records/22062684/files/SHA256SUMS.txt/content",
+      "anonymous_readback_match": true
+    }
+  ],
+  "verification": {
+    "publish_state": "done",
+    "submitted": true,
+    "anonymous_public_record_readback": true,
+    "anonymous_file_count": 3,
+    "anonymous_file_mismatches": 0,
+    "credential_material_recorded": false,
+    "result": "pass"
+  }
+}
