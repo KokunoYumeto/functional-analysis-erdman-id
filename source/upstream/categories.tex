@@ -1,0 +1,574 @@
+\chapter{A VERY BRIEF DIGRESSION ON THE LANGUAGE OF CATEGORIES}\label{categories}
+
+In mathematics we study things (objects) and certain mappings between them (morphisms).
+To mention just a few, sets and functions, groups and homomorphisms, topological spaces
+and continuous maps, vector spaces and linear transformations, and Hilbert spaces and
+bounded linear maps.  These examples come from different branches of mathematics---set
+theory, group theory, topology, linear algebra, and functional analysis, respectively.
+But these different areas have many things in common: in many field terms like product,
+coproduct, subobject, quotient, pullback, isomorphism, and projective limit  appear.
+Category theory is an attempt to unify and formalize some of these common concepts.
+In a sense, category theory is the study of what different branches of mathematics
+have in common.  Perhaps a better description is: categorical language tells us ``how things work'',
+not ``what they are''.
+
+In these notes, indeed any text at this level, ubiquitously uses the language of sets without
+assuming a detailed prior study of axiomatic set theory. Similarly, we will cheerfully use the
+\emph{language} of categories without first embarking on a foundationally satisfactory study of
+category theory (which itself is a large and important area of research).  Sometimes textbooks make
+learning even the language of categories challenging by leaning heavily on one's algebraic background.
+Just as most people are comfortable using the language of sets (whether or not they have made a serious
+study of set \emph{theory}), nearly everyone should find the use of categorical language both convenient
+and enlightening without elaborate prerequisites.
+
+For those who wish to delve more deeply into the subject I can recommend a very gentle entr\'ee to the world
+of categories which appears as Chapter 3 of Semadeni's beautiful book~\cite{Semadeni:1971}.  A classic
+text written by one of the founders of the subject is~\cite{MacLane:1971}.  A more recent text is~\cite{LawvereS:1997}.
+
+By pointing to unifying principles the language of categories often provides striking insight into
+``the way things work'' in mathematics. Equally importantly, one gains in efficiency by not having to go
+through essentially the same arguments over and over again in just slightly different contexts.
+
+For the moment we do little more than define ``object'', ``morphism'', and ``functor'', and give a few examples.
+
+
+
+
+
+
+
+
+
+\section{Objects and Morphisms}\label{C0151}
+\begin{defn} Let $\sfml A$ be a class, whose members we call
+ \index{object (of a category)}%
+\df{objects}. For every pair $(S,T)$ of objects we associate a class $\mor ST$, whose
+members we call
+ \index{morphism!of a category}%
+\df{morphisms} (or
+ \index{arrow}%
+\df{arrows}) from $S$ to $T$. We assume that $\mor ST$ and $\mor UV$ are disjoint
+unless $S = U$ and $T = V$.
+
+We suppose further that there is an operation $\circ$ (called \df{composition}) that
+associates with every $\alpha \in \mor ST$ and every $\beta \in \mor TU$ a morphism
+$\beta \circ \alpha \in \mor SU$ in such a way that:
+ \begin{enumerate}
+  \item $\gamma \circ (\beta \circ \alpha) = (\gamma \circ
+\beta) \circ \alpha$ whenever $\alpha \in \mor ST$, $\beta \in \mor TU$, and $\gamma \in
+\mor UV$;
+  \item for every object $S$ there is a morphism $I_S \in
+\mor SS$ satisfying $\alpha \circ I_S = \alpha$ whenever $\alpha \in \mor ST$ and $I_S
+\circ \beta = \beta$ whenever $\beta \in \mor RS$.
+ \end{enumerate}
+Under these circumstances the class $\sfml A$, together with the associated families of
+morphisms, is a
+ \index{category}%
+\df{category}.
+
+We will reserve the notation
+ \index{<arrowto@$S \to^\alpha T$ (morphism in a category)}%
+$S \to^\alpha T$ for a situation in which $S$ and $T$ are objects in some category and
+$\alpha$ is a morphism belonging to $\mor ST$. As is the case with groups and vector
+spaces we usually omit the composition symbol $\circ$ and write
+  \index{<binopconcat@$\beta\alpha$ (notation for composition of morphisms)}%
+  \index{conventions!notation for composition!of morphisms}%
+$\beta\alpha$ for $\beta \circ \alpha$.
+
+A category is
+ \index{small}%
+ \index{category!small}%
+\df{locally small} if $\mor ST$ is a set for every pair of objects $S$ and $T$ in the category.  It is
+ \index{locally!small}%
+ \index{category!locally small}%
+\df{small} if, in addition, the class of all its objects is a set.  In these notes the categories in which we are interested
+will be locally small.
+\end{defn}
+
+\begin{exam} The category
+ \index{category!$\cat{SET}$ as a}%
+ \index{SET@$\cat{SET}$!the category}%
+$\cat{SET}$ has sets for objects and functions (maps) as morphisms.
+\end{exam}
+
+\begin{exam} The category
+ \index{category!$\cat{AbGp}$ as a}%
+ \index{AbGp@$\cat{AbGp}$!the category}%
+$\cat{AbGp}$ has Abelian groups for objects and group homomorphisms as morphisms.
+\end{exam}
+
+\begin{exam} The category
+ \index{category!$\cat{VEC}$ as a}%
+ \index{VEC@$\cat{VEC}$!the category}%
+$\cat{VEC}$ has vector spaces for objects and linear transformations as morphisms.
+\end{exam}
+
+
+
+
+
+
+
+\begin{defn}\label{C008111} Let $\le$ be a relation on a nonempty set $S$.
+ \begin{enumerate}
+  \item If the relation
+ \index{<le@$\le$ (notation for a partial ordering)}%
+ $\le$ is reflexive (that is, $x \le x$ for all $x \in S$) and transitive (that is, if $x \le y$ and $y \le z$, then $x  \le z$), it is a
+ \index{reflexive}%
+ \index{transitive}%
+ \index{preordering}%
+ \index{ordering!pre-}%
+\df{preordering}.
+  \item If $\le$ is a preordering and is also antisymmetric (that is, if $x \le y$ and $y \le x$, then $x = y$), it is a
+ \index{antisymmetric}%
+ \index{partial!ordering}%
+ \index{ordering!partial}%
+\df{partial ordering}.
+  \item Elements $x$ and $y$ in a set on which a preordering has been defined are
+ \index{comparable}%
+\df{comparable} if either $x \le y$ or $y \le x$.
+  \item If $\le$ is a partial ordering with respect to which any two elements are comparable, it is a
+ \index{linear!ordering}%
+ \index{ordering!linear}%
+\df{linear ordering} (or a
+ \index{total!ordering}%
+ \index{ordering!total}%
+\df{total ordering}).
+  \item If the relation $\le$ is a preordering (respectively, partial ordering,
+linear ordering) on $S$, then the pair $(S,\le)$ is a
+ \index{preordered set}%
+\df{preordered set} (respectively,
+ \index{partially ordered set}%
+\df{partially ordered set},
+ \index{linearly ordered set}%
+\df{linearly ordered set}).
+  \item A linearly ordered subset of a partially ordered set $(S,\le)$ is a
+ \index{chain}%
+\df{chain} in~$S$.
+ \end{enumerate}
+We may write $b \ge a$ as a substitute for $a \le b$.  The notation
+ \index{<l@$<$ (notation for a strict ordering)}%
+$a < b$ ( or equivalently, $b > a$) means that $a \le b$ and $a \ne b$.
+\end{defn}
+
+\begin{defn} A map $f\colon S \sto T$ between preordered sets is
+ \index{order!preserving map}%
+\df{order preserving} if $x \le y$ in $S$ implies $f(x) \le f(y)$ in~$T$.
+\end{defn}
+
+\begin{exam} The category
+ \index{category!$\cat{POSET}$ as a}%
+ \index{POSET@$\cat{POSET}$!the category}%
+$\cat{POSET}$ has partially ordered sets for objects and order preserving maps as morphisms.
+\end{exam}
+
+\begin{notn} Let $f \colon S \sto T$ be a function between sets. Then for $A \subseteq S$ we define
+$f^{\sto}(A) = \{f(x)\colon x \in A\}$ and for $B \subseteq T$ we define
+ \index{<superscript@$f^{\sto}(A)$ or $f(A)$ (image of $A$ under $f$)}%
+ \index{<superscript@$f^{\gets}(B)$ (preimage of $B$ under $f$)}%
+$f^{\gets}(B) = \{ x \in S\colon f(x) \in B\}$. We say that $f^{\sto}(A)$ is the
+ \index{image}%
+\df{image of $A$ under $f$} and that $f^{\gets}(B)$ is the
+ \index{preimage}%
+\df{preimage} (or the
+ \index{inverse!image}%
+ \index{image!inverse}%
+\df{inverse image}) \df{of $B$ under~$f$}.  Sometimes, to avoid clutter, I will succumb to the dubious practice of
+writing $f(A)$ for~$f^{\sto}(A)$.
+\end{notn}
+
+\begin{defn} Recall that a family $\sfml T$ of subsets of a set $X$ is a
+ \index{topology}%
+\df{topology} on $X$ if it contains both the empty set $\emptyset$ and $X$ itself and is closed under taking of unions
+($\bigcup\sfml S \in \sfml T$ whenever $\sfml S \subseteq \sfml T$) and of finite intersections ($\bigcap\sfml F \in \sfml T$
+whenever $\sfml F \subseteq \sfml T$ and $\sfml F$ is finite).  A nonempty set $X$ together with a topology on $X$ is a
+ \index{topological!space}%
+ \index{space!topological}%
+\df{topological space}. If $(X,\sfml T)$ is a topological space, a member of $\sfml T$ is an
+ \index{open}%
+ \index{<binrel@$\open UX$ ($U$ is an open subset of~$X$)}%
+\df{open set}.  To indicate that a set $U$ is an open subset of $X$ we often write $\open UX$.  The complement of an open set is a
+ \index{closed}%
+\df{closed set}.  A function $f\colon X \sto Y$ between topological spaces is
+ \index{continuous!function}%
+ \index{function!continuous}%
+\df{continuous} if the inverse image of every open set is open; that is, if $\open{f^{\gets}(V)}X$ whenever $\open VY$.
+(If you have not previously encountered topological spaces, look at the first two items in both the first section of
+chapter 10 and the first section of chapter 11 of my online notes~\cite{Erdman:2007}.)
+\end{defn}
+
+\begin{exam} Every nonempty set $X$ admits a smallest (coarsest) topology; it is the one consisting of exactly two sets,
+$\emptyset$ and~$X$.  This is the
+ \index{indiscrete}%
+ \index{topology!indiscrete}%
+\df{indiscrete} topology on~$X$. (Note the spelling: there is another word in the English language, ``indiscreet'',
+which means something quite different.)  The set $X$ also admits a largest (finest) topology, which comprises the
+family $\sfml P(X)$ of all subsets of~$X$.  This is the
+ \index{discrete}%
+ \index{topology!discrete}%
+\df{discrete} topology on~$X$.
+  \end{exam}
+
+\begin{exam} The category
+ \index{category!$\cat{TOP}$ as a}%
+ \index{TOP@$\cat{TOP}$!the category}%
+$\cat{TOP}$ has topological spaces for objects and continuous functions as morphisms.
+\end{exam}
+
+\begin{defn}\label{defn_alg} Let $(A,+,M)$ be a vector space over $\K$ which is equipped with
+another binary operation $A \times A \sto A$ where $(x,y) \mapsto x \cdot y$ in such
+a way that $(A,+,\cdot\,)$ is a ring. (The notation $x \cdot y$ is usually shortened to $xy$.) If additionally the equations
+  \begin{equation}\label{eq_def_algebra}
+     \alpha (xy) = (\alpha x)y = x(\alpha y)
+  \end{equation}
+hold for all $x$, $y \in A$ and $\alpha \in \K$, then $(A,+,M,\,\cdot\,)$ is an
+ \index{algebra}%
+\df{algebra} over the field~$\K$ (sometimes referred to as a \df{linear associative
+algebra}).  We abuse terminology in the usual way by writing such things as, ``Let $A$ be an
+algebra.'' We say that an algebra $A$ is
+ \index{unital!algebra}%
+ \index{algebra!unital}%
+\df{unital} if its underlying ring $(A,+,\cdot\,)$ has a multiplicative identity; that is, if there exists
+ \index{multiplicative!identity}%
+ \index{identity!multiplicative}%
+an element $\vc 1_A \ne \vc 0$ in $A$ such that $\vc 1_A \cdot x = x \cdot \vc 1_A = x$ for all $x \in A$.
+  And it is
+ \index{commutative!algebra}%
+ \index{algebra!commutative}%
+\df{commutative} if its ring is; that is, if $xy = yx$ for all $x$, $y \in A$.
+
+A subset $B$ of an algebra $A$ is a
+ \index{subalgebra}%
+\df{subalgebra} of $A$ if it is an algebra under the operations it inherits from~$A$.  A
+subalgebra $B$ of a unital algebra $A$ is a
+ \index{unital!subalgebra}%
+ \index{subalgebra!unital}%
+\df{unital subalgebra} if it contains the multiplicative identity of~$A$.
+
+\textbf{CAUTION.} To be a unital subalgebra it is \emph{not} enough for $B$ to have a
+multiplicative identity of its own; it must contain the identity of~$A$.  Thus, an
+algebra can be both unital and a subalgebra of $A$ without being a unital subalgebra
+of~$A$.
+
+A map $f\colon A \sto B$ between algebras is an
+ \index{homomorphism!of algebras}%
+ \index{algebra!homomorphism}%
+\df{(algebra) homomorphism} if it is a linear map between $A$ and $B$ as vector spaces which preserves multiplication
+(that is, $f(xy) = f(x)f(y)$ for all $x$, $y \in A$).  In other words, an algebra homomorphism is a linear ring homomorphism.
+It is a
+ \index{unital!algebra homomorphism}%
+ \index{algebra!homomorphism!unital}%
+ \index{homomorphism!of algebras!unital}%
+\df{unital (algebra) homomorphism} if it preserves identities; that is, if both $A$ and $B$ are unital algebras and $f(\vc 1_A) = 1_B$.
+The
+ \index{kernel!of an algebra homomorphism}%
+\df{kernel} of an algebra homomorphism $f\colon A \sto B$ is, of course, $\{a \in A \colon f(a) = \vc 0\}$.
+
+If $f^{-1}$ exists and is also an algebra homomorphism, then $f$ is an
+ \index{isomorphism!of algebras}%
+\df{isomorphism} from $A$ to $B$.  If an isomorphism from $A$ to $B$ exists, then $A$ and
+$B$ are
+ \index{isomorphic}%
+\df{isomorphic}.
+\end{defn}
+
+\begin{exam} The category
+ \index{category!$\cat{ALG}$ as a}%
+ \index{ALG@$\cat{ALG}$!the category}%
+$\cat{ALG}$ has algebras for objects and algebra homomorphisms for morphisms.
+\end{exam}
+
+The preceding examples are examples of \emph{concrete categories}---that is, categories
+in which the objects are sets (together, usually, with additional structure) and the
+morphism are functions (usually preserving this extra structure).  In these notes the
+categories of interest to us are both concrete and locally small.  Here (for those who are curious) is a
+more formal definition of \emph{concrete category}.
+
+\begin{defn}\label{C015124} A category $\sfml A$ together with a function $\abs{\hphantom{O}}$ which assigns
+to each object $A$ in $\sfml A$ a set $\abs A$ is a
+ \index{concrete category}%
+ \index{category!concrete}%
+\df{concrete} category if the following conditions are satisfied:
+ \begin{enumerate}
+    \item every morphism $A \to^f B$ is a function from $\abs A$ to~$\abs B$;
+    \item each identity morphism $I_A$ in $\sfml A$ is the identity function on~$\abs A$; and
+    \item composition of morphisms $A \to^f B$ and $B \to^g C$ agrees with composition
+of the functions $f\colon \abs A \sto \abs B$ and $g\colon \abs B \sto \abs C$.
+ \end{enumerate}
+If $A$ is an object in a concrete category $\sfml A$, then $\abs A$ is the
+ \index{underlying set}%
+ \index{set!underlying}%
+ \index{<unop@$\abs A$ (underlying set of the object~$A$)}%
+\df{underlying set} of~$A$.
+\end{defn}
+
+Although it is true that the categories of interest in these notes are concrete
+categories, it may nevertheless be interesting to see an example of a category that is
+\emph{not} concrete.
+
+\begin{exam}\label{C015127} Let $G$ be a monoid (that is, a semigroup with identity).
+ \index{monoid}%
+Consider a category $\cat C$ having exactly one object, which we call~$\star$. Since there
+is only one object there is only one family of morphisms $\mor{\star}{\star}$, which we
+take to be~$G$. Composition of morphisms is defined to be the monoid multiplication.
+That is, $a \circ b := ab$ for all $a$, $b \in G$. Clearly composition is associative and
+the identity element of $G$ is the identity morphism. So $\cat C$ is a category.
+\end{exam}
+
+\begin{defn} In any concrete category we will call an injective morphism a
+ \index{monomorphism}%
+\df{monomorphism} and a surjective morphism an
+ \index{epimorphism}%
+\df{epimorphism}.
+\end{defn}
+
+\begin{cau} The definitions above reflect the original Bourbaki use of the term and are the
+ones most commonly adopted by mathematicians outside of category theory itself where
+``monomorphism'' means ``left cancellable'' and ``epimorphism'' means ``right
+cancellable''.  (Notice that the terms \emph{injective} and \emph{surjective} may not
+make sense when applied to morphisms in a category that is not concrete.)
+
+A morphism $B \to^g C$ is
+ \index{left!cancellable}%
+ \index{cancellable!left}%
+\df{left cancellable} if whenever morphisms $A \to^{f_1} B$ and $A \to^{f_2} B$ satisfy
+$gf_1 = gf_2$, then $f_1 = f_2$.  Mac Lane suggested calling left cancellable morphisms
+ \index{monic}%
+\df{monic} morphisms.  The distinction between monic morphisms and monomorphisms turns
+out to be slight.  In these notes almost all of the morphisms we encounter are monic if
+and only if they are monomorphisms. As an easy exercise prove that any injective morphism
+in a (concrete) category is monic.  The converse sometimes fails.
+
+In the same vein Mac Lane suggested calling a
+ \index{right!cancellable}%
+ \index{cancellable!right}%
+\emph{right cancellable} morphism (that is, a morphism $A \to^f B$ such that whenever
+morphisms $B \to^{g_1} C$ and $B \to^{g_2} C$ satisfy $g_1f = g_2f$, then $g_1 = g_2$) an
+ \index{epic}%
+\df{epic} morphism.  Again it is an easy exercise to show that in a (concrete) category
+any epimorphism is epic.  The converse, however, fails in some rather common categories.
+\end{cau}
+
+\begin{defn} The terminology for inverses of morphisms in categories is essentially the same
+as for functions.  Let $A \to^\alpha B$ and $B \to^\beta A$ be
+morphisms in a category. If $\beta \circ \alpha = I_A$, then $\beta$ is a
+ \index{left!inverse!of a morphism}%
+ \index{inverse!left}%
+\df{left inverse} of $\alpha$ and, equivalently, $\alpha$ is a
+ \index{right!inverse!of a morphism}%
+ \index{inverse!right}%
+\df{right inverse} of $\beta$. We say that the morphism $\alpha$ is an
+ \index{isomorphism!in a category}%
+\df{isomorphism} (or is
+ \index{invertible!morphism}%
+\df{invertible}) if there exists a morphism $B \to^\beta A$ which is both a left and a
+right inverse for~$\alpha$.  Such a function is denoted by $\alpha^{-1}$ and is called the
+ \index{<unopur@$\alpha^{-1}$ (inverse of a morphism $\alpha$)}%
+ \index{inverse!of a morphism}%
+\df{inverse} of~$\alpha$.
+\end{defn}
+
+\begin{prop} Let $A \to^\alpha B$ be a morphism in a category.  If $\alpha$ has both a left inverse $\lambda$ and a
+right inverse $\rho$, then $\lambda = \rho$ and consequently $\alpha$ is an isomorphism.
+\end{prop}
+
+In any concrete category one can inquire whether every bijective morphism (that is, every
+map which is both a monomorphism and an epimorphism) is an isomorphism.  The answer is
+often a trivial \emph{yes} (as in $\cat{SET}$, $\cat{AbGp}$, and $\cat{VEC}$) or a trivial
+\emph{no} (for example, in the category $\cat{POSET}$
+ \index{bijective morphisms!need not be invertible!in $\cat{POSET}$}%
+ \index{POSET@$\cat{POSET}$!bijective morphism in}%
+ \index{POSET@$\cat{POSET}$!the category}%
+of partially ordered sets and order preserving maps.  But on
+occasion the answer turns out to be a fascinating and deep result (see for example the \emph{open mapping
+theorem}~\ref{C069414}).
+
+\begin{exam} In the category $\cat{SET}$
+ \index{bijective morphisms!are invertible!in $\cat{SET}$}%
+ \index{SET@$\cat{SET}$!bijective morphism in}%
+every bijective morphism is an isomorphism.
+\end{exam}
+
+\begin{exam}\label{C015216} The category
+ \index{LAT@$\cat{LAT}$!the category}%
+ \index{category!$\cat{LAT}$ as a}%
+$\cat{LAT}$ has lattices as objects and lattice
+homomorphisms as morphisms. (A
+ \index{lattice}%
+\df{lattice} is a partially ordered set in which every pair of elements has an infimum and a supremum and a
+ \index{lattice!homomorphism}%
+ \index{homomorphism!lattice}%
+\df{lattice homomorphism} is a map between lattices which preserves infima and suprema.)
+In this category bijective morphisms
+ \index{bijective morphisms!are invertible!in $\cat{LAT}$}%
+ \index{LAT@$\cat{LAT}$!bijective morphism in}%
+are isomorphisms.
+\end{exam}
+
+\begin{exam} A
+ \index{homeomorphism}%
+\df{homeomorphism} is a continuous bijection $f$ between topological spaces whose inverse $f^{-1}$ is also continuous.  Homeomorphisms
+are the isomorphisms in the category $\cat{TOP}$.  In this category not every continuous bijection is a homeomorphism.
+\end{exam}
+
+\begin{exam} If in the category $\cat C$ of example~\ref{C015127} the monoid $G$ is a group
+then every morphism in $\cat C$ is an isomorphism.
+\end{exam}
+
+
+
+
+
+
+\section{Functors}
+\begin{defn} If $\cat{A}$ and $\cat{B}$ are categories a
+ \index{covariant functor}%
+ \index{functor!covariant}%
+\df{covariant functor} $F$ from $\cat A$ to $\cat B$ (written ${\cat A}\to^F{\cat B}$) is
+a pair of maps: an
+ \index{object!map}%
+ \index{map!object}%
+\df{object map} $F$ which associates with each object $S$ in $\cat A$ an object $F(S)$ in
+$\cat B$ and a
+ \index{morphism!map}%
+ \index{map!morphism}%
+\df{morphism map} (also denoted by $F$) which associates with each morphism $f \in \mor
+ST$ in $\cat A$ a morphism $F(f) \in \mor {F(S)}{F(T)}$ in $\cat B$, in such a way that
+ \begin{enumerate}
+  \item $F(g \circ f) = F(g) \circ F(f)$ whenever $g \circ f$ is defined in $\cat A$; and
+  \item $F(\id S) = \id{F(S)}$ for every object $S$ in $\cat A$.
+ \end{enumerate}
+
+The definition of a
+ \index{contravariant functor}%
+ \index{functor!contravariant}%
+\df{contravariant functor} ${\cat A}\to^F{\cat B}$ differs from the preceding definition
+only in that, first, the morphism map associates with each morphism $f \in \mor ST$ in
+$\cat A$ a morphism $F(f) \in \mor {F(T)}{F(S)}$ in $\cat B$ and, second, condition (a)
+above is replaced by
+ \begin{enumerate}
+  \item[(\rm{a'})] $F(g \circ f) = F(f) \circ F(g)$ whenever $g \circ f$
+is defined in~$\cat A$.
+ \end{enumerate}
+\end{defn}
+
+\begin{exam}\label{functors005exam} A
+ \index{forgetful functor}%
+ \index{functor!forgetful}%
+\df{forgetful functor} is a functor that maps objects and morphisms from a category $\cat
+C$ to a category $\cat C'$ with less structure or fewer properties.  For example, if $V$
+is a vector space, the functor $F$ which ``forgets'' about the operation of scalar
+multiplication on vector spaces would map $V$ into the category of Abelian groups. (The
+Abelian group $F(V)$ would have the same set of elements as the vector space $V$ and the
+same operation of addition, but it would have no scalar multiplication.)  A linear map
+$T\colon V \sto W$ between vector spaces would be taken by the functor $F$ to a group
+homomorphism $F(T)$ between the Abelian groups $F(V)$ and~$F(W)$.
+
+Forgetful functor can ``forget'' about properties as well.  If $G$ is an object in the
+category of Abelian groups, the functor which ``forgets'' about commutativity in Abelian
+groups would take $G$ into the category of groups.
+
+It was mentioned in the preceding section that all the categories that are of interest in
+these notes are concrete categories (ones in which the objects are sets with additional
+structure and the morphisms are maps which preserve, in some sense, this additional
+structure). We will have several occasions to use a special type of forgetful
+functor---one which forgets about all the structure of the objects except the underlying
+set and which forgets any structure preserving properties of the morphisms. If $A$ is an
+object in some concrete category $\cat C$, we denote by
+ \index{<unop@$\abs A$ (the forgetful functor acting on~$A$)}%
+$\abs{A}$ its underlying set. And if \mbox{$A~\to^f~B$} is a morphism in $\cat C$ we
+denote by $\abs f$ the map from $\abs A$ to $\abs B$ regarded simply as a function
+between sets.  It is easy to see that $\abs{\hphantom{M}}$\,, which takes objects in
+$\cat C$ to objects in $\cat{SET}$ (the category of sets and maps) and morphisms in $\cat
+C$ to morphisms in $\cat{SET}$, is a covariant functor.
+
+In the category $\cat{VEC}$ of vector spaces and linear maps, for example,
+$\abs{\hphantom{M}}$ causes a vector space $V$ to ``forget'' about both its addition and
+scalar multiplication ($\abs V$ is just a set). And if $T\colon V \sto W$ is a linear
+transformation, then $\abs T\colon \abs V \sto \abs W$ is just a map between sets---it
+has ``forgotten'' about preserving the operations.
+\end{exam}
+
+
+\begin{defn} A partially ordered set is
+ \index{order!complete}%
+ \index{complete!order}%
+\df{order complete} if every nonempty subset has a supremum (that is, a least upper
+bound) and an infimum (a greatest lower bound).
+\end{defn}
+
+\begin{defn} Let $S$ be a set.  Then the
+ \index{power set}%
+ \index{P@$\sfml P(S)$ (power set of $S$)}%
+\df{power set} of $S$, denoted by $\sfml P(S)$, is the family of all subsets of~$S$.
+\end{defn}
+
+\begin{exam}[The power set functors] Let $S$ be a nonempty set.
+ \begin{enumerate}
+  \item The power set $\sfml P(S)$ of $S$ partially ordered by $\subseteq$ is
+order complete.
+  \item The class of order complete partially ordered sets and order
+preserving maps is a category.
+ \index{functor!power set}%
+ \index{power set!functor}%
+  \item For each function $f$ between sets let $\sfml P(f) = f^{\sto}$. Then
+$\sfml P$ is a covariant functor from the category of sets and functions to the category
+of order complete partially ordered sets and order preserving maps.
+  \item For each function $f$ between sets let $\sfml P(f) = f^{\gets}$. Then
+$\sfml P$ is a contravariant functor from the category of sets and functions to the
+category of order complete partially ordered sets and order preserving maps.
+ \end{enumerate}
+\end{exam}
+
+\begin{defn}\label{defn_vsp_adjoint} Let $T\colon V \sto W$ be a linear map between vector spaces. For every
+$g \in W^{\#}$ let $T^{\#}(g) = g\,T$.  Notice that $T^{\#}(g) \in V^{\#}$.  The map $T^{\#}$ from the
+vector space $W^{\#}$ into the vector space~$V^{\#}$ is the (vector space)
+ \index{adjoint!vector space}%
+ \index{vector!space!adjoint map}%
+ \index{<unopur@$T^\#$ (vector space adjoint)}%
+\df{adjoint} map of~$T$.
+\end{defn}
+
+\begin{exam} The pair of maps $V \mapsto V^{\#}$ (taking a vector space to its algebraic dual) and
+$T \mapsto T^{\#}$ (taking a linear map to its dual) is a contravariant functor from the category $\cat{VEC}$
+of vector spaces and linear maps to itself.
+\end{exam}
+
+\begin{exam}\label{0007606} If $\cat C$ is a category let
+ \index{category@$\cat{C^2}$ (pairs of objects and morphisms)}%
+$\cat{C^2}$ be the category whose objects are ordered pairs of objects in $\cat C$ and
+whose morphisms are ordered pairs of morphisms in~$\cat C$.  Thus if $A \to^f C$ and $B
+\to^g D$ are morphisms in $\cat C$, then $(A,B) \to^{(f,g)} (C,D)$ (where $(f,g)(a,b) =
+\bigl(f(a),g(b)\bigr)$ for all $a \in A$ and $b \in B$) is a morphism in~$\cat{C^2}$.
+Composition of morphism is defined in the obvious way: $(f,g) \circ (h,j) = (f \circ h, g
+\circ j)$. We define the
+ \index{diagonal!functor}%
+ \index{functor!diagonal}%
+\df{diagonal functor} $\cat C \to^{\ftr D} \cat{C^2}$ by $\ftr D(A) := (A,A)$. This is a
+covariant functor.
+\end{exam}
+
+\begin{exam}\label{C029717} Let $X$ and $Y$ be topological spaces and $\phi\colon X \sto Y$
+be continuous. Define $\fml C \phi$ on $\fml C(Y)$ by
+    \[ \fml C \phi(g) = g \circ \phi \]
+for all $g \in \fml C(Y)$.  Then the pair of maps $X \mapsto \fml C(X)$ and
+ \index{C@$\fml C$ (the functor)}%
+$\phi \mapsto \fml C \phi$ is a contravariant functor from the category $\cat{TOP}$ of topological
+spaces and continuous maps to the category of unital algebras and unital algebra
+homomorphisms.
+\end{exam}
+
+
+
+
+
+
+
+
+
+
+
+
+
+\endinput
+

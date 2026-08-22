@@ -9,6 +9,12 @@
 /qa/build-through-ch02/
 /qa/build-through-ch02-pass1.pdf
 /qa/renders/through-ch02-final-20260821/
+/qa/build-through-ch03/
+/qa/build-through-ch03-pass1.pdf
+/qa/build-through-ch03-preflight/
+/qa/render-through-ch03/
+/qa/render-through-ch03-preflight/
+/qa/ch03_translation_parts/
 
 # TeX intermediates
 *.aux

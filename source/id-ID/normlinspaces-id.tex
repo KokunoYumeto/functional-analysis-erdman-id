@@ -1,0 +1,1913 @@
+\chapter{RUANG LINEAR BERNORMA}
+
+\section{Norma}
+Dalam dunia analisis, penghuni yang paling dominan adalah ruang fungsi, yakni ruang vektor
+yang terdiri atas fungsi-fungsi bernilai real atau kompleks. Agar menarik bagi seorang analis,
+ruang semacam itu harus dilengkapi dengan suatu topologi. Sering kali topologi tersebut
+merupakan topologi metrik, yang pada gilirannya kerap berasal dari suatu norma (lihat
+proposisi~\ref{0001503}).
+
+\begin{exam}\label{C023125} Untuk $x = (x_1,\dots, x_n) \in \K^n$, misalkan $\norm{x} =
+\left(\sum_{k=1}^n {\abs{x_k}}^2\right)^{1/2}$. Ini adalah
+ \index{biasa!norma!pada $\K^n$}%
+ \index{norma!biasa!pada $\K^n$}%
+\df{norma biasa} (atau
+ \index{Euklides!norma!pada $\K^n$}%
+ \index{norma!Euklides!pada $\K^n$}%
+ \index{K@$\K^n$!sebagai ruang linear bernorma}%
+ \index{bernorma!ruang linear!$\K^n$ sebagai}%
+\df{norma Euklides}) pada $\K^n$; kecuali jika secara eksplisit dinyatakan sebaliknya,
+ketika dipandang sebagai ruang linear bernorma, $\K^n$ selalu dianggap memiliki norma ini.
+Jelas bahwa norma ini menginduksi metrik biasa (Euklides) pada~$\K^n$.
+\end{exam}
+
+\begin{exam}\label{C023127} Untuk $x = (x_1,\dots,x_n) \in \K^n$, misalkan
+ \index{<unopn@$\norm{\hphantom{x}}_1$ (norma-$1$)}%
+$\norm{x}_1 = \sum_{k=1}^n \abs{x_k}$. Mudah dilihat bahwa fungsi $x \mapsto \norm{x}_1$
+merupakan norma pada~$\K^n$. Norma ini kadang-kadang disebut
+ \index{norma!$1$- (pada $\K^n$)}%
+ \index{satu@norma-$1$!pada $\K^n$}%
+ \index{K@$\K^n$!sebagai ruang linear bernorma}%
+ \index{bernorma!ruang linear!$\K^n$ sebagai}%
+\df{norma-$1$} pada~$\K^n$. Norma ini menginduksi apa yang disebut \emph{metrik taksi}
+pada~$\R^2$.
+\end{exam}
+
+Dari enam contoh berikutnya, contoh terakhir adalah yang paling umum. Perhatikan bahwa
+semua contoh lainnya merupakan kasus khususnya atau subruang dari kasus-kasus khususnya.
+
+\begin{exam}\label{C023129} Untuk $x = (x_1,\dots,x_n) \in \K^n$, misalkan
+ \index{<unopn@$\norm{\hphantom{x}}_u$ (norma seragam)}%
+ \index{<unopn@$\norm{\hphantom{x}}_\infty$ (norma seragam)}%
+$\norm{x}_\infty = \max\{\,\abs{x_k} \colon 1 \le k \le n\}$. Ini mendefinisikan suatu
+norma pada $\K^n$; norma tersebut adalah
+ \index{seragam!norma!pada~$\K^n$}%
+ \index{norma!seragam!pada $\K^n$}%
+ \index{K@$\K^n$!sebagai ruang linear bernorma}%
+ \index{bernorma!ruang linear!$\K^n$ sebagai}%
+\df{norma seragam} pada~$\K^n$. Norma ini menginduksi metrik seragam pada~$\K^n$.
+Notasi alternatif untuk $\norm{x}_\infty$ adalah $\norm{x}_U$.
+\end{exam}
+
+\begin{exam}\label{C0231301} Himpunan $l_\infty$ dari semua barisan bilangan kompleks yang
+terbatas jelas merupakan ruang vektor di bawah operasi penjumlahan dan perkalian skalar
+titik demi titik. Untuk $x = (x_1,x_2,\dots) \in l_\infty$, misalkan
+ \index{<unopn@$\norm{\hphantom{x}}_\infty$ (norma seragam)}%
+$\norm{x}_\infty = \sup\{\,\abs{x_k} \colon 1 \le k\}$. Ini mendefinisikan suatu norma pada
+$l_\infty$; norma tersebut adalah
+ \index{seragam!norma!pada~$l_\infty$}%
+ \index{norma!seragam!pada $l_\infty$}%
+ \index{l@$l_\infty$!sebagai ruang linear bernorma}%
+ \index{l@$l_\infty$!barisan terbatas}%
+ \index{bernorma!ruang linear!$l_\infty$ sebagai}%
+\df{norma seragam} pada~$l_\infty$.
+\end{exam}
+
+\begin{exam}\label{C0231302} Salah satu subruang dari~\ref{C0231301} adalah ruang $c$ yang
+terdiri atas semua
+ \index{c@$c$!sebagai ruang linear bernorma}%
+ \index{c@$c$!barisan konvergen}%
+ \index{bernorma!ruang linear!$c$ sebagai}%
+barisan bilangan kompleks yang konvergen. Di bawah norma seragam, ruang ini merupakan
+ruang linear bernorma.
+\end{exam}
+
+\begin{exam}\label{C0231303} Di dalam $c$ terdapat ruang linear bernorma lain yang menarik,
+yaitu $\sbsb c0$
+ \index{c@$c_0$!barisan yang konvergen ke nol}%
+ \index{c@$c_0$!sebagai ruang linear bernorma}%
+ \index{bernorma!ruang linear!$\sbsb c0$ sebagai}%
+yakni ruang semua barisan bilangan kompleks yang konvergen ke nol (sekali lagi dengan
+norma seragam).
+\end{exam}
+
+\begin{exam}\label{C023131} Misalkan $S$ suatu himpunan tak kosong. Jika $f$ merupakan fungsi
+bernilai $\K$ yang terbatas pada $S$, misalkan
+  \[ \norm f_u := \sup\{\abs{f(x)} \colon x \in S\}\,. \]
+Ini adalah norma pada ruang vektor $\fml B(S)$ dari semua fungsi skalar yang
+terbatas pada $S$ dan disebut
+ \index{<unopn@$\norm{\hphantom{x}}_u$ (norma seragam)}%
+ \index{seragam!norma!pada~$\fml B(S)$}%
+ \index{norma!seragam!pada~$\fml B(S)$}%
+ \index{B@$\fml B(S)$!fungsi terbatas pada~$S$}%
+ \index{B@$\fml B(S)$!sebagai ruang linear bernorma}%
+ \index{bernorma!ruang linear!$\fml B(S)$ sebagai}%
+\df{norma seragam}. Jelas bahwa norma ini menghasilkan metrik seragam pada~$\fml B(S)$.
+Perhatikan bahwa contoh~\ref{C023129} dan~\ref{C0231301} merupakan kasus khusus dari
+contoh ini. (Ambil $S = \N_n := \{1,2,\dots,n\}$ atau $S = \N$.)
+\end{exam}
+
+
+
+
+
+
+
+
+
+
+
+\begin{exam}\label{C023133} Mudah untuk membuat perumuman yang cukup luas atas contoh
+sebelumnya dengan mengganti medan $\K$ dengan ruang linear bernorma sebarang. Maka,
+misalkan $S$ suatu himpunan tak kosong dan $V$ suatu ruang linear bernorma. Untuk $f$
+dalam ruang vektor $\fml B(S,V)$ dari semua fungsi bernilai $V$ yang terbatas pada~$S$,
+misalkan
+  \[ \norm f_u := \sup\{\norm{f(x)} \colon x \in S\}\,. \]
+Maka ini adalah suatu norma dan disebut
+ \index{<unopn@$\norm{\hphantom{x}}_u$ (norma seragam)}%
+ \index{seragam!norma!pada~$\fml B(S,V)$}%
+ \index{norma!seragam!pada~$\fml B(S,V)$}%
+ \index{B@$\fml B(S,V)$!fungsi bernilai $V$ yang terbatas pada~$S$}%
+ \index{B@$\fml B(S,V)$!sebagai ruang linear bernorma}%
+ \index{bernorma!ruang linear!$\fml B(S,V)$ sebagai}%
+\df{norma seragam} pada $\fml B(S,V)$. (Mengapa kata ``mudah'' dalam kalimat pertama
+contoh ini tepat digunakan?)
+\end{exam}
+
+\begin{defn} Misalkan $S$ suatu himpunan, $V$ suatu ruang linear bernorma, dan
+ \index{F@$\fml F(S,V)$ (fungsi bernilai $V$ pada~$S$)}%
+$\fml F(S,V)$ ruang vektor dari semua fungsi bernilai $V$ pada~$S$. Perhatikan suatu
+barisan $(f_n)$ dari fungsi-fungsi dalam $\fml F(S,V)$. Jika terdapat fungsi $g$ dalam
+$\fml F(S,V)$ sedemikian sehingga
+   \[ \sup\{\norm{f_n(x) - g(x)}\colon x \in S\} \sto 0
+      \quad \text{ketika $n \sto \infty$,} \]
+maka kita mengatakan bahwa barisan $(f_n)$
+ \index{<arrowto@$f_n \sto g$ (unif) (konvergensi seragam)}%
+ \index{seragam!konvergensi}%
+ \index{konvergensi!seragam}%
+\df{konvergen seragam} ke~$g$ dan menulis $f_n \sto g \text{\,(unif)}$. Fungsi $g$
+adalah
+ \index{seragam!limit}%
+ \index{limit!seragam}%
+\df{limit seragam} dari barisan $(f_n)$. Perhatikan bahwa jika $g$ dan semua $f_n$
+termasuk dalam $\fml B(S,V)$, maka konvergensi seragam $(f_n)$ ke $g$ tidak lain adalah
+konvergensi $(f_n)$ ke $g$ terhadap metrik seragam.
+\end{defn}
+
+Ada banyak cara barisan fungsi dapat konvergen. Boleh dikatakan bahwa dua ragam
+konvergensi yang paling umum adalah konvergensi seragam, yang baru saja kita bahas, dan
+konvergensi titik demi titik.
+
+\begin{defn} Misalkan $S$ suatu himpunan, $V$ suatu ruang linear bernorma, dan $(f_n)$
+suatu barisan dalam $\fml F(S,V)$. Jika terdapat fungsi $g$ sedemikian sehingga
+  \[ f_n(x) \sto g(x) \qquad \text{untuk semua $x \in S$}, \]
+maka $(f_n)$
+ \index{titik demi titik!konvergensi}%
+ \index{konvergensi!titik demi titik}%
+\df{konvergen titik demi titik} ke~$g$. Dalam hal ini kita menulis
+  \[ f_n \sto g \text{\,(ptws)}. \]
+Fungsi $g$ adalah
+ \index{titik demi titik!limit}%
+ \index{limit!titik demi titik}%
+ \index{<arrowto@$f_n \sto g$ (ptws) (konvergensi titik demi titik)}%
+\df{limit titik demi titik} dari fungsi-fungsi~$f_n$.
+
+Jika $(f_n)$ merupakan barisan naik dari fungsi-fungsi bernilai real (atau real
+diperluas) dan $f_n \sto g \text{\,(ptws)}$, kita menulis
+ \index{<arrowmonoup@$f_n \uparrow g$ (ptws) (konvergensi monoton titik demi titik)}%
+$f_n \uparrow g \text{\,(ptws)}$. Dan jika $(f_n)$ menurun serta memiliki $g$ sebagai
+limit titik demi titik, kita menulis
+ \index{<arrowmonodown@$f_n \downarrow g$ (ptws) (konvergensi monoton titik demi titik)}%
+$f_n \downarrow g \text{\,(ptws)}$.
+\end{defn}
+
+Hubungan paling jelas antara kedua jenis konvergensi ini, yang dikenal dari setiap mata
+kuliah analisis real, adalah bahwa konvergensi seragam mengakibatkan konvergensi titik demi
+titik.
+
+\begin{prop}\label{C023141} Misalkan $S$ suatu himpunan dan $V$ suatu ruang linear bernorma.
+Jika barisan $(f_n)$ dalam $\fml F(S,V)$ konvergen seragam ke suatu fungsi $g$ dalam
+$\fml F(S,V)$, maka $(f_n)$ konvergen titik demi titik ke~$g$.
+\end{prop}
+
+Kebalikannya tidak benar.
+
+\begin{exam} Untuk setiap $n \in \N$, misalkan
+$f_n\colon [0,1] \sto \R\colon x \mapsto x^n$. Maka barisan $(f_n)$ konvergen titik demi
+titik pada $[0,1]$, tetapi tidak konvergen seragam.
+\end{exam}
+
+\begin{exam} Untuk setiap $n \in \N$ dan setiap $x \in \R^+$, misalkan
+$f_n(x) = \frac1n\, x$. Maka pada setiap interval berbentuk $[0,a]$ dengan $a > 0$,
+barisan $(f_n)$ konvergen seragam ke fungsi konstan~$0$. Pada interval $[0,\infty)$,
+barisan itu konvergen titik demi titik ke $0$, tetapi tidak konvergen seragam.
+\end{exam}
+
+Ingat pula dari analisis real bahwa limit seragam dari fungsi-fungsi terbatas juga harus
+terbatas.
+
+\begin{prop}\label{C023151} Misalkan $S$ suatu himpunan, $V$ suatu ruang linear bernorma,
+$(f_n)$ suatu barisan dalam $\fml B(S,V)$, dan $g$ suatu anggota $\fml F(S,V)$. Jika
+$f_n \sto g\text{\,(unif)}$, maka $g$ terbatas.
+\end{prop}
+
+Dan limit seragam dari fungsi-fungsi kontinu bersifat kontinu.
+
+\begin{prop}\label{C023154} Misalkan $X$ suatu ruang topologis, $V$ suatu ruang linear
+bernorma, $(f_n)$ suatu barisan fungsi kontinu bernilai $V$ pada~$X$, dan $g$ suatu anggota
+$\fml F(X,V)$. Jika $f_n \sto g\text{\,(unif)}$, maka $g$ kontinu.
+\end{prop}
+
+\begin{prop}\label{C023163} Jika $x$ dan $y$ merupakan unsur dari suatu ruang vektor $V$
+yang dilengkapi dengan norma $\norm{\hphantom{x}}$, maka
+  \[ \bigabs{\strut\,\norm{x} - \norm{y}\,} \le \norm{x - y}\,. \]
+\end{prop}
+
+\begin{cor} Norma pada suatu ruang linear bernorma merupakan fungsi kontinu seragam.
+ \index{kekontinuan!norma}%
+ \index{norma!kekontinuan}%
+\end{cor}
+
+\begin{notn} Misalkan $M$ suatu ruang metrik, $a \in M$, dan $r > 0$. Kita menyatakan
+$\{x \in M\colon d(x,a) < r\}$, yaitu
+ \index{B@$B_r(a)$, $B_r$ (bola terbuka berjari-jari $r$)}%
+ \index{terbuka!bola}%
+ \index{bola!terbuka}%
+bola terbuka berjari-jari $r$ yang berpusat di $a$, dengan $B_r(a)$. Demikian pula, kita
+menyatakan $\{x \in M\colon d(x,a) \le r\}$, yaitu
+ \index{C@$C_r(a)$, $C_r$ (bola tertutup berjari-jari $r$)}%
+ \index{tertutup!bola}%
+ \index{bola!tertutup}%
+\df{bola tertutup} berjari-jari $r$ yang berpusat di $a$, dengan $C_r(a)$, dan
+$\{x \in M\colon d(x,a) = r\}$, yaitu
+ \index{S@$S_r(a)$, $S_r$ (sfer berjari-jari $r$)}%
+ \index{sfer}%
+\df{sfer} berjari-jari $r$ yang berpusat di $a$, dengan $S_r(a)$. Jika ruang metrik tersebut
+memiliki titik yang ditandai sebagai nol (khususnya, jika ruang itu merupakan ruang linear bernorma), kita menggunakan
+$B_r$, $C_r$, dan $S_r$ masing-masing sebagai singkatan untuk $B_r(0)$, $C_r(0)$, dan $S_r(0)$.
+\end{notn}
+
+\begin{prop} Jika $V$ merupakan ruang linear bernorma, $x \in V$, dan $r$, $s > 0$, maka
+ \begin{enumerate}[label=\rm{(\alph*)}]
+   \item $B_r(\vc 0) = -B_r(\vc 0)$;
+   \item $B_{rs}(\vc 0) = rB_s(\vc 0)$;
+   \item $x + B_r(\vc 0) = B_r(x)$; dan
+   \item $B_r(\vc 0) + B_r(\vc 0) = 2\,B_r(\vc 0)$. (Apakah secara umum
+$A + A = 2A$ apabila $A$ merupakan subhimpunan dari suatu ruang vektor?)
+ \end{enumerate}
+\end{prop}
+
+\begin{defn}\label{C017314} Jika $a$ dan $b$ merupakan vektor dalam ruang vektor $V$, maka
+ \index{tertutup!ruas}%
+ \index{ruas, tertutup}%
+\df{ruas tertutup} antara $a$ dan $b$, yang dinotasikan
+ \index{<bracsqr@$[a,b]$ (ruas tertutup dalam ruang vektor)}%
+dengan~$[a,b]$, adalah $\{(1 - t)a + tb \colon 0 \le t \le 1\}$.
+\end{defn}
+
+\begin{cau}\label{C017317} Perhatikan bahwa terdapat sedikit pertentangan antara notasi
+untuk \emph{ruas} tertutup ini, ketika diterapkan pada ruang vektor bilangan real $\R$,
+dan notasi biasa untuk \emph{interval} tertutup dalam~$\R$. Dalam $\R$, ruas tertutup
+$[a,b]$ sama dengan interval tertutup $[a,b]$ asalkan $a \le b$. Namun, jika $a > b$,
+ruas tertutup $[a,b]$ sama dengan ruas $[b,a]$ dan memuat semua bilangan $c$ sedemikian
+sehingga $b \le c \le a$, sedangkan interval tertutup $[a,b]$ kosong.
+\end{cau}
+
+\begin{defn} Subhimpunan $C$ dari suatu ruang vektor $V$ disebut
+ \index{konveks!himpunan}%
+\df{konveks} jika ruas tertutup $[a,b]$ termuat dalam $C$ setiap kali $a$, $b \in C$.
+\end{defn}
+
+\begin{exam}\label{C023169} Dalam ruang linear bernorma, setiap bola terbuka merupakan
+himpunan konveks. Demikian pula setiap bola tertutup.
+\end{exam}
+
+\begin{prop}\label{prop_intrsctn_convex} Irisan suatu keluarga subhimpunan konveks dari
+ruang vektor bersifat konveks.
+\end{prop}
+
+\begin{defn} Misalkan $V$ suatu ruang vektor. Ingat bahwa suatu \emph{kombinasi linear}
+dari himpunan hingga $\{x_1, \dots, x_n\}$ yang terdiri atas vektor-vektor dalam $V$ adalah
+vektor berbentuk $\sum_{k=1}^n \alpha_k x_k$, dengan
+$\alpha_1, \dots, \alpha_n \in \R$. Jika
+$\alpha_1 = \alpha_2 = \dots = \alpha_n = 0$, maka kombinasi linear tersebut
+\emph{trivial}; jika setidaknya satu $\alpha_k$ tidak sama dengan nol, kombinasi linear
+tersebut \emph{nontrivial}. Suatu kombinasi linear
+$\sum_{k=1}^n\alpha_k x_k$ dari vektor-vektor $x_1, \dots, x_n$ merupakan
+ \index{konveks!kombinasi}%
+ \index{kombinasi!konveks}%
+\df{kombinasi konveks} jika $\alpha_k \ge 0$ untuk setiap $k$ ($1 \le k \le n$) dan jika
+$\sum_{k=1}^n \alpha_k = 1$.
+\end{defn}
+
+\begin{defn}\label{smplx005def} Misalkan $A$ suatu subhimpunan tak kosong dari ruang
+vektor~$V$. Kita mendefinisikan
+ \index{konveks!selubung}%
+ \index{selubung!konveks}%
+ \index{co@$\co A$ (selubung konveks dari~$A$)}%
+\df{selubung konveks} dari $A$, yang dinotasikan dengan $\co A$, sebagai subhimpunan
+konveks terkecil dari $V$ yang memuat~$A$.
+\end{defn}
+
+Definisi sebelumnya seharusnya langsung menimbulkan kecurigaan. Bagaimana kita tahu bahwa
+\emph{ada} subhimpunan konveks ``terkecil'' dari~$V$ yang memuat~$A$? Salah satu calon yang
+cukup jelas (mari kita sebut calon ``abstrak'') untuk himpunan tersebut adalah irisan dari
+\emph{semua} subhimpunan konveks dari $V$ yang memuat~$A$. (Tentu saja, ini juga mungkin tidak
+masuk akal---\emph{kecuali} kita tahu bahwa terdapat setidaknya satu himpunan konveks dalam
+$V$ yang memuat~$A$ dan bahwa irisan keluarga semua himpunan konveks yang memuat~$A$ itu
+sendiri merupakan himpunan konveks yang memuat~$A$.) Calon masuk akal lainnya (yang akan
+kita sebut calon ``konstruktif'') adalah himpunan semua kombinasi konveks dari
+unsur-unsur~$A$. (Namun, \emph{apakah} ini suatu himpunan konveks? Dan apakah ini himpunan
+terkecil yang memuat~$A$?) Akhirnya, sekalipun kedua pendekatan ini masuk akal, apakah
+keduanya merupakan definisi yang ekuivalen untuk \emph{selubung konveks}? Dengan kata
+lain, apakah keduanya mendefinisikan himpunan yang sama, dan apakah himpunan itu memenuhi
+definisi~\ref{smplx005def}?
+
+\begin{prop}\label{smplx006} Definisi-definisi yang disarankan dalam paragraf sebelumnya,
+yang diberi nama ``abstrak'' dan ``konstruktif'', masuk akal dan ekuivalen. Selain itu,
+himpunan yang dideskripsikan oleh keduanya memenuhi definisi \emph{selubung konveks} yang diberikan
+dalam~\ref{smplx005def}.
+\end{prop}
+
+\begin{prop} Jika $T\colon V \sto W$ merupakan pemetaan linear antara ruang-ruang vektor
+dan $C$ merupakan subhimpunan konveks dari $V$, maka $T^{\sto}(C)$ merupakan subhimpunan
+konveks dari~$W$.
+\end{prop}
+
+\begin{prop} Dalam ruang linear bernorma, tutupan setiap himpunan konveks bersifat
+konveks.
+\end{prop}
+
+\begin{prop} Misalkan $V$ suatu ruang linear bernorma. Untuk setiap $a \in V$, pemetaan
+$T_a\colon V \sto V\colon x \mapsto x + a$ (yang disebut
+ \index{translasi}%
+\df{translasi} oleh~$a$) merupakan homeomorfisme.
+\end{prop}
+
+\begin{cor} Jika $U$ merupakan subhimpunan terbuka tak kosong dari ruang linear bernorma
+$V$, maka $U - U$ memuat suatu lingkungan dari~$0$.
+\end{cor}
+
+\begin{prop} Jika $(x_n)$ merupakan barisan dalam ruang linear bernorma dan $x_n \sto a$,
+maka $\D\frac1n\sum_{k=1}^nx_k~\sto~a$.
+\end{prop}
+
+Dalam proposisi~\ref{00015025}, kita menunjukkan bagaimana suatu hasil kali dalam pada
+ruang vektor menginduksi norma pada ruang tersebut. Wajar untuk bertanya apakah semua
+norma dapat dihasilkan dengan cara ini dari suatu hasil kali dalam. Jawabannya adalah
+\emph{tidak}. Proposisi berikut memberikan syarat perlu dan cukup yang sangat sederhana
+agar suatu norma berasal dari hasil kali dalam.
+
+\begin{prop} Misalkan $V$ suatu ruang linear bernorma. Terdapat hasil kali dalam pada $V$
+yang menginduksi norma pada $V$ jika dan hanya jika norma tersebut memenuhi
+\emph{hukum jajaran genjang}~\ref{parallelogram_law}.
+\end{prop}
+
+\begin{proof}[\emph{Petunjuk pembuktian}] Untuk membuktikan bahwa jika suatu norma memenuhi
+\emph{hukum jajaran genjang}, maka norma itu diinduksi oleh hasil kali dalam, gunakan
+persamaan yang diberikan dalam \emph{identitas polarisasi}
+(proposisi~\ref{0001507}) sebagai definisi. Buktikan terlebih dahulu bahwa
+$\langle y,x \rangle = \conj{\langle x,y \rangle}$ untuk semua $x$, $y\in V$ dan bahwa
+$\langle x,x \rangle > 0$ apabila $x \ne 0$. Selanjutnya, untuk $z \in V$ sebarang,
+definisikan fungsi $f\colon V \sto \C\colon x \mapsto \langle x,z \rangle$. Buktikan bahwa
+   \[ f(x + y) + f(x - y) = 2f(x) \tag{$\ast$} \]
+untuk semua $x$, $y \in V$. Gunakan ini untuk membuktikan bahwa
+$f(\alpha x) = \alpha f(x)$ untuk semua $x \in V$ dan $\alpha \in \R$.
+(Mulailah dengan $\alpha$ berupa bilangan asli.) Kemudian tunjukkan bahwa $f$ aditif. (Jika
+$u$ dan $v$ merupakan unsur sebarang dari $V$, ambil $x = u + v$ dan $y = u - v$.
+Gunakan~$(\ast)$.) Terakhir, buktikan bahwa $f(\alpha x) = \alpha f(x)$ untuk $\alpha$
+kompleks dengan menunjukkan bahwa $f(ix) = i\,f(x)$ untuk semua $x \in V$. \ns
+\end{proof}
+
+\begin{defn} Misalkan $(X,\sfml T)$ suatu ruang topologis. Suatu keluarga
+$\sfml B \subseteq \sfml T$ merupakan
+ \index{basis!untuk suatu topologi}%
+\df{basis} untuk $\sfml T$ jika setiap anggota $\sfml T$ merupakan gabungan anggota-anggota
+$\sfml B$. Dengan kata lain, keluarga $\sfml B$ dari himpunan-himpunan terbuka merupakan
+basis untuk $\sfml T$ jika untuk setiap himpunan terbuka $U$ terdapat subkeluarga
+$\sfml B'$ dari $\sfml B$ sedemikian sehingga $U = \bigcup \sfml B'$.
+\end{defn}
+
+\begin{exam}\label{xmpl_top_metric} Pada bidang $\R^2$ dengan topologi biasa
+(Euklides), keluarga semua bola terbuka dalam ruang tersebut merupakan basis untuk
+topologinya, karena setiap himpunan terbuka dalam $\R^2$ dapat dinyatakan sebagai gabungan
+bola-bola terbuka. Bahkan, dalam ruang metrik mana pun, keluarga bola terbuka merupakan
+basis untuk suatu topologi pada ruang tersebut. Ini adalah
+ \index{topologi!diinduksi oleh metrik}%
+ \index{diinduksi!topologi}%
+\df{topologi yang diinduksi oleh metrik}.
+\end{exam}
+
+Dalam praktiknya (misalnya dalam ruang metrik), sering kali lebih mudah menentukan suatu
+basis untuk topologi daripada menentukan topologi itu sendiri. Namun, penting untuk
+menyadari bahwa mungkin terdapat banyak basis yang berbeda untuk topologi yang sama.
+Setelah suatu basis tertentu dipilih, kita menyebut anggota-anggotanya
+ \index{dasar!himpunan terbuka}%
+ \index{terbuka!himpunan!dasar}%
+\emph{himpunan terbuka dasar}.
+
+Kata ``menginduksi'' dipandang sebagai relasi transitif. Sebagai contoh, jika diberikan
+ruang hasil kali dalam $V$, tidak seorang pun akan menyebut \emph{topologi pada $V$ yang
+diinduksi oleh metrik yang diinduksi oleh norma yang diinduksi oleh hasil kali dalam}.
+Orang cukup menyebut \emph{topologi pada $V$ yang diinduksi oleh hasil kali dalam}.
+Kadang-kadang digunakan ``dibangkitkan oleh'' sebagai pengganti ``diinduksi oleh''.
+
+\begin{prop} Misalkan $V$ suatu ruang vektor dengan dua norma $\norm{\,\cdot\,}_1$ dan
+$\norm{\,\cdot\,}_2$. Misalkan $\sfml T_k$ topologi pada $V$ yang diinduksi oleh
+$\norm{\,\cdot\,}_k$ (untuk $k = 1,2$). Jika terdapat konstanta $\alpha > 0$ sedemikian
+sehingga $\norm{x}_1 \le \alpha \norm{x}_2$ untuk setiap $x \in V$, maka
+$\sfml T_1 \subseteq \sfml T_2$.
+\end{prop}
+
+\begin{defn} Dua norma pada ruang vektor $V$ disebut
+ \index{ekuivalen!norma}%
+ \index{norma!ekuivalen}%
+\df{ekuivalen} jika terdapat konstanta $\alpha$, $\beta > 0$ sedemikian sehingga untuk
+semua $x \in V$
+   \[ \alpha\norm{x}_1 \le \norm{x}_2 \le \beta \norm{x}_1\,. \]
+\end{defn}
+
+\begin{prop}\label{C023184} Jika $\norm{\hphantom{x}}_1$ dan
+$\norm{\hphantom{x}}_2$
+ \index{ekuivalen!norma!menginduksi topologi yang identik}%
+merupakan norma-norma ekuivalen pada ruang vektor~$V$, maka keduanya menginduksi topologi
+yang sama pada~$V$.
+\end{prop}
+
+Proposisi~\ref{C023184} memberi kita syarat cukup yang mudah diperiksa agar dua norma
+menginduksi topologi yang identik pada ruang vektor. Jadi, misalnya, jika kita hendak
+menunjukkan bahwa suatu subhimpunan dari ruang linear bernorma bersifat terbuka, boleh jadi
+pembuktiannya dapat disederhanakan dengan mengganti norma yang diberikan dengan norma
+ekuivalen.
+
+Demikian pula, andaikan kita hendak memeriksa bahwa suatu fungsi $f$ antara dua ruang
+linear bernorma bersifat kontinu. Karena kekontinuan didefinisikan dalam hal himpunan
+terbuka dan norma-norma ekuivalen menghasilkan himpunan-himpunan terbuka yang persis sama
+(lihat proposisi~\ref{C023184}), kita bebas mengganti norma pada domain $f$ dan kodomain
+$f$ dengan norma ekuivalen mana pun yang kita kehendaki. Proses ini kadang-kadang dapat
+sangat menyederhanakan argumen. (Kemungkinan penyederhanaan ini, secara kebetulan,
+merupakan salah satu keuntungan utama menggunakan definisi topologis untuk kekontinuan
+sejak awal.)
+
+\begin{defn}\label{C02319} Misalkan $x = (x_n)$ suatu barisan vektor dalam ruang linear
+bernorma $V$. Deret tak hingga $\sum_{k=1}^\infty x_k$ disebut
+ \index{konvergen!deret}%
+ \index{deret!konvergen}%
+\df{konvergen} jika terdapat vektor $b \in V$ sedemikian sehingga
+$\norm{b - s_n} \sto 0$ ketika $n \sto \infty$, dengan
+$s_n = \sum_{k=1}^n x_k$ sebagai jumlah parsial $\text{ke-}n$ dari barisan~$x$. Deret tersebut
+disebut
+ \index{mutlak!konvergen!deret}%
+ \index{konvergen!mutlak}%
+\df{konvergen mutlak} jika $\sum_{k=1}^\infty \norm{x_k} < \infty$.
+\end{defn}
+
+\begin{exer}\label{C023191} Misalkan
+ \index{l@$l_1$!sebagai ruang linear bernorma}%
+ \index{l@$l_1$!barisan yang dapat dijumlahkan mutlak}%
+ \index{bernorma!ruang linear!$l_1$ sebagai}%
+$l_1$ merupakan himpunan semua barisan $x = (x_n)$ dari bilangan kompleks sedemikian
+sehingga deret $\sum x_k$ konvergen mutlak. Jadikan $l_1$ ruang vektor dengan definisi
+penjumlahan dan perkalian skalar titik demi titik yang biasa. Untuk setiap $x \in l_1$,
+definisikan
+ \index{<unopn@$\norm{\hphantom{x}}_1$ (norma-$1$)}%
+ \index{<unopn@$\norm{\hphantom{x}}_\infty$ (norma seragam)}%
+   \begin{align*}
+      \norm{x}_1 &:= \sum_{k=1}^\infty \abs{x_k} \\
+   \intertext{dan}
+      \norm{x}_\infty &:= \sup\{\abs{x_k}\colon k \in \N\}.
+   \end{align*}
+(Masing-masing adalah
+ \index{satu@norma-$1$!dari suatu barisan}%
+ \index{norma!$1$- (dari suatu barisan)}%
+norma-$1$ dan
+ \index{seragam!norma!dari suatu barisan}%
+\emph{norma seragam}.) Tunjukkan bahwa $\norm{\hphantom{x}}_1$ dan
+$\norm{\hphantom{x}}_\infty$ keduanya merupakan norma pada~$l_1$. Kemudian buktikan atau
+sangkal:
+ \begin{enumerate}
+  \item[(a)] Jika suatu barisan $(x^i)$ dari vektor-vektor dalam ruang linear bernorma
+$\bigl(l_1, \norm{\hphantom{x}}_1\bigr)$ konvergen, maka barisan tersebut juga konvergen
+dalam $\bigl(l_1, \norm{\hphantom{x}}_\infty\bigr)$.
+  \item[(b)] Jika suatu barisan $(x^i)$ dari vektor-vektor dalam ruang linear bernorma
+$\bigl(l_1, \norm{\hphantom{x}}_\infty\bigr)$ konvergen, maka barisan tersebut juga
+konvergen dalam $\bigl(l_1, \norm{\hphantom{x}}_1\bigr)$.
+ \end{enumerate}
+\end{exer}
+
+
+
+
+
+
+
+
+\section{Pemetaan Linear Terbatas}\label{sec_bdd_lin_maps}
+Para analis bekerja dengan objek-objek yang memiliki struktur aljabar sekaligus topologis.
+Pada bagian sebelumnya kita mengkaji ruang-ruang vektor yang dilengkapi dengan topologi
+yang berasal dari suatu norma. Jika ruang-ruang itu merupakan objek yang sedang
+dipertimbangkan, morfisme apakah yang kiranya paling menarik? Jawaban yang masuk akal,
+dan memang benar, adalah \emph{pemetaan yang melestarikan struktur topologis maupun
+aljabar}; yakni, pemetaan linear kontinu. Kategori yang dihasilkan dinotasikan dengan
+ \index{kategori!$\cat{NLS_\infty}$ sebagai suatu}%
+ \index{NLSinf@$\cat{NLS_{\boldsymbol\infty}}$!kategori}
+$\cat{NLS_{\boldsymbol\infty}}$. Secara topologis, isomorfisme dalam kategori ini adalah
+homeomorfisme.
+
+Berikut adalah suatu syarat yang sangat berguna yang, untuk pemetaan linear, ternyata
+ekuivalen dengan kekontinuan.
+
+\begin{defn} Suatu pemetaan linear $T\colon V \sto W$ antara ruang-ruang linear bernorma
+disebut
+ \index{terbatas!pemetaan linear}%
+ \index{linear!pemetaan!terbatas}%
+\df{terbatas} jika $T(B)$ merupakan subhimpunan terbatas dari $W$ setiap kali $B$
+merupakan subhimpunan terbatas dari~$V$. Dengan kata lain, pemetaan linear terbatas
+membawa himpunan terbatas ke himpunan terbatas. Kita menyatakan
+ \index{B@$\ofml B(V,W)$!pemetaan linear terbatas}%
+dengan~$\ofml B(V,W)$ keluarga semua pemetaan linear terbatas dari $V$ ke~$W$. Pemetaan
+linear terbatas dari suatu ruang $V$ ke dirinya sendiri sering disebut suatu
+ \index{operator}%
+ \index{konvensi!semua operator terbatas dan linear}%
+\df{operator} (linear terbatas). Keluarga semua operator pada ruang linear bernorma $V$
+dinotasikan
+ \index{B@$\ofml B(V)$!operator}%
+dengan~$\ofml B(V)$. Kelas ruang linear bernorma bersama pemetaan linear terbatas di antara
+ruang-ruang tersebut membentuk suatu kategori. Di bawah ini kita memeriksa bahwa kategori
+ini tidak lain adalah kategori~$\cat{NLS_{\boldsymbol\infty}}$.
+\end{defn}
+
+\begin{cau} Sangat penting untuk menyadari bahwa secara umum suatu pemetaan linear
+terbatas \emph{bukan} fungsi terbatas dalam arti biasa dari suatu \emph{fungsi terbatas}
+pada himpunan tertentu (lihat contoh~\ref{C023131} dan~\ref{C023133}). Penggunaan kata
+``terbatas'' dalam kedua arti yang bertentangan ini mungkin kurang menguntungkan, tetapi
+sudah mapan.
+\end{cau}
+
+\begin{exam} Pemetaan linear $T\colon \R \sto \R\colon x \mapsto 3x$ merupakan pemetaan
+linear terbatas (karena memetakan subhimpunan terbatas dari $\R$ ke subhimpunan terbatas
+dari~$\R$), tetapi jika dipandang hanya sebagai fungsi, $T$ tidak terbatas (karena
+jangkauannya bukan subhimpunan terbatas dari~$\R$).
+\end{exam}
+
+Pengamatan berikut dapat membantu mengurangi kebingungan.
+
+\begin{prop} Suatu pemetaan linear, kecuali jika merupakan pemetaan konstan yang membawa
+setiap vektor ke nol, \emph{tidak mungkin} merupakan fungsi terbatas.
+\end{prop}
+
+\begin{defn} Misalkan $(M,d)$ dan $(N,\rho)$ ruang-ruang metrik. Suatu fungsi
+$f \colon M \sto N$ disebut
+ \index{seragam!kekontinuan}%
+ \index{kekontinuan!seragam}%
+\df{kontinu seragam} jika untuk setiap $\epsilon > 0$ terdapat $\delta > 0$ sedemikian
+sehingga $\rho(f(x),f(y)) < \epsilon$ setiap kali $x$, $y \in M$ dan
+$d(x,y) < \delta$.
+\end{defn}
+
+Salah satu aspek linearitas yang paling mencolok adalah bahwa untuk pemetaan linear,
+konsep kekontinuan, kekontinuan di satu titik saja, dan kekontinuan seragam menyatu.
+Bahkan, semua konsep tersebut persis sama dengan keterbatasan.
+
+\begin{thm}\label{C023221} Misalkan $T \colon V \sto W$ suatu pemetaan linear antara
+ruang-ruang linear bernorma. Maka pernyataan-pernyataan berikut ekuivalen:
+  \begin{enumerate}[label=\rm{(\alph*)}]
+    \item $T$ terbatas.
+    \item Citra bola satuan tertutup di bawah $T$ merupakan himpunan terbatas.
+    \item $T$ kontinu seragam pada $V$.
+    \item $T$ kontinu pada $V$.
+    \item $T$ kontinu di~$\vc 0$.
+    \item Terdapat bilangan $M > 0$ sedemikian sehingga
+$\norm{Tx} \le M\norm{x}$ untuk semua $x \in V$.
+  \end{enumerate}
+\end{thm}
+
+\begin{prop} Misalkan $T\colon V \sto W$ suatu pemetaan linear terbatas antara ruang-ruang
+linear bernorma dengan domain bukan ruang nol. Maka keempat bilangan berikut ada dan bernilai sama.
+ \begin{enumerate}[label=\rm{(\alph*)}]
+  \item $\sup\{\norm{Tx}\colon \norm{x} \le 1\}$
+  \item $\sup\{\norm{Tx}\colon \norm{x} = 1\}$
+  \item $\sup\{\norm{Tx}\,\norm{x}^{-1}\colon x \ne \vc 0\}$
+  \item $\inf\{M > 0\colon \norm{Tx} \le M\norm{x}\ \text{ untuk semua $x \in V$}\}$
+ \end{enumerate}
+\end{prop}
+
+\begin{defn}\label{defn_op_norm} Jika $T$ merupakan pemetaan linear terbatas, maka
+$\norm{T}$, yang disebut
+ \index{norma!pemetaan linear terbatas}%
+ \index{<unopn@$\norm T$ (norma pemetaan linear terbatas~$T$)}%
+\df{norma} (atau
+ \index{norma!operator}%
+ \index{operator!norma}%
+\df{norma operator}) dari $T$, didefinisikan sebagai salah satu dari empat ungkapan dalam
+proposisi sebelumnya; untuk domain nol, nilainya ditetapkan nol.
+\end{defn}
+
+\begin{exam}\label{exam_op_norm_norm} Jika $V$ dan $W$ merupakan ruang-ruang linear
+bernorma, maka fungsi
+   \[ \norm{\hphantom{T}}\colon \ofml B(V,W) \sto \R
+      \colon T \mapsto \norm{T} \]
+memang merupakan suatu norma.
+\end{exam}
+
+\begin{exam}\label{C023228} Keluarga $\ofml B(V,W)$ dari semua pemetaan linear terbatas
+ \index{B@$\ofml B(V,W)$!sebagai ruang linear bernorma}%
+ \index{bernorma!ruang linear!$\ofml B(V,W)$ sebagai}%
+antara ruang-ruang linear bernorma itu sendiri merupakan ruang linear bernorma di bawah
+norma operator yang didefinisikan di atas serta operasi penjumlahan dan perkalian skalar
+titik demi titik yang biasa. Yang khususnya penting adalah keluarga
+$V^* = \ofml B(V,\K)$ dari anggota-anggota \emph{kontinu} dalam~$V^{\#}$, yaitu
+ \index{kontinu!fungsional linear}%
+ \index{linear!fungsional!kontinu}%
+ \index{fungsional!linear kontinu}%
+\emph{fungsional linear kontinu}, yang juga dikenal sebagai
+ \index{terbatas!fungsional linear}%
+ \index{linear!fungsional!terbatas}%
+ \index{fungsional!linear terbatas}%
+\emph{fungsional linear terbatas}.
+Ingat bahwa dalam~\ref{def_alg_dual} kita mendefinisikan dual aljabar $V^{\#}$ dari ruang
+vektor~$V$. Yang lebih penting dalam pembahasan kita di sini adalah $V^*$, yang disebut
+ \index{<unopurstar@$V^*$ (ruang dual dari ruang linear bernorma)}%
+ \index{V@$V^*$ (ruang dual dari ruang linear bernorma)}%
+ \index{dual!ruang}%
+ \index{ruang!dual dari ruang linear bernorma}%
+\df{ruang dual} dari~$V$. Untuk membedakannya dari dual aljabar dan dual urutan, ruang ini
+kadang-kadang disebut
+ \index{dual!norma}%
+ \index{norma!dual}%
+\df{dual norma} atau
+ \index{dual!topologis}%
+ \index{topologis!dual}%
+\df{dual topologis} dari~$V$. Perhatikan bahwa pembedaan ini tidak diperlukan dalam ruang
+berdimensi hingga karena di sana $V^* = V^{\#}$ (lihat~\ref{00015033}).
+\end{exam}
+
+\begin{prop}\label{C023228a} Keluarga $\ofml B(V,W)$ dari semua pemetaan linear terbatas
+ \index{B@$\ofml B(V,W)$!sebagai ruang Banach}%
+ \index{Banach!ruang!$\ofml B(V,W)$ sebagai}%
+antara ruang-ruang linear bernorma bersifat lengkap (terhadap metrik yang diinduksi oleh
+normanya) setiap kali $W$ lengkap. Secara khusus, ruang dual dari setiap ruang linear
+bernorma bersifat lengkap.
+\end{prop}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{prop}\label{0003073} Misalkan $U$, $V$, dan $W$ ruang-ruang linear bernorma. Jika
+$S \in \ofml B(U,V)$ dan $T \in \ofml B(V,W)$, maka $TS \in \ofml B(U,W)$ dan
+$\norm{TS} \le \norm T \norm S$.
+\end{prop}
+
+\begin{exam} Pada setiap ruang linear bernorma $V$ yang bukan ruang nol,
+ \index{operator!identitas}%
+ \index{identitas!operator}%
+\emph{operator identitas}
+   \[ \id V = I_V =I\colon V \sto V \colon v \mapsto v \]
+terbatas dan $\norm{I_V} = 1$.
+ \index{operator!nol}%
+ \index{nol!operator}%
+\emph{Operator nol}
+   \[ \vc 0_V = \vc 0\colon V \sto V\colon v \mapsto \vc 0 \]
+juga terbatas dan $\norm{0_V} = 0$.
+\end{exam}
+
+\begin{exam} Misalkan
+$T \colon \R^2 \sto \R^3\colon (x,y) \mapsto (3x, x + 2y, x - 2y)$.
+Maka~$\norm{T} = \sqrt{11}$.
+\end{exam}
+
+Banyak mahasiswa yang baru saja menyelesaikan mata kuliah kalkulus dasar merasa bahwa
+diferensiasi merupakan operasi yang ``lebih baik'' daripada integrasi---mungkin
+karena aturan integrasi tampak lebih rumit daripada aturan diferensiasi. Namun,
+ketika kita memandang keduanya sebagai pemetaan linear, yang benar justru sebaliknya.
+
+\begin{exam} Sebagai pemetaan linear pada ruang fungsi-fungsi yang dapat didiferensialkan
+pada $[0,1]$ (dengan norma seragam), integrasi terbatas; diferensiasi tidak terbatas
+(dan karena itu tidak kontinu di titik mana pun!).
+\end{exam}
+
+
+\begin{defn} Misalkan $f\colon V_1 \sto V_2$ suatu fungsi antara ruang-ruang linear
+bernorma. Untuk $k = 1,2$, misalkan $\norm{\hphantom{M}}_k$ norma pada~$V_k$ dan $d_k$
+metrik pada $V_k$ yang diinduksi oleh~$\norm{\hphantom{M}}_k$ (lihat
+contoh~\ref{0001503}). Maka $f$ merupakan
+ \index{isometri}%
+\df{isometri} (atau
+suatu pemetaan \df{isometrik}) jika $d_2(f(x),f(y)) = d_1(x,y)$ untuk semua
+ $x$, $y \in V_1$. Pemetaan itu dikatakan
+ \index{norma!dipertahankan}%
+\df{mempertahankan norma} jika $\norm{f(x)}_2 = \norm{x}_1$ untuk semua $x \in V_1$.
+\end{defn}
+
+Sebelumnya dalam bagian ini kita telah membahas kategori
+$\cat{NLS_{\boldsymbol\infty}}$ dari ruang linear bernorma dan pemetaan linear kontinu.
+Dalam kategori ini, isomorfisme melestarikan struktur topologis (selain struktur ruang
+vektor). Apa yang akan terjadi jika kita justru menghendaki isomorfisme melestarikan
+struktur metrik dari ruang-ruang linear bernorma; yakni, menjadi isometri? Mudah
+dilihat bahwa (dengan adanya linearitas) hal ini ekuivalen dengan meminta agar isomorfisme
+mempertahankan norma. Dalam kategori baru ini, yang dinotasikan dengan
+ \index{kategori!$\cat{NLS_{\vc 1}}$ sebagai suatu}%
+ \index{NLS1@$\cat{NLS_{\vc 1}}$!kategori}
+$\cat{NLS_{\vc 1}}$, morfismenya adalah
+ \index{kontraktif}%
+\df{pemetaan linear kontraktif}, yaitu pemetaan linear $T\colon V \sto W$ antara
+ruang-ruang linear bernorma sedemikian sehingga $\norm{Tx} \le \norm x$ untuk semua
+$x \in V$. Tampaknya tepat untuk menyebut $\cat{NLS_{\boldsymbol\infty}}$ sebagai
+ \index{topologis!kategori}%
+ \index{kategori!topologis}%
+\emph{kategori topologis} ruang linear bernorma dan $\cat{NLS_{\vc 1}}$ sebagai
+ \index{kategori geometris}%
+ \index{kategori!geometris}%
+\emph{kategori geometris} ruang linear bernorma. Banyak penulis menggunakan istilah
+``isomorfisme'' tanpa pengubah untuk isomorfisme dalam kategori topologis
+$\cat{NLS_{\boldsymbol\infty}}$ dan
+ \index{isometrik!isomorfisme}%
+ \index{isomorfisme!isometrik}%
+``isomorfisme isometrik'' untuk isomorfisme dalam kategori geometris
+$\cat{NLS_{\vc 1}}$. Dalam catatan ini kita akan berfokus pada kategori topologis.
+Teori isometrik ruang linear bernorma, meskipun penting, agak lebih khusus.
+
+\begin{exer} Periksalah pernyataan-pernyataan yang belum dibuktikan dalam paragraf
+sebelumnya. Secara khusus, buktikan bahwa
+ \begin{enumerate}
+    \item[(a)] $\cat{NLS_{\boldsymbol\infty}}$ merupakan suatu kategori.
+    \item[(b)] Suatu isomorfisme dalam $\cat{NLS_{\boldsymbol\infty}}$ merupakan
+isomorfisme ruang vektor sekaligus homeomorfisme.
+    \item[(c)] Suatu pemetaan linear antara ruang-ruang linear bernorma merupakan isometri
+jika dan hanya jika pemetaan tersebut mempertahankan norma.
+    \item[(d)] $\cat{NLS_{\vc 1}}$ merupakan suatu kategori.
+    \item[(e)] Suatu isomorfisme dalam $\cat{NLS_{\vc 1}}$ merupakan isometri sekaligus
+isomorfisme ruang vektor.
+    \item[(f)] Kategori $\cat{NLS_{\vc 1}}$ merupakan subkategori dari
+$\cat{NLS_{\boldsymbol\infty}}$ dalam arti bahwa setiap morfisme kategori pertama
+termasuk dalam kategori kedua.
+ \end{enumerate}
+\end{exer}
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Ruang Berdimensi Hingga}
+Dalam bagian ini dicantumkan beberapa fakta baku dan berguna tentang ruang berdimensi hingga. Bukti hasil-hasil ini
+cukup mudah ditemukan. Lihat, misalnya, \cite{BrownP:1970}, Bagian 4.4; \cite{Conway:1990}, Bagian III.3;
+\cite{Kreyszig:1978}, Bagian 2.4--5; atau \cite{Rudin:1991}, halaman 16--18.
+
+\begin{defn} Suatu barisan $(x_n)$ dalam ruang metrik disebut
+ \index{Cauchy!barisan}%
+ \index{barisan!Cauchy}%
+\df{barisan Cauchy} jika untuk setiap $\epsilon > 0$ terdapat $n_0 \in \N$ sedemikian sehingga
+$d(x_m,x_n) < \epsilon$ apabila $m$, $n \ge n_0$. Syarat ini sering disingkat sebagai
+berikut: $d(x_m, x_n) \sto 0$ ketika $m$, $n \sto \infty$ (atau $\lim_{m,n \sto
+\infty}d(x_m,x_n) = 0$).
+\end{defn}
+
+\begin{defn} Suatu ruang metrik $M$ disebut
+ \index{lengkap!ruang metrik}%
+ \index{ruang metrik!lengkap}%
+ \index{ruang!metrik lengkap}%
+\df{lengkap} jika setiap barisan Cauchy dalam $M$ konvergen. (Untuk meninjau kembali fakta-fakta paling dasar tentang ruang
+metrik lengkap, lihat bagian pertama Bab 20 dalam catatan daring saya~\cite{Erdman:2007}.)
+\end{defn}
+
+\begin{prop}\label{prop_fdnls_Kn} Jika $V$ adalah ruang linear bernorma berdimensi $n$ atas $\K$, maka terdapat suatu pemetaan
+ \index{berdimensi hingga!ruang linear bernorma}%
+dari $V$ ke $\K^n$ yang sekaligus merupakan homeomorfisme dan isomorfisme ruang vektor.
+\end{prop}
+
+\begin{cor} Setiap ruang linear bernorma berdimensi hingga bersifat lengkap.
+\end{cor}
+
+\begin{cor}\label{cor_fdvs_closed} Setiap subruang vektor berdimensi hingga dari suatu ruang linear bernorma bersifat tertutup.
+\end{cor}
+
+\begin{cor}\label{cor_fdvs_norms_equiv} Sebarang dua norma pada suatu ruang vektor berdimensi hingga bersifat ekuivalen.
+\end{cor}
+
+\begin{defn} Subhimpunan $K$ dari ruang topologis $X$ disebut
+ \index{kompak}%
+\df{kompak} jika setiap keluarga $\sfml U$ yang terdiri atas subhimpunan-subhimpunan terbuka dari $X$ dan gabungannya memuat $K$ memiliki
+subkeluarga hingga dari $\sfml U$ yang gabungannya memuat~$K$.
+\end{defn}
+
+\begin{prop}\label{00015032} Bola satuan tertutup dalam suatu ruang linear bernorma bersifat kompak jika dan hanya jika
+ruang tersebut berdimensi hingga.
+\end{prop}
+
+\begin{prop}\label{00015033} Jika $V$ dan $W$ adalah ruang-ruang linear bernorma dan $V$ berdimensi hingga, maka
+setiap pemetaan linear $T \colon V \sto W$ bersifat kontinu.
+\end{prop}
+
+Misalkan $T$ suatu pemetaan linear terbatas antara ruang-ruang linear bernorma (yang mungkin berdimensi tak hingga). Sama seperti dalam kasus
+berdimensi hingga, kernel dan jangkauan $T$ merupakan objek yang sangat penting. Baik dalam kasus berdimensi hingga maupun tak hingga,
+keduanya merupakan subruang vektor dari ruang yang memuatnya. Selain itu, dalam kedua kasus tersebut kernel $T$ bersifat tertutup.
+(Di bawah suatu fungsi kontinu, pracitra himpunan tertutup bersifat tertutup.) Akan tetapi, terdapat perbedaan besar antara
+kedua kasus itu. Dalam kasus berdimensi hingga, jangkauan $T$ harus tertutup (berdasarkan~\ref{cor_fdvs_closed}). Seperti akan kita lihat
+dalam Contoh~\futurexref{5.2.14}{exam_ran_nonclosed}, pemetaan linear antara ruang-ruang berdimensi tak hingga tidak harus memiliki jangkauan tertutup.
+
+\section{Hasil Bagi Ruang Linear Bernorma}
+
+\begin{defn}\label{quo001def} Misalkan $A$ adalah objek dalam suatu kategori konkret $\cat C$.
+Suatu morfisme surjektif $A \to^\pi B$ dalam $\cat C$ disebut
+ \index{hasil bagi!pemetaan!untuk kategori konkret}%
+ \index{pi@$\pi$ (pemetaan hasil bagi)}%
+\df{pemetaan hasil bagi} untuk $A$ jika suatu fungsi $g\colon B \sto C$ (dalam $\cat{SET}$) merupakan morfisme
+(dalam $\cat C$) setiap kali $g \circ \pi$ merupakan morfisme. Suatu objek $B$ dalam $\cat C$ disebut
+ \index{hasil bagi!objek}%
+\df{objek hasil bagi} untuk $A$ jika merupakan citra suatu pemetaan hasil bagi untuk~$A$.
+\end{defn}
+
+\begin{exam} Dalam kategori $\cat{VEC}$ yang terdiri atas ruang-ruang vektor dan pemetaan-pemetaan linear, setiap pemetaan linear
+ \index{hasil bagi!pemetaan!dalam $\cat{VEC}$}%
+surjektif merupakan pemetaan hasil bagi.
+\end{exam}
+
+\begin{exam}\label{C021734} Dalam kategori $\cat{TOP}$, tidak setiap epimorfisme merupakan
+ \index{hasil bagi!pemetaan!dalam $\cat{TOP}$}%
+pemetaan hasil bagi.
+\end{exam}
+
+\begin{proof}[\emph{Petunjuk pembuktian}] Tinjau pemetaan identitas pada bilangan real dengan topologi yang berbeda
+pada domain dan kodomainnya. \ns
+\end{proof}
+
+Butir berikut, yang semestinya sudah dikenal dari aljabar linear, menunjukkan cara menghasilkan suatu objek hasil bagi tertentu dengan
+``mengambil hasil bagi oleh suatu subruang''.
+
+\begin{defn}\label{quo002def} Misalkan $M$ adalah subruang dari ruang vektor $V$. Definisikan suatu
+relasi ekuivalensi $\sim$ pada $V$ dengan
+   \[ x \sim y \qquad \text{jika dan hanya jika} \qquad y - x \in M. \]
+Untuk setiap $x \in V$, misalkan $[x]$ adalah kelas ekuivalensi yang memuat~$x$.
+ \index{<bracsqr@$[x]$ (kelas ekuivalensi yang memuat~$x$)}%
+ \index{<binop@$V/M$ (hasil bagi $V$ oleh $M$)}%
+Misalkan $V/M$ adalah himpunan semua kelas ekuivalensi unsur-unsur~$V$. Untuk $[x]$ dan $[y]$
+dalam $V/M$, definisikan
+  \[ [x] + [y] := [x+y]\]
+dan untuk $\alpha \in \K$ serta $[x] \in V/M$, definisikan
+  \[\alpha[x] := [\alpha x].\]
+Terhadap operasi-operasi ini, $V/M$ menjadi ruang vektor. Ruang ini adalah
+ \index{hasil bagi!ruang vektor}%
+ \index{ruang!hasil bagi!vektor}%
+\df{ruang hasil bagi} dari $V$ oleh~$M$. Notasi $V/M$ biasanya dibaca ``$V$ modulo~$M$''.
+Pemetaan linear
+  \[ \pi\colon V \sto V/M\colon x \mapsto [x] \]
+disebut
+ \index{hasil bagi!pemetaan!untuk ruang vektor}%
+ \index{pi@$\pi$ (pemetaan hasil bagi)}%
+\df{pemetaan hasil bagi}.
+\end{defn}
+
+\begin{exer} Verifikasilah pernyataan-pernyataan dalam Definisi~\ref{quo002def}. Secara khusus,
+tunjukkan bahwa $\sim$ merupakan relasi ekuivalensi, bahwa penjumlahan dan perkalian skalar pada
+himpunan kelas-kelas ekuivalensi terdefinisi dengan baik, bahwa terhadap operasi-operasi ini $V/M$ merupakan
+ruang vektor, bahwa fungsi yang di sini disebut ``pemetaan hasil bagi'' memang merupakan pemetaan hasil bagi
+dalam pengertian~\ref{quo001def}, dan bahwa pemetaan hasil bagi ini bersifat linear.
+\end{exer}
+
+Hasil berikut disebut \emph{teorema dasar hasil bagi} atau
+ \index{hasil bagi!teorema!untuk $\cat{VEC}$}%
+ \index{teorema isomorfisme pertama}%
+{teorema isomorfisme pertama} untuk ruang-ruang vektor.
+
+\begin{thm}\label{quo005} Misalkan $V$ dan $W$ adalah ruang-ruang vektor dan $M \preceq V$. Jika
+$T \in \ofml L(V,W)$ dan $\ker T \supseteq M$, maka terdapat tepat satu $\wt T \in
+\ofml L(V/M\,,W)$ yang membuat diagram berikut komutatif.
+ \[\xymatrix@+30pt{V \ar[d]_*+{\pi} \ar[dr]^*+{T} & \\
+            V/M \ar[r]_*+{\widetilde T} & W  }\]
+Selanjutnya, $\wt T$ injektif jika dan hanya jika $\ker T = M$; dan $\wt T$ surjektif
+jika dan hanya jika $T$ surjektif.
+\end{thm}
+
+\begin{cor} Jika $T\colon V \sto W$ adalah pemetaan linear antara ruang-ruang vektor, maka
+$\ran T \cong V/\ker T$.
+\end{cor}
+
+\begin{prop}\label{C023711} Misalkan $V$ adalah ruang linear bernorma dan $M$ adalah subruang tertutup
+dari~$V$.
+ \index{hasil bagi!ruang linear bernorma}%
+ \index{bernorma!ruang linear!hasil bagi}%
+ \index{ruang!hasil bagi!linear bernorma}%
+Maka pemetaan
+  \[ \norm{\hphantom{x}} \colon V/M \sto \R \colon [x]
+                        \mapsto \inf\{\norm u \colon u \sim x\} \]
+merupakan norma pada~$V/M$. Selanjutnya,
+ \index{pi@$\pi$ (pemetaan hasil bagi)}%
+ \index{hasil bagi!pemetaan!untuk ruang linear bernorma}%
+pemetaan hasil bagi
+  \[ \pi \colon V \sto V/M \colon x \mapsto [x] \]
+merupakan surjeksi linear terbatas dengan $\norm\pi \le 1$.
+\end{prop}
+
+\begin{defn} Norma yang didefinisikan pada $V/M$ disebut
+ \index{hasil bagi!norma}%
+ \index{norma!hasil bagi}%
+\df{norma hasil bagi} pada~$V/M$. Terhadap norma ini $V/M$ merupakan ruang linear bernorma dan disebut
+ \index{ruang hasil bagi}%
+ \index{ruang!hasil bagi}%
+\df{ruang hasil bagi} dari $V$ oleh~$M$. Ruang ini sering disebut sebagai ``$V$ modulo $M$''.
+\end{defn}
+
+\begin{thm}[Teorema dasar hasil bagi untuk $\cat{NLS_{\boldsymbol\infty}}$]\label{C023717}
+ \index{hasil bagi!teorema!untuk $\cat{NLS_{\boldsymbol\infty}}$}%
+Misalkan $V$ dan $W$ adalah ruang-ruang linear bernorma dan $M$ adalah subruang tertutup dari~$V$. Jika $T$ merupakan
+pemetaan linear terbatas dari $V$ ke $W$ dan $\ker T \supseteq M$, maka terdapat suatu
+pemetaan linear terbatas tunggal $\wt T\colon V/M \sto W$ yang membuat diagram berikut komutatif.
+  \[ \xymatrix@+30pt{V \ar[d]_*+{\pi} \ar[dr]^*+{T} & \\
+             V/M \ar[r]_*+{\wt T} & W  } \]
+Selanjutnya: $\norm{\wt T} = \norm{T}$; $\wt T$ injektif jika dan hanya jika $\ker T = M$;
+dan $\wt T$ surjektif jika dan hanya jika $T$ surjektif.
+\end{thm}
+
+\section{Hasil Kali Ruang Linear Bernorma}\label{C0155}
+Hasil kali dan koproduk, seperti hasil bagi, paling baik dideskripsikan dari segi apa yang \emph{dilakukannya}.
+
+\begin{defn}\label{C015511} Misalkan $A_1$ dan $A_2$ adalah objek-objek dalam suatu kategori~$\cat C$. Kita mengatakan bahwa
+tripel $(P,\pi_1,\pi_2)$, dengan $P$ suatu objek dan $\pi_k\colon P \sto A_k$ ($k =
+1,2$) morfisme-morfisme, merupakan suatu
+ \index{hasil kali!dalam suatu kategori}%
+\df{hasil kali} dari $A_1$ dan $A_2$ jika untuk setiap objek $B$ dan setiap pasangan morfisme
+$f_k\colon B \sto A_k$ ($k = 1,2$) terdapat morfisme tunggal $f\colon B \sto P$ sedemikian
+sehingga $f_k = \pi_k \circ f$ untuk $k = 1,2$.
+
+Sudah lazim untuk mengatakan, ``Misalkan $P$ suatu hasil kali dari \dots'' sebagai pengganti, ``Misalkan $(P,\pi_1,\pi_2)$
+suatu hasil kali dari \dots''. Hasil kali $A_1$ dan $A_2$ sering ditulis sebagai $A_1 \times
+A_2$ atau sebagai $\prod_{k = 1,2} A_k$.
+\end{defn}
+
+Dalam suatu kategori tertentu, hasil kali mungkin ada ataupun tidak. Merupakan fakta yang menarik dan
+dasar bahwa kapan pun hasil kali itu ada, hasil kali tersebut unik (hingga isomorfisme), sehingga kita
+dapat berbicara tanpa ambiguitas tentang \emph{hasil kali} dua objek. Ketika kita mengatakan bahwa suatu
+objek kategori yang memenuhi satu atau beberapa syarat bersifat \emph{unik hingga isomorfisme}, tentu saja kita
+bermaksud bahwa sebarang dua objek yang memenuhi syarat-syarat tersebut harus isomorfik. Kita
+akan sering menggunakan frasa
+ \index{esensial!unik}%
+ \index{konvensi!unik secara esensial berarti unik hingga isomorfisme}%
+ \index{ketunggalan!esensial}%
+``unik secara esensial'' untuk ``unik hingga isomorfisme''.
+
+\begin{prop} Dalam sebarang kategori, hasil kali (jika ada) bersifat
+ \index{hasil kali!ketunggalan}%
+ \index{ketunggalan!hasil kali}%
+unik secara esensial.
+\end{prop}
+
+\begin{exam}\label{C015517} Dalam kategori $\cat{SET}$,
+ \index{hasil kali!dalam $\cat{SET}$}%
+ \index{SET@$\cat{SET}$!hasil kali dalam}%
+hasil kali dua himpunan $A_1$ dan $A_2$ ada dan sesungguhnya merupakan hasil kali Kartesius biasa
+$A_1 \times A_2$ beserta proyeksi koordinat biasa $\pi_k\colon A_1 \times
+A_2 \sto A_k \colon (a_1,a_2) \mapsto a_k$.
+\end{exam}
+
+\begin{exam}\label{C015521} Jika $V_1$ dan $V_2$ adalah ruang-ruang vektor, kita menjadikan hasil kali Kartesius
+$V_1 \times V_2$ suatu ruang vektor sebagai berikut. Definisikan penjumlahan dengan
+  \[ (u,v) + (w,x) := (u + w, v + x)  \]
+dan perkalian skalar dengan
+  \[ \alpha (u,v) := (\alpha u, \alpha v) \,. \]
+Hal ini menjadikan $V_1 \times V_2$ suatu ruang vektor, dan ruang ini beserta
+proyeksi koordinat biasa $\pi_k\colon V_1 \times V_2 \sto V_k \colon (v_1,v_2)
+\mapsto v_k$ ($k = 1,2$) merupakan
+ \index{hasil kali!dalam $\cat{VEC}$}%
+ \index{VEC@$\cat{VEC}$!hasil kali dalam}%
+ \index{vektor!ruang!hasil kali}%
+suatu hasil kali dalam kategori $\cat{VEC}$. Ruang ini biasanya disebut
+ \index{langsung!jumlah!ruang vektor}%
+ \index{jumlah!langsung}%
+ \index{vektor!ruang!jumlah langsung}%
+ \index{<binopdirectsum@$\oplus$ (jumlah langsung)}%
+\df{jumlah langsung} dari $V_1$ dan $V_2$ dan dinotasikan dengan~$V_1 \oplus V_2$.
+\end{exam}
+
+Sering kali mungkin dan dikehendaki untuk mengambil hasil kali dari sebarang keluarga objek dalam
+suatu kategori. Berikut adalah perumuman Definisi~\ref{C015511}.
+
+\begin{defn}\label{C015524} Misalkan $\bigl(A_\lambda\bigr)_{\lambda \in \Lambda}$ adalah suatu
+keluarga terindeks objek-objek dalam kategori~$\cat C$. Kita mengatakan bahwa objek $P$ beserta
+suatu keluarga terindeks $\bigl(\pi_\lambda\bigr)_{\lambda \in \Lambda}$ dari morfisme-morfisme
+$\pi_\lambda\colon P \sto A_\lambda$ merupakan
+ \index{hasil kali!dalam suatu kategori}%
+\df{hasil kali} objek-objek $A_\lambda$ jika untuk setiap objek $B$ dan setiap keluarga terindeks
+$\bigl(f_\lambda\bigr)_{\lambda \in \Lambda}$ dari morfisme-morfisme $f_\lambda\colon B \sto
+A_\lambda$ terdapat pemetaan tunggal $g \colon B \sto P$ sedemikian sehingga $f_\lambda =
+\pi_\lambda \circ g$ untuk setiap $\lambda \in \Lambda$.
+\end{defn}
+
+Suatu kategori yang di dalamnya sebarang hasil kali ada disebut
+ \index{hasil kali!lengkap}%
+ \index{lengkap!hasil kali}%
+\df{lengkap terhadap hasil kali}. Banyak kategori yang kita jumpai dalam catatan ini lengkap
+terhadap hasil kali.
+
+\begin{defn}\label{C015531} Misalkan $\bigl(S_\lambda\bigr)_{\lambda \in \Lambda}$ adalah suatu keluarga
+terindeks himpunan.
+ \index{hasil kali Kartesius}%
+ \index{hasil kali!Kartesius}%
+\df{Hasil kali Kartesius} dari keluarga terindeks tersebut, yang dinotasikan dengan
+ \index{<<@$\prod S_\lambda$ (hasil kali Kartesius)}%
+$\prod_{\lambda \in \Lambda} S_\lambda$ atau cukup $\prod S_\lambda$, adalah himpunan semua
+fungsi $f \colon \Lambda \sto \bigcup S_\lambda$ sedemikian sehingga $f(\lambda) \in S_\lambda$
+untuk setiap $\lambda \in \Lambda$. Pemetaan-pemetaan $\pi_\lambda \colon \prod S_\lambda \sto
+S_\lambda \colon f \mapsto f(\lambda)$ merupakan
+ \index{koordinat!proyeksi}%
+ \index{pi@$\pi_\lambda$ (proyeksi koordinat)}%
+ \index{proyeksi!ke koordinat}%
+\df{proyeksi koordinat} kanonik. Dalam banyak kasus, notasi $f_\lambda$ lebih mudah digunakan
+daripada~$f(\lambda)$. (Lihat, misalnya, Contoh~\ref{C015537} di bawah.)
+\end{defn}
+
+\begin{exam}\label{C015534} Suatu kasus khusus yang sangat penting dari definisi sebelumnya muncul
+ketika semua himpunan $S_\lambda$ identik: misalkan $S_\lambda = A$ untuk setiap $\lambda
+\in \Lambda$. Dalam hal ini, hasil kali Kartesius tersebut terdiri atas semua fungsi yang memetakan
+$\Lambda$ ke~$A$. Artinya, $\prod_{\lambda \in \Lambda} S_\lambda = A^\Lambda$. Perhatikan
+pula bahwa dalam kasus ini proyeksi koordinat merupakan
+ \index{evaluasi!pemetaan}%
+ \index{fungsi!evaluasi pada suatu titik}%
+\emph{pemetaan evaluasi}. Untuk setiap $\lambda$, proyeksi koordinat $\pi_\lambda$ membawa
+setiap titik $f$ dalam hasil kali tersebut (yaitu, setiap fungsi $f$ dari $\Lambda$ ke~$A$) ke
+$f(\lambda)$, nilainya pada~$\lambda$. Singkatnya, setiap proyeksi koordinat merupakan
+pemetaan evaluasi pada suatu titik.
+\end{exam}
+
+\begin{exam}\label{C015537} Apakah $\R^n$ itu? Ruang ini hanyalah himpunan semua $n$-tupel bilangan real.
+Artinya, ruang ini adalah himpunan fungsi dari $\N_n = \{1,2,\dots,n\}$ ke~$\R$. Dengan
+kata lain, $\R^n$ hanyalah singkatan untuk~$\R^{\N_n}$. Dalam $\R^n$, biasanya orang menulis $x_j$ untuk
+koordinat ke-$j$ dari suatu vektor $x$, bukan~$x(j)$.
+\end{exam}
+
+\begin{exam} Dalam kategori $\cat{SET}$,
+ \index{hasil kali!dalam $\cat{SET}$}%
+ \index{SET@$\cat{SET}$!hasil kali dalam}%
+hasil kali suatu keluarga terindeks himpunan ada dan sesungguhnya merupakan hasil kali Kartesius himpunan-himpunan
+tersebut beserta proyeksi koordinat kanonik.
+\end{exam}
+
+\begin{exam}\label{C015544} Jika $\bigl(V_\lambda\bigr)_{\lambda \in \Lambda}$ adalah suatu keluarga terindeks
+ruang-ruang vektor, kita menjadikan hasil kali Kartesius $\prod V_\lambda$ suatu ruang
+vektor sebagai berikut. Definisikan penjumlahan dan perkalian skalar secara titik demi titik: untuk $f$, $g \in
+\prod V_\lambda$ dan $\alpha \in \K$,
+  \[ (f + g)(\lambda) := f(\lambda) + g(\lambda)  \]
+dan
+  \[ (\alpha f)(\lambda) := \alpha f(\lambda) \,. \]
+Hal ini menjadikan $\prod V_\lambda$ suatu ruang vektor, yang kadang-kadang disebut
+ \index{langsung!hasil kali}%
+ \index{hasil kali!langsung}%
+\df{hasil kali langsung} dari ruang-ruang $V_\lambda$, dan ruang ini beserta proyeksi
+koordinat kanonik (yang tentu saja merupakan pemetaan linear) adalah suatu
+ \index{hasil kali!dalam $\cat{VEC}$}%
+ \index{VEC@$\cat{VEC}$!hasil kali dalam}%
+ \index{vektor!ruang!hasil kali}%
+hasil kali dalam kategori $\cat{VEC}$.
+\end{exam}
+
+\begin{exam}\label{C023411} Misalkan $V$ dan $W$ adalah ruang-ruang linear bernorma. Pada hasil kali Kartesius
+$V \times W$, definisikan
+  \index{<unopn@$\norm{\hphantom{x}}_2$ (norma Euklides atau norma-$2$)}%
+  \index{<unopn@$\norm{\hphantom{x}}_1$ (norma-$1$)}%
+  \index{<unopn@$\norm{\hphantom{x}}_u$ (norma seragam)}%
+ \begin{align*}
+    \norm{(x,y)}_2 &= \sqrt{\norm x^2 + \norm y^2},  \\
+    \norm{(x,y)}_1 &= \norm x + \norm y,  \\
+   \intertext{dan}
+    \norm{(x,y)}_u &= \max\{\norm x, \norm y\}\,.
+ \end{align*}
+Yang pertama adalah
+ \index{Euklides!norma!pada hasil kali dua ruang linear bernorma}%
+ \index{norma!Euklides!pada hasil kali ruang-ruang linear bernorma}%
+\df{norma Euklides} (atau
+ \index{dua@norma-$2$}%
+ \index{norma!$2$- (pada hasil kali ruang-ruang linear bernorma)}%
+\df{norma-$2$}) pada $V \times W$, yang kedua adalah
+ \index{satu@norma-$1$!pada hasil kali ruang-ruang linear bernorma}%
+ \index{norma!$1$- (pada hasil kali ruang-ruang linear bernorma)}%
+\df{norma-$1$}, dan yang terakhir adalah
+ \index{seragam!norma!pada hasil kali ruang-ruang linear bernorma}%
+ \index{norma!seragam!pada hasil kali ruang-ruang linear bernorma}%
+\df{norma seragam}. Memverifikasi bahwa ketiganya merupakan norma pada $V \times W$ sangat mirip dengan
+argumen yang diperlukan dalam Contoh~\ref{C023125}, \ref{C023127}, dan~\ref{C023129}. Fakta bahwa
+ketiganya merupakan norma-norma ekuivalen merupakan konsekuensi dari pertidaksamaan berikut dan
+Proposisi~\ref{C023184}.
+   \[ \norm x + \norm y \le \sqrt 2 \sqrt{\norm x^2 + \norm y^2} \le 2 \max\{\norm x,\norm y\} \le 2(\norm x + \norm y) \]
+\end{exam}
+
+\begin{conv}\label{C023414} Dalam contoh sebelumnya, kita mendefinisikan tiga norma (ekuivalen) pada
+ruang hasil kali $V \times W$. Kita akan mengambil yang kedua, $\norm{\;\;}_1$, sebagai
+ \index{konvensi!pemilihan norma hasil kali}%
+ \index{hasil kali!norma}%
+ \index{norma!hasil kali}%
+\df{norma hasil kali} pada $V \times W$. Jadi, kapan pun $V$ dan $W$ merupakan ruang-ruang linear bernorma,
+kecuali dinyatakan sebaliknya, kita akan memandang hasil kali $V \times W$ sebagai ruang
+linear bernorma terhadap norma ini. Biasanya kita cukup menulis $\norm{(x,y)}$, bukan
+$\norm{(x,y)}_1$. Hasil kali ruang-ruang linear bernorma $V$ dan $W$ biasanya dinotasikan
+dengan $V \oplus W$ dan disebut
+ \index{hasil kali!ruang linear bernorma}%
+ \index{bernorma!ruang linear!hasil kali}%
+ \index{<binopdirectsum@$\oplus$ (jumlah langsung)}%
+ \index{langsung!jumlah!ruang linear bernorma}%
+ \index{bernorma!ruang linear!jumlah langsung}%
+\df{jumlah langsung} dari $V$ dan~$W$. (Dalam kasus khusus $V = W = \R$, metrik apakah yang
+diinduksi oleh norma hasil kali pada~$\R^2$?)
+\end{conv}
+
+\begin{exam}\label{exam_prod_nls} Tunjukkan bahwa hasil kali $V \oplus W$ dari ruang-ruang linear bernorma memang merupakan suatu hasil kali
+ \index{hasil kali!dalam $\cat{NLS_{\boldsymbol\infty}}$}%
+ \index{NLSinf@$\cat{NLS_{\boldsymbol\infty}}$!hasil kali dalam}%
+dalam kategori $\cat{NLS_{\boldsymbol\infty}}$ yang terdiri atas ruang-ruang linear bernorma dan pemetaan-pemetaan
+linear terbatas.
+\end{exam}
+
+\begin{prop} Misalkan $\bigl((x_n,y_n)\bigr)$ adalah barisan dalam jumlah langsung $V \oplus W$ dari dua ruang linear
+bernorma. Buktikan bahwa $\bigl((x_n,y_n)\bigr)$ konvergen ke titik $(a,b)$ dalam $V \oplus W$ jika dan hanya
+jika $x_n \sto a$ dalam $V$ dan $y_n \sto b$ dalam~$W$.
+\end{prop}
+
+\begin{prop}\label{C023427} Penjumlahan merupakan operasi kontinu pada suatu ruang linear bernorma~$V$.
+ \index{kekontinuan!penjumlahan}%
+ \index{penjumlahan!kekontinuan}%
+Artinya, pemetaan
+   \[ A \colon V \oplus V \sto V \colon (x,y) \mapsto x + y \]
+bersifat kontinu.
+\end{prop}
+
+\begin{exer} Berikan bukti yang \emph{sangat} singkat (tanpa $\epsilon$, $\delta$, ataupun himpunan terbuka) bahwa jika
+$(x_n)$ dan $(y_n)$ merupakan barisan-barisan dalam suatu ruang linear bernorma yang masing-masing konvergen ke $a$ dan $b$,
+maka $x_n + y_n \sto a + b$.
+\end{exer}
+
+\begin{prop}\label{C023434} Perkalian skalar merupakan operasi kontinu pada suatu ruang
+ \index{kekontinuan!perkalian skalar}%
+ \index{skalar!perkalian!kekontinuan}%
+linear bernorma~$V$, dalam arti bahwa pemetaan
+   \[ S \colon \K \times V \sto V \colon  (\alpha,x) \mapsto \alpha x \]
+bersifat kontinu.
+\end{prop}
+
+\begin{prop} Jika $B$ dan $C$ adalah subhimpunan-subhimpunan dari suatu ruang linear bernorma dan $\alpha$ adalah skalar, maka
+ \begin{enumerate}
+   \item $\clo{\alpha B} = \alpha \clo B$; dan
+   \item $\clo B + \clo C  \subseteq  \clo{B + C}$.
+ \end{enumerate}
+\end{prop}
+
+\begin{exam} Jika $B$ dan $C$ adalah subhimpunan-subhimpunan tertutup dari suatu ruang linear bernorma, tidak
+selalu berlaku bahwa $B + C$ tertutup (dan karena itu $\clo B + \clo C$ dan $\clo{B +
+C}$ tidak harus sama).
+\end{exam}
+
+\begin{prop} Misalkan $C_1$ dan $C_2$ adalah subhimpunan-subhimpunan kompak dari suatu ruang linear bernorma~$V$. Maka
+   \begin{enumerate}
+     \item $C_1 \times C_2$ adalah subhimpunan kompak dari $V \times V$, dan
+     \item $C_1 + C_2$ adalah subhimpunan kompak dari~$V$.
+   \end{enumerate}
+\end{prop}
+
+\begin{exam}\label{C023441} Misalkan $X$ suatu ruang topologis. Maka keluarga
+$\fml C(X)$ dari semua fungsi kontinu bernilai skalar pada~$X$ merupakan suatu
+ \index{C@$\fml C(X)$!sebagai ruang vektor}%
+ruang vektor terhadap operasi penjumlahan dan perkalian skalar biasa yang didefinisikan titik demi titik.
+\end{exam}
+
+\begin{exam}\label{C023443} Misalkan $X$ suatu ruang topologis. Kita menotasikan
+ \index{C@$\fml C_b(X)$!fungsi kontinu terbatas pada $X$}%
+dengan $\fml C_b(X)$ keluarga semua fungsi kontinu terbatas bernilai skalar pada~$X$. Keluarga ini merupakan
+ \index{C@$\fml C_b(X)$!sebagai ruang linear bernorma}%
+ \index{bernorma!ruang linear!$\fml C_b(X)$ sebagai suatu}%
+ruang linear bernorma terhadap norma seragam. Bahkan, ruang ini merupakan subruang dari~$\fml B(X)$
+(lihat Contoh~\ref{C023131}).
+\end{exam}
+
+\begin{exam}\label{C023464} Jika $S$ adalah suatu himpunan dan $a \in S$, maka fungsional evaluasi
+     \[ E_a\colon \fml B(S) \sto \K\colon f \mapsto f(a) \]
+merupakan fungsional linear terbatas pada ruang $\fml B(S)$ dari semua fungsi terbatas bernilai
+skalar pada~$S$. Jika $S$ kebetulan merupakan ruang topologis, kita juga dapat memandang $E_a$
+sebagai anggota ruang dual dari $\fml C_b(S)$. (Dalam kedua kasus tersebut, berapakah~$\norm{E_a}$?)
+\end{exam}
+
+\begin{defn}\label{def_norm_alg} Misalkan $A$ adalah suatu aljabar yang padanya telah didefinisikan sebuah norma. Andaikan bahwa sebagai tambahan,
+ \index{submultiplikatif}%
+sifat \df{submultiplikatif}
+  \[ \norm{xy} \le \norm x\,\norm y \]
+dipenuhi untuk semua $x$, $y \in A$. Maka $A$ merupakan suatu
+ \index{bernorma!aljabar}%
+ \index{aljabar!bernorma}%
+\df{aljabar bernorma}. Kita menetapkan satu syarat tambahan: jika aljabar $A$ beridentitas, maka
+   \[ \norm{\vc 1} = 1\,. \]
+Dalam kasus ini, $A$ merupakan
+ \index{beridentitas!aljabar bernorma}%
+ \index{bernorma!aljabar!beridentitas}%
+ \index{aljabar!bernorma beridentitas}%
+\df{aljabar bernorma beridentitas}.
+\end{defn}
+
+\begin{exam}\label{C023448} Dalam Contoh~\ref{C023131}, telah kita tunjukkan bahwa keluarga
+ \index{B@$\fml B(S)$!sebagai aljabar bernorma}%
+ \index{bernorma!aljabar!$\fml B(S)$ sebagai suatu}%
+$\fml B(S)$ dari fungsi-fungsi terbatas bernilai skalar pada suatu himpunan $S$ merupakan ruang linear bernorma terhadap
+norma seragam. Keluarga ini juga merupakan aljabar bernorma komutatif beridentitas.
+\end{exam}
+
+\begin{prop} Perkalian merupakan operasi kontinu pada suatu aljabar bernorma~$V$, dalam arti
+bahwa pemetaan
+   \[ M \colon V \times V \sto V \colon (x,y) \mapsto  xy \]
+bersifat kontinu.
+\end{prop}
+
+\begin{proof}[\emph{Petunjuk pembuktian}] Jika Anda dapat membuktikan bahwa perkalian pada bilangan real
+bersifat kontinu, hampir pasti Anda juga dapat membuktikan bahwa perkalian bersifat kontinu pada sebarang aljabar
+bernorma. \ns
+\end{proof}
+
+\begin{exam}\label{C023454} Keluarga $\fml C_b(X)$ dari fungsi-fungsi kontinu terbatas bernilai skalar
+ \index{C@$\fml C_b(X)$!sebagai aljabar bernorma}%
+ \index{bernorma!aljabar!$\fml C_b(X)$ sebagai suatu}%
+pada suatu ruang topologis~$X$, terhadap operasi-operasi biasa yang didefinisikan titik demi titik dan
+norma seragam, merupakan aljabar bernorma komutatif beridentitas. (Lihat Contoh~\ref{C023443}.)
+\end{exam}
+
+\begin{exam}\label{C023456} Keluarga $\ofml B(V)$ dari semua operator (linear terbatas)
+ \index{B@$\ofml B(V)$!sebagai aljabar bernorma beridentitas}%
+ \index{bernorma!aljabar!$\ofml B(V)$ sebagai suatu}%
+pada suatu ruang linear bernorma bukan nol $V$ merupakan aljabar bernorma beridentitas. (Lihat~\ref{C023228} dan~\ref{C023228a}.)
+\end{exam}
+
+\section{Koproduk Ruang Linear Bernorma}\label{C0156}
+Koproduk serupa dengan hasil kali---kecuali bahwa semua anak panah dibalik.
+
+\begin{defn}\label{C015611} Misalkan $A_1$ dan $A_2$ adalah objek-objek dalam suatu kategori~$\cat C$. Tripel
+$(Q,\iota_1,\iota_2)$, dengan $Q$ suatu objek dan $\iota_k\colon A_k \sto Q$ morfisme untuk $k=1,2$, disebut
+ \index{koproduk}%
+\df{koproduk} dari $A_1$ dan $A_2$ jika untuk setiap objek $B$ dan setiap pasangan morfisme
+$f_k\colon A_k \sto B$ (k = 1,2) terdapat morfisme tunggal $f\colon Q \sto B$ sedemikian
+sehingga $f_k = f \circ \iota_k$ untuk $k = 1,2$.
+\end{defn}
+
+\begin{prop} Dalam sebarang kategori, koproduk (jika ada) bersifat
+ \index{koproduk!ketunggalan}%
+unik secara esensial.
+\end{prop}
+
+\begin{defn}\label{C0006127} Misalkan $A$ dan $B$ adalah himpunan-himpunan. Ketika $A$ dan $B$ saling lepas, kita
+sering menggunakan notasi
+ \index{<binopuniond@$\uplus$, $\biguplus$ (gabungan saling lepas)}%
+$A \uplus B$ sebagai pengganti $A \cup B$ (untuk menekankan bahwa $A$ dan~$B$ saling lepas). Ketika
+$C = A \uplus B$, kita mengatakan bahwa $C$ merupakan
+ \index{saling lepas!gabungan}%
+ \index{gabungan!saling lepas}%
+\df{gabungan saling lepas} dari $A$ dan~$B$. Demikian pula, kita sering memilih untuk menulis gabungan dari
+suatu keluarga himpunan $\sfml A$ yang \emph{saling lepas berpasangan} sebagai $\biguplus\sfml A$. Notasi
+$\biguplus_{\lambda \in \Lambda} A_\lambda$ juga dapat digunakan untuk menyatakan gabungan dari suatu
+keluarga terindeks \emph{saling lepas berpasangan} $\{A_\lambda\colon  \lambda \in \Lambda\}$ dari
+himpunan-himpunan. Ketika $C = \biguplus\sfml A$ atau $C = \biguplus_{\lambda \in \Lambda} A_\lambda$, kita
+mengatakan bahwa $C$ merupakan \df{gabungan saling lepas} dari keluarga yang bersesuaian.
+\end{defn}
+
+\begin{defn} Dalam definisi sebelumnya, kita memperkenalkan notasi $A \uplus B$ untuk
+gabungan dua himpunan saling lepas $A$ dan~$B$. Sekarang kita memperluas notasi ini dan memperbolehkan
+diri kita mengambil \emph{gabungan saling lepas} dari himpunan $A$ dan $B$ sekalipun keduanya tidak
+saling lepas. Kita ``membuat keduanya saling lepas'' dengan mengidentifikasi (dengan cara yang jelas) himpunan $A$ dengan
+himpunan $A' = \{(a,1)\colon a \in A\}$ dan $B$ dengan himpunan $B' = \{(b,2)\colon b \in B\}$. Kemudian kita
+menotasikan gabungan $A'$ dan $B'$, yang memang saling lepas, dengan $A \uplus B$ dan menyebutnya
+ \index{saling lepas!gabungan}%
+ \index{gabungan!saling lepas}%
+ \index{<binopuniond@$\uplus$, $\biguplus$ (gabungan saling lepas)}%
+\df{gabungan saling lepas} dari $A$ dan~$B$.
+
+Secara umum, jika $\bigl(A_\lambda\bigr)_{\lambda \in \Lambda}$ adalah suatu keluarga terindeks
+himpunan,
+ \index{saling lepas!gabungan}%
+ \index{gabungan!saling lepas}%
+\df{gabungan saling lepas}nya, \smash[b]{$\biguplus\limits_{\lambda \in \Lambda}A_\lambda$}, didefinisikan sebagai
+$\{(a,\lambda)\colon \lambda \in \Lambda, a \in A_\lambda\}$.
+\end{defn}
+
+\begin{exam}\label{C015617} Dalam kategori $\cat{SET}$,
+ \index{koproduk!dalam $\cat{SET}$}%
+ \index{SET@$\cat{SET}$!koproduk dalam}%
+koproduk dua himpunan $A_1$ dan $A_2$ ada dan merupakan gabungan saling lepas $A_1 \uplus A_2$
+beserta pemetaan inklusi yang jelas $\iota_k\colon A_k  \sto A_1 \uplus A_2$ ($k = 1,2$).
+\end{exam}
+
+Menarik untuk mengamati bahwa meskipun hasil kali dan koproduk suatu koleksi hingga
+objek dalam kategori $\cat{SET}$ sangat berbeda, dalam kategori $\cat{VEC}$ yang lebih kompleks
+keduanya ternyata merupakan hal yang persis sama.
+
+\begin{exam} Jika $V_1$ dan $V_2$ adalah ruang-ruang vektor, jadikan hasil kali Kartesius $V_1 \times V_2$
+suatu ruang vektor seperti dalam Contoh~\ref{C015521}. Ruang ini beserta
+injeksi-injeksi yang jelas merupakan suatu
+ \index{koproduk!dalam $\cat{VEC}$}%
+ \index{VEC@$\cat{VEC}$!koproduk dalam}%
+ \index{vektor!ruang!koproduk}%
+koproduk dalam kategori $\cat{VEC}$.
+\end{exam}
+
+Sering kali mungkin dan dikehendaki untuk mengambil koproduk dari sebarang keluarga objek
+dalam suatu kategori. Berikut adalah perumuman Definisi~\ref{C015611}.
+
+\begin{defn}\label{C015624} Misalkan $\bigl(A_\lambda\bigr)_{\lambda \in \Lambda}$ adalah suatu keluarga terindeks
+objek-objek dalam kategori~$\cat C$. Kita mengatakan bahwa objek $C$ beserta suatu
+keluarga terindeks $\bigl(\iota_\lambda\bigr)_{\lambda \in \Lambda}$ dari morfisme-morfisme
+$\iota_\lambda\colon A_\lambda \sto C$ merupakan
+ \index{koproduk!dalam suatu kategori}%
+\df{koproduk} dari objek-objek $A_\lambda$ jika untuk setiap objek $B$ dan setiap keluarga
+terindeks $\bigl(f_\lambda\bigr)_{\lambda \in \Lambda}$ dari morfisme-morfisme $f_\lambda\colon
+A_\lambda \sto B$ terdapat pemetaan tunggal $g \colon C \sto B$ sedemikian sehingga $f_\lambda = g
+\circ \iota_\lambda$ untuk setiap $\lambda \in \Lambda$. Notasi biasa untuk
+koproduk objek-objek $A_\lambda$ adalah
+ \index{<<@$\coprod A_\lambda$ (koproduk)}%
+$\coprod_{\lambda \in \Lambda} A_\lambda$.
+\end{defn}
+
+\begin{exam} Dalam kategori $\cat{SET}$,
+ \index{koproduk!dalam $\cat{SET}$}%
+ \index{SET@$\cat{SET}$!koproduk dalam}%
+koproduk suatu keluarga terindeks himpunan ada dan merupakan gabungan saling lepas himpunan-himpunan tersebut.
+\end{exam}
+
+\begin{defn} Misalkan $S$ suatu himpunan dan $V$ suatu ruang vektor.
+ \index{tumpuan!fungsi}%
+\df{Tumpuan} suatu fungsi $f \colon S \sto V$ adalah $\{s \in S \colon f(s) \ne \vc 0\}$.
+\end{defn}
+
+\begin{exam}\label{X_dir_sum_VEC} Jika $\bigl(V_\lambda\bigr)_{\lambda \in \Lambda}$ adalah suatu keluarga terindeks
+ruang-ruang vektor, kita menjadikan hasil kali Kartesius tersebut suatu ruang vektor seperti dalam Contoh~\ref{C015544}. Himpunan fungsi $f$
+dalam $\prod V_\lambda$ yang memiliki tumpuan hingga (yaitu, yang bernilai tak nol hanya pada berhingga banyak unsur domainnya) jelas
+merupakan subruang dari $\prod V_\lambda$. Subruang ini adalah
+ \index{langsung!jumlah}%
+ \index{jumlah!langsung}%
+\df{jumlah langsung} dari ruang-ruang $V_\lambda$. Ruang ini dinotasikan dengan $\bigoplus_{\lambda \in
+\Lambda} V_\lambda$. Ruang ini beserta pemetaan-pemetaan injektif yang jelas (yang
+bersifat linear) merupakan suatu
+ \index{koproduk!dalam $\cat{VEC}$}%
+ \index{VEC@$\cat{VEC}$!koproduk dalam}%
+ \index{vektor!ruang!koproduk}%
+koproduk dalam kategori $\cat{VEC}$.
+\end{exam}
+
+\begin{exer} Apa saja koproduk dalam kategori $\cat{NLS_{\boldsymbol\infty}}$?
+\end{exer}
+
+\begin{exer} Tentukan hasil kali dan koproduk dua ruang $V$ dan $W$ dalam kategori
+$\cat{NLS_{\vc 1}}$ yang terdiri atas ruang-ruang linear bernorma dan kontraksi-kontraksi linear.
+\end{exer}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Jaring}\label{C0314}
+Jaring (kadang-kadang disebut \emph{barisan tergeneralisasi}) berguna untuk mencirikan banyak
+sifat ruang topologis umum. Dalam ruang semacam itu, jaring pada dasarnya digunakan
+dengan cara yang sama seperti barisan digunakan dalam ruang metrik.
+
+\begin{defn} Himpunan terpraurut yang setiap pasangan elemennya memiliki batas atas disebut
+ \index{terarah!himpunan}%
+ \index{himpunan!terarah}%
+\df{himpunan terarah}.
+\end{defn}
+
+\begin{exam}\label{C031414} Jika $S$ suatu himpunan, maka $\fin S$ merupakan himpunan terarah terhadap
+inklusi $\subseteq$.
+\end{exam}
+
+\begin{defn} Misalkan $S$ suatu himpunan dan $\Lambda$ suatu himpunan terarah. Pemetaan
+$x\colon \Lambda \sto S$ disebut suatu
+ \index{jaring}%
+\df{jaring} di $S$ (atau suatu \emph{jaring anggota-anggota $S$}). Nilai $x$ di $\lambda \in
+\Lambda$ biasanya ditulis $\sbsb x\lambda$ (alih-alih $x(\lambda)$), dan jaring $x$
+sendiri sering dinotasikan dengan $\bigl(\sbsb x\lambda\bigr)_{\lambda \in \Lambda}$ atau cukup
+$\bigl(\sbsb x\lambda\bigr)$.
+\end{defn}
+
+\begin{exam} Contoh jaring yang paling jelas ialah barisan. Barisan merupakan fungsi yang domainnya adalah himpunan (terpraurut) $\N$ dari bilangan asli.
+\end{exam}
+
+\begin{defn} Suatu jaring $x = \bigl(\sbsb x\lambda\bigr)$ dikatakan
+ \index{pada akhirnya}%
+\df{pada akhirnya} memiliki suatu sifat tertentu jika terdapat $\lambda_0 \in \Lambda$ sedemikian sehingga $\sbsb x\lambda$ memiliki sifat itu
+apabila $\lambda \ge \lambda_0$; dan jaring itu
+ \index{sering}%
+\df{sering} memiliki sifat tersebut jika untuk setiap $\lambda_0 \in \Lambda$ terdapat $\lambda \in \Lambda$ sedemikian sehingga $\lambda \ge \lambda_0$
+dan $\sbsb x\lambda$ memiliki sifat itu.
+\end{defn}
+
+\begin{defn} Suatu
+ \index{lingkungan}%
+\df{lingkungan} dari sebuah titik dalam ruang topologis adalah sebarang himpunan yang memuat suatu himpunan terbuka yang memuat titik tersebut.
+\end{defn}
+
+\begin{defn} Suatu jaring $x$ dalam ruang topologis $X$
+ \index{kekonvergenan!jaring}%
+ \index{jaring!kekonvergenan}%
+\df{konvergen} ke titik $a \in X$ jika jaring itu pada akhirnya berada dalam setiap lingkungan~$a$. Dalam
+hal ini $a$ adalah
+ \index{limit!jaring}%
+ \index{jaring!limit}%
+\df{limit} dari $x$, dan kita menulis
+   \[ x_{{}_{\sst \lambda}} \to_{\lambda \in \Lambda}a \]
+atau cukup
+ \index{<arrowto@$x_\lambda \sto a$ (kekonvergenan jaring)}%
+$x_{{}_{\sst \lambda}} \sto a$. Jika limit bersifat unik, kita juga dapat menggunakan notasi
+$\lim_{\lambda \in \Lambda} \sbsb x\lambda = a$ atau, secara lebih sederhana, $\lim \sbsb x\lambda =
+a$.
+
+Titik $a$ di $X$ merupakan
+ \index{titik gugus!jaring}%
+ \index{jaring!titik gugus}%
+\df{titik gugus} dari jaring $x$ jika $x$ sering berada dalam setiap lingkungan~$a$.
+\end{defn}
+
+\begin{defn} Misalkan $(X,\sfml T)$ suatu ruang topologis. Subkeluarga $\sfml S \subseteq
+\sfml T$ merupakan suatu
+ \index{subbasis}%
+\df{subbasis} untuk topologi $\sfml T$ jika keluarga semua irisan hingga dari
+anggota-anggota $\sfml S$ merupakan basis untuk~$\sfml T$.
+\end{defn}
+
+\begin{exam}\label{C031429} Misalkan $X$ suatu ruang topologis dan $a \in X$. Suatu
+ \index{lingkungan!basis untuk}%
+ \index{basis!lingkungan suatu titik}%
+\df{basis} bagi keluarga lingkungan titik $a$ adalah keluarga $\sfml B_a$ yang terdiri atas
+lingkungan-lingkungan $a$ dengan sifat bahwa setiap lingkungan $a$ memuat sekurang-kurangnya
+satu anggota~$\sfml B_a$. Secara umum, terdapat banyak pilihan basis lingkungan di
+suatu titik. Setelah basis semacam itu dipilih, kita menyebut anggota-anggotanya sebagai
+ \index{dasar!lingkungan}%
+ \index{lingkungan!dasar}%
+\emph{lingkungan dasar} dari~$a$.
+
+Misalkan $\sfml B_a$ suatu basis bagi keluarga lingkungan di $a$. Urutkan $\sfml B_a$ berdasarkan
+relasi memuat (kebalikan dari inklusi); yakni, untuk $U$, $V \in \sfml B_a$, tetapkan
+  \[ U \preceq V \text{ jika dan hanya jika } U \supseteq V\,. \]
+Dengan demikian, $\sfml B_a$ menjadi himpunan terarah. Sekarang (dengan menggunakan aksioma pilihan) pilih satu
+elemen $x_{{}_U}$ dari setiap himpunan $U \in \sfml B_a$. Maka $(\sbsb xU)$ merupakan jaring di $X$
+dan $\sbsb xU \sto a$.
+\end{exam}
+
+Dua proposisi berikut menjamin bahwa agar suatu jaring konvergen ke titik $a$ dalam
+ruang topologis, cukup jika jaring itu pada akhirnya berada dalam setiap lingkungan dasar (atau bahkan
+lingkungan subdasar) dari~$a$.
+
+\begin{prop}\label{C031431} Misalkan $\sfml B$ suatu basis bagi topologi pada ruang topologis
+$X$ dan $a$ suatu titik di~$X$. Suatu jaring $(x_\lambda)$ konvergen ke $a$ jika dan hanya
+jika jaring itu pada akhirnya berada dalam setiap lingkungan~$a$ yang termasuk dalam~$\sfml B$.
+\end{prop}
+
+\begin{prop}\label{C031434} Misalkan $\sfml S$ suatu subbasis bagi topologi pada ruang topologis
+$X$ dan $a$ suatu titik di~$X$. Suatu jaring $(x_\lambda)$ konvergen ke $a$ jika dan hanya jika
+jaring itu pada akhirnya berada dalam setiap lingkungan~$a$ yang termasuk dalam~$\sfml S$.
+\end{prop}
+
+\begin{exam}\label{C031437} Misalkan $J = [a,b]$ suatu interval tetap pada garis real,
+$\vc x = (x_0,x_1,\dots,x_n)$ suatu $(n+1)$-tupel titik-titik di $J$, dan $\vc t =
+(t_1,\dots,t_n)$ suatu $n$-tupel. Pasangan $(\vc x;\vc t)$ merupakan suatu
+ \index{partisi!dengan pilihan}%
+ \index{pilihan}%
+\df{partisi dengan pilihan} dari interval $J$ jika:
+ \begin{enumerate}
+  \item $x_{k-1} < x_k$ untuk $1 \le k \le n$;
+  \item $t_k \in [x_{k-1},x_k]$ untuk $1 \le k \le n$;
+  \item $x_0 = a$; dan
+  \item $x_n = b$.
+ \end{enumerate}
+Gagasannya ialah bahwa $\vc x$ \emph{mempartisi} interval tersebut menjadi subinterval-subinterval dan $t_k$ adalah
+titik yang \emph{dipilih} dari subinterval $\text{ke-}k$. Jika $\vc x =
+(x_0,x_1,\dots,x_n)$, maka $\{\vc x\}$ menyatakan \emph{himpunan} $\{x_0,x_1,\dots,x_n\}$.
+Misalkan $P = (\vc x;\vc s)$ dan $Q = (\vc y;\vc t)$ partisi-partisi (dengan pilihan) dari
+interval~$J$. Kita menulis $P \preccurlyeq Q$ dan mengatakan bahwa $Q$ merupakan suatu
+ \index{penghalusan}%
+\df{penghalusan} dari $P$ jika $\{\vc x\} \subseteq \{\vc y\}$. Terhadap relasi
+$\preccurlyeq$, keluarga $\sfml P$ dari partisi-partisi dengan pilihan pada $J$ merupakan himpunan terarah
+(tetapi \emph{bukan} terurut parsial).
+
+Sekarang andaikan $f$ suatu fungsi terbatas pada interval $J$ dan $P = (\vc x;\vc t)$ suatu
+partisi $J$ menjadi $n$ subinterval. Misalkan $\Delta x_k := x_k - x_{k-1}$ untuk $1 \le k
+\le n$. Lalu definisikan
+   \[ S_f(P) := \sum_{k=1}^n f(t_k)\,\Delta x_k\,. \]
+Setiap jumlah $S_f(P)$ semacam itu merupakan suatu
+ \index{Riemann!jumlah}%
+ \index{jumlah!Riemann}%
+\df{jumlah Riemann} dari $f$ pada~$J$. Perhatikan bahwa karena $\sfml P$ merupakan himpunan terarah, $S_f$ adalah suatu
+jaring bilangan real. Jika jaring $S_f$ dari jumlah-jumlah Riemann konvergen, kita mengatakan bahwa fungsi
+$f$
+ \index{Riemann!dapat diintegralkan}%
+ \index{dapat diintegralkan!secara Riemann}%
+\df{dapat diintegralkan secara Riemann}. Limit jaring $S_f$ (jika ada) merupakan
+ \index{Riemann!integral}%
+ \index{integral!Riemann}%
+\df{integral Riemann} dari $f$ pada interval~$J$ dan dinotasikan dengan $\int_a^b f(x)\,dx$.
+\end{exam}
+
+\begin{exam}\label{exam_net_indiscrete} Dalam ruang topologis $X$ dengan topologi
+indiskret (yang himpunan terbukanya hanya $X$ dan himpunan kosong), setiap jaring di ruang tersebut
+konvergen ke setiap titik di ruang itu.
+\end{exam}
+
+\begin{exam} Dalam ruang topologis $X$ dengan topologi diskret (yang setiap subhimpunan $X$ bersifat terbuka), suatu jaring
+di ruang tersebut konvergen jika dan hanya jika jaring itu pada akhirnya konstan.
+ \end{exam}
+
+\begin{defn} Suatu ruang topologis
+ \index{Hausdorff}%
+ \index{pemisahan!aksioma!Hausdorff}%
+ \index{topologis!ruang!Hausdorff}%
+ \index{topologi!Hausdorff}%
+\df{Hausdorff} adalah ruang yang setiap pasangan titik berbedanya dapat
+dipisahkan oleh himpunan-himpunan terbuka; yakni, untuk setiap pasangan titik berbeda $x$ dan $y$ di ruang tersebut, terdapat
+lingkungan terbuka dari $x$ dan $y$ yang saling lepas.
+\end{defn}
+
+Seperti ditunjukkan oleh Contoh~\ref{exam_net_indiscrete}, jaring dalam ruang topologis umum tidak harus memiliki
+limit yang unik. Namun, suatu ruang tidak memerlukan asumsi yang terlalu membatasi untuk menyingkirkan
+patologi ini. Agar limit bersifat unik, cukup disyaratkan bahwa ruang itu Hausdorff.
+Menariknya, ternyata syarat ini juga perlu.
+
+\begin{prop}\label{C031441} Jika $X$ suatu ruang topologis, maka pernyataan-pernyataan berikut ekuivalen:
+ \begin{enumerate}
+  \item $X$ bersifat Hausdorff.
+  \item Tidak ada jaring di $X$ yang dapat konvergen ke lebih dari satu titik.
+  \item Diagonal di $X \times X$ bersifat tertutup.
+ \end{enumerate}
+\end{prop}
+(Adapun
+ \index{diagonal}%
+\df{diagonal} dari suatu himpunan $S$ adalah $\{(s,s) \colon s \in S\} \subseteq S \times S$.)
+
+\begin{exam} Ingat kembali dari kalkulus dasar bahwa
+ \index{parsial!jumlah}%
+ \index{jumlah!parsial}%
+ \index{deret tak hingga!jumlah parsial}%
+ \index{deret!tak hingga}%
+\df{jumlah parsial} $\text{ke-}n$ dari suatu deret tak hingga $\sum_{k=1}^\infty x_k$ didefinisikan sebagai $s_n =
+\sum_{k=1}^n x_k$. Deret tersebut dikatakan
+ \index{kekonvergenan!deret tak hingga}%
+ \index{deret tak hingga!kekonvergenan}%
+\df{konvergen} jika barisan $(s_n)$ dari jumlah-jumlah parsialnya konvergen dan, jika deret tersebut
+konvergen,
+ \index{jumlah!deret tak hingga}%
+ \index{deret tak hingga!jumlah}%
+ \index{deret!jumlah}%
+\emph{jumlah}nya adalah limit barisan $(s_n)$ dari jumlah-jumlah parsial. Jadi, sebagai contoh,
+deret tak hingga $\sum_{k=1}^\infty 2^{-k}$ konvergen dan jumlahnya adalah~$1$.
+\end{exam}
+
+Gagasan \emph{menjumlahkan} suatu deret tak hingga sangat bergantung pada fakta bahwa
+jumlah-jumlah parsial deret tersebut terurut linear oleh inklusi. ``Jumlah-jumlah parsial'' dari suatu
+jaring bilangan tidak harus terurut parsial, sehingga kita memerlukan gagasan baru tentang
+``penjumlahan'', yang kadang-kadang disebut \emph{penjumlahan tak berurutan}.
+
+\begin{notn} Jika $A$ suatu himpunan, kita notasikan
+ \index{fin@$\fin A$ (keluarga subhimpunan hingga dari suatu himpunan $A$)}%
+dengan $\fin A$ keluarga semua subhimpunan hingga dari~$A$. (Perhatikan bahwa keluarga ini merupakan himpunan terarah terhadap
+relasi~$\subseteq$.)
+\end{notn}
+
+\begin{defn}\label{def_summable_R} Misalkan $A \subseteq \R$. Untuk setiap $F \in \fin A$, definisikan $S_F$ sebagai jumlah
+bilangan-bilangan dalam~$F$, yakni, $S_F = \sum F$. Maka $S = \bigl(S_F\bigr)_{F \in \fin A}$
+merupakan jaring di~$\R$. Jika jaring ini konvergen, himpunan bilangan $A$ dikatakan
+ \index{dapat dijumlahkan!himpunan bilangan real}%
+\df{dapat dijumlahkan}; limit jaring tersebut merupakan
+ \index{jumlah!himpunan yang dapat dijumlahkan}%
+\df{jumlah} dari $A$ dan dinotasikan dengan $\sum A$.
+\end{defn}
+
+\begin{defn} Suatu jaring $(x_\lambda)$ dari bilangan real disebut
+ \index{menaik!jaring dalam $\R$}%
+ \index{jaring!menaik}%
+\df{menaik} jika $\lambda \le \mu$ mengakibatkan $x_\lambda \le x_\mu$. Suatu jaring bilangan real (atau kompleks)
+disebut
+ \index{terbatas!jaring dalam $\K$}%
+ \index{jaring!terbatas}%
+\df{terbatas} jika citranya terbatas.
+\end{defn}
+
+\begin{exam}\label{C031454} Misalkan $f(n) = 2^{-n}$ untuk setiap $n \in \N$, dan definisikan $x \colon
+\fin(\N) \sto \R$ dengan $x(A) = \sum_{n \in A}f(n)$.
+ \begin{enumerate}
+  \item Jaring $x$ menaik.
+  \item Jaring $x$ terbatas.
+  \item Jaring $x$ konvergen ke 1.
+  \item Himpunan bilangan $\{\frac12,\frac14,\frac18, \frac1{16},\dots\}$ dapat dijumlahkan dan
+jumlahnya adalah~$1$.
+  \end{enumerate}
+\end{exam}
+
+\begin{exam} Dalam ruang metrik, setiap barisan konvergen bersifat terbatas. Berikan contoh yang menunjukkan
+bahwa suatu jaring konvergen dalam ruang metrik (bahkan di~$\R$) tidak harus terbatas.
+\end{exam}
+
+Dari kalkulus dasar kita telah mengenal bahwa barisan menaik yang terbatas di $\R$
+bersifat konvergen. Contoh di atas merupakan kasus khusus dari pengamatan yang lebih umum: jaring
+menaik yang terbatas di $\R$ bersifat konvergen.
+
+\begin{prop}\label{C031461} Setiap jaring menaik yang terbatas
+$\bigl(x_{{}_{\sst \lambda}}\bigr)_{\lambda \in \Lambda}$ dari bilangan real bersifat konvergen dan
+  \[ \lim x_{{}_{\sst \lambda}} = \sup\{x_{{}_{\sst \lambda}}\colon \lambda \in \Lambda\}\,. \]
+\end{prop}
+
+\begin{exam} Misalkan $(x_k)$ suatu barisan bilangan real positif yang berbeda-beda dan $A = \{x_k \colon k \in \N\}$.
+Maka $\sum A$ (sebagaimana didefinisikan di atas) sama dengan jumlah deret $\sum_{k=1}^\infty
+x_k$.
+\end{exam}
+
+\begin{exam} Himpunan $\bigl\{\frac1k \colon k \in \N \bigr\}$ tidak dapat dijumlahkan dan deret tak hingga
+$\sum_{k=1}^\infty \frac1k$ tidak konvergen.
+\end{exam}
+
+\begin{exam} Himpunan $\bigl\{(-1)^k \frac1k\colon k \in \N \bigr\}$ tidak dapat dijumlahkan, tetapi
+deret tak hingga $\sum_{k=1}^\infty (-1)^k \frac1k$ memang konvergen.
+\end{exam}
+
+\begin{prop} Setiap subhimpunan bilangan real yang dapat dijumlahkan bersifat terhitung.
+\end{prop}
+
+\begin{proof}[\emph{Petunjuk pembuktian.}] Jika $A$ suatu himpunan bilangan real yang dapat dijumlahkan dan $n \in \N$,
+berapa banyak anggota $A$ yang dapat lebih besar daripada~$1/n$? \ns
+\end{proof}
+
+Dalam Proposisi~\ref{C031441}, kita telah melihat satu contoh cara jaring
+mencirikan sifat topologis: suatu ruang bersifat Hausdorff jika dan hanya jika setiap jaring
+di ruang tersebut memiliki paling banyak satu limit. Berikut ini sifat topologis lain---kekontinuan di suatu titik---yang dapat dengan mudah dicirikan menggunakan
+jaring.
+
+\begin{prop}\label{C031471} Misalkan $X$ dan $Y$ ruang-ruang topologis. Suatu fungsi
+ \index{kekontinuan!karakterisasi oleh jaring}%
+$f\colon X \sto Y$ kontinu di titik $a$ dalam $X$ jika dan hanya jika $f\bigl(\sbsb x\lambda\bigr) \sto f(a)$ di $Y$
+setiap kali $\bigl(\sbsb x\lambda\bigr)$ merupakan jaring yang konvergen ke $a$ di~$X$.
+\end{prop}
+
+Dalam ruang metrik, kita mencirikan tutupan dan interior himpunan menggunakan barisan. Untuk
+ruang topologis umum, kita harus mengganti barisan dengan jaring.
+
+Dalam mendefinisikan istilah ``interior'' dan ``tutupan'', kita memiliki pilihan serupa dengan pilihan ketika kita mendefinisikan ``selubung konveks'' dalam
+\ref{smplx005def}. Terdapat definisi `abstrak' dan definisi `konstruktif'. Mungkin akan membantu jika Anda mengingat kembali
+Proposisi~\ref{smplx006} dan paragraf yang mendahuluinya.
+
+\begin{defn}\label{def_interior} Untuk suatu himpunan $A$ dalam ruang topologis $X$,
+ \index{interior}%
+\df{interior} himpunan tersebut adalah subhimpunan terbuka terbesar dari $X$ yang termuat dalam~$A$; yakni,
+gabungan semua subhimpunan terbuka dari $X$ yang termuat dalam~$A$. Interior $A$
+ \index{<unopur@$\intr A$ (interior dari~$A$)}%
+dinotasikan dengan $\intr A$.
+\end{defn}
+
+\begin{prop} Definisi di atas bermakna. Lebih lanjut, suatu titik $a$ dalam ruang topologis $X$ berada dalam interior suatu subhimpunan
+ \index{interior!karakterisasi oleh jaring}%
+ \index{karakterisasi!oleh jaring!interior}%
+ \index{jaring!karakterisasi!interior}%
+$A$ dari $X$ jika dan hanya jika setiap jaring di $X$ yang konvergen ke $a$ pada akhirnya berada dalam~$A$.
+\end{prop}
+
+\begin{proof}[\emph{Petunjuk pembuktian}] Satu arah mudah. Untuk arah lainnya, gunakan Proposisi~\ref{C031431} dan jenis
+jaring yang dikonstruksi dalam Contoh~\ref{C031429}. \ns
+\end{proof}
+
+\begin{defn}\label{def_closure} Untuk suatu himpunan $A$ dalam ruang topologis $X$,
+ \index{tutupan}%
+\df{tutupan} himpunan tersebut adalah subhimpunan tertutup terkecil dari $X$ yang memuat~$A$; yakni,
+irisan semua subhimpunan tertutup dari $X$ yang memuat~$A$. Tutupan $A$
+ \index{<unopu@$\clo A$ (tutupan~$A$)}%
+dinotasikan dengan~$\clo A$.
+\end{defn}
+
+\begin{prop}\label{C031481} Definisi di atas bermakna. Lebih lanjut, suatu titik $b$ dalam ruang topologis $X$ termasuk dalam
+ \index{tutupan!karakterisasi oleh jaring}%
+ \index{karakterisasi!oleh jaring!tutupan}%
+ \index{jaring!karakterisasi!tutupan}%
+tutupan suatu subhimpunan $A$ dari~$X$ jika dan hanya jika terdapat suatu jaring di $A$ yang konvergen ke~$b$.
+\end{prop}
+
+\begin{cor} Suatu subhimpunan $A$ dari ruang topologis bersifat tertutup jika dan hanya jika limit setiap jaring konvergen di $A$ termasuk dalam~$A$.
+\end{cor}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Teorema-Teorema Hahn--Banach}
+
+Perlu dikatakan sejak awal bahwa merujuk pada \emph{teorema Hahn--Banach} seolah-olah hanya ada satu teorema sebenarnya agak menyesatkan.
+Seorang penulis yang menyatakan sedang menggunakan \emph{teorema Hahn--Banach} mungkin menggunakan salah satu dari sekitar selusin versi
+teorema tersebut atau salah satu korolarinya. Apa kesamaan berbagai versi itu? Pada dasarnya, versi-versi tersebut menjamin bahwa ruang
+linear bernorma pada umumnya memiliki cukup banyak fungsional linear terbatas sehingga ruang dualnya menjadi alat yang berguna
+untuk mempelajari ruang itu sendiri. Artinya, versi-versi tersebut menjamin adanya teori dualitas yang menarik dan produktif.
+Di bawah ini kita membahas empat versi `teorema' tersebut dan tiga korolarinya. Kita akan mengikuti praktik yang lazim:
+ketika dalam pembahasan selanjutnya kita menggunakan salah satu hasil ini, kita akan mengatakan bahwa kita menggunakan `teorema' \emph{Hahn--Banach}.
+
+Seperti yang sering terjadi dalam matematika, pengaitan hasil-hasil ini dengan Hahn dan Banach agak ganjil. Tampaknya,
+gagasan-gagasan dasarnya mula-mula berasal dari Eduard Helly. Untuk sejarah menarik tentang hasil-hasil `Hahn--Banach',
+lihat~\cite{Hochstadt:1980}.
+
+Sebagai catatan, dalam nama ``Banach'', kedua huruf ``a'' dilafalkan seperti huruf ``a'' dalam kata Indonesia \emph{bapak}, sedangkan ``ch''
+kira-kira dilafalkan seperti \emph{kh}; tekanan jatuh pada suku kata pertama (BAH-nakh).
+
+\begin{defn} Suatu fungsi bernilai real $f$ pada ruang vektor real $V$ merupakan suatu
+ \index{sublinear}%
+\df{fungsional sublinear} jika $f(x + y) \le f(x) + f(y)$ dan $f(\alpha x) = \alpha f(x)$
+untuk semua $x$, $y \in V$ dan $\alpha \ge 0$.
+\end{defn}
+
+\begin{exam} Suatu norma pada ruang vektor real merupakan fungsional sublinear.
+\end{exam}
+
+Versi pertama \emph{teorema Hahn--Banach} kita murni merupakan aljabar linear dan hanya berlaku untuk ruang vektor \emph{real}.
+Versi ini memungkinkan kita memperpanjang fungsional linear tertentu pada ruang semacam itu dari subruang ke seluruh ruang.
+
+\begin{thm}[Teorema Hahn--Banach I]\label{HBTI} Misalkan $M$ suatu subruang dari ruang vektor real $V$ dan $p$
+ \index{teorema Hahn--Banach}%
+suatu fungsional sublinear pada~$V$. Jika $f$ suatu fungsional linear pada $M$ sedemikian sehingga $f \le p$ pada $M$, maka
+$f$ memiliki perpanjangan $g$ ke seluruh $V$ sedemikian sehingga $g \le p$ pada~$V$.
+\end{thm}
+
+\begin{proof}[\emph{Petunjuk pembuktian}] Dalam teorema ini, notasi $h \le p$ berarti bahwa $\dom h \subseteq \dom p = V$
+dan bahwa $h(x) \le p(x)$ untuk semua $x \in \dom h$. Dalam hal ini kita mengatakan bahwa $h$
+ \index{didominasi}%
+\df{didominasi} oleh~$p$. Kita menulis
+ \index{<binrelle@$f \preccurlyeq g$ ($g$ merupakan perpanjangan~$f$)}%
+$f \preccurlyeq g$ jika $g$ merupakan perpanjangan~$f$ (yakni,
+jika $f(x) = g(x)$ untuk semua $x \in \dom f$).
+
+Misalkan $\fml S$ keluarga semua fungsional linear bernilai real pada subruang-subruang $V$ yang merupakan perpanjangan~$f$ dan
+didominasi oleh~$p$. Keluarga $\fml S$ terurut parsial oleh $\preccurlyeq$. Gunakan \emph{lema Zorn} untuk menghasilkan suatu
+elemen maksimal $g$ dari~$\fml S$. Pembuktian selesai jika Anda dapat menunjukkan bahwa $\dom{g} = V$.
+
+Untuk itu, andaikan demi kontradiksi bahwa terdapat vektor $c \in V$ yang tidak termasuk dalam~$D = \dom{g}$. Buktikan terlebih dahulu bahwa
+   \begin{equation}\label{eq_HBTI}
+      g(y) - p(y - c) \le - g(x) + p(x + c)
+   \end{equation}
+untuk semua $x$, $y \in D$. Simpulkan bahwa terdapat bilangan $\gamma$ yang terletak di antara supremum semua bilangan
+di ruas kiri~\eqref{eq_HBTI} dan infimum semua bilangan di ruas kanan.
+
+Misalkan $E$ rentang dari $D \cup \{c\}$. Definisikan $h$ pada $E$ dengan $h(x + \alpha c) = g(x) + \alpha\gamma$ untuk $x \in D$ dan
+$\alpha \in \R$. Sekarang tunjukkan bahwa $h \in \fml S$. (Ambil $\alpha > 0$ dan tinjau secara terpisah $h(x + \alpha c)$ dan $h(x - \alpha c)$.) \ns
+\end{proof}
+
+Teorema berikutnya adalah versi Teorema~\ref{HBTI} untuk ruang dengan skalar kompleks. Teorema ini kadang-kadang disebut
+ \index{teorema Bohnenblust--Sobczyk--Suhomlinov}%
+\emph{teorema Bohnenblust--Sobczyk--Suhomlinov}.
+
+\begin{thm}[Teorema Hahn--Banach II]\label{HBTII} Misalkan $V$ suatu ruang vektor kompleks, $p$ suatu seminorma pada~$V$, dan $M$ suatu subruang dari~$V$.
+Jika $f\colon M \sto \C$ suatu fungsional linear sedemikian sehingga $\abs f \le p$, maka $f$ memiliki perpanjangan $g$ yang merupakan fungsional linear
+pada seluruh~$V$ dan memenuhi $\abs{g} \le p$.
+\end{thm}
+
+\begin{proof}[\emph{Petunjuk pembuktian}] Hasil ini pada dasarnya merupakan korolar langsung dari versi real
+\emph{teorema Hahn--Banach} yang diberikan di atas dalam~\ref{HBTI}. Misalkan $V_{\R}$ ruang vektor real yang terkait dengan~$V$ (vektornya sama,
+tetapi hanya menggunakan $\R$ sebagai medan skalar). Perhatikan bahwa jika $u$ adalah bagian real dari $f$ (yakni,
+ \index{R@$\Re(z)$ (bagian real dari $z \in \C$)}%
+$u(x) = \Re(f(x))$ untuk setiap $x \in M$), maka $u$ merupakan fungsional $\R$-linear pada $M$ (yakni, $u(x + y) = u(x) + u(y)$ dan $u(\alpha x) = \alpha u(x)$
+untuk semua $x$, $y \in M$ dan semua $\alpha \in \R$), serta $f(x) = u(x) - i\,u(ix)$. Sebaliknya, jika $u$ suatu fungsional $\R$-linear pada suatu ruang vektor,
+maka $f(x) := u(x) - i\,u(ix)$ mendefinisikan suatu fungsional linear (bernilai kompleks) pada ruang tersebut. Perhatikan juga bahwa jika $u$ merupakan bagian real dari~$f$,
+maka $\abs{u(x)} \le p$ untuk semua $x$ jika dan hanya jika $\abs{f(x)} \le p$ untuk semua~$x$. Dengan mengingat pengamatan-pengamatan ini, cukup terapkan~\ref{HBTI}
+pada bagian real dari $f$ di~$V_\R$. \ns
+\end{proof}
+
+Berikutnya mungkin merupakan versi \emph{teorema Hahn--Banach} yang paling sering digunakan.
+
+\begin{thm}[Teorema Hahn--Banach III]\label{HBTIII} Misalkan $M$ suatu subruang vektor dari ruang linear bernorma (real atau
+ \index{teorema Hahn--Banach}%
+kompleks) $V$. Maka setiap fungsional linear kontinu $f$ pada $M$ memiliki
+perpanjangan $g$ ke seluruh $V$ sedemikian sehingga $\norm{g} = \norm f$.
+\end{thm}
+
+\begin{proof}[\emph{Petunjuk pembuktian}] Tinjau fungsi $p\colon V \sto \R \colon x \mapsto \norm f \norm x$. \ns
+\end{proof}
+
+Ketika membuktikan suatu teorema, kadang-kadang berguna untuk mempertimbangkan kemungkinan adanya pembuktian yang lebih ``alami'' atau bahkan lebih ``jelas''.
+Sesekali kita memperoleh imbalan berupa penyederhanaan yang mencerahkan dan penjelasan yang lebih jernih atas materi yang rumit. Namun, kadang-kadang kita justru terkecoh.
+
+\begin{exer} Kawan Anda, Fred R. Dimm, mengira bahwa ia telah menemukan pembuktian langsung yang sangat sederhana untuk
+versi teorema Hahn--Banach yang diberikan dalam Teorema~\ref{HBTIII}: Suatu fungsional
+linear kontinu $f$ yang didefinisikan pada subruang (linear) $M$ dari ruang linear bernorma~$V$ dapat
+diperpanjang menjadi fungsional linear kontinu $g$ pada seluruh $V$ tanpa memperbesar
+normanya. Menurutnya, kita hanya perlu mengambil $N$ sebagai sebarang komplemen ruang vektor
+dari~$M$ dan mengambil $B$ sebagai suatu basis (Hamel) untuk $N$. Definisikan $g(e) = 0$ untuk setiap vektor $e
+\in B$ dan $g = f$ pada~$M$. Kemudian perpanjang $g$ secara linear ke seluruh~$V$. Tentunya, kata Fred, $g$ linear berdasarkan konstruksinya dan normanya tidak bertambah karena kita
+telah menjadikannya nol di tempat-tempat yang sebelumnya belum didefinisikan. Tunjukkan kepada Fred letak kekeliruannya.
+\end{exer}
+
+\begin{thm}[Teorema Hahn--Banach IV]\label{HBTIV} Misalkan $V$ suatu ruang linear bernorma (real atau kompleks),
+ \index{teorema Hahn--Banach}%
+$M$ suatu subruang vektor dari $V$, dan andaikan $y \in V$ sedemikian sehingga
+ \index{dist@$\dist(y,M)$ (jarak antara $y$ dan $M$)}%
+$d := \dist(y,M) > 0$. Maka terdapat fungsional $g \in V^*$ sedemikian sehingga $g^{\sto}(M) = \{0\}$,
+$g(y) = d$, dan $\norm g = 1$.
+\end{thm}
+
+\begin{proof}[\emph{Petunjuk pembuktian}] Misalkan $N := \spn{(M \cup \{y\})}$ dan definisikan
+$f\colon N \sto \K \colon x + \alpha y \mapsto \alpha d$ ($x \in M$, $\alpha \in \K$). \ns
+\end{proof}
+
+Kasus khusus yang paling berguna dari teorema di atas adalah ketika $M = \{\vc 0\}$ dan $y \ne \vc 0$.
+Hal ini memberi tahu kita bahwa satu-satunya cara agar $f(x)$ lenyap untuk setiap $f \in V^*$ adalah jika $x$
+merupakan vektor nol.
+
+\begin{cor}\label{HBCorI} Misalkan $V$ suatu ruang linear bernorma dan $x \in V$. Jika $f(x) = 0$ untuk
+setiap $f \in V^*$, maka $x = \vc 0$.
+\end{cor}
+
+\begin{defn} Suatu keluarga $\fml G(S)$ dari fungsi-fungsi bernilai skalar pada himpunan~$S$
+ \index{pemisahan!pasangan titik oleh keluarga fungsi}%
+\df{memisahkan} titik-titik $S$ jika untuk setiap pasangan titik berbeda $x$ dan $y$ di $S$, terdapat
+fungsi $f \in \fml G(S)$ sedemikian sehingga $f(x) \ne f(y)$.
+\end{defn}
+
+\begin{cor}\label{HBCorII} Jika $V$ suatu ruang linear bernorma, maka $V^*$ memisahkan titik-titik~$V$.
+\end{cor}
+
+\begin{cor}\label{HBCorIII} Misalkan $V$ suatu ruang linear bernorma dan $\vc 0 \ne x \in V$. Maka terdapat
+$f \in V^*$ sedemikian sehingga $\norm f = 1$ dan $f(x) = \norm x$.
+\end{cor}
+
+\begin{prop} Misalkan $V$ suatu ruang linear bernorma, $\{x_1,\dots,x_n\}$ suatu subhimpunan yang bebas linear
+dari $V$, dan $\alpha_1, \dots, \alpha_n$ skalar-skalar. Maka terdapat $f$ dalam
+$V^*$ sedemikian sehingga $f(x_k) = \alpha_k$ untuk $1\le k \le n$.
+\end{prop}
+
+\begin{proof}[\emph{Petunjuk pembuktian}] Untuk $x = \sum_{k=1}^n \beta_k x_k$, tetapkan $g(x) =
+\sum_{k=1}^n \alpha_k \beta_k$. \ns
+\end{proof}
+
+\begin{prop}\label{C067131} Misalkan $V$ suatu ruang linear bernorma dan $\vc 0 \ne x \in V$. Maka
+   \[ \norm x = \max\{\abs{f(x)}\colon f \in V^* \text{ dan } \norm f \le 1\}\,. \]
+\end{prop}
+
+Penggunaan $\max$ alih-alih $\sup$ dalam proposisi di atas disengaja. Proposisi tersebut menyatakan bahwa
+terdapat $f$ dalam bola satuan tertutup dari $V^*$ sedemikian sehingga $f(x) = \norm x$.
+
+\begin{defn} Suatu subhimpunan $A$ dari ruang topologis $X$ disebut
+ \index{padat}%
+\df{padat} di $X$ jika $\clo A = X$. Ruang $X$ disebut
+ \index{separabel}%
+\df{separabel} jika ruang itu memuat suatu subhimpunan padat yang terhitung.
+\end{defn}
+
+\begin{exam} Ruang $\K^n$ bersifat separabel terhadap topologi biasa; yakni,
+ \index{biasa!topologi!untuk $\K^n$}%
+ \index{topologi!pada $\K^n$}%
+ \index{K@$\K^n$!topologi biasa pada}%
+topologi yang diinduksi oleh norma biasa tersebut. (Lihat \ref{C023125}, \ref{0001503}, dan \ref{xmpl_top_metric}.)
+\end{exam}
+
+\begin{exam} Dengan topologi diskret, garis real $\R$ tidak separabel.
+\end{exam}
+
+\begin{prop} Misalkan $V$ suatu ruang linear bernorma. Jika $V^*$ separabel, maka $V$ juga separabel.
+\end{prop}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\endinput

@@ -1,2 +1,7 @@
 # Render manifests are hash-bound evidence; preserve their exact bytes.
 provenance/*_RENDER_MANIFEST.csv -text
+
+# Admitted upstream members are authority bytes; never normalize line endings.
+source/upstream/linalg.tex -text
+source/upstream/categories.tex -text
+source/upstream/normlinspaces.tex -text

@@ -1,0 +1,1920 @@
+\chapter{NORMED LINEAR SPACES}
+
+\section{Norms}
+In the world of analysis the predominant denizens are function spaces, vector spaces of
+real or complex valued functions. To be of interest to an analyst such a space should
+come equipped with a topology.  Often the topology is a metric topology, which in turn
+frequently comes from a norm (see proposition~\ref{0001503}).
+
+\begin{exam}\label{C023125}  For $x = (x_1,\dots, x_n) \in \K^n$ let $\norm{x} =
+\left(\sum_{k=1}^n {\abs{x_k}}^2\right)^{1/2}$.  This is the
+ \index{usual!norm!on $\K^n$}%
+ \index{norm!usual!on $\K^n$}%
+\df{usual norm} (or
+ \index{Euclidean!norm!on $\K^n$}%
+ \index{norm!Euclidean!on $\K^n$}%
+ \index{K@$\K^n$!as a normed linear space}%
+ \index{normed!linear space!$\K^n$ as a}%
+\df{Euclidean norm}) on $\K^n$; unless the contrary is explicitly stated, $\K^n$ when
+regarded as a normed linear space will always be assumed to possess this norm.  It is
+clear that this norm induces the usual (Euclidean) metric on~$\K^n$.
+\end{exam}
+
+\begin{exam}\label{C023127}  For $x = (x_1,\dots,x_n) \in \K^n$ let
+ \index{<unopn@$\norm{\hphantom{x}}_1$ ($1$-norm)}%
+$\norm{x}_1 = \sum_{k=1}^n \abs{x_k}$.  The function $x \mapsto \norm{x}_1$ is easily
+seen to be a norm on~$\K^n$. It is sometimes called
+ \index{norm!$1$- (on $\K^n$)}%
+ \index{one@$1$-norm!on $\K^n$}%
+ \index{K@$\K^n$!as a normed linear space}%
+ \index{normed!linear space!$\K^n$ as a}%
+the \df{$1$-norm} on~$\K^n$.  It induces the so-called \emph{taxicab metric} on~$\R^2$.
+\end{exam}
+
+Of the next six examples the last is the most general.  Notice that all the others are special cases of it
+or subspaces of special cases.
+
+\begin{exam}\label{C023129}  For $x = (x_1,\dots,x_n) \in \K^n$ let
+ \index{<unopn@$\norm{\hphantom{x}}_u$ (uniform norm)}%
+ \index{<unopn@$\norm{\hphantom{x}}_\infty$ (uniform norm)}%
+$\norm{x}_\infty = \max\{\,\abs{x_k} \colon 1 \le k \le n\}$.  This defines a norm on $\K^n$;
+it is the
+ \index{uniform!norm!on~$\K^n$}%
+ \index{norm!uniform!on $\K^n$}%
+ \index{K@$\K^n$!as a normed linear space}%
+ \index{normed!linear space!$\K^n$ as a}%
+\df{uniform norm} on~$\K^n$.  It induces the uniform metric on~$\K^n$.  An alternative notation for
+$\norm{x}_\infty$ is $\norm{x}_U$.
+\end{exam}
+
+\begin{exam}\label{C0231301} The set $l_\infty$ of all bounded sequences of complex numbers is
+clearly a vector space under pointwise operations of addition and scalar multiplication.
+For $x = (x_1,x_2,\dots,) \in l_\infty$ let
+ \index{<unopn@$\norm{\hphantom{x}}_\infty$ (uniform norm)}%
+$\norm{x}_\infty = \sup\{\,\abs{x_k} \colon 1 \le k\}$.  This defines a norm on
+$l_\infty$; it is the
+ \index{uniform!norm!on~$l_\infty$}%
+ \index{norm!uniform!on $l_\infty$}%
+ \index{l@$l_\infty$!as a normed linear space}%
+ \index{l@$l_\infty$!bounded sequences}%
+ \index{normed!linear space!$l_\infty$ as a}%
+\df{uniform norm} on~$l_\infty$.
+\end{exam}
+
+\begin{exam}\label{C0231302} A subspace of~\ref{C0231301} is the space $c$ of all convergent 
+ \index{c@$c$!as a normed linear space}%
+ \index{c@$c$!convergent sequences}%
+ \index{normed!linear space!$c$ as a}%
+sequences of complex numbers.  Under the uniform norm it is a normed linear space.
+\end{exam}
+
+\begin{exam}\label{C0231303} Contained in $c$ is another interesting normed linear space $\sbsb c0$
+ \index{c@$c_0$!sequences which converge to zero}%
+ \index{c@$c_0$!as a normed linear space}%
+ \index{normed!linear space!$\sbsb c)$ as a}%
+the space of all sequences of complex numbers which converge to zero (again with the uniform norm).
+\end{exam}
+
+\begin{exam}\label{C023131}  Let $S$ be a nonempty set.  If $f$ is a bounded $K$-valued function on $S$, let
+  \[ \norm f_u := \sup\{\abs{f(x)} \colon x \in S\}\,. \]
+This is a norm on the vector space $\fml B(S)$ of all bounded complex valued functions on $S$ and is called the
+ \index{<unopn@$\norm{\hphantom{x}}_u$ (uniform norm)}%
+ \index{uniform!norm!on~$\fml B(S)$}%
+ \index{norm!uniform!on~$\fml B(S)$}%
+ \index{B@$\fml B(S)$!bounded functions on~$S$}%
+ \index{B@$\fml B(S)$!as a normed linear space}%
+ \index{normed!linear space!$\fml B(S)$ as a}%
+\df{uniform norm}.  Clearly this norm gives rise to the uniform metric on~$\fml B(S)$.
+Notice that examples~\ref{C023129} and~\ref{C0231301} are
+special cases of this one. (Let $S = \N_n := \{1,2,\dots,n\}$ or $S = \N$.)
+\end{exam}
+
+
+
+
+
+
+
+
+
+
+
+\begin{exam}\label{C023133} It is easy to make a substantial generalization of the preceding
+example by replacing the field $\K$ by an arbitrary normed linear space. Suppose then
+that $S$ is a nonempty set and $V$ is a normed linear space. For $f$ in the vector space $\fml B(S,V)$ of all bounded $V$-valued functions on~$S$, let
+  \[ \norm f_u := \sup\{\norm{f(x)} \colon x \in S\}\,. \]
+Then this is a norm and it is called the
+ \index{<unopn@$\norm{\hphantom{x}}_u$ (uniform norm)}%
+ \index{uniform!norm!on~$\fml B(S,V)$}%
+ \index{norm!uniform!on~$\fml B(S,V)$}%
+ \index{B@$\fml B(S,V)$!Bounded $V$-valued functions on~$S$}%
+ \index{B@$\fml B(S,V)$!as a normed linear space}%
+ \index{normed!linear space!$\fml B(S,V)$ as a}%
+\df{uniform norm} on $\fml B(S,V)$.   (Why is the word ``easy'' in the first sentence of this example appropriate?)
+\end{exam}
+
+\begin{defn} Let $S$ be a set, $V$ be a normed linear space, and
+ \index{F@$\fml F(S,V)$ ($V$-valued functions on~$S$)}%
+$\fml F(S,V)$ be the vector space of all $V$-valued functions on~$S$.
+Consider a sequence $(f_n)$ of functions in $\fml F(S,V)$.  If there is a function $g$ in $\fml F(S,V)$ such that
+   \[ \sup\{\norm{f_n(x) - g(x)}\colon x \in S\} \sto 0 \quad \text{as $n \sto \infty$,} \]
+then we say that the sequence $(f_n)$
+ \index{<arrowto@$f_n \sto g$ (unif) (uniform convergence)}%
+ \index{uniform!convergence}%
+ \index{convergence!uniform}%
+\df{converges uniformly} to~$g$ and write $f_n \sto g \text{\,(unif)}$.  The function $g$
+is the
+ \index{uniform!limit}%
+ \index{limit!uniform}%
+\df{uniform limit} of the sequence $(f_n)$.  Notice that if $g$ and all the $f_n$'s
+belong to $\fml B(S,V)$, then uniform convergence of $(f_n)$ to $g$ is just convergence
+of $(f_n)$ to $g$ with respect to the uniform metric.
+\end{defn}
+
+There are many ways in which sequences of functions converge.  Arguably the two most
+common modes of convergence are uniform convergence, which we have just discussed, and
+pointwise convergence.
+
+\begin{defn}  Let $S$ be a set, $V$ be a normed linear space, and $(f_n)$ be a sequence in
+$\fml F(S,V)$.  If there is a function $g$ such that
+  \[ f_n(x) \sto g(x) \qquad  \text{for all $x \in S$}, \]
+then $(fn)$
+ \index{pointwise!convergence}%
+ \index{convergence!pointwise}%
+\df{converges pointwise} to~$g$.  In this case we write
+  \[ f_n \sto g \text{\,(ptws)}. \]
+The function $g$ is the
+ \index{pointwise!limit}%
+ \index{limit!pointwise}%
+ \index{<arrowto@$f_n \sto g$ (ptws) (pointwise convergence)}%
+\df{pointwise limit} of the~$f_n$'s.
+
+If $(f_n)$ is an increasing sequence of real (or extended real) valued functions and $f_n
+\sto g \text{\,(ptws)}$, we write
+ \index{<arrowmonoup@$f_n \uparrow g$ (ptws) (pointwise monotone convergence)}%
+$f_n \uparrow g \text{\,(ptws)}$. And if $(f_n)$ is decreasing and has $g$ as a pointwise
+limit, we write
+ \index{<arrowmonodown@$f_n \downarrow g$ (ptws) (pointwise monotone convergence)}%
+$f_n \downarrow g \text{\,(ptws)}$.
+\end{defn}
+
+The most obvious connection, familiar from any real analysis course, between these two types of convergence is that uniform
+convergence implies pointwise convergence.
+
+\begin{prop}\label{C023141} Let $S$ be a set and $V$ be a normed linear space.  If a sequence $(f_n)$ in $\fml F(S,V)$
+converges uniformly to a function $g$ in $\fml F(S,V)$, then $(f_n)$ converges pointwise to~$g$.
+\end{prop}
+
+The converse is not true.
+
+\begin{exam}  For each $n \in \N$ let $f_n\colon [0,1] \sto \R\colon x \mapsto x^n$. Then the
+sequence $(f_n)$ converges pointwise on $[0,1]$, but not uniformly.
+\end{exam}
+
+\begin{exam} For each $n \in \N$ and each $x \in \R^+$ let $f_n(x) = \frac1n\, x$.  Then on
+each interval of the form $[0,a]$ where $a > 0$ the sequence $(f_n)$ converges uniformly
+to the constant function~$0$.  On the interval $[0,\infty)$ it converges pointwise to
+$0$, but not uniformly.
+\end{exam}
+
+Recall also from real analysis that a uniform limit of bounded functions must itself be bounded.
+
+\begin{prop}\label{C023151} Let $S$ be a set, $V$ be a normed linear space, and $(f_n)$ be a
+sequence in $\fml B(S,V)$ and $g$ be a member of $\fml F(S,V)$.  If $f_n \sto g\text{\,(unif)}$,
+then $g$ is bounded.
+\end{prop}
+
+And a uniform limit of continuous functions is continuous.
+
+\begin{prop}\label{C023154} Let $X$ be a topological space, $V$ be a normed linear space, and
+$(f_n)$ be a sequence of continuous $V$-valued functions on~$X$ and $g$ be a member of $\fml F(X,V)$.  If $f_n
+\sto g\text{\,(unif)}$, then $g$ is continuous.
+\end{prop}
+
+\begin{prop}\label{C023163} If $x$ and $y$ are elements of a vector space $V$ equipped with a
+norm $\norm{\hphantom{x}}$, then
+  \[ \bigabs{\strut\,\norm{x} - \norm{y}\,} \le \norm{x - y}\,. \]
+\end{prop}
+
+\begin{cor} The norm on a normed linear space is a uniformly continuous function.
+ \index{continuity!of norms}%
+ \index{norm!continuity of}%
+\end{cor}
+
+\begin{notn} Let $M$ be a metric space, $a \in M$, and $r > 0$.  We denote $\{x \in M\colon d(x,a) < r\}$, the
+ \index{B@$B_r(a)$, $B_r$ (open ball of radius $r$)}%
+ \index{open!ball}%
+ \index{ball!open}%
+open ball of radius $r$ about $a$, by $B_r(a)$.  Similarly, we denote $\{x \in M\colon d(x,a) \le r\}$, the
+ \index{C@$C_r(a)$, $C_r$ (closed ball of radius $r$)}%
+ \index{closed!ball}%
+ \index{ball!closed}%
+\df{closed ball} of radius $r$ about $a$, by $C_r(a)$ and $\{x \in M\colon d(x,a) = r\}$, the
+ \index{S@$S_r(a)$, $S_r$ (sphere of radius $r$)}%
+ \index{sphere}%
+\df{sphere} of radius $r$ about $a$, by $S_r(a)$.  We will use $B_r$, $C_r$, and $S_r$ as abbreviations for $B_r(0)$, $C_r(0)$,
+and $S_r(0)$, respectively.
+\end{notn}
+
+\begin{prop} If $V$ is a normed linear space, if $x \in V$, and if $r$, $s > 0$, then
+ \begin{enumerate}[label=\rm{(\alph*)}]
+   \item $B_r(\vc 0) = -B_r(\vc 0)$;
+   \item $B_{rs}(\vc 0) = rB_s(\vc 0)$;
+   \item $x + B_r(\vc 0) = B_r(x)$; and
+   \item $B_r(\vc 0) + B_r(\vc 0) = 2\,B_r(\vc 0)$.  (Is it true in general that
+$A + A = 2A$ when $A$ is a subset of a vector space?)
+ \end{enumerate}
+\end{prop}
+
+\begin{defn}\label{C017314} If $a$ and $b$ are vectors in the vector space $V$, then the
+ \index{closed!segment}%
+ \index{segment, closed}%
+\df{closed segment} between $a$ and $b$, denoted
+ \index{<bracsqr@$[a,b]$ (closed segment in a vector space)}%
+by~$[a,b]$, is $\{(1 - t)a + tb \colon 0 \le t \le 1\}$.
+\end{defn}
+
+\begin{cau}\label{C017317} Notice that there is a slight conflict between this notation for closed \emph{segments}, when
+applied to the vector space $\R$ of real numbers, and the usual notation for closed \emph{intervals} in~$\R$.
+In $\R$ the closed segment $[a,b]$ is the same as the closed
+interval $[a,b]$ provided that $a \le b$. If $a > b$, however, the closed segment $[a,b]$
+is the same as the segment $[b,a]$, it contains all numbers $c$ such that $b \le c \le
+a$, whereas the closed interval $[a,b]$ is empty.
+\end{cau}
+
+\begin{defn} A subset $C$ of a vector space $V$ is
+ \index{convex!set}%
+\df{convex} if the closed segment $[a,b]$ is contained in $C$ whenever $a$, $b \in C$.
+\end{defn}
+
+\begin{exam}\label{C023169}  In a normed linear space every open ball is a convex set.  And so is every closed ball.
+\end{exam}
+
+\begin{prop}\label{prop_intrsctn_convex} The intersection of a family of convex subsets of a vector space is convex.
+\end{prop}
+
+\begin{defn} Let $V$ be a vector space. Recall that a \emph{linear combination} of a finite set $\{x_1, \dots, x_n\}$
+of vectors in $V$ is a vector of the form $\sum_{k=1}^n \alpha_k x_k$ where $\alpha_1, \dots, \alpha_n \in \R$.
+If $\alpha_1 = \alpha_2 = \dots = \alpha_n = 0$, then the linear combination is \emph{trivial}; if at least one
+$\alpha_k$ is different from zero, the linear combination is \emph{nontrivial}.  A linear combination
+$\sum_{k=1}^n\alpha_k x_k$ of the vectors $x_1, \dots, x_n$ is a
+ \index{convex!combination}%
+ \index{combination!convex}%
+\df{convex combination} if $\alpha_k \ge 0$ for each $k$ ($1 \le k \le n$) and if $\sum_{k=1}^n \alpha_k = 1$.
+\end{defn}
+
+\begin{defn}\label{smplx005def} Let $A$ be a nonempty subset of a vector space~$V$.  We define the
+ \index{convex!hull}%
+ \index{hull!convex}%
+ \index{co@$\co A$ (convex hull of~$A$)}%
+\df{convex hull} of $A$, denoted by $\co A$, to be the smallest convex subset of $V$ which contain~$A$.
+\end{defn}
+
+The preceding definition should provoke instant suspicion.  How do we know there \emph{is} a `smallest' convex subset of~$V$
+which contains~$A$?  One fairly obvious candidate (let's call it the `abstract' one) for such a set is the intersection
+of \emph{all} the convex subsets of $V$ which contain~$A$.  (Of course, this might also be nonsense---\emph{unless} we know that there
+is at least one convex set in $V$ which contains~$A$ and that the intersection of the family of all convex sets containing~$A$ is
+itself a convex set containing~$A$.)  Another plausible candidate (we'll call it the `constructive' one) is the set of all convex
+combinations of elements of~$A$.  (But \emph{is} this a convex set?  And is it the smallest one containing~$A$?)  Finally, even if these two
+approaches both make sense, do they constitute equivalent definitions of \emph{convex hull}?  That is, do they both define the same set, and
+does that set satisfy definition~\ref{smplx005def}?
+
+\begin{prop}\label{smplx006} The definitions suggested in the preceding paragraph, labeled `abstract' and `constructive', make sense and
+are equivalent.  Moreover, the set they describe satisfies the definition given in~\ref{smplx005def} for \emph{convex hull}.
+\end{prop}
+
+\begin{prop} If $T\colon V \sto W$ is a linear map between vector spaces and $C$ is a convex
+subset of $V$, then $T^{\sto}(C)$ is a convex subset of~$W$.
+\end{prop}
+
+\begin{prop} In a normed linear space the closure of every convex set is convex.
+\end{prop}
+
+\begin{prop} Let $V$ be a normed linear space. For each $a \in V$ the map $T_a\colon V \sto V\colon x \mapsto x + a$ (called
+ \index{translation}%
+\df{translation} by~$a$) is a homeomorphism.
+\end{prop}
+
+\begin{cor} If $U$ is a nonempty open subset of a normed linear space $V$, then $U - U$
+contains a neighborhood of~$0$.
+\end{cor}
+
+\begin{prop} If $(x_n)$ is a sequence in a normed linear space and $x_n \sto a$, then
+$\D\frac1n\sum_{k=1}^nx_k~\sto~a$.
+\end{prop}
+
+In proposition~\ref{00015025} we showed how an inner product on a vector space induces a norm on that space.
+It is reasonable to ask if all norms can be generated in this fashion from an inner product.  The answer
+is \emph{no}.  The next proposition gives a very simple necessary and sufficient condition for a norm to
+arise from an inner product.
+
+\begin{prop} Let $V$ be a normed linear space.  There exists an inner product on $V$ which induces the
+norm on $V$ if and only if the norm satisfies the \emph{parallelogram law}~\ref{parallelogram_law}.
+\end{prop}
+
+\begin{proof}[\emph{Hint for proof}]  To prove that if a norm satisfies the \emph{parallelogram law}
+then it is induced by an inner product, use the equation given in the \emph{polarization identity}
+(proposition~\ref{0001507}) as a definition.  Prove first that $\langle y,x \rangle = \conj{\langle x,y \rangle}$
+for all $x$, $y\in V$ and that $\langle x,x \rangle > 0$ whenever $x \ne 0$.  Next, for arbitrary
+$z \in V$, define a function $f\colon V \sto \C\colon x \mapsto \langle x,z \rangle$.  Prove that
+   \[ f(x + y) + f(x - y) = 2f(x) \tag{$\ast$} \]
+for all $x$, $y \in V$.  Use this to prove that $f(\alpha x) = \alpha f(x)$ for all $x \in V$ and $\alpha \in \R$.
+(Start with $\alpha$ being a natural number.)  Then show that $f$ is additive. (If $u$ and $v$ are arbitrary
+elements of $V$ let $x = u + v$ and $y = u - v$.  Use~$(\ast)$.)  Finally prove that $f(\alpha x) = \alpha f(x)$
+for complex $\alpha$ by showing that $f(ix) = i\,f(x)$ for all $x \in V$.  \ns
+\end{proof}
+
+\begin{defn} Let $(X,\sfml T)$ be a topological space. A family $\sfml B \subseteq \sfml T$
+is a
+ \index{base!for a topology}%
+\df{base} for $\sfml T$ if each member of $\sfml T$ is a union of members of~$\sfml B$.
+In other words, a family $\sfml B$ of open sets is a base for $\sfml T$ if for each open
+set $U$ there exists a subfamily $\sfml B'$ of $\sfml B$ such that $U = \bigcup \sfml B'$.
+\end{defn}
+
+\begin{exam}\label{xmpl_top_metric} In the plane $\R^2$ with its usual (Euclidean) topology, the family of
+all open balls in the space is a base for its topology, since any open set in $\R^2$ can be expressed as a
+union of open balls.  Indeed in any metric space whatever the family of open balls is a base for a topology
+on the space.  This is the
+ \index{topology!induced by a metric}%
+ \index{induced!topology}%
+\df{topology induced by the metric}.
+\end{exam}
+
+In practice (in metric spaces for example) it is often more convenient to specify a base for a topology than to specify
+the topology itself.  It is important to realize, however, that there may be many
+different bases for the same topology.  Once a particular base has been chosen we refer
+to its members as
+ \index{basic!open sets}%
+ \index{open!set!basic}%
+\emph{basic open sets}.
+
+The word ``induces'' is regarded as a transitive relation.  For example, given an inner product space $V$, no one would
+refer to the \emph{topology on $V$ induced by the metric induced by the norm induced by the inner product}.  One just speaks of
+the \emph{topology on $V$ induced by the inner product}.  Sometimes one says ``generated by'' instead of ``induced by''.
+
+\begin{prop} Let $V$ be a vector space with two norms $\norm{\,\cdot\,}_1$ and
+$\norm{\,\cdot\,}_2$.  Let $\sfml T_k$ be the topology induced on $V$ by
+$\norm{\,\cdot\,}_k$ (for $k = 1,2$). If there exists a constant $\alpha > 0$ such that
+$\norm{x}_1 \le \alpha \norm{x}_2$ for every $x \in V$, then $\sfml T_1 \subseteq \sfml T_2$.
+\end{prop}
+
+\begin{defn} Two norms on a vector space $V$ are
+ \index{equivalent!norms}%
+ \index{norm!equivalent}%
+\df{equivalent} if there exist constants $\alpha$, $\beta > 0$ such that for all $x \in
+V$
+   \[ \alpha\norm{x}_1 \le \norm{x}_2 \le \beta \norm{x}_1\,. \]
+\end{defn}
+
+\begin{prop}\label{C023184} If $\norm{\hphantom{x}}_1$ and $\norm{\hphantom{x}}_2$
+ \index{equivalent!norms!induce identical topologies}%
+are equivalent norms on a vector space~$V$, then they induce the same topology on~$V$.
+\end{prop}
+
+Proposition~\ref{C023184} gives us an easily verifiable sufficient condition for two norms
+to induce identical topologies on a vector space.  Thus, if we are trying to show, for
+example, that some subset of a normed linear space is open it may very well be the case
+that the proof can be simplified by replacing the given norm with an equivalent one.
+
+Similarly, suppose that we are attempting to verify that a function $f$ between two
+normed linear spaces is continuous.  Since continuity is defined in terms of open sets
+and equivalent norms produce exactly the same open sets (see proposition~\ref{C023184}),
+we are free to replace the norms on the domain of $f$ and the codomain of $f$ with any
+equivalent norms we please.  This process can sometimes simplify arguments significantly.
+(This possibility of simplification, incidentally, is one major advantage of giving a
+topological definition of continuity in the first place.)
+
+\begin{defn}\label{C02319} Let $x = (x_n)$ a sequence of vectors in a normed linear space $V$.
+The infinite series $\sum_{k=1}^\infty x_k$ is
+ \index{convergent!series}%
+ \index{series!convergent}%
+\df{convergent} if there exists a vector $b \in V$ such that $\norm{b - s_n} \sto 0$ as $n
+\sto \infty$, where $s_n = \sum_{k=1}^n x_k$ is the $n^{\text{th}}$ partial sum of the
+sequence~$x$.  The series is
+ \index{absolutely!convergent!series}%
+ \index{convergent!absolutely}%
+\df{absolutely convergent} if $\sum_{k=1}^\infty \norm{x_k} < \infty$.
+\end{defn}
+
+\begin{exer}\label{C023191} Let
+ \index{l@$l_1$!as a normed linear space}%
+ \index{l@$l_1$!absolutely summable sequences}%
+ \index{normed!linear space!$l_1$ as a}%
+$l_1$ be the set of all sequences $x = (x_n)$ of complex numbers such that the series $\sum x_k$ is absolutely
+convergent. Make $l_1$ into a vector space with the usual pointwise definition of addition and scalar multiplication.
+For every $x \in l_1$ define
+ \index{<unopn@$\norm{\hphantom{x}}_1$ ($1$-norm)}%
+ \index{<unopn@$\norm{\hphantom{x}}_\infty$ (uniform norm)}%
+   \begin{align*}
+      \norm{x}_1 &:= \sum_{k=1}^\infty \abs{x_k} \\
+   \intertext{and}
+      \norm{x}_\infty &:= \sup\{\abs{x_k}\colon k \in \N\}.
+   \end{align*}
+(These are, respectively, the
+ \index{one@$1$-norm!of a sequence}%
+ \index{norm!$1$- (of a sequence)}%
+$1$-norm and the
+ \index{uniform!norm!of a sequence}%
+\emph{uniform} norm.) Show that both $\norm{\hphantom{x}}_1$ and $\norm{\hphantom{x}}_\infty$
+are norms on~$l_1$. Then prove or disprove:
+ \begin{enumerate}
+  \item[(a)] If a sequence $(x^i)$ of vectors in the normed linear space
+$\bigl(l_1, \norm{\hphantom{x}}_1\bigr)$ converges, then the sequence also converges in
+$\bigl(l_1, \norm{\hphantom{x}}_\infty\bigr)$.
+  \item[(b)] If a sequence $(x^i)$ of vectors in the normed linear space
+$\bigl(l_1, \norm{\hphantom{x}}_\infty\bigr)$ converges, then the sequence also converges in
+$\bigl(l_1, \norm{\hphantom{x}}_1\bigr)$.
+ \end{enumerate}
+\end{exer}
+
+
+
+
+
+
+
+
+
+\section{Bounded Linear Maps}\label{sec_bdd_lin_maps}
+Analysts work with objects having both algebraic and topological structure.  In the
+preceding section we examined vector spaces endowed with a topology derived from a norm.
+If these are the objects under consideration, what morphisms are likely to be of greatest
+interest?  The plausible, and correct, answer is \emph{maps which preserve both
+topological and algebraic structures}; that is, continuous linear maps.  The resulting
+category is denoted by
+ \index{category!$\cat{NLS_\infty}$ as a}%
+ \index{NLSinf@$\cat{NLS_{\boldsymbol\infty}}$!the category}
+$\cat{NLS_{\boldsymbol\infty}}$.  The isomorphisms in this category are, topologically,
+homeomorphisms.
+
+Here is a very useful condition which, for linear maps, turns out to be equivalent to continuity.
+
+\begin{defn} A linear transformation $T\colon V \sto W$ between normed linear spaces is
+ \index{bounded!linear map}%
+ \index{linear!map!bounded}%
+\df{bounded} if $T(B)$ is a bounded subset of $W$ whenever $B$ is a bounded subset
+of~$V$.  In other words, a bounded linear map takes bounded sets to bounded sets.  We
+denote
+ \index{B@$\ofml B(V,W)$!bounded linear maps}%
+by~$\ofml B(V,W)$ the family of all bounded linear transformations from $V$ into~$W$.  A
+bounded linear map from a space $V$ into itself is often called a (bounded linear)
+ \index{operator}%
+ \index{conventions!all operators are bounded and linear}%
+\df{operator}.  The family of all operators on a normed linear space $V$ is denoted
+ \index{B@$\ofml B(V)$!operators}%
+by~$\ofml B(V)$.  The class of normed linear spaces together with the bounded linear maps
+between them constitute a category.  We verify below that this is just the
+category~$\cat{NLS_{\boldsymbol\infty}}$.
+\end{defn}
+
+\begin{cau} It is extremely important to realize that a bounded linear map will \emph{not},
+in general, be a bounded function in the usual sense of a \emph{bounded function} on some set
+(see examples~\ref{C023131} and~\ref{C023133}).  The use of ``bounded'' in these two conflicting
+senses may be unfortunate, but it is well established.
+\end{cau}
+
+\begin{exam} The linear map $T\colon \R \sto \R\colon x \mapsto 3x$ is a bounded linear map
+(since it maps bounded subsets of $\R$ to bounded subsets of~$\R$), but, regarded just as
+a function, $T$ is not bounded (since its range is not a bounded subset of~$\R$).
+\end{exam}
+
+The following observation my help reduce confusion.
+
+\begin{prop} A linear transformation, unless it is the constant map that takes every vector to
+zero, \emph{cannot} be a bounded function.
+\end{prop}
+
+\begin{defn}  Let $(M,d)$ and $(N,\rho)$ be metric spaces.  A function $f \colon M \sto N$ is
+ \index{uniform!continuity}%
+ \index{continuity!uniform}%
+\df{uniformly continuous} if for every $\epsilon > 0$ there exists $\delta > 0$ such that
+$\rho(f(x),f(y)) < \epsilon$ whenever  $x$, $y \in M$ and $d(x,y) < \delta$.
+\end{defn}
+
+One of the most striking aspects of linearity is that for linear maps the concepts of
+continuity, continuity at a single point, and uniform continuity coalesce.  And in fact
+they are exactly the same thing as boundedness.
+
+\begin{thm}\label{C023221} Let $T \colon V \sto W$ be a linear transformation between normed
+linear spaces. Then the following are equivalent:
+  \begin{enumerate}[label=\rm{(\alph*)}]
+    \item $T$ is bounded.
+    \item The image of the closed unit ball under $T$ is bounded.
+    \item $T$ is uniformly continuous on $V$.
+    \item $T$ is continuous on $V$.
+    \item $T$ is continuous at~$\vc 0$.
+    \item There exists a number $M > 0$ such that $\norm{Tx} \le M\norm{x}$ for all $x \in V$.
+  \end{enumerate}
+\end{thm}
+
+\begin{prop} Let $T\colon V \sto W$ be a bounded linear transformation between normed linear
+spaces.  Then the following four numbers (exist and) are equal.
+ \begin{enumerate}[label=\rm{(\alph*)}]
+  \item $\sup\{\norm{Tx}\colon \norm{x} \le 1\}$
+  \item $\sup\{\norm{Tx}\colon \norm{x} = 1\}$
+  \item $\sup\{\norm{Tx}\,\norm{x}^{-1}\colon x \ne \vc 0\}$
+  \item $\inf\{M > 0\colon \norm{Tx} \le M\norm{x}\ \text{ for all $x \in V$}\}$
+ \end{enumerate}
+\end{prop}
+
+\begin{defn}\label{defn_op_norm} If $T$ is a bounded linear map, then $\norm{T}$, called the
+ \index{norm!of a bounded linear map}%
+ \index{<unopn@$\norm T$ (norm of a bounded linear map~$T$)}%
+\df{norm} (or the
+ \index{norm!operator}%
+ \index{operator!norm}%
+\df{operator norm}  of $T$, is defined to be any one of the four expressions in the previous exercise.
+\end{defn}
+
+\begin{exam}\label{exam_op_norm_norm} If $V$ and $W$ are normed linear spaces, then the function
+   \[ \norm{\hphantom{T}}\colon \ofml B(V,W) \sto \R   \colon T \mapsto \norm{T} \]
+is, in fact, a norm.
+\end{exam}
+
+\begin{exam}\label{C023228} The family $\ofml B(V,W)$ of all bounded linear maps
+ \index{B@$\ofml B(V,W)$!as a normed linear space}%
+ \index{normed!linear space!$\ofml B(V,W)$ as a}%
+between normed linear spaces is itself a normed linear space under the operator norm defined above and the usual
+pointwise operations of addition and scalar multiplication.  Of special importance is the family $V^* = \ofml B(V,\K)$
+of the \emph{continuous} members of~$V^{\#}$, the
+ \index{continuous!linear functionals}%
+ \index{linear!functional!continuous}%
+ \index{functional!continuous linear}%
+\emph{continuous linear functionals}, also known as
+ \index{bounded!linear functionals}%
+ \index{linear!functional!bounded}%
+ \index{functional!bounded linear}%
+\emph{bounded linear functionals}.
+Recall that in~\ref{def_alg_dual} we defined the algebraic dual $V^{\#}$ of a vector space~$V$. Of
+greater importance in our work here is $V^*$, which is called the
+ \index{<unopurstar@$V^*$ (dual space of a normed linear space)}%
+ \index{V@$V^*$ (dual space of a normed linear space)}%
+ \index{dual!space}%
+ \index{space!dual of a normed linear}%
+\df{dual space} of~$V$.  To distinguish it from the algebraic dual and the order dual, it is sometimes called the
+ \index{dual!norm}%
+ \index{norm!dual}%
+\df{norm dual} or the
+ \index{dual!topological}%
+ \index{topological!dual}%
+\df{topological dual} of~$V$.  (Note that this distinction is unnecessary in finite dimensional spaces
+since there $V^* = V^{\#}$ (see~\ref{00015033}).
+\end{exam}
+
+\begin{prop}\label{C023228a} The family $\ofml B(V,W)$ of all bounded linear maps
+ \index{B@$\ofml B(V,W)$!as a Banach space}%
+ \index{Banach!space!$\ofml B(V,W)$ as a}%
+between normed linear spaces is complete (with respect to the metric induced by its norm)
+whenever $W$ is complete.  In particular, the dual space of every normed linear space is complete.
+\end{prop}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{prop}\label{0003073} Let $U$, $V$, and $W$ be normed linear spaces.  If $S \in
+\ofml B(U,V)$ and $T \in \ofml B(V,W)$, then $TS \in \ofml B(U,W)$ and $\norm{TS} \le
+\norm T \norm S$.
+\end{prop}
+
+\begin{exam} On any normed linear space $V$ the
+ \index{operator!identity}%
+ \index{identity!operator}%
+\emph{identity operator}
+   \[ \id V = I_V =I\colon V \sto V \colon v \mapsto v \] is bounded and $\norm{I_V} = 1$.  The
+ \index{operator!zero}%
+ \index{zero!operator}%
+\emph{zero operator}
+   \[ \vc 0_V = \vc 0\colon V \sto V\colon v \mapsto \vc 0 \]
+is also bounded and $\norm{0_V} = 0$.
+\end{exam}
+
+\begin{exam} Let $T \colon \R^2 \sto \R^3\colon (x,y) \mapsto (3x, x + 2y, x - 2y)$.
+Then~$\norm{T} = \sqrt{11}$.
+\end{exam}
+
+Many students just finishing a beginning calculus course feel that differentiation is a ``nicer'' operation
+than integration---probably because the rules for integration seem more complicated than those for differentiation.
+However, when we regard them as linear maps exactly the opposite is true.
+
+\begin{exam} As a linear map on the space of differentiable functions on $[0,1]$ (with the uniform norm)
+integration is bounded; differentiation is not (and so is continuous nowhere!).
+\end{exam}
+
+
+\begin{defn} Let $f\colon V_1 \sto V_2$ be a function between normed linear spaces.  For $k = 1,2$ let
+$\norm{\hphantom{M}}_k$ be the norm on~$V_k$ and $d_k$ be the metric on $V_k$ induced
+by~$\norm{\hphantom{M}}_k$ (see example~\ref{0001503}).  Then $f$ is an
+ \index{isometry}%
+\df{isometry} (or
+an \df{isometric} map) if $d_2(f(x),f(y)) = d_1(x,y)$ for all $x$, $y \in V_1$.  It is
+ \index{norm!preserving}%
+\df{norm preserving} if $\norm{f(x)}_2 = \norm{x}_1$ for all $x \in V_1$.)
+\end{defn}
+
+Previously in this section we have been discussing the category $\cat{NLS_{\boldsymbol\infty}}$ of normed
+linear spaces and continuous linear maps.  In this category, isomorphisms preserve topological structure
+(in addition to the vector space structure).  What would happen if instead we wished the isomorphisms to
+preserve the metric space structure of the normed linear spaces; that is, to be isometries?  It is easy to
+see that this is equivalent (in the presence of linearity) to asking the isomorphisms to be norm preserving.
+In this new category, denoted by
+ \index{category!$\cat{NLS_{\vc 1}}$ as a}%
+ \index{NLS1@$\cat{NLS_{\vc 1}}$!the category}
+$\cat{NLS_{\vc 1}}$, the morphisms would be
+ \index{contractive}%
+\df{contractive linear maps}, that is, linear maps $T\colon V \sto W$ between normed
+linear spaces such that $\norm{Tx} \le \norm x$ for all $x \in V$.  It seems appropriate
+to refer to $\cat{NLS_{\boldsymbol\infty}}$ as the
+ \index{topological!category}%
+ \index{category!topological}%
+\emph{topological category} of normed linear spaces and to $\cat{NLS_{\vc 1}}$ as the
+ \index{geometric category}%
+ \index{category!geometric}%
+\emph{geometric category} of normed linear spaces.  Many authors use the unmodified term
+``isomorphism'' for an isomorphism in the topological category
+$\cat{NLS_{\boldsymbol\infty}}$ and
+ \index{isometric!isomorphism}%
+ \index{isomorphism!isometric}%
+``isometric isomorphism'' for an isomorphism in the geometric category $\cat{NLS_{\vc 1}}$. In these notes
+we will focus on the topological category.  The isometric theory of normed linear spaces although important
+is somewhat more specialized.
+
+\begin{exer} Verify the unproved assertions in the preceding paragraph.  In particular, prove that
+ \begin{enumerate}
+    \item[(a)] $\cat{NLS_{\boldsymbol\infty}}$ is a category.
+    \item[(b)] An isomorphism in $\cat{NLS_{\boldsymbol\infty}}$ is both a vector space isomorphism and a homeomorphism.
+    \item[(c)] A linear map between normed linear spaces is an isometry if and only if it is norm preserving.
+    \item[(d)] $\cat{NLS_{\vc 1}}$ is a category.
+    \item[(e)] An isomorphism in $\cat{NLS_{\vc 1}}$ is both an isometry and a vector space isomorphism.
+    \item[(f)] The category $\cat{NLS_{\vc 1}}$ is a subcategory of $\cat{NLS_{\boldsymbol\infty}}$
+in the sense that every morphism of the former belongs to the latter.
+ \end{enumerate}
+\end{exer}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Finite Dimensional Spaces}
+In this section are listed a few standard and useful facts about finite dimensional spaces. Proofs of these results
+are quite easy to find.  Consult, for example, \cite{BrownP:1970}, section 4.4; \cite{Conway:1990}, section III.3;
+\cite{Kreyszig:1978}, sections 2.4--5; or \cite{Rudin:1991}, pages 16--18.
+
+\begin{defn} A sequence $(x_n)$ in a metric space is a
+ \index{Cauchy!sequence}%
+ \index{sequence!Cauchy}%
+\df{Cauchy sequence} if for every $\epsilon > 0$ there exists $n_0 \in \N$ such that
+$d(x_m,x_n) < \epsilon$ whenever $m$, $n \ge n_0$. This condition is often abbreviated as
+follows: $d(x_m, x_n) \sto 0$ as $m$, $n \sto \infty$ (or $\lim_{m,n \sto
+\infty}d(x_m,x_n) = 0$).
+\end{defn}
+
+\begin{defn} A metric space $M$ is
+ \index{complete!metric space}%
+ \index{metric space!complete}%
+ \index{space!complete metric}%
+\df{complete} if every Cauchy sequence in $M$ converges. (For a review of the most elementary facts about complete
+metric spaces see the first section of chapter 20 of my online notes~\cite{Erdman:2007}.)
+\end{defn}
+
+\begin{prop}\label{prop_fdnls_Kn} If $V$ is an $n$-dimensional normed linear space over $\K$, then there exists a map
+ \index{finite!dimensional normed linear spaces}%
+from $V$ onto $\K^n$ which is both a homeomorphism and a vector space isomorphism.
+\end{prop}
+
+\begin{cor} Every finite dimensional normed linear space is complete.
+\end{cor}
+
+\begin{cor}\label{cor_fdvs_closed} Every finite dimensional vector subspace of a normed linear space is closed.
+\end{cor}
+
+\begin{cor}\label{cor_fdvs_norms_equiv} Any two norms on a finite dimensional vector space are equivalent.
+\end{cor}
+
+\begin{defn} A subset $K$ of a topological space $X$ is
+ \index{compact}%
+\df{compact} if every family $\sfml U$ of open subsets of $X$ whose union contains $K$ can be reduced to a finite
+subfamily of $\sfml U$ whose union contains~$K$.
+\end{defn}
+
+\begin{prop}\label{00015032} The closed unit ball in a normed linear space is compact if and only if
+the space is finite dimensional.
+\end{prop}
+
+\begin{prop}\label{00015033} If $V$ and $W$ are normed linear spaces and $V$ is finite dimensional, then
+every linear map $T \colon V \sto W$ is continuous.
+\end{prop}
+
+Let $T$ be a bounded linear map between (perhaps infinite dimensional) normed linear spaces. Just as in the finite
+dimensional case, the kernel and range of $T$ are objects of great importance.  In both the finite and infinite dimensional
+case they are vector subspaces of the spaces which contain them.  Additionally, in both cases the kernel of $T$ is closed.
+(Under a continuous function the inverse image of a closed set is closed.)  There is, however, a major difference between
+the two cases.  In the finite dimensional case the range of $T$ must be closed (by~\ref{cor_fdvs_closed}).  As we will see
+in example~\ref{exam_ran_nonclosed} linear maps between infinite dimensional spaces need not have closed range.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Quotients of Normed Linear Spaces}
+
+\begin{defn}\label{quo001def} Let $A$ be an object in a concrete category $\cat C$.
+A surjective morphism $A \to^\pi B$ in $\cat C$ is a
+ \index{quotient!map!for concrete categories}%
+ \index{pi@$\pi$ (quotient map)}%
+\df{quotient map} for $A$ if a function $g\colon B \sto C$ (in $\cat{SET}$) is a morphism
+(in $\cat C$) whenever $g \circ \pi$ is a morphism. An object $B$ in $\cat C$ is a
+ \index{quotient!object}%
+\df{quotient object} for $A$ if it is the range of some quotient map for~$A$.
+\end{defn}
+
+\begin{exam} In the category $\cat{VEC}$ of vector spaces and linear maps every surjective linear
+ \index{quotient!map!in $\cat{VEC}$}%
+map is a quotient map.
+\end{exam}
+
+\begin{exam}\label{C021734} In the category $\cat{TOP}$ not every epimorphism is a
+ \index{quotient!map!in $\cat{TOP}$}%
+quotient map.
+\end{exam}
+
+\begin{proof}[\emph{Hint for proof}] Consider the identity map on the reals with different
+topologies on the domain and codomain. \ns
+\end{proof}
+
+The next item, which should be familiar from linear algebra, shows how a particular quotient object can be generated by
+``factoring out a subspace''.
+
+\begin{defn}\label{quo002def} Let $M$ be a subspace of a vector space $V$.  Define an
+equivalence relation $\sim$ on $V$ by
+   \[ x \sim y \qquad \text{if and only if} \qquad y - x \in M. \]
+For each $x \in V$ let $[x]$ be the equivalence class containing~$x$.
+ \index{<bracsqr@$[x]$ (equivalence class containing~$x$)}%
+ \index{<binop@$V/M$ (quotient of $V$ by $M$)}%
+Let $V/M$ be the set of all equivalence classes of elements of~$V$.  For $[x]$ and $[y]$
+in $V/M$ define
+  \[ [x] + [y] := [x+y]\]
+and for $\alpha \in \R$ and $[x] \in V/M$ define
+  \[\alpha[x] := [\alpha x].\]
+Under these operations $V/M$ becomes a vector space.  It is the
+ \index{quotient!vector space}%
+ \index{space!quotient!vector}%
+\df{quotient space} of $V$ by~$M$.  The notation $V/M$ is usually read ``$V$ mod~$M$''.
+The linear map
+  \[ \pi\colon V \sto V/M\colon x \mapsto [x] \]
+is called the
+ \index{quotient!map!for vector spaces}%
+ \index{pi@$\pi$ (quotient map)}%
+\df{quotient map}.
+\end{defn}
+
+\begin{exer} Verify the assertions made in definition~\ref{quo002def}. In particular,
+show that $\sim$ is an equivalence relation, that addition and scalar multiplication of
+the set of equivalence classes are well defined, that under these operations $V/M$ is a
+vector space, that the function called here the ``quotient map'' is in fact a quotient map
+in the sense of~\ref{quo001def}, and that this quotient map is linear.
+\end{exer}
+
+The following result is called the \emph{fundamental quotient theorem} or the
+ \index{quotient!theorem!for $\cat{VEC}$}%
+ \index{first isomorphism theorem}%
+{first isomorphism theorem} for vector spaces.
+
+\begin{thm}\label{quo005} Let $V$ and $W$ be vector spaces and $M \preceq V$. If
+$T \in \ofml L(V,W)$ and $\ker T \supseteq M$, then there exists a unique $\wt T \in
+\ofml L(V/M\,,W)$ which makes the following diagram commute.
+ \[\xymatrix@+30pt{V \ar[d]_*+{\pi} \ar[dr]^*+{T} & \\
+            V/M \ar[r]_*+{\widetilde T} & W  }\]
+Furthermore, $\wt T$ is injective if and only if $\ker T = M$; and $\wt T$ is surjective
+if and only if $T$ is.
+\end{thm}
+
+\begin{cor} If $T\colon V \sto W$ is a linear map between vector spaces, then
+$\ran T \cong V/\ker T$.
+\end{cor}
+
+\begin{prop}\label{C023711} Let $V$ be a normed linear space and $M$ be a closed subspace
+of~$V$.
+ \index{quotient!normed linear space}%
+ \index{normed!linear space!quotient}%
+ \index{space!quotient!normed linear}%
+Then the map
+  \[ \norm{\hphantom{x}} \colon V/M \sto \R \colon [x]
+                        \mapsto \inf\{\norm u \colon u \sim x\} \]
+is a norm on~$V/M$.  Furthermore,
+ \index{pi@$\pi$ (quotient map)}%
+ \index{quotient!map!for normed linear spaces}%
+the quotient map
+  \[ \pi \colon V \sto V/M \colon x \mapsto [x] \]
+is a bounded linear surjection with $\norm\pi \le 1$.
+\end{prop}
+
+\begin{defn} The norm defined on $V/M$ is called the
+ \index{quotient!norm}%
+ \index{norm!quotient}%
+\df{quotient norm} on~$V/M$.  Under this norm $V/M$ is a normed linear space and is called the
+ \index{quotient space}%
+ \index{space!quotient}%
+\df{quotient space} of $V$ by~$M$.  It is often referred to as ``$V$ mod $M$''.
+\end{defn}
+
+\begin{thm}[Fundamental quotient theorem for $\cat{NLS_{\boldsymbol\infty}}$]\label{C023717}
+ \index{quotient!theorem!for $\cat{NLS_{\boldsymbol\infty}}$}%
+Let $V$ and $W$ be normed linear spaces and $M$ be a closed subspace of~$V$.  If $T$ is a
+bounded linear map from $V$ to $W$ and $\ker T \supseteq M$, then there exists a unique
+bounded linear map $\wt T\colon V/M \sto W$ which makes the following diagram commute.
+  \[ \xymatrix@+30pt{V \ar[d]_*+{\pi} \ar[dr]^*+{T} & \\
+             V/M \ar[r]_*+{\wt T} & W  } \]
+Furthermore: $\norm{\wt T} = \norm{T}$; $\wt T$ is injective if and only if $\ker T = M$;
+and $\wt T$ is surjective if and only if $T$ is.
+\end{thm}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Products of Normed Linear Spaces}\label{C0155}
+Products and coproducts, like quotients, are best described in terms of what they \emph{do}.
+
+\begin{defn}\label{C015511} Let $A_1$ and $A_2$ be objects in a category~$\cat C$. We say that
+the triple $(P,\pi_1,\pi_2)$, where $P$ is an object and $\pi_k\colon P \sto A_k$ ($k =
+1,2$) are morphisms, is a
+ \index{product!in a category}%
+\df{product} of $A_1$ and $A_2$ if for every object $B$ and every pair of morphisms
+$f_k\colon B \sto A_k$ ($k = 1,2$) there exists a unique morphism $f\colon B \sto P$ such
+that $f_k = \pi_k \circ f$ for $k = 1,2$.
+
+It is conventional to say, ``Let $P$ be a product of \dots'' for, ``Let $(P,\pi_1,\pi_2)$
+be a product of \dots''. The product of $A_1$ and $A_2$ is often written as $A_1 \times
+A_2$ or as $\prod_{k = 1,2} A_k$.
+\end{defn}
+
+In a particular category products may or may not exist.  It is an interesting and
+elementary fact that whenever they exist they are unique (up to isomorphism), so that we
+may unambiguously speak of \emph{the} product of two objects.  When we say that a
+categorical object satisfying some condition(s) is \emph{unique up to isomorphism} we
+mean, of course, that any two objects satisfying the condition(s) must be isomorphic.  We
+will often use the phrase
+ \index{essentially!unique}%
+ \index{conventions!essentially unique means unique up to isomorphism}%
+ \index{uniqueness!essential}%
+``essentially unique'' for ``unique up to isomorphism.''
+
+\begin{prop} In any category products (if they exist) are
+ \index{product!uniqueness of}%
+ \index{uniqueness!of products}%
+essentially unique.
+\end{prop}
+
+\begin{exam}\label{C015517} In the category $\cat{SET}$ the
+ \index{product!in $\cat{SET}$}%
+ \index{SET@$\cat{SET}$!products in}%
+product of two sets $A_1$ and $A_2$ exists and is in fact the usual Cartesian product
+$A_1 \times A_2$ together with the usual coordinate projections $\pi_k\colon A_1 \times
+A_2 \sto A_k \colon (a_1,a_2) \mapsto a_k$.
+\end{exam}
+
+\begin{exam}\label{C015521} If $V_1$ and $V_2$ are vector spaces we make the Cartesian product
+$V_1 \times V_2$ into a vector space as follows. Define addition by
+  \[ (u,v) + (w,x) := (u + w, v + x)  \]
+and scalar multiplication by
+  \[ \alpha (u,v) := (\alpha u, \alpha v) \,. \]
+This makes $V_1 \times V_2$ into a vector space and that this space together with the
+usual coordinate projections $\pi_k\colon V_1 \times V_2 \sto V_k \colon (v_1,v_2)
+\mapsto v_k$ ($k = 1,2$) is a
+ \index{product!in $\cat{VEC}$}%
+ \index{VEC@$\cat{VEC}$!products in}%
+ \index{vector!space!product}%
+product in the category $\cat{VEC}$. It is usually called the
+ \index{direct!sum!of vector spaces}%
+ \index{sum!direct}%
+ \index{vector!space!direct sum}%
+ \index{<binopdirectsum@$\oplus$ (direct sum)}%
+\df{direct sum} of $V$ and $W$ and is denoted by~$V \oplus W$.
+\end{exam}
+
+It often possible and desirable to take the product of an arbitrary family of objects in
+a category.  Following is a generalization of definition~\ref{C015511}.
+
+\begin{defn}\label{C015524} Let $\bigl(A_\lambda\bigr)_{\lambda \in \Lambda}$ be an
+indexed family of objects in a category~$\cat C$. We say that the object $P$ together
+with an indexed family $\bigl(\pi_\lambda\bigr)_{\lambda \in \Lambda}$ of morphisms
+$\pi_\lambda\colon P \sto A_\lambda$ is a
+ \index{product!in a category}%
+\df{product} of the objects $A_\lambda$ if for every object $B$ and every indexed family
+$\bigl(f_\lambda\bigr)_{\lambda \in \Lambda}$ of morphisms $f_\lambda\colon B \sto
+A_\lambda$ there exists a unique map $g \colon B \sto P$ such that $f_\lambda =
+\pi_\lambda \circ g$ for every $\lambda \in \Lambda$.
+\end{defn}
+
+A category in which arbitrary products exist is said to be
+ \index{product!complete}%
+ \index{complete!product}%
+\df{product complete}.  Many of the categories we encounter in these notes are product
+complete.
+
+\begin{defn}\label{C015531} Let $\bigl(S_\lambda\bigr)_{\lambda \in \Lambda}$ be an indexed
+family of sets. The
+ \index{Cartesian product}%
+ \index{product!Cartesian}%
+\df{Cartesian product} of the indexed family, denoted by
+ \index{<<@$\prod S_\lambda$ (Cartesian product)}%
+$\prod_{\lambda \in \Lambda} S_\lambda$ or just $\prod S_\lambda$, is the set of all
+functions $f \colon \Lambda \sto \bigcup S_\lambda$ such that $f(\lambda) \in S_\lambda$
+for each $\lambda \in \Lambda$.  The maps $\pi_\lambda \colon \prod S_\lambda \sto
+S_\lambda \colon f \mapsto f(\lambda)$ are the canonical
+ \index{coordinate!projections}%
+ \index{pi@$\pi_\lambda$ (coordinate projections)}%
+ \index{projection!onto coordinates}%
+\df{coordinate projections}. In many cases the notation $f_\lambda$ is more convenient
+than~$f(\lambda)$.  (See, for example, example~\ref{C015537} below.)
+\end{defn}
+
+\begin{exam}\label{C015534} A very important special case of the preceding definition occurs
+when all of the sets $S_\lambda$ are identical: say $S_\lambda = A$ for every $\lambda
+\in \Lambda$.  In this case the Cartesian product comprises all the functions which map
+$\Lambda$ into~$A$. That is, $\prod_{\lambda \in \Lambda} S_\lambda = A^\Lambda$. Notice
+also that in this case the coordinate projections are
+ \index{evaluation!map}%
+ \index{function!evaluation at a point}%
+\emph{evaluation maps}. For each $\lambda$ the coordinate projection $\pi_\lambda$ takes
+each point $f$ in the product (that is, each function $f$ from $\Lambda$ into~$A$) to
+$f(\lambda)$ its value at~$\lambda$.  Briefly, each coordinate projection is an
+evaluation map at some point.
+\end{exam}
+
+\begin{exam}\label{C015537} What is $\R^n$? It is just the set of all $n$-tuples of real numbers.
+That is, it is the set of functions from $\N_n = \{1,2,\dots,n\}$ into~$\R$.  In other
+words $\R^n$ is just shorthand for~$\R^{\N_n}$.  In $\R^n$ one usually writes $x_j$ for
+the $j^{\text{th}}$ coordinate of a vector $x$ rather than~$x(j)$.
+\end{exam}
+
+\begin{exam} In the category $\cat{SET}$ the
+ \index{product!in $\cat{SET}$}%
+ \index{SET@$\cat{SET}$!products in}%
+product of an indexed family of sets exists and is in fact the Cartesian product of these
+sets together with the canonical coordinate projections.
+\end{exam}
+
+\begin{exam}\label{C015544} If $\bigl(V_\lambda\bigr)_{\lambda \in \Lambda}$ is an indexed
+family of vector spaces we make the Cartesian product $\prod V_\lambda$ into a vector
+space as follows. Define addition and scalar multiplication pointwise: for $f$, $g \in
+\prod A_\lambda$ and $\alpha \in \R$
+  \[ (f + g)(\lambda) := f(\lambda) + g(\lambda)  \]
+and
+  \[ (\alpha f)(\lambda) := \alpha f(\lambda) \,. \]
+This makes $\prod V_\lambda$ into a vector space, which is sometimes called the
+ \index{direct!product}%
+ \index{product!direct}%
+\df{direct product} of the spaces $V_\lambda$, and this space together with the canonical
+coordinate projections (which are certainly  linear maps) is a
+ \index{product!in $\cat{VEC}$}%
+ \index{VEC@$\cat{VEC}$!products in}%
+ \index{vector!space!product}%
+product in the category $\cat{VEC}$.
+\end{exam}
+
+\begin{exam}\label{C023411} Let $V$ and $W$ be normed linear spaces. On the Cartesian product
+$V \times W$ define
+  \index{<unopn@$\norm{\hphantom{x}}_2$ (Euclidean norm or $2$-norm)}%
+  \index{<unopn@$\norm{\hphantom{x}}_1$ ($1$-norm)}%
+  \index{<unopn@$\norm{\hphantom{x}}_u$ (uniform norm)}%
+ \begin{align*}
+    \norm{(x,y)}_2 &= \sqrt{\norm x^2 + \norm y^2},  \\
+    \norm{(x,y)}_1 &= \norm x + \norm y,  \\
+   \intertext{and}
+    \norm{(x,y)}_u &= \max\{\norm x, \norm y\}\,.
+ \end{align*}
+The first of these is the
+ \index{Euclidean!norm!on the product of two normed spaces}%
+ \index{norm!Euclidean!on the product of normed spaces}%
+\df{Euclidean norm} (or
+ \index{two@$2$-norm}%
+ \index{norm!$2$- (on the product of normed spaces)}%
+\df{$2$-norm}) on $V \times W$, the second is the
+ \index{one@$1$-norm!on the product of normed spaces}%
+ \index{norm!$1$- (on the product of normed spaces)}%
+\df{$1$-norm}, and the last is the
+ \index{uniform!norm!on the product of normed spaces}%
+ \index{norm!uniform!on the product of normed spaces}%
+\df{uniform norm}. Verifying that these are all norms on $V \times W$ is quite similar to
+the arguments required in examples~\ref{C023125}, \ref{C023127}, and~\ref{C023129}. That
+they are equivalent norms is a consequence of the following inequalities and
+proposition~\ref{C023184}.
+   \[ \norm x + \norm y \le \sqrt 2 \sqrt{\norm x^2 + \norm y^2} \le 2 \max\{\norm x,\norm y\} \le 2(\norm x + \norm y) \]
+\end{exam}
+
+\begin{conv}\label{C023414} In the preceding example we defined three (equivalent) norms on
+the product space $V \times W$.  We will take the first of these $\norm{\;\;}_1$ as the
+ \index{conventions!on choice of product norm}%
+ \index{product!norm}%
+ \index{norm!product}%
+\df{product norm} on $V \times W$.  Thus whenever $V$ and $W$ are normed linear spaces,
+unless the contrary is specified we will regard the product $V \times W$ as a normed
+linear space under this norm.  Usually we write just $\norm{(x,y)}$ instead of
+$\norm{(x,y)}_1$.  The product of the normed linear spaces $V$ and $W$ is usually denoted
+by $V \oplus W$ and is called the
+ \index{product!of normed linear spaces}%
+ \index{normed!linear space!product}%
+ \index{<binopdirectsum@$\oplus$ (direct sum)}%
+ \index{direct!sum!of normed linear spaces}%
+ \index{normed!linear space!direct sum}%
+\df{direct sum} of $V$ and~$W$. (In the special case where $V = W = \R$, what metric does
+the product norm induce on~$\R^2$?)
+\end{conv}
+
+\begin{exam}\label{exam_prod_nls} Show that product $V \oplus W$ of normed linear spaces is in fact a product
+ \index{product!in $\cat{NLS_{\boldsymbol\infty}}$}%
+ \index{NLSinf@$\cat{NLS_{\boldsymbol\infty}}$!products in}%
+in the category $\cat{NLS_{\boldsymbol\infty}}$  of normed linear spaces and bounded
+linear maps.
+\end{exam}
+
+\begin{prop} Let $\bigl((x_n,y_n)\bigr)$ be a sequence in the direct sum $V \oplus W$ of two normed linear
+spaces. Prove that $\bigl((x_n,y_n)\bigr)$ converges to a point $(a,b)$ in $V \oplus W$ if and only
+if $x_n \sto a$ in $V$ and $y_n \sto b$ in~$W$.
+\end{prop}
+
+\begin{prop}\label{C023427} Addition is a continuous operation on a normed linear space~$V$.
+ \index{continuity!of addition}%
+ \index{addition!continuity of}%
+That is, the map
+   \[ A \colon V \oplus V \sto V \colon (x,y) \mapsto x + y \]
+is continuous.
+\end{prop}
+
+\begin{exer} Give a \emph{very} short proof (no $\epsilon$'s or $\delta$'s or open sets) that if
+$(x_n)$ and $(y_n)$ are sequences in a normed linear space which converge to $a$ and $b$,
+respectively, then $x_n + y_n \sto a + b$.
+\end{exer}
+
+\begin{prop}\label{C023434} Scalar multiplication is a continuous operation on a normed
+ \index{continuity!of scalar multiplication}%
+ \index{scalar!multiplication!continuity of}%
+linear space~$V$ in the sense that the map
+   \[ S \colon \K \times V \sto V \colon  (\alpha,x) \mapsto \alpha x \]
+is continuous.
+\end{prop}
+
+\begin{prop} If $B$ and $C$ are subsets of a normed linear space and $\alpha$ is a scalar, then
+ \begin{enumerate}
+   \item $\clo{\alpha B} = \alpha \clo B$; and
+   \item $\clo B + \clo C  \subseteq  \clo{B + C}$.
+ \end{enumerate}
+\end{prop}
+
+\begin{exam} If $B$ and $C$ are closed subsets of a normed linear space, then it does not
+necessarily follow that $B + C$ is closed (and therefore $\clo B + \clo C$ and $\clo{B +
+C}$ need not be equal).
+\end{exam}
+
+\begin{prop} Let $C_1$ and $C_2$ be compact subsets of a normed linear space~$V$. Then
+   \begin{enumerate}
+     \item $C_1 \times C_2$ is a compact subset of $V \times V$, and
+     \item $C_1 + C_2$ is a compact subset of~$V$.
+   \end{enumerate}
+\end{prop}
+
+\begin{exam}\label{C023441}  Let $X$ be a topological space.  Then the family
+$\fml C(X)$ of all continuous complex valued functions on~$X$ is a
+ \index{C@$\fml C(X)$!as a vector space}%
+vector space under the usual pointwise operations of addition and scalar multiplication.
+\end{exam}
+
+\begin{exam}\label{C023443}  Let $X$ be a topological space.  We denote
+ \index{C@$\fml C_b(X)$!continuous bounded functions on $X$}%
+by $\fml C_b(X)$ the family of all bounded continuous complex valued functions on~$X$.  It is a
+ \index{C@$\fml C_b(X)$!as a normed linear space}%
+ \index{normed!linear space!$\fml C_b(X)$ as a}%
+normed linear space under the uniform norm.  In fact, it is a subspace of~$\fml B(X)$
+(see example~\ref{C023131}).
+\end{exam}
+
+\begin{exam}\label{C023464} If $S$ is a set and $a \in S$, then the evaluation functional
+     \[ E_a\colon \fml B(S) \sto \R\colon f \mapsto f(a) \]
+is a bounded linear functional on the space $\fml B(S)$ of all bounded real valued
+functions on~$S$. If $S$ happens to be a topological space then we may also regard $E_a$
+as a member of the dual space of $\fml C_b(S)$.  (In either case, what is~$\norm{E_a}$?)
+\end{exam}
+
+\begin{defn}\label{def_norm_alg} Let $A$ be an algebra on which a norm has been defined.  Suppose that additionally the
+ \index{submultiplicative}%
+\df{submultiplicative} property
+  \[ \norm{xy} \le \norm x\,\norm y \]
+is satisfied for all $x$, $y \in A$.  Then $A$ is a
+ \index{normed!algebra}%
+ \index{algebra!normed}%
+\df{normed algebra}.  We make one further requirement: if the algebra $A$ is unital, then
+   \[ \norm{\vc 1} = 1\,. \]
+In this case $A$ is a
+ \index{unital!normed algebra}%
+ \index{normed!algebra!unital}%
+ \index{algebra!unital normed}%
+\df{unital normed algebra}.
+\end{defn}
+
+\begin{exam}\label{C023448} In example~\ref{C023131} we showed that the family
+ \index{B@$\fml B(S)$!as a normed algebra}%
+ \index{normed!algebra!$\fml B(S)$ as a}%
+$\fml B(S)$ of bounded real valued functions on a set $S$ is a normed linear space under
+the uniform norm.  It is also a commutative unital normed algebra.
+\end{exam}
+
+\begin{prop} Multiplication is a continuous operation on a normed algebra~$V$ in the sense
+that the map
+   \[ M \colon V \times V \sto V \colon (x,y) \mapsto  xy \]
+is continuous.
+\end{prop}
+
+\begin{proof}[\emph{Hint for proof}] If you can prove that multiplication on the real numbers
+is continuous you can almost certainly prove that it is continuous on arbitrary normed
+algebras. \ns
+\end{proof}
+
+\begin{exam}\label{C023454} The family $\fml C_b(X)$ of bounded continuous real valued
+ \index{C@$\fml C_b(X)$!as a normed algebra}%
+ \index{normed!algebra!$\fml C_b(X)$ as a}%
+functions on a topological space~$X$ is, under the usual pointwise operations and the
+uniform norm, a commutative unital normed algebra. (See example~\ref{C023443}.)
+\end{exam}
+
+\begin{exam}\label{C023456} The family $\ofml B(V)$ of all (bounded linear) operators
+ \index{B@$\ofml B(V)$!as a unital normed algebra}%
+ \index{normed!algebra!$\ofml B(V)$ as a}%
+on a normed linear space $V$ is a unital normed algebra. (See~\ref{C023228} and~\ref{C023228a}.)
+\end{exam}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Coproducts of Normed Linear Spaces}\label{C0156}
+Coproducts are like products---except all the arrows are reversed.
+
+\begin{defn}\label{C015611} Let $A_1$ and $A_2$ be objects in a category~$\cat C$.  The triple
+$(Q,\iota_1,\iota_2)$, ($Q$ is an object and $\iota_k\colon A_k \sto Q$, $k = 1,2$ are morphisms) is a
+ \index{coproduct}%
+\df{coproduct} of $A_1$ and $A_2$ if for every object $B$ and every pair of morphisms
+$f_k\colon A_k \sto B$ (k = 1,2) there exists a unique morphism $f\colon P \sto B$ such
+that $f_k = f \circ \iota_k$ for $k = 1,2$.
+\end{defn}
+
+\begin{prop} In any category coproducts (if they exist) are
+ \index{coproduct!uniqueness of}%
+essentially unique.
+\end{prop}
+
+\begin{defn}\label{C0006127} Let $A$ and $B$ be sets.  When $A$ and $B$ are disjoint we will
+often use the notation
+ \index{<binopuniond@$\uplus$, $\biguplus$ (disjoint union)}%
+$A \uplus B$ instead of $A \cup B$ (to emphasize the disjointness of $A$ and~$B$). When
+$C = A \uplus B$ we say that $C$ is the
+ \index{disjoint!union}%
+ \index{union!disjoint}%
+\df{disjoint union} of $A$ and~$B$.  Similarly we frequently choose to write the union of
+a \emph{pairwise disjoint} family $\sfml A$ of sets as $\biguplus\sfml A$. And the
+notation $\biguplus_{\lambda \in \Lambda} A_\lambda$ may be used to denote the union of a
+\emph{pairwise disjoint} indexed family $\{A_\lambda\colon  \lambda \in \Lambda\}$ of
+sets. When $C = \biguplus\sfml A$ or $C = \biguplus_{\lambda \in \Lambda} A_\lambda$ we
+say that $C$ is the \df{disjoint union} of the appropriate family.
+\end{defn}
+
+\begin{defn} In the preceding definition we introduced the notation $A \uplus B$ for the
+union of two disjoint sets $A$ and~$B$.  We now extend this notation somewhat and allow
+ourselves to take the \emph{disjoint union} of sets $A$ and $B$ even if they are not
+disjoint. We ``make them disjoint'' by identifying (in the obvious way) the set $A$ with the
+set $A' = \{(a,1)\colon a \in A\}$ and $B$ with the set $B' = \{(b,2)\colon b \in B\}$.  Then we
+denote the union of $A'$ and $B'$, which \emph{are} disjoint, by $A \uplus B$ and call it the
+ \index{disjoint!union}%
+ \index{union!disjoint}%
+ \index{<binopuniond@$\uplus$, $\biguplus$ (disjoint union)}%
+\df{disjoint union} of $A$ and~$B$.
+
+In general, if $\bigl(A_\lambda\bigr)_{\lambda \in \Lambda}$ is an indexed family of
+sets, its
+ \index{disjoint!union}%
+ \index{union!disjoint}%
+\df{disjoint union}, \smash[b]{$\biguplus\limits_{\lambda \in \Lambda}A_\lambda$} is
+defined to be $\bigcup \{(A_\lambda,\lambda)\colon \lambda \in \Lambda\}$.
+\end{defn}
+
+\begin{exam}\label{C015617} In the category $\cat{SET}$ the
+ \index{coproduct!in $\cat{SET}$}%
+ \index{SET@$\cat{SET}$!coproducts in}%
+coproduct of two sets $A_1$ and $A_2$ exists and is their disjoint union $A_1 \uplus A_2$
+together with the obvious inclusion maps $\iota_k\colon A_k  \sto A_1 \uplus A_2$ ($k = 1,2$).
+\end{exam}
+
+It is interesting to observe that while the product and coproduct of a finite collection
+of objects in the category $\cat{SET}$ are quite different, in the more complex category
+$\cat{VEC}$ they turn out to be exactly the same thing.
+
+\begin{exam} If $V_1$ and $V_2$ are vector spaces make the Cartesian product $V_1 \times V_2$
+into a vector space as in example~\ref{C015521}. This space together with the obvious
+injections is a
+ \index{coproduct!in $\cat{VEC}$}%
+ \index{VEC@$\cat{VEC}$!coproducts in}%
+ \index{vector!space!coproduct}%
+coproduct in the category $\cat{VEC}$.
+\end{exam}
+
+It often possible and desirable to take the coproduct of an arbitrary family of objects
+in a category.  Following is a generalization of definition~\ref{C015611}.
+
+\begin{defn}\label{C015624} Let $\bigl(A_\lambda\bigr)_{\lambda \in \Lambda}$ be an indexed
+family of objects in a category~$\cat C$. We say that the object $C$ together with an
+indexed family $\bigl(\iota_\lambda\bigr)_{\lambda \in \Lambda}$ of morphisms
+$\iota_\lambda\colon A_\lambda \sto C$ is a
+ \index{coproduct!in a category}%
+\df{coproduct} of the objects $A_\lambda$ if for every object $B$ and every indexed
+family $\bigl(f_\lambda\bigr)_{\lambda \in \Lambda}$ of morphisms $f_\lambda\colon
+A_\lambda \sto B$ there exists a unique map $g \colon C \sto B$ such that $f_\lambda = g
+\circ \iota_\lambda$ for every $\lambda \in \Lambda$.  The usual notation for the
+coproduct of the objects $A_\lambda$ is
+ \index{<<@$\coprod A_\lambda$ (coproduct)}%
+$\coprod_{\lambda \in \Lambda} A_\lambda$.
+\end{defn}
+
+\begin{exam} In the category $\cat{SET}$ the
+ \index{coproduct!in $\cat{SET}$}%
+ \index{SET@$\cat{SET}$!coproducts in}%
+coproduct of an indexed family of sets exists and is the disjoint union of these sets.
+\end{exam}
+
+\begin{defn}  Let $S$ be a set and $V$ be a vector space. The
+ \index{support!of a function}%
+\df{support} of a function $f \colon S \sto V$ is $\{s \in S \colon f(s) \ne \vc 0\}$.
+\end{defn}
+
+\begin{exam}\label{X_dir_sum_VEC} If $\bigl(V_\lambda\bigr)_{\lambda \in \Lambda}$ is an indexed family of
+vector spaces we make the Cartesian product into a vector space as in example~\ref{C015544}. The set of functions $f$
+belonging to $\prod V_\lambda$ which have finite support (that is, which are nonzero only finitely often) is clearly
+a subspace of $\prod V_\lambda$.  This subspace is the
+ \index{direct!sum}%
+ \index{sum!direct}%
+\df{direct sum} of the spaces $V_\lambda$.  It is denoted by $\bigoplus_{\lambda \in
+\Lambda} V_\lambda$.  This space together with the obvious injective maps (which are
+linear) is a
+ \index{coproduct!in $\cat{VEC}$}%
+ \index{VEC@$\cat{VEC}$!coproducts in}%
+ \index{vector!space!coproduct}%
+coproduct in the category $\cat{VEC}$.
+\end{exam}
+
+\begin{exer}  What are the coproducts in the category $\cat{NLS_{\boldsymbol\infty}}$ ?
+\end{exer}
+
+\begin{exer} Identify the product and coproduct of two spaces $V$ and $W$ in the category
+$\cat{NLS_{\vc 1}}$ of normed linear spaces and linear contractions.
+\end{exer}
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Nets}\label{C0314}
+Nets (sometimes called \emph{generalized sequences}) are useful for characterizing many
+properties of general topological spaces.  In such spaces they are used in basically
+the same way as sequences are used in metric spaces.
+
+\begin{defn} A preordered set in which every pair of elements has an upper bound is a
+ \index{directed!set}%
+ \index{set!directed}%
+\df{directed set}.
+\end{defn}
+
+\begin{exam}\label{C031414}  If $S$ is a set, then $\fin S$ is a directed set under
+inclusion $\subseteq$.
+\end{exam}
+
+\begin{defn} Let $S$ be a set and $\Lambda$ be a directed set.  A mapping
+$x\colon \Lambda \sto S$ is a
+ \index{net}%
+\df{net} in $S$ (or a \emph{net of members of $S$}). The value of $x$ at $\lambda \in
+\Lambda$ is usually written $\sbsb x\lambda$ (rather than $x(\lambda)$) and the net $x$
+itself is often denoted by $\bigl(\sbsb x\lambda\bigr)_{\lambda \in \Lambda}$ or just
+$\bigl(\sbsb x\lambda\bigr)$.
+\end{defn}
+
+\begin{exam} The most obvious examples of nets are sequences.  These are functions whose domain is the (preordered) set $\N$ of natural numbers.
+\end{exam}
+
+\begin{defn} A net $x = \bigl(\sbsb x\lambda\bigr)$ is said to
+ \index{eventually}%
+\df{eventually} have some specified property if there exists $\lambda_0 \in \Lambda$ such that $\sbsb x\lambda$ has that property
+whenever $\lambda \ge \lambda_0$; and it has the property
+ \index{frequently}%
+\df{frequently} if for every $\lambda_0 \in \Lambda$ there exists $\lambda \in \Lambda$ such that $\lambda \ge \lambda_0$
+and $\sbsb x\lambda$ has the property.
+\end{defn}
+
+\begin{defn} A
+ \index{neighborhood}%
+\df{neighborhood} of a point in a topological space is any set which contains an open set containing the point.
+\end{defn}
+
+\begin{defn}  A net $x$ in a topological space $X$
+ \index{convergence!of nets}%
+ \index{net!convergence of a}%
+\df{converges} to a point $a \in X$ if it is eventually in every neighborhood of~$a$. In
+this case $a$ is the
+ \index{limit!of a net}%
+ \index{net!limit of a}%
+\df{limit} of $x$ and we write
+   \[ x_{{}_{\sst \lambda}} \to_{\lambda \in \Lambda}a \]
+or just
+ \index{<arrowto@$x_\lambda \sto a$ (convergence of nets)}%
+$x_{{}_{\sst \lambda}} \sto a$.  When limits are unique we may also use the notation
+$\lim_{\lambda \in \Lambda} \sbsb x\lambda = a$ or, more simply, $\lim \sbsb x\lambda =
+a$.
+
+The point $a$ in $X$ is a
+ \index{cluster point!of a net}%
+ \index{net!cluster point of a}%
+\df{cluster point} of the net $x$ if $x$ is frequently in every neighborhood of~$a$.
+\end{defn}
+
+\begin{defn} Let $(X,\sfml T)$ be a topological space.  A subfamily $\sfml S \subseteq
+\sfml T$ is a
+ \index{subbase}%
+\df{subbase} for the topology $\sfml T$ if the family of all finite intersections of
+members of $\sfml S$ is a base for~$\sfml T$.
+\end{defn}
+
+\begin{exam}\label{C031429} Let $X$ be a topological space and $a \in X$. A
+ \index{neighborhood!base for}%
+ \index{base!for neighborhoods of a point}%
+\df{base} for the family of neighborhoods of the point $a$ is a family $\sfml B_a$ of
+neighborhoods of $a$ with the property that every neighborhood of $a$ contains at least
+one member of~$\sfml B_a$.  In general, there are many choices for a neighborhood base at
+a point. Once such a base is chosen we refer to its members as
+ \index{basic!neighborhoods}%
+ \index{neighborhood!basic}%
+\emph{basic neighborhoods} of~$a$.
+
+Let $\sfml B_a$ be a base for the family of neighborhoods at $a$.  Order $\sfml B_a$ by
+containment (the reverse of inclusion); that is, for $U$, $V \in \sfml B_a$ set
+  \[ U \preceq V \text{ if and only if } U \supseteq V\,. \]
+This makes $\sfml B_a$ into a directed set. Now (using the axiom of choice) choose one
+element $x_{{}_U}$ from each set $U \in \sfml B_a$.  Then $(\sbsb xU)$ is a net in $X$
+and $\sbsb xU \sto a$.
+\end{exam}
+
+The next two propositions assure us that in order for a net to converge to a point $a$ in
+a topological space it is sufficient that it be eventually in every basic (or even
+subbasic) neighborhood of~$a$.
+
+\begin{prop}\label{C031431} Let $\sfml B$ be a base for the topology on a topological
+space~$X$ and $a$ be a point of~$X$. A net $(x_\lambda)$  converges to  $a$ if and only
+if it is eventually in every neighborhood of~$a$ which belongs to~$\sfml B$.
+\end{prop}
+
+\begin{prop}\label{C031434} Let $\sfml S$ be a subbase for the topology on a topological
+space~$X$ and $a$ be a point of~$X$.  A net $(x_\lambda)$ converges to $a$ if and only if
+it is eventually in every neighborhood of~$a$ which belongs to~$\sfml S$.
+\end{prop}
+
+\begin{exam}\label{C031437} Let $J = [a,b]$ be a fixed interval in the real line,
+$\vc x = (x_0,x_1,\dots,x_n)$ be an $(n+1)$-tuple of points of $J$, and $\vc t =
+(t_1,\dots,t_n)$ be an $n$-tuple. The pair $(\vc x;\vc t)$ is a
+ \index{partition!with selection}%
+ \index{selection}%
+\df{partition with selection} of the interval $J$ if:
+ \begin{enumerate}
+  \item $x_{k-1} < x_k$ for $1 \le k \le n$;
+  \item $t_k \in [x_{k-1},x_k]$ for $1 \le k \le n$;
+  \item $x_0 = a$; and
+  \item $x_n = b$.
+ \end{enumerate}
+The idea is that $\vc x$ \emph{partitions} the interval into subintervals and $t_k$ is
+the point \emph{selected} from the $k^{\text{th}}$ subinterval.  If $\vc x =
+(x_0,x_1,\dots,x_n)$, then $\{\vc x\}$ denotes the \emph{set} $\{x_0,x_1,\dots,x_n\}$.
+Let $P = (\vc x;\vc s)$ and $Q = (\vc y;\vc t)$ be partitions (with selections) of the
+interval~$J$. We write $P \preccurlyeq Q$ and say that $Q$ is a
+ \index{refinement}%
+\df{refinement} of $P$ if $\{\vc x\} \subseteq \{\vc y\}$. Under the relation
+$\preccurlyeq$ the family $\sfml P$ of partitions with selection on $J$ is a directed
+(but \emph{not} partially ordered) set.
+
+Now suppose $f$ is a bounded function on the interval $J$ and $P = (\vc x;\vc t)$ is a
+partition of $J$ into $n$ subintervals. Let $\Delta x_k := x_k - x_{k-1}$ for $1 \le k
+\le n$. Then define
+   \[ S_f(P) := \sum_{k=1}^n f(t_k)\,\Delta x_k\,. \]
+Each such sum $S_f(P)$ is a
+ \index{Riemann!sum}%
+ \index{sum!Riemann}%
+\df{Riemann sum} of $f$ on~$J$. Notice that since $\sfml P$ is a directed set, $S_f$ is a
+net of real numbers.  If the net $S_f$ of Riemann sums converges we say that the function
+$f$ is
+ \index{Riemann!integrable}%
+ \index{integrable!Riemann}%
+\df{Riemann integrable}.  The limit of the net $S_f$ (when it exists) is the
+ \index{Riemann!integral}%
+ \index{integral!Riemann}%
+\df{Riemann integral} of $f$ over the interval~$J$ and is denoted by $\int_a^b f(x)\,dx$.
+\end{exam}
+
+\begin{exam}\label{exam_net_indiscrete} In a topological space $X$ with the
+indiscrete topology (where the only open sets are $X$ and the empty set) every net in the space
+converges to every point of the space.
+\end{exam}
+
+\begin{exam} In a topological space $X$ with the discrete topology (where every subset of $X$ is open) a net
+in the space  converges if and only if it is eventually constant.
+ \end{exam}
+
+\begin{defn} A
+ \index{Hausdorff}%
+ \index{separation!axiom!Hausdorff}%
+ \index{topological!space!Hausdorff}%
+ \index{topology!Hausdorff}%
+\df{Hausdorff} topological space is one in which every pair of distinct points can be
+separated by open sets; that is, for every pair $x$ and $y$ of distinct points in the space there exist
+open neighborhoods of $x$ and $y$ that are disjoint.
+\end{defn}
+
+As example~\ref{exam_net_indiscrete} shows nets in general topological spaces need not have unique
+limits. A space does not require very restrictive assumptions however to make this
+pathology go away. For limits to be unique it is sufficient to require that a space be
+Hausdorff. Interestingly, it turns out that this condition is also necessary.
+
+\begin{prop}\label{C031441} If $X$ is a topological space, then the following are equivalent:
+ \begin{enumerate}
+  \item $X$ is Hausdorff.
+  \item No net in $X$ can converge to more than one point.
+  \item The diagonal in $X \times X$ is closed.
+ \end{enumerate}
+\end{prop}
+(The
+ \index{diagonal}%
+\df{diagonal} of a set $S$ is $\{(s,s) \colon s \in S\} \subseteq S \times S$.)
+
+\begin{exam} Recall from beginning calculus that the $n^{\text{th}}$
+ \index{partial!sum}%
+ \index{sum!partial}%
+ \index{infinite series!partial sum of an}%
+ \index{series!infinite}%
+\df{partial sum} of an infinite series $\sum_{k=1}^\infty x_k$ is defined to be $s_n =
+\sum_{k=1}^n x_k$.  The series is said to
+ \index{convergence!of infinite series}%
+ \index{infinite series!convergence of an}%
+\df{converge} if the sequence $(s_n)$ of partial sums converges and, if the series
+converges, its
+ \index{sum!of an infinite series}%
+ \index{infinite series!sum of an}%
+ \index{series!sum of a}%
+\emph{sum} is the limit of the sequence $(s_n)$ of partial sums.  Thus, for example, the
+infinite series $\sum_{k=1}^\infty 2^{-k}$ converges and its sum is~$1$.
+\end{exam}
+
+The idea of \emph{summing} an infinite series depends heavily on the fact that the
+partial sums of the series are linearly ordered by inclusion. The ``partial sums'' of a
+net of numbers need not be partially ordered, so we need a new notion of
+``summation'', sometimes referred to as \emph{unordered summation}.
+
+\begin{notn} If $A$ is a set we denote
+ \index{fin@$\fin A$ (family of finite subsets of a set $A$)}%
+by $\fin A$ the family of all finite subsets of~$A$. (Note that this is a directed set under the
+relation~$\subseteq$.)
+\end{notn}
+
+\begin{defn}\label{def_summable_R} Let $A \subseteq \R$.  For every $F \in \fin A$ define $S_F$ to be the sum of
+the numbers in~$F$, that is, $S_F = \sum F$.  Then $S = \bigl(S_F\bigr)_{F \in \fin A}$
+is a net in~$\R$.  If this net converges, the set $A$ of numbers is said to be
+ \index{summable!set of real numbers}%
+\df{summable}; the limit of the net is the
+ \index{sum!of a summable set}%
+\df{sum} of $A$ and is denoted by $\sum A$.
+\end{defn}
+
+\begin{defn}  A net $(x_\lambda)$ of real numbers is
+ \index{increasing!net in $\R$}%
+ \index{net!increasing}%
+\df{increasing} if $\lambda \le \mu$ implies $x_\lambda \le x_\mu$.  A net of real (or complex)
+numbers is
+ \index{bounded!net in $\K$}%
+ \index{net!bounded}%
+\df{bounded} if its range is.
+\end{defn}
+
+\begin{exam}\label{C031454} Let $f(n) = 2^{-n}$ for every $n \in \N$, and let $x \colon
+\fin(\N) \sto \R$ be defined by $x(A) = \sum_{n \in A}f(n)$.
+ \begin{enumerate}
+  \item The net $x$ is increasing.
+  \item The net $x$ is bounded.
+  \item The net $x$ converges to 1.
+  \item The set of numbers $\{\frac12,\frac14,\frac18, \frac1{16},\dots\}$ is summable and
+its sum is~$1$.
+  \end{enumerate}
+\end{exam}
+
+\begin{exam} In a metric space every convergent sequence is bounded.  Give an example to show
+that a convergent net in a metric space (even in~$\R$) need not be bounded.
+\end{exam}
+
+It is familiar from beginning calculus that bounded increasing sequences in $\R$
+converge. The preceding example is a special case of a more general observation: bounded
+increasing nets in $\R$ converge.
+
+\begin{prop}\label{C031461} Every bounded increasing net
+$\bigl(x_{{}_{\sst \lambda}}\bigr)_{\lambda \in \Lambda}$ of real numbers converges and
+  \[ \lim x_{{}_{\sst \lambda}} = \sup\{x_{{}_{\sst \lambda}}\colon \lambda \in \Lambda\}\,. \]
+\end{prop}
+
+\begin{exam} Let $(x_k)$ be a sequence of distinct positive real numbers and $A = \{x_k \colon k \in \N\}$.
+Then $\sum A$ (as defined above) is equal to the sum of the series $\sum_{k=1}^\infty
+x_k$.
+\end{exam}
+
+\begin{exam} The set $\bigl\{\frac1k \colon k \in \N \bigr\}$ is not summable and the infinite
+series $\sum_{k=1}^\infty \frac1k$ does not converge.
+\end{exam}
+
+\begin{exam} The set $\bigl\{(-1)^k \frac1k\colon k \in \N \bigr\}$ is not summable but the
+infinite series $\sum_{k=1}^\infty (-1)^k \frac1k$ does converge.
+\end{exam}
+
+\begin{prop} Every summable subset of real numbers is countable.
+\end{prop}
+
+\begin{proof}[\emph{Hint for proof.}] If $A$ is a summable set of real numbers and $n \in \N$,
+how many members of $A$ can be larger than~$1/n$?  \ns
+\end{proof}
+
+In proposition~\ref{C031441} we have already seen one example of a way in which nets
+characterize a topological property: a space is Hausdorff if and only if limits of nets
+in the space are unique (when they exist).  Here is another topological
+property---continuity at a point---that can be conveniently characterized in terms of
+nets.
+
+\begin{prop}\label{C031471}  Let $X$ and $Y$ be topological spaces.  A function
+ \index{continuity!characterization by nets}%
+$f\colon X \sto Y$ is continuous at a point $a$ in $X$ if and only if $f\bigl(\sbsb x\lambda\bigr) \sto f(a)$ in $Y$
+whenever $\bigl(\sbsb x\lambda\bigr)$ is a net converging to $a$ in~$X$.
+\end{prop}
+
+In metric spaces we characterize closures and interiors of sets in terms of sequences. For
+general topological spaces we must replace sequences by nets.
+
+In defining the terms ``interior'' and ``closure'' we have choices similar to the ones we had in defining ``convex hull'' in
+\ref{smplx005def}.  There is an 'abstract' definition and there is a `constructive' one.  You may find it helpful to recall
+proposition~\ref{smplx006} and the paragraph preceding it.
+
+\begin{defn}\label{def_interior} The
+ \index{interior}%
+\df{interior} of a set $A$ in a topological space $X$ is the largest open subset of $X$ contained in~$A$; that is, the
+union of all open subsets of $X$ contained in~$A$. The interior of $A$
+ \index{<unopur@$\intr A$ (interior of~$A$)}%
+is denoted by $\intr A$.
+\end{defn}
+
+\begin{prop} The preceding definition makes sense.  Furthermore, a point $a$ in a topological space $X$ is in the interior of a subset
+ \index{interior!characterization of by nets}%
+ \index{characterization!by nets!of interior}%
+ \index{nets!characterization!of interior by}%
+$A$ of $X$ if and only if every net in $X$ that converges to $a$ is eventually in~$A$.
+\end{prop}
+
+\begin{proof}[\emph{Hint for proof}]  One direction is easy. In the other use proposition~\ref{C031431} and the sort
+of net constructed in example~\ref{C031429}.   \ns
+\end{proof}
+
+\begin{defn}\label{def_closure} The
+ \index{closure}%
+\df{closure} of a set $A$ in a topological space $X$ is the smallest closed subset of $X$ containing~$A$; that is, the
+intersection of all closed subsets of $X$ which contain~$A$.  The closure of $A$
+ \index{<unopu@$\clo A$ (closure of~$A$)}%
+is denoted by~$\clo A$.
+\end{defn}
+
+\begin{prop}\label{C031481} The preceding definition makes sense.  Furthermore, a point $b$ in a topological space $X$ belongs to the
+ \index{closure!characterization of by nets}%
+ \index{charactrization!by nets!of closure}%
+ \index{nets!characterization!of closure by}%
+closure of a subset $A$ of~$X$ if and only if some net in $A$ converges to~$b$.
+\end{prop}
+
+\begin{cor} A subset $A$ of a topological space is closed if and only if the limit of every convergent net in $A$ belongs to~$A$.
+\end{cor}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{The Hahn-Banach Theorems}
+
+It should be said at the beginning that referring to ``the'' \emph{Hahn-Banach theorem} is something of a misnomer.
+A writer who claims to be using the \emph{Hahn-Banach theorem} may be using any of a dozen or so versions of the
+theorem or its corollaries.  What do the various versions have in common?  Basically they assure us that normed
+linear spaces have, in general, a rich enough supply of bounded linear functionals to make their dual spaces useful
+tools in studying the spaces themselves. That is, they guarantee an interesting and productive duality theory.
+Below we consider four versions of the `theorem' and three of its corollaries.  We will succumb to usual practice:
+when in the sequel we make use of any of these results, we will say we are using `the' \emph{Hahn-Banach theorem}.
+
+As is often the case in mathematics the attribution of these results to Hahn and Banach is a bit peculiar.  It seems
+that the basic insights were due originally to Eduard Helly.  For an interesting history of the `Hahn-Banach' results
+see~\cite{Hochstadt:1980}.
+
+Incidentally, in the name ``Banach'', the ``a'''s are pronounced as in \emph{car} and the ``ch'' as in \emph{chaos};
+and the accent is on the first syllable (BAH-nakh).
+
+\begin{defn} A real valued function $f$ on a real vector space $V$ is a
+ \index{sublinear}%
+\df{sublinear functional} if $f(x + y) \le f(x) + f(y)$ and $f(\alpha x) = \alpha f(x)$
+for all $x$, $y \in V$ and $\alpha \ge 0$.
+\end{defn}
+
+\begin{exam} A norm on a real vector space is a sublinear functional.
+\end{exam}
+
+Our first version of the \emph{Hahn-Banach theorem} is pure linear algebra and applies only to \emph{real} vector spaces.
+It allows us to extend certain linear functionals on such spaces from subspaces to the whole space.
+
+\begin{thm}[Hahn-Banach theorem I]\label{HBTI} Let $M$ be a subspace of a real vector space $V$ and $p$
+ \index{Hahn-Banach theorem}%
+be a sublinear functional on~$V$. If $f$ is a linear functional on $M$ such that $f \le p$ on $M$, then
+$f$ has an extension $g$ to all of $V$ such that $g \le p$ on~$V$.
+\end{thm}
+
+\begin{proof}[\emph{Hint for proof}] In this theorem the notation $h \le p$ means that $\dom h \subseteq \dom p = V$
+and that $h(x) \le p(x)$ for all $x \in \dom h$.  In this case we say that $h$ is
+ \index{dominate}%
+\df{dominated} by~$p$.  We write
+ \index{<binrelle@$f \preccurlyeq g$ ($g$ is an extension of~$f$)}%
+$f \preccurlyeq g$ if $g$ is an extension of~$f$ (that is,
+if $f(x) = g(x)$ for all $x \in \dom f$).
+
+Let $\fml S$ be the family of all real valued linear functionals on subspaces of $V$ which are extensions of $f$ and are
+dominated by~$p$. The family $\fml S$ is partially ordered by $\preccurlyeq$.  Use \emph{Zorn's lemma} to produce a
+maximal element $g$ of~$\fml S$.  The proof is finished if you can show that $\dom{g} = V$.
+
+To this end, suppose to the contrary that there is a vector $c \in V$ which does not belong to~$D = \dom{g}$.  Prove first that
+   \begin{equation}\label{eq_HBTI}
+      g(y) - p(y - c) \le - g(x) + p(x + c)
+   \end{equation}
+for all $x$, $y \in D$.  Conclude that there is a number $\gamma$ which lies between the supremum of all the numbers
+on the left side of~\eqref{eq_HBTI} and the infimum of those on the right.
+
+Let $E$ be the span of $D \cup \{c\}$.  Define $h$ on $E$ by $h(x + \alpha c) = g(x) + \alpha\gamma$ for $x \in D$ and
+$\alpha \in \R$.  Now show $h \in \fml S$.  (Take $\alpha > 0$ and work separately with $h(x + \alpha c)$ and $h(x - \alpha c)$.) \ns
+\end{proof}
+
+The next theorem is the version of theorem~\ref{HBTI} for spaces with complex scalars.  It is sometimes referred to as the
+ \index{Bohnenblust-Sobczyk-Suhomlinov theorem}%
+\emph{Bohnenblust-Sobczyk-Suhomlinov theorem}.
+
+\begin{thm}[Hahn-Banach theorem II]\label{HBTII} Let $V$ be a complex vector space, $p$ be a seminorm on~$V$, and $M$ be a subspace of~$V$.
+If $f\colon M \sto \C$ is a linear functional such that $\abs f \le p$, then $f$ has an extension $g$ which is a linear functional
+on all of~$V$ satisfying $\abs{g} \le p$.
+\end{thm}
+
+\begin{proof}[\emph{Hint for proof}] This result is essentially a straightforward corollary to the real version of the
+\emph{Hahn-Banach theorem} given above in~\ref{HBTI}.  Let $V_{\R}$ be the real vector space associated with~$V$ (same vectors
+but using only $\R$ as the scalar field).  Notice that if $u$ is the real part of $f$ (that is,
+ \index{R@$\Re(z)$ (the real part of $z \in \C$)}%
+$u(x) = \Re(f(x))$ for each $x \in M$), then $u$ is an $\R$-linear functional on $M$ (that is, $f(x + y) = f(x) + f(y)$ and $f(\alpha x) = \alpha f(x)$
+for all $x$, $y \in M$ and all $\alpha \in \R$) and $f(x) = u(x) - i\,u(ix)$.  And conversely, if $u$ is a $\R$-linear functional on some vector space,
+then $f(x) := u(x) - i\,u(ix)$ defines a (complex valued) linear functional on that space.  Notice also that if $u$ is the real part of~$f$,
+then $\abs{u(x)} \le p$ for all $x$ if and only if $\abs{f(x)} \le p$ for all~$x$.  With these observations in mind just apply~\ref{HBTI}
+to the real part of $f$ on~$V_\R$.  \ns
+\end{proof}
+
+Next is perhaps the most often used version of the \emph{Hahn-Banach theorem}.
+
+\begin{thm}[Hahn-Banach theorem III]\label{HBTIII} Let $M$ be a vector subspace of a (real or
+ \index{Hahn-Banach theorem}%
+complex) normed linear space $V$. Then every continuous linear functional $f$ on $M$ has
+an extension $g$ to all of $V$ such that $\norm{g} = \norm f$.
+\end{thm}
+
+\begin{proof}[\emph{Hint for proof}] Consider the function $p\colon V \sto \R \colon x \mapsto \norm f \norm x$.  \ns
+\end{proof}
+
+It is sometimes useful, when proving a theorem, to consider the possibility of more ``natural'' or even  more ``obvious'' proofs.
+On occasion one is rewarded by an enlightening simplification and clarification of complex material.  And sometimes one is fooled.
+
+\begin{exer} Your buddy Fred R. Dimm thinks he has discovered a really simple direct proof of
+the version of the Hahn-Banach theorem given in proposition~\ref{HBTIII}: A continuous
+linear functional $f$ defined on a (linear) subspace $M$ of a normed linear space~$V$ can
+be extended to a continuous linear functional $g$ on all of $V$ without increasing
+its norm. He says that all one needs to do is let $N$ be any vector space complement
+of~$M$ and let $B$ be a (Hamel) basis for $N$.  Define $g(e) = 0$ for every vector $e
+\in B$ and $g = f$ on~$M$. Then extend $g$ by linearity to all of~$V$. Surely,
+Fred says, $g$ is linear by construction and its norm has not increased since we
+have made it zero where it was not previously defined.  Show Fred the error of his ways.
+\end{exer}
+
+\begin{thm}[Hahn-Banach theorem IV]\label{HBTIV} Let $V$ be a (real or complex) normed
+ \index{Hahn-Banach theorem}%
+linear space, $M$ be a vector subspace of $V$, and suppose that $y \in V$ is such that
+ \index{dist@$\dist(y,M)$ (the distance between $y$ and $M$)}%
+$d := \dist(y,M) > 0$.  Then there exists a functional $g \in V^*$ such that $g^{\sto}(M) = \{0\}$,
+$g(y) = d$, and $\norm g = 1$.
+\end{thm}
+
+\begin{proof}[\emph{Hint for proof}] Let $N := \spn{(M \cup \{y\})}$ and define
+$f\colon N \sto \K \colon x + \alpha y \mapsto \alpha d$ ($x \in M$, $\alpha \in \K$). \ns
+\end{proof}
+
+The most useful special case of the preceding theorem is when $M = \{\vc 0\}$ and $y \ne \vc 0$.
+This tells us that the only way for $f(x)$ to vanish for every $f \in V^*$ is for $x$ to
+be the zero vector.
+
+\begin{cor}\label{HBCorI} Let $V$ be a normed linear space and $x \in V$.  If $f(x) = 0$ for
+every $f \in V^*$, then $x = \vc 0$.
+\end{cor}
+
+\begin{defn} A family $\fml G(S)$ of scalar valued functions on a set~$S$
+ \index{separation!of pairs of points by a family of functions}%
+\df{separates} points of $S$ if for every pair $x$ and $y$ of distinct points in $S$ there exists
+a function $f \in \fml G(S)$ such that $f(x) \ne f(y)$.
+\end{defn}
+
+\begin{cor}\label{HBCorII} If $V$ is a normed linear space, then $V^*$ separates points of~$V$.
+\end{cor}
+
+\begin{cor}\label{HBCorIII} Let $V$ be a normed linear space and $x \in V$.  Then there exists
+$f \in V^*$ such that $\norm f = 1$ and $f(x) = \norm x$.
+\end{cor}
+
+\begin{prop} Let $V$ be a normed linear space, $\{x_1,\dots,x_n\}$ be a linearly independent
+subset of $V$, and $\alpha_1, \dots, \alpha_n$ be scalars. Then there exists an $f$ in
+$V^*$ such that $f(x_k) = \alpha_k$ for $1\le k \le n$.
+\end{prop}
+
+\begin{proof}[\emph{Hint for proof}] For $x = \sum_{k=1}^n \beta_k x_k$ let $g(x) =
+\sum_{k=1}^n \alpha_k \beta_k$.  \ns
+\end{proof}
+
+\begin{prop}\label{C067131} Let $V$ be a normed linear space and $\vc 0 \ne x \in V$.  Then
+   \[ \norm x = \max\{\abs{f(x)}\colon f \in V^* \text{ and } \norm f \le 1\}\,. \]
+\end{prop}
+
+The use of $\max$ instead of $\sup$ in the preceding proposition is intentional.  The proposition claims that there
+exists an $f$ in the closed unit ball of $V^*$ such that $f(x) = \norm x$.
+
+\begin{defn} A subset $A$ of a topological space $X$ is
+ \index{dense}%
+\df{dense} in $X$ if $\clo A = X$.  The space $X$ is
+ \index{separable}%
+\df{separable} if it contains a countable dense subset.
+\end{defn}
+
+\begin{exam} The space $\K^n$ is separable under its usual topology; that is
+ \index{usual!topology!for $\K^n$}%
+ \index{topology!on $\K^n$}%
+ \index{K@$\K^n$!usual topology on}%
+the topology it inherits from its usual norm. (See \ref{C023125}, \ref{0001503}, and \ref{xmpl_top_metric}.)
+\end{exam}
+
+\begin{exam} Given the discrete topology the real line $\R$ is not separable.
+\end{exam}
+
+\begin{prop} Let $V$ be a normed linear space.  If $V^*$ is separable, then so is~$V$.
+\end{prop}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\endinput

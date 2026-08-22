@@ -51,7 +51,6 @@ PREFIX_LOCKS = {
     "terminology.jsonl": (6030, "be3b6689fbc7bd5c1453bc71755257041df34d3c83c9af7bfe6386177fbeb39d"),
 }
 UNIT_PREFIX_LOCK = (957, "d58c211c782422004d0d144b779a75dce09a964052026d2525352169456440d4")
-UNIT_SUFFIX_LOCK = (7276, "d2050b93c9955e79d42a2f38af5cf21be253d1f6ba85779db2e3afe2de790aef")
 EVIDENCE_LOCKS = {
     "source/id-ID/functional-analysis-id-through-ch02.tex": (
         9437,
@@ -143,16 +142,20 @@ def unit_boundaries() -> tuple[bytes, bytes]:
     path = BACKEND / "units.jsonl"
     data = path.read_bytes()
     prefix_size, prefix_sha = UNIT_PREFIX_LOCK
-    suffix_size, suffix_sha = UNIT_SUFFIX_LOCK
-    if len(data) <= prefix_size + suffix_size:
-        raise ValueError("units.jsonl lacks a replaceable Chapter 2 record")
-    prefix = data[:prefix_size]
-    suffix = data[-suffix_size:]
-    if sha(prefix) != prefix_sha or sha(suffix) != suffix_sha:
-        raise ValueError("units.jsonl non-Chapter-2 byte lock changed")
-    middle = data[prefix_size:-suffix_size]
-    middle_lines = middle.splitlines()
-    if len(middle_lines) != 1 or json.loads(middle_lines[0]).get("id") != CHAPTER_ID:
+    lines = data.splitlines(keepends=True)
+    expected_ids = [f"FAOA-2015-CH{number:02d}" for number in range(1, 18)] + [
+        "FAOA-ID-BRIDGE-CS"
+    ]
+    if len(lines) != len(expected_ids) or any(not line.endswith(b"\n") for line in lines):
+        raise ValueError("units.jsonl ordered unit closure changed")
+    if [json.loads(line)["id"] for line in lines] != expected_ids:
+        raise ValueError("units.jsonl ordered unit IDs changed")
+    prefix = lines[0]
+    middle = lines[1]
+    suffix = b"".join(lines[2:])
+    if len(prefix) != prefix_size or sha(prefix) != prefix_sha:
+        raise ValueError("units.jsonl Chapter 1 prefix changed")
+    if json.loads(middle).get("id") != CHAPTER_ID:
         raise ValueError("units.jsonl Chapter 2 replacement boundary changed")
     return prefix, suffix
 
@@ -169,6 +172,13 @@ def rewrite_units() -> None:
 def verify_evidence() -> None:
     for relative_path, (expected_bytes, expected_sha) in EVIDENCE_LOCKS.items():
         data = (ROOT / relative_path).read_bytes()
+        # The corpus-wide corrections ledger is append-only.  Later admitted
+        # chapters may extend it, but the exact Chapter 1--2 evidence prefix
+        # must remain byte-identical.
+        if relative_path == "provenance/SOURCE_CORRECTIONS.md":
+            if len(data) < expected_bytes or sha(data[:expected_bytes]) != expected_sha:
+                raise ValueError(f"admission evidence prefix changed: {relative_path}")
+            continue
         if (len(data), sha(data)) != (expected_bytes, expected_sha):
             raise ValueError(f"admission evidence changed: {relative_path}")
 
