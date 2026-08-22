@@ -51,6 +51,12 @@ folder `provenance/`. Backend JSONL di folder `backend/` menggunakan ID yang
 netral terhadap bahasa dan nomor halaman agar unit dapat dipetakan ke bahasa
 lain tanpa mengekstrak ulang PDF.
 
+QA terminologi Indonesia berbasis sumber primer dicatat dalam
+[`qa/terminology_evidence/undip-jfma-2020-dunford/TERMINOLOGY_QA_REPORT.md`](qa/terminology_evidence/undip-jfma-2020-dunford/TERMINOLOGY_QA_REPORT.md).
+Perbandingan itu tidak mengubah prosa Bab 1--9; bentuk-bentuk alternatif yang
+terbukti hanya ditambahkan sebagai varian pencarian/interoperabilitas dalam
+`backend/terminology_qa.jsonl`.
+
 ## Build
 
 Lihat [BUILD.md](BUILD.md). Build memerlukan distribusi TeX dengan pdfLaTeX,
@@ -69,8 +75,8 @@ klaim aksesibilitas yang melampaui keadaan ini.
 
 Karya sumber John M. Erdman dan adaptasi Bahasa Indonesia ini dilisensikan
 menurut [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).
-Terjemahan dan penyuntingan teknis dibantu oleh OpenAI Codex gpt-5.6-sol,
-Ultra, atas arahan pengguna manusia. Provenans model dan pembagian kredit
+Terjemahan dan penyuntingan teknis dibantu oleh **OpenAI Codex gpt-5.6-sol, Ultra**,
+atas arahan pengguna manusia. Provenans model dan pembagian kredit
 dicatat di `provenance/TRANSLATION_MODEL_PROVENANCE.md`. Proyek ini tidak
 disponsori, disetujui, atau didukung oleh John M. Erdman maupun Portland State
 University.

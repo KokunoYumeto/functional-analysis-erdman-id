@@ -7,6 +7,10 @@ provenance/*_RENDER_MANIFEST.csv -text
 # Frozen upstream members are authority bytes; never normalize any member.
 /source/upstream/** -text
 
+# Downloaded terminology witnesses are hash-bound evidence, including HTML,
+# extracted text, raster renders, and the source PDF.
+/qa/terminology_evidence/** -text
+
 # Hash-bound generated and derivative text must remain LF on every platform.
 /backend/*.jsonl text eol=lf
 /backend/*.json text eol=lf

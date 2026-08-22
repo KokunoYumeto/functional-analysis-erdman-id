@@ -7,6 +7,7 @@ import csv
 import hashlib
 import io
 import json
+import re
 import subprocess
 import sys
 from pathlib import Path
@@ -21,6 +22,7 @@ GENERATED = [
     "qa_events.jsonl",
     "corrections.jsonl",
     "terminology.jsonl",
+    "terminology_qa.jsonl",
     "semantic_units.jsonl",
     "segments.jsonl",
     "relations.jsonl",
@@ -796,6 +798,7 @@ def main() -> None:
         "qa_events.jsonl": 68,
         "corrections.jsonl": 156,
         "terminology.jsonl": 255,
+        "terminology_qa.jsonl": 7,
     }
     for name, count in expected_counts.items():
         if len(records_by_file[name]) != count:
@@ -4042,6 +4045,253 @@ def main() -> None:
         raise ValueError("Chapter 9 defined-term closure changed")
     if [int(row["source_order"]) for row in chapter_nine_terms] != list(range(1, 92)):
         raise ValueError("Chapter 9 index occurrence order changed")
+
+    terminology_qa = records_by_file["terminology_qa.jsonl"]
+    expected_terminology_qa_ids = [
+        "TERM-QA-O008-ID-20260822",
+        *[f"TERM-QA-O008-ID-VARIANT-{number:03d}" for number in range(1, 6)],
+        "TERM-QA-O008-ID-FUTURE-DOMAIN-001",
+    ]
+    if [record["id"] for record in terminology_qa] != expected_terminology_qa_ids:
+        raise ValueError("terminology-QA stable-ID sequence changed")
+
+    terminology_qa_provenance = terminology_qa[0]
+    if (
+        terminology_qa_provenance.get("record_type") != "terminology_qa_provenance"
+        or terminology_qa_provenance.get("edition_id") != "ERDMAN-FAOA-2015-ID"
+        or terminology_qa_provenance.get("locale") != "id-ID"
+        or terminology_qa_provenance.get("qa_date") != "2026-08-22"
+        or terminology_qa_provenance.get("model")
+        != "OpenAI Codex gpt-5.6-sol, Ultra"
+        or terminology_qa_provenance.get("decision") != "no_prose_change"
+        or terminology_qa_provenance.get("preferred_terms_preserved") is not True
+        or terminology_qa_provenance.get("current_variant_groups") != 5
+        or terminology_qa_provenance.get("current_variant_spellings") != 6
+        or terminology_qa_provenance.get("future_domain_candidate_groups") != 1
+    ):
+        raise ValueError("terminology-QA provenance boundary changed")
+    arxiv_search = terminology_qa_provenance.get("arxiv_search", {})
+    if (
+        arxiv_search.get("state")
+        != "bounded_no_suitable_indonesian_tex_source_found"
+        or arxiv_search.get("claim_scope")
+        != "bounded search result, not a universal nonexistence claim"
+        or arxiv_search.get("exact_queries")
+        != [
+            "analisis fungsional",
+            "ruang Banach",
+            "ruang vektor topologis",
+            "operator kompak",
+        ]
+    ):
+        raise ValueError("terminology-QA bounded arXiv-search semantics changed")
+    fallback_source = terminology_qa_provenance.get("fallback_source", {})
+    if (
+        fallback_source.get("source_id") != "UNDIP-JFMA-2020-3-1-7874"
+        or fallback_source.get("doi") != "10.14710/jfma.v3i1.7874"
+        or fallback_source.get("publisher")
+        != "Department of Mathematics, Universitas Diponegoro"
+        or fallback_source.get("license") != "CC BY 4.0"
+        or fallback_source.get("pdf_pages") != 9
+        or fallback_source.get("pdf_bytes") != 1_007_587
+        or fallback_source.get("pdf_sha256")
+        != "6bc61be69f974e1598ec168504aa7b1925cf55a75dfc15100139bfcd586b0ff8"
+    ):
+        raise ValueError("terminology-QA fallback-source identity changed")
+    supplemental_sources = terminology_qa_provenance.get("supplemental_sources", [])
+    if [source.get("source_id") for source in supplemental_sources] != [
+        "UGM-ETD-89480",
+        "ITB-MA6131-2024",
+        "ITB-MA5022-2024",
+        "UGM-ETD-36096",
+    ]:
+        raise ValueError("terminology-QA supplemental source sequence changed")
+    if (
+        supplemental_sources[2].get("terminology_evidence")
+        != "Operator Normal dan Adjoin dengan Diri Sendiri"
+        or supplemental_sources[2].get("bytes") != 7_943
+        or supplemental_sources[2].get("sha256")
+        != "cce7931eba1388395a504d83275f2846b7c3ac9031066bc27258c7abbc62724e"
+        or supplemental_sources[3].get("terminology_evidence")
+        != "operator pendamping"
+        or supplemental_sources[3].get("bytes") != 22_532
+        or supplemental_sources[3].get("sha256")
+        != "677165f202f8d7f32eb13f3ebe5b18052a20765ae32354209034d1ed8c3cf3f4"
+    ):
+        raise ValueError("adjoin/pendamping supplemental evidence changed")
+    if terminology_qa_provenance.get("qa_report") != {
+        "path": (
+            "qa/terminology_evidence/undip-jfma-2020-dunford/"
+            "TERMINOLOGY_QA_REPORT.md"
+        ),
+        "bytes": 9_317,
+        "sha256": "c7618249a3d9f273044a408e44438e2db710d5b5f46856ea5280bf247583858d",
+    }:
+        raise ValueError("terminology-QA report identity changed")
+
+    terminology_qa_evidence = (
+        (
+            "qa/terminology_evidence/undip-jfma-2020-dunford/"
+            "TERMINOLOGY_QA_REPORT.md",
+            9_317,
+            "c7618249a3d9f273044a408e44438e2db710d5b5f46856ea5280bf247583858d",
+        ),
+        (
+            "qa/terminology_evidence/undip-jfma-2020-dunford/jfma-v3n1-7874.pdf",
+            1_007_587,
+            "6bc61be69f974e1598ec168504aa7b1925cf55a75dfc15100139bfcd586b0ff8",
+        ),
+        (
+            "qa/terminology_evidence/undip-jfma-2020-dunford/jfma-v3n1-7874.txt",
+            24_923,
+            "2a74c776f17891e80d2b5da88e2d00233a8990c969bac0e36451a703dd9f8c91",
+        ),
+        (
+            "qa/terminology_evidence/undip-jfma-2020-dunford/"
+            "jfma-v3n1-7874-contact-sheet.png",
+            2_622_328,
+            "94545c3ad7770d39b69132c4c0fae37a6487e4aa0b1c77ef58073fe061ed20a9",
+        ),
+        (
+            "qa/terminology_evidence/undip-jfma-2020-dunford/"
+            "undip-jfma-7874-article.html",
+            49_084,
+            "bb8bfeb1e799b479288c1857406d480ecb00b82118a74728985a0d7a9aaf78b9",
+        ),
+        (
+            "qa/terminology_evidence/undip-jfma-2020-dunford/"
+            "ugm-etd-89480-metadata.html",
+            35_075,
+            "3499fe641f9127357395c1d1bcd8467f848804208803db31ec0eb9f720c0c9e2",
+        ),
+        (
+            "qa/terminology_evidence/undip-jfma-2020-dunford/"
+            "itb-ma6131-2024.html",
+            6_739,
+            "5f9de3cc9dbcf3429ce45464aa08831d958466f5b5db6249fa3fe0f3eda94fb3",
+        ),
+        (
+            "qa/terminology_evidence/undip-jfma-2020-dunford/"
+            "itb-ma5022-2024-adjoin.html",
+            7_943,
+            "cce7931eba1388395a504d83275f2846b7c3ac9031066bc27258c7abbc62724e",
+        ),
+        (
+            "qa/terminology_evidence/undip-jfma-2020-dunford/"
+            "ugm-etd-36096-operator-pendamping.html",
+            22_532,
+            "677165f202f8d7f32eb13f3ebe5b18052a20765ae32354209034d1ed8c3cf3f4",
+        ),
+    )
+    for relative_path, expected_bytes, expected_sha256 in terminology_qa_evidence:
+        evidence_path = ROOT / relative_path
+        if (
+            not evidence_path.is_file()
+            or evidence_path.stat().st_size != expected_bytes
+            or sha(evidence_path) != expected_sha256
+        ):
+            raise ValueError(f"terminology-QA evidence mismatch: {relative_path}")
+
+    ch10_source_path = ROOT / "source/upstream/distributions.tex"
+    ch10_source_data = ch10_source_path.read_bytes()
+    ch10_source_text = ch10_source_data.decode("ascii")
+    if (
+        len(ch10_source_data) != 42_703
+        or len(ch10_source_data.splitlines()) != 894
+        or sha_bytes(ch10_source_data)
+        != "31f38daee49b9abfcd513a1c4a3f78414b122e469c6ac2d559c0b73ecbc082f8"
+        or len(
+            re.findall(
+                r"weakly[ -]measurable", ch10_source_text, flags=re.IGNORECASE
+            )
+        )
+        != 0
+        or len(re.findall(r"measur", ch10_source_text, flags=re.IGNORECASE)) != 14
+    ):
+        raise ValueError("frozen Chapter 10 weakly-measurable absence check changed")
+
+    expected_variant_groups = [
+        (
+            "TERM-NORMED-LINEAR-SPACE",
+            "normed linear space",
+            "ruang linear bernorma",
+            ["ruang bernorma"],
+        ),
+        (
+            "TERM-BOUNDED-LINEAR-MAP",
+            "bounded linear map",
+            "pemetaan linear terbatas",
+            ["operator linear terbatas"],
+        ),
+        ("TERM-ADJOINT", "adjoint", "adjoin", ["adjoint", "operator pendamping"]),
+        (
+            "TERM-WEAKLY-COMPACT",
+            "weakly compact",
+            "kompak secara lemah",
+            ["kompak lemah"],
+        ),
+        (
+            "TERM-CONVERGE-WEAKLY",
+            "converge weakly",
+            "konvergen secara lemah",
+            ["konvergen lemah"],
+        ),
+    ]
+    terms_by_id = {record["id"]: record for record in records_by_file["terminology.jsonl"]}
+    for record, (term_id, source_term, preferred, variants) in zip(
+        terminology_qa[1:6], expected_variant_groups, strict=True
+    ):
+        if (
+            record.get("record_type") != "term_variant_evidence"
+            or record.get("qa_provenance_id") != "TERM-QA-O008-ID-20260822"
+            or record.get("term_id") != term_id
+            or record.get("source_term") != source_term
+            or record.get("preferred") != preferred
+            or record.get("variants") != variants
+            or record.get("variant_state") != "accepted_recognition_variant"
+            or record.get("instantiation_state") != "backend_evidence_only"
+            or record.get("preferred_changed") is not False
+            or record.get("prose_change") != "none"
+        ):
+            raise ValueError(f"terminology-QA variant record changed: {record['id']}")
+        term = terms_by_id.get(term_id, {})
+        if (
+            term.get("source_term") != source_term
+            or term.get("preferred") != preferred
+            or term.get("variants") != []
+        ):
+            raise ValueError(f"frozen preferred terminology changed: {term_id}")
+
+    future_domain_term = terminology_qa[6]
+    if (
+        future_domain_term.get("record_type") != "future_domain_term_variant"
+        or future_domain_term.get("qa_provenance_id")
+        != "TERM-QA-O008-ID-20260822"
+        or future_domain_term.get("candidate_term_id") != "TERM-WEAKLY-MEASURABLE"
+        or future_domain_term.get("source_term") != "weakly measurable"
+        or future_domain_term.get("preferred") != "terukur secara lemah"
+        or future_domain_term.get("variants") != ["terukur lemah"]
+        or future_domain_term.get("variant_state")
+        != "non_instantiated_future_domain_recognition_candidate"
+        or future_domain_term.get("instantiation_state")
+        != "not_present_in_frozen_ch10_source"
+        or future_domain_term.get("source_presence") is not False
+        or future_domain_term.get("source_presence_check")
+        != {
+            "path": "source/upstream/distributions.tex",
+            "bytes": 42_703,
+            "lines": 894,
+            "sha256": "31f38daee49b9abfcd513a1c4a3f78414b122e469c6ac2d559c0b73ecbc082f8",
+            "query": "weakly[ -]measurable",
+            "occurrences": 0,
+        }
+        or future_domain_term.get("instantiation_condition")
+        != "only_if_later_or_original_source_introduces_weakly_measurable"
+        or future_domain_term.get("prose_change")
+        != "not_applicable_no_existing_occurrence"
+        or "TERM-WEAKLY-MEASURABLE" in terms_by_id
+    ):
+        raise ValueError("future/domain terminology-QA boundary changed")
 
     chapter_nine_exercises = [
         record

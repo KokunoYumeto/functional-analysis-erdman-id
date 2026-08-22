@@ -1,0 +1,488 @@
+                                                 JOURNAL OF FUNDAMENTAL MATHEMATICS
+                                             AND APPLICATIONS (JFMA) VOL. 3 NO. 1 (JUN 2020)
+                                                  Available online at www.jfma.math.fsm.undip.ac.id
+
+
+  RUANG BERNORMA LENGKAP ATAS OPERATOR
+    LINEAR TERBATAS PADA RUANG FUNGSI
+           TERINTEGRAL DUNFORD
+        Solikhin1*, YD Sumanto2, Abdul Aziz3, Susilo Hariyanto4, R. Heri
+                              Soelistyo Utomo5
+                           1,2,3,4,5
+                                    Departemen Matematika, Universitas Diponegoro
+   Email : 1solikhin, 2ydsumanto, 3abdulaziz, 4susilohariyanto, 5robertusherisoelisty[@lecturer.undip.ac.id]
+                                            *
+                                              Penulis Korespondensi
+
+   Abstract. We discuss the operator norm on space of Dunford integral function. We
+   show that sets of all bounded linear operator from dual space of Banach space into
+   space of Lebesgue integral function is Banach space.
+   Key word: Dunford integral, operator norms, Banach space.
+
+   Abstrak. Artikel ini membahas norma operator atas operator linear terbatas pada ruang
+   fungsi terintegral Dunford. Himpunan semua operator linear dari ruang dual atas ruang
+   Banach ke ruang fungsi terintegral Lebesgue merupakan ruang bernorma yang lengkap
+   terhadap norma operator yang diberikan.
+   Kata kunci: Integral Dunford, norma operator, ruang Banach.
+
+
+                                         1. PENDAHULUAN
+
+   Integral Dunford merupakan integral lemah suatu fungsi bernilai Banach X . Integral ini
+didefinisikan melalui fungsi terukur lemah. Jika diketahui bahwa fungsi f terukur lemah,
+maka f dikatakan terintegral Dunford jika untuk setiap x* ∈ X * (dual dari X ) komposisi
+fungsi bernilai riil x* ( f ) terintegral Lebesgue [1]. Artinya jika fungsi f terintegral Dunford
+maka untuk setiap x* ∈ X * , x* ( f ) terintegral Lebesgue sebaliknya jika untuk setiap x* ∈ X * ,
+ x* ( f ) terintegral Lebesgue maka fungsi f terintegral Dunford.
+     Kajian integral Dunford menjadi topik yang menarik bagi penulis dan beberapa peneliti
+lain. Integral Dunford juga digeneralisasi ke dalam integral tipe Riemann, yaitu integral
+Henstock-Dunford [2]. Kajian dalam tulisan ini adalah sifat-sifat dari integral Henstock-
+Dunford, teorema kekonvergenan, dan perluasan Harnack. Integral Henstock-Dunford juga
+diperluas ke dalam ruang Euclide [3].
+     Kajian dari integral Dunford tidak hanya dibahas sebatas teori integralnya tetapi juga
+operatornya. Dalam teori operator, khususnya operator adjoint dan operator kompak [4, 5]
+banyak digunakan dalam masalah matematika fisika, misalnya seperti mekanika kuantum.
+Operator adjoint sendiri digunakan untuk menyelesaikan persamaan integral yang
+mengandung operator. Telah dikaji operator pada ruang fungsi terintegral Dunford [6],
+operator Adjoint pada ruang fungsi terintegral Dunford dan operator linear kompak lemah
+pada ruang fungsi terintegral Dunford.
+
+
+
+
+https://doi.org/10.14710/jfma.v3i1.7874               47            p-ISSN: 2621-6019 e-ISSN: 2621-6035
+                                              JOURNAL OF FUNDAMENTAL MATHEMATICS
+                                          AND APPLICATIONS (JFMA) VOL. 3 NO. 1 (JUN 2020)
+                                               Available online at www.jfma.math.fsm.undip.ac.id
+
+    Operator T : X * → L1 yang bekerja pada ruang fungsi terintegral Dunford merupakan
+operator linear terbatas. Operator adjointnya T * : L*1 → X ** juga bersifat linear terbatas [7].
+Lebih lanjut, operator T kompak lemah jika dan hanya jika operator adjoint T * kompak
+lemah [1].
+    Hasil kajian telah menunjukkan bahwa himpunan semua operator linear merupakan ruang
+linear, dimana operator linear tersebut didefinisikan dari ruang dual ke ruang fungsi
+terintegral Lebesgue. Lebih lanjut, terhadap suatu norma operator, yaitu fungsi yang
+didefinisikan pada ruang operator linear dan terbatas antara dua ruang linear yang diberi
+fungsi tersebut, merupakan ruang bernorma [8]. Melalui ruang bernorma ini, perlu dikaji
+apakah dengan norma operator yang telah didefinisikan bahwa ruang operator linear terbatas
+pada ruang fungsi terintegral Dunford tersebut lengkap.
+
+                                     2. RUANG BERNORMA
+
+    Diberikan definisi ruang bernorma beserta sifat-sifatnya dan barisan konvergen serta
+barisan Cauchy.
+
+Definisi 2.1 [5] Diketahui himpunan X adalah ruang linear. Fungsi ⋅ : X → R dengan
+sifat :
+          (i). x ≥ 0 ,
+          (ii). x = 0 ⇔     x =θ ,
+          (iii). ux = u x , dan
+          (iv). x + y ≤ x + y ,
+untuk setiap x, y ∈ X dan sebarang skalar u ∈ R dinamakan norma pada X .
+
+Jika fungsi      ⋅   merupakan norma pada X , maka pasangan ( X , ⋅ ) dinamakan ruang
+bernorma.
+
+Definisi 2.2 [5] Diketahui ( X , ⋅ ) ruang bernorma. Barisan ( xn ) ⊂ X disebut konvergen
+jika ada x ∈ X benar bahwa
+                   0.
+        lim xn − x =
+          n →∞
+
+
+
+Definisi 2.3 Diketahui ruang bernorma ( X , ⋅ ) . Barisan ( xn ) ⊂ X disebut barisan Cauchy
+jika untuk setiap ε > 0 ada bilangan asli n0 sehingga untuk setiap bilangan asli n, m ≥ n0
+berlaku
+         xn − xm < ε .
+
+    Setiap barisan yang konvergen merupakan barisan Cauchy, akan tetapi kebalikannya
+belum tentu berlaku.
+
+
+
+
+https://doi.org/10.14710/jfma.v3i1.7874         48          p-ISSN: 2621-6019 e-ISSN: 2621-6035
+                                              JOURNAL OF FUNDAMENTAL MATHEMATICS
+                                          AND APPLICATIONS (JFMA) VOL. 3 NO. 1 (JUN 2020)
+                                               Available online at www.jfma.math.fsm.undip.ac.id
+
+
+Teorema 2.4 Diberikan ruang bernorma ( X , ⋅ ) . Setiap barisan ( xn ) ⊂ X konvergen
+adalah barisan Cauchy.
+
+Bukti: Diketahui barisan ( xn ) ⊂ X konvergen, berarti ada x ∈ X sehingga
+                   0.
+        lim xn − x =
+        n →∞
+
+Ekuivalen untuk setiap bilangan ε > 0 terdapat n0 ∈ N sehingga
+                  ε
+         xn − x < ,
+                  2
+untuk setiap n ≥ n0 .
+Jadi, untuk setiap n, m ≥ n0 diperoleh
+         xm − xn ≤ xm − x + xn − x < ε .
+Jadi, ( xn ) ⊂ X merupakan barisan Cauchy. □
+
+Teorema 4.2 menjamin bahwa setiap barisan konvergen merupakan barisan Cauchy, akan
+tetapi kebalikannya blum tentu, yaitu setiap barisan Cauchy belum tentu merupakan barisan
+konvergen.
+
+Teorema 2.5 Diberikan ruang bernorma ( X , ⋅ ) . Jika suatu barisan Cauchy di dalam X
+mempunyai sub-barisan yang konvergen, maka barisan Cauchy tersebut juga konvergen.
+
+Bukti: lihat referensi [5].
+
+Setiap barisan Cauchy di dalam ruang bernorma X adalah terbatas, yaitu ada bilangan riil
+M ≥ 0 berlaku
+        xn ≤ M ,
+untuk setiap n ∈ N .
+Selanjutnya, jika setiap barisan Cauchy pada ruang bernorma ( X , ⋅ ) konvergen di X maka
+( X , ⋅ ) dikatakan ruang Banach, yaitu ruang bernorma yang lengkap.
+                                 3. INTEGRAL DUNFORD
+
+    Berikut ini diuraikan sekilas tentang integral Dunford, dibahas beberapa sifat-sifatnya
+lebih khusus ruang linearnya serta teorema kekonvergenen terdominasi Lebesgue yang
+digunakan untuk menunjukkan kelengkapan.
+
+Definisi 3.1 [1] Diketahui X ruang Banach. Fungsi terukur lemah f :[a, b] → X disebut
+terintegral Dunford pada [a, b] , jika untuk sebarang x* ∈ X * fungsi komposisi x* ( f )
+terintegral Lebesgue pada [a, b] dan untuk setiap himpunan terukur E ⊂ [a, b] ada vektor
+ x(**f , E ) ∈ X ** sehingga berlaku
+
+
+
+
+https://doi.org/10.14710/jfma.v3i1.7874         49          p-ISSN: 2621-6019 e-ISSN: 2621-6035
+                                                             JOURNAL OF FUNDAMENTAL MATHEMATICS
+                                                         AND APPLICATIONS (JFMA) VOL. 3 NO. 1 (JUN 2020)
+                                                              Available online at www.jfma.math.fsm.undip.ac.id
+
+
+              x(**f , E ) ( x* ) = ( L ) ∫ x* ( f ),
+                                       E
+
+untuk setiap x ∈ X .    *       *
+
+
+
+Fungsi f yang terintegral Dunford, dinotasikan f ∈ D[a, b] .
+Nilai integral Dunford ( D ) ∫ f , fungsi f atas himpunan terukur E ⊂ [a, b] diberikan oleh
+                                              E
+ **              **
+x( f ,E )   ∈ X , yaitu
+              x(**f , E ) = ( D ) ∫ f ,
+                                E
+adalah tunggal.
+
+Teorema 3.2 [6] Jika                         f ∈ D[a, b] , maka untuk setiap E ⊂ [a, b] himpunan terukur
+x(**f , E ) ∈ X ** tunggal.
+
+    Beberapa fungsi seperti fungsi konstan, fungsi kontinu, fungsi yang terintegral
+Riemann, terintegral Lebesgue, atau fungsi yang terintegral McShane adalah terintegral
+Dunford.
+
+Teorema 3.3 Fungsi f ∈ D[a, b] jika dan hanya jika untuk sebarang x* ∈ X * , x* f ∈ L[a, b] .
+
+Bukti: Jelas menurut Definisi. □
+
+      Berdasarkan Definisi 3.1 dan Teorema 3.3, maka himpunan fungsi-fungsi yang mana
+terintegral Dunford adalah ruang linear.
+
+Teorema 3.4 [8] Himpunan D[a, b] merupakan ruang linear.
+
+Bukti: Koleksi D[a, b] dikatakan ruang linear jika untuk setiap dua fungsi f , g ∈ D[a, b]
+dan sebarang skalar u ∈ R maka berlaku f + g ∈ D[a, b] (additive) dan uf ∈ D[a, b]
+(homogenous). Diambil sebarang dua fungsi f , g ∈ D[a, b] dan sebarang skalar u ∈ R .
+Diketahui f , g ∈ D[a, b] , menurut Teorema 3.3 maka untuk setiap x* ∈ X * diperoleh bahwa
+ x* f ∈ L[a, b] dan x* g ∈ L[a, b] . Karena ruang fungsi terintegral Lebesgue merupakan ruang
+linear, maka untuk sebarang                            x* ∈ X *   benar bahwa    x* ( f + g ) ∈ L[a, b] . Artinya
+f + g ∈ D[a, b] . Untuk sebarang skalar u ∈ R dan untuk sebarang x* ∈ X *                         benar bahwa
+x* ( uf ) ∈ L[a, b] . Artinya uf ∈ D[a, b] .
+Jadi, D[a, b] ruang linier. □
+
+Teorema 3.5 Fungsi f = θ hampir dimana-mana pada [a, b] merupakan fungsi terintegral
+Dunford dan jika E ⊂ [a, b] himpunan terukur maka
+       x(**f , E ) = θ .
+
+
+
+
+https://doi.org/10.14710/jfma.v3i1.7874                           50       p-ISSN: 2621-6019 e-ISSN: 2621-6035
+                                                                 JOURNAL OF FUNDAMENTAL MATHEMATICS
+                                                             AND APPLICATIONS (JFMA) VOL. 3 NO. 1 (JUN 2020)
+                                                                  Available online at www.jfma.math.fsm.undip.ac.id
+
+
+
+Bukti: Karena f = θ hampir dimana-mana pada [a, b] , maka ada himpunan terukur
+E ⊂ [a, b] dengan µα ( E ) = 0 dan jika x* ∈ X * maka
+        x* f ( x) =0, x ∈ [a, b] − E dan x* f ( x) ≠ 0, x ∈ E .
+                       ∞
+Dibentuk       E =  Ek
+                       k =1
+                                        dengan           Ek =   {x ∈ E : k − 1 ≤ f ( x ) ≤ k , k = 1, 2,3,...} ⊂ E   dan
+
+µα ( Ek ) = 0 . Diambil sebarang ε > 0 , maka untuk suatu k terdapat himpunan terbuka Ok
+                       ε
+dengan µα ( Ok ) < k sehingga Ok ⊃ Ek . Didefinisikan fungsi δ positif pada [a, b] di mana
+                      k2
+N ( x, δ ( x) ) ⊂ Ok untuk setiap x ∈ Ek , k = 1, 2,3,... dan sebarang fungsi δ positif untuk x
+yang lainnya. Jika E ⊂ [a, b] himpunan terukur maka berlaku
+                                                                                         ∞
+                                                                                                   ε
+        ∫x =( f )−0                             x* f ( x )
+                                 ∫ x f ( x) + ∫ =                        ∫ x f ( x) < ∑ x k
+          *                         *                                       *            *
+                                                                                                         ε
+                                                                                                         =
+        E                      x∈Ek                   x∉Ek              x∈Ek            k =1      2k k
+untuk setiap x* ∈ X * dan x* ≤ 1 . Hal ini berarti x* f ∈ L[a, b] . Lebih lanjut jika E ⊂ [a, b]
+himpunan terukur ada vektor x(**f , E ) ∈ X ** benar bahwa
+
+                      f ,E ) (
+                   x(**
+                     =         x* )          L ) ∫ x* f 0 .
+                                            (=
+                                                A
+
+Jadi f ∈ D[a, b] dan x           **
+                                 ( f ,E )   =θ . □
+
+Diberikan teorema kekonvergenan terdominasi Lebesgue yang akan digunakan untuk
+menunjukkan kelengkapan ruang bernorma atas operator linear dan terbatas.
+
+Teorema 3.6 (Teorema Kekonvergenan Terdominasi Lebesgue) Diketahui fungsi
+ f :[a, b] → X , fungsi g :[a, b] → X dan fungsi f n :[a, b] → X untuk setiap n ∈ N serta
+g ∈ D[a, b]       dan f n ∈ D[a, b] untuk setiap n ∈ N . Jika barisan fungsi                               ( f n ) adalah
+konvergen lemah ke fungsi f pada [a, b] dan x* f n ( x ) ≤ x* g ( x ) untuk setiap n ∈ N ,
+x* ∈ X * x ∈ [a, b] , maka f ∈ D[a, b] dan
+              x(**f , E ) ( x* ) = lim x(**fn , E ) ( x* )
+                                  n →∞
+
+untuk setiap E ⊂ [a, b] himpunan terukur.
+
+Bukti: Diberikan E ⊂ [a, b] sebarang himpunan terukur.
+Karena ( f n ) adalah konvergen lemah ke fungsi f pada [a, b] , maka untuk setiap x* ∈ X *
+barisan fungsi ( x* f n ) konvergen ke x* f , yaitu untuk setiap ε > 0 , x ∈ [a, b] , dan setiap
+x* ∈ X * ada bilangan asli n0 = n0 ( ε , x* , x ) sehingga jika n ≥ n0 benar bahwa
+        x* f n ( x ) − x* f ( x ) < ε .
+Hal ini berarti
+
+
+
+
+https://doi.org/10.14710/jfma.v3i1.7874                            51           p-ISSN: 2621-6019 e-ISSN: 2621-6035
+                                                                         JOURNAL OF FUNDAMENTAL MATHEMATICS
+                                                                     AND APPLICATIONS (JFMA) VOL. 3 NO. 1 (JUN 2020)
+                                                                          Available online at www.jfma.math.fsm.undip.ac.id
+
+
+            x* f n ( x ) − ε < x* f ( x ) < x* f n ( x ) + ε .
+Karena
+             x* f n ( x ) ≤ x* g ( x ) ⇔ − x* g ( x ) ≤ x* f n ( x ) ≤ x* g ( x ) ,
+maka
+            x* g ( x ) − x* f n ( x ) =x* ( g − f n )( x ) ≥ 0 .
+Akibatnya ( x* ( g − f n ) ) konvergen ke x* ( g − f ) pada [a, b] , yaitu barisan fungsi ( g − f n )
+konvergen lemah ke g − f pada [a, b] .
+                                                        
+Hal ini berakibat bahwa barisan  ( L ) ∫ x* ( g − f n )  merupakan barisan terbatas untuk setiap n
+                                       E                
+dan x ∈ X . Berdasarkan Lemma Fatou diperoleh g − f ∈ D[a, b] dan
+      *     *
+
+
+            x(**g − f , E ) ( x* ) ≤ lim inf x(**g − fn , E ) ( x* ) .
+                                       n →∞
+                                 *
+Oleh karena − x g ( x) ≤ x* f ( x) ≤ x* g ( x) untuk setiap x ∈ E ⊂ [a, b] dan x* ∈ X * dan
+diketahui bahwa g ∈ D[a, b] , maka f ∈ D[a, b] .
+Lebih lanjut
+                                                    x(**g − f , E ) ( x* )
+        0 ≤ x(**g , E ) ( x* ) − x(**f , E ) ( x* ) =
+               ≤ lim inf x(**g − fn , E ) ( x* )
+                   n →∞
+
+               = lim inf ( L ) ∫ x* g + lim inf ( L ) ∫ x* (− f n )
+                     n →∞              E              n →∞                  E
+
+ =                ( L ) ∫ x g − lim sup ( L ) ∫ x f n
+                                 *                                   *
+
+                           E           n →∞                   E
+                     **           *                   **
+ = x                 ( g ,E )   ( x ) − lim sup x     ( fn , E )   ( x* )
+                                       n →∞
+Didapat
+             lim sup x(**fn , E ) ( x* ) ≤ x(**f , E ) ( x* ).
+              n →∞
+
+
+Karena
+             x* g ( x) + x* f n ( x) =x* ( g + f n )( x) ≥ 0 ,
+Maka berakibat barisan fungsi ( x* ( g + f n ) ) konvergen ke fungsi x* ( g + f ) pada [a, b] . Jadi,
+                                    
+barisan  ( L ) ∫ x* ( g + f n )  adalah terbatas untuk setiap n dan x* ∈ X * .
+                   E                
+Berdasarkan Lemma Fatou diperoleh g + f ∈ D[a, b] dan
+        x(**g + f , E ) ( x* ) ≤ lim inf x(**g + fn , E ) ( x* ) .
+                                      n →∞
+Oleh karena itu
+                                                   x(**g + f , E ) ( x* )
+       0 ≤ x(**g , E ) ( x* ) + x(**f , E ) ( x* ) =
+               ≤ lim inf x(**g + fn , E ) ( x* )
+                   n →∞
+
+
+
+
+https://doi.org/10.14710/jfma.v3i1.7874                                         52     p-ISSN: 2621-6019 e-ISSN: 2621-6035
+                                                                                          JOURNAL OF FUNDAMENTAL MATHEMATICS
+                                                                                      AND APPLICATIONS (JFMA) VOL. 3 NO. 1 (JUN 2020)
+                                                                                           Available online at www.jfma.math.fsm.undip.ac.id
+
+
+= lim inf ( L ) ∫ x* g + lim inf ( L ) ∫ x* f n
+                          n →∞                      E                  n →∞               E
+
+      =                   ( L ) ∫ x g + lim inf ( L ) ∫ x f n
+                                       *                                          *
+
+                                 E                  n →∞                   E
+                           **           *                           **
+       = x                 ( g ,E )   ( x ) + lim inf x             ( fn , E )   ( x* )
+                                                    n →∞
+      Didapat
+                           lim inf x(**fn , E ) ( x* ) ≥ x(**f , E ) ( x* )
+                           n →∞
+      Jadi,
+              lim sup x(**fn , E ) ( x* ) ≤ x(**f , E ) ( x* ) ≤ lim inf x(**fn , E ) ( x* ) ⇔ x(**f , E ) ( x* ) = lim x(**fn , E ) ( x* ) .   □
+              n →∞                                                               n →∞                                 n →∞
+
+
+                         4. RUANG BANACH ATAS NORMA OPERATOR
+              Fungsi f dan g dikatakan ekuivalen, jika f = g hampir dimana-mana pada [a, b] ,
+      yaitu jika terdapat himpunan terukur- α E ⊂ [a, b] dengan µα ( E ) = 0 sehingga
+                     f ( x) = g ( x) ,
+      untuk setiap x ∈ [a, b] − E . Menurut hasil kajian untuk suatu fungsi f terintegral Dunford,
+      operator T : X * → L1 oleh
+                    T ( x* ) = x* ( f ) ,
+      untuk sebarang x* ∈ X * merupakan operator linear dan terbatas. Sedangkan himpunan
+      operator-operator linear dan terbatas T : X * → L1 yang dinotasikan dengan B ( X * , L1 )
+      merupakan ruang linear. Selanjutnya telah diperlihatkan juga bahwa, terhadap norma operator
+
+                    =     {
+                    T sup Tx* : x* ∈ X * , =  }
+                                           x* 1
+
+                    = sup { x f : x ∈ X , x =∈
+                                            *
+                                              1, f D[a, b]} ,
+                                                            *   *          *
+
+
+
+      ( B ( X , L ) , . ) merupakan ruang bernorma [8].
+                *
+                      1
+
+
+
+      Teorema 4.1 B ( X * , L1 ) merupakan ruang bernorma yang lengkap.
+
+      Bukti: Diambil sebarang (Tn ) ⊂ B ( X * , L1 ) barisan Cauchy, yaitu untuk sebarang ε > 0
+      terdapat bilangan asli n0 sedemikian untuk setiap bilangan asli m, n ≥ n0 berlaku
+                         ε
+               Tn − Tm < .
+                         3
+      Jadi, untuk setiap x* ∈ X * berlaku
+                     Tn − T=
+                           m                    {              *
+                             sup x* f n − x* f m : x* ∈ X * , x=                        n 1, 2,3,... <
+                                                                 1, f n , f m ∈ D[a, b],=                                           } ε3 .
+      Hal ini berakibat
+                                                ε
+                     x* f n − x* f m <                  ,
+                                                3
+
+
+
+
+      https://doi.org/10.14710/jfma.v3i1.7874                                                 53        p-ISSN: 2621-6019 e-ISSN: 2621-6035
+                                               JOURNAL OF FUNDAMENTAL MATHEMATICS
+                                           AND APPLICATIONS (JFMA) VOL. 3 NO. 1 (JUN 2020)
+                                                Available online at www.jfma.math.fsm.undip.ac.id
+
+
+untuk setiap x* ∈ X * . Jadi, ( x* f n ) barisan Cauchy di L1 . Karena L1 lengkap, maka barisan
+Cauchy ( x* f n ) konvergen di L1 . Katakan konvergen ke F ∈ L1 . Karena x* f n ∈ L1 , untuk
+setiap bilangan asli n maka f n ∈ D[a, b] dan karena barisan ( x* f n ) konvergen untuk setiap
+x* ∈ X * maka barisan ( f n ) konvergen lemah.
+Selanjutnya karena Tn terbatas, maka terdapat bilangan riil c ≥ 0 sehingga untuk setiap
+x* ∈ X * berlaku
+       x* f n
+       =           Tn ( x* ) ≤ c ,
+untuk setiap bilangan asli n .
+Untuk setiap x* ∈ X * , dibentuk
+       T ( x=
+            *
+              ) ( x ) x=
+                       *
+                         g ( x) c ,
+untuk setiap x ∈ E ⊂ [a, b] himpunan terukur dan suatu g ∈ D[a, b] .
+Diperoleh x* g = c ∈ L1 dan g ∈ D[a, b]
+Jadi, untuk setiap x* ∈ X * berlaku,
+         x* =
+            fn     Tn ( x* ) ≤=c T ( x=
+                                      *
+                                        ) x* g .
+Karena ( f n ) konvergen lemah dan x* f n ≤ x* g untuk setiap x* ∈ X * dan suatu g ∈ D[a, b] ,
+maka menurut Teorema Kekonvergenan Terdominasi Lebesgue diperoleh bahwa
+F x* f ∈ L1 , yaitu f ∈ D[a, b] .
+=
+Jadi, B ( X * , L1 ) lengkap. □
+
+                                        5. KESIMPULAN
+
+     Koleksi operator-operator linear dan terbatas dari ruang dual ke ruang fungsi terintegral
+Lebesgue merupakan ruang linear. Kemudian terhadap norma operator seperti definisi
+merupakan ruang bernorma. Lebih lanjut ruang bernorma tersebut merupakan ruang
+bernorma yang lengkap.
+
+                                            REFERENSI
+
+[1]   Schwabik, S., Guoju, Ye., Topics in Banach Space Integration, World Scientific,
+      Singapore, 2005.
+[2]   Guoju, Ye., Tianqing, An., “On Henstock-Dunford and Henstock-Pettis Integrals,”
+      IJMMS, 25(7): 467-478, 2001.
+[3]   Saifullah, Integral Henstock-Dunford pada Ruang Euclide R n , Tesis, Departemen
+      Matematika Fakultas MIPA, Universitas Gadjah Mada, Yogyakarta, 2003.
+[4]   Kreyszig, E., Introductory Funtional Analysis with Applications, John Willey & Sons,
+      USA, 1989.
+[5]   Darmawijaya, S., Pengantar Analisis Abstrak, Jurusan Matematika Fakultas MIPA
+      Universitas Gadjah Mada, Yogyakarta, 2007.
+
+
+
+
+https://doi.org/10.14710/jfma.v3i1.7874            54        p-ISSN: 2621-6019 e-ISSN: 2621-6035
+                                              JOURNAL OF FUNDAMENTAL MATHEMATICS
+                                          AND APPLICATIONS (JFMA) VOL. 3 NO. 1 (JUN 2020)
+                                               Available online at www.jfma.math.fsm.undip.ac.id
+
+[6]   Solikhin, Sumanto, Aziz, A., & Hariyanto, S., “Operator pada Ruang Fungsi
+      Terintegral Dunford,” Journal of Fundamental Mathematics and Application (JFMA),
+      2(1): 110, 2018. DOI: 10.14710/jfma.v1i2.17
+[7]   Solikhin, Hariyanto, S., “Sumanto, & Aziz, A., Operator Adjoint pada Ruang Fungsi
+      Terintegral Dunford,” PRISMA Prosiding Seminar Nasional Matematika, 3, 34-40:
+      2020. Link: https://journal.unnes.ac.id/sju/index.php/prisma/article/view/37545.
+[8]   Solikhin, Hariyanto, S., Sumanto, & Aziz, A., “Norma Operator pada Ruang Fungsi
+      Terintegral Dunford,” Journal of Fundamental Mathematics and Application (JFMA),
+      2(2): 2019. DOI: http://dx.doi.org/10.14710/jfma.v2i2.42
+
+
+
+
+https://doi.org/10.14710/jfma.v3i1.7874         55          p-ISSN: 2621-6019 e-ISSN: 2621-6035
+

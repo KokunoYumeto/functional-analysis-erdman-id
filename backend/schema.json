@@ -11,6 +11,7 @@
     "formula_map.jsonl",
     "index_terms.csv",
     "terminology.jsonl",
+    "terminology_qa.jsonl",
     "concepts.jsonl",
     "concept_relations.jsonl",
     "exercise_support.jsonl",

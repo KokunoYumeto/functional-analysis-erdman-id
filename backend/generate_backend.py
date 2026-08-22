@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Regenerate the current backend from its frozen Chapter 1--8 byte prefix."""
+"""Regenerate the Chapter 1--9 backend and additive terminology-QA layer."""
 
 from __future__ import annotations
 
@@ -30,6 +30,7 @@ def main() -> None:
     # Chapter 9 generator. Replaying their historical checkers would wrongly
     # revalidate obsolete whole-ledger hashes after later chapter appends.
     run_generator("generate_ch09_backend.py")
+    run_generator("generate_terminology_qa.py")
 
 
 if __name__ == "__main__":
