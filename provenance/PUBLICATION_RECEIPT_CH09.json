@@ -1,0 +1,66 @@
+{
+  "schema_version": "o008.github-publication-receipt.v1",
+  "recorded_date": "2026-08-22",
+  "release_boundary": "FAOA-2015-CH01-through-CH09",
+  "edition_state": "in_progress_chapters_1_9_of_17",
+  "repository": {
+    "url": "https://github.com/KokunoYumeto/functional-analysis-erdman-id",
+    "branch": "main",
+    "previous_public_head": "b6636d3e532914b07cbd0d796b7ad55027359970",
+    "content_commit": "011bb843bf3c0992d25db8e4eef29a5380ce59db",
+    "content_tree": "99febef7be1a691d2e3f0ec707b5738048d25b8e",
+    "subject": "Admit Indonesian Chapter 9 reader"
+  },
+  "anonymous_readback": {
+    "commit_html_status": 200,
+    "remote_main_match": true,
+    "remote_main": "011bb843bf3c0992d25db8e4eef29a5380ce59db",
+    "files": [
+      {
+        "path": "README.md",
+        "bytes": 4142,
+        "sha256": "440404ebbe14004c6e809d0ac328d1e10a16a85c46dcb83ba9395aa222b428ce",
+        "match": true
+      },
+      {
+        "path": "source/id-ID/topvecspaces-id.tex",
+        "bytes": 37705,
+        "sha256": "791868776a07f4c854f1c13d295da23a2559b88dcac48523fb0390e1e5330ee1",
+        "match": true
+      },
+      {
+        "path": "output/pdf/analisis-fungsional-dan-aljabar-operator-id-bab-1-9.pdf",
+        "bytes": 1686477,
+        "sha256": "99215ff5987f720600152da902cec8f521329692931a0dbf89e82ef2d4ff6076",
+        "match": true
+      },
+      {
+        "path": "backend/BACKEND_MANIFEST.csv",
+        "bytes": 2645,
+        "sha256": "ab31e88013a7f14789c3d3e71f6a289cb210983578583497326703bb3aabc2da",
+        "match": true
+      },
+      {
+        "path": "provenance/CH09_BUILD_AND_QA_RECEIPT.md",
+        "bytes": 9128,
+        "sha256": "08a103ce79f1f9406ddb877c01e8f921cde0f323fd6d1e731650eedbf1bd8794",
+        "match": true
+      },
+      {
+        "path": "provenance/SOURCE_CORRECTIONS.md",
+        "bytes": 29933,
+        "sha256": "8854271d5a35eaddc3fc1141f7a2fc1e100796652a30fb52b257fb5b34c9d514",
+        "match": true
+      },
+      {
+        "path": "provenance/CH09_CONTACT_SHEET.png",
+        "bytes": 4114399,
+        "sha256": "09b3bc4d70cc83d99cd376245c578e4c72fff6995e3392810e2d55e0302986dd",
+        "match": true
+      }
+    ],
+    "all_checked_files_match": true,
+    "credential_material_recorded": false,
+    "result": "pass"
+  }
+}
