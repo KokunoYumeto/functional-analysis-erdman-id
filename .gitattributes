@@ -18,5 +18,6 @@ provenance/*_RENDER_MANIFEST.csv -text
 /qa/*.md text eol=lf
 /qa/ch*_translation_parts/*.tex text eol=lf
 /provenance/*.md text eol=lf
+/provenance/*.json text eol=lf
 /README.md text eol=lf
 /BUILD.md text eol=lf
