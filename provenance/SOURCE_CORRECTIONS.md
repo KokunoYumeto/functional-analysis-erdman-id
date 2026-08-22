@@ -277,3 +277,77 @@ canonically the product here, and the source deliberately alternates the two
 descriptions. The cumulative Chapter 1--5 reader renders the intentional
 forward reference `chap_cpt_ops` as `\futurexref{7}{chap_cpt_ops}` until
 Chapter 7 supplies the live endpoint.
+## Chapter 6
+
+The following source candidates are adjudicated and applied in
+`source/id-ID/Banach_spaces-id.tex`. The target retains the complete ordered
+environment, label, reference, citation, exercise, proof, hint, index,
+defined-term, and formula topology except for the explicitly classified
+corrections and reader-facing localization deltas locked by
+`qa/check_ch06_translation.py`.
+
+1. `Banach_spaces.tex:16,60--62,330,403,423,496,502,684,797,909,912,932,
+   1055,1171`: repair ordinary source-language and punctuation defects---a
+   stray comma, an unclosed parenthesis, misspellings, missing token
+   boundaries, wrong or duplicated articles/conjunctions, an unclosed
+   parenthetical, and missing terminal punctuation---naturally in Indonesian.
+2. `Banach_spaces.tex:128`: preserve the exact later-source endpoint `000731`
+   as `\futurexref{11.2.20}{000731}` until Chapter 11 enters the cumulative
+   reader; the endpoint is Proposition 11.2.20 at
+   `Gelfand_Naimark.tex:242`.
+3. `Banach_spaces.tex:213--214`: for arbitrary subsets, replace `M={0}` and
+   `F={0}` by `M\subseteq\{0\}` and `F\subseteq\{0\}` in the two annihilator
+   biconditionals. The source statements otherwise fail for empty subsets.
+4. `Banach_spaces.tex:275`: describe `w^*` convergence as weak-star
+   convergence, not ordinary weak convergence.
+5. `Banach_spaces.tex:303--305`: state Alaoglu's theorem for the closed unit
+   ball of the dual `V^*`; the source's unspecified normed-space ball has no
+   weak-star topology of the stated kind.
+6. `Banach_spaces.tex:396`: use the defined sequence term `w_0`, not `w_o`.
+7. `Banach_spaces.tex:407--410`: change the invertibility index category from
+   `BAN_1` to `BAN_\infty`. A bounded linear bijection need not be invertible
+   in the contraction category.
+8. `Banach_spaces.tex:476`: call `C069431` the preceding example, matching its
+   `exam` environment, rather than an exercise.
+9. `Banach_spaces.tex:546--549`: normalize the lone un-emphasized proof-hint
+   heading to the same emphasized semantic heading used by the other 27
+   Chapter 6 hints.
+10. `Banach_spaces.tex:661--665`: introduce the missing ambient Banach algebra
+    `A` before forming the quotient algebra `A/J`.
+11. `Banach_spaces.tex:924--925`: retain the discussion of `c` and
+    `l_\infty`; the constant sequence belongs to both, and the displayed norm
+    difference tends to `1` in both. The source's switch to `l_1` and value
+    infinity is not well typed.
+12. `Banach_spaces.tex:955`: introduce the Banach space `B` used throughout
+    the Schauder-basis definition.
+13. `Banach_spaces.tex:1205`: use the established Banach-subspace relation
+    `\preccurlyeq`, not `\preceq`, which Chapter 5 uses for the projection
+    order.
+14. `Banach_spaces.tex:1253`: specify continuous **linear** maps as the
+    morphisms of the duality functor.
+15. `Banach_spaces.tex:1254`: restore the missing superscript marker in
+    `B^*`.
+16. `Banach_spaces.tex:1327`: name the ambient Banach space `B`, not `M`, in
+    the pair `(B,M)`.
+17. `Banach_spaces.tex:1384`: require the complete metric space in the local
+    Baire statement to be nonempty.
+18. `Banach_spaces.tex:1447`: take
+    `\sup\{\abs{a^{**}(f)}\colon a\in A\}`. The source supremum without
+    modulus is invalid over complex scalars and does not prove boundedness.
+19. `Banach_spaces.tex:1490--1495`: close the piecewise definition with the
+    invisible delimiter `\right.` rather than a visible unmatched right
+    brace.
+20. `Banach_spaces.tex:1566,1574`: give the SOT and uniform/operator-norm
+    convergence index entries distinct sort keys instead of reusing the WOT
+    key.
+
+The source-to-target math audit separately classifies localization-only
+changes inside mathematical text (`if` to `jika`, English ordinal suffixes,
+and natural Indonesian word order for projection phrases). They are not source
+corrections. The cumulative Chapter 1--6 reader now resolves the earlier
+Chapter 4 Alaoglu reference normally; its Chapter 7 and Chapter 11 references
+remain exact `futurexref` endpoints until those chapters enter the reader.
+
+No upstream contact occurs during production. These entries are held for the
+single deduplicated post-corpus report only if that report is separately
+authorized.

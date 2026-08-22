@@ -31,6 +31,7 @@ def main() -> None:
     run_generator("generate_ch03_backend.py")
     run_generator("generate_ch04_backend.py")
     run_generator("generate_ch05_backend.py")
+    run_generator("generate_ch06_backend.py")
 
 
 if __name__ == "__main__":

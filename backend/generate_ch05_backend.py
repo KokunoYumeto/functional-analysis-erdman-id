@@ -160,11 +160,15 @@ def verify_evidence() -> None:
         PUBLIC_EVIDENCE_LOCKS | LOCAL_EVIDENCE_LOCKS
     ).items():
         data = (ROOT / relative_path).read_bytes()
+        if relative_path == "provenance/SOURCE_CORRECTIONS.md":
+            if len(data) < size or sha(data[:size]) != expected_sha:
+                raise ValueError(f"Chapter 5 evidence prefix changed: {relative_path}")
+            continue
         if (len(data), sha(data)) != (size, expected_sha):
             raise ValueError(f"Chapter 5 evidence changed: {relative_path}")
-    ledger = (ROOT / "provenance" / "SOURCE_CORRECTIONS.md").read_text(
-        encoding="utf-8"
-    )
+    ledger = (ROOT / "provenance" / "SOURCE_CORRECTIONS.md").read_bytes()[
+        :LEDGER_SIZE
+    ].decode("utf-8")
     start = ledger.find("## Chapter 5")
     if start < 0 or sha(ledger[start:].encode("utf-8")) != LEDGER_SECTION_SHA:
         raise ValueError("Chapter 5 correction-ledger section changed")

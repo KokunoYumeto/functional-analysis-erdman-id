@@ -1,0 +1,270 @@
+\section{Teorema Pemetaan Terbuka}\label{C0694}
+Salah satu pertanyaan yang dapat (dan patut) diajukan tentang setiap kategori konkret ialah apakah setiap morfisme bijektif selalu merupakan
+isomorfisme.  Dalam beberapa kategori jawabannya jelas \,\emph{ya} (misalnya, dalam $\cat{VEC}$).  Dalam kategori lain
+jawabannya jelas \,\emph{tidak} (dalam $\cat{TOP}$, misalnya, tinjau pemetaan identitas dari bilangan
+real bertopologi diskret ke bilangan real bertopologi biasa).  Dalam kategori-kategori yang muncul dalam
+kajian analisis, aljabar sering menarik dengan penuh semangat ke satu arah, sementara topologi melawan dengan kuat dan menarik
+ke arah yang lain.  Di sini pertanyaan tersebut dapat menjadi sangat menarik---dan jawabannya sama sekali tidak sepele.  Dalam kategori
+$\cat{BAN_\infty}$ yang terdiri atas ruang Banach dan pemetaan linear kontinu, pertanyaan ini ternyata memiliki kedalaman yang menarik.  Dalam
+kasus ini aljabar menang; jawabannya ya.  Hal ini ternyata merupakan akibat langsung dari \emph{teorema
+pemetaan terbuka} yang termasyhur.  Ketika Anda menelaah pembuktian hasil berikut, perhatikan bahwa untuk pemetaan yang dibahas,
+kelengkapan domain dan kelengkapan kodomain sama-sama esensial---dan dengan alasan yang sangat berbeda.
+
+\begin{defn} Suatu pemetaan $f \colon X \sto Y$ antara ruang-ruang topologis disebut
+ \index{terbuka!pemetaan}%
+ \index{pemetaan!terbuka}%
+\df{terbuka} jika memetakan himpunan terbuka ke himpunan terbuka; yaitu, $f$ merupakan pemetaan terbuka apabila $f^{\sto}(U)$ terbuka dalam $Y$
+setiap kali $U$ terbuka dalam~$X$.
+\end{defn}
+
+\emph{Teorema pemetaan terbuka} menyatakan bahwa surjeksi linear kontinu antara ruang-ruang Banach selalu merupakan pemetaan terbuka.
+Ada satu rincian teknis yang membuat pembuktian hasil ini agak rumit.  Misalkan $T$ suatu pemetaan linear kontinu
+dari ruang Banach $B$ ke ruang linear bernorma~$V$, dan $R$ adalah citra oleh $T$ dari suatu bola terbuka di sekitar
+titik asal dalam~$B$.  Kita perlu mengetahui bahwa jika tutupan $R$ memuat suatu bola terbuka di sekitar titik asal dalam $V$, maka
+$R$ sendiri memuat bola yang sama. Akan memudahkan jika bagian informasi yang krusial ini kita pisahkan sebagai proposisi berikut.
+
+\begin{notn} Dalam ruang linear bernorma $V$, kita menyatakan dengan
+ \index{<unop@$(V)_r$ (bola terbuka berjari-jari $r$ di sekitar titik asal)}%
+$(V)_r$ bola terbuka di sekitar titik asal dalam $V$ yang berjari-jari~$r$.
+\end{notn}
+
+\begin{prop}\label{prop_for_OMT} Misalkan $T\colon B \sto V$ suatu pemetaan linear kontinu dari ruang Banach ke ruang linear bernorma.
+Jika $r$, $s > 0$ dan $(V)_s \subseteq \clo{T\bigl(\,(B)_r\,\bigr)}$, maka $(V)_s \subseteq T\bigl(\,(B)_r\,\bigr)$.
+\end{prop}
+
+\begin{proof}[\emph{Petunjuk pembuktian}] Pertama, buktikan bahwa tanpa mengurangi keumuman kita dapat mengasumsikan $r = s = 1$.  Dengan demikian,
+hipotesis kita adalah $(V)_1 \subseteq \clo{T\bigl(\,(B)_1\,\bigr)}$.
+
+Misalkan $z \in (V)_1$.  Pembuktian selesai jika kita dapat menunjukkan bahwa $z \in T\bigl(\,(B)_1\,\bigr)$.  Pilih $\delta > 0$ sedemikian
+sehingga $\norm z < 1 - \delta$, dan misalkan $y = (1 - \delta)^{-1}z$.  Bangun suatu barisan $(v_k)_{k=0}^\infty$ dari vektor-vektor dalam~$V$
+yang memenuhi
+   \begin{enumerate}
+     \item[(i)] $\norm{y - v_k} < \delta^k$ untuk $k = 0,1,2,\dots$; dan
+     \item[(ii)] $v_k - v_{k-1} \in T\bigl(\,\delta^{k-1}(B)_1\,\bigr)$ untuk $k = 1,2,3,\dots$.
+   \end{enumerate}
+Untuk melakukannya, mulailah dengan $v_0 = \vc 0$. Gunakan hipotesis untuk menyimpulkan bahwa $y - v_0 \in \clo{T\bigl(\,(B)_1\,\bigr)}$ dan
+karena itu terdapat vektor $w_0 \in T\bigl(\,(B)_1\,\bigr)$ sedemikian sehingga $\norm{(y - v_0) - w_0} < \delta$.  Misalkan
+$v_1 = v_0 + w_0$, lalu periksa bahwa (i) dan (ii) berlaku untuk $k = 1$.
+
+Kemudian cari $w_1 \in T\bigl(\,\delta (B)_1\,\bigr)$ sedemikian sehingga $\norm{(y - v_1) - w_1} < \delta^2$, dan misalkan $v_2 = v_1 + w_1$.
+Periksa bahwa (i) dan (ii) berlaku untuk $k= 2$.  Lanjutkan secara induktif.
+
+Untuk setiap $n \in \N$, pilih vektor $u_n \in \delta^{n-1}(B)_1$ sedemikian sehingga $T(u_n) = v_n - v_{n-1}$. Tunjukkan bahwa barisan
+$(u_n)$ dapat dijumlahkan (gunakan~\ref{prop_abs_sum_implies_sum}), dan misalkan $x = \sum_{n=1}^\infty u_n$.  Selesaikan pembuktian dengan menunjukkan
+bahwa $Tx = y$ dan bahwa $z \in T\bigl(\,(B)_1\,\bigr)$.   \ns
+\end{proof}
+
+\begin{thm}[Teorema pemetaan terbuka]\label{C069414} Setiap surjeksi linear terbatas antara
+ \index{terbuka!pemetaan!teorema}%
+ \index{morfisme bijektif!dapat diinverskan!dalam $\cat{BAN_\infty}$}%
+ruang-ruang Banach merupakan pemetaan terbuka.
+\end{thm}
+
+\begin{proof}[\emph{Petunjuk pembuktian}] Misalkan $T\colon B \sto C$ suatu surjeksi linear terbatas antara ruang-ruang Banach.
+Mulailah dengan membuktikan klaim berikut: yang perlu kita tunjukkan hanyalah bahwa $T\bigl((B)_1\bigr)$ memuat suatu bola terbuka di sekitar
+titik asal dalam~$C$.  Untuk sementara, misalkan kita mengetahui bahwa bola semacam itu ada.  Namai bola itu~$W$.  Diberikan suatu subhimpunan terbuka $U$ dari $B$, kita
+ingin menunjukkan bahwa citranya oleh $T$ terbuka dalam~$C$.  Untuk itu, ambil sebarang titik $y$ dalam $T(U)$ dan pilih $x$
+dalam $U$ sedemikian sehingga $y = Tx$.  Karena $U - x$ merupakan lingkungan titik asal dalam $B$, kita dapat mencari bilangan $r > 0$ sedemikian sehingga
+$r\,(B)_1 \subseteq U - x$.  Buktikan bahwa $T(U)$ terbuka dengan menunjukkan bahwa $y + rW \subseteq T(U)$.
+
+Untuk membuktikan klaim di atas, misalkan $V = T\bigl((B)_1\bigr)$ dan perhatikan bahwa karena $T$ surjektif, $C = T(B) =
+\bigcup_{k=1}^\infty k\clo V$.  Gunakan versi \emph{teorema kategori Baire} yang menyatakan bahwa jika suatu ruang metrik lengkap takkosong
+merupakan gabungan suatu barisan himpunan tertutup, maka sekurang-kurangnya salah satu himpunan tersebut memiliki interior takkosong.
+(Lihat, misalnya, Teorema 29.3.21 dalam~\cite{Erdman:2007}.)  Pilih $k \in \N$ sedemikian sehingga $\bigl(k\clo V\bigr)^o \neq \emptyset$.
+Dengan demikian, terdapat $y \in \clo V$ dan $r > 0$ sedemikian sehingga $y + (C)_r \subseteq k\clo V$.  Dari kekonveksan
+$k\clo V$, tidak sulit melihat bahwa $(C)_r \subseteq k\clo V$.  (Tuliskan sebarang titik $z$ dalam $(C)_r$ sebagai
+$\frac12(y + z) + \frac12(-y + z)$.) Sekarang diperoleh $(C)_{r/k} \subseteq \clo V$.  Gunakan Proposisi~\ref{prop_for_OMT}.
+\ns \end{proof}
+
+\begin{cor}\label{C069417} Setiap bijeksi linear terbatas antara ruang-ruang Banach merupakan suatu
+isomorfisme.
+\end{cor}
+
+\begin{cor} Setiap surjeksi linear terbatas antara ruang-ruang Banach
+ \index{BAN@$\cat{BAN_\infty}$!hasil bagi dalam}%
+ \index{hasil bagi!pemetaan!dalam $\cat{BAN_\infty}$}%
+merupakan pemetaan hasil bagi dalam~$\cat{BAN_\infty}$.
+\end{cor}
+
+\begin{exam} Misalkan $\fml C_u$ himpunan fungsi kontinu bernilai real pada $[0,1]$ dengan
+norma seragam, dan $\fml C_1$ himpunan fungsi yang sama dengan norma $\mathrm{L_1}$
+(\,$\norm{f}_1 = \int_0^1\abs{f}\,d\lambda$\,). Maka pemetaan identitas $I\colon \fml C_u
+\sto \fml C_1$ merupakan bijeksi linear kontinu, tetapi tidak terbuka. (Mengapa hal ini tidak
+bertentangan dengan \emph{teorema pemetaan terbuka}?)
+\end{exam}
+
+\begin{exam} Misalkan $l$ himpunan barisan bilangan real yang pada akhirnya bernilai nol,
+$V$ adalah $l$ yang dilengkapi norma $l_1$, dan $W$ adalah $l$ dengan norma seragam.  Pemetaan
+identitas $I\colon V \sto W$ merupakan bijeksi linear terbatas, tetapi bukan suatu isomorfisme.
+\end{exam}
+
+\begin{exam} Pemetaan $T\colon \R^2 \sto \R\colon (x,y) \mapsto x$ menunjukkan bahwa meskipun
+surjeksi linear terbatas antara ruang-ruang Banach memetakan himpunan terbuka ke himpunan terbuka, pemetaan tersebut tidak harus
+memetakan himpunan tertutup ke himpunan tertutup.
+\end{exam}
+
+\begin{prop} Misalkan $V$ suatu ruang vektor, dan misalkan $\norm{\cdot}_1$ dan
+$\norm{\cdot}_2$ adalah norma-norma pada~$V$ dengan topologi masing-masing $\ofml T_1$
+dan~$\ofml T_2$.  Jika $V$ lengkap terhadap kedua norma dan jika $\ofml T_1
+\supseteq \ofml T_2$, maka $\ofml T_1 = \ofml T_2$.
+\end{prop}
+
+\begin{exer} Apakah terdapat suatu barisan $(a_n)$ dari bilangan kompleks yang memenuhi
+syarat berikut: suatu barisan $(x_n)$ dalam $\C$ dapat dijumlahkan secara mutlak jika dan hanya jika
+$(a_nx_n)$ terbatas? \emph{Petunjuk.} Tinjau $ T\colon l_\infty \sto l_1\colon (x_n)
+\mapsto (x_n/a_n)$.
+\end{exer}
+
+\begin{exam}\label{C069431} Misalkan $\fml C^2([a,b])$ keluarga semua fungsi bernilai real yang dua kali
+dapat didiferensialkan secara kontinu pada interval $[a,b]$. Pandang keluarga ini sebagai ruang vektor
+dengan cara biasa. Untuk setiap $f \in \fml C^2([a,b])$, definisikan
+    \[ \norm{f} = \norm{f}_u + \norm{f'}_u + \norm{f''}_u\,. \]
+Ini memang suatu norma, dan dengan norma ini $\fml C^2([a,b])$ merupakan ruang Banach.
+\end{exam}
+
+\begin{exam}\label{C069432} Misalkan $\fml C^2([a,b])$ ruang Banach yang diberikan dalam
+Contoh~\ref{C069431}, dan misalkan $p_0$ dan $p_1$ merupakan anggota $\fml C([a,b])$.   Definisikan
+  \[T\colon C^2([a,b]) \sto C([a,b])\colon
+                      f \mapsto f'' + p_1f' + p_0f.\]
+Maka $T$ merupakan pemetaan linear terbatas.
+\end{exam}
+
+\begin{exer} Tinjau suatu persamaan diferensial berbentuk
+   \[ y'' + p_1\,y' + p_0\,y = q  \tag{$\ast$} \]
+dengan $p_0$, $p_1$, dan $q$ fungsi-fungsi bernilai real kontinu (yang tetap) pada interval
+$[a,b]$.  Nyatakan secara tepat, lalu buktikan, pernyataan bahwa \emph{solusi-solusi $(\ast)$
+bergantung secara kontinu pada nilai awal}.  Anda boleh menggunakan tanpa bukti teorema standar berikut:
+untuk setiap titik $c$ dalam $[a,b]$ dan setiap pasangan bilangan real $a_0$ dan $a_1$,
+terdapat solusi tunggal untuk $(\ast)$ sedemikian sehingga $y(c) = a_0$ dan $y'(c) = a_1$.
+\emph{Petunjuk.} Untuk $c \in [a,b]$ yang tetap, tinjau pemetaan
+  \[ S\colon \fml C^2([a,b]) \sto \fml C([a,b]) \times \R^2 \colon
+                                        f \mapsto \bigl(Tf,f(c),f'(c)\bigr) \]
+dengan $\fml C^2([a,b])$ ruang Banach dari Contoh~\ref{C069431} dan $T$ pemetaan
+linear terbatas dari Contoh~\ref{C069432}.
+\end{exer}
+
+\begin{defn} Suatu pemetaan linear terbatas $T\colon V \sto W$ antara ruang-ruang linear bernorma disebut
+ \index{terbatas!jauh dari nol}%
+\df{terbatas jauh dari nol} (atau
+ \index{terbatas!dari bawah}%
+\df{terbatas dari bawah}) jika terdapat bilangan $\delta > 0$ sedemikian sehingga $\norm{Tx} \ge
+\delta\norm{x}$ untuk setiap $x \in V$. (Ingat bahwa kata ``terbatas'' memiliki satu arti ketika
+menerangkan suatu pemetaan linear dan arti yang sangat berbeda ketika diterapkan pada fungsi umum;
+demikian pula ungkapan ``terbatas jauh dari nol''. Lihat Definisi~\ref{def_bdd_away_zero}.)
+\end{defn}
+
+\begin{prop} Suatu pemetaan linear terbatas antara ruang-ruang Banach bersifat terbatas jauh dari nol jika dan
+hanya jika pemetaan itu memiliki jangkauan tertutup dan kernel nol.
+\end{prop}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Teorema Graf Tertutup}
+Syarat perlu dan cukup yang sederhana agar suatu pemetaan linear $T\colon B \sto C$ antara ruang-ruang Banach
+bersifat kontinu ialah grafnya tertutup.  Dalam satu arah, hal ini hampir jelas.  Kebalikannya
+disebut \emph{teorema graf tertutup}.  Ketika kita mensyaratkan graf $T$
+ \index{graf!tertutup}%
+``tertutup'', maksud kita ialah tertutup sebagai subhimpunan $B \times C$ dengan topologi hasil kali.  Ingat (dari~\ref{exam_prod_top_norm})
+bahwa topologi pada jumlah langsung $B \oplus C$ yang diinduksi oleh norma hasil kali sama dengan topologi hasil kali pada $B \times C$.
+
+\begin{exer} Jika $T\colon B \sto C$ suatu pemetaan linear kontinu antara ruang-ruang Banach, maka grafnya tertutup.
+\end{exer}
+
+\begin{thm}[Teorema graf tertutup]\label{thm_CGT} Misalkan $T\colon B \sto C$ suatu pemetaan linear antara ruang-ruang Banach.
+ \index{tertutup!teorema graf}%
+Jika graf $T$ tertutup, maka $T$ kontinu.
+\end{thm}
+
+\begin{proof}[\emph{Petunjuk pembuktian}] Misalkan $G = \{(x,Tx)\colon x \in B\}$ graf~$T$. Terapkan
+(Korolar~\ref{C069417} dari) \emph{teorema pemetaan terbuka} pada pemetaan
+  \[ \pi\colon G \sto B\colon (x,Tx) \mapsto x\,. \]
+\ns \end{proof}
+
+Proposisi berikut memberikan syarat perlu dan cukup yang sangat sederhana agar graf suatu pemetaan linear antara ruang-ruang Banach
+tertutup.
+
+\begin{prop}\label{prop_nasc_closed_graph} Misalkan $T\colon B \sto C$ suatu pemetaan linear antara ruang-ruang Banach. Maka $T$
+kontinu jika dan hanya jika syarat berikut dipenuhi:
+   \[ \text{jika $x_n \sto 0$ dalam $B$ dan $Tx_n \sto c$ dalam $C$, maka $c = 0$.} \]
+\end{prop}
+
+\begin{prop} Misalkan $T \colon B \sto C$ suatu pemetaan linear antara ruang-ruang Banach sedemikian sehingga jika
+$x_n \sto 0$ dalam $B$, maka $(g \circ T)(x_n) \sto 0$ untuk setiap $g \in C^*$.  Maka $T$
+terbatas.
+\end{prop}
+
+\begin{prop} Misalkan $T \colon B \sto C$ suatu fungsi linear antara ruang-ruang Banach. Definisikan
+$T^*f = f \circ T$ untuk setiap $f \in C^*$.  Jika $T^*$ memetakan $C^*$ ke dalam $B^*$, maka $T$
+kontinu.
+\end{prop}
+
+\begin{defn}\label{C069624} Suatu pemetaan linear $T$ dari ruang vektor ke ruang itu sendiri disebut
+ \index{idempoten}%
+\df{idempoten} jika $T^2 = T$.
+\end{defn}
+
+\begin{prop}\label{prop_cont_idem_op} Suatu pemetaan linear idempoten dari ruang Banach ke ruang itu sendiri
+kontinu jika dan hanya jika kernel dan jangkauannya tertutup.
+\end{prop}
+
+\begin{proof}[\emph{Petunjuk pembuktian}] Untuk bagian ``jika'', gunakan Proposisi~\ref{prop_nasc_closed_graph}.  \ns
+\end{proof}
+
+Proposisi berikut merupakan penerapan \emph{teorema graf tertutup} yang berguna pada operator ruang Hilbert.
+
+\begin{prop} Misalkan $H$ suatu ruang Hilbert, serta $S$ dan $T$ fungsi dari $H$ ke dirinya sendiri sedemikian sehingga
+    \[ \langle Sx,y \rangle = \langle x,Ty \rangle \]
+untuk setiap $x$, $y \in H$.  Maka $S$ dan $T$ merupakan operator linear terbatas.
+\end{prop}
+
+\begin{proof}[\emph{Petunjuk pembuktian}] Untuk membuktikan linearitas pemetaan $S$, tinjau hasil kali dalam dari vektor-vektor
+$S(\alpha x + \beta y) - \alpha Sx - \beta Sy$ dan $z$, dengan $x$, $y$, $z \in H$ dan $\alpha$, $\beta \in \K$.
+Untuk membuktikan kekontinuan $S$, tunjukkan bahwa grafnya tertutup.  \ns
+\end{proof}
+
+Ingat bahwa dalam proposisi sebelumnya, operator $T$ adalah \emph{adjoin (ruang Hilbert)} dari $S$;
+yaitu, $T = S^*$.
+
+\begin{defn} Misalkan $a < b$ dalam~$\R$. Suatu fungsi $f\colon [a,b] \sto \R$ disebut
+ \index{dapat didiferensialkan secara kontinu}%
+ \index{diferensiabel!secara kontinu}%
+dapat didiferensialkan secara kontinu jika fungsi itu dapat didiferensialkan pada (suatu himpunan terbuka yang memuat) $[a,b]$
+dan turunannya $f\,'$ kontinu pada~$[a,b]$.  Himpunan semua fungsi bernilai real yang dapat
+didiferensialkan secara kontinu pada $[a,b]$ dinotasikan dengan $\fml C^1(\,[a,b]\,)$.
+\end{defn}
+
+\begin{exam} Misalkan $D\colon \fml C^1(\,[0,1]\,) \sto C(\,[0,1]\,)\colon f \mapsto f\,'$, dengan
+baik $C^1(\,[0,1]\,)$ maupun $C(\,[0,1]\,)$ dilengkapi norma seragam. Pemetaan
+$D$ linear dan memiliki graf tertutup, tetapi tidak kontinu.  (Mengapa hal ini tidak bertentangan dengan
+\emph{teorema graf tertutup}?  Apa yang dapat kita simpulkan tentang~$\fml C^1(\,[0,1]\,)$?)
+\end{exam}
+
+\begin{prop} Misalkan $S\colon A \sto B$ dan $T\colon B \sto C$ pemetaan linear antara
+ruang-ruang Banach, serta $T$ terbatas dan injektif.  Maka $S$ terbatas jika dan hanya jika $TS$ terbatas.
+\end{prop}
+
+
+
+
+
+
+
+
+
+
+

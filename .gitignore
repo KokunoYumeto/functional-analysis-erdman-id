@@ -25,6 +25,8 @@
 /qa/CH05_EXTRACTED_TEXT.txt
 /qa/CH05_CHAPTER_PAGES_CONTACT.png
 /qa/CH05_BACKMATTER_CONTACT.png
+/qa/build-through-ch06-a/
+/qa/renders/ch06-final/
 
 # TeX intermediates
 *.aux

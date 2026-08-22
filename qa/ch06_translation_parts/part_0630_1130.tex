@@ -1,0 +1,487 @@
+\section{Dualitas Ruang Banach}
+
+\begin{conv}\label{conv_subsp_Bsp} Dalam konteks ruang Banach, kita menggunakan konvensi yang sama untuk pemakaian kata
+``subruang'' seperti yang kita gunakan untuk ruang Hilbert. Kata ``subruang'' akan selalu berarti
+ \index{subruang!dari ruang Banach}%
+ \index{konvensi!subruang ruang Banach bersifat tertutup}%
+\emph{subruang vektor tertutup}. Untuk menunjukkan bahwa $M$ adalah subruang dari suatu ruang Banach $B$, kita menulis
+ \index{<binrelle@$\preccurlyeq$ (subruang dari ruang Banach atau Hilbert)}%
+$M \preccurlyeq B$.
+\end{conv}
+
+\begin{prop} Jika $M$ adalah subruang dari suatu ruang Banach $B$,
+ \index{hasil bagi!ruang Banach}%
+ \index{Banach!ruang!hasil bagi}%
+ \index{ruang!hasil bagi!Banach}%
+maka ruang linear bernorma hasil bagi $B/M$ juga merupakan ruang Banach.
+\end{prop}
+
+\begin{proof}[\emph{Petunjuk pembuktian}] Untuk menunjukkan bahwa $B/M$ lengkap, cukup ditunjukkan bahwa dari
+sebarang barisan Cauchy $(u_n)$ dalam $B/M$ kita dapat mengambil suatu subbarisan yang konvergen. Untuk itu,
+perhatikan bahwa jika $(u_n)$ adalah barisan Cauchy, maka untuk setiap $k \in \N$ terdapat $N_k \in \N$ sedemikian sehingga
+$\norm{u_n - u_m} < 2^{-k}$ setiap kali $m$, $n \ge N_k$. Sekarang gunakan induksi. Pilih $n_1 = N_1$.
+Setelah $n_1$, $n_2$, \dots, $n_k$ dipilih sedemikian sehingga $n_1 < n_2 < \dots < n_k$ dan $N_j \le n_j$ untuk
+$1 \le j \le k$, pilih $n_{k+1} = \max\{N_{k+1}, n_k + 1\}$. Dengan demikian diperoleh subbarisan
+$\bigl(u_{n_k}\bigr)$ yang memenuhi $\norm{u_{n_k} - u_{n_{k+1}}} < 2^{-k}$ untuk setiap $k \in \N$.
+Dari setiap kelas ekuivalensi $u_{n_k}$, pilih suatu vektor $x_k$ dalam $B$ sedemikian sehingga $\norm{x_k - x_{k+1}} < 2^{-k+1}$.
+Kemudian Proposisi~\ref{prop_abs_sum_implies_sum} menunjukkan bahwa barisan $(x_k - x_{k+1})$ dapat
+dijumlahkan. Dari sini, simpulkan bahwa barisan $(x_k)$ dan $\bigl(u_{n_k}\bigr)$ konvergen.
+(Rincian argumen ini dituliskan dengan baik dalam pembuktian Teorema 3.4.13 pada~\cite{BrownP:1970}.) \ns
+\end{proof}
+
+\begin{prop} Jika $J$ adalah ideal tertutup dalam suatu aljabar Banach $A$,
+ \index{hasil bagi!aljabar Banach}%
+ \index{Banach!aljabar!hasil bagi}%
+ \index{aljabar!hasil bagi!Banach}%
+maka $A/J$ merupakan aljabar Banach.
+\end{prop}
+
+\begin{thm}[Teorema hasil bagi fundamental untuk $\cat{BALG}$] Misalkan $A$ dan $B$ aljabar Banach
+ \index{BALG@$\cat{BALG}$!hasil bagi dalam}%
+ \index{hasil bagi!teorema!untuk $\cat{BALG}$}%
+dan $J$ ideal tertutup sejati dalam~$A$. Jika $\phi$ suatu homomorfisme dari $A$ ke $B$ dan
+$\ker\phi \supseteq J$, maka terdapat homomorfisme tunggal $\wt\phi\colon A/J \sto
+B$ yang membuat diagram berikut komutatif.
+   \[ \xymatrix@+30pt{A \ar[d]_*+{\pi} \ar[dr]^*+{\phi} & \\
+                           A/J \ar[r]_*+{\widetilde\phi} & B  }\]
+Selain itu, $\wt\phi$ injektif jika dan hanya jika $\ker\phi = J$; dan $\wt\phi$
+surjektif jika dan hanya jika $\phi$ surjektif.
+\end{thm}
+
+\begin{prop}\label{C037821} Misalkan $J$ ideal tertutup sejati dalam suatu aljabar Banach komutatif
+beridentitas~$A$. Maka $J$ maksimal jika dan hanya jika $A/J$ adalah medan.
+\end{prop}
+
+Proposisi berikut menyatakan syarat-syarat yang cukup sederhana agar suatu epimorfisme antara ruang Banach
+ternyata menjadi faktor dalam morfisme-morfisme lain. Sepintas lalu, kegunaan hasil semacam ini
+mungkin tampak agak meragukan. Namun, ketika membuktikan Proposisi~\ref{00151231}, perhatikan bahwa
+inilah \emph{tepatnya} yang Anda perlukan.
+
+\begin{prop}\label{prop_surj_as_factor} Tinjau kategori ruang Banach
+dan pemetaan linear kontinu. Jika $T\colon A \sto C$, $R\colon A \sto B$, $R$
+surjektif, dan $\ker R \subseteq \ker T$, maka terdapat
+$S\colon B \sto  C$ tunggal sedemikian sehingga $SR = T$. Selain itu, $S$ injektif jika dan
+hanya jika $\ker R = \ker T$.
+\end{prop}
+
+\begin{proof}[\emph{Petunjuk pembuktian}] Tinjau diagram komutatif berikut.
+Gunakan \emph{teorema pemetaan terbuka}.
+ \[\xy
+    \scalefactor{1.4}%
+    \Atrianglepair/>`>`>`<-`>/[A`B`A/\ker R`C;R`\pi`T`\wt R`\wt T]
+ \endxy\]   \ns
+\end{proof}
+
+Menarik untuk diperhatikan bahwa hasil sebelumnya dapat dinyatakan dengan cara yang
+sedikit memperkuat klaim keunikannya. Sebagaimana dinyatakan, kesimpulannya ialah bahwa terdapat
+pemetaan linear terbatas $S$ tunggal sedemikian sehingga $SR = T$. Tanpa kerja tambahan, kita dapat merumuskan ulang
+proposisi tersebut sebagai berikut.
+
+\begin{prop}\label{prop_surj_as_factor2} Tinjau kategori ruang Banach
+dan pemetaan linear kontinu. Jika $T\colon A \sto C$, $R\colon A \sto B$, $R$
+surjektif, dan $\ker R \subseteq \ker T$, maka terdapat fungsi tunggal
+$S$ yang memetakan $B$ ke $C$ sedemikian sehingga $S\circ R = T$. Fungsi $S$ harus
+terbatas dan linear. Selain itu, fungsi tersebut injektif jika dan hanya jika $\ker R = \ker T$.
+\end{prop}
+
+Apakah versi kedua hasil ini, yang lebih terperinci, layak dinyatakan? Menurut saya, jawabannya bergantung pada
+arah yang hendak dituju. Memilih versi yang lebih panjang hanya dengan alasan bahwa versi itu lebih umum
+tampaknya tidak menarik. Di pihak lain, andaikan kemudian kita memerlukan hasil berikut.
+
+\begin{prop}\label{prop_factor_blm} Jika suatu pemetaan linear terbatas $T\colon A \sto C$ antara ruang-ruang Banach dapat difaktorkan
+menjadi komposisi dua fungsi $T = f \circ R$, dengan $R \in \ofml B(A,B)$ surjektif,
+maka $f \colon B \sto C$ terbatas dan linear.
+\end{prop}
+
+\begin{proof}[\emph{Petunjuk pembuktian}] Untuk menerapkan~\ref{prop_surj_as_factor2}, yang diperlukan di sini hanyalah
+memperhatikan bahwa $f(0) = 0$ sehingga $\ker R \subseteq \ker T$.   \ns
+\end{proof}
+
+Karena hasil sebelumnya merupakan akibat yang hampir langsung dari~\ref{prop_surj_as_factor2}, ada baiknya
+versi yang lebih terperinci ini tersedia. Orang mungkin berpendapat bahwa meskipun~\ref{prop_factor_blm} barangkali tidak
+sepenuhnya jelas dari pernyataan~\ref{prop_surj_as_factor}, hasil itu tentu jelas dari
+pembuktiannya, jadi untuk apa memakai versi yang lebih rumit? Hal-hal semacam ini tentu merupakan soal selera.
+
+\begin{defn}\label{defn_Bsp_exact_seq} Suatu barisan ruang Banach dan pemetaan linear kontinu
+   \[\xymatrix{{\cdots}\ar[r] & B_{n-1}\ar[r]^{T_n}
+          & B_n\ar[r]^{T_{n+1}} & B_{n+1}\ar[r] & {\cdots}
+   }\]
+dikatakan
+ \index{barisan!eksak}%
+ \index{eksak!barisan}%
+\df{eksak di} $B_n$ jika $\ran T_n = \ker T_{n+1}$. Suatu barisan disebut \df{eksak} jika barisan tersebut
+eksak di setiap ruang Banach penyusunnya. Suatu barisan ruang Banach dan
+pemetaan linear kontinu berbentuk
+   \begin{equation}\label{001500202i}\xymatrix{
+      0 \ar[r] & A \ar[r]^S & B\ar[r]^T & C\ar[r] & 0
+   }\end{equation}
+ \index{barisan!eksak pendek}%
+ \index{barisan eksak pendek}%
+yang eksak di $A$, $B$, dan $C$ disebut \df{barisan eksak pendek}. (Di sini $\vc 0$ menyatakan ruang Banach trivial
+berdimensi nol, dan panah-panah tanpa label adalah pemetaan yang jelas.)
+\end{defn}
+
+Definisi-definisi sebelumnya diberikan untuk
+ \index{BAN@$\cat{BAN_\infty}$!kategori}%
+ \index{kategori!$\cat{BAN_\infty}$ sebagai suatu}%
+kategori $\cat{BAN_\infty}$ dari ruang Banach dan pemetaan linear kontinu. Tentu saja,
+gagasan tentang suatu \emph{barisan eksak} bermakna dalam banyak situasi---misalnya, dalam
+kategori aljabar Banach, aljabar-$C^*$, ruang Hilbert, ruang vektor, grup Abel,
+dan modul, di antara yang lainnya.
+
+\begin{prop}\label{00151231} Tinjau diagram berikut dalam kategori ruang Banach
+dan pemetaan linear kontinu
+ \[\xymatrix{
+      0\ar[r] & A\ar[d]^f\ar[r]^j & B\ar[d]^g\ar[r]^k
+              & C\ar@{-->}[d]^h \ar[r] & 0 \\
+      0\ar[r] & A'\ar[r]_{j'} & B'\ar[r]_{k'}
+      & C'\ar[r] & 0
+ }\]
+Jika baris-barisnya eksak dan persegi kirinya komutatif, maka terdapat pemetaan linear kontinu
+$h\colon C \sto C'$ tunggal yang membuat persegi kanannya komutatif.
+\end{prop}
+
+\begin{prop}[Lema Lima]\label{00151232}
+ \index{lema lima}%
+Andaikan dalam diagram ruang Banach dan pemetaan linear kontinu berikut
+ \[\xymatrix{
+      0\ar[r] & A\ar[d]^f\ar[r]^j & B\ar[d]^g\ar[r]^k
+              & C\ar[d]^h \ar[r] & 0 \\
+      0\ar[r] & A'\ar[r]_{j'} & B'\ar[r]_{k'}
+      & C'\ar[r] & 0
+ }\]
+baris-barisnya eksak dan persegi-perseginya komutatif. Maka pernyataan-pernyataan berikut berlaku.
+ \begin{enumerate}[label=\rm{(\alph*)}]
+  \item Jika $g$ surjektif, maka $h$ juga surjektif.
+  \item Jika $f$ surjektif dan $\ran j \supseteq \ker g$, maka $h$ injektif.
+  \item Jika $f$ dan $h$ surjektif, maka $g$ juga surjektif.
+  \item Jika $f$ dan $h$ injektif, maka $g$ juga injektif.
+ \end{enumerate}
+\end{prop}
+
+Ada banyak keuntungan bekerja dengan operator pada ruang Hilbert atau Banach yang memiliki jangkauan tertutup.
+Salah satu keuntungan langsung ialah bahwa kita memperoleh kembali kesederhanaan \emph{teorema dasar aljabar linear}
+(\ref{00016025}) dari versi-versi yang agak lebih rumit dalam Proposisi~\ref{prop_ker_adj_perp_ran_op}
+dan Teorema~\ref{prop_FTLA_Bsp}. Di pihak lain, ada pula kerugiannya. Operator-operator itu tidak membentuk suatu kategori; komposisi
+dua operator berjangkauan tertutup dapat gagal memiliki jangkauan tertutup.
+
+\begin{prop} Jika suatu pemetaan linear terbatas $T\colon B \sto C$ antara dua ruang Banach memiliki jangkauan tertutup, maka
+adjoinnya~$T^*$ juga demikian dan $\ran T^* = (\ker T)^\perp$.
+\end{prop}
+
+\begin{proof}[\emph{Petunjuk pembuktian}] Simpulkan dari Proposisi~\ref{prop_FTLA_Bsp}(d) bahwa kita hanya perlu menunjukkan bahwa
+$(\ker T)^\perp \subseteq \ran T^*$. Misalkan $f$ suatu fungsional sebarang dalam $(\ker T)^\perp$. Yang harus dicari adalah suatu
+fungsional $g$ dalam $C^*$ sedemikian sehingga $f = T^*g$. Untuk itu, gunakan \emph{teorema pemetaan terbuka} untuk menunjukkan bahwa pemetaan $\wt T_\ast$
+dalam diagram berikut invertibel. (Pemetaan $T_\ast\colon B \sto \ran T$ dan $T$ sama persis, kecuali bahwa
+kodomainnya berbeda.)
+
+ \[\xy
+    \scalefactor{1.4}%
+    \Atrianglepair/>`>`>`<-`>/[B`\ran T`B/\ker T`\K;T_\ast`\pi`f`\wt{T_\ast}`\wt f]
+ \endxy\]
+
+Misalkan $g_0 := \wt f\,{\wt T_\ast}^{-1}$. Gunakan \emph{teorema Hahn--Banach} untuk menghasilkan~$g$ yang diinginkan.   \ns
+\end{proof}
+
+\begin{prop} Dalam kategori $\cat{BAN_\infty}$, jika barisan $\xymatrix{A \ar[r]^S & B \ar[r]^T & C}$ eksak di $B$
+dan $T$ memiliki jangkauan tertutup, maka $\xymatrix{C^* \ar[r]^{T^*} & B^* \ar[r]^{S^*} & A^*}$ eksak di~$B^*$.
+\end{prop}
+
+\begin{defn} Suatu funktor dari kategori ruang Banach dan pemetaan linear kontinu ke dirinya sendiri disebut
+ \index{eksak!funktor}%
+ \index{funktor!eksak}%
+\df{eksak} jika funktor tersebut membawa barisan eksak pendek ke barisan eksak pendek.
+\end{defn}
+
+\begin{exam}\label{exam_dualfunctor_exact} Funktor $B \mapsto B^*$, $T \mapsto T^*$ (lihat~\ref{exam_dual_functor})
+dari kategori ruang Banach dan pemetaan linear kontinu ke dirinya sendiri bersifat eksak.
+\end{exam}
+
+\begin{exam} Misalkan $B$ suatu ruang Banach dan $\sbsb{\tau}B\colon x \mapsto x^{**}$ pembenaman alami dari $B$ ke~$B^{**}$
+(lihat Definisi~\ref{defn_nat_embed}). Maka ruang hasil bagi $B^{**}/\ran\sbsb{\tau}B$ merupakan ruang Banach.
+\end{exam}
+
+\begin{notn} Kita akan menyatakan dengan $\clo B$ ruang hasil bagi
+$B^{**}/\ran \sbsb{\tau}B$ dalam contoh sebelumnya.
+\end{notn}
+
+\begin{prop} Jika $T\colon B \sto C$ suatu pemetaan linear kontinu antara ruang-ruang Banach, maka terdapat pemetaan linear kontinu tunggal
+$\clo T\colon \clo B \sto \clo C$ sedemikian sehingga $\clo T(\phi + \ran\sbsb{\tau}B) = (T^{**}\phi) + \ran\sbsb{\tau}C$ untuk setiap $\phi \in B^{**}$.
+\end{prop}
+
+\begin{proof}[\emph{Petunjuk pembuktian}] Terapkan~\ref{00151231} pada diagram berikut:
+ \begin{equation}\label{eqn_exactCD_Bbar}\xymatrix{
+      0\ar[r] & B\ar[d]^T\ar[r]^{\sbsb{\tau}B} & B^{**}\ar[d]^{T^{**}}\ar[r]^{\sbsb{\pi}B}
+              & \clo B\ar@{-->}[d]^{\clo T} \ar[r] & 0 \\
+      0\ar[r] & C\ar[r]_{\sbsb{\tau}C} & C^{**}\ar[r]_{\sbsb{\pi}C} & \clo C\ar[r] & 0
+ }\end{equation}  \ns
+\end{proof}
+
+\begin{exam}\label{exam_bar_functor} Pasangan pemetaan $B \mapsto \clo B$, $T \mapsto \clo T$ dari
+kategori $\cat{BAN_\infty}$ ke dirinya sendiri merupakan suatu
+ \index{<unopu@$B \mapsto \clo B$, $T \mapsto \clo T$ (funktor)}%
+ \index{funktor!dari suatu ruang Banach $B$ ke $\clo B$}%
+funktor kovarian eksak.
+\end{exam}
+
+\begin{prop} Dalam kategori ruang Banach dan pemetaan linear kontinu, jika
+barisan
+ \[\begin{CD}
+  0 \longrightarrow A @> S >> B @> T >> C \longrightarrow 0
+  \end{CD}\]
+eksak, maka diagram berikut komutatif dan memiliki baris-baris
+serta kolom-kolom yang eksak.
+ \[\bfig
+    \iiixiii{'7777}[A`A^{**}`\overline A`B`B^{**}`\overline B`C`C^{**}`\overline C;%
+``````S`{S^{**}}`{\overline S}`T`{T^{**}}`{\overline T}]
+  \efig\]
+\end{prop}
+
+\begin{cor} Setiap subruang dari suatu ruang Banach refleksif bersifat refleksif.
+\end{cor}
+
+\begin{cor} Jika $M$ suatu subruang dari ruang Banach refleksif~$B$, maka $B/M$ refleksif.
+\end{cor}
+
+\begin{cor} Misalkan $M$ suatu subruang dari ruang Banach~$B$. Jika $M$ dan $B/M$ keduanya refleksif,
+maka $B$ juga refleksif.
+\end{cor}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{defn} Misalkan $T \in \ofml L(B,C)$, dengan $B$ dan $C$ ruang Banach. Definisikan
+$\coker T$, yaitu
+ \index{kokernel}%
+ \index{kokernel@$\coker T$ (kokernel dari $T$)}%
+\df{kokernel} dari~$T$, sebagai $C/\ran T$.
+\end{defn}
+
+
+
+Menentukan secara eksplisit dual dari suatu ruang Banach sering kali agak menantang. Berikut diberikan beberapa
+contoh penting. Namun, pertama-tama perlu disampaikan satu peringatan. Notasi untuk objek-objek dalam ruang linear bernorma
+yang terdiri atas barisan dapat menyesatkan. Ketika membahas kelengkapan ruang-ruang semacam itu, kita berhadapan dengan barisan dari
+barisan bilangan kompleks. Demi memudahkan pembaca (dan mungkin juga diri Anda sendiri sebulan kemudian,
+ketika Anda mencoba membaca sesuatu yang Anda tulis!), sebaiknya bedakan secara notasi antara barisan bilangan kompleks
+dan barisan dari barisan. Ada banyak cara untuk melakukannya: subskrip ganda, subskrip dan
+superskrip, notasi fungsional untuk barisan kompleks, \emph{dan sebagainya}.
+
+Notasi bermasalah lain yang muncul dalam ruang barisan adalah $\sum_{k=1}^\infty a_k \vc e^k$, dengan $\vc e^k$
+merupakan barisan yang bernilai $1$ pada koordinat ke-$k$ dan $0$ di semua koordinat lainnya. (Ingat bahwa dalam
+Contoh~\ref{C063149}, kita menggunakan vektor-vektor ini sebagai basis ortonormal biasa (atau standar) untuk ruang Hilbert
+$l_2$.) Tampaknya hampir tidak ada kebingungan yang timbul jika $\sum_{k=1}^\infty a_k \vc e^k$ dipandang
+hanya sebagai singkatan untuk barisan bilangan kompleks $(a_k) = (a_1,a_2,a_3,\dots)$. Namun, jika seseorang hendak
+memperlakukannya secara harfiah sebagai deret tak hingga, diperlukan kehati-hatian. Dalam ruang $\sbsb c0$ dan $l_1$, tidak ada
+masalah. Deret itu memang merupakan limit, ketika $n$ membesar, dari $\sum_{k=1}^n a_k \vc e^k$. (Mengapa?) Namun, dalam ruang
+$c$ dan $l_\infty$, misalnya, terjadi kegagalan yang sangat buruk. Untuk melihat apa yang dapat terjadi, tinjau barisan konstan
+$(1,1,1,\dots)$ (yang merupakan anggota $c$ maupun $l_\infty$). Maka
+$\lim_{n \sto\infty}\norm{(1,1,1,\dots) - \sum_{k=1}^n \vc e^k}$ gagal mendekati nol dalam kedua kasus tersebut.
+Dalam $c$ maupun $l_\infty$, limitnya adalah~$1$.
+
+\begin{exam}\label{exam_dual_C0} Ruang linear bernorma $\sbsb c0$ (lihat~\ref{C0231303})
+ \index{c@$c_0$!sebagai ruang Banach}%
+ \index{Banach!ruang!$c_0$ sebagai suatu}%
+ \index{l@$l_1$!sebagai dual dari $c_0$}%
+ \index{dual!dari $c_0$}%
+merupakan ruang Banach dan dualnya adalah $l_1$ (lihat~\ref{C023191}).
+\end{exam}
+
+\begin{proof}[\emph{Petunjuk pembuktian}] Tinjau pemetaan
+$T\colon {\sbsb c0}^* \sto l_1\colon f \mapsto \sum_{k=1}^\infty f(\vc e^k)\vc e^k$.
+(Jangan lupa menunjukkan bahwa $T$ benar-benar memetakan ke~$l_1$.) Periksa bahwa $T$ merupakan isomorfisme isometrik.
+Untuk membuktikan bahwa $T$ surjektif, mulailah dengan suatu vektor $b \in l_1$ dan tinjau fungsi
+$f\colon \sbsb c0 \sto \C\colon a \mapsto \sum_{k=1}^\infty a_kb_k$.    \ns
+\end{proof}
+
+\begin{cor} Ruang $l_1$ merupakan suatu
+ \index{l@$l_1$!sebagai ruang Banach}%
+ \index{Banach!ruang!$l_1$ sebagai suatu}%
+ruang Banach.
+\end{cor}
+
+Menarik bahwa ternyata ruang $\sbsb c0$ dan $c$ tidak isomorfik secara isometrik,
+meskipun ruang-ruang dualnya isomorfik secara isometrik. Perhitungan dual dari $c$ secara teknis sedikit lebih rumit daripada
+perhitungan~${\sbsb c0}^{\!*}$. Mungkin berguna untuk meninjau \emph{basis Schauder} bagi kedua ruang ini.
+
+\begin{defn} Suatu barisan $(\vc e^k)$ dari vektor-vektor dalam suatu ruang Banach $B$ disebut
+ \index{basis Schauder}%
+ \index{basis!Schauder}%
+\df{basis Schauder} bagi ruang tersebut jika untuk setiap $x \in B$ terdapat barisan skalar $(\alpha_k)$ yang unik
+sedemikian sehingga $x = \sum_{k=1}^\infty \alpha_k \vc e^k$.
+\end{defn}
+
+Dua catatan mengenai definisi sebelumnya: Kata ``unik'' sangat penting; dan tidak benar bahwa
+setiap ruang Banach memiliki basis Schauder.
+
+\begin{exam} Suatu basis ortonormal dalam ruang Hilbert separabel merupakan basis Schauder bagi ruang tersebut. (Lihat
+Proposisi~\ref{prop_unique_onbasis} dan~\ref{prop_Schauder_basis_Hsp}.)
+\end{exam}
+
+\begin{exam}\label{exam_dual_c0} Kita memilih
+ \index{biasa!basis Schauder untuk~$\sbsb c0$}%
+ \index{Schauder!basis!biasa (atau standar) untuk~$\sbsb c0$}%
+ \index{basis!standar (atau biasa)}%
+vektor-vektor yang disebut \df{standar} (atau
+ \index{standar!basis Schauder untuk $\sbsb c0$}%
+\df{biasa}) sebagai \df{vektor-vektor basis} untuk $\sbsb c0$ dengan cara yang sama seperti untuk~$l_2$ (lihat~\ref{C063149}).
+Untuk setiap $n \in \N$, misalkan $\vc e^n$ adalah barisan dalam $l_2$ yang koordinat ke-$n$-nya bernilai $1$
+dan semua koordinat lainnya bernilai~$0$. Maka $\{\vc e^n\colon n \in \N\}$ merupakan basis Schauder
+bagi~$\sbsb c0$.
+\end{exam}
+
+Sepintas lalu, ruang $c$ dari semua barisan konvergen mungkin tampak jauh lebih besar daripada $\sbsb c0$,
+yang hanya memuat barisan-barisan yang konvergen ke nol. Lagi pula, untuk setiap vektor
+$x$ dalam $\sbsb c0$ terdapat tak terhitung banyaknya vektor berbeda dalam $c$ (cukup tambahkan sebarang bilangan kompleks
+tak nol pada setiap suku barisan~$x$). Mungkinkah $c$, yang memuat tak terhitung banyaknya
+salinan dari koleksi anggota~$\sbsb c0$ yang tak terhitung, memiliki basis Schauder (yang mesti terhitung)?
+Setelah direnungkan, jawabannya adalah \emph{ya}. Kita hanya perlu menambahkan satu elemen
+pada basis bagi~$\sbsb c0$ untuk menangani translasi.
+
+\begin{exam} Misalkan $\vc e^1$, $\vc e^2$, \dots seperti dalam Contoh~\ref{exam_dual_c0} sebelumnya. Selain itu,
+nyatakan dengan $\vc 1$ barisan konstan $(1,1,1,\dots)$ dalam~$c$. Maka $(\vc 1, \vc e^1, \vc e^2, \dots)$
+merupakan basis Schauder bagi~$c$.
+\end{exam}
+
+\begin{exam}\label{exam_dual_c} Ruang linear bernorma $c$ (lihat~\ref{C0231302})
+ \index{c@$c$!sebagai ruang Banach}%
+ \index{Banach!ruang!$c$ sebagai suatu}%
+ \index{l@$l_1$!sebagai dual dari $c$}%
+ \index{dual!dari $c$}%
+merupakan ruang Banach dan dualnya adalah $l_1$ (lihat~\ref{C023191}).
+\end{exam}
+
+\begin{proof}[\emph{Petunjuk pembuktian}]
+\leavevmode\par\noindent
+Pertama-tama, perhatikan bahwa untuk setiap $f \in c^*$, barisan
+$\bigl(f(\vc e^k)\bigr)$ dapat dijumlahkan secara mutlak dan, sebagai akibatnya, $\sum_{k=1}^\infty a_k f(\vc e^k)$
+konvergen untuk setiap barisan $a = (a_1,a_2,\dots)$ dalam~$c$. Perhatikan pula bahwa setiap $a \in c$ dapat dituliskan sebagai
+$a = a_\infty \vc 1 + \sum_{k=1}^\infty (a_k -a_\infty)\vc e^k$, dengan $a_\infty := \lim_{k \sto \infty}a_k$
+dan $\vc 1 := (1,1,1,\dots)$. Gunakan hal ini untuk membuktikan bahwa untuk setiap $f \in c^*$,
+   \[ \abs{f(a)} \le \biggl[ \abs{\beta_f} + \sum_{k=1}^\infty \abs{f(\vc e^k)} \biggr] {\norm a}_\infty \]
+dengan $\beta_f := f(\vc 1) - \sum_{k=1}^\infty f(\vc e^k)$. Untuk $t = (t_0,t_1,t_2,\dots) \in l_1$ dan
+$a = (a_1,a_2,a_3,\dots) \in c$, definisikan
+   \[ S_t(a) := t_0 a_\infty + \sum_{k=1}^\infty t_ka_k \]
+dan periksa bahwa $S\colon t \mapsto S_t$ merupakan pemetaan linear kontinu dari $l_1$ ke~$c^*$.
+Selanjutnya, untuk $f \in c^*$, definisikan
+   \[ Tf := (\beta_f, f(\vc e^1), f(\vc e^2), \dots) \]
+dan tunjukkan bahwa $T\colon f \mapsto Tf$ merupakan isometri linear dari $c^*$ ke~$l_1$. Sekarang, untuk melihat bahwa $c^*$ dan
+$l_1$ isomorfik secara isometrik, cukup ditunjukkan bahwa $ST = \id{c^*}$ dan $TS = \id{l_1}$.  \ns
+\end{proof}
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{defn} Suatu ruang topologis disebut
+ \index{lokal!kompak}%
+ \index{kompak!lokal}%
+\df{kompak lokal} jika setiap titik dalam ruang tersebut memiliki lingkungan kompak.
+\end{defn}
+
+\begin{notn} Misalkan $X$ suatu ruang kompak lokal. Suatu fungsi bernilai skalar $f$ pada $X$ termasuk dalam $\fml C_0(X)$ jika
+ \index{C@$\fml C_0(X)$!ruang fungsi kontinu yang lenyap di tak hingga}%
+fungsi tersebut kontinu dan lenyap di tak hingga (yakni, jika untuk setiap bilangan $\epsilon > 0$ terdapat subhimpunan kompak
+dari $X$ yang di luarnya berlaku $\abs{f(x)} < \epsilon$).
+\end{notn}
+
+\begin{exam}\label{exam_C0X} Jika $X$ suatu ruang Hausdorff kompak lokal, maka, terhadap operasi aljabar titik demi titik dan norma seragam,
+ \index{Banach!ruang!$\fml C_0(X)$ sebagai suatu}%
+ \index{C@$\fml C_0(X)$!sebagai ruang Banach}%
+$\fml C_0(X)$ merupakan ruang Banach.
+\end{exam}
+
+Kita mengingat kembali salah satu teorema terpenting dari analisis real.
+
+\begin{thm}[Representasi Riesz]\label{C057951} Misalkan $X$ suatu ruang Hausdorff kompak lokal.
+ \index{Riesz!teorema representasi}%
+Jika $\phi$ suatu fungsional linear terbatas pada $\fml C_0(X)$, maka terdapat ukuran Borel kompleks reguler
+$\mu$ yang unik pada $X$ sedemikian sehingga
+  \[ \phi(f) = \int_X f\,d\mu \]
+untuk setiap $f \in \fml C_0(X)$ dan $\norm\mu = \norm\phi$.
+\end{thm}
+
+\begin{proof} Teorema ini dan akibat berikutnya disajikan dengan baik dalam Lampiran C pada buku analisis
+fungsional karya Conway~\cite{Conway:1990}. Lihat juga~\cite{Folland:1984}, Teorema 7.17; \cite{HewittS:1965},
+Teorema 20.47 dan 20.48; \cite{McDonaldW:1999}, Teorema 9.16; dan \cite{Rudin:1987}, Teorema 6.19.  \ns
+\end{proof}
+
+\begin{cor}\label{C057952} Jika $X$ suatu ruang Hausdorff kompak lokal, maka $\bigl(\fml C_0(X)\,\bigr)^*$
+ \index{dual!dari $\fml C_0(X)$}%
+ \index{C@$\fml C_0(X)$!dual dari}%
+ \index{M@$\textbf{M}(X)$!sebagai dual dari $\fml C_0(X)$}%
+isomorfik secara isometrik dengan~$\textbf{M}(X)$,
+ \index{M@$\textbf{M}(X)$!ukuran Borel kompleks reguler pada~$X$}%
+ruang Banach dari semua ukuran Borel kompleks reguler pada~$X$.
+\end{cor}
+
+\begin{cor} Jika $X$ suatu ruang Hausdorff kompak lokal, maka $\textbf{M}(X)$
+ \index{M@$\textbf{M}(X)$!sebagai ruang Banach}%
+ \index{Banach!ruang!$\textbf{M}(X)$ sebagai suatu}%
+merupakan ruang Banach.
+\end{cor}
+
+
+
+
+
+
+
+
+
+
+Dalam~\ref{defn_nls_adjoint}, kita mendefinisikan adjoin dari suatu operator linear antara ruang-ruang Banach,
+dan dalam~\ref{def000926}, kita mendefinisikan adjoin dari suatu operator ruang Hilbert.
+Dalam kasus operator pada ruang Hilbert (yang juga merupakan ruang Banach),
+wajar untuk menanyakan hubungan apa, jika ada, di antara kedua ``adjoin'' ini.
+Keduanya tentu tidak dapat sama, karena yang pertama bekerja di antara ruang-ruang dual, sedangkan yang kedua
+di antara ruang-ruang semula. Dalam proposisi berikut, kita menggunakan antiisomorfisme
+$\psi$ yang didefinisikan dalam~\ref{000341} (lihat~\ref{0022057}) untuk menunjukkan bahwa kedua adjoin itu
+``pada hakikatnya'' sama.
+
+\begin{prop} Misalkan $T$ suatu operator pada ruang Hilbert $H$ dan $\psi$ antiisomorfisme yang
+didefinisikan dalam~\ref{000341}. Jika kita (untuk sementara) menyatakan dual ruang Banach
+dari $T$ dengan $T'\colon H^* \sto H^*$, maka $T' = \psi\, T^* \psi^{-1}$. Artinya,
+diagram berikut komutatif.
+   \[ \xy
+          \Square/{->}`{<-}`{<-}`{->}/[H^*`H^*`H`H;T'`\psi`\psi`T^*]
+      \endxy \]
+\end{prop}
+
+\begin{defn}\label{0022091} Misalkan $A$ suatu subhimpunan dari ruang Banach $B$. Maka
+ \index{anihilator}%
+\df{anihilator} dari $A$, yang dinotasikan
+ \index{<perp@$A^\perp$ (anihilator dari suatu himpunan)}%
+dengan~$A^\perp$, adalah $\{f \in B^*\colon f(a) = 0 \text{ untuk setiap $a \in A$}\}$.
+\end{defn}
+
+Konflik notasi antara \ref{0001511} dan \ref{0022091} dapat
+menimbulkan kebingungan. Untuk melihat bahwa dalam ruang Hilbert, anihilator suatu subruang dan
+komplemen ortogonal subruang itu ``pada hakikatnya'' merupakan hal yang sama, gunakan
+antiisomorfisme isometrik $\psi$ antara $H$ dan $H^*$ yang dibahas dalam~\ref{0022057} untuk mengidentifikasi keduanya.
+
+\begin{prop} Misalkan $M$ suatu subruang dari ruang Hilbert $H$. Jika kita (untuk sementara) menyatakan
+anihilator dari $M$ dengan~$M^a$, maka $M^a = \psi^{\sto}\bigl(M^\perp\bigr)$.
+\end{prop}

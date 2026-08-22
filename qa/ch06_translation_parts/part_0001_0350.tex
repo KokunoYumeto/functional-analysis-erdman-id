@@ -1,0 +1,338 @@
+\chapter{RUANG BANACH}
+
+\section{Transformasi Alami}
+ Ingat bahwa jika $V$ suatu ruang linear bernorma, maka
+ \index{dual!ruang}%
+ \index{ruang!dual}%
+ \index{<unopurstar@$V^*$ (ruang dual dari suatu ruang linear bernorma)}%
+\emph{ruang dual} $V^*$ adalah himpunan semua fungsional linear kontinu pada~$V$.  Pada $V^*$, penjumlahan dan
+perkalian skalar didefinisikan secara titik demi titik. Normanya adalah norma operator biasa: jika $f \in V^*$, maka
+ \[ \norm{f} := \inf\{M > 0\colon \abs{f(x)} \le M\norm{x}\quad \text{untuk setiap $x \in V$}\} = \sup\{\abs{f(x)}\colon \norm{x} \le 1\}. \]
+Di bawah metrik yang diinduksi oleh norma ini, ruang dual $V^*$ lengkap dan karena itu merupakan ruang Banach.
+
+\begin{defn}\label{defn_nls_adjoint} Jika $T\colon V \sto W$ suatu pemetaan linear kontinu antara ruang-ruang linear bernorma,
+ \index{<unopurstar@$T^*$ (adjoin ruang linear bernorma)}%
+$T^*\colon W^* \sto V^*$ didefinisikan seperti pada ruang vektor: $T^*(g) = g\,T$ untuk setiap
+$g \in W^*$.  Pemetaan $T^*$ disebut
+ \index{adjoin!pemetaan linear!antara ruang linear bernorma}%
+ \index{linear!pemetaan!adjoin dari}%
+\df{adjoin} dari~$T$.
+\end{defn}
+
+\begin{exam}\label{exam_dual_functor} Adjoin $T^*$ dari suatu pemetaan linear terbatas antara ruang-ruang linear bernorma $V$ dan
+$W$ sendiri merupakan pemetaan linear terbatas antara $W^*$ dan~$V^*$. Dalam kategori ruang linear bernorma dan pemetaan linear
+ \index{funktor!dualitas}%
+ \index{funktor dualitas}%
+kontinu, pasangan pemetaan $V \mapsto V^*$ (pemetaan objek) dan $T \mapsto T^*$ (pemetaan morfisme) merupakan suatu funktor
+kontravarian dari $\cat{NLS_\infty}$ ke dirinya sendiri.
+\end{exam}
+
+Perhatikan bahwa Definisi~\ref{defn_nls_adjoint} berbeda dari definisi adjoin suatu pemetaan
+antara ruang-ruang Hilbert (lihat~\ref{def000926}).  Karena setiap ruang Hilbert merupakan ruang linear bernorma, hal ini dapat saja
+menimbulkan kebingungan.  Ada baiknya kita meyakinkan diri tentang fakta sederhana berikut: karena anti-isomorfisme (dan akibatnya
+isomorfisme) antara ruang Hilbert dan dualnya yang diberikan oleh \emph{teorema Riesz--Fr\'echet} (lihat~\ref{0022057}
+dan~\ref{cor_Hsp_iso_dual}), adjoin ruang linear bernorma dari suatu pemetaan linear terbatas \emph{sangat} mirip (meskipun
+tentu tidak identik) dengan adjoin ruang Hilbertnya.
+
+\begin{exam}\label{C057717}
+Dual $V^{**}$ dari dual $V^*$ suatu ruang linear bernorma $V$ adalah \df{dual kedua} dari~$V$
+ \index{dual!kedua}%
+dan $T^{**} := \bigl(T^*\bigr)^*$ merupakan pemetaan linear terbatas dari $V^{**}$ ke~$W^{**}$.  Pada kategori
+$\cat{BAN_{\boldsymbol\infty}}$ yang terdiri atas ruang Banach dan transformasi linear terbatas,
+ \index{kedua!dual!funktor untuk ruang linear bernorma}%
+ \index{funktor!dual kedua!untuk ruang linear bernorma}%
+\df{funktor dual kedua} mencakup pemetaan objek $B \mapsto B^{**}$ dan pemetaan morfisme $T \mapsto T^{**}$.
+Funktor ini kovarian.
+\end{exam}
+
+\begin{defn}\label{defn_nat_transf} Misalkan $\cat A$ dan $\cat B$ kategori, serta $F$,$G \colon \cat A \sto \cat B$
+funktor kovarian.  Suatu
+ \index{alami!transformasi}%
+ \index{transformasi!alami}%
+\df{transformasi alami} dari $F$ ke $G$ adalah pemetaan $\tau$ yang memasangkan kepada setiap objek
+$A$ dalam $\cat A$ suatu morfisme $\tau_A \colon F(A) \sto G(A)$ dalam $\cat B$ sedemikian sehingga
+untuk setiap morfisme $\alpha \colon A \sto A'$ dalam $\cat A$, diagram berikut komutatif.
+   \[ \CD
+      F(A) @>  F(\alpha)>>  F(A')  \\
+         @V\tau_AVV                @VV\tau_{A'}V  \\
+      G(A) @>> G(\alpha)>  G(A')
+   \endCD \]
+Kita menyatakan transformasi semacam itu dengan $\tau \colon F \sto G$. (Definisi transformasi alami
+antara dua funktor kontravarian seharusnya jelas: cukup balikkan
+panah-panah horizontal dalam diagram sebelumnya.)
+
+Suatu transformasi alami $\tau \colon  F \sto G$ disebut
+ \index{alami!ekuivalensi}%
+ \index{ekuivalensi!alami}%
+\df{ekuivalensi alami} jika setiap morfisme $\tau_A$ merupakan isomorfisme dalam~$\cat B$.
+\end{defn}
+
+\begin{defn}\label{defn_nat_embed} Jika $V$ suatu ruang linear bernorma, maka pemetaan $\sbsb{\tau}V \colon V \sto V^{**} \colon x
+\mapsto x^{**}$, dengan $x^{**}(f) = f(x)$ untuk setiap $f \in V^*$, disebut
+ \index{tauv@$\sbsb{\tau}V$ (pembenaman alami ruang linear bernorma)}%
+ \index{alami!pembenaman!untuk ruang linear bernorma}%
+ \index{pembenaman!alami}%
+\df{pembenaman alami} dari $V$ ke~$V^{**}$. (Tidak sepenuhnya jelas bahwa pemetaan ini
+injektif. Kita akan menunjukkannya dalam Proposisi~\ref{C067137}.)
+\end{defn}
+
+\begin{exam}\label{exam_2dual_nat} Dalam kategori $\cat{BAN_{\boldsymbol\infty}}$ yang terdiri atas ruang Banach
+dan transformasi linear terbatas, misalkan $I$ adalah funktor identitas dan $(\,\cdot\,)^{**}$ adalah
+funktor dual kedua.  Maka
+ \index{alami!pembenaman!sebagai funktor}%
+ \index{funktor!pembenaman alami sebagai}%
+ \index{taub@$\tau_B$ (pembenaman alami $B$ ke $B^{**}$)}%
+\emph{pembenaman alami} $\tau$ merupakan transformasi alami dari $I$ ke~$(\,\cdot\,)^{**}$.
+\end{exam}
+
+\begin{exam} Jelaskan secara tepat apa yang dimaksud ketika orang mengatakan bahwa isomorfisme
+    \[ \fml C(X \uplus Y) \cong \fml C(X) \times \fml C(Y) \]
+merupakan ekuivalensi alami.  Kategori-kategori yang terlibat adalah $\cat{CpH}$ (ruang Hausdorff kompak
+dan pemetaan kontinu) serta $\cat{BAN_\infty}$ (ruang Banach dan transformasi linear
+terbatas).
+\end{exam}
+
+\begin{exam}\label{C057724} Pada kategori $\cat{CpH}$ yang terdiri atas ruang Hausdorff kompak dan
+pemetaan kontinu, misalkan $I$ funktor identitas dan $\fml C^*$ funktor yang
+memetakan ruang Hausdorff kompak $X$ ke ruang Banach $\fml (C(X))^*$, serta memetakan suatu
+fungsi kontinu $\phi\colon X \sto Y$ antara ruang-ruang Hausdorff kompak ke
+transformasi linear kontraktif $\fml C^*\phi = (\fml C\phi)^*$. Definisikan
+ \index{evaluasi!pemetaan}%
+\emph{pemetaan evaluasi} $E$ dengan
+  \[ E_X\colon X \sto \fml C^*(X)\colon x \mapsto E_X(x) \]
+dengan $(E_X(x))(f) = f(x)$ untuk setiap $f \in \fml C(X)$.  (Notasi ini dapat merepotkan.  Dalam praktik, biasanya orang menulis
+$E_x$ saja untuk $E_X(x)$.  Jadi kita memperoleh $E_x(f) = f(x)$, yang tentu tampak lebih baik daripada $(E_X(x))(f) = f(x)$.  Dalam kebanyakan
+konteks, penyederhanaan notasi ini tampaknya tidak mungkin menimbulkan kebingungan.)
+ \begin{enumerate}
+  \item[(a)]  Perhatikan bahwa definisi ini memang bermakna. Jika $x \in X$, maka $E_X(x)$ benar-benar
+merupakan anggota~$\fml C^*(X)$.
+  \item[(b)] Tunjukkan bahwa pemetaan $E$ membuat diagram berikut komutatif:
+     \[ \xymatrix@+30pt{{X}\ar[r]^*+{\phi} \ar[d]_*+{E_X}
+            & {Y} \ar[d]^*+{E_Y} \\
+          {\fml C^*(X)} \ar[r]_*+{\fml C^*(\phi)} & {\fml C^*(Y)}   }
+     \]
+ \end{enumerate}
+\end{exam}
+
+Contoh sebelumnya mungkin terasa agak mengecewakan.  Tampaknya kita sedang
+berusaha membentuk suatu transformasi alami antara funktor identitas (pada
+$\cat{CpH}$) dan funktor $\fml C^*$.  Masalahnya, tentu saja, ialah kedua
+funktor tersebut memiliki kategori sasaran yang berbeda.  Pertanyaan ini akan kita bahas kelak.
+Pemetaan evaluasi $E_X\colon X \sto \fml C^*(X)$ tentu tidak surjektif.
+Perhatikan, misalnya, bahwa setiap fungsional berbentuk $E_X(x)$
+mempertahankan perkalian (selain penjumlahan dan perkalian skalar). Salah satu akibatnya
+ialah bahwa semua fungsional semacam itu terletak pada sfer satuan $\fml C^*(X)$.
+Dengan suatu topologi baru (yang disebut \emph{topologi lemah-bintang}---lihat~\ref{C067434}) pada
+$\fml C^*(X)$, jangkauan $E_X$ ternyata merupakan ruang Hausdorff kompak yang secara alami
+ekuivalen dengan $X$ sendiri.  Yang lebih luar biasa lagi, pada akhirnya kita akan menunjukkan bahwa jangkauan $E_X$
+dapat dipandang sebagai ruang ideal maksimal dari aljabar~$\fml C(X)$. (Lihat~\futurexref{11.2.20}{000731}.)
+
+\begin{prop}\label{C067137} Jika $V$ suatu ruang linear bernorma, maka pembenaman alami
+$\sbsb{\tau}V \colon V \sto V^{**}\colon x \mapsto x^{**}$ (yang didefinisikan dalam~\ref{defn_nat_embed})
+merupakan pemetaan linear isometrik.
+\end{prop}
+
+\begin{defn} Suatu ruang Banach $B$ disebut
+ \index{refleksif!ruang Banach}%
+\df{refleksif} jika pembenaman alami $\sbsb{\tau}B\colon B \sto B^{**}$ (yang didefinisikan dalam proposisi sebelumnya) surjektif.
+\end{defn}
+
+Contoh~\ref{exam_2dual_nat} menunjukkan bahwa dalam kategori ruang Banach dan pemetaan linear terbatas,
+pemetaan $\tau\colon B \mapsto \sbsb{\tau}B$ merupakan transformasi alami dari
+funktor identitas ke funktor dual kedua.  Dengan menggunakan \emph{teorema Hahn--Banach}, kita dapat
+mengatakan lebih banyak.
+
+\begin{prop} Dalam kategori ruang Banach refleksif dan pemetaan linear terbatas, pemetaan
+$\tau\colon B \mapsto \sbsb{\tau}B$ merupakan ekuivalensi alami antara funktor identitas dan
+funktor dual kedua.
+\end{prop}
+
+\begin{exam} Setiap ruang Hilbert bersifat refleksif.
+\end{exam}
+
+\begin{exer} Misalkan $V$ dan $W$ ruang-ruang linear bernorma, $U$ subhimpunan konveks takkosong dari $V$,
+dan $f \colon U \sto W$.  Tanpa menggunakan bentuk apa pun dari \emph{teorema nilai rata-rata}, tunjukkan
+bahwa jika $df = \vc 0$ pada $U$, maka $f$ konstan pada~$U$.  (Untuk definisi $df$, yaitu
+\emph{diferensial} dari~$f$, lihat Bagian 13.1--2 dalam catatan saya~\cite{Erdman:2007}.)
+\end{exer}
+
+\begin{exam}\label{C067181} Misalkan $l_\infty$ ruang Banach dari semua barisan bilangan
+real yang terbatas, dan $c$ subruang $l_\infty$ yang terdiri atas semua barisan $x = (x_n)$
+sedemikian sehingga $\lim_{n \sto \infty} x_n$ ada. Definisikan
+  \[ f\colon c \sto \R\colon x \mapsto \lim_{n\sto \infty} x_n. \]
+Maka $f$ merupakan fungsional linear kontinu pada $c$ dan $\norm f = 1$.  Berdasarkan
+\emph{teorema Hahn--Banach}, $f$ memiliki perluasan ke $\wh f \in {l_\infty}^*$ dengan
+$\norm{\wh f} = 1$. Untuk setiap
+subhimpunan $A$ dari $\N$, definisikan barisan $\bigl(x^A_n\bigr)$ dengan $x^A_n = \left\{%
+\begin{array}{ll}
+    1, & \hbox{jika $n \in A$;} \\
+    0, & \hbox{jika $n \notin A$.} \\
+\end{array}%
+\right.$ Selanjutnya, definisikan $ \mu\colon \sfml P(\N) \sto \R \colon A \mapsto \wh
+f\bigl(x^A_n\bigr)$. Maka $\mu$ merupakan fungsi himpunan aditif hingga, tetapi tidak aditif
+terhitung.
+\end{exam}
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Teorema Alaoglu}
+\begin{notn} Misalkan $V$ suatu ruang linear bernorma, $M \subseteq V$, dan $F \subseteq V^\ast$.
+Kita definisikan
+ \begin{align*}
+         M^\perp &:= \{f \in V^*\colon f(x)=0 \text{ untuk setiap $x \in M$}\} \\
+         F_\perp &:= \{x \in V\colon f(x)=0 \text{ untuk setiap $f \in F$}\}
+  \end{align*}
+$M^\perp$ dapat dibaca ``M perp'' atau ``M perp atas'', sedangkan $F_\perp$ dibaca ``F perp'' atau ``F perp bawah''.
+Himpunan $M^\perp$ adalah
+ \index{anihilator}%
+ \index{<unopur@$M^\perp$ (anihilator suatu himpunan)}%
+\df{anihilator} dari~$M$, dan $F_\perp$ adalah
+ \index{praanihilator}%
+ \index{<unopvr@$F_\perp$ (praanihilator suatu himpunan)}%
+\df{praanihilator} dari~$F$.
+\end{notn}
+
+\begin{prop}[Anihilator]  Misalkan $B$ suatu ruang Banach, $M \subseteq B$, dan $F \subseteq B^*$. Maka
+ \begin{enumerate}[label=\rm{(\alph*)}]
+  \item Jika $M \subseteq N \subseteq B$, maka $N^\perp \subseteq M^\perp$.
+  \item Jika $F \subseteq G \subseteq B^*$, maka $G_\perp \subseteq F_\perp$.
+  \item $M^\perp$ merupakan subruang linear tertutup dari $B^*$.
+  \item $F_\perp$ merupakan subruang linear tertutup dari $B$.
+  \item $M \subseteq M^\perp{}_\perp$.
+  \item $F \subseteq F_\perp{}^\perp$.
+  \item $M^\perp{}_\perp = \bigvee M$.
+  \item $M^\perp = B^*$ jika dan hanya jika $M \subseteq \{0\}$.
+  \item $F_\perp = B$ jika dan hanya jika $F \subseteq \{0\}$.
+  \item Jika $M$ suatu subruang linear dari $B$, maka $M^\perp = \{0\}$ jika dan hanya jika $M$
+padat dalam $B$.
+  \item\label{Fpp_reflexive_case} Jika $B$ refleksif, maka $F_\perp{}^\perp = \bigvee F$.
+ \end{enumerate}
+\end{prop}
+
+\begin{proof}[\emph{Petunjuk pembuktian}] Untuk (k), tunjukkan bahwa $\tau(F_\perp) = F^\perp$ (dengan $\tau$
+pembenaman alami) dan karena itu $F_\perp{}^\perp = F^\perp{}_\perp$.  \ns
+\end{proof}
+
+\begin{exam} Misalkan $B$ suatu ruang Banach yang \emph{tidak} refleksif.  Misalkan $F = \ran \tau$ (dengan $\tau$
+pembenaman alami).  Maka $F_\perp{}^\perp = B^{**} \ne \bigvee F$, sehingga jelas bahwa~\ref{Fpp_reflexive_case}
+dalam proposisi sebelumnya tidak harus berlaku dalam kasus nonrefleksif.
+\end{exam}
+
+Hasil berikut adalah analog ruang Banach dari \emph{teorema dasar aljabar linear}~\ref{00016025} dan
+Proposisi~\ref{prop_ker_adj_perp_ran_op}.
+
+\begin{prop}\label{prop_FTLA_Bsp} Misalkan $T \in \ofml B(B,C)$, dengan $B$ dan $C$ ruang-ruang Banach. Maka
+ \begin{enumerate}[label=\rm{(\alph*)}]
+  \item $\ker T^\ast = (\ran T)^\perp$.
+  \item $\ker T = (\ran T^*)_\perp$.
+\vskip 3 pt
+  \item $\clo{\ran T} = (\ker T^*)_\perp$.
+\vskip 3 pt
+  \item $\clo{\ran T^*} \subseteq (\ker T)^\perp$.
+ \end{enumerate}
+\end{prop}
+
+\begin{exam} Suatu contoh operator ruang Banach $T$ yang membuat $\clo{\ran T^*}$ dan $(\ker T)^\perp$ berbeda
+diberikan dalam Latihan 7, halaman 243 dari~\cite{BrownP:1970}.
+\end{exam}
+
+Contoh berikut tentu merupakan akibat langsung yang sepele dari Proposisi~\ref{00015032}, tetapi cobalah memberikan
+pembuktian langsung yang sederhana.
+
+\begin{exam}\label{X_l2ball_not_cpt} Bola satuan tertutup dalam $l_2$ tidak kompak.
+\end{exam}
+
+Topologi norma biasa pada ruang linear bernorma ternyata terlalu besar untuk beberapa penerapan.  Seperti telah kita lihat,
+topologi ini memiliki begitu banyak himpunan terbuka sehingga bola satuan tertutup tidak kompak (kecuali dalam kasus berdimensi hingga). Di
+sisi lain, terlalu sedikit himpunan terbuka (sebagai contoh ekstrem, topologi indiskret) akan merusak teori dualitas karena tidak
+menyediakan cukup banyak fungsional linear kontinu.  \emph{Topologi lemah-bintang} (yang didefinisikan
+di bawah) pada dual suatu ruang linear bernorma ternyata tepat ukurannya.  Topologi ini memiliki cukup banyak himpunan terbuka untuk menjamin
+teori dualitas yang kuat dan cukup sedikit himpunan terbuka untuk membuat bola satuan tertutup kompak
+(lihat \emph{teorema Alaoglu}~\ref{C067441}).
+
+\begin{defn}\label{C067434} Misalkan $V$ suatu ruang linear bernorma. 
+ \index{lemah!topologi!pada ruang bernorma}%
+ \index{topologi!lemah!pada ruang linear bernorma}%
+\df{topologi lemah} pada $V$ adalah topologi lemah yang diinduksi oleh unsur-unsur~$V^*$. (Jadi,
+topologi lemah pada ruang dual $V^*$ adalah topologi lemah yang diinduksi oleh
+unsur-unsur~$V^{**}$.) Ketika suatu jaring $(x_\lambda)$ konvergen secara lemah ke vektor $a$ dalam $V$,
+kita menulis
+ \index{<arrowright@$x_\lambda \to^w a$ (konvergensi lemah)}%
+$x_\lambda \to^w a$. 
+ \index{w*@$w^*$-topologi (topologi lemah-bintang)}%
+ \index{topologi!lemah-bintang}%
+\df{topologi-$w^*$} (dibaca \emph{topologi lemah-bintang}) pada ruang dual $V^*$ adalah
+topologi lemah yang diinduksi oleh unsur-unsur $\ran \tau$, dengan $\tau$ pembenaman alami
+dari $V$ ke~$V^{**}$.  Ketika suatu jaring $(f_\lambda)$ konvergen secara lemah-bintang ke vektor $g$
+dalam $V^*$, kita menulis
+ \index{<arrowright@$f_\lambda \to^{w^*} g$ (konvergensi lemah-bintang)}%
+$f_\lambda \to^{w^*} g$. Perhatikan bahwa ketika suatu ruang Banach $B$ refleksif (khususnya, untuk ruang
+Hilbert), topologi lemah dan lemah-bintang pada $B^*$ identik.
+\end{defn}
+
+\begin{prop} Misalkan $f \in V^*$, dengan $V$ suatu ruang Banach.  Untuk setiap $\epsilon > 0$ dan setiap
+subhimpunan hingga $F \subseteq V$, definisikan
+  \[ U(f;F;\epsilon)
+           = \{g \in V^*\colon \abs{f(x) - g(x)} < \epsilon \text{ untuk setiap $x \in F$}\}. \]
+Keluarga semua himpunan semacam itu merupakan basis bagi topologi-$w^*$ pada~$V^*$.
+\end{prop}
+
+Hasil berikut, \emph{teorema Alaoglu}, menyatakan kekompakan-$w^*$ dari bola satuan tertutup dalam
+dual suatu ruang linear bernorma $V$ dan merupakan salah satu teorema yang paling berguna dalam analisis fungsional.  Karena itu,
+pada awalnya mungkin agak mengejutkan bahwa pembuktian lengkap yang dijelaskan secara cermat
+begitu sulit ditemukan.  Pembuktian standar pada dasarnya sangat sederhana; intinya hanyalah mengenali
+bahwa anggota-anggota suatu keluarga $\fml F$ dari fungsi bernilai skalar dapat dipandang
+  \begin{enumerate}
+     \item[(i)] sebagai fungsi yang didefinisikan pada hasil kali takterhitung dari subhimpunan kompak medan skalar; atau
+     \item[(ii)] sebagai anggota bola satuan tertutup dari~$V^*$.
+  \end{enumerate}
+Inti pembuktiannya adalah meyakinkan diri bahwa konvergensi suatu jaring fungsi semacam itu dalam ruang hasil kali
+tepat ``sama'' dengan konvergensi-$w^*$ jaring tersebut dalam bola satuan tertutup dari~$V^*$.  Upaya untuk sekaligus
+mengidentifikasi dan membedakan dua himpunan fungsi ini menantang secara notasi.  Jadi, saran terbaik saya ialah mengerjakannya
+sendiri sampai Anda melihat betapa cerdik, tetapi pada dasarnya sederhana, argumen tersebut.
+
+\begin{thm}[Teorema Alaoglu]\label{C067441} Bola satuan tertutup dalam dual suatu ruang linear bernorma
+ \index{teorema Alaoglu}%
+kompak dalam topologi-$w^*$.
+\end{thm}
+
+\begin{proof}[\emph{Petunjuk pembuktian}] Misalkan $V$ suatu ruang linear bernorma, dan nyatakan dengan $[V^*]_1$ bola satuan tertutup dari
+ruang dualnya.  Untuk setiap $x \in V$, definisikan $D_x = \{\lambda \in \K \colon \abs\lambda \le \norm x\}$.  Hasil kali
+\smash[b]{$\mathbf P = \prod\limits_{x \in V} D_x$} kompak berdasarkan \emph{teorema Tychonoff}.  Tinjau fungsi
+   \[ \Phi\colon [V^*]_1 \sto \mathbf P \colon f \mapsto \bigl(f(x)\bigr)_{x \in V} \]
+dengan $[V^*]_1$ dilengkapi topologi-$w^*$ dan $\mathbf P$ dilengkapi topologi hasil kali (lihat~\ref{C021437}).  Di sini kita menulis
+$\bigl(f(x)\bigr)_{x \in V}$ untuk keluarga bilangan terindeks (atau barisan tergeneralisasi), bukan notasi yang lebih lazim
+$\bigl(f_x\bigr)_{x \in V}$.  (Untuk pembahasan lebih lanjut tentang keluarga terindeks, lihat~\cite{Erdman:2007}, Bagian~7.2.)  Mudah dilihat bahwa
+$\Phi$ injektif.  Untuk menunjukkan bahwa pemetaan itu kontinu, misalkan $\bigl(f_\lambda\bigr)_{\lambda \in \Lambda}$ suatu jaring dalam $[V^*]_1$
+dan $g$ suatu fungsi dalam $[V^*]_1$ sedemikian sehingga $f_\lambda \to^{w^*} g$.  Perhatikan bahwa hal ini terjadi jika dan hanya jika
+$\pi_x(f_\lambda) \sto \pi_x(g)$ untuk setiap $x \in V$ (dengan $\pi_x$ proyeksi koordinat pada~$\mathbf P$---lihat~\ref{C015531}).
+Terakhir, misalkan $\bigl(f_\lambda\bigr)_{\lambda \in \Lambda}$ suatu jaring dalam $[V^*]_1$ sedemikian sehingga $\bigl(\Phi(f_\lambda)\bigr)_{\lambda \in \Lambda}$
+konvergen dalam~$\mathbf P$.  Tunjukkan bahwa jaring $\bigl(f_\lambda(x)\bigr)_{\lambda \in \Lambda}$ konvergen dalam $\K$ untuk setiap $x \in V$.
+Misalkan $g(x) = \lim\limits_\lambda f_\lambda(x)$ untuk setiap $x \in V$, lalu buktikan bahwa $g$ linear, $\norm g \le 1$,
+$f_\lambda \to^{w^*} g$ dalam $[V^*]_1$, dan $\Phi(f_\lambda) \sto \Phi(g)$ dalam~$\mathbf P$.  \ns
+\end{proof}
+
+Sepengetahuan saya, versi pembuktian standar ini yang paling ramah pembaca terdapat dalam~\cite{BrownP:1977}, Teorema 15.11.
+Pembuktian yang jauh lebih singkat, jauh lebih mudah secara notasi, jauh lebih elegan, dan jauh kurang mencerahkan tersedia dalam~\cite{Pedersen:1995}, Teorema 2.5.2.
+Menurut saya, pembuktian itu kurang mencerahkan karena bergantung pada jaring universal.  Suatu jaring dalam himpunan $S$ disebut
+ \index{universal!jaring}%
+ \index{jaring!universal}%
+\df{universal} jika untuk setiap subhimpunan $T$ dari $S$, jaring tersebut pada akhirnya berada dalam $T$ atau pada akhirnya berada dalam komplemennya. Meskipun
+setiap jaring dapat dibuktikan memiliki subjaring universal, bahkan mencari satu contoh nontrivial dari jaring universal (yakni, jaring yang tidak
+pada akhirnya konstan) memerlukan \emph{aksioma pilihan}.
+
+
+
+
+
+

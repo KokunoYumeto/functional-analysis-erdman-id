@@ -1,0 +1,474 @@
+\section{Proyeksi dan Subruang Terkomplemen}
+\begin{defn}
+ Pemetaan linear terbatas dari suatu ruang Banach ke dirinya sendiri disebut
+ \index{proyeksi!di ruang Banach}%
+ \index{operator!proyeksi}%
+\df{proyeksi} jika bersifat idempoten. Jika $E$ adalah pemetaan seperti itu, kita menyebutnya
+proyeksi \df{pada $\ran E$ sepanjang $\ker E$}.
+\end{defn}
+
+Perhatikan bahwa ini sudah pasti \emph{bukan} hal yang sama dengan proyeksi di
+ruang Hilbert. Proyeksi ruang Hilbert adalah \emph{proyeksi ortogonal}; yakni,
+proyeksi itu swaadjoin sekaligus idempoten. Jangkauan suatu proyeksi ruang Hilbert
+tegak lurus terhadap kernelnya. Karena istilah ``ortogonal'', ``swaadjoin'', dan
+``tegak lurus'' tidak bermakna di ruang Banach, kita tidak akan mengharapkan kedua pengertian
+``proyeksi'' itu identik. Namun, dalam kedua kasus tersebut proyeksi \emph{memang}
+terbatas, linear, dan idempoten.
+
+\begin{defn} Misalkan $M$ subruang linear tertutup dari suatu ruang Banach~$B$. Jika terdapat
+subruang linear tertutup $N$ dari $B$ sedemikian sehingga $B = M \oplus N$, maka kita mengatakan bahwa $M$ adalah
+ \index{subruang terkomplemen}%
+ \index{subruang!terkomplemen}%
+subruang \df{terkomplemen}, bahwa $N$ adalah
+ \index{komplemen!dari subruang Banach}%
+\df{komplemen (ruang Banach)}-nya, dan bahwa subruang $M$ dan $N$ bersifat
+\df{komplementer}.
+\end{defn}
+
+\begin{prop}\label{C069814} Misalkan $M$ dan $N$ subruang komplementer dari suatu ruang Banach~$B$. Jelas bahwa setiap
+elemen di $B$ dapat ditulis secara tunggal dalam bentuk $m + n$ untuk suatu $m \in M$ dan $n \in
+N$. Definisikan pemetaan $E \colon B \sto B$ dengan $E(m + n) = m$ untuk $m \in M$ dan $n \in N$.
+Maka $E$ adalah proyeksi pada $M$ sepanjang~$N$.
+\end{prop}
+
+\begin{proof}[\emph{Petunjuk pembuktian}] Gunakan~\ref{prop_cont_idem_op}.  \ns
+\end{proof}
+
+\begin{prop}\label{C069817} Jika $E$ adalah proyeksi pada suatu ruang Banach $B$, maka kernel dan jangkauannya merupakan
+subruang-subruang komplementer dari~$B$.
+\end{prop}
+
+Berikut ini merupakan akibat langsung dari dua proposisi sebelumnya.
+
+\begin{cor}\label{cor_compl_ran_proj} Suatu subruang dari ruang Banach terkomplemen jika dan hanya jika subruang itu
+merupakan jangkauan suatu proyeksi.
+\end{cor}
+
+\begin{prop} Misalkan $B$ ruang Banach. Jika $E \colon B \sto B$ adalah proyeksi ke suatu subruang
+$M$ sepanjang subruang $N$, maka $I - E$ adalah proyeksi ke $N$ sepanjang~$M$.
+\end{prop}
+
+\begin{prop}\label{C069824} Jika $M$ dan $N$ merupakan subruang komplementer dari suatu ruang Banach $B$, maka $B/M$ dan
+$N$ isomorfik.
+\end{prop}
+
+\begin{prop}\label{prop_linv_Bsp} Misalkan $T \colon B \sto C$ pemetaan linear terbatas di antara ruang-ruang Banach.
+ \index{kiri!invers!operator ruang Banach}%
+Jika $T$ injektif dan $\ran T$ terkomplemen, maka $T$ mempunyai invers kiri.
+\end{prop}
+
+\begin{proof}[\emph{Petunjuk pembuktian}] Untuk petunjuk ini kita memperkenalkan notasi (yang agak rumit).
+Jika $f\colon X \sto Y$ adalah fungsi di antara dua himpunan, kita definisikan
+$f_\bullet \colon X \sto \ran f\colon x \mapsto f(x)$. Artinya, $f_\bullet$ tepat merupakan fungsi yang sama
+dengan $f$, kecuali bahwa kodomainnya adalah jangkauan~$f$.
+
+Karena $\ran T$ terkomplemen, terdapat proyeksi $E$ dari $C$ ke~$\ran T$
+(menurut~\ref{cor_compl_ran_proj}). Tunjukkan bahwa $T_\bullet$ mempunyai invers kontinu.
+Misalkan $S = {T_\bullet}^{-1}E_\bullet$.    \ns
+\end{proof}
+
+\begin{prop}\label{prop_rinv_Bsp} Misalkan $S \colon C \sto B$ pemetaan linear terbatas di antara ruang-ruang Banach.
+ \index{kanan!invers!operator ruang Banach}%
+Jika $S$ surjektif dan $\ker S$ terkomplemen, maka $S$ mempunyai invers kanan.
+\end{prop}
+
+\begin{proof}[\emph{Petunjuk pembuktian}] Karena $\ker S$ terkomplemen, terdapat $N \preccurlyeq C$ sedemikian sehingga
+$C = N \oplus \ker S$. Tunjukkan bahwa pembatasan $S$ ke $N$ mempunyai invers kontinu dan komposisikan
+invers ini dengan pemetaan inklusi dari $N$ ke~$C$.   \ns
+\end{proof}
+
+Hasil berikut merupakan konvers dari kedua proposisi~\ref{prop_linv_Bsp} dan~\ref{prop_rinv_Bsp}.
+
+\begin{prop}\label{C069831} Misalkan $T \colon B \sto C$ dan $S\colon C \sto B$ pemetaan linear terbatas di antara ruang-ruang
+Banach. Jika $ST = \id B$, maka
+ \begin{enumerate}[label=\rm{(\alph*)}]
+  \item[(a)] $S$ surjektif;
+  \item[(b)] $T$ injektif;
+  \item[(c)] $TS$ merupakan proyeksi pada $\ran T$ sepanjang~$\ker S$; dan
+  \item[(d)] $C = \ran T \oplus \ker S$.
+ \end{enumerate}
+\end{prop}
+
+\begin{prop} Jika dalam kategori $\cat{BAN_\infty}$ barisan
+ \[ \begin{CD} 0 @>>> A @>j>> B @>f>> C @>>> 0
+    \end{CD}\]
+ dan
+ \[ \begin{CD} 0 @>>> C @>g>> B @>p>> D @>>> 0
+    \end{CD}\]
+eksak dan jika $fg = \id{C}$, maka $pj$ adalah isomorfisme dari $A$ pada~$D$.
+\end{prop}
+
+\begin{proof}[\emph{Petunjuk pembuktian}] Gunakan \ref{C069831} untuk melihat bahwa $B = \ker p \oplus \ran j$. Tinjau pemetaan
+$\bigl.p\bigr|_{\ran j}\,j_\bullet$ (notasi untuk $j_\bullet$ seperti dalam petunjuk untuk~\ref{prop_linv_Bsp}). \ns
+\end{proof}
+
+\begin{prop}\label{prop_merge_exactCD} Jika dalam kategori $\cat{BAN_\infty}$ diagram
+ \begin{equation} \begin{CD} 0 @>>> A @>j>> B @>f>> C @>>> 0  \\
+      @.   @VSVV   @VVUV   @.    @.    \\
+ 0 @>>> A' @>>j'> B' @>>f'> C' @>>> 0
+    \end{CD}\end{equation}
+dan
+ \[ \begin{CD} 0 @>>> C @>g>> B @>p>> D @>>> 0   \\
+      @.     @.   @VUVV   @VVTV     @.  \\
+  0 @>>> C' @>>g'> B' @>>p'> D' @>>> 0
+    \end{CD}\]
+komutatif, jika baris-barisnya eksak, jika $fg = \id{C}$ dan jika $f'g' = \id{C'}$, maka diagram
+ \[ \begin{CD}  A  @>pj>>  D   \\
+       @VSVV   @VVTV  \\
+     A'  @>>p'j'> D'
+    \end{CD}\]
+komutatif dan pemetaan $pj$ serta $p'j'$ merupakan isomorfisme.
+\end{prop}
+
+Dalam~\ref{exam_dual_functor} dan~\ref{exam_dualfunctor_exact} kita melihat bahwa dalam kategori ruang Banach
+dan pemetaan linear kontinu, funktor dualitas $B \mapsto B^*$, $T \mapsto T^*$ merupakan funktor kontravarian eksak.
+Dan dalam~\ref{exam_bar_functor} kita melihat bahwa dalam kategori yang sama pasangan pemetaan $B \mapsto \clo B$,
+$T \mapsto \clo T$ merupakan funktor kovarian eksak. Dengan mengomposisikan kedua funktor ini diperoleh dua funktor
+kontravarian eksak baru, yang akan kita lambangkan dengan $F$ dan $G$:
+  \[ \xymatrix{B\ar[r]^F &{\clo B}^{\,*}}\,,\,\xymatrix{T\ar[r]^F &{\clo T}^{\,*}} \qquad \text{dan} \qquad
+           \xymatrix{B\ar[r]^G &\clo{B^*}}\,,\,\xymatrix{T\ar[r]^G &\clo{T^*}}  \]
+Wajar untuk menanyakan hubungan antara ${\clo B}^{\,*}$ dan $\clo{B^*}$. Proposisi berikut
+memberi tahu kita bukan hanya bahwa kedua ruang ini selalu isomorfik, melainkan bahwa keduanya isomorfik secara alami. Artinya,
+ \index{alami!ekuivalensi!antara ${\clo B}^{\,*}$ dan $\clo{B^*}$}%
+funktor $F$ dan $G$ ekuivalen secara alami.
+
+\begin{prop} Jika $T \in \ofml B(B,C)$, dengan $B$ dan $C$ ruang Banach, maka terdapat isomorfisme
+$\sbsb{\phi}B \colon {\clo B}^{\,*} \sto \clo{B^*}$ dan $\sbsb{\phi}C \colon {\clo C}^{\,*} \sto \clo{C^*}$ sedemikian sehingga
+   \[ {\clo T}^{\,*} = {\sbsb{\phi}B}^{\!\!\!-1}\,\, \clo{T^*}\,\,\sbsb{\phi}C\,. \]
+\end{prop}
+
+\begin{proof}[\emph{Petunjuk pembuktian}] Karena funktor dualitas eksak (lihat~\ref{exam_dualfunctor_exact}), kita dapat
+mengambil dual dari diagram komutatif~\eqref{eqn_exactCD_Bbar} untuk memperoleh diagram komutatif kedua dengan baris-baris
+eksak. Sekarang tuliskan diagram komutatif ketiga dengan mengganti setiap kemunculan $B$ dalam diagram~\eqref{eqn_exactCD_Bbar}
+dengan~$B^*$. Periksa bahwa ${\sbsb{\tau}B}^{\!\!*}\,\sbsb{\tau}{B^*} = \id{B^*}$ sehingga Anda dapat menggunakan proposisi~\ref{prop_merge_exactCD}
+pada dua diagram terakhir dan dengan demikian memperoleh diagram komutatif
+     \[ \xy
+          \Square/{<-}`{->}`{->}`{<-}/[{\clo B}^{\,*}`{\clo C}^{\,*}`\clo{B^*}`\clo{C^*};{\clo T}^{\,*}`\sbsb{\phi}B`\sbsb{\phi}C`\clo{T^*}]
+      \endxy \]
+dengan $\sbsb{\phi}B := \sbsb{\pi}{B^*}\,{\sbsb{\pi}B}^{\!\!*}$ suatu isomorfisme.   \ns
+\end{proof}
+
+\begin{cor} Suatu ruang Banach refleksif jika dan hanya jika dualnya refleksif.
+\end{cor}
+
+\begin{prop}\label{prop_fd_subsp_complm} Setiap subruang berdimensi hingga dari suatu ruang Banach terkomplemen.
+\end{prop}
+
+\begin{proof}[\emph{Petunjuk pembuktian}] Misalkan $F$ subruang berdimensi hingga dari suatu ruang Banach $B$ dan misalkan
+$\{\vc e^1, \dots, \vc e^n\}$ basis Hamel untuk~$F$. Maka untuk setiap $x \in F$ terdapat skalar-skalar tunggal
+$\alpha_1(x)$, \dots , $\alpha_n(x)$ sedemikian sehingga $x = \sum_{k=1}^n \alpha_k(x)\vc e^k$. Untuk setiap $1 \le k \le n$
+verifikasi bahwa $\alpha_k$ merupakan fungsional linear terbatas, yang dapat diperluas ke seluruh~$B$. Misalkan $N$ adalah
+irisan kernel-kernel dari perluasan ini dan tunjukkan bahwa $B = F \oplus N$.  \ns
+\end{proof}
+
+\begin{defn} Ingat bahwa dalam~\ref{000082} kita mendefinisikan \emph{kodimensi} suatu subruang dari ruang vektor
+sebagai dimensi komplemen ruang vektornya (yang selalu ada menurut proposisi~\ref{0000824}). Kita menggunakan
+istilah yang sama untuk ruang Banach:
+ \index{kodimensi}%
+\df{kodimensi} dari sebarang \emph{subruang vektor} suatu ruang Banach adalah dimensi \emph{komplemen ruang
+vektornya}.
+\end{defn}
+
+Untuk korolar berikut (dari proposisi~\ref{prop_fd_subsp_complm}), ingatlah
+konvensi~\ref{conv_subsp_Bsp} tentang penggunaan kata ``subruang'' dalam konteks ruang Banach.
+
+\begin{cor} Dalam suatu ruang Banach, setiap subruang berkodimensi hingga terkomplemen.
+\end{cor}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Misalkan $M$ subruang tak nol dari suatu ruang Banach~$B$. Tinjau dua sifat berikut dari pasangan $B$ dan~~$M$.
+
+\textbf{Sifat P:} \emph{Terdapat proyeksi bernorma $1$ dari $B$ ke $M$.}
+
+\textbf{Sifat E:} \emph{Untuk setiap ruang Banach $C$, setiap pemetaan linear terbatas dari $M$ ke $C$ dapat diperluas menjadi pemetaan
+linear terbatas dari $B$ ke $C$ tanpa memperbesar normanya.}
+
+\begin{prop} Untuk subruang tak nol $M$ dari suatu ruang Banach $B$, sifat \textbf{P} dan \textbf{E} ekuivalen.
+\end{prop}
+
+\begin{proof}[\emph{Petunjuk pembuktian}] Untuk menunjukkan bahwa \textbf{E} mengakibatkan \textbf{P}, mulailah dengan memperluas pemetaan identitas
+pada $M$ ke seluruh~$B$.   \ns
+\end{proof}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Prinsip Keterbatasan Seragam}
+\begin{defn} Misalkan $S$ suatu himpunan dan $V$ ruang linear bernorma. Suatu keluarga $\fml F$ dari
+fungsi-fungsi dari $S$ ke $V$ disebut
+ \index{titik demi titik!terbatas}%
+ \index{terbatas!titik demi titik}%
+\df{terbatas titik demi titik} jika untuk setiap $x \in S$ terdapat konstanta $M_x > 0$ sedemikian sehingga
+$\norm{f(x)} \le M_x$ untuk setiap $f \in \fml F$.
+\end{defn}
+
+\begin{defn} Misalkan $V$ dan $W$ ruang linear bernorma. Suatu keluarga $\fml T$ dari pemetaan linear terbatas
+dari $V$ ke $W$ disebut
+ \index{seragam!terbatas}%
+ \index{terbatas!seragam}%
+\df{terbatas seragam} jika terdapat $M > 0$ sedemikian sehingga $\norm T \le M$ untuk setiap $T \in
+\fml T$.
+\end{defn}
+
+\begin{exer}\label{C070114} Misalkan $V$ dan $W$ ruang linear bernorma. Jika suatu keluarga $\fml T$ dari
+pemetaan linear terbatas dari $V$ ke $W$ terbatas seragam, maka keluarga itu terbatas titik demi titik.
+\end{exer}
+
+\emph{Prinsip keterbatasan seragam} adalah pernyataan bahwa konvers
+dari~\ref{C070114} berlaku apabila $V$ lengkap. Untuk membuktikannya kita akan menggunakan
+analog ``lokal'' dari pernyataan ini untuk fungsi-fungsi kontinu pada ruang metrik lengkap. Secara kasar, analog ini mengatakan bahwa jika
+suatu keluarga fungsi bernilai real pada ruang metrik lengkap terbatas titik demi titik, maka keluarga itu terbatas
+seragam pada suatu subhimpunan terbuka tak kosong dari ruang tersebut.
+
+\begin{prop}\label{C070117} Misalkan $M$ ruang metrik lengkap yang tak kosong dan $\fml F \subseteq \fml C(M,\R)$.
+Jika untuk setiap $x \in M$ terdapat konstanta $N_x > 0$ sedemikian sehingga $\abs{f(x)} \le N_x$ untuk
+setiap $f \in \fml F$, maka terdapat himpunan terbuka tak kosong $U$ di $M$ dan bilangan $N > 0$ sedemikian
+sehingga $\abs{f(u)} \le N$ untuk setiap $f \in \fml F$ dan setiap $u \in U$.
+\end{prop}
+
+\begin{proof}[\emph{Petunjuk pembuktian}] Untuk setiap bilangan asli $k$, misalkan $A_k =
+\bigcap\{f^{\gets}\bigl(\,[-k,k]\,\bigr)\colon f \in \fml F\}$. Gunakan versi yang sama dari
+\emph{teorema kategori Baire} yang kita gunakan dalam membuktikan \emph{teorema pemetaan terbuka} (\ref{C069414})
+untuk menyimpulkan bahwa untuk sedikitnya satu $n \in \N$, himpunan $A_n$ mempunyai interior
+tak kosong. Misalkan $U = \intr{A_n}$.   \ns
+\end{proof}
+
+\begin{thm}[Prinsip keterbatasan seragam]\label{thm_PUB} Misalkan $B$ ruang Banach dan $W$ ruang linear bernorma.
+ \index{prinsip!keterbatasan seragam}%
+ \index{keterbatasan!prinsip seragam}%
+ \index{seragam!keterbatasan!prinsip}%
+Jika suatu keluarga $\ofml T$ dari pemetaan linear terbatas dari $B$ ke $W$ terbatas titik demi
+titik, maka keluarga itu terbatas seragam.
+\end{thm}
+
+\begin{proof}[\emph{Petunjuk pembuktian}] Untuk setiap $T \in \ofml T$, definisikan
+  \[ \sbsb fT\colon B \sto \R\colon x \mapsto \norm{Tx}. \]
+Gunakan proposisi sebelumnya untuk menunjukkan bahwa terdapat subhimpunan terbuka tak kosong $U$ dari $B$
+dan konstanta $M > 0$ sedemikian sehingga $\sbsb fT(x) \le M$ untuk setiap $T \in \ofml T$ dan setiap
+$x \in U$. Pilih titik $a \in B$ dan bilangan $r > 0$ sedemikian sehingga $\clo{B_r(a)} \subseteq
+U$. Kemudian verifikasi bahwa
+  \[ \norm{Ty} \le r^{-1}\bigl(\, \sbsb fT(a + ry) + \sbsb fT(a)\,\bigr) \le 2Mr^{-1} \]
+untuk setiap $T \in \ofml T$ dan setiap $y \in B$ sedemikian sehingga $\norm y \le 1$. \ns
+\end{proof}
+
+\begin{thm}[Banach-Steinhaus] Misalkan $B$ ruang Banach, $W$ ruang linear bernorma,
+ \index{teorema Banach-Steinhaus}%
+dan $(T_n)$ barisan pemetaan linear terbatas dari $B$ ke~$W$. Jika limit titik demi titik
+$\lim_{n \sto \infty} T_nx$ ada untuk setiap $x$ di~$B$, maka pemetaan $S\colon B \sto
+W\colon x \mapsto \lim_{n \sto \infty} T_nx$ adalah pemetaan linear terbatas.
+\end{thm}
+
+\begin{proof}[\emph{Petunjuk pembuktian}] Untuk setiap $x \in B$, barisan $\bigl(\norm{T_nx}\bigr)_{n=1}^\infty$
+konvergen, dan karena itu terbatas. Gunakan~\ref{thm_PUB}.   \ns
+\end{proof}
+
+\begin{defn} Suatu subhimpunan $A$ dari ruang linear bernorma $V$ disebut
+ \index{terbatas!secara lemah!himpunan dalam ruang linear bernorma}%
+ \index{lemah!keterbatasan!dalam ruang linear bernorma}%
+ \index{w@$w$-terbatas}%
+\df{terbatas secara lemah} ($w$-terbatas) jika $f^{\sto}(A)$ adalah subhimpunan terbatas dari medan skalar
+$V$ untuk setiap $f \in V^*$.
+\end{defn}
+
+\begin{prop} Suatu subhimpunan $A$ dari ruang Hilbert $H$ terbatas secara lemah jika dan hanya jika untuk setiap $y \in H$
+ \index{lemah!keterbatasan!dalam ruang Hilbert}%
+himpunan $\{\langle a,y \rangle \colon a \in A\}$ terbatas.
+\end{prop}
+
+Proposisi sebelumnya kurang lebih sudah jelas. Proposisi berikutnya merupakan konsekuensi penting dari
+\emph{prinsip keterbatasan seragam}.
+
+\begin{prop}\label{C070131} Suatu subhimpunan dari ruang linear bernorma terbatas secara lemah jika dan hanya jika
+subhimpunan itu terbatas.
+\end{prop}
+
+\begin{proof}[\emph{Petunjuk pembuktian}] Jika $A$ subhimpunan yang terbatas secara lemah dari ruang linear bernorma $V$
+dan $f \in V^*$, apa yang dapat Anda katakan tentang $\sup\{\abs{a^{**}(f)}\colon a \in A\}$?  \ns
+\end{proof}
+
+\begin{exer} Sahabat baik Anda, Fred R. Dimm, kembali memerlukan bantuan. Kali ini ia mencemaskan
+pernyataan (lihat~\ref{C070131}) bahwa suatu subhimpunan ruang linear bernorma terbatas jika
+dan hanya jika subhimpunan itu terbatas secara lemah. Ia meninjau barisan $(a^n)$ dalam ruang Hilbert
+$l^2$ yang didefinisikan oleh $a^n = \sqrt{n}\,\vc e^n$ untuk setiap $n \in \N$, dengan $\{\vc
+e^n\colon n \in \N\}$ basis ortonormal biasa untuk~$l_2$ (lihat
+contoh~\ref{C063149}). Ia melihat bahwa barisan itu jelas tidak terbatas (dengan topologi biasa
+pada~$l^2$). Namun, baginya barisan itu tampak terbatas secara lemah. Jika tidak, menurut argumennya, maka
+berdasarkan \emph{teorema Riesz-Fr\'echet} \ref{000342} akan terdapat barisan $x$ dalam
+$l^2$ sedemikian sehingga himpunan $\{\abs{\langle a^n,x \rangle}\colon n \in\N\}$ tidak terbatas. Baginya ini tampak
+tidak mungkin terjadi karena barisan semacam itu harus menurun lebih lambat daripada
+barisan $\bigl(n^{-1/2}\bigr)$, yang sudah menurun terlalu lambat untuk menjadi anggota~$l^2$.
+Tenangkan Fred dengan menemukan barisan yang sesuai. \emph{Petunjuk:} Gunakan barisan yang
+memiliki banyak nol.
+\end{exer}
+
+\begin{defn} Suatu barisan $(x_n)$ dalam ruang linear bernorma $V$ disebut
+ \index{lemah!barisan Cauchy}%
+ \index{Cauchy!barisan!lemah}%
+ \index{barisan!Cauchy lemah}%
+\df{Cauchy secara lemah} jika barisan $(f(x_n))$ bersifat Cauchy untuk setiap $f$ dalam~$V^*$. Barisan
+tersebut
+ \index{lemah!konvergensi!barisan dalam ruang linear bernorma}%
+ \index{konvergensi!lemah}%
+ \index{barisan!konvergensi lemah dari suatu}%
+\df{konvergen secara lemah} ke titik $a \in V$ jika $f(x_n) \sto f(a)$ untuk setiap $f \in V^*$
+(yakni, jika barisan itu konvergen dalam topologi lemah yang diinduksi oleh anggota-anggota~$V^*$). Dalam hal ini
+kita tulis
+ \index{<arrowtow@$x_n \to^w a$ (konvergensi sekuensial lemah)}%
+$x_n \to^w a$. Ruang $V$ disebut
+ \index{lengkap!secara lemah}%
+ \index{lemah!kelengkapan}%
+\df{lengkap sekuensial secara lemah} jika setiap barisan Cauchy secara lemah di $V$ konvergen secara lemah.
+\end{defn}
+
+\begin{prop} Dalam ruang linear bernorma, setiap barisan Cauchy secara lemah terbatas.
+\end{prop}
+
+\begin{prop} Setiap ruang Banach refleksif lengkap sekuensial secara lemah.
+\end{prop}
+
+\begin{exam} Misalkan $f_n(t) = \left\{
+                             \begin{array}{ll}
+                               1 - nt, & \hbox{jika $0 \le t \le \frac1n$;} \\
+                               0, & \hbox{jika $\frac1n < t \le 1$.}
+                             \end{array}
+                           \right.$ untuk setiap $n \in \N$. Barisan fungsi $(f_n)$ menunjukkan bahwa ruang Banach
+$\fml C([0,1])$ tidak lengkap sekuensial secara lemah.
+\end{exam}
+
+\begin{cor} Ruang Banach $\fml C([0,1])$ tidak refleksif.
+\end{cor}
+
+\begin{prop} Misalkan $\fml E$ basis ortonormal untuk suatu ruang Hilbert~$H$ dan $(x_n)$ suatu
+barisan di~$H$. Maka $x_n \to^w \vc 0$ jika dan hanya jika $(x_n)$ terbatas dan $\langle
+x_n,e \rangle \sto 0$ untuk setiap $e \in \fml E$.
+\end{prop}
+
+\begin{defn} Misalkan $H$ ruang Hilbert. Suatu jaring $(T_\lambda)$ dalam $\ofml B(H)$
+ \index{lemah!topologi operator!konvergensi dalam}%
+ \index{operator!topologi!lemah}%
+ \index{topologi!operator lemah}%
+ \index{lemah!konvergensi!operator ruang Hilbert}%
+\df{konvergen secara lemah} (atau \df{konvergen dalam topologi operator lemah}) ke $S \in \ofml B(H)$ jika
+  \[ \langle T_\lambda x,y \rangle \sto \langle Sx,y \rangle \]
+untuk setiap $x$, $y \in H$. Dalam hal ini kita tulis
+$T_\lambda~\to^{\textbf{WOT}}~S$.
+ \index{<arrowtowot@$T_\lambda~\to^{\textbf{WOT}}~S$}%
+
+Suatu keluarga $\ofml T \subseteq \ofml B(H)$ disebut
+ \index{lemah!keterbatasan!keluarga operator ruang Hilbert}%
+ \index{terbatas!secara lemah}
+ \index{terbatas!dalam topologi operator lemah}%
+ \index{lemah!topologi operator!keterbatasan dalam}%
+ \index{WOT@\textbf{WOT} (topologi operator lemah)}%
+\df{terbatas secara lemah} (atau \df{terbatas dalam topologi operator lemah}) jika untuk setiap $x$, $y \in H$
+terdapat konstanta positif $\alpha_{x,y}$ sedemikian sehingga
+  \[\abs{\langle Tx,y \rangle} \le \alpha_{x,y}\]
+untuk setiap $T \in \ofml T$.
+\end{defn}
+
+Sayangnya definisi sebelumnya dapat menjadi sumber kebingungan. Karena $\ofml B(H)$ adalah
+ruang linear bernorma, ruang itu sudah mempunyai topologi ``lemah'' (lihat~\ref{C067434}). Lalu, bagaimana menangani dua
+topologi berbeda pada $\ofml B(H)$ yang mempunyai nama sama? Sebagian penulis menyebut topologi yang baru saja didefinisikan sebagai
+\emph{topologi operator lemah}, sehingga mencegah timbulnya kebingungan. Penulis lain berpendapat bahwa
+topologi lemah dalam pengertian ruang linear bernorma begitu jarang berguna dalam teori operator pada ruang Hilbert
+sehingga, kecuali diberi penjelas khusus, frasa \emph{topologi lemah} dalam konteks operator ruang Hilbert
+seharusnya dipahami sebagai topologi yang baru saja didefinisikan. (Lihat, misalnya, komentar Halmos dalam dua
+paragraf sebelum Soal 108 di~\cite{Halmos:1982}.) Demikian pula, kita sering melihat frasa \emph{suatu
+himpunan terbatas yang terdiri atas operator-operator ruang Hilbert.} Kecuali diberi penjelas lain, yang dimaksud adalah bahwa himpunan
+tersebut \emph{terbatas seragam}. Bagaimanapun juga, berhati-hatilah terhadap frasa-frasa ini ketika membaca.
+
+Berikut ini konsekuensi penting dari \emph{prinsip keterbatasan seragam}~\ref{thm_PUB}.
+
+\begin{prop} Setiap keluarga operator ruang Hilbert yang terbatas dalam topologi operator
+lemah adalah terbatas seragam.
+\end{prop}
+
+\begin{proof}[\emph{Petunjuk pembuktian}] Misalkan $H$ ruang Hilbert dan $\ofml T$ keluarga operator pada~$H$
+yang terbatas terhadap topologi operator lemah. Gunakan proposisi~\ref{C070131} untuk menunjukkan, bagi
+$y \in H$ yang tetap, bahwa $\{T^*y\colon T \in \ofml T\}$ adalah subhimpunan terbatas dari~$H$. Gunakan hal ini (dan~\ref{C070131}
+sekali lagi) untuk menunjukkan bahwa $\{Tx\colon \text{$T \in \ofml T$, $x \in H$, dan $\norm x \le 1$}\}$ terbatas di~$H$. \ns
+\end{proof}
+
+Seperti dinyatakan di atas, banyak penulis akan menyingkat pernyataan proposisi sebelumnya menjadi:
+\emph{Setiap keluarga operator ruang Hilbert yang terbatas secara lemah adalah terbatas.}
+
+\begin{defn}
+Suatu jaring $(T_\lambda)$ dalam $\ofml B(H)$
+ \index{kuat!topologi operator!konvergensi dalam}%
+ \index{operator!topologi!kuat}%
+ \index{topologi!operator kuat}%
+ \index{kuat!konvergensi!operator ruang Hilbert}%
+ \index{SOT@\textbf{SOT} (topologi operator kuat)}%
+\df{konvergen secara kuat} (atau \df{konvergen dalam topologi operator kuat}) ke $S \in \ofml B(H)$ jika
+  \[ T_\lambda x \sto Sx \]
+untuk setiap $x \in H$. Dalam hal ini kita tulis $T_\lambda~\to^{\textbf{SOT}}~S$.
+ \index{<arrowtosot@$T_\lambda~\to^{\textbf{SOT}}~S$}%
+
+Konvergensi norma biasa dari operator-operator dalam $\ofml B(H)$ sering disebut
+ \index{seragam!topologi operator!konvergensi dalam}%
+ \index{operator!topologi!seragam}%
+ \index{topologi!operator seragam}%
+ \index{seragam!konvergensi!operator ruang Hilbert}%
+\df{konvergensi seragam} (atau \df{konvergensi dalam topologi operator seragam}). Artinya, kita tulis
+ \index{<arrowtouniform@$T_\lambda~\sto~S$}%
+$T_\lambda \sto S$ jika $\norm{S - T_\lambda}\sto 0$.
+\end{defn}
+
+\begin{prop} Misalkan $H$ ruang Hilbert, $(T_n)$ barisan dalam $\ofml B(H)$,
+dan $B \in \ofml B(H)$. Maka implikasi-implikasi berikut berlaku:
+   \[ T_n \sto B \quad \implies \quad T_n~\to^{\textbf{SOT}}~B
+                                \quad \implies \quad T_n~\to^{\textbf{WOT}}~B. \]
+\end{prop}
+
+\begin{prop} Misalkan $(S_n)$ dan $(T_n)$ barisan operator pada suatu ruang Hilbert~$H$. \\
+Jika $S_n \to^{\textbf{WOT}} A$ dan $T_n \to^{\textbf{SOT}} B$, maka $S_nT_n \to^{\textbf{WOT}} AB$.
+\end{prop}
+
+\begin{proof}[\emph{Petunjuk pembuktian}] Tuliskan $S_nT_n - AB$ sebagai $S_nT_n - S_nB + S_nB - AB$.  \ns
+\end{proof}
+
+\begin{exam} Dalam proposisi sebelumnya, hipotesis $T_n \to^{\textbf{SOT}} B$ tidak dapat
+diganti dengan $T_n~\to^{\textbf{WOT}}~B$.
+\end{exam}
+
+\begin{proof}[\emph{Petunjuk pembuktian}] Tinjau pangkat-pangkat operator geser unilateral.  \ns
+\end{proof}
+
+
+
+
+
+
+\endinput

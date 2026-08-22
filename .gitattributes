@@ -1,9 +1,19 @@
 # Render manifests are hash-bound evidence; preserve their exact bytes.
 provenance/*_RENDER_MANIFEST.csv -text
 
-# Admitted upstream members are authority bytes; never normalize line endings.
-source/upstream/linalg.tex -text
-source/upstream/categories.tex -text
-source/upstream/normlinspaces.tex -text
-source/upstream/Hilbert_spaces.tex -text
-source/upstream/Hilbert_space_operators.tex -text
+# Frozen upstream members are authority bytes; never normalize any member.
+/source/upstream/** -text
+
+# Hash-bound generated and derivative text must remain LF on every platform.
+/backend/*.jsonl text eol=lf
+/backend/*.json text eol=lf
+/backend/*.csv text eol=lf
+/backend/*.py text eol=lf
+/source/id-ID/*.tex text eol=lf
+/source/id-ID/*.bib text eol=lf
+/qa/*.py text eol=lf
+/qa/*.md text eol=lf
+/qa/ch06_translation_parts/*.tex text eol=lf
+/provenance/*.md text eol=lf
+/README.md text eol=lf
+/BUILD.md text eol=lf
