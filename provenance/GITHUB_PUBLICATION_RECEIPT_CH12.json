@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0.0",
+  "receipt_id": "FAOA-2015-CH12-GITHUB-PUBLICATION",
+  "verified_utc": "2026-08-23T21:28:46Z",
+  "repository": "https://github.com/KokunoYumeto/functional-analysis-erdman-id",
+  "branch": "main",
+  "commit": "aa4efdb52455031d403965165a66bb104c695842",
+  "tree": "11a28c931846c9cdaa158b5859221aae0daac46a",
+  "remote_head_matches": true,
+  "commit_api_matches": true,
+  "anonymous_raw_readback": [
+    {
+      "path": "README.md",
+      "bytes": 5364,
+      "sha256": "dee4434acb54a76730e4b44394853e58bb01f0c6476fb2c6739490511d9f1363",
+      "match": true
+    },
+    {
+      "path": "source/id-ID/no_identity-id.tex",
+      "bytes": 49730,
+      "sha256": "da74193601c80828c8bebb59f20f82481c47627a746fc6c841602d538837d884",
+      "match": true
+    },
+    {
+      "path": "source/id-ID/functional-analysis-id-through-ch12.tex",
+      "bytes": 10275,
+      "sha256": "d84965e27ee26d71575838a42a8410cf5956b967d188d77a040c0f018fd007de",
+      "match": true
+    },
+    {
+      "path": "output/pdf/analisis-fungsional-dan-aljabar-operator-id-bab-1-12.pdf",
+      "bytes": 2001449,
+      "sha256": "476b1f1fd6ca82deddeeb9edac1b07286567ede5663a6df32906a36dd3ea5ab6",
+      "match": true
+    },
+    {
+      "path": "provenance/CH12_BUILD_AND_QA_RECEIPT.md",
+      "bytes": 10170,
+      "sha256": "ca134884edef4241b7e9c56d4a48e5c16d0a70ed8975885f1845cd6e3d02d446",
+      "match": true
+    },
+    {
+      "path": "backend/BACKEND_MANIFEST.csv",
+      "bytes": 3411,
+      "sha256": "6e94a55dc47e0c112bdc6a9cab30ac811fdeec6bf86295ae9e196c1bbf095959",
+      "match": true
+    },
+    {
+      "path": "qa/CH12_BACKEND_VALIDATION.json",
+      "bytes": 1441,
+      "sha256": "d20661fd42b84a9381cf7aa57b5922737cd9b872c0372aae93e472bdb42120d0",
+      "match": true
+    },
+    {
+      "path": "qa/package_ch11_release.py",
+      "bytes": 7855,
+      "sha256": "0171fe93a883f642a19df5fa8d6c1f34b999ac06fd50d1f068f9b105b7a32b46",
+      "match": true
+    }
+  ],
+  "result": "pass"
+}
