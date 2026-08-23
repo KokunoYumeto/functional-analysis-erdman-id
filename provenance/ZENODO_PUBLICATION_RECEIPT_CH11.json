@@ -1,0 +1,41 @@
+{
+  "schema_version": "1.0.0",
+  "receipt_id": "FAOA-2015-CH11-ZENODO-PUBLICATION",
+  "verified_utc": "2026-08-23T19:32:39Z",
+  "record_id": 22071727,
+  "record_url": "https://zenodo.org/records/22071727",
+  "doi": "10.5281/zenodo.22071727",
+  "concept_record_id": 22059739,
+  "concept_doi": "10.5281/zenodo.22059739",
+  "version": "2026.08.23-ch11",
+  "status": "published",
+  "access_right": "open",
+  "license": "cc-by-sa-4.0",
+  "language": "ind",
+  "files": [
+    {
+      "filename": "analisis-fungsional-dan-aljabar-operator-id-bab-1-11.pdf",
+      "bytes": 1873719,
+      "api_md5": "e80a683248c8322260e6f1d0b7c11d4b",
+      "anonymous_readback_sha256": "21a3b8c8fa2f5f68cba8a9b5c1fdbbb9f1feb906090159e8a2755f54fa177971",
+      "matches_local": true
+    },
+    {
+      "filename": "functional-analysis-erdman-id-2026.08.23-ch11-source-backend.zip",
+      "bytes": 2027156,
+      "api_md5": "9a7da876ba11a6578edc95b479c298ee",
+      "anonymous_readback_sha256": "1686d44867aecf366757bf9d5e9cd9372da4ecf237701f3f43a552bfa929f1c1",
+      "matches_local": true
+    },
+    {
+      "filename": "SHA256SUMS.txt",
+      "bytes": 254,
+      "api_md5": "a8298bc31e8cae0307b7c4e1e359cd0b",
+      "anonymous_readback_sha256": "559cd75745df3f529782afcf8c82d200e19db42bc6d3be733d0883719e6333cd",
+      "matches_local": true
+    }
+  ],
+  "credential_material_recorded": false,
+  "result": "pass"
+}
+

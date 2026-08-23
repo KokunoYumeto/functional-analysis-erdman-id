@@ -1,0 +1,21 @@
+{
+  "schema_version": "1.0.0",
+  "receipt_id": "FAOA-2015-CH11-GITHUB-PUBLICATION",
+  "verified_utc": "2026-08-23T19:32:39Z",
+  "repository": "https://github.com/KokunoYumeto/functional-analysis-erdman-id",
+  "branch": "main",
+  "commit": "c5fe894161183562347301d0ba89252bfd38273c",
+  "tree": "37e1429583794fe51cc3c0498d811bf767315a7d",
+  "remote_head_matches": true,
+  "anonymous_raw_readback": [
+    {"path":"README.md","bytes":5094,"sha256":"d29c7c317e230a1ebf465051d29358de96906ef0784d7964b1c30d0e2adfd16e","match":true},
+    {"path":"source/id-ID/Gelfand_Naimark-id.tex","bytes":32551,"sha256":"69bd9ba794ef0d5eb74e444cf2676878b7797e5dd5b75fcfc4abdd247b1b5ee5","match":true},
+    {"path":"source/id-ID/functional-analysis-id-through-ch11.tex","bytes":10167,"sha256":"1836320f0e1a03705ff8e1dbbd2724d9e484ce03e10fde5f575967e2dd6e9796","match":true},
+    {"path":"output/pdf/analisis-fungsional-dan-aljabar-operator-id-bab-1-11.pdf","bytes":1873719,"sha256":"21a3b8c8fa2f5f68cba8a9b5c1fdbbb9f1feb906090159e8a2755f54fa177971","match":true},
+    {"path":"provenance/CH11_BUILD_AND_QA_RECEIPT.md","bytes":8842,"sha256":"969953850667941377b71b8b0328231e939567d3dcd6c4f25a0dfd707c29f713","match":true},
+    {"path":"backend/BACKEND_MANIFEST.csv","bytes":3126,"sha256":"0ca5f11f63430ea8eb7f7452fe99bd1922337e487f60dcb581a279945f362ef6","match":true},
+    {"path":"qa/CH11_BACKEND_VALIDATION.json","bytes":1636,"sha256":"c3e5a0b80ba831ac7f6293faef534e45009a97328a6ce23d172d761351fbb1f0","match":true}
+  ],
+  "result": "pass"
+}
+

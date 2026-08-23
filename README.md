@@ -25,15 +25,17 @@ tetap tersedia sebagai artefak batas sebelumnya.
 
 ## Preservasi versi
 
-Versi parsial `2026.08.22-ch10` dipertahankan secara mandiri di Zenodo dengan
-[DOI 10.5281/zenodo.22062684](https://doi.org/10.5281/zenodo.22062684). Catatan
-Zenodo tersebut secara eksplisit berstatus **edisi dalam pengerjaan, Bab 1--10
-dari 17 bab**, bukan buku lengkap. Mirror GitHub ini telah dipulihkan dan
-diverifikasi kembali secara anonim. [Item Figshare
-v4](https://doi.org/10.6084/m9.figshare.33314709.v4) menyediakan tautan pembaca
-langsung ke PDF Zenodo; CC0 di Figshare hanya berlaku untuk metadata dan
-penunjuk tautan, sedangkan seluruh berkas substantif tetap berlisensi CC BY-SA
-4.0.
+Versi parsial `2026.08.23-ch11` dipertahankan secara mandiri di Zenodo dengan
+[DOI 10.5281/zenodo.22071727](https://doi.org/10.5281/zenodo.22071727). Catatan
+Zenodo tersebut secara eksplisit berstatus **edisi dalam pengerjaan, Bab 1--11
+dari 17 bab**, bukan buku lengkap. Ketiga berkas publiknya telah dibaca ulang
+secara anonim dan cocok byte demi byte dengan artefak lokal. Mirror GitHub ini
+juga telah diverifikasi kembali pada commit
+`c5fe894161183562347301d0ba89252bfd38273c`. [Versi Figshare
+v4](https://doi.org/10.6084/m9.figshare.33314709.v4) masih merupakan penunjuk
+historis Bab 1--10; pemutakhiran penunjuk Figshare ke Bab 1--11 belum dilakukan.
+CC0 di Figshare hanya berlaku untuk metadata dan penunjuk tautan, sedangkan
+seluruh berkas substantif tetap berlisensi CC BY-SA 4.0.
 
 ## Cakupan
 
