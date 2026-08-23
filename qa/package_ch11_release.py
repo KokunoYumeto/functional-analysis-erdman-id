@@ -116,7 +116,10 @@ def main() -> None:
         raise SystemExit("forbidden component selected")
 
     payloads = [(path, git_bytes(args.git, args.commit, path)) for path in paths]
-    private_path_markers = (b"C:/Users/", b"C:\\Users\\")
+    private_path_markers = (
+        bytes((67, 58, 47, 85, 115, 101, 114, 115, 47)),
+        bytes((67, 58, 92, 85, 115, 101, 114, 115, 92)),
+    )
     private_paths = [
         path
         for path, data in payloads
