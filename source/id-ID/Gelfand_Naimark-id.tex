@@ -1,0 +1,764 @@
+\chapter{TEOREMA GELFAND-NAIMARK}\label{Gelfand_Naimark}
+
+Seperti pada Bab~\ref{spectrum}, dalam bab ini---dan untuk sisa catatan ini---kita mengasumsikan bahwa medan
+  \index{konvensi!dalam bab~\ref{Gelfand_Naimark} dan bab-bab berikutnya skalar bersifat kompleks}%
+skalar kita adalah medan $\C$ bilangan kompleks.
+
+
+
+\section{Ideal-Ideal Maksimal dalam $\fml C(X)$}
+\begin{prop}\label{0006801} Jika $J$ adalah ideal sejati dalam suatu aljabar Banach beridentitas, maka
+tutupannya juga merupakan ideal sejati.
+\end{prop}
+
+\begin{cor} Setiap ideal maksimal dalam aljabar Banach beridentitas bersifat tertutup.
+\end{cor}
+
+\begin{exam} Untuk setiap subhimpunan $C$ dari ruang topologis~$X$, himpunan
+ \index{ideal!dalam $\fml C(X)$}%
+ \index{J@$J_C$ (fungsi kontinu yang lenyap pada~$C$)}%
+   \[ J_C := \bigl\{f \in \fml C(X)\colon f^{\sto}(C) = \{0\}\,\bigr\} \]
+merupakan ideal dalam $\fml C(X)$. Lebih lanjut, $J_C \supseteq J_D$ apabila
+$C~\subseteq~D~\subseteq~X$. (Selanjutnya kita akan menulis $J_x$ untuk ideal
+$J_{\{x\}}$.)
+\end{exam}
+
+\begin{prop}\label{0006832} Misalkan $X$ ruang topologis kompak dan $I$ ideal sejati
+dalam $\fml C(X)$. Maka terdapat $x \in X$ sedemikian sehingga $I \subseteq J_x$.
+\end{prop}
+
+\begin{prop} Misalkan $x$ dan $y$ titik-titik dalam ruang Hausdorff kompak. Jika $J_x \subseteq J_y$,
+maka $x = y$.
+\end{prop}
+
+\begin{prop}\label{0006836} Misalkan $X$ ruang Hausdorff kompak. Subhimpunan $I$ dari $\fml C(X)$
+merupakan ideal maksimal dalam $\fml C(X)$ jika dan hanya jika $I = J_x$ untuk suatu $x~\in~X$.
+\end{prop}
+
+\begin{cor} Jika $X$ ruang Hausdorff kompak, maka pemetaan $x \mapsto J_x$ dari $X$ ke
+$\mx\,\fml C(X)$ adalah bijektif.
+\end{cor}
+
+Kekompakan merupakan unsur penting dalam proposisi~\ref{0006836}.
+
+\begin{exam} Dalam aljabar Banach $\fml C_b\bigl(\,(0,1)\,\bigr)$ yang terdiri atas fungsi kontinu
+terbatas pada interval $(0,1)$ terdapat ideal maksimal $I$ sedemikian sehingga untuk
+\emph{tidak ada} titik $x \in (0,1)$ berlaku $I = J_x$. Misalkan $I$ ideal maksimal yang memuat
+ideal $S$ dari semua fungsi $f$ dalam $\fml C_b\bigl(\,(0,1)\,\bigr)$ yang untuknya terdapat
+lingkungan $U_f$ dari $0$ dalam $\R$ sedemikian sehingga $f(x) = 0$ untuk semua $x \in U_f \cap (0,1)$.
+\end{exam}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Ruang Karakter}
+\begin{defn} Suatu
+ \index{karakter}%
+\df{karakter} (atau
+ \index{fungsional!linear!multiplikatif}%
+ \index{linear!fungsional!multiplikatif}%
+\df{fungsional linear multiplikatif tak nol}) pada aljabar $A$ adalah homomorfisme tak nol
+dari $A$ ke dalam~$\C$. Himpunan semua karakter pada $A$ dinotasikan
+ \index{delta@$\Delta(A)$!ruang karakter dari~$A$}%
+dengan~$\Delta A$.
+\end{defn}
+
+\begin{prop}\label{00068511} Misalkan $A$ aljabar beridentitas dan $\phi \in \Delta A$. Maka
+ \begin{enumerate}[label=\rm{(\alph*)}]
+  \item $\phi(\vc 1) = 1$;
+  \item jika $a \in \inv A$, maka $\phi(a) \ne 0$;
+  \item jika $a$
+ \index{nilpoten}%
+  \df{nilpoten} (yaitu, jika $a^n = 0$ untuk suatu $n \in \N$), maka $\phi(a) = 0$;
+ \index{idempoten}%
+  \item jika $a$ adalah
+  \df{idempoten} (yaitu, jika $a^2 = a$), maka $\phi(a)$ adalah $0$ atau~$1$; dan
+  \item $\phi(a) \in \sigma(a)$ untuk setiap $a \in A$.
+ \end{enumerate}
+\end{prop}
+Kita catat sambil lalu bahwa bagian (e) dari proposisi sebelumnya tidak memberi kita cara mudah
+untuk menunjukkan bahwa spektrum $\sigma(a)$ dari suatu elemen aljabar tidak kosong. Hal ini
+bergantung pada pengetahuan bahwa $\Delta(A)$ tidak kosong.
+
+\begin{exam} Pemetaan identitas adalah satu-satunya karakter pada aljabar~$\C$.
+\end{exam}
+
+\begin{exam} Misalkan $A$ adalah aljabar matriks berukuran $2 \times 2$, $a = \bigl[a_{ij}\bigr]$,
+sedemikian sehingga $a_{12} = 0$. Aljabar ini memiliki tepat dua karakter, yaitu $\phi(a) = a_{11}$
+dan $\psi(a) = a_{22}$.
+\end{exam}
+
+\begin{proof}[\emph{Petunjuk pembuktian}] Tuliskan $\begin{bmatrix} a & 0 \\ b & c \end{bmatrix}$ sebagai kombinasi linear
+dari matriks-matriks $ u = \begin{bmatrix} 1 & 0 \\ 0 & 1 \end{bmatrix}$, $v = \begin{bmatrix} 0 & 0 \\ 1 & 0 \end{bmatrix}$,
+dan \smash[t]{$w = \begin{bmatrix} 0 & 0 \\ 0 & 1 \end{bmatrix}$}. Gunakan proposisi~\ref{00068511}.   \ns
+\end{proof}
+
+\begin{exam} Aljabar semua matriks $2 \times 2$ dengan entri bilangan kompleks tidak memiliki karakter.
+\end{exam}
+
+\begin{prop} Misalkan $A$ aljabar beridentitas dan $\phi$ fungsional linear pada~$A$. Maka $\phi
+\in \Delta A$ jika dan hanya jika $\ker\phi$ tertutup terhadap perkalian dan $\phi(\vc 1) =
+1$.
+\end{prop}
+
+\begin{proof}[\emph{Petunjuk pembuktian}] Untuk arah sebaliknya, terapkan $\phi$ pada hasil kali
+$a - \phi(a)\vc 1$ dan $b - \phi(b)\vc 1$ untuk $a$, $b \in A$. \ns
+\end{proof}
+
+\begin{prop}\label{00068522} Setiap fungsional linear multiplikatif pada aljabar Banach beridentitas
+$A$ kontinu. Bahkan, jika $\phi \in \Delta(A)$, maka $\phi$ merupakan kontraksi dan
+$\norm\phi = 1$.
+\end{prop}
+
+\begin{exam}\label{00068524} Misalkan $X$ ruang topologis dan $x \in X$. Kita mendefinisikan
+ \index{evaluasi!fungsional}%
+ \index{evaluasi@$\sbsb EXx$ atau $E_x$ (fungsional evaluasi di~$x$)}%
+\df{fungsional evaluasi di $x$}, yang dinotasikan dengan $\sbsb EXx$, melalui
+   \[ \sbsb EXx\colon \fml C(X) \sto \C\colon f \mapsto f(x)\,. \]
+Fungsional ini merupakan karakter pada~$\fml C(X)$ dan kernelnya adalah $J_x$. Jika hanya ada
+satu ruang topologis yang sedang dibahas, kita sederhanakan notasi $\sbsb EXx$ menjadi~$E_x$.
+Jadi, khususnya, untuk $f \in \fml C(X)$ kita sering menulis $E_x(f)$ alih-alih
+$\sbsb EXx(f)$ yang lebih panjang.
+\end{exam}
+
+\begin{defn} Dalam proposisi~\ref{00068522} kita menemukan bahwa setiap karakter pada aljabar Banach
+beridentitas $A$ berada pada bola satuan dual~$A^*$. Karena itu kita dapat memberikan himpunan
+himpunan $\Delta A$ karakter pada~$A$ dengan topologi-$w^*$ relatif yang diwarisinya
+dari~$A^*$. Topologi ini disebut
+ \index{Gelfand!topologi}%
+ \index{topologi!Gelfand}%
+\df{topologi Gelfand} pada $\Delta A$, dan ruang topologis yang dihasilkan disebut
+ \index{ruang!karakter}%
+ \index{karakter!ruang}%
+ \index{ruang!struktur}%
+ \index{struktur!ruang}%
+\df{ruang karakter} (atau \emph{ruang pembawa}, atau \emph{ruang struktur}, atau \emph{ruang ideal maksimal}, atau \emph{spektrum}) dari~$A$.
+\end{defn}
+
+\begin{prop} Ruang karakter dari aljabar Banach beridentitas merupakan ruang Hausdorff kompak.
+\end{prop}
+
+\begin{exam}\label{000633} Misalkan $l_1(\Z)$ adalah keluarga semua barisan bilateral
+   \[ (\dots,a_{-2},a_{-1},a_0,a_1,a_2,\dots) \]
+yang
+ \index{mutlak!terjumlahkan!barisan bilateral}%
+\df{terjumlahkan mutlak}; yaitu, yang memenuhi $\sum_{k=-\infty}^{\infty} \abs{a_k} <
+\infty$. Ini merupakan ruang Banach di bawah operasi penjumlahan dan perkalian skalar titik demi titik,
+dengan norma
+   \[ \norm a = \sum_{k=-\infty}^{\infty} \abs{a_k}\,. \]
+Untuk $a$, $b \in l_1(\Z)$ definisikan $a \ast b$ sebagai barisan yang entri ke-$n$-nya
+diberikan oleh
+  \[ (a \ast b)_n = \sum_{k=-\infty}^{\infty} a_{n-k}\,b_k\,. \]
+Operasi $\ast$ disebut
+ \index{konvolusi!dalam $l_1(\Z)$}%
+\df{konvolusi}. (Untuk melihat asal definisi ini, cobalah mengalikan deret pangkat
+$\sum_{-\infty}^{\infty}a_kz^k$ dan $\sum_{-\infty}^{\infty}b_kz^k$.) Dengan operasi tambahan ini
+$l_1(\Z)$ menjadi aljabar Banach komutatif beridentitas.
+
+Ruang ideal maksimal dari aljabar Banach ini
+ \index{ruang!ideal maksimal!dari $l_1(\Z)$}%
+ \index{ruang karakter!dari $l_1(\Z)$}%
+adalah (homeomorfik dengan) lingkaran satuan~$\T$.
+\end{exam}
+
+\begin{proof}[\emph{Petunjuk pembuktian}] Untuk setiap $z \in \T$ definisikan
+   \[ \psi_z\colon l_1(\Z) \sto \C\colon a \mapsto \sum_{k=-\infty}^\infty a_kz^k\,. \]
+Tunjukkan bahwa $\psi_z \in \Delta l_1(\Z)$. Kemudian tunjukkan bahwa pemetaan
+   \[ \psi\colon \T \sto \Delta l_1(\Z)\colon z \mapsto \psi_z \]
+adalah suatu homeomorfisme. \ns
+\end{proof}
+
+\begin{prop} Jika $\phi \in \Delta A$ dengan $A$ aljabar beridentitas, maka $\ker\phi$ merupakan
+ideal maksimal dalam~$A$.
+\end{prop}
+
+\begin{proof}[\emph{Petunjuk pembuktian}] Untuk menunjukkan kemaksimalan, misalkan $I$ ideal dalam $A$
+yang memuat $\ker\phi$ secara sejati. Pilih $z \in I \setminus \ker\phi$. Pertimbangkan elemen
+$x - \bigl(\phi(x)/\phi(z)\bigr)\,z$, dengan $x$ elemen sebarang dari~$A$.
+\ns
+\end{proof}
+
+\begin{prop} Suatu karakter pada aljabar beridentitas ditentukan sepenuhnya oleh kernelnya.
+\end{prop}
+
+\begin{proof}[\emph{Petunjuk pembuktian}] Misalkan $a$ elemen aljabar dan $\phi$ suatu karakter.
+Untuk berapa banyak bilangan kompleks $\lambda$ dapat $a^2 - \lambda a$ menjadi anggota kernel~$\phi$? \ns
+\end{proof}
+
+\begin{cor} Jika $A$ aljabar beridentitas, maka pemetaan $\phi \mapsto \ker\phi$ dari
+$\Delta A$ ke~$\mx A$ injektif.
+\end{cor}
+
+\begin{prop}\label{0007207} Misalkan $I$ ideal maksimal dalam aljabar Banach komutatif beridentitas~$A$.
+Maka terdapat karakter pada $A$ yang kernelnya adalah~$I$.
+\end{prop}
+
+\begin{proof}[\emph{Petunjuk pembuktian}] Gunakan korolari~\ref{C073147}. Mengapa kita dapat memandang
+pemetaan hasil bagi sebagai suatu karakter?  \ns
+\end{proof}
+
+\begin{cor}\label{0007207a} Jika $A$ aljabar Banach komutatif beridentitas, maka pemetaan
+$\phi \mapsto \ker\phi$ merupakan bijeksi dari $\Delta A$ ke~$\mx A$.
+\end{cor}
+
+\begin{defn} Misalkan $A$ aljabar Banach komutatif beridentitas. Berdasarkan korolari sebelumnya,
+kita dapat memberikan $\mx A$ suatu topologi yang membuatnya homeomorfik dengan ruang karakter~$\Delta A$.
+Inilah
+ \index{ruang!ideal maksimal}%
+ \index{ruang!maksimal ideal}%
+ \index{maksimal@$\mx A$!homeomorfik dengan $\Delta(A)$}%
+\df{ruang ideal maksimal} dari~$A$. Karena $\Delta A$ dan $\mx A$ homeomorfik, lazim untuk
+mengidentifikasi keduanya, sehingga $\Delta A$ sering disebut \emph{ruang ideal maksimal} dari~$A$.
+\end{defn}
+
+\begin{defn}\label{00073} Misalkan $X$ ruang Hausdorff kompak dan $x \in X$.
+Ingat bahwa dalam contoh~\ref{00068524} kita mendefinisikan $\sbsb EXx$, yaitu \emph{fungsional
+evaluasi} di~$x$, melalui
+   \[ \sbsb EXx(f) := f(x) \]
+untuk setiap $f \in \fml C(X)$. Pemetaan
+   \[ \sbsb EX \colon X \sto \Delta\fml C(X)\colon x \mapsto \sbsb EXx \]
+adalah
+ \index{pemetaan evaluasi}%
+ \index{evaluasi@$\sbsb EX$!pemetaan evaluasi}%
+\df{pemetaan evaluasi} pada~$X$. Sebagaimana disebutkan sebelumnya, ketika hanya satu ruang topologis
+yang sedang dipertimbangkan, biasanya kita menyingkat $\sbsb EX$ menjadi $E$ dan $\sbsb EXx$ menjadi~$E_x$.
+\end{defn}
+
+\begin{notn} Untuk menyatakan bahwa dua ruang topologis $X$ dan $Y$ homeomorfik, kita
+ \index{<binrel@$X \approx Y$ ($X$ dan $Y$ homeomorfik)}%
+menulis $X \approx Y$.
+\end{notn}
+
+\begin{prop}\label{000731} Misalkan $X$ ruang Hausdorff kompak. Maka
+ \index{ruang!ideal maksimal!dari $\fml C(X)$}%
+ \index{ruang karakter!dari $\fml C(X)$}%
+pemetaan evaluasi pada~$X$
+   \[ \sbsb EX \colon X \sto \Delta\fml C(X) \colon x \mapsto \sbsb EXx \]
+merupakan homeomorfisme. Jadi kita memiliki
+   \[ X \approx \Delta\fml C(X) \approx \mx\fml C(X)\,. \]
+Lebih dari itu: bukan hanya setiap $\sbsb EX$ merupakan homeomorfisme antara ruang Hausdorff kompak,
+melainkan $E$ sendiri merupakan suatu \emph{ekuivalensi natural} antara funktor---funktor identitas
+dan funktor $\Delta\fml C$.
+\end{prop}
+
+Identifikasi antara ruang Hausdorff kompak $X$ dan ruang karakternya serta ruang ideal maksimalnya
+begitu kuat sehingga banyak orang membicarakannya seolah-olah ketiganya benar-benar sama. Sangat lazim
+untuk mendengar, misalnya, bahwa ``ideal maksimal dalam $\fml C(X)$ hanyalah titik-titik di~$X$''.
+Walaupun secara harfiah tidak benar, ungkapan itu memang terdengar sedikit kurang mengintimidasi daripada
+``ideal maksimal dari $\fml C(X)$ adalah kernel fungsional evaluasi pada titik-titik~$X$''.
+
+\begin{prop}\label{000735} Misalkan $X$ dan $Y$ ruang Hausdorff kompak dan
+ \index{funktor!$\fml C$ sebagai suatu}%
+ \index{C@$\fml C$ (funktor)}%
+$F \colon X \sto Y$ kontinu. Ingat bahwa dalam contoh~\ref{C029717} kita mendefinisikan $\fml C(F)$
+pada $\fml C(Y)$ melalui
+   \[ \fml C(F)(g) = g \circ F\]
+untuk semua $g \in \fml C(Y)$. Maka
+  \begin{enumerate}[label=\rm{(\alph*)}]
+   \item $\fml C(F)$ memetakan $\fml C(Y)$ ke dalam $\fml C(X)$.
+   \item Pemetaan $\fml C(F)$ merupakan homomorfisme aljabar Banach beridentitas yang kontraktif.
+   \item $\fml C(F)$ injektif jika dan hanya jika $F$ surjektif.
+   \item $\fml C(F)$ surjektif jika dan hanya jika $F$ injektif.
+   \item Jika $X$ homeomorfik dengan $Y$, maka $\fml C(X)$ isomorfik secara isometrik
+   dengan~$\fml C(Y)$.
+  \end{enumerate}
+\end{prop}
+
+\begin{prop}\label{000736} Misalkan $A$ dan $B$ aljabar Banach komutatif beridentitas dan
+ \index{funktor!$\Delta$ sebagai suatu}%
+ \index{delta@$\Delta$ (funktor)}%
+$T\colon A \sto B$ homomorfisme aljabar beridentitas. Definisikan $\Delta T$ pada $\Delta B$ melalui
+   \[ \Delta T(\psi) = \psi \circ T \]
+untuk semua $\psi \in \Delta B$. Maka
+  \begin{enumerate}[label=\rm{(\alph*)}]
+   \item $\Delta T$ memetakan $\Delta B$ ke dalam $\Delta A$.
+   \item Pemetaan $\Delta T\colon \Delta B \sto \Delta A$ kontinu.
+   \item Jika $T$ surjektif, maka $\Delta T$ injektif.
+   \item Jika $T$ merupakan suatu isomorfisme (aljabar), maka $\Delta T$ merupakan homeomorfisme.
+   \item Jika $A$ dan $B$ isomorfik (secara aljabar), maka $\Delta A$ dan $\Delta B$
+   homeomorfik.
+  \end{enumerate}
+\end{prop}
+
+\begin{cor} Misalkan $X$ dan $Y$ ruang Hausdorff kompak. Jika $\fml C(X)$ dan $\fml C(Y)$ isomorfik
+secara aljabar, maka $X$ dan $Y$ homeomorfik.
+\end{cor}
+
+\begin{cor}\label{nasc_homeomor_CHSps} Dua ruang Hausdorff kompak homeomorfik jika dan hanya jika aljabar
+fungsi kontinu bernilai kompleksnya isomorfik (secara aljabar).
+\end{cor}
+
+Korolari~\ref{nasc_homeomor_CHSps} menimbulkan sekumpulan masalah yang sangat menarik. Korolari itu menyarankan
+bahwa untuk setiap sifat topologis ruang Hausdorff kompak $X$ seharusnya ada sifat aljabar yang bersesuaian
+dari aljabar $\fml C(X)$, dan \emph{sebaliknya}. Namun, korolari tersebut tidak memberikan resep yang dapat
+digunakan untuk menemukan korespondensi ini. Salah satu contoh yang sangat sederhana dari hasil semacam ini
+diberikan di bawah sebagai proposisi~\ref{prop_connected_idempotent}. Untuk pembahasan yang indah mengenai
+pertanyaan ini, lihat monograf Semadeni~\cite{Semadeni:1971}, khususnya tabel pada halaman~132--133.
+
+\begin{cor} Misalkan $X$ dan $Y$ ruang Hausdorff kompak. Jika $\fml C(X)$ dan $\fml C(Y)$ isomorfik
+secara aljabar, maka keduanya isomorfik secara isometrik.
+\end{cor}
+
+\begin{prop}\label{prop_connected_idempotent} Ruang topologis $X$ terhubung jika dan hanya jika aljabar $\fml C(X)$
+tidak memuat idempoten nontrivial.
+\end{prop}
+
+(Idempoten \emph{trivial} suatu aljabar adalah $\vc 0$ dan~$\vc 1$.)
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Transformasi Gelfand}
+\begin{defn} Misalkan $A$ aljabar Banach komutatif dan $a\in A$. Definisikan
+   \[\sbsb{\Gamma}A a\colon \Delta A \sto \C \colon \phi \mapsto \phi(a) \]
+untuk setiap $\phi \in \Delta(A)$. (Notasi alternatif: jika tidak menimbulkan kebingungan, kita
+sering menulis $\Gamma a$ atau $\wh a$ untuk $\sbsb{\Gamma}A a$.) Pemetaan $\sbsb{\Gamma}A$ adalah
+ \index{Gelfand!transformasi!pada aljabar Banach}%
+ \index{Gamma@$\sbsb\Gamma A$, $\Gamma$ (transformasi Gelfand)}%
+ \index{<unoptop@$\wh a$ (transformasi Gelfand dari~$a$)}%
+\df{transformasi Gelfand pada~$A$}.
+\end{defn}
+
+Karena $\Delta A \subseteq A^*$, jelas bahwa $\sbsb{\Gamma}A a$ hanyalah restriksi $a^{**}$
+pada ruang karakter~$A$. Lebih lanjut, topologi Gelfand pada $\Delta A$ adalah topologi-$w^*$ relatif,
+yaitu topologi terlemah yang membuat $a^{**}$ kontinu pada $\Delta A$ untuk setiap $a \in A$,
+sehingga $\sbsb{\Gamma}A a$ merupakan fungsi kontinu pada $\Delta A$. Jadi
+$\sbsb{\Gamma}A \colon A \sto \fml C(\Delta A)$.
+
+Sebagai ringkasan dan demi kemudahan, elemen $\sbsb{\Gamma}A a = \Gamma a = \wh a$ biasanya cukup
+disebut
+ \index{Gelfand!transformasi!dari suatu elemen}%
+\emph{transformasi Gelfand dari~$a$}---karena frasa \emph{transformasi Gelfand pada $A$ yang dievaluasi
+pada~$a$} terasa janggal.
+
+\begin{defn} Kita mengatakan bahwa suatu keluarga fungsi $\fml F$ pada himpunan $S$
+ \index{pemisahan!titik}%
+\df{memisahkan titik-titik} pada $S$ (atau merupakan
+ \index{pemisah!keluarga fungsi}%
+\df{keluarga fungsi pemisah} pada $S$) jika untuk setiap pasangan elemen berbeda $x$
+dan $y$ dari $S$ terdapat $f \in \fml F$ sedemikian sehingga $f(x) \ne f(y)$.
+\end{defn}
+
+\begin{prop} Misalkan $X$ ruang topologis kompak. Maka $\fml C(X)$ memisahkan titik-titik jika dan
+hanya jika $X$ Hausdorff.
+\end{prop}
+
+\begin{prop}\label{0007402} Jika $A$ aljabar Banach komutatif, maka $\sbsb{\Gamma}A
+\colon A \sto \fml C(\Delta A)$ merupakan homomorfisme aljabar yang kontraktif dan jangkauan
+$\sbsb{\Gamma}A$ merupakan subaljabar pemisah dari $\fml C(\Delta A)$. Jika, sebagai tambahan,
+$A$ beridentitas, maka $\Gamma$ bernorma satu, jangkauannya merupakan subaljabar beridentitas dari
+$\fml C(\Delta A)$, dan pemetaan itu merupakan homomorfisme beridentitas.
+\end{prop}
+
+\begin{prop} Misalkan $a$ elemen aljabar Banach komutatif beridentitas~$A$. Maka $a$ invertibel dalam
+$A$ jika dan hanya jika $\hat a$ invertibel dalam~$\fml C(\Delta A)$.
+\end{prop}
+
+\begin{prop}\label{00074043} Misalkan $A$ aljabar Banach komutatif beridentitas dan $a$ suatu
+elemen dari~$A$. Maka $\ran\hat a = \sigma(a)$ dan $\norm{\hat a}_u~=~\rho(a)$.
+\end{prop}
+
+\begin{defn} Suatu elemen $a$ dari aljabar Banach disebut
+ \index{kuasinilpoten}%
+\df{kuasinilpoten} jika $\lim\limits_{n \sto \infty}\norm{a^n}^{1/n} = 0$.
+\end{defn}
+
+\begin{prop} Misalkan $a$ elemen aljabar Banach komutatif beridentitas~$A$. Maka pernyataan-pernyataan
+berikut ekuivalen:
+  \begin{enumerate}[label=\rm{(\alph*)}]
+   \item $a$ kuasinilpoten;
+   \item $\rho(a) = 0$;
+   \item $\sigma(a) = \{0\}$;
+   \item $\Gamma a = 0$;
+   \item $\phi(a) = 0$ untuk setiap $\phi \in \Delta A$;
+   \item $a \in \bigcap\mx A$.
+  \end{enumerate}
+\end{prop}
+
+\begin{defn} Suatu aljabar Banach disebut
+ \index{semisederhana}%
+\df{semisederhana} jika tidak memiliki elemen kuasinilpoten tak nol.
+\end{defn}
+
+\begin{prop} Misalkan $A$ aljabar Banach komutatif beridentitas. Pernyataan-pernyataan berikut ekuivalen:
+  \begin{enumerate}[label=\rm{(\alph*)}]
+   \item $A$ semisederhana;
+   \item jika $\rho(a) = 0$, maka $a = 0$;
+   \item jika $\sigma(a) = \{0\}$, maka $a = 0$;
+   \index{monomorfisme}%
+   \item transformasi Gelfand $\sbsb{\Gamma}A$ merupakan monomorfisme (yaitu,
+   homomorfisme injektif);
+   \item jika $\phi(a) = 0$ untuk setiap $\phi \in \Delta A$, maka $a = 0$;
+   \item $\bigcap\mx A = \{0\}$.
+  \end{enumerate}
+\end{prop}
+
+\begin{prop}\label{00074083} Misalkan $A$ aljabar Banach komutatif beridentitas. Maka
+pernyataan-pernyataan berikut ekuivalen:
+  \begin{enumerate}[label=\rm{(\alph*)}]
+    \item $\|a^2\| = \|a\|^2$ untuk semua $a \in A$;
+    \item $\rho(a) = \|a\|$ untuk semua $a \in A$; dan
+    \item transformasi Gelfand merupakan isometri; yaitu, $\norm{\wh a}_u = \|a\|$ untuk
+    semua $a \in A$.
+  \end{enumerate}
+\end{prop}
+
+\begin{exam} Transformasi Gelfand pada $l_1(\Z)$ bukan isometri.
+\end{exam}
+
+Ingat dari proposisi~\ref{000731} bahwa ketika $X$ ruang Hausdorff kompak, pemetaan evaluasi $E_X$
+mengidentifikasi ruang $X$ dengan ruang ideal maksimal aljabar Banach~$\fml C(X)$. Jadi menurut proposisi~\ref{000735},
+pemetaan $\fml CE_X$ mengidentifikasi aljabar $\fml C(\Delta(\fml C(X)))$ fungsi kontinu pada ruang ideal maksimal
+ini dengan aljabar $\fml C(X)$ itu sendiri. Ternyata transformasi Gelfand pada aljabar $\fml C(X)$ hanyalah invers
+dari pemetaan identifikasi ini.
+
+\begin{exam} Misalkan $X$ ruang Hausdorff kompak. Maka transformasi Gelfand pada aljabar Banach
+$\fml C(X)$ merupakan isomorfisme isometrik. Bahkan, pada $\fml C(X)$ transformasi Gelfand
+\smash[b]{$\sbsb\Gamma X$} adalah $(\fml CE_X)^{-1}$.
+\end{exam}
+
+\begin{exam}\label{0007472} Ruang ideal maksimal aljabar Banach $L_1(\R)$
+ \index{ruang!ideal maksimal!untuk $L_1(\R)$}%
+adalah $\R$ sendiri dan transformasi Gelfand pada $L_1(\R)$ adalah transformasi Fourier.
+\end{exam}
+
+\begin{proof} Lihat~\cite{BaggettF:1979}, halaman 169--171.  \ns
+\end{proof}
+
+Fungsi $t \mapsto e^{it}$ merupakan bijeksi dari interval $[-\pi,\pi)$ ke
+ \index{T@$\T$ (lingkaran satuan pada bidang kompleks)}%
+lingkaran satuan~$\T$ pada bidang kompleks. Salah satu akibatnya adalah kita tidak perlu membedakan antara
+  \begin{enumerate}[label=\rm{(\alph*)}]
+     \item fungsi $2\pi$-periodik pada~$\R$,
+     \item semua fungsi pada $[-\pi,\pi)$,
+     \item fungsi $f$ pada $[-\pi,\pi]$ sedemikian sehingga $f(-\pi) = f(\pi)$, dan
+     \item fungsi pada~$\T$.
+  \end{enumerate}
+Dalam kelanjutan, kita akan sering mengidentifikasi kelas-kelas fungsi ini tanpa penjelasan lebih lanjut.
+
+Identifikasi lain yang berguna adalah antara lingkaran satuan $\T$ dalam $\C$ dan ruang ideal maksimal
+aljabar $l_1(\Z)$. Homeomorfisme $\psi$ antara dua ruang Hausdorff kompak ini didefinisikan dalam contoh~\ref{000633}.
+Dalam bekerja dengan transformasi Gelfand $\Gamma_a$ dari elemen $a \in l_1(\Z)$, sering secara teknis lebih mudah
+memperlakukannya sebagai fungsi, sebut saja $G_a$, yang daerah asalnya adalah~$\T$, seperti ditunjukkan oleh diagram berikut.
+  \[
+    \xy
+      \btriangle[\T`\Delta l_1(\Z)`\C;\psi`G_a`\Gamma_a]
+    \endxy
+  \]
+Jadi untuk $a \in l_1(\Z)$ dan $z \in \T$ berlaku
+  \[ G_a(z) = \Gamma_a(\psi_z) = \psi_z(a) = \sum_{k=-\infty}^\infty a_kz^k\,. \]
+
+\begin{defn} Jika $f \in \fml L_1([-\pi,\pi))$, maka
+  \index{Fourier!deret}%
+\df{deret Fourier} untuk $f$ adalah deret
+   \[ \sum_{n=-\infty}^\infty\wt f(n)\exp(int) \qquad -\pi \le t \le \pi \]
+dengan barisan $\wt f$ didefinisikan oleh
+   \[ \wt f(n) = {\textstyle\frac1{2\pi}}\int_{-\pi}^\pi f(t)\exp(-int)\,dt \]
+untuk semua $n \in \Z$. Barisan dua arah tak hingga $\wt f$ adalah
+  \index{Fourier!transformasi!pada $L_1([-\pi,\pi])$}%
+\df{transformasi Fourier} dari $f$, dan bilangan $\wt f(n)$ adalah
+  \index{Fourier!koefisien}%
+\df{koefisien Fourier} ke-$n$ dari $f$. Jika $\wt f \in l_1(\Z)$, kita mengatakan bahwa $f$ memiliki
+  \index{mutlak!konvergen!deret Fourier}%
+  \index{Fourier!deret!konvergen mutlak}%
+\df{deret Fourier yang konvergen mutlak}. Himpunan semua fungsi kontinu pada $\T$
+dengan deret Fourier yang konvergen mutlak dinotasikan dengan
+  \index{mutlak@$\fml{A\,C}(\T)$ (deret Fourier yang konvergen mutlak}%
+$\fml{A\,C}(\T)$.
+\end{defn}
+
+\begin{prop} Jika $f$ fungsi kontinu $2\pi$-periodik pada $\R$ yang transformasi Fouriernya nol,
+maka $f = 0$.
+\end{prop}
+
+\begin{cor} Transformasi Fourier pada $\fml C(\T)$ injektif.
+\end{cor}
+
+\begin{prop} Transformasi Fourier pada $\fml C(\T)$ merupakan invers kiri dari transformasi Gelfand
+pada~$l_1(\Z)$.
+\end{prop}
+
+\begin{prop} Jangkauan transformasi Gelfand pada $l_1(\Z)$ adalah aljabar Banach komutatif beridentitas
+$\fml{A\,C}(\T)$.
+\end{prop}
+
+\begin{prop} Terdapat fungsi kontinu yang deret Fouriernya divergen di~$0$.
+\end{prop}
+
+\begin{proof} Lihat, misalnya, \cite{HewittS:1965}, latihan 18.45.  \ns
+\end{proof}
+
+Apa yang dikatakan hasil sebelumnya mengenai transformasi Gelfand $\Gamma\colon l_1(\Z) \sto
+\fml C(\T)$?
+
+\vskip 3 pt
+
+Misalkan suatu fungsi $f$ termasuk dalam $\fml{AC}(\T)$ dan tidak pernah nol. Maka $1/f$ tentu kontinu pada~$\T$,
+tetapi apakah deret Fouriernya konvergen mutlak? Salah satu keberhasilan awal studi abstrak aljabar Banach
+adalah pembuktian yang sangat sederhana atas pertanyaan ini, yang mula-mula diberikan oleh Norbert Wiener.
+Bukti asli Wiener melalui perbandingan cukup sulit.
+
+\begin{thm}[Teorema Wiener] Misalkan $f$ fungsi kontinu pada $\T$ yang tidak pernah
+ \index{teorema Wiener}%
+nol. Jika $f$ memiliki deret Fourier yang konvergen mutlak, maka kebalikannya~$1/f$ juga demikian.
+\end{thm}
+
+\begin{exam} Transformasi Laplace juga dapat dipandang sebagai kasus khusus transformasi Gelfand.
+Untuk rinciannya, lihat~\cite{BaggettF:1979}, halaman 173--175.
+\end{exam}
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Aljabar-$C^*$ Beridentitas}
+
+\begin{prop} Jika $a$ elemen suatu aljabar-$*\,$, maka $\sigma(a^*) = \conj{\sigma(a)}$.
+\end{prop}
+
+
+\begin{prop}\label{001311} Dalam setiap aljabar-$C^*$, involusi merupakan isometri. Artinya,
+ \index{involusi!merupakan isometri}%
+$\norm{a^*} = \norm{a}$ untuk setiap elemen $a$ dalam aljabar.
+\end{prop}
+
+Dalam definisi~\ref{def_norm_alg} tentang \emph{aljabar bernorma}, kita memberikan syarat khusus bahwa
+elemen identitas dari aljabar bernorma beridentitas harus bernorma satu. Dalam aljabar-$C^*$, syarat
+ini bersifat berlebihan.
+
+\begin{cor} Dalam aljabar-$C^*$ beridentitas, $\norm{\vc 1} = 1$.
+\end{cor}
+
+\begin{cor}\label{001311005fa} Setiap elemen uniter dalam aljabar-$C^*$ beridentitas bernorma satu.
+\end{cor}
+
+\begin{cor}\label{001311008} Jika $a$ elemen aljabar-$C^*$ $A$ sedemikian sehingga
+$ab = \vc 0$ untuk setiap $b \in A$, maka $a = \vc 0$.
+\end{cor}
+
+\begin{prop}\label{00131101} Misalkan $a$ elemen normal dari aljabar-$C^*$.
+Maka $\norm{a^2} = {\norm a}^2$. Jika aljabar tersebut beridentitas, maka $\rho(a)~=~\norm a$.
+\end{prop}
+
+\begin{cor} Jika $p$ proyeksi tak nol dalam aljabar-$C^*$, maka $\norm p = 1$.
+\end{cor}
+
+\begin{cor}\label{00131102} Misalkan $a \in A$, dengan $A$ suatu aljabar-$C^*$ komutatif. Maka
+$\norm{a^2} = {\norm a}^2$ dan, jika sebagai tambahan $A$ beridentitas, maka $\rho(a)~=~\norm a$.
+\end{cor}
+
+\begin{cor}\label{00131103} Pada aljabar-$C^*$ komutatif beridentitas $A$, transformasi Gelfand
+$\Gamma$ merupakan isometri; yaitu, $\norm{\Gamma_a}_u = \norm{\wh a}_u = \norm a$ untuk
+setiap $a \in A$.
+\end{cor}
+
+\begin{cor}\label{00131104} Norma aljabar-$C^*$ beridentitas bersifat unik, dalam arti bahwa
+untuk aljabar beridentitas $A$ dengan involusi, terdapat paling banyak satu norma yang menjadikan
+$A$ sebuah aljabar-$C^*$.
+\end{cor}
+
+\begin{prop}\label{001312} Jika $a$ elemen swadjoin dari aljabar-$C^*$ beridentitas,
+ \index{spektrum!elemen swadjoin}%
+ \index{swadjoin!spektrum elemen}%
+maka $\sigma(a) \subseteq \R$.
+\end{prop}
+
+\begin{proof}[\emph{Petunjuk pembuktian}] Tuliskan $\lambda \in \sigma(a)$ dalam bentuk $\alpha + i\beta$, dengan $\alpha$, $\beta \in \R$.
+Untuk setiap $n \in \N$ misalkan $b_n := a - \alpha \vc 1 + i n\beta\vc 1$. Tunjukkan bahwa untuk setiap $n$ skalar
+$i(n+1)\beta$ termasuk dalam spektrum $b_n$ dan karena itu
+   \[ {\abs{i(n+1)\beta}}^2 \le {\norm{a - \alpha\vc 1}}^2 + n^2\beta^2\,. \]   \ns
+\end{proof}
+
+\begin{cor}\label{001406} Misalkan $A$ aljabar-$C^*$ komutatif beridentitas. Jika $a \in A$ swadjoin,
+maka transformasi Gelfand $\wh a$ bernilai real.
+\end{cor}
+
+\begin{cor}\label{0014062} Setiap karakter pada aljabar-$C^*$ merupakan homomorfisme-$*\,$.
+\end{cor}
+
+\begin{cor}\label{0014062fa} Transformasi Gelfand pada aljabar-$C^*$ komutatif beridentitas $A$ merupakan
+homomorfisme-$*\,$ beridentitas ke dalam~$\fml C(\Delta A)$.
+\end{cor}
+
+\begin{cor} Jangkauan transformasi Gelfand pada aljabar-$C^*$ komutatif beridentitas $A$ merupakan
+subaljabar pemisah, swadjoin, beridentitas dari~$\fml C(\Delta A)$.
+\end{cor}
+
+\begin{prop}\label{001313} Jika $u$ elemen uniter dari aljabar-$C^*$ beridentitas,
+ \index{spektrum!elemen uniter}%
+ \index{uniter!spektrum elemen}%
+maka $\sigma(u) \subseteq \T$.
+\end{prop}
+
+\begin{prop} Transformasi Gelfand $\Gamma$ merupakan ekuivalensi natural antara funktor identitas
+dan funktor $\fml C\Delta$ pada kategori aljabar-$C^*$ komutatif beridentitas dan homomorfisme-$*\,$
+beridentitas.
+\end{prop}
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Teorema Gelfand-Naimark}
+
+Kita mengingat kembali suatu teorema baku dari analisis real.
+
+\begin{thm}[Teorema Stone-Weierstrass]\label{00141} Misalkan $X$ ruang Hausdorff kompak. Setiap
+ \index{teorema Stone-Weierstrass}%
+subaljabar-$*\,$ pemisah beridentitas dari $\fml C(X)$ rapat.
+\end{thm}
+
+\begin{proof} Lihat \cite{Douglas:1972}, teorema 2.40. \ns \end{proof}
+
+Versi pertama dari \emph{teorema Gelfand-Naimark} menyatakan bahwa setiap aljabar-$C^*$ komutatif
+beridentitas adalah aljabar semua fungsi kontinu pada suatu ruang Hausdorff kompak. Tentu saja kata
+\emph{adalah} dalam kalimat sebelumnya berarti \emph{isomorfik secara isometrik dan sebagai-$*$ dengan}.
+Ruang Hausdorff kompak yang dimaksud adalah ruang karakter aljabar tersebut.
+
+\begin{thm}[Teorema Gelfand-Naimark I]\label{00142} Misalkan $A$ aljabar-$C^*$ komutatif
+ \index{Gelfand-Naimark!teorema I}%
+beridentitas. Maka transformasi Gelfand $\Gamma_A\colon a \mapsto \wh a$ merupakan
+isomorfisme-$*\,$ isometrik dari $A$ ke~$\fml C(\Delta A)$.
+\end{thm}
+
+
+
+
+
+
+\begin{defn} Misalkan $S$ subhimpunan tak kosong dari aljabar-$C^*$~$A$. Irisan
+keluarga semua subaljabar-$C^*$ dari $A$ yang memuat $S$ disebut
+ \index{C*@$C^*$-aljabar!yang dibangkitkan oleh suatu himpunan}%
+\df{subaljabar-$C^*$ yang dibangkitkan oleh~$S$}. Kita menotasikannya dengan
+ \index{C*@$C^*(S)$ ($C^*$-subalgebra yang dibangkitkan oleh~$S$)}%
+$C^*(S)$. (Mudah dilihat bahwa irisan suatu keluarga subaljabar-$C^*$ memang merupakan
+aljabar-$C^*$.) Dalam beberapa kasus kita sedikit menyingkat notasi: misalnya, jika $a \in A$ kita
+menulis $C^*(a)$ untuk~$C^*(\{a\})$ dan $C^*(\vc 1,a)$ untuk $C^*(\{\vc 1,a\})$.
+\end{defn}
+
+\begin{prop} Misalkan $S$ subhimpunan tak kosong dari aljabar-$C^*$~$A$. Untuk setiap bilangan natural
+$n$ definisikan himpunan $W_n$ sebagai himpunan semua elemen $a$ dari $A$ yang untuknya terdapat
+$x_1$, $x_2$, \dots, $x_n$ dalam $S \cup S^*$ sedemikian sehingga $a = x_1x_2\cdots x_n$. Misalkan
+$W = \bigcup_{n=1}^\infty W_n$. Maka
+   \[ C^*(S) = \clo{\spn W}\,. \]
+\end{prop}
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{thm}[Teorema Spektral Abstrak]\label{00144} Jika $a$ elemen normal dari aljabar-$C^*$
+ \index{abstrak!teorema spektral}%
+ \index{spektral!teorema!abstrak}%
+beridentitas $A$, maka aljabar-$C^*$ $\fml C(\sigma(a))$ isomorfik secara isometrik dan sebagai-$*$
+dengan $C^*(\vc 1,a)$.
+\end{thm}
+
+\begin{proof}[\emph{Petunjuk pembuktian}] Gunakan transformasi Gelfand dari $a$ untuk mengidentifikasi
+ruang ideal maksimal $C^*(\vc 1,a)$ dengan spektrum~$a$. Terapkan funktor~$\fml C$.
+Komposisikan pemetaan yang dihasilkan dengan $\Gamma^{-1}$, dengan $\Gamma$ transformasi Gelfand pada
+aljabar-$C^*$~$C^*(\vc 1,a)$.   \ns
+\end{proof}
+
+Jika $\psi\colon \fml C(\sigma(a)) \sto C^*(\vc 1,a)$ adalah isomorfisme-$*\,$ pada teorema sebelumnya dan $f$
+merupakan fungsi kontinu pada spektrum $a$, maka elemen $\psi(f)$ dalam aljabar $A$ biasanya dinotasikan
+dengan~$f(a)$. Operasi yang mengaitkan fungsi kontinu $f$ dengan elemen $f(a)$ dalam $A$ ini disebut
+ \index{kalkulus!fungsional}%
+ \index{fungsional!kalkulus}%
+\emph{kalkulus fungsional} yang terkait dengan~$a$.
+
+\begin{exam} Misalkan pada teorema sebelumnya $\psi\colon \fml C(\sigma(a)) \sto
+C^*(\vc 1,a)$ merealisasikan isomorfisme-$*\,$ isometrik. Maka citra di bawah $\psi$ dari fungsi konstan~$\vc 1$
+pada spektrum $a$ adalah $\vc 1_A$, dan citra di bawah $\psi$ dari fungsi identitas $\lambda \mapsto \lambda$
+pada spektrum $a$ adalah~$a$.
+\end{exam}
+
+\begin{exam}\label{X_sqroot_op} Misalkan $T$ operator normal pada ruang Hilbert $H$ yang spektrumnya termuat
+dalam~$[0,\infty)$. Misalkan $\psi\colon \fml C(\sigma(T)) \sto C^*(I,T)$ merealisasikan isomorfisme-$*\,$
+isometrik antara kedua aljabar-$C^*$ ini. Maka terdapat setidaknya satu operator $\sqrt T$ yang kuadratnya
+adalah~$T$. Memang, setiap kali $f$ fungsi kontinu pada spektrum operator normal~$T$, kita dapat secara bermakna
+membicarakan operator~$f(T)$.
+\end{exam}
+
+\begin{exam} Jika $N$ operator normal pada ruang Hilbert yang spektrumnya adalah $\{0,1\}$, maka
+$N$ merupakan proyeksi ortogonal.
+\end{exam}
+
+\begin{exam} Jika $N$ operator normal pada ruang Hilbert yang spektrumnya termuat dalam lingkaran satuan~$\T$,
+maka $N$ merupakan operator uniter.
+\end{exam}
+
+\begin{prop}[Teorema pemetaan spektral]\label{001446} Misalkan $a$ elemen swadjoin
+ \index{spektral!teorema pemetaan}%
+dalam aljabar-$C^*$ beridentitas~$A$ dan $f$ fungsi kontinu bernilai kompleks pada spektrum
+$a$. Maka
+  \[ \sigma(f(a)) = f^{\sto}(\sigma(a))\,. \]
+\end{prop}
+
+Kalkulus fungsional memetakan fungsi kontinu ke fungsi kontinu dalam pengertian berikut.
+
+\begin{prop}\label{001449} Misalkan $A$ aljabar-$C^*$ beridentitas, $K$ subhimpunan kompak tak kosong dari~$\R$,
+dan $f\colon K \sto \C$ fungsi kontinu. Misalkan $\ofml H_K$ himpunan semua elemen swadjoin dari $A$ yang spektrumnya
+merupakan subhimpunan dari~$K$. Maka fungsi $f\colon \ofml H_K \sto A\colon h \mapsto f(h)$ kontinu.
+\end{prop}
+
+\begin{proof}[\emph{Petunjuk pembuktian}] Aproksimasi $f$ secara seragam dengan suatu polinom dan gunakan
+\emph{teorema pemetaan spektral}~\ref{001446} serta argumen $\epsilon$ dibagi $3$.   \ns
+\end{proof}
+
+
+
+
+
+
+
+
+
+
+
+
+
+\endinput

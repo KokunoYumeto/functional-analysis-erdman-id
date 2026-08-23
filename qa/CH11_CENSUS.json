@@ -1,0 +1,187 @@
+{
+  "schema_version": "o008.ch11-census.v1",
+  "unit_id": "FAOA-2015-CH11",
+  "status": "source_census_only",
+  "source": {
+    "path": "source/upstream/Gelfand_Naimark.tex",
+    "title": "THE GELFAND-NAIMARK THEOREM",
+    "source_order_position": 11,
+    "bytes": 32235,
+    "lines": 788,
+    "line_endings": "CRLF",
+    "sha256": "018f15db7ee5a4392f624af050507a90339e1469e30f97c6017e003c7ff33b26"
+  },
+  "sections": [
+    {
+      "number": 1,
+      "title_source": "Maximal Ideals in $\\fml C(X)$",
+      "line_start": 9,
+      "line_end": 62
+    },
+    {
+      "number": 2,
+      "title_source": "The Character Space",
+      "line_start": 63,
+      "line_end": 334
+    },
+    {
+      "number": 3,
+      "title_source": "The Gelfand Transform",
+      "line_start": 335,
+      "line_end": 555
+    },
+    {
+      "number": 4,
+      "title_source": "Unital $C^*$-algebras",
+      "line_start": 556,
+      "line_end": 656
+    },
+    {
+      "number": 5,
+      "title_source": "The Gelfand-Naimark Theorem",
+      "line_start": 657,
+      "line_end": 788
+    }
+  ],
+  "counts": {
+    "sections": 5,
+    "environment_begins_total": 107,
+    "theorem_like_environments_total": 84,
+    "theorem_like_by_environment": {
+      "prop": 35,
+      "cor": 19,
+      "exam": 15,
+      "defn": 10,
+      "thm": 4,
+      "notn": 1
+    },
+    "proofs": 12,
+    "proof_hints": 9,
+    "citation_only_proofs": 3,
+    "inline_hints": 0,
+    "exercise_environments": 0,
+    "exercise_mentions": 1,
+    "answer_environments": 0,
+    "solution_environments": 0,
+    "enumerate_environments": 7,
+    "bmatrix_environments": 4,
+    "labels": 38,
+    "references": 15,
+    "citations": 5,
+    "unique_citations": 4,
+    "index_hooks": 65,
+    "defined_terms": 21,
+    "math_surfaces": 625,
+    "math_surface_by_delimiter": {
+      "dollar-inline": 604,
+      "bracket-display": 21
+    }
+  },
+  "count_method": {
+    "environment_and_token_parser": "Python regular-expression census over the frozen source; structural begin/end counts balance.",
+    "math_surface_parser": "backend/ch03_math.py extract_math()",
+    "math_surface_parser_sha256": "6f94fd3d4cf65ac8509544b2dfd381798ea7251b4557dbdf8165b3a6ebcea0f3",
+    "math_surface_parser_bytes": 6352
+  },
+  "reference_check": {
+    "all_references_resolved_against_frozen_source_closure": true,
+    "unresolved_references": [],
+    "external_references": [
+      {
+        "line": 3,
+        "target": "spectrum",
+        "source_file": "spectrum.tex"
+      },
+      {
+        "line": 205,
+        "target": "C073147",
+        "source_file": "spectrum.tex"
+      },
+      {
+        "line": 262,
+        "target": "C029717",
+        "source_file": "categories.tex"
+      },
+      {
+        "line": 567,
+        "target": "def_norm_alg",
+        "source_file": "normlinspaces.tex"
+      }
+    ],
+    "local_chapter_references": 11,
+    "citation_keys": [
+      "Semadeni:1971",
+      "BaggettF:1979",
+      "HewittS:1965",
+      "Douglas:1972"
+    ]
+  },
+  "high_confidence_source_anomalies": [
+    {
+      "id": "GN-001",
+      "line_start": 83,
+      "line_end": 83,
+      "class": "TeX punctuation",
+      "severity": "high",
+      "excerpt": "(that is, if $a^2 = a)$, then",
+      "finding": "The closing parenthesis is inside the math delimiters.",
+      "recommended_action": "Use `$a^2 = a$), then` so the parenthesis closes the prose parenthetical outside math."
+    },
+    {
+      "id": "GN-002",
+      "line_start": 205,
+      "line_end": 206,
+      "class": "copyedit/punctuation",
+      "severity": "high",
+      "excerpt": "Use corollary~\\ref{C073147} Why can we think of the quotient map as a character?",
+      "finding": "The reference and the following question have no sentence punctuation or separator.",
+      "recommended_action": "Insert a period or colon after the reference (for example, `...\\ref{C073147}. Why ...`)."
+    },
+    {
+      "id": "GN-003",
+      "line_start": 470,
+      "line_end": 470,
+      "class": "copyedit/number agreement",
+      "severity": "high",
+      "excerpt": "these two compact Hausdorff space was defined",
+      "finding": "The plural demonstrative `these two` is paired with singular `space`.",
+      "recommended_action": "Change `space` to `spaces`."
+    },
+    {
+      "id": "GN-004",
+      "line_start": 480,
+      "line_end": 480,
+      "class": "mathematical notation",
+      "severity": "high",
+      "excerpt": "\\sum_{k=-\\infty}^\\infty a_nz^n",
+      "finding": "The summation index is k, but the summand uses the free index n; the preceding definition of \\psi_z uses a_k z^k.",
+      "recommended_action": "Use `\\sum_{k=-\\infty}^\\infty a_k z^k`."
+    },
+    {
+      "id": "GN-005",
+      "line_start": 519,
+      "line_end": 519,
+      "class": "copyedit/punctuation",
+      "severity": "high",
+      "excerpt": "See, for example, \\cite{HewittS:1965}, exercise 18.45.)",
+      "finding": "There is an unmatched closing parenthesis after the exercise citation.",
+      "recommended_action": "Remove the final `)` or add the intended opening parenthesis."
+    },
+    {
+      "id": "GN-006",
+      "line_start": 750,
+      "line_end": 750,
+      "class": "copyedit/duplicate word",
+      "severity": "high",
+      "excerpt": "whose spectrum is is contained",
+      "finding": "The word `is` is duplicated.",
+      "recommended_action": "Change to `whose spectrum is contained`."
+    }
+  ],
+  "notes": [
+    "No Indonesian target was edited by this census and no backend or control file was changed.",
+    "The sole exercise mention is the bibliographic phrase `exercise 18.45` in the citation-only proof at line 519; there are no explicit exercise, answer, or solution environments.",
+    "The source-order chapter contains nine explicit proof-hint blocks and three proofs consisting of citations only; all 12 proof environments are balanced.",
+    "The line-470 singular and line-83 delimiter placement are copyedit/TeX issues; the line-480 index mismatch is a mathematical notation error. All six entries are held as source corrections for later provenance review, not silently applied here."
+  ]
+}

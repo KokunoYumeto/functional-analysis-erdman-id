@@ -194,6 +194,30 @@ No upstream contact occurs during production. These entries are held for the
 single deduplicated post-corpus report only if that report is separately
 authorized.
 
+## Chapter 11
+
+The following six high-confidence source defects were checked against the
+frozen Gelfand_Naimark.tex witness and are repaired or normalized in
+source/id-ID/Gelfand_Naimark-id.tex. Labels, references, citations, index
+topology, and mathematical order remain unchanged.
+
+1. Gelfand_Naimark.tex:83: close the idempotent equation as
+   $a^2=a$; the source has an unmatched closing parenthesis inside math.
+2. Gelfand_Naimark.tex:205: punctuate the proof hint after
+   \ref{C073147} before the question that follows.
+3. Gelfand_Naimark.tex:470: translate the singular grammatical slip
+   “compact Hausdorff space” as the intended plural ruang Hausdorff kompak.
+4. Gelfand_Naimark.tex:480: use the summation index consistently,
+   a_k z^k, rather than the source's a_n z^n under a k-sum.
+5. Gelfand_Naimark.tex:519: remove the unmatched closing parenthesis after
+   citation HewittS:1965, exercise 18.45.
+6. Gelfand_Naimark.tex:750: remove the duplicated “is” in the spectrum
+   hypothesis; the Indonesian sentence is rendered once as termuat.
+
+No upstream contact occurs during production. These entries are held for the
+single deduplicated post-corpus report only if that report is separately
+authorized.
+
 ## Chapter 5
 
 The following source candidates are adjudicated and applied in

@@ -1,0 +1,152 @@
+{
+  "schema_version": "o008.source-corrections.v1",
+  "unit_id": "FAOA-2015-CH11",
+  "chapter": 11,
+  "status": "adjudicated_and_applied",
+  "source": {
+    "path": "source/upstream/Gelfand_Naimark.tex",
+    "bytes": 32235,
+    "logical_records": 788,
+    "line_endings": "CRLF",
+    "sha256": "018f15db7ee5a4392f624af050507a90339e1469e30f97c6017e003c7ff33b26"
+  },
+  "target": {
+    "path": "source/id-ID/Gelfand_Naimark-id.tex",
+    "bytes": 32551,
+    "logical_records": 764,
+    "line_endings": "LF",
+    "sha256": "69bd9ba794ef0d5eb74e444cf2676878b7797e5dd5b75fcfc4abdd247b1b5ee5"
+  },
+  "normalization": {
+    "id": "explicit-range-nfc-whitespace-v1",
+    "source_selection": "inclusive physical source-line range",
+    "target_mapping": "inclusive physical target-line range after translation and bounded source correction",
+    "steps": [
+      "discard blank records and strip trailing whitespace",
+      "join selected records with LF",
+      "normalize Unicode NFC",
+      "collapse Unicode whitespace runs to ASCII spaces",
+      "hash UTF-8 bytes with SHA-256"
+    ]
+  },
+  "record_count": 6,
+  "class_counts": {
+    "MATHEMATICAL_SOURCE_REPAIR": 1,
+    "MECHANICAL_SOURCE_REPAIR": 4,
+    "MECHANICAL_TEX_SOURCE_REPAIR": 1
+  },
+  "independent_review": {
+    "structural_math_replay": "passed: 107 environment pairs, 38 labels, 15 refs, 5 cites, 65 indexes, 625 math surfaces",
+    "source_anomaly_review": "passed: six high-confidence candidates; no upstream contact during production"
+  },
+  "records": [
+    {
+      "id": "FAOA-2015-CH11-CORR-001",
+      "source_lines": {
+        "start": 83,
+        "end": 83
+      },
+      "target_lines": {
+        "start": 85,
+        "end": 85
+      },
+      "classification": "MECHANICAL_TEX_SOURCE_REPAIR",
+      "decision": "close the unmatched parenthesis in the idempotent equation",
+      "source_normalized_snippet": "\\item if $a$ is \\df{idempotent} (that is, if $a^2 = a)$, then $\\phi(a)$ is $0$ or~$1$; and",
+      "target_normalized_snippet": "\\df{idempoten} (yaitu, jika $a^2 = a$), maka $\\phi(a)$ adalah $0$ atau~$1$; dan",
+      "source_normalized_snippet_sha256": "5d462d7fc8b89c84858447af72f89f1f8a6cfeaa6bff296d378787701703b215",
+      "target_normalized_snippet_sha256": "f85155ebb4165457ebab5cce6a2065059e48899bbb53e7b5840f892dd1367ab3",
+      "required_target_anchor": "$a^2 = a$"
+    },
+    {
+      "id": "FAOA-2015-CH11-CORR-002",
+      "source_lines": {
+        "start": 205,
+        "end": 205
+      },
+      "target_lines": {
+        "start": 206,
+        "end": 206
+      },
+      "classification": "MECHANICAL_SOURCE_REPAIR",
+      "decision": "punctuate the proof hint after the C073147 reference before its question",
+      "source_normalized_snippet": "\\begin{proof}[\\emph{Hint for proof}] Use corollary~\\ref{C073147} Why can we think of the",
+      "target_normalized_snippet": "\\begin{proof}[\\emph{Petunjuk pembuktian}] Gunakan korolari~\\ref{C073147}. Mengapa kita dapat memandang",
+      "source_normalized_snippet_sha256": "3fb13695c44550e48362e31bc2df81404d65744585104b943be75b1eb12739db",
+      "target_normalized_snippet_sha256": "ae1cafc1468fcf9fd887d48090bd73dcbf6617c91443632bc07533e45fd01c62",
+      "required_target_anchor": "C073147"
+    },
+    {
+      "id": "FAOA-2015-CH11-CORR-003",
+      "source_lines": {
+        "start": 470,
+        "end": 470
+      },
+      "target_lines": {
+        "start": 459,
+        "end": 459
+      },
+      "classification": "MECHANICAL_SOURCE_REPAIR",
+      "decision": "render the singular source agreement as the intended plural compact Hausdorff spaces",
+      "source_normalized_snippet": "compact Hausdorff space was defined in example~\\ref{000633}. It is often technically",
+      "target_normalized_snippet": "aljabar $l_1(\\Z)$. Homeomorfisme $\\psi$ antara dua ruang Hausdorff kompak ini didefinisikan dalam contoh~\\ref{000633}.",
+      "source_normalized_snippet_sha256": "1cddadcd49c28620a6d72a159b387d3ca5b0cb38d565e8fc590ec311671f9eca",
+      "target_normalized_snippet_sha256": "296a7498807b180d9f219e3aefc6835fe7c105626806a0e568351ff785a27a54",
+      "required_target_anchor": "ruang Hausdorff kompak ini"
+    },
+    {
+      "id": "FAOA-2015-CH11-CORR-004",
+      "source_lines": {
+        "start": 480,
+        "end": 480
+      },
+      "target_lines": {
+        "start": 468,
+        "end": 468
+      },
+      "classification": "MATHEMATICAL_SOURCE_REPAIR",
+      "decision": "use the summation index k consistently in the Gelfand-transform identity",
+      "source_normalized_snippet": "\\[ G_a(z) = \\Gamma_a(\\psi_z) = \\psi_z(a) = \\sum_{k=-\\infty}^\\infty a_nz^n\\,. \\]",
+      "target_normalized_snippet": "\\[ G_a(z) = \\Gamma_a(\\psi_z) = \\psi_z(a) = \\sum_{k=-\\infty}^\\infty a_kz^k\\,. \\]",
+      "source_normalized_snippet_sha256": "749bacb93e7e34e706fe83908f9816b9643cfaf089ea1be341bda518c4eac41e",
+      "target_normalized_snippet_sha256": "dfa9cb7e6473de618ab7736991e4dc45cd24681bb98536b58ac03987147dab7b",
+      "required_target_anchor": "a_kz^k"
+    },
+    {
+      "id": "FAOA-2015-CH11-CORR-005",
+      "source_lines": {
+        "start": 519,
+        "end": 519
+      },
+      "target_lines": {
+        "start": 507,
+        "end": 507
+      },
+      "classification": "MECHANICAL_SOURCE_REPAIR",
+      "decision": "remove the unmatched closing parenthesis after exercise 18.45",
+      "source_normalized_snippet": "\\begin{proof} See, for example, \\cite{HewittS:1965}, exercise 18.45.) \\ns",
+      "target_normalized_snippet": "\\begin{proof} Lihat, misalnya, \\cite{HewittS:1965}, latihan 18.45. \\ns",
+      "source_normalized_snippet_sha256": "2bc02e7058834c684297f1b3585a2538cd84eb8e2161ff123207258c7cbbb61c",
+      "target_normalized_snippet_sha256": "5e963cd050bb760cddd0d2ff5ce1534defb394b6e34b3dcac2e8a001573102bf",
+      "required_target_anchor": "18.45."
+    },
+    {
+      "id": "FAOA-2015-CH11-CORR-006",
+      "source_lines": {
+        "start": 750,
+        "end": 750
+      },
+      "target_lines": {
+        "start": 730,
+        "end": 730
+      },
+      "classification": "MECHANICAL_SOURCE_REPAIR",
+      "decision": "remove the duplicated is in the spectrum hypothesis",
+      "source_normalized_snippet": "\\begin{exam} If $N$ is a normal Hilbert space operator whose spectrum is is contained in the unit circle $\\T$, then",
+      "target_normalized_snippet": "\\begin{exam} Jika $N$ operator normal pada ruang Hilbert yang spektrumnya termuat dalam lingkaran satuan~$\\T$,",
+      "source_normalized_snippet_sha256": "32245f34249c6de153011221dc807c2953b38ba7ef2f7c2c413f7dd81571e205",
+      "target_normalized_snippet_sha256": "defb752237d0086bf9a71dd1d55953359979f0c85a5367d9eadff8a84e31efb4",
+      "required_target_anchor": "spektrumnya termuat"
+    }
+  ]
+}

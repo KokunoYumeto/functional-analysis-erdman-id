@@ -1,0 +1,44 @@
+{
+  "schema_version": "o008.backend-validation.v1",
+  "timestamp": "2026-08-23",
+  "unit_id": "FAOA-2015-CH11",
+  "status": "pass",
+  "validator": {
+    "path": "backend/validate_ch11_backend.py",
+    "bytes": 33062,
+    "logical_records": 632,
+    "sha256": "76fdea09fb9bedc9d6530ef64213d353456b119b54bf81406a966a28e231dd52"
+  },
+  "source_sha256": "018f15db7ee5a4392f624af050507a90339e1469e30f97c6017e003c7ff33b26",
+  "target_sha256": "69bd9ba794ef0d5eb74e444cf2676878b7797e5dd5b75fcfc4abdd247b1b5ee5",
+  "master_sha256": "1836320f0e1a03705ff8e1dbbd2724d9e484ce03e10fde5f575967e2dd6e9796",
+  "pdf": {
+    "pages": 164,
+    "sha256": "21a3b8c8fa2f5f68cba8a9b5c1fdbbb9f1feb906090159e8a2755f54fa177971"
+  },
+  "receipt_sha256": "969953850667941377b71b8b0328231e939567d3dcd6c4f25a0dfd707c29f713",
+  "backend_manifest_sha256": "0ca5f11f63430ea8eb7f7452fe99bd1922337e487f60dcb581a279945f362ef6",
+  "aggregate_records": 18930,
+  "chapter11_appends": {
+    "semantic_units.jsonl": 101,
+    "segments.jsonl": 118,
+    "relations.jsonl": 453,
+    "formula_map.jsonl": 625,
+    "exercise_support.jsonl": 0,
+    "index_terms.csv": 65,
+    "terminology.jsonl": 17,
+    "corrections.jsonl": 6,
+    "qa_events.jsonl": 9,
+    "artifacts.jsonl": 12
+  },
+  "assertions": {
+    "historical_ch01_ch10_prefixes": "unchanged",
+    "chapter12_bridge_unit_suffix": "unchanged",
+    "global_stable_ids": "unique",
+    "relation_endpoints": "resolved",
+    "formula_mapping": "625_of_625_bijective_and_hash_bound",
+    "render_manifest": "164_of_164_page_hashes_match",
+    "rights_and_diagram_accessibility": "resolved",
+    "backend_manifest": "exact"
+  }
+}
