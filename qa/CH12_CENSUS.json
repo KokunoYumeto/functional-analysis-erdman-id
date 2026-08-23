@@ -1,0 +1,113 @@
+{
+  "schema": "chapter-source-census-v1",
+  "source": {
+    "path": "source/upstream/no_identity.tex",
+    "bytes": 47994,
+    "sha256": "8da3ffa45bcc07cbe1897a09f309db51e1c5c38080459ffb1f6947bf45a20b6c",
+    "encoding_surface": "7-bit ASCII",
+    "bom": false,
+    "nul_bytes": 0,
+    "line_endings": {"crlf": 1158, "lf": 0, "cr": 0},
+    "record_count": 1158,
+    "record_count_rule": "line-ending-delimited records plus one final record only if bytes remain after the last line ending",
+    "ends_with_line_ending": true,
+    "preserved": true
+  },
+  "structure": [
+    {"line": 1, "level": "chapter", "title": "SURVIVAL WITHOUT IDENTITY", "end_line": 1158},
+    {"line": 3, "level": "section", "title": "Unitization of Banach Algebras", "end_line": 197},
+    {"line": 198, "level": "section", "title": "Exact Sequences and Extensions", "end_line": 391},
+    {"line": 392, "level": "section", "title": "Unitization of $C^*$-algebras", "end_line": 657},
+    {"line": 658, "level": "section", "title": "Quasi-inverses", "end_line": 766},
+    {"line": 767, "level": "section", "title": "Positive Elements in $C^*$-algebras", "end_line": 1021},
+    {"line": 1022, "level": "section", "title": "Approximate Identities", "end_line": 1158}
+  ],
+  "heading_counts": {"chapter": 1, "section": 6, "subsection": 0, "subsubsection": 0},
+  "environments": {
+    "begin_total": 154,
+    "end_total": 154,
+    "counts": {"align*": 2, "array": 1, "bmatrix": 6, "conv": 1, "cor": 11, "defn": 17, "enumerate": 9, "equation": 5, "exam": 10, "lem": 2, "notn": 2, "proof": 12, "prop": 71, "thm": 5},
+    "signature_fields": ["ordinal", "line", "environment", "optional_title_or_null", "immediately_attached_label_or_null"],
+    "ordered_signatures": [
+      [1,4,"defn",null,"00150005"],[2,14,"prop",null,"0015001"],[3,21,"defn",null,null],[4,26,"notn",null,"00150012"],[5,31,"align*",null,null],[6,40,"defn",null,"00150014"],[7,46,"defn",null,"00150015"],[8,50,"prop",null,"001500151"],[9,66,"prop",null,"001500157"],[10,70,"prop",null,"00150016"],[11,73,"prop",null,"00150017"],[12,77,"thm","Spectral radius formula","00150018"],[13,84,"defn",null,null],[14,103,"prop",null,null],[15,107,"proof","\\emph{Hint for proof}",null],[16,112,"prop",null,null],[17,116,"exam",null,null],[18,121,"proof",null,null],[19,128,"prop",null,null],[20,131,"cor",null,null],[21,134,"prop",null,null],[22,138,"prop",null,"00150144"],[23,144,"prop",null,"00150147"],[24,148,"exam",null,null],[25,156,"prop",null,"00150154"],[26,163,"prop",null,null],[27,164,"enumerate",null,null],[28,175,"thm",null,null],[29,209,"defn",null,null],[30,219,"equation",null,"001500202i2"],[31,253,"conv",null,"00151212"],[32,271,"prop",null,"00151231c"],[33,283,"prop","The Five Lemma","00151232c"],[34,293,"enumerate",null,null],[35,301,"defn",null,null],[36,315,"exam",null,null],[37,329,"prop",null,null],[38,338,"defn",null,"0015151"],[39,352,"prop",null,"0015152"],[40,356,"prop",null,"0015155"],[41,364,"prop",null,"0015157"],[42,365,"equation",null,"0015157i"],[43,369,"equation",null,"0015157ii"],[44,398,"prop",null,null],[45,402,"prop",null,"001315"],[46,403,"align*",null,null],[47,409,"cor",null,"0013151"],[48,420,"prop",null,"0015213"],[49,422,"equation",null,"0015213i"],[50,431,"proof","\\emph{Hint for proof}",null],[51,441,"enumerate",null,null],[52,462,"enumerate",null,null],[53,465,"lem",null,null],[54,487,"enumerate",null,null],[55,501,"equation",null,null],[56,509,"defn",null,"00152131"],[57,522,"prop",null,"00152141"],[58,526,"cor",null,"00152142"],[59,530,"cor",null,"00152143"],[60,535,"cor",null,"00152144"],[61,540,"prop",null,"00152145"],[62,546,"prop",null,"00152152"],[63,550,"prop",null,"00152153"],[64,561,"thm","Gelfand-Naimark Theorem II","00152156"],[65,569,"prop",null,"00152161"],[66,580,"prop",null,"00152171"],[67,583,"prop",null,"00152181"],[68,587,"prop",null,"00152191"],[69,592,"array",null,null],[70,620,"prop",null,"00152194"],[71,625,"proof",null,null],[72,659,"defn",null,null],[73,666,"prop",null,null],[74,670,"prop",null,null],[75,671,"enumerate",null,null],[76,677,"proof","\\emph{Hint for proof}",null],[77,681,"prop",null,null],[78,685,"prop",null,null],[79,689,"prop",null,null],[80,694,"prop",null,null],[81,698,"prop",null,null],[82,703,"proof","\\emph{Hint for proof}",null],[83,708,"prop",null,null],[84,714,"notn",null,null],[85,719,"prop",null,null],[86,722,"prop",null,null],[87,728,"defn",null,null],[88,737,"prop",null,null],[89,741,"prop",null,null],[90,768,"defn",null,null],[91,782,"defn",null,null],[92,798,"enumerate",null,null],[93,809,"defn",null,null],[94,818,"prop",null,"0018006"],[95,822,"exam",null,"0018007"],[96,833,"prop",null,"0018008"],[97,843,"prop",null,null],[98,844,"enumerate",null,null],[99,850,"exam",null,null],[100,854,"prop",null,"0018015"],[101,858,"prop",null,"001804"],[102,863,"proof",null,null],[103,869,"thm","Jordan Decomposition","001807"],[104,880,"lem",null,null],[105,884,"prop",null,null],[106,887,"prop",null,"00180731"],[107,889,"enumerate",null,null],[108,896,"exam",null,"00180741"],[109,901,"proof","\\emph{Hint for proof}",null],[110,913,"defn",null,null],[111,919,"prop",null,null],[112,923,"exam",null,null],[113,925,"bmatrix",null,null],[114,926,"bmatrix",null,null],[115,927,"bmatrix",null,null],[116,928,"bmatrix",null,null],[117,935,"prop",null,"0018201"],[118,940,"prop",null,null],[119,945,"prop",null,"0018203"],[120,949,"prop",null,"0018204"],[121,953,"prop",null,null],[122,957,"prop",null,"0018301"],[123,961,"prop",null,null],[124,965,"prop",null,null],[125,971,"prop",null,null],[126,976,"cor",null,"00183313"],[127,981,"prop",null,"0018401"],[128,986,"prop",null,null],[129,990,"exam",null,null],[130,994,"proof","\\emph{Hint for proof}",null],[131,995,"bmatrix",null,null],[132,996,"bmatrix",null,null],[133,1023,"defn",null,null],[134,1040,"exam",null,null],[135,1046,"prop",null,null],[136,1052,"proof","\\emph{Hint for proof}",null],[137,1062,"prop",null,null],[138,1067,"cor",null,"00190161"],[139,1072,"prop",null,"0019017"],[140,1076,"prop",null,"001902"],[141,1081,"proof",null,null],[142,1085,"exam",null,null],[143,1090,"prop",null,"0019023"],[144,1094,"defn",null,null],[145,1099,"prop",null,"001915"],[146,1103,"proof",null,null],[147,1106,"prop",null,null],[148,1110,"thm",null,"001922"],[149,1120,"cor",null,"001923"],[150,1124,"cor",null,"001924"],[151,1128,"prop",null,null],[152,1142,"prop",null,null],[153,1146,"cor",null,"0019283"],[154,1151,"cor",null,"0019286"]
+    ]
+  },
+  "labels": {
+    "count": 65,
+    "unique_count": 65,
+    "duplicates": [],
+    "occurrences": [[4,"00150005"],[14,"0015001"],[26,"00150012"],[40,"00150014"],[46,"00150015"],[50,"001500151"],[66,"001500157"],[70,"00150016"],[73,"00150017"],[77,"00150018"],[138,"00150144"],[144,"00150147"],[156,"00150154"],[219,"001500202i2"],[253,"00151212"],[271,"00151231c"],[283,"00151232c"],[338,"0015151"],[352,"0015152"],[356,"0015155"],[364,"0015157"],[365,"0015157i"],[369,"0015157ii"],[402,"001315"],[409,"0013151"],[420,"0015213"],[422,"0015213i"],[509,"00152131"],[522,"00152141"],[526,"00152142"],[530,"00152143"],[535,"00152144"],[540,"00152145"],[546,"00152152"],[550,"00152153"],[561,"00152156"],[569,"00152161"],[580,"00152171"],[583,"00152181"],[587,"00152191"],[620,"00152194"],[818,"0018006"],[822,"0018007"],[833,"0018008"],[854,"0018015"],[858,"001804"],[869,"001807"],[887,"00180731"],[896,"00180741"],[935,"0018201"],[945,"0018203"],[949,"0018204"],[957,"0018301"],[976,"00183313"],[981,"0018401"],[1067,"00190161"],[1072,"0019017"],[1076,"001902"],[1090,"0019023"],[1099,"001915"],[1110,"001922"],[1120,"001923"],[1124,"001924"],[1146,"0019283"],[1151,"0019286"]]
+  },
+  "references": {
+    "count": 46,
+    "command_counts": {"ref": 41, "eqref": 5, "pageref": 0},
+    "locally_resolved_occurrences": 21,
+    "nonlocal_or_unresolved_occurrences": 25,
+    "occurrences": [[64,"ref","000661"],[64,"ref","C073134"],[64,"ref","0006703"],[64,"ref","C073157"],[149,"ref","001500151"],[200,"ref","00150005"],[200,"ref","00150015"],[201,"ref","00150015"],[201,"ref","0013"],[207,"ref","defn_Bsp_exact_seq"],[226,"eqref","001500202i"],[240,"eqref","001500202i"],[247,"ref","001500202i"],[258,"ref","0019017"],[269,"ref","00151231"],[269,"ref","00151232"],[334,"ref","0007812"],[372,"eqref","0015157i"],[372,"eqref","0015157ii"],[394,"ref","00150005"],[394,"ref","00150015"],[395,"ref","00150015"],[395,"ref","0013"],[426,"eqref","0015213i"],[470,"ref","0013151"],[515,"ref","00150014"],[519,"ref","00131101"],[519,"ref","00131102"],[519,"ref","00131103"],[519,"ref","00131104"],[520,"ref","001312"],[520,"ref","001406"],[520,"ref","0014062"],[558,"ref","00142"],[611,"ref","0038614"],[615,"ref","00152156"],[635,"ref","0015213"],[636,"ref","00152191"],[638,"ref","0015152"],[638,"ref","00152181"],[707,"ref","000644fa"],[707,"ref","000646fa"],[864,"ref","00144"],[902,"ref","00180731"],[907,"ref","001807"],[931,"ref","00180741"]],
+    "locally_resolved_unique_targets": ["0013151","00150005","00150014","00150015","001500151","0015152","0015157i","0015157ii","0015213","0015213i","00152156","00152181","00152191","001807","00180731","00180741","0019017"],
+    "nonlocal_or_unresolved_unique_targets": ["000644fa","000646fa","000661","0006703","0007812","0013","00131101","00131102","00131103","00131104","001312","001406","0014062","00142","00144","001500202i","00151231","00151232","0038614","C073134","C073157","defn_Bsp_exact_seq"]
+  },
+  "citations": {
+    "count": 17,
+    "unique_keys": ["Blackadar:2006","Davidson:1996","DoranB:1986","Erdman:2007","Fillmore:1996","HigsonR:2000","Murphy:1990","Wegge-Olsen:1993"],
+    "occurrences": [[122,"Erdman:2007"],[244,"Wegge-Olsen:1993"],[244,"Davidson:1996"],[245,"Murphy:1990"],[245,"Fillmore:1996"],[246,"Blackadar:2006"],[246,"Fillmore:1996"],[246,"Blackadar:2006"],[248,"Wegge-Olsen:1993"],[249,"Murphy:1990"],[249,"Davidson:1996"],[607,"Erdman:2007"],[910,"DoranB:1986"],[1081,"HigsonR:2000"],[1081,"Davidson:1996"],[1082,"Fillmore:1996"],[1103,"Davidson:1996"]]
+  },
+  "index_entries": {
+    "count": 102,
+    "occurrences": [
+      [5,"<binopunit@$A \\bowtie \\C$ (unitization of an algebra)"],[22,"unitization!of a $*\\,$-algebra"],[41,"spectrum!in nonunital algebras"],[51,"unitization!of a normed algebra"],[52,"unitization!of a Banach $*\\,$-algebra"],[58,"<unitization@$A_e$ (unitization of a Banach algebra)"],[78,"spectral!radius!formula for"],[85,"modular!left ideal"],[86,"ideal!left modular"],[89,"identity!left!with respect to an ideal"],[91,"modular!right ideal"],[92,"ideal!right modular"],[95,"identity!left!with respect to an ideal"],[97,"modular!ideal"],[98,"ideal!modular"],[150,"phi@$\\phi_\\infty$ (a character on the unitization of an algebra)"],[158,"phi@$\\phi_e$ (extension of a character $\\phi$ to the unitization of an algebra)"],[214,"sequence!exact"],[215,"exact!sequence"],[222,"sequence!short exact"],[223,"short exact sequence"],[227,"exact!sequence!split"],[228,"sequence!split exact"],[229,"split exact!sequence"],[242,"extension"],[254,"conventions!ideals are self-adjoint"],[255,"conventions!ideals are closed"],[256,"ideal!in a $C^*$-algebra"],[261,"ideal!algebraic"],[262,"algebraic!ideal"],[264,"ideal!algebraic $\\ast$-"],[265,"algebraic!$\\ast$-ideal"],[284,"five lemma"],[302,"direct sum!of $C^*$-algebras"],[303,"external!direct sum"],[304,"C*@$C^*$-algebra!direct sum of"],[305,"<binopsum@$A \\oplus B$ (direct sum of $C^*$-algebras)"],[311,"<binopsum@$a \\oplus b$ (an element of $A \\oplus B$)"],[325,"extension!direct sum"],[326,"direct sum!extension"],[330,"direct sum!of $C^*$-algebras"],[331,"product!in $\\cat{CSA}$"],[332,"csa@$\\cat{CSA}$!products in"],[340,"equivalence!strong!of extensions"],[341,"extension!strong equivalence of"],[411,"left!multiplication operator"],[412,"operator!left multiplication"],[511,"unitization!of a $C^*$-algebra"],[541,"spectrum!of a self-adjoint element"],[542,"self-adjoint!element!spectrum of"],[562,"Gelfand-Naimark!Theorem II"],[662,"quasi-inverse"],[709,"q@$Q_A$ (quasi-invertible elements"],[715,"<binop@$a \\circ b$ (operation in an algebra)"],[729,"q-spectrum"],[730,"spectrum!q-"],[769,"positive!element of a $C^*$-algebra"],[772,"<plus@$A^+$ (positive cone)"],[774,"positive!cone"],[775,"cone!positive"],[778,"<relation@$a \\le b$ (order relation in a $C^*$-algebra)"],[783,"<relation@$\\le$ (notation for a partial ordering)"],[785,"preordering"],[786,"ordering!pre-"],[788,"partial!ordering"],[789,"ordering!partial"],[793,"compatibility!of orderings with operations"],[795,"respects operations"],[804,"ordered!vector space"],[805,"vector!space!ordered"],[810,"cone"],[813,"proper!cone"],[814,"cone!proper"],[823,"<dualp@$V^+$ (positive cone in an ordered vector space)"],[826,"positive!cone!in an ordered vector space"],[827,"cone!positive"],[829,"positive!element (of an ordered vector space)"],[837,"induced!partial ordering"],[838,"partial!ordering!induced by a proper convex cone"],[870,"Jordan decomposition"],[871,"decomposition!Jordan"],[873,"<positive@$c^+$ (positive part of $c$)"],[874,"positive!part!of a self-adjoint element"],[875,"<positive@$c^-$ (negative part of $c$)"],[876,"negative!part!of a self-adjoint element"],[914,"absolute!value!in a $C^*$-algebra"],[915,"<unop@$\\abs a$ (absolute value in a $C^*$-algebra)"],[977,"inverse!of an absolute value"],[1024,"identity!approximate"],[1025,"approximate!identity"],[1027,"unit!approximate"],[1028,"approximate!unit"],[1033,"sequential!approxiamte identity"],[1034,"approximate!identity!sequential"],[1047,"lambda@$\\Lambda$ (members of $A^+$ in the open unit ball)"],[1055,"order!isomorphism"],[1056,"isomorphism!order"],[1068,"approximate!identity!existence of an"],[1077,"quotient!$C^*$-algebra"],[1095,"hereditary"],[1138,"inverse!closed"],[1139,"closed!inverse"]
+    ]
+  },
+  "defined_terms": {
+    "count": 42,
+    "occurrences": [[23,"unitization"],[42,"spectrum"],[57,"unitization"],[87,"modular left ideal"],[90,"right identity with respect to $J$"],[93,"modular right ideal"],[96,"left identity with respect to $J$"],[99,"modular ideal"],[216,"exact at"],[216,"exact"],[224,"short exact sequence"],[230,"split exact"],[243,"extension"],[263,"algebraic ideal"],[266,"algebraic $\\ast$-ideal"],[306,"(external) direct sum"],[327,"direct sum extension"],[342,"strongly equivalent"],[413,"left multiplication by~$a$"],[512,"unitization"],[659,"left quasi-inverse"],[660,"right quasi-inverse"],[663,"quasi-inverse"],[731,"q-spectrum"],[770,"positive"],[776,"positive cone"],[787,"preordering"],[790,"partial ordering"],[794,"compatible"],[796,"respects"],[806,"ordered vector space"],[811,"cone"],[815,"proper"],[828,"positive cone"],[830,"positive elements"],[836,"partial ordering\r\n \\index{induced!partial ordering}%\r\n \\index{partial!ordering!induced by a proper convex cone}%\r\ninduced by"],[1026,"approximate identity"],[1029,"approximate unit"],[1035,"sequential approximate identity"],[1057,"order isomorphism"],[1096,"hereditary"],[1140,"inverse closed"]]
+  },
+  "math_surface": {
+    "count": 929,
+    "count_rule": "top-level inline dollar spans plus bracketed display spans plus equation and align* environments; nested array and bmatrix environments are not counted again",
+    "inline_dollar_spans": 884,
+    "unescaped_dollar_delimiters": 1768,
+    "display_bracket_spans": 38,
+    "display_bracket_open": 38,
+    "display_bracket_close": 38,
+    "equation_environments": 5,
+    "align_star_environments": 2,
+    "nested_array_environments": 1,
+    "nested_bmatrix_environments": 6
+  },
+  "pedagogy": {
+    "exercise_or_problem_count": 0,
+    "proof_count": 12,
+    "hint_proof_count": 8,
+    "hint_proof_lines": [107,431,677,703,863,901,994,1052],
+    "citation_only_proof_count": 2,
+    "citation_only_proof_lines": [1081,1103],
+    "other_proof_count": 2,
+    "other_proof_lines": [121,625]
+  },
+  "dependencies_and_termination": {
+    "input_count": 0,
+    "include_count": 0,
+    "includegraphics_count": 0,
+    "external_assets": [],
+    "xymatrix_count": 13,
+    "endinput_count": 1,
+    "endinput_lines": [1158]
+  },
+  "balance_checks": {
+    "begin_commands": 154,
+    "end_commands": 154,
+    "display_open": 38,
+    "display_close": 38,
+    "unescaped_open_braces": 787,
+    "unescaped_close_braces": 787
+  },
+  "risks": [
+    {"kind": "scope", "detail": "Chapter fragment only; no document class, preamble, or document environment."},
+    {"kind": "build", "detail": "Depends on parent-defined theorem environments, custom macros, bibliography, and XY-pic support for 13 xymatrix diagrams."},
+    {"kind": "references", "detail": "25 reference occurrences are nonlocal or unresolved within this file."},
+    {"kind": "likely_identifier_mismatch", "detail": "References target 001500202i while the local label is 001500202i2; references target 00151231 and 00151232 while local labels are 00151231c and 00151232c."},
+    {"kind": "termination", "detail": "The source ends with endinput at line 1158."},
+    {"kind": "editorial_source_fact", "detail": "Preserve source-visible forms approxiamte (line 1033), The proof this result (line 431), and given a algebra (line 536) unless separately authorized to correct them."}
+  ]
+}

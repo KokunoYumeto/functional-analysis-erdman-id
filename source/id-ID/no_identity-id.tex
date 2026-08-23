@@ -1,0 +1,1173 @@
+\chapter{BERTAHAN TANPA IDENTITAS}
+
+\section{Unitalisasi Aljabar Banach}
+\begin{defn}\label{00150005} Misalkan $A$ suatu aljabar. Definisikan
+ \index{<binopunit@$A \bowtie \C$ (unitalisasi suatu aljabar)}%
+$A \bowtie \C$ sebagai himpunan $A \times \C$ yang penjumlahan dan perkalian skalarnya
+didefinisikan secara titik demi titik dan perkaliannya didefinisikan oleh
+  \[ (a,\lambda)\cdot(b,\mu) = (ab + \mu a + \lambda b, \lambda\mu). \]
+Jika aljabar $A$ dilengkapi dengan suatu involusi, definisikan involusi pada $A \bowtie \C$
+secara titik demi titik; yaitu, $(a,\lambda)^* := (a^*, \conj\lambda)$. (Notasi $A \bowtie \C$
+tidak baku.)
+\end{defn}
+
+\begin{prop}\label{0015001} Jika $A$ suatu aljabar, maka $A \bowtie \C$ adalah aljabar
+beridentitas yang di dalamnya $A$ dibenamkan sebagai (yaitu, isomorfik dengan) suatu ideal
+sedemikian sehingga $(A \bowtie \C)/A \cong \C$. Identitas $A \bowtie \C$ adalah $(0,1)$. Jika
+$A$ suatu aljabar-$*\,$, maka $A \bowtie \C$ adalah aljabar-$*\,$ beridentitas yang di dalamnya
+$A$ merupakan ideal-$*\,$ sedemikian sehingga $(A \bowtie \C)/A \cong \C$.
+\end{prop}
+
+\begin{defn} Aljabar $A \bowtie \C$ adalah
+ \index{unitalisasi!suatu aljabar-$*\,$}%
+\df{unitalisasi} dari aljabar (atau aljabar-$*\,$)~$A$.
+\end{defn}
+
+\begin{notn}\label{00150012} Dalam konstruksi sebelumnya, unsur-unsur aljabar
+$A \bowtie \C$ secara teknis adalah pasangan terurut $(a,\lambda)$. Unsur-unsur itu biasanya
+ditulis secara berbeda. Misalkan $\iota\colon A \sto A \bowtie \C \colon a \mapsto (a,0)$ dan
+$\pi\colon A \bowtie \C \sto \C\colon (a,\lambda) \mapsto \lambda$. Karena $(0,1)$ adalah
+identitas dalam $A \bowtie \C$, diperoleh
+   \begin{align*} (a,\lambda) &= (a,0) + (\vc 0,\lambda) \\
+                              &= \iota(a) + \lambda \vc 1_{A \bowtie \C}
+   \end{align*}
+Sudah lazim untuk memperlakukan $\iota$ sebagai pemetaan inklusi. Jadi, wajar untuk
+menulis $(a,\lambda)$ sebagai $a + \lambda \vc 1_{A \bowtie \C}$ atau cukup sebagai
+$a + \lambda \vc 1$. Tampaknya tidak timbul ambiguitas dengan menghilangkan acuan pada
+identitas perkalian, sehingga notasi baku untuk pasangan $(a,\lambda)$ adalah $a + \lambda$.
+\end{notn}
+
+\begin{defn}\label{00150014} Misalkan $A$ suatu aljabar yang \emph{tak beridentitas}. Definisikan
+ \index{spektrum!dalam aljabar tak beridentitas}%
+\df{spektrum} suatu unsur $a \in A$ sebagai spektrum $a$ ketika dipandang sebagai unsur
+dari~$A \bowtie \C$; yaitu, $\sigma_A(a) := \sigma_{A \bowtie \C}(a)$.
+\end{defn}
+
+\begin{defn}\label{00150015} Misalkan $A$ suatu aljabar bernorma (dengan atau tanpa involusi). Pada
+unitalisasi $A \bowtie \C$ dari $A$, definisikan $\norm{(a,\lambda)} := \norm a + \abs\lambda$.
+\end{defn}
+
+\begin{prop}\label{001500151} Misalkan $A$ suatu aljabar bernorma. Pemetaan
+ \index{unitalisasi!suatu aljabar bernorma}%
+ \index{unitalisasi!suatu aljabar Banach-$*\,$}%
+$(a,\lambda) \mapsto \norm a + \abs\lambda$ yang didefinisikan di atas adalah norma yang
+menjadikan $A \bowtie \C$ suatu aljabar bernorma. Jika $A$ suatu aljabar Banach (berturut-turut,
+aljabar Banach-$*\,$), maka $A \bowtie \C$ adalah aljabar Banach (berturut-turut, aljabar
+Banach-$*\,$). Aljabar Banach (atau aljabar Banach-$*\,$) yang dihasilkan adalah
+\df{unitalisasi} dari $A$ dan akan
+ \index{<unitization@$A_e$ (unitalisasi suatu aljabar Banach)}%
+dinotasikan dengan~$A_e$.
+\end{prop}
+
+Dengan definisi \emph{spektrum} yang diperluas ini, banyak fakta terdahulu untuk aljabar
+Banach beridentitas tetap berlaku dalam tatanan yang lebih umum. Secara khusus, untuk
+rujukan selanjutnya, kita nyatakan kembali butir-butir \ref{000661}, \ref{C073134},
+\ref{0006703}, dan~\ref{C073157}.
+
+\begin{prop}\label{001500157} Misalkan $a$ suatu unsur dari aljabar Banach~$A$. Maka spektrum
+$a$ kompak dan $\abs\lambda \le \norm a$ untuk setiap $\lambda \in \sigma(a)$.
+\end{prop}
+
+\begin{prop}\label{00150016} Spektrum setiap unsur dari suatu aljabar Banach tidak kosong.
+\end{prop}
+
+\begin{prop}\label{00150017} Untuk setiap unsur $a$ dari suatu aljabar Banach, $\rho(a) \le
+\norm a$ dan $\rho(a^n) = \bigr(\rho(a)\bigr)^n$.
+\end{prop}
+
+\begin{thm}[Rumus Radius Spektral]\label{00150018} Jika $a$ suatu unsur dari aljabar Banach,
+ \index{spektral!radius!rumus untuk}%
+maka
+   \[ \rho(a) = \inf\bigl\{\norm{a^n}^{1/n}\colon n \in \N\bigr\}
+              = \lim_{n \sto \infty} \norm{a^n}^{1/n}. \]
+\end{thm}
+
+\begin{defn} Misalkan $A$ suatu aljabar. Suatu ideal kiri $J$ dalam $A$ adalah
+ \index{modular!ideal kiri}%
+ \index{ideal!kiri modular}%
+\df{ideal kiri modular} jika terdapat suatu unsur $u$ dalam $A$ sedemikian sehingga
+$au - a \in J$ untuk setiap $a \in A$. Unsur $u$ demikian disebut
+ \index{identitas!kanan!terhadap suatu ideal}%
+\df{identitas kanan terhadap $J$}. Demikian pula, suatu ideal kanan $J$ dalam $A$ adalah
+ \index{modular!ideal kanan}%
+ \index{ideal!kanan modular}%
+\df{ideal kanan modular} jika terdapat suatu unsur $v$ dalam $A$ sedemikian sehingga
+$va - a \in J$ untuk setiap $a \in A$. Unsur $v$ demikian disebut
+ \index{identitas!kiri!terhadap suatu ideal}%
+\df{identitas kiri terhadap $J$}. Suatu ideal dua sisi $J$ adalah
+ \index{modular!ideal}%
+ \index{ideal!modular}%
+\df{ideal modular} jika terdapat suatu unsur $e$ yang sekaligus merupakan identitas kiri
+dan identitas kanan terhadap~$J$.
+\end{defn}
+
+\begin{prop} Suatu ideal $J$ dalam suatu aljabar bersifat modular jika dan hanya jika ideal
+tersebut merupakan ideal kiri modular sekaligus ideal kanan modular.
+\end{prop}
+
+\begin{proof}[\emph{Petunjuk untuk pembuktian}] Tunjukkan bahwa jika $u$ suatu identitas kanan
+terhadap $J$ dan $v$ suatu identitas kiri terhadap $J$, maka $vu$ sekaligus merupakan
+identitas kanan dan identitas kiri terhadap~$J$. \ns
+\end{proof}
+
+\begin{prop} Suatu ideal $J$ dalam suatu aljabar $A$ bersifat modular jika dan hanya jika
+aljabar hasil bagi $A/J$ beridentitas.
+\end{prop}
+
+\begin{exam} Misalkan $X$ suatu ruang Hausdorff kompak lokal. Untuk setiap $x \in X$, ideal
+$J_x$ adalah ideal modular maksimal dalam aljabar-$C^*$ $\fml C_0(X)$ dari fungsi-fungsi
+kontinu bernilai kompleks pada~$X$.
+\end{exam}
+
+\begin{proof} Menurut versi \emph{lema Urysohn} untuk ruang Hausdorff kompak lokal
+(lihat, misalnya, \cite{Erdman:2007}, teorema 17.2.10), terdapat suatu fungsi $g \in
+\fml C_0(X)$ sedemikian sehingga $g(x) = 1$. Jadi, $J_x$ bersifat modular karena $g$
+merupakan suatu identitas terhadap~$J_x$. Karena $\fml C_0(X) = J_x \oplus\,\, \spn\{g\}$,
+ideal $J_x$ mempunyai kodimensi $1$ dan oleh karena itu maksimal.
+\end{proof}
+
+\begin{prop} Jika $J$ suatu ideal modular sejati dalam aljabar Banach, maka penutupannya
+juga demikian.
+\end{prop}
+
+\begin{cor} Setiap ideal modular maksimal dalam suatu aljabar Banach tertutup.
+\end{cor}
+
+\begin{prop} Setiap ideal modular sejati dalam suatu aljabar Banach termuat dalam suatu
+ideal modular maksimal.
+\end{prop}
+
+\begin{prop}\label{00150144} Misalkan $A$ suatu aljabar Banach komutatif dan $\phi \in
+\Delta A$. Maka $\ker\phi$ adalah ideal modular maksimal dalam~$A$ dan $A/\ker\phi$ adalah
+suatu medan. Lebih lanjut, setiap ideal modular maksimal merupakan kernel dari tepat satu
+karakter dalam~$\Delta A$.
+\end{prop}
+
+\begin{prop}\label{00150147} Setiap fungsional linear multiplikatif pada suatu aljabar
+Banach komutatif $A$ bersifat kontinu. Bahkan, setiap karakter bersifat kontraktif.
+\end{prop}
+
+\begin{exam} Misalkan $A_e$ unitalisasi dari suatu aljabar Banach komutatif~$A$ (lihat
+proposisi~\ref{001500151}).
+ \index{phi@$\phi_\infty$ (suatu karakter pada unitalisasi suatu aljabar)}%
+Definisikan
+   \[ \phi_\infty\colon A_e \sto \C\colon (a,\lambda) \mapsto \lambda\,. \]
+Maka $\phi_\infty$ adalah suatu karakter pada~$A_e$.
+\end{exam}
+
+\begin{prop}\label{00150154} Setiap karakter $\phi$ pada suatu aljabar Banach komutatif
+$A$ mempunyai perpanjangan tunggal menjadi suatu
+ \index{phi@$\phi_e$ (perpanjangan suatu karakter $\phi$ ke unitalisasi suatu aljabar)}%
+karakter $\phi_e$ pada unitalisasi $A_e$ dari~$A$. Selain itu, pembatasan pada $A$ dari sebarang
+karakter pada $A_e$, dengan pengecualian yang jelas yaitu $\phi_\infty$, adalah suatu
+karakter pada~$A$.
+\end{prop}
+
+\begin{prop} Jika $A$ suatu aljabar Banach komutatif, maka
+ \begin{enumerate}
+    \item[(a)] $\Delta A$ adalah ruang Hausdorff kompak lokal,
+    \item[(b)] $\Delta A_e = \Delta A \cup \{\phi_\infty\}$,
+    \item[(c)] $\Delta A_e$ adalah kompaktifikasi satu titik dari~$\Delta A$, dan
+    \item[(d)] pemetaan $\phi \mapsto \phi_e$ adalah homeomorfisme dari $\Delta A$ ke
+$\Delta A_e \setminus \{\phi_\infty\}$.
+ \end{enumerate}
+Jika $A$ beridentitas (sehingga $\Delta A$ kompak), maka $\phi_\infty$ adalah titik
+terisolasi dari~$\Delta A_e$.
+\end{prop}
+
+\begin{thm} Jika $A$ suatu aljabar Banach komutatif dengan ruang karakter yang tidak kosong,
+maka transformasi Gelfand
+  \[ \Gamma = \Gamma_A\colon A \sto \fml C_0(\Delta A)\colon a \mapsto \wh a = \Gamma_a \]
+adalah suatu homomorfisme aljabar kontraktif dan $\rho(a) = \norm{\wh a}_u$. Lebih lanjut,
+jika $A$ \emph{tidak} beridentitas, maka $\sigma(a) = \ran \wh a \cup \{0\}$ untuk setiap
+$a \in A$.
+\end{thm}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Barisan Eksak dan Ekstensi}
+Prosedur yang cukup sederhana untuk unitalisasi aljabar Banach-$*\,$
+(lihat~\ref{00150005} dan~\ref{00150015}) tidak dapat diterapkan begitu saja pada
+aljabar-$C^*$. Norma yang didefinisikan dalam~\ref{00150015} tidak memenuhi syarat-$C^*$
+(definisi~\ref{0013}). Ternyata unitalisasi aljabar-$C^*$ sedikit lebih rumit. Sebelum
+menelaah perinciannya, kita melihat beberapa bahan persiapan mengenai \emph{barisan eksak}
+dan \emph{ekstensi} aljabar-$C^*$.
+
+Dalam dunia aljabar-$C^*$, barisan eksak didefinisikan pada dasarnya dengan cara yang sama
+seperti barisan eksak aljabar Banach (lihat~\ref{defn_Bsp_exact_seq}).
+
+\begin{defn} Suatu barisan aljabar-$C^*$ dan homomorfisme-$*\,$
+   \[\xymatrix{{\cdots}\ar[r] & A_{n-1}\ar[r]^{\phi_n}
+          & A_n\ar[r]^{\phi_{n+1}} & A_{n+1}\ar[r] & {\cdots}
+   }\]
+dikatakan
+ \index{barisan!eksak}%
+ \index{eksak!barisan}%
+\df{eksak di} $A_n$ jika $\ran \phi_n = \ker \phi_{n+1}$. Suatu barisan disebut
+\df{eksak} jika barisan tersebut eksak di setiap aljabar-$C^*$ penyusunnya. Suatu barisan
+aljabar-$C^*$ dan homomorfisme-$*\,$ berbentuk
+   \begin{equation}\label{001500202i2}\xymatrix{
+      0 \ar[r] & A \ar[r]^\phi & E\ar[r]^\psi & B\ar[r] & 0
+   }\end{equation}
+ \index{barisan!eksak pendek}%
+ \index{barisan eksak pendek}%
+adalah suatu \df{barisan eksak pendek}. (Di sini $\vc 0$ menyatakan aljabar-$C^*$ trivial
+berdimensi $0$, dan panah-panah tanpa label adalah homomorfisme-$*$ yang jelas.) Barisan
+eksak pendek aljabar-$C^*$~\eqref{001500202i2} adalah
+ \index{eksak!barisan!terbelah}%
+ \index{barisan!eksak terbelah}%
+ \index{eksak terbelah!barisan}%
+\df{eksak terbelah} jika terdapat suatu homomorfisme-$*\,$ $\xi\colon B \sto E$ sedemikian
+sehingga $\psi\circ\xi = \id B$.
+\end{defn}
+
+Definisi-definisi sebelumnya diberikan untuk kategori $\cat{CSA}$ dari aljabar-$C^*$ dan
+homomorfisme-$*\,$. Tentu saja, tidak ada yang khusus mengenai kategori tertentu ini.
+Barisan eksak bermakna dalam banyak situasi, misalnya dalam berbagai kategori ruang Banach,
+aljabar Banach, ruang Hilbert, ruang vektor, grup Abel, modul, dan sebagainya.
+
+Sering kali, dalam konteks aljabar-$C^*$, barisan eksak \eqref{001500202i2} disebut suatu
+ \index{ekstensi}%
+\df{ekstensi}. Sebagian penulis menyebutnya \emph{ekstensi $A$ oleh $B$} (misalnya,
+\cite{Wegge-Olsen:1993} dan \cite{Davidson:1996}), sedangkan penulis lain mengatakan bahwa
+barisan itu merupakan \emph{ekstensi $B$ oleh $A$} (\cite{Murphy:1990},
+\cite{Fillmore:1996}, dan \cite{Blackadar:2006}). Dalam \cite{Fillmore:1996} dan
+\cite{Blackadar:2006}, \emph{ekstensi} didefinisikan sebagai barisan~\eqref{001500202i2};
+dalam \cite{Wegge-Olsen:1993}, ekstensi didefinisikan sebagai tripel terurut
+$(\phi,E,\psi)$; dan dalam \cite{Murphy:1990} serta \cite{Davidson:1996}, ekstensi
+didefinisikan sebagai aljabar-$C^*$ $E$ itu sendiri. Terlepas dari definisi formalnya,
+umum dikatakan bahwa \emph{$E$ adalah ekstensi $A$ oleh $B$ (atau $B$ oleh $A$)}.
+
+\begin{conv}\label{00151212} Dalam suatu aljabar-$C^*$, kata \emph{ideal} akan selalu
+ \index{konvensi!ideal bersifat swaadjoin}%
+ \index{konvensi!ideal bersifat tertutup}%
+ \index{ideal!dalam suatu aljabar-$C^*$}%
+berarti suatu \hbox{ideal-$*\,$} dua sisi tertutup (kecuali, tentu saja, jika yang
+sebaliknya dinyatakan secara eksplisit). Sebentar lagi akan kita tunjukkan (dalam
+proposisi~\ref{0019017}) bahwa syarat agar suatu ideal dalam aljabar-$C^*$ bersifat
+swaadjoin sebenarnya berlebih. Suatu ideal aljabar dua sisi dari aljabar-$C^*$ yang tidak
+harus tertutup akan disebut
+ \index{ideal!aljabar}%
+ \index{aljabar!ideal}%
+\df{ideal aljabar}. Suatu ideal aljabar swaadjoin dari aljabar-$C^*$ akan disebut
+ \index{ideal!aljabar-$\ast$}%
+ \index{aljabar!ideal-$\ast$}%
+\df{ideal-$\ast$ aljabar}.
+\end{conv}
+
+Bandingkan dua proposisi berikut dengan~\ref{00151231} dan~\ref{00151232} yang hampir identik.
+
+\begin{prop}\label{00151231c} Tinjau diagram berikut dalam kategori aljabar-$C^*$ dan
+homomorfisme-${}^*$
+ \[\xymatrix{
+      0\ar[r] & A\ar[d]^f\ar[r]^j & B\ar[d]^g\ar[r]^k
+              & C\ar@{-->}[d]^h \ar[r] & 0 \\
+      0\ar[r] & A'\ar[r]_{j'} & B'\ar[r]_{k'}
+      & C'\ar[r] & 0
+ }\]
+Jika baris-barisnya eksak dan persegi kirinya komutatif, maka terdapat homomorfisme-${}^*$
+$h\colon C \sto C'$ tunggal yang membuat persegi kanannya komutatif.
+\end{prop}
+
+\begin{prop}[Lema Lima]\label{00151232c}
+ \index{lema lima}%
+Andaikan dalam diagram aljabar-$C^*$ dan homomorfisme-${}^*$ berikut
+ \[\xymatrix{
+      0\ar[r] & A\ar[d]^f\ar[r]^j & B\ar[d]^g\ar[r]^k
+              & C\ar[d]^h \ar[r] & 0 \\
+      0\ar[r] & A'\ar[r]_{j'} & B'\ar[r]_{k'}
+      & C'\ar[r] & 0
+ }\]
+baris-barisnya eksak dan persegi-perseginya komutatif. Buktikan hal-hal berikut.
+ \begin{enumerate}
+  \item Jika $g$ surjektif, maka $h$ juga surjektif.
+  \item Jika $f$ surjektif dan $g$ injektif, maka $h$ injektif.
+  \item Jika $f$ dan $h$ surjektif, maka $g$ juga surjektif.
+  \item Jika $f$ dan $h$ injektif, maka $g$ juga injektif.
+ \end{enumerate}
+\end{prop}
+
+\begin{defn} Misalkan $A$ dan $B$ aljabar-$C^*$. Kita mendefinisikan
+ \index{jumlah langsung!aljabar-$C^*$}%
+ \index{eksternal!jumlah langsung}%
+ \index{C*@aljabar-$C^*$!jumlah langsung dari}%
+ \index{<binopsum@$A \oplus B$ (jumlah langsung aljabar-$C^*$)}%
+\df{jumlah langsung (eksternal)} dari $A$ dan $B$, yang dinotasikan dengan $A \oplus B$,
+sebagai hasil kali Cartesius $A \times B$ dengan operasi-operasi aljabar yang didefinisikan
+secara titik demi titik dan norma yang diberikan oleh
+   \[ \norm{(a,b)} = \max\{\norm a,\norm b\} \]
+untuk semua $a \in A$ dan $b \in B$. Notasi alternatif untuk unsur $(a,b)$ dalam
+$A \oplus B$
+ \index{<binopsum@$a \oplus b$ (suatu unsur dari $A \oplus B$)}%
+adalah $a \oplus b$.
+\end{defn}
+
+\begin{exam} Misalkan $A$ dan $B$ aljabar-$C^*$. Maka jumlah langsung $A$ dan $B$ adalah
+suatu aljabar-$C^*$ dan barisan berikut adalah barisan eksak pendek terbelah:
+ \[\xymatrix{
+    \vc 0 \ar[r] & A \ar[r]^-{\iota_1} & A \oplus B \ar[r]^-{\pi_2}
+             & B \ar[r] & \vc 0
+ }\]
+\end{exam}
+\noindent Pemetaan-pemetaan yang ditunjukkan di atas adalah pemetaan-pemetaan yang jelas:
+   \[ \iota_1\colon A \sto A \oplus B\colon a \mapsto (a,\vc 0) \qquad
+        \text{dan} \qquad  \pi_2 \colon A \oplus B \sto B: (a,b) \mapsto b\,. \]
+ \index{ekstensi!jumlah langsung}%
+ \index{jumlah langsung!ekstensi}
+Ini adalah \df{ekstensi jumlah langsung}.
+
+\begin{prop} Jika $A$ dan $B$ adalah aljabar-$C^*$ tak nol, maka
+ \index{jumlah langsung!aljabar-$C^*$}%
+ \index{produk!dalam $\cat{CSA}$}%
+ \index{csa@$\cat{CSA}$!produk dalam}%
+jumlah langsungnya $A \oplus B$ merupakan produk dalam kategori $\cat{CSA}$ dari
+aljabar-$C^*$ dan homomorfisme-$*\,$ (lihat contoh~\ref{0007812}). Jumlah langsung itu
+beridentitas jika dan hanya jika $A$ dan $B$ keduanya beridentitas.
+\end{prop}
+
+\begin{defn}\label{0015151} Misalkan $A$ dan $B$ aljabar-$C^*$ serta $E$ dan $E'$ merupakan
+ekstensi $A$ oleh $B$. Ekstensi-ekstensi ini
+ \index{ekuivalensi!kuat!ekstensi}%
+ \index{ekstensi!ekuivalensi kuat}%
+\df{ekuivalen kuat} jika terdapat suatu isomorfisme-${}^*$ $\theta\colon E \sto E'$
+yang membuat diagram
+ \[\xymatrix{
+     0\ar[r] & A\ar[r]\ar@{=}[d] & E\ar[r]\ar[d]^\theta
+             & B\ar[r]\ar@{=}[d] & 0 \\
+     0\ar[r] & A\ar[r] & E'\ar[r] & B\ar[r] & 0
+ }\]
+komutatif.
+\end{defn}
+
+\begin{prop}\label{0015152} Dalam definisi sebelumnya, cukup disyaratkan bahwa $\theta$
+merupakan suatu homomorfisme-${}^*$.
+\end{prop}
+
+\begin{prop}\label{0015155} Misalkan $A$ dan $B$ aljabar-$C^*$. Suatu ekstensi
+ \[\xymatrix{
+     \vc 0\ar[r] & A\ar[r]^\phi & E\ar[r]^\psi & B\ar[r] & \vc 0
+ }\]
+ekuivalen kuat dengan ekstensi jumlah langsung $A \oplus B$ jika dan hanya jika terdapat\newline
+suatu \mbox{homomorfisme-${}^*$} $\nu\colon E \sto A$ sedemikian sehingga
+$\nu\circ\phi = \id A$.
+\end{prop}
+
+\begin{prop}\label{0015157} Jika barisan-barisan aljabar-$C^*$
+ \begin{equation}\label{0015157i}\xymatrix{
+     0\ar[r] & A\ar[r]^\phi & E\ar[r]^\psi & B\ar[r] & 0
+ }\end{equation}
+dan
+ \begin{equation}\label{0015157ii}\xymatrix{
+     0\ar[r] & A\ar[r]^{\phi'} & E'\ar[r]^{\psi'} & B\ar[r] & 0
+ }\end{equation}
+ekuivalen kuat dan \eqref{0015157i} terbelah, maka \eqref{0015157ii} juga terbelah.
+\end{prop}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Unitalisasi Aljabar-$C^*$}
+Prosedur yang cukup sederhana untuk unitalisasi aljabar Banach-$*\,$
+(lihat~\ref{00150005} dan~\ref{00150015}) tidak dapat diterapkan begitu saja pada
+aljabar-$C^*$. Norma yang didefinisikan dalam~\ref{00150015} tidak memenuhi syarat-$C^*$
+(definisi~\ref{0013}). Ternyata unitalisasi aljabar-$C^*$ sedikit lebih rumit.
+
+\begin{prop} Kernel dari suatu homomorfisme-$*\,$ $\phi\colon A \sto B$ antara
+aljabar-$C^*$ adalah suatu ideal-$*\,$ tertutup dalam~$A$ dan jangkauannya adalah suatu
+subaljabar-$*\,$ dari~$B$.
+\end{prop}
+
+\begin{prop}\label{001315} Jika $a$ suatu unsur dalam aljabar-$C^*$, maka
+  \begin{align*}
+    \norm{a} &= \sup\{\norm{xa}\colon \norm{x} \le 1\} \\
+             &= \sup\{\norm{ax}\colon \norm{x} \le 1\}.
+  \end{align*}
+\end{prop}
+
+\begin{cor}\label{0013151} Jika $a$ suatu unsur dari aljabar-$C^*$ $A$, operator $L_a$,
+yang disebut
+ \index{kiri!operator perkalian}%
+ \index{operator!perkalian kiri}%
+\df{perkalian kiri oleh~$a$} dan didefinisikan oleh
+   \[ L_a\colon A \sto A\colon x \mapsto ax \]
+adalah suatu operator (linear terbatas) pada~$A$. Lebih lanjut, pemetaan
+   \[ L\colon A \sto \ofml B(A)\colon a \mapsto L_a \]
+sekaligus merupakan isometri dan homomorfisme aljabar.
+\end{cor}
+
+\begin{prop}\label{0015213} Misalkan $A$ suatu aljabar-$C^*$. Maka terdapat suatu
+aljabar-$C^*$ beridentitas $\wt A$ yang di dalamnya $A$ dibenamkan sebagai suatu ideal
+sedemikian sehingga barisan
+ \begin{equation}\label{0015213i}
+   \xymatrix{
+     \vc 0\ar[r] & A\ar[r] & \wt A \ar[r] & \C \ar[r] & \vc 0
+ }\end{equation}
+eksak terbelah. Jika $A$ beridentitas, maka barisan \eqref{0015213i} ekuivalen kuat dengan
+ekstensi jumlah langsung, sehingga $\wt A \cong A \oplus \C$. Jika $A$ \emph{tidak}
+beridentitas, maka $\wt A$ tidak isomorfik dengan $A \oplus \C$.
+\end{prop}
+
+\begin{proof}[\emph{Petunjuk untuk pembuktian}] Pembuktian hasil ini agak rumit. Setiap orang
+sebaiknya menelusuri semua perinciannya setidaknya sekali dalam hidupnya. Berikut ini
+adalah garis besar suatu pembuktian.
+
+Perhatikan bahwa kita berbicara tentang unitalisasi dari suatu aljabar-$C^*$ $A$
+\emph{baik $A$ sudah memiliki unit (identitas perkalian) maupun belum}. Kita membagi
+argumen menjadi dua kasus.
+
+\vskip 8 pt
+
+\noindent\textbf{Kasus 1: aljabar $A$ beridentitas.}
+\begin{enumerate}
+    \item Pada aljabar $A \bowtie \C$, definisikan
+       \[ \norm{(a,\lambda)} := \max\{\norm{a + \lambda \vc 1_A}, \abs\lambda\} \]
+dan misalkan $\wt A := A \bowtie \C$ bersama dengan norma ini.
+    \item Buktikan bahwa pemetaan $(a,\lambda) \mapsto \norm{(a,\lambda)}$ adalah norma
+pada~$A \bowtie \C$.
+    \item Buktikan bahwa norma ini adalah norma aljabar.
+    \item Tunjukkan bahwa norma ini, sesungguhnya, merupakan norma-$C^*$ pada
+$A \bowtie \C$.
+    \item Amati bahwa norma ini merupakan perpanjangan dari norma pada~$A$.
+    \item Buktikan bahwa $A \bowtie \C$ adalah suatu aljabar-$C^*$ dengan memverifikasi
+kelengkapan ruang metrik yang diinduksi oleh norma sebelumnya.
+    \item Buktikan bahwa barisan
+       \[ \vc 0 \to A \to^\iota \wt A \two/->`<-/^Q_\psi \C \to \vc 0  \]
+eksak terbelah (dengan $\iota\colon a \mapsto (a,0)$, $Q\colon (a,\lambda) \mapsto
+\lambda$, dan $\psi\colon \lambda \mapsto (0,\lambda)$).
+    \item Buktikan bahwa $\cstariso{\wt A}{A \oplus \C}$.
+\end{enumerate}
+
+\vskip 8 pt
+
+\noindent\textbf{Kasus 2: aljabar $A$ \emph{tidak} beridentitas.}
+\begin{enumerate}
+\setcounter{enumi}{8}
+    \item Buktikan fakta sederhana berikut.
+  \begin{lem} Misalkan $A$ suatu aljabar dan $B$ suatu aljabar bernorma. Jika
+  $\phi\colon A \sto B$ adalah homomorfisme aljabar, maka fungsi
+  $a \mapsto \norm a := \norm{\phi(a)}$ adalah seminorma pada~$A$. Fungsi tersebut adalah
+  norma jika $\phi$ injektif.
+  \end{lem}
+    \item Ingat bahwa dalam~\ref{0013151} kita mendefinisikan operator $L_a$,
+\emph{perkalian kiri oleh $a$}. Sekarang, misalkan
+      \[ A^{\sharp} :=
+        \{ L_a + \lambda I_A \in \ofml B(A)\colon a \in A \text{ dan } \lambda \in \C\} \]
+dan tunjukkan bahwa $A^\sharp$ adalah suatu aljabar bernorma.
+    \item Jadikan $A^\sharp$ suatu aljabar-$*\,$ dengan mendefinisikan
+      \[ (L_a + \lambda I_A)^* := L_{a^*} + \conj\lambda I_A \]
+untuk semua $a \in A$ dan $\lambda \in \C$.
+    \item Definisikan
+      \[ \phi\colon A \bowtie \C \sto A^\sharp\colon
+                   (a,\lambda) \mapsto L_a + \lambda I_A \]
+dan verifikasikan bahwa $\phi$ adalah suatu homomorfisme-$*\,$.
+    \item Buktikan bahwa $\phi$ injektif.
+    \item Gunakan (9) untuk melengkapi $A \bowtie \C$ dengan suatu norma yang
+menjadikannya aljabar bernorma beridentitas. Misalkan $\wt A := A \bowtie \C$ dengan
+    norma yang ditarik balik oleh $\phi$ dari $A^\sharp$.
+
+
+    \item Verifikasikan fakta-fakta berikut.
+      \begin{enumerate}
+        \item Pemetaan $\phi\colon \wt A \sto A^\sharp$ adalah isomorfisme isometrik.
+        \item $\ran L$ adalah subaljabar tertutup dari
+$\ran \phi = A^\sharp \subseteq \ofml B(A)$.
+        \item $I_A \notin \ran L$.
+      \end{enumerate}
+    \item Buktikan bahwa norma pada $\wt A$ memenuhi syarat-$C^*$.
+    \item Buktikan bahwa $\wt A$ adalah suatu aljabar-$C^*$ beridentitas. (Untuk
+menunjukkan bahwa $\wt A$ lengkap, kita hanya perlu menunjukkan bahwa $A^\sharp$ lengkap.
+Untuk tujuan ini, misalkan $\bigl(\phi(a_n,\lambda_n)\bigr)_{n=1}^\infty$ suatu barisan
+Cauchy dalam~$A^\sharp$. Untuk menunjukkan bahwa barisan ini konvergen, cukup ditunjukkan
+bahwa barisan itu mempunyai suatu subbarisan konvergen. Dengan menunjukkan bahwa barisan
+$(\lambda_n)$ terbatas, kita dapat mengekstrak darinya suatu subbarisan konvergen
+$\bigl(\lambda_{n_k}\bigr)$. Buktikan bahwa $(L_{a_{n_k}})$ konvergen.)
+    \item Buktikan bahwa barisan
+        \begin{equation}\xymatrix{
+     0\ar[r] & A\ar[r] & \wt A\ar[r] & \C\ar[r] & 0
+        }\end{equation}
+eksak terbelah.
+    \item Aljabar-$C^*$ $\wt A$ \emph{tidak} isomorfik dengan $A \oplus \C$.
+\end{enumerate}  \ns
+\end{proof}
+
+\begin{defn}\label{00152131} Aljabar-$C^*$ $\wt A$ yang dikonstruksi dalam proposisi
+sebelumnya adalah
+ \index{unitalisasi!suatu aljabar-$C^*$}%
+\df{unitalisasi} dari~$A$.
+\end{defn}
+
+Perhatikan bahwa definisi \emph{spektrum} yang diperluas dalam~\ref{00150014} berlaku untuk
+aljabar-$C^*$ karena penambahan identitas merupakan perkara aljabar murni dan sama
+bagi aljabar-$C^*$ seperti bagi aljabar Banach umum. Dengan demikian, banyak fakta
+terdahulu yang dinyatakan untuk aljabar-$C^*$ beridentitas tetap berlaku. Secara khusus,
+untuk rujukan selanjutnya, kita nyatakan kembali butir-butir \ref{00131101},
+\ref{00131102}, \ref{00131103}, \ref{00131104}, \ref{001312}, \ref{001406},
+dan~\ref{0014062}.
+
+\begin{prop}\label{00152141} Misalkan $a$ suatu unsur normal dari suatu aljabar-$C^*$. Maka
+$\norm{a^2} = {\norm a}^2$ dan karena itu $\rho(a)~=~\norm a$.
+\end{prop}
+
+\begin{cor}\label{00152142} Jika $A$ suatu aljabar-$C^*$ komutatif, maka
+$\norm{a^2} = {\norm a}^2$ dan $\rho(a)~=~\norm a$ untuk setiap $a \in A$.
+\end{cor}
+
+\begin{cor}\label{00152143} Pada suatu aljabar-$C^*$ komutatif $A$, transformasi Gelfand
+$\Gamma$ adalah isometri; yaitu, $\norm{\Gamma_a}_u = \norm{\wh a}_u = \norm a$ untuk
+setiap $a \in A$.
+\end{cor}
+
+\begin{cor}\label{00152144} Norma suatu aljabar-$C^*$ bersifat tunggal dalam arti bahwa, jika
+diberikan suatu aljabar $A$ dengan involusi, paling banyak ada satu norma yang menjadikan
+$A$ suatu aljabar-$C^*$.
+\end{cor}
+
+\begin{prop}\label{00152145} Jika $h$ suatu unsur swaadjoin dari suatu aljabar-$C^*$,
+ \index{spektrum!unsur swaadjoin}%
+ \index{swaadjoin!unsur!spektrum}%
+maka $\sigma(h) \subseteq \R$.
+\end{prop}
+
+\begin{prop}\label{00152152} Jika $a$ suatu unsur swaadjoin dalam suatu aljabar-$C^*$,
+maka transformasi Gelfandnya $\wh a$ bernilai real.
+\end{prop}
+
+\begin{prop}\label{00152153} Setiap karakter pada suatu aljabar-$C^*$ $A$ mempertahankan
+involusi; dengan demikian, transformasi Gelfand $\sbsb{\Gamma}{\!\!A}$ adalah suatu
+homomorfisme-$*$.
+\end{prop}
+
+Akibat langsung dari hasil-hasil sebelumnya adalah versi kedua dari
+\emph{teorema Gelfand--Naimark}, yang menyatakan bahwa setiap aljabar-$C^*$ komutatif
+(isomorfik-$*\,$ secara isometrik dengan) aljabar dari semua fungsi kontinu pada suatu ruang
+Hausdorff kompak lokal yang lenyap di tak hingga. Seperti halnya pada versi pertama
+teorema ini (lihat~\ref{00142}), ruang Hausdorff kompak lokal yang dimaksud adalah ruang
+karakter dari aljabar tersebut.
+
+\begin{thm}[Teorema Gelfand--Naimark II]\label{00152156} Misalkan $A$ suatu aljabar-$C^*$
+komutatif.
+ \index{Gelfand-Naimark!Teorema II}%
+Maka transformasi Gelfand $\Gamma_A\colon a \mapsto \wh a$ adalah suatu
+isomorfisme-$*\,$ isometrik dari $A$ pada $\fml C_0(\Delta A)$.
+\end{thm}
+
+Dari proposisi berikut, diperoleh bahwa proses unitalisasi bersifat funktorial.
+
+\begin{prop} \label{00152161} Setiap homomorfisme-$*$ $\phi\colon A \sto B$ antara
+aljabar-$C^*$ mempunyai suatu perpanjangan tunggal menjadi homomorfisme-$*$ beridentitas
+$\wt \phi\colon \wt A \sto \wt B$ antara unitalisasi masing-masing.
+\end{prop}
+
+Berbeda dengan keadaan pada aljabar Banach umum, tidak ada perbedaan antara kategori
+topologis dan kategori geometris aljabar-$C^*$. Salah satu aspek paling mengagumkan dari
+teori aljabar-$C^*$ adalah bahwa homomorfisme-$*$ antara aljabar-aljabar demikian secara
+otomatis kontinu---bahkan, kontraktif. Akibatnya, jika dua aljabar-$C^*$ isomorfik-$*$
+secara aljabar, maka keduanya isomorfik secara isometrik.
+
+\begin{prop}\label{00152171} Setiap homomorfisme-$*$ antara aljabar-$C^*$ bersifat kontraktif.
+\end{prop}
+
+\begin{prop}\label{00152181} Setiap homomorfisme-$*$ injektif antara aljabar-$C^*$ adalah
+suatu isometri.
+\end{prop}
+
+\begin{prop}\label{00152191} Misalkan $X$ suatu ruang Hausdorff kompak lokal dan
+$\wt X = X \cup \{\infty\}$ merupakan kompaktifikasi satu titiknya. Definisikan
+  \[ \iota\colon \fml C_0(X) \sto \,\fml C(\wt X)\colon f \mapsto \wt f \]
+dengan
+ \[ \wt f(x) = \left\{%
+  \begin{array}{ll}
+     f(x), & \hbox{jika $x \in X$;} \\
+     0, & \hbox{jika $x = \infty$.} \\
+  \end{array}%
+            \right. \]
+Definisikan pula $E_\infty$ pada $\fml C(\wt X)$ dengan $E_\infty(g) = g(\infty)$. Maka
+barisan
+  \[ \vc 0 \to \fml C_0(X) \to^\iota \,\,\fml C(\wt X)
+                                        \to^{E_\infty} \C \to \vc 0 \]
+eksak.
+\end{prop}
+
+Dalam proposisi sebelumnya, kita menyebut $\wt X$ sebagai kompaktifikasi satu titik dari $X$
+bahkan jika $X$ sejak awal kompak. Kebanyakan definisi \emph{kompaktifikasi} mensyaratkan
+suatu ruang rapat dalam setiap kompaktifikasinya. (Lihat ulasan saya pada awal
+bagian 17.3 dari~\cite{Erdman:2007}.) Sebelumnya kita telah menggunakan konvensi bahwa
+unitalisasi dari suatu aljabar beridentitas memperoleh suatu identitas perkalian baru.
+Demi konsistensi dengan pilihan ini, selanjutnya kita akan menganut konvensi bahwa
+kompaktifikasi satu titik dari suatu ruang kompak memperoleh suatu titik tambahan
+(terisolasi). (Lihat pula istilah yang kita perkenalkan
+dalam~\futurexref{14.3.1}{0038614}.)
+
+ \vskip 2 pt
+
+Dari sudut pandang teorema Gelfand--Naimark~(\ref{00152156}), wawasan mendasar yang
+disarankan oleh proposisi berikut adalah bahwa unitalisasi suatu aljabar-$C^*$ komutatif,
+dalam arti tertentu, merupakan ``hal yang sama'' dengan kompaktifikasi satu titik dari
+suatu ruang Hausdorff kompak lokal.
+
+\begin{prop}\label{00152194} Jika $X$ suatu ruang Hausdorff kompak lokal, maka
+aljabar-$C^*$ beridentitas $\bigl(\fml C_0(X)\bigr)^\sim$ dan $\fml C(\wt X)$
+isomorfik-$*\,$ secara isometrik.
+\end{prop}
+
+\begin{proof} Definisikan
+  \[ \theta\colon \bigl(\fml C_0(X)\bigr)^\sim \!\!\sto \fml C(\wt X)\colon
+                         (f,\lambda) \mapsto \wt f + \lambda \vc 1_{\wt X} \]
+(dengan $\vc 1_{\wt X}$ menyatakan fungsi konstan $1$ pada~$\wt X$). Kemudian tinjau diagram
+  \[\xymatrix{
+     0\ar[r] & \fml C_0(X)\ar[r]\ar@{=}[d] & \bigl(\fml C_0(X)\bigr)^\sim\ar[r]\ar[d]^\theta
+             & \C\ar[r]\ar@{=}[d] & 0 \\
+     0\ar[r] & \fml C_0(X)\ar[r]^\iota & \fml C(\wt X)\ar[r]^{E_\infty} & \C\ar[r] & 0
+  }\]
+Baris atas eksak menurut proposisi~\ref{0015213}, baris bawah eksak menurut
+proposisi~\ref{00152191}, dan diagram tersebut jelas komutatif. Pemeriksaan bahwa $\theta$
+adalah suatu homomorfisme-$*\,$ bersifat rutin. Oleh karena itu, $\theta$ adalah suatu
+isomorfisme-$*\,$ isometrik menurut proposisi~\ref{0015152} dan
+korolari~\ref{00152181}.
+\end{proof}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Kuasi-Invers}
+\begin{defn} Suatu elemen $b$ dari aljabar $A$ adalah \df{kuasi-invers kiri} bagi $a \in A$ jika
+$ba = a + b$. Elemen tersebut adalah \df{kuasi-invers kanan} bagi $a$ jika $ab = a + b$. Jika $b$
+sekaligus merupakan kuasi-invers kiri dan kuasi-invers kanan bagi $a$, maka $b$ adalah
+ \index{kuasi-invers}%
+\df{kuasi-invers} bagi~$a$. Jika $a$ memiliki kuasi-invers, kita lambangkan kuasi-invers itu dengan~$a'$.
+\end{defn}
+
+\begin{prop} Jika $b$ adalah kuasi-invers kiri bagi $a$ dalam aljabar $A$ dan $c$ adalah
+kuasi-invers kanan bagi $a$ dalam $A$, maka $b = c$.
+\end{prop}
+
+\begin{prop} Misalkan $A$ aljabar beridentitas dan $a$, $b \in A$. Maka
+ \begin{enumerate}
+  \item[(a)] $a'$ ada jika dan hanya jika $(\vc 1 - a)^{-1}$ ada; dan
+  \item[(b)] $b^{-1}$ ada jika dan hanya jika $(\vc 1 - b)'$ ada.
+ \end{enumerate}
+\end{prop}
+
+\begin{proof}[\emph{Petunjuk bukti}] Untuk arah sebaliknya pada (a), tinjau
+$a + c - ac$, dengan $c = \vc 1 - (\vc 1 - a)^{-1}$. \ns
+\end{proof}
+
+\begin{prop} Suatu elemen $a$ dari aljabar Banach $A$ bersifat kuasi-invertibel jika dan hanya jika
+elemen itu bukan merupakan identitas terhadap ideal modular maksimal mana pun dalam~$A$.
+\end{prop}
+
+\begin{prop} Misalkan $A$ aljabar Banach dan $a \in A$. Jika $\rho(a) < 1$, maka $a'$ ada
+dan $a' = -\sum_{k=1}^\infty a^k$.
+\end{prop}
+
+\begin{prop} Misalkan $A$ aljabar Banach dan $a \in A$. Jika $\norm{a} < 1$, maka $a'$ ada
+dan
+   \[ \frac{\norm{a}}{1 + \norm{a}} \le \norm{a'} \le \frac{\norm{a}}{1 - \norm{a}}. \]
+\end{prop}
+
+\begin{prop} Misalkan $A$ aljabar Banach beridentitas dan $a \in A$. Jika $\rho(\vc 1 - a) < 1$, maka
+$a$ invertibel dalam~$A$.
+\end{prop}
+
+\begin{prop} Misalkan $A$ aljabar Banach dan $a$, $b \in A$. Jika $b'$ ada dan
+$\norm{a} < (1 + \norm{b'})^{-1}$, maka $(a + b)'$ ada dan
+  \[ \norm{(a + b)' - b'}
+           \le \frac{\norm{a}\,(1 + \norm{b'})^2}{1 - \norm{a}\,(1 + \norm{b'})}\,.\]
+\end{prop}
+ \begin{proof}[\emph{Petunjuk bukti}] Tunjukkan terlebih dahulu bahwa $u = (a - b'a)'$ ada dan bahwa
+ $u + b' - ub'$ adalah kuasi-invers kiri bagi~$a~+~b$. \ns
+\end{proof}
+
+Bandingkan hasil berikut dengan proposisi~\ref{000644fa} dan~\ref{000646fa}.
+\begin{prop} Himpunan $Q_A$ yang terdiri atas
+ \index{q@$Q_A$ (elemen kuasi-invertibel)}%
+elemen-elemen kuasi-invertibel dari aljabar Banach $A$ adalah himpunan terbuka dalam $A$, dan pemetaan $a \mapsto
+a'$ merupakan homeomorfisme dari $Q_A$ ke dirinya sendiri.
+\end{prop}
+
+\begin{notn} Jika $a$ dan $b$ adalah elemen dalam suatu aljabar, kita definisikan
+ \index{<binop@$a \circ b$ (operasi dalam suatu aljabar)}%
+$a \circ b := a + b - ab$.
+\end{notn}
+
+\begin{prop} Jika $A$ aljabar, maka $Q_A$ merupakan grup terhadap~$\circ$.
+\end{prop}
+
+\begin{prop} Jika $A$ aljabar Banach beridentitas dan $\inv A$ adalah himpunan elemen-elemen
+invertibelnya, maka
+   \[ \Psi\colon Q_A \sto \inv A\colon  a \mapsto \vc 1 - a \]
+merupakan isomorfisme.
+\end{prop}
+
+\begin{defn} Jika $A$ aljabar dan $a \in A$, kita definisikan
+ \index{spektrum-q}%
+ \index{spektrum!q-}%
+\df{spektrum-q} dari $a$ dalam $A$ dengan
+  \[ \breve{\sigma}_A(a) := \{\lambda \in \C\colon  \lambda \ne 0
+                      \text{ dan } \dfrac a\lambda \notin Q_A\}\cup\{0\}. \]
+\end{defn}
+
+Dalam aljabar beridentitas, definisi di atas ``hampir'' merupakan definisi yang biasa.
+\begin{prop} Misalkan $A$ aljabar beridentitas dan $a \in A$. Maka untuk setiap $\lambda \ne 0$, berlaku
+$\lambda \in \sigma(a)$ jika dan hanya jika $\lambda \in \breve{\sigma}(a)$.
+\end{prop}
+
+\begin{prop} Jika aljabar $A$ tak beridentitas dan $a \in A$, maka $\breve{\sigma}_A(a) =
+\breve{\sigma}_{\wt A}(a)$, dengan $\wt A$ adalah unitalisasi dari~$A$.
+\end{prop}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Elemen Positif dalam Aljabar-$C^*$}
+\begin{defn} Suatu elemen swaadjoin $a$ dari aljabar-$C^*$ $A$ disebut
+ \index{positif!elemen dari suatu aljabar-$C^*$}%
+\df{positif} jika $\sigma(a) \subseteq [0,\infty)$. Dalam hal ini kita tulis $a \ge \vc 0$.
+Kita lambangkan himpunan semua elemen positif dari $A$
+ \index{<plus@$A^+$ (kerucut positif)}%
+dengan~$A^+$. Himpunan ini adalah
+ \index{positif!kerucut}%
+ \index{kerucut!positif}%
+\df{kerucut positif} dari~$A$. Untuk setiap himpunan bagian $B$ dari $A$, misalkan $B^+ = B \cap A^+$. Kita akan
+menggunakan kerucut positif untuk menginduksi suatu urutan parsial pada~$A$: kita tulis
+ \index{<relation@$a \le b$ (relasi urutan dalam suatu aljabar-$C^*$)}%
+$a \le b$ apabila $b - a \in A^+$.
+\end{defn}
+
+\begin{defn} Misalkan $\le$ suatu relasi pada himpunan tak kosong $S$. Jika relasi
+ \index{<relation@$\le$ (notasi untuk suatu urutan parsial)}%
+ $\le$ bersifat refleksif dan transitif, relasi tersebut adalah suatu
+ \index{praurutan}%
+ \index{urutan!pra-}%
+\df{praurutan}. Jika $\le$ adalah praurutan dan juga antisimetris, relasi tersebut adalah suatu
+ \index{parsial!urutan}%
+ \index{urutan!parsial}%
+\df{urutan parsial}.
+
+Suatu urutan parsial $\le$ pada ruang vektor riil $V$
+ \index{kompatibilitas!urutan dengan operasi}%
+\df{kompatibel} dengan (atau
+ \index{menghormati operasi}%
+\df{menghormati}) operasi-operasi (penjumlahan dan perkalian skalar) pada~$V$ jika untuk semua $x$,
+$y$, $z \in V$
+ \begin{enumerate}
+  \item[(a)] $x \le y$ mengakibatkan $x+z \le y+z$, dan
+  \item[(b)] $x \le y$, $\alpha \ge 0$ mengakibatkan $\alpha x \le \alpha y$.
+ \end{enumerate}
+Suatu ruang vektor riil yang dilengkapi dengan urutan parsial yang kompatibel dengan operasi-operasi
+ruang vektor disebut
+ \index{terurut!ruang vektor}%
+ \index{vektor!ruang!terurut}%
+\df{ruang vektor terurut}.
+\end{defn}
+
+\begin{defn} Misalkan $V$ ruang vektor. Suatu himpunan bagian $C$ dari $V$ adalah
+ \index{kerucut}%
+\df{kerucut} dalam $V$ jika $\alpha C \subseteq C$ untuk setiap $\alpha \ge 0$. Suatu kerucut $C$ dalam $V$
+disebut
+ \index{proper!kerucut}%
+ \index{kerucut!proper}%
+\df{proper} jika $C \cap (-C) = \{\vc 0\}$.
+\end{defn}
+
+\begin{prop}\label{0018006} Suatu kerucut $C$ dalam ruang vektor bersifat konveks jika dan hanya jika $C + C
+\subseteq C$.
+\end{prop}
+
+\begin{exam}\label{0018007} Jika $V$ ruang vektor terurut, maka himpunan
+ \index{<dualp@$V^+$ (kerucut positif dalam suatu ruang vektor terurut)}%
+   \[ V^+ := \{x \in V \colon x \ge \vc 0\} \]
+adalah kerucut konveks proper dalam~$V$. Himpunan ini adalah
+ \index{positif!kerucut!dalam suatu ruang vektor terurut}%
+ \index{kerucut!positif}%
+\df{kerucut positif} dari~$V$, dan anggota-anggotanya adalah
+ \index{positif!elemen (dari suatu ruang vektor terurut)}%
+\df{elemen positif} dari~$V$.
+\end{exam}
+
+\begin{prop}\label{0018008} Misalkan $V$ ruang vektor riil dan $C$ kerucut konveks proper
+dalam~$V$. Definisikan $x \le y$ jika $y - x \in C$. Maka relasi $\le$ adalah urutan parsial
+pada $V$ dan kompatibel dengan operasi-operasi ruang vektor pada~$V$. Relasi ini adalah
+\df{urutan parsial
+ \index{terinduksi!urutan parsial}%
+ \index{parsial!urutan!terinduksi oleh kerucut konveks proper}%
+yang diinduksi oleh} kerucut~$C$. Kerucut positif $V^+$ dari ruang vektor terurut yang dihasilkan
+tepat sama dengan $C$.
+\end{prop}
+
+\begin{prop} Jika $a$ adalah elemen swaadjoin dari suatu aljabar-$C^*$ beridentitas dan $t \in \R$, maka
+ \begin{enumerate}
+   \item[(i)] $a \ge \vc 0$ apabila $\norm{a - t\vc 1} \le t$; dan
+   \item[(ii)] $\norm{a - t\vc 1} \le t$ apabila $\norm a \le t$ dan $a \ge \vc 0$.
+  \end{enumerate}
+\end{prop}
+
+\begin{exam} Kerucut positif dari suatu aljabar-$C^*$ $A$ adalah kerucut konveks proper tertutup
+dalam ruang vektor riil~$\ofml H(A)$.
+\end{exam}
+
+\begin{prop}\label{0018015} Jika $a$ dan $b$ adalah elemen positif dari suatu aljabar-$C^*$
+dan $ab = ba$, maka $ab$ positif.
+\end{prop}
+
+\begin{prop}\label{001804} Setiap elemen positif dari suatu aljabar-$C^*$ $A$ memiliki akar pangkat
+$n$ positif yang tunggal ($n \in \N$). Artinya, jika $a \in A^+$, maka terdapat tepat satu
+$b \in A^+$ sedemikian sehingga $b^n = a$.
+\end{prop}
+
+\begin{proof} \emph{Petunjuk.} Bagian eksistensi merupakan penerapan sederhana kalkulus fungsional
+$C^*$ (yaitu, \emph{teorema spektral abstrak}~\ref{00144}). Elemen $b$
+yang diberikan oleh kalkulus fungsional bersifat positif dalam aljabar $C^*(\vc 1,a)$. Jelaskan mengapa
+elemen itu juga positif dalam~$A$. Argumen keunikan memerlukan perhatian yang saksama. \ns
+\end{proof}
+
+\begin{thm}[Dekomposisi Jordan]\label{001807} Jika $c$ adalah elemen swaadjoin dari suatu
+ \index{dekomposisi Jordan}%
+ \index{dekomposisi!Jordan}%
+aljabar-$C^*$ $A$, maka terdapat elemen-elemen positif
+ \index{<positive@$c^+$ (bagian positif dari $c$)}%
+ \index{positif!bagian!dari suatu elemen swaadjoin}%
+ \index{<positive@$c^-$ (bagian negatif dari $c$)}%
+ \index{negatif!bagian!dari suatu elemen swaadjoin}%
+$c^+$ dan $c^-$ dalam $A$ sedemikian sehingga $c = c^+ - c^-$ dan $c^+c^- = \vc 0$.
+\end{thm}
+
+\begin{lem} Jika $c$ adalah elemen dari suatu aljabar-$C^*$ sedemikian sehingga $-c^*c \ge \vc 0$, maka $c
+= \vc 0$.
+\end{lem}
+
+\begin{prop} Jika $a$ adalah elemen dari suatu aljabar-$C^*$, maka $a^*a \ge \vc 0$.
+\end{prop}
+
+\begin{prop}\label{00180731} Jika $c$ adalah elemen dari suatu aljabar-$C^*$ $A$, maka pernyataan-pernyataan
+berikut ekuivalen:
+ \begin{enumerate}
+    \item[(i)] $c \ge \vc 0$;
+    \item[(ii)] terdapat $b \ge \vc 0$ sedemikian sehingga $c = b^2$; dan
+    \item[(iii)] terdapat $a \in A$ sedemikian sehingga $c = a^*a$,
+ \end{enumerate}
+\end{prop}
+
+\begin{exam}\label{00180741} Jika $T$ operator pada ruang Hilbert $H$, maka $T$ merupakan
+elemen positif dari aljabar-$C^*$ $\ofml B(H)$ jika dan hanya jika $\langle Tx,x \rangle
+\ge 0$ untuk setiap $x \in H$.
+\end{exam}
+
+\begin{proof}[\emph{Petunjuk bukti}] Mudah untuk menunjukkan bahwa jika $T \ge \vc 0$ dalam $\ofml B(H)$, maka
+$\langle Tx,x \rangle \ge 0$ untuk setiap $x \in H$: gunakan proposisi~\ref{00180731} untuk
+menuliskan $T$ sebagai $S^*S$ bagi suatu operator~$S$.
+
+Sebaliknya, andaikan $\langle Tx,x \rangle \ge 0$ untuk setiap $x \in H$. Mudah
+dilihat bahwa ini mengakibatkan $T$ swaadjoin. Gunakan \emph{teorema dekomposisi
+Jordan}~\ref{001807} untuk menuliskan $T$ sebagai $T^+ - T^-$. Untuk sembarang $u \in H$, misalkan $x = T^-u$
+dan periksa bahwa $0 \le \langle Tx,x \rangle = -\langle (T^-)^3u,u \rangle$. Sekarang $(T^-)^3$
+adalah elemen positif dari $\ofml B(H)$. (Mengapa?) Simpulkan bahwa $(T^-)^3 = \vc 0$ dan
+karena itu $T^- = \vc 0$. (Untuk rincian tambahan, lihat~\cite{DoranB:1986}, halaman~37.) \ns
+\end{proof}
+
+\begin{defn} Untuk sembarang elemen $a$ dari suatu aljabar-$C^*$, kita definisikan
+ \index{mutlak!nilai!dalam suatu aljabar-$C^*$}%
+ \index{<unop@$\abs a$ (nilai mutlak dalam suatu aljabar-$C^*$)}%
+$\abs a$ sebagai $\sqrt{a^*a}$.
+\end{defn}
+
+\begin{prop} Jika $a$ adalah elemen swaadjoin dari suatu aljabar-$C^*$, maka
+  \[ \abs a = a^+ + a^-\,. \]
+\end{prop}
+
+\begin{exam} Nilai mutlak dalam suatu aljabar-$C^*$ tidak harus
+subaditif; yaitu, $\abs{a + b}$ tidak harus lebih kecil daripada $\abs{a}
++ \abs{b}$. Sebagai contoh, dalam $\M 2\C$, ambil $a = \begin{bmatrix} 1 & 1 \\
+1 & 1 \end{bmatrix}$ dan $b = \begin{bmatrix} 0 & 0 \\ 0 & -2
+\end{bmatrix}$. Maka $\abs{a} = a$, $\abs{b} = \begin{bmatrix} 0 &
+0 \\ 0 & 2 \end{bmatrix}$, dan $\abs{a + b} = \begin{bmatrix} \sqrt{2} & 0 \\ 0 &
+\sqrt{2}
+\end{bmatrix}$. Jika $\abs{a + b} - \abs{a} - \abs{b}$ positif, maka, berdasarkan
+contoh~\ref{00180741}, $\langle\,(\abs{a + b} - \abs{a} - \abs{b})\,x\,,\,x\,\rangle$
+akan positif untuk setiap vektor $x \in \C^2$. Namun, hal ini tidak benar untuk $x = (1,0)$.
+\end{exam}
+
+\begin{prop}\label{0018201} Jika $\phi\colon A \sto B$ adalah homomorfisme-$*\,$ antara
+aljabar-$C^*$, maka $\phi(a) \in B^+$ apabila $a \in A^+$. Jika $\phi$ adalah
+isomorfisme-$*\,$, maka $\phi(a) \in B^+$ jika dan hanya jika $a \in A^+$.
+\end{prop}
+
+\begin{prop} Misalkan $a$ elemen swaadjoin dari suatu aljabar-$C^*$ $A$ dan $f$ fungsi kontinu
+bernilai kompleks pada spektrum~$a$. Maka $f \ge \vc 0$ dalam $\fml
+C(\sigma(a))$ jika dan hanya jika $f(a) \ge \vc 0$ dalam~$A$.
+\end{prop}
+
+\begin{prop}\label{0018203} Jika $a$ adalah elemen swaadjoin dari suatu aljabar-$C^*$ $A$, maka
+$\norm a\,\vc 1_{\wt A} \pm a \ge \vc 0$ dalam~$\wt A$.
+\end{prop}
+
+\begin{prop}\label{0018204} Jika $a$ dan $b$ adalah elemen swaadjoin dari suatu
+aljabar-$C^*$~$A$ dan $a \le b$, maka $x^*ax \le x^*bx$ untuk setiap $x \in A$.
+\end{prop}
+
+\begin{prop} Jika $a$ dan $b$ adalah elemen dari suatu aljabar-$C^*$ dengan $0 \le a \le b$, maka
+$\norm a \le \norm b$.
+\end{prop}
+
+\begin{prop}\label{0018301} Misalkan $A$ aljabar-$C^*$ beridentitas dan $c \in A^+$. Maka
+$c$ invertibel jika dan hanya jika $c \ge \epsilon\vc 1$ untuk suatu $\epsilon > 0$.
+\end{prop}
+
+\begin{prop} Misalkan $A$ aljabar-$C^*$ beridentitas dan $c \in A$. Jika $c \ge \vc 1$, maka $c$
+invertibel dan $\vc 0 \le c^{-1} \le \vc 1$.
+\end{prop}
+
+\begin{prop} Jika $a$ adalah elemen positif yang invertibel dalam suatu aljabar-$C^*$ beridentitas, maka $a^{-1}$
+positif.
+\end{prop}
+
+Selanjutnya kita tunjukkan bahwa notasi $a^{\ssst{-\frac12}}$ tidak ambigu.
+
+\begin{prop} Misalkan $a \in A^+$, dengan $A$ aljabar-$C^*$ beridentitas. Jika $a$ invertibel, maka
+$a^{\ssst{\frac12}}$ juga invertibel dan $\bigl(a^{\ssst{\frac12}}\bigr)^{-1} =
+\bigl(a^{-1}\bigr)^{\ssst{\frac12}}$.
+\end{prop}
+
+\begin{cor}\label{00183313} Jika $a$ adalah elemen invertibel dalam suatu aljabar-$C^*$ beridentitas,
+ \index{invers!dari suatu nilai mutlak}%
+maka~$\abs a$ juga invertibel.
+\end{cor}
+
+\begin{prop}\label{0018401} Misalkan $a$ dan $b$ adalah elemen dari suatu aljabar-$C^*$. Jika
+$\vc 0 \le a \le b$ dan $a$ invertibel, maka $b$ invertibel dan $b^{-1} \le
+a^{-1}$.
+\end{prop}
+
+\begin{prop} Jika $a$ dan $b$ adalah elemen dari suatu aljabar-$C^*$ dan $\vc 0 \le a \le b$,
+maka $\sqrt a \le \sqrt b$.
+\end{prop}
+
+\begin{exam} Misalkan $a$ dan $b$ elemen dari suatu aljabar-$C^*$ dengan $\vc 0 \le a \le b$.
+\emph{Tidak} selalu berlaku bahwa $a^2 \le b^2$.
+\end{exam}
+
+\begin{proof}[\emph{Petunjuk bukti}] Dalam aljabar-$C^*$ $\mathbf M_2$, misalkan $a =
+\begin{bmatrix} 1 & 0 \\ 0 & 0 \end{bmatrix}$ dan
+$b = a + \tfrac12 \begin{bmatrix} 1 & 1 \\ 1 & 1 \end{bmatrix}$. \ns
+\end{proof}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Identitas Aproksimatif}
+\begin{defn} Suatu
+ \index{identitas!aproksimatif}%
+ \index{aproksimatif!identitas}%
+\df{identitas aproksimatif} (atau
+ \index{unit!aproksimatif}%
+ \index{aproksimatif!unit}%
+\df{unit aproksimatif}) dalam suatu aljabar-$C^*$ $A$ adalah jaring menaik
+${(e_\lambda)}_{\lambda \in \Lambda}$ yang terdiri atas elemen-elemen positif dari $A$ sedemikian sehingga
+$\norm{e_\lambda} \le 1$ dan $ae_\lambda \sto a$ (secara ekuivalen, $e_\lambda\, a \sto a$)
+untuk setiap $a \in A$. Jika jaring tersebut ternyata merupakan barisan, kita memperoleh
+ \index{sekuensial!identitas aproksimatif}%
+ \index{aproksimatif!identitas!sekuensial}%
+\df{identitas aproksimatif sekuensial}. Dalam literatur, berhati-hatilah terhadap definisi yang
+beragam: banyak penulis menghilangkan syarat bahwa jaring tersebut menaik dan/atau bahwa jaring itu
+terbatas.
+\end{defn}
+
+\begin{exam} Misalkan $A = \fml C_0(\R)$. Untuk setiap $n \in \N$, misalkan $U_n = (-n,n)$ dan
+$e_n\colon \R \sto [0,1]$ suatu fungsi dalam $A$ yang dukungannya termuat dalam $U_{n+1}$
+dan sedemikian sehingga $e_n(x) = 1$ untuk setiap $x \in U_n$. Maka $(e_n)$ adalah identitas
+aproksimatif (sekuensial) bagi~$A$.
+\end{exam}
+
+\begin{prop} Jika $A$ adalah aljabar-$C^*$, maka himpunan
+ \index{lambda@$\Lambda$ (anggota $A^+$ dalam bola satuan terbuka)}%
+   \[ \Lambda := \{a \in A^+\colon \norm a < 1\} \]
+merupakan himpunan terarah (terhadap urutan yang diwarisinya dari $\ofml H(A)$).
+\end{prop}
+
+\begin{proof}[\emph{Petunjuk bukti}] Periksa bahwa fungsi
+  \[ f\colon [0,1) \sto \R^+\colon t \mapsto (1 - t)^{-1} - 1 = \frac t{1 - t} \]
+menginduksi isomorfisme urutan $f\colon \Lambda \sto A^+$. (Suatu
+ \index{urutan!isomorfisme}%
+ \index{isomorfisme!urutan}%
+\df{isomorfisme urutan} antara himpunan-himpunan terurut parsial adalah bijeksi yang mempertahankan urutan,
+yang inversnya juga mempertahankan urutan.) Bukti yang saksama untuk hasil ini melibatkan pemeriksaan
+terhadap cukup banyak rincian. \ns
+\end{proof}
+
+\begin{prop} Jika $A$ adalah aljabar-$C^*$, maka himpunan
+  \[ \Lambda := \{a \in A^+\colon \norm a < 1\} \]
+merupakan identitas aproksimatif bagi~$A$.
+\end{prop}
+
+\begin{cor}\label{00190161} Setiap aljabar-$C^*$ $A$ memiliki identitas aproksimatif.
+ \index{aproksimatif!identitas!keberadaan}%
+Jika $A$ separabel, maka $A$ memiliki identitas aproksimatif sekuensial.
+\end{cor}
+
+\begin{prop}\label{0019017} Setiap ideal aljabar (dua sisi) tertutup dalam suatu aljabar-$C^*$
+bersifat swaadjoin.
+\end{prop}
+
+\begin{prop}\label{001902} Jika $J$ ideal dalam suatu aljabar-$C^*$ $A$, maka
+ \index{hasil bagi!aljabar-$C^*$}%
+$A/J$ adalah aljabar-$C^*$.
+\end{prop}
+
+\begin{proof} Lihat \cite{HigsonR:2000}, teorema 1.7.4, atau \cite{Davidson:1996}, halaman
+13--14, atau~\cite{Fillmore:1996}, teorema 2.5.4. \ns
+\end{proof}
+
+\begin{exam} Jika $J$ ideal dalam suatu aljabar-$C^*$ $A$, maka barisan
+  \[ \vc 0 \to J \to A \to^\pi A/J \to \vc 0 \]
+adalah barisan eksak pendek.
+\end{exam}
+
+\begin{prop}\label{0019023} Jangkauan suatu homomorfisme-$*$ antara aljabar-$C^*$ bersifat tertutup
+(dan karena itu merupakan aljabar-$C^*$).
+\end{prop}
+
+\begin{defn} Suatu subaljabar-$C^*$ $B$ dari aljabar-$C^*$ $A$ disebut
+ \index{herediter}%
+\df{herediter} jika $a \in B$ setiap kali $a \in A$, $b \in B$, dan $\vc 0 \le a \le b$.
+\end{defn}
+
+\begin{prop}\label{001915} Andaikan $x^*x \le a$ dalam suatu aljabar-$C^*$ $A$. Maka terdapat
+$b \in A$ sedemikian sehingga $x = ba^{\frac14}$ dan $\norm b \le {\norm a}^\frac14$.
+\end{prop}
+
+\begin{proof} Lihat \cite{Davidson:1996}, halaman 13. \ns
+\end{proof}
+
+\begin{prop} Andaikan $J$ ideal dalam suatu aljabar-$C^*$ $A$, $j \in J^+$, dan
+$a^*a \le j$. Maka $a \in J$. Jadi, ideal-ideal dalam aljabar-$C^*$ bersifat herediter.
+\end{prop}
+
+\begin{thm}\label{001922} Misalkan $A$ dan $B$ aljabar-$C^*$ dan $J$ ideal dalam~$A$.\newline
+Jika $\phi$ \mbox{homomorfisme-$*\,$} dari $A$ ke $B$ dan $\ker\phi \supseteq J$, maka terdapat
+tepat satu \mbox{homomorfisme-$*\,$} $\widetilde\phi\colon A/J \sto B$ yang membuat
+diagram berikut komutatif.
+ \[ \xymatrix@+30pt{A \ar[d]_*+{\pi} \ar[dr]^*+{\phi} & \\
+            A/J \ar[r]_*+{\widetilde\phi} & B  } \]
+Selain itu, $\widetilde\phi$ injektif jika dan hanya jika $\ker\phi = J$; dan
+$\widetilde\phi$ surjektif jika dan hanya jika $\phi$ surjektif.
+\end{thm}
+
+\begin{cor}\label{001923} Jika $\vc 0 \to A \to^\phi E \to B \to \vc 0$ adalah barisan eksak
+pendek dari aljabar-$C^*$, maka $E/\ran\phi$ dan $B$ isomorfik-$*\,$ secara isometrik.
+\end{cor}
+
+\begin{cor}\label{001924} Setiap aljabar-$C^*$ $A$ memiliki kodimensi satu dalam
+unitalisasinya~$\wt A$; yaitu, $\dim \wt A/A = 1$.
+\end{cor}
+
+\begin{prop} Misalkan $A$ aljabar-$C^*$, $B$ subaljabar-$C^*$ dari $A$, dan $J$
+ideal dalam~$A$. Maka
+   \[  B/(B \cap J) \cong (B + J)/J\,. \]
+\end{prop}
+
+Misalkan $B$ subaljabar beridentitas dari suatu aljabar sembarang $A$. Jelas bahwa jika suatu
+elemen $b \in B$ invertibel dalam $B$, maka elemen itu juga invertibel dalam~$A$. Ternyata
+konversnya benar dalam aljabar-$C^*$: jika $b$ invertibel dalam $A$, maka inversnya
+terletak dalam~$B$. Hal ini biasanya dinyatakan dengan mengatakan bahwa \emph{setiap subaljabar-$C^*$
+beridentitas dari suatu aljabar-$C^*$ bersifat}
+ \index{invers!tertutup}%
+ \index{tertutup!invers}%
+\df{tertutup terhadap invers}.
+
+\begin{prop} Misalkan $B$ subaljabar-$C^*$ beridentitas dari suatu aljabar-$C^*$ $A$. Jika $b \in \inv(A)$,
+maka $b^{-1} \in B$.
+\end{prop}
+
+\begin{cor}\label{0019283} Misalkan $B$ subaljabar-$C^*$ beridentitas dari suatu aljabar-$C^*$ $A$ dan
+$b \in B$. Maka
+   \[ \sigma_B(b) = \sigma_A(b)\,. \]
+\end{cor}
+
+\begin{cor}\label{0019286} Misalkan $\phi\colon A \sto B$ adalah monomorfisme-$C^*$ beridentitas dari
+suatu aljabar-$C^*$ $A$ dan $a \in A$. Maka
+   \[ \sigma(a) = \sigma(\phi(a))\,. \]
+\end{cor}
+
+
+
+\endinput

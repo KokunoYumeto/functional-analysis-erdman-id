@@ -1,0 +1,501 @@
+\section{Kuasi-Invers}
+\begin{defn} Suatu elemen $b$ dari aljabar $A$ adalah \df{kuasi-invers kiri} bagi $a \in A$ jika
+$ba = a + b$. Elemen tersebut adalah \df{kuasi-invers kanan} bagi $a$ jika $ab = a + b$. Jika $b$
+sekaligus merupakan kuasi-invers kiri dan kuasi-invers kanan bagi $a$, maka $b$ adalah
+ \index{kuasi-invers}%
+\df{kuasi-invers} bagi~$a$. Jika $a$ memiliki kuasi-invers, kita lambangkan kuasi-invers itu dengan~$a'$.
+\end{defn}
+
+\begin{prop} Jika $b$ adalah kuasi-invers kiri bagi $a$ dalam aljabar $A$ dan $c$ adalah
+kuasi-invers kanan bagi $a$ dalam $A$, maka $b = c$.
+\end{prop}
+
+\begin{prop} Misalkan $A$ aljabar beridentitas dan $a$, $b \in A$. Maka
+ \begin{enumerate}
+  \item[(a)] $a'$ ada jika dan hanya jika $(\vc 1 - a)^{-1}$ ada; dan
+  \item[(b)] $b^{-1}$ ada jika dan hanya jika $(\vc 1 - b)'$ ada.
+ \end{enumerate}
+\end{prop}
+
+\begin{proof}[\emph{Petunjuk bukti}] Untuk arah sebaliknya pada (a), tinjau
+$a + c - ac$, dengan $c = \vc 1 - (\vc 1 - a)^{-1}$. \ns
+\end{proof}
+
+\begin{prop} Suatu elemen $a$ dari aljabar Banach $A$ bersifat kuasi-invertibel jika dan hanya jika
+elemen itu bukan merupakan identitas terhadap ideal modular maksimal mana pun dalam~$A$.
+\end{prop}
+
+\begin{prop} Misalkan $A$ aljabar Banach dan $a \in A$. Jika $\rho(a) < 1$, maka $a'$ ada
+dan $a' = -\sum_{k=1}^\infty a^k$.
+\end{prop}
+
+\begin{prop} Misalkan $A$ aljabar Banach dan $a \in A$. Jika $\norm{a} < 1$, maka $a'$ ada
+dan
+   \[ \frac{\norm{a}}{1 + \norm{a}} \le \norm{a'} \le \frac{\norm{a}}{1 - \norm{a}}. \]
+\end{prop}
+
+\begin{prop} Misalkan $A$ aljabar Banach beridentitas dan $a \in A$. Jika $\rho(\vc 1 - a) < 1$, maka
+$a$ invertibel dalam~$A$.
+\end{prop}
+
+\begin{prop} Misalkan $A$ aljabar Banach dan $a$, $b \in A$. Jika $b'$ ada dan
+$\norm{a} < (1 + \norm{b'})^{-1}$, maka $(a + b)'$ ada dan
+  \[ \norm{(a + b)' - b'}
+           \le \frac{\norm{a}\,(1 + \norm{b'})^2}{1 - \norm{a}\,(1 + \norm{b'})}\,.\]
+\end{prop}
+ \begin{proof}[\emph{Petunjuk bukti}] Tunjukkan terlebih dahulu bahwa $u = (a - b'a)'$ ada dan bahwa
+ $u + b' - ub'$ adalah kuasi-invers kiri bagi~$a~+~b$. \ns
+\end{proof}
+
+Bandingkan hasil berikut dengan proposisi~\ref{000644fa} dan~\ref{000646fa}.
+\begin{prop} Himpunan $Q_A$ yang terdiri atas
+ \index{q@$Q_A$ (elemen kuasi-invertibel)}%
+elemen-elemen kuasi-invertibel dari aljabar Banach $A$ adalah himpunan terbuka dalam $A$, dan pemetaan $a \mapsto
+a'$ merupakan homeomorfisme dari $Q_A$ ke dirinya sendiri.
+\end{prop}
+
+\begin{notn} Jika $a$ dan $b$ adalah elemen dalam suatu aljabar, kita definisikan
+ \index{<binop@$a \circ b$ (operasi dalam suatu aljabar)}%
+$a \circ b := a + b - ab$.
+\end{notn}
+
+\begin{prop} Jika $A$ aljabar, maka $Q_A$ merupakan grup terhadap~$\circ$.
+\end{prop}
+
+\begin{prop} Jika $A$ aljabar Banach beridentitas dan $\inv A$ adalah himpunan elemen-elemen
+invertibelnya, maka
+   \[ \Psi\colon Q_A \sto \inv A\colon  a \mapsto \vc 1 - a \]
+merupakan isomorfisme.
+\end{prop}
+
+\begin{defn} Jika $A$ aljabar dan $a \in A$, kita definisikan
+ \index{spektrum-q}%
+ \index{spektrum!q-}%
+\df{spektrum-q} dari $a$ dalam $A$ dengan
+  \[ \breve{\sigma}_A(a) := \{\lambda \in \C\colon  \lambda \ne 0
+                      \text{ dan } \dfrac a\lambda \notin Q_A\}\cup\{0\}. \]
+\end{defn}
+
+Dalam aljabar beridentitas, definisi di atas ``hampir'' merupakan definisi yang biasa.
+\begin{prop} Misalkan $A$ aljabar beridentitas dan $a \in A$. Maka untuk setiap $\lambda \ne 0$, berlaku
+$\lambda \in \sigma(a)$ jika dan hanya jika $\lambda \in \breve{\sigma}(a)$.
+\end{prop}
+
+\begin{prop} Jika aljabar $A$ tak beridentitas dan $a \in A$, maka $\breve{\sigma}_A(a) =
+\breve{\sigma}_{\wt A}(a)$, dengan $\wt A$ adalah unitalisasi dari~$A$.
+\end{prop}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Elemen Positif dalam Aljabar-$C^*$}
+\begin{defn} Suatu elemen swaadjoin $a$ dari aljabar-$C^*$ $A$ disebut
+ \index{positif!elemen dari suatu aljabar-$C^*$}%
+\df{positif} jika $\sigma(a) \subseteq [0,\infty)$. Dalam hal ini kita tulis $a \ge \vc 0$.
+Kita lambangkan himpunan semua elemen positif dari $A$
+ \index{<plus@$A^+$ (kerucut positif)}%
+dengan~$A^+$. Himpunan ini adalah
+ \index{positif!kerucut}%
+ \index{kerucut!positif}%
+\df{kerucut positif} dari~$A$. Untuk setiap himpunan bagian $B$ dari $A$, misalkan $B^+ = B \cap A^+$. Kita akan
+menggunakan kerucut positif untuk menginduksi suatu urutan parsial pada~$A$: kita tulis
+ \index{<relation@$a \le b$ (relasi urutan dalam suatu aljabar-$C^*$)}%
+$a \le b$ apabila $b - a \in A^+$.
+\end{defn}
+
+\begin{defn} Misalkan $\le$ suatu relasi pada himpunan tak kosong $S$. Jika relasi
+ \index{<relation@$\le$ (notasi untuk suatu urutan parsial)}%
+ $\le$ bersifat refleksif dan transitif, relasi tersebut adalah suatu
+ \index{praurutan}%
+ \index{urutan!pra-}%
+\df{praurutan}. Jika $\le$ adalah praurutan dan juga antisimetris, relasi tersebut adalah suatu
+ \index{parsial!urutan}%
+ \index{urutan!parsial}%
+\df{urutan parsial}.
+
+Suatu urutan parsial $\le$ pada ruang vektor riil $V$
+ \index{kompatibilitas!urutan dengan operasi}%
+\df{kompatibel} dengan (atau
+ \index{menghormati operasi}%
+\df{menghormati}) operasi-operasi (penjumlahan dan perkalian skalar) pada~$V$ jika untuk semua $x$,
+$y$, $z \in V$
+ \begin{enumerate}
+  \item[(a)] $x \le y$ mengakibatkan $x+z \le y+z$, dan
+  \item[(b)] $x \le y$, $\alpha \ge 0$ mengakibatkan $\alpha x \le \alpha y$.
+ \end{enumerate}
+Suatu ruang vektor riil yang dilengkapi dengan urutan parsial yang kompatibel dengan operasi-operasi
+ruang vektor disebut
+ \index{terurut!ruang vektor}%
+ \index{vektor!ruang!terurut}%
+\df{ruang vektor terurut}.
+\end{defn}
+
+\begin{defn} Misalkan $V$ ruang vektor. Suatu himpunan bagian $C$ dari $V$ adalah
+ \index{kerucut}%
+\df{kerucut} dalam $V$ jika $\alpha C \subseteq C$ untuk setiap $\alpha \ge 0$. Suatu kerucut $C$ dalam $V$
+disebut
+ \index{proper!kerucut}%
+ \index{kerucut!proper}%
+\df{proper} jika $C \cap (-C) = \{\vc 0\}$.
+\end{defn}
+
+\begin{prop}\label{0018006} Suatu kerucut $C$ dalam ruang vektor bersifat konveks jika dan hanya jika $C + C
+\subseteq C$.
+\end{prop}
+
+\begin{exam}\label{0018007} Jika $V$ ruang vektor terurut, maka himpunan
+ \index{<dualp@$V^+$ (kerucut positif dalam suatu ruang vektor terurut)}%
+   \[ V^+ := \{x \in V \colon x \ge \vc 0\} \]
+adalah kerucut konveks proper dalam~$V$. Himpunan ini adalah
+ \index{positif!kerucut!dalam suatu ruang vektor terurut}%
+ \index{kerucut!positif}%
+\df{kerucut positif} dari~$V$, dan anggota-anggotanya adalah
+ \index{positif!elemen (dari suatu ruang vektor terurut)}%
+\df{elemen positif} dari~$V$.
+\end{exam}
+
+\begin{prop}\label{0018008} Misalkan $V$ ruang vektor riil dan $C$ kerucut konveks proper
+dalam~$V$. Definisikan $x \le y$ jika $y - x \in C$. Maka relasi $\le$ adalah urutan parsial
+pada $V$ dan kompatibel dengan operasi-operasi ruang vektor pada~$V$. Relasi ini adalah
+\df{urutan parsial
+ \index{terinduksi!urutan parsial}%
+ \index{parsial!urutan!terinduksi oleh kerucut konveks proper}%
+yang diinduksi oleh} kerucut~$C$. Kerucut positif $V^+$ dari ruang vektor terurut yang dihasilkan
+tepat sama dengan $C$.
+\end{prop}
+
+\begin{prop} Jika $a$ adalah elemen swaadjoin dari suatu aljabar-$C^*$ beridentitas dan $t \in \R$, maka
+ \begin{enumerate}
+   \item[(i)] $a \ge \vc 0$ apabila $\norm{a - t\vc 1} \le t$; dan
+   \item[(ii)] $\norm{a - t\vc 1} \le t$ apabila $\norm a \le t$ dan $a \ge \vc 0$.
+  \end{enumerate}
+\end{prop}
+
+\begin{exam} Kerucut positif dari suatu aljabar-$C^*$ $A$ adalah kerucut konveks proper tertutup
+dalam ruang vektor riil~$\ofml H(A)$.
+\end{exam}
+
+\begin{prop}\label{0018015} Jika $a$ dan $b$ adalah elemen positif dari suatu aljabar-$C^*$
+dan $ab = ba$, maka $ab$ positif.
+\end{prop}
+
+\begin{prop}\label{001804} Setiap elemen positif dari suatu aljabar-$C^*$ $A$ memiliki akar pangkat
+$n$ positif yang tunggal ($n \in \N$). Artinya, jika $a \in A^+$, maka terdapat tepat satu
+$b \in A^+$ sedemikian sehingga $b^n = a$.
+\end{prop}
+
+\begin{proof} \emph{Petunjuk.} Bagian eksistensi merupakan penerapan sederhana kalkulus fungsional
+$C^*$ (yaitu, \emph{teorema spektral abstrak}~\ref{00144}). Elemen $b$
+yang diberikan oleh kalkulus fungsional bersifat positif dalam aljabar $C^*(\vc 1,a)$. Jelaskan mengapa
+elemen itu juga positif dalam~$A$. Argumen keunikan memerlukan perhatian yang saksama. \ns
+\end{proof}
+
+\begin{thm}[Dekomposisi Jordan]\label{001807} Jika $c$ adalah elemen swaadjoin dari suatu
+ \index{dekomposisi Jordan}%
+ \index{dekomposisi!Jordan}%
+aljabar-$C^*$ $A$, maka terdapat elemen-elemen positif
+ \index{<positive@$c^+$ (bagian positif dari $c$)}%
+ \index{positif!bagian!dari suatu elemen swaadjoin}%
+ \index{<positive@$c^-$ (bagian negatif dari $c$)}%
+ \index{negatif!bagian!dari suatu elemen swaadjoin}%
+$c^+$ dan $c^-$ dalam $A$ sedemikian sehingga $c = c^+ - c^-$ dan $c^+c^- = \vc 0$.
+\end{thm}
+
+\begin{lem} Jika $c$ adalah elemen dari suatu aljabar-$C^*$ sedemikian sehingga $-c^*c \ge \vc 0$, maka $c
+= \vc 0$.
+\end{lem}
+
+\begin{prop} Jika $a$ adalah elemen dari suatu aljabar-$C^*$, maka $a^*a \ge \vc 0$.
+\end{prop}
+
+\begin{prop}\label{00180731} Jika $c$ adalah elemen dari suatu aljabar-$C^*$ $A$, maka pernyataan-pernyataan
+berikut ekuivalen:
+ \begin{enumerate}
+    \item[(i)] $c \ge \vc 0$;
+    \item[(ii)] terdapat $b \ge \vc 0$ sedemikian sehingga $c = b^2$; dan
+    \item[(iii)] terdapat $a \in A$ sedemikian sehingga $c = a^*a$,
+ \end{enumerate}
+\end{prop}
+
+\begin{exam}\label{00180741} Jika $T$ operator pada ruang Hilbert $H$, maka $T$ merupakan
+elemen positif dari aljabar-$C^*$ $\ofml B(H)$ jika dan hanya jika $\langle Tx,x \rangle
+\ge 0$ untuk setiap $x \in H$.
+\end{exam}
+
+\begin{proof}[\emph{Petunjuk bukti}] Mudah untuk menunjukkan bahwa jika $T \ge \vc 0$ dalam $\ofml B(H)$, maka
+$\langle Tx,x \rangle \ge 0$ untuk setiap $x \in H$: gunakan proposisi~\ref{00180731} untuk
+menuliskan $T$ sebagai $S^*S$ bagi suatu operator~$S$.
+
+Sebaliknya, andaikan $\langle Tx,x \rangle \ge 0$ untuk setiap $x \in H$. Mudah
+dilihat bahwa ini mengakibatkan $T$ swaadjoin. Gunakan \emph{teorema dekomposisi
+Jordan}~\ref{001807} untuk menuliskan $T$ sebagai $T^+ - T^-$. Untuk sembarang $u \in H$, misalkan $x = T^-u$
+dan periksa bahwa $0 \le \langle Tx,x \rangle = -\langle (T^-)^3u,u \rangle$. Sekarang $(T^-)^3$
+adalah elemen positif dari $\ofml B(H)$. (Mengapa?) Simpulkan bahwa $(T^-)^3 = \vc 0$ dan
+karena itu $T^- = \vc 0$. (Untuk rincian tambahan, lihat~\cite{DoranB:1986}, halaman~37.) \ns
+\end{proof}
+
+\begin{defn} Untuk sembarang elemen $a$ dari suatu aljabar-$C^*$, kita definisikan
+ \index{mutlak!nilai!dalam suatu aljabar-$C^*$}%
+ \index{<unop@$\abs a$ (nilai mutlak dalam suatu aljabar-$C^*$)}%
+$\abs a$ sebagai $\sqrt{a^*a}$.
+\end{defn}
+
+\begin{prop} Jika $a$ adalah elemen swaadjoin dari suatu aljabar-$C^*$, maka
+  \[ \abs a = a^+ + a^-\,. \]
+\end{prop}
+
+\begin{exam} Nilai mutlak dalam suatu aljabar-$C^*$ tidak harus
+subaditif; yaitu, $\abs{a + b}$ tidak harus lebih kecil daripada $\abs{a}
++ \abs{b}$. Sebagai contoh, dalam $\M 2\C$, ambil $a = \begin{bmatrix} 1 & 1 \\
+1 & 1 \end{bmatrix}$ dan $b = \begin{bmatrix} 0 & 0 \\ 0 & -2
+\end{bmatrix}$. Maka $\abs{a} = a$, $\abs{b} = \begin{bmatrix} 0 &
+0 \\ 0 & 2 \end{bmatrix}$, dan $\abs{a + b} = \begin{bmatrix} \sqrt{2} & 0 \\ 0 &
+\sqrt{2}
+\end{bmatrix}$. Jika $\abs{a + b} - \abs{a} - \abs{b}$ positif, maka, berdasarkan
+contoh~\ref{00180741}, $\langle\,(\abs{a + b} - \abs{a} - \abs{b})\,x\,,\,x\,\rangle$
+akan positif untuk setiap vektor $x \in \C^2$. Namun, hal ini tidak benar untuk $x = (1,0)$.
+\end{exam}
+
+\begin{prop}\label{0018201} Jika $\phi\colon A \sto B$ adalah homomorfisme-$*\,$ antara
+aljabar-$C^*$, maka $\phi(a) \in B^+$ apabila $a \in A^+$. Jika $\phi$ adalah
+isomorfisme-$*\,$, maka $\phi(a) \in B^+$ jika dan hanya jika $a \in A^+$.
+\end{prop}
+
+\begin{prop} Misalkan $a$ elemen swaadjoin dari suatu aljabar-$C^*$ $A$ dan $f$ fungsi kontinu
+bernilai kompleks pada spektrum~$a$. Maka $f \ge \vc 0$ dalam $\fml
+C(\sigma(a))$ jika dan hanya jika $f(a) \ge \vc 0$ dalam~$A$.
+\end{prop}
+
+\begin{prop}\label{0018203} Jika $a$ adalah elemen swaadjoin dari suatu aljabar-$C^*$ $A$, maka
+$\norm a\,\vc 1_{\wt A} \pm a \ge \vc 0$ dalam~$\wt A$.
+\end{prop}
+
+\begin{prop}\label{0018204} Jika $a$ dan $b$ adalah elemen swaadjoin dari suatu
+aljabar-$C^*$~$A$ dan $a \le b$, maka $x^*ax \le x^*bx$ untuk setiap $x \in A$.
+\end{prop}
+
+\begin{prop} Jika $a$ dan $b$ adalah elemen dari suatu aljabar-$C^*$ dengan $0 \le a \le b$, maka
+$\norm a \le \norm b$.
+\end{prop}
+
+\begin{prop}\label{0018301} Misalkan $A$ aljabar-$C^*$ beridentitas dan $c \in A^+$. Maka
+$c$ invertibel jika dan hanya jika $c \ge \epsilon\vc 1$ untuk suatu $\epsilon > 0$.
+\end{prop}
+
+\begin{prop} Misalkan $A$ aljabar-$C^*$ beridentitas dan $c \in A$. Jika $c \ge \vc 1$, maka $c$
+invertibel dan $\vc 0 \le c^{-1} \le \vc 1$.
+\end{prop}
+
+\begin{prop} Jika $a$ adalah elemen positif yang invertibel dalam suatu aljabar-$C^*$ beridentitas, maka $a^{-1}$
+positif.
+\end{prop}
+
+Selanjutnya kita tunjukkan bahwa notasi $a^{\ssst{-\frac12}}$ tidak ambigu.
+
+\begin{prop} Misalkan $a \in A^+$, dengan $A$ aljabar-$C^*$ beridentitas. Jika $a$ invertibel, maka
+$a^{\ssst{\frac12}}$ juga invertibel dan $\bigl(a^{\ssst{\frac12}}\bigr)^{-1} =
+\bigl(a^{-1}\bigr)^{\ssst{\frac12}}$.
+\end{prop}
+
+\begin{cor}\label{00183313} Jika $a$ adalah elemen invertibel dalam suatu aljabar-$C^*$ beridentitas,
+ \index{invers!dari suatu nilai mutlak}%
+maka~$\abs a$ juga invertibel.
+\end{cor}
+
+\begin{prop}\label{0018401} Misalkan $a$ dan $b$ adalah elemen dari suatu aljabar-$C^*$. Jika
+$\vc 0 \le a \le b$ dan $a$ invertibel, maka $b$ invertibel dan $b^{-1} \le
+a^{-1}$.
+\end{prop}
+
+\begin{prop} Jika $a$ dan $b$ adalah elemen dari suatu aljabar-$C^*$ dan $\vc 0 \le a \le b$,
+maka $\sqrt a \le \sqrt b$.
+\end{prop}
+
+\begin{exam} Misalkan $a$ dan $b$ elemen dari suatu aljabar-$C^*$ dengan $\vc 0 \le a \le b$.
+\emph{Tidak} selalu berlaku bahwa $a^2 \le b^2$.
+\end{exam}
+
+\begin{proof}[\emph{Petunjuk bukti}] Dalam aljabar-$C^*$ $\mathbf M_2$, misalkan $a =
+\begin{bmatrix} 1 & 0 \\ 0 & 0 \end{bmatrix}$ dan
+$b = a + \tfrac12 \begin{bmatrix} 1 & 1 \\ 1 & 1 \end{bmatrix}$. \ns
+\end{proof}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Identitas Aproksimatif}
+\begin{defn} Suatu
+ \index{identitas!aproksimatif}%
+ \index{aproksimatif!identitas}%
+\df{identitas aproksimatif} (atau
+ \index{unit!aproksimatif}%
+ \index{aproksimatif!unit}%
+\df{unit aproksimatif}) dalam suatu aljabar-$C^*$ $A$ adalah jaring menaik
+${(e_\lambda)}_{\lambda \in \Lambda}$ yang terdiri atas elemen-elemen positif dari $A$ sedemikian sehingga
+$\norm{e_\lambda} \le 1$ dan $ae_\lambda \sto a$ (secara ekuivalen, $e_\lambda\, a \sto a$)
+untuk setiap $a \in A$. Jika jaring tersebut ternyata merupakan barisan, kita memperoleh
+ \index{sekuensial!identitas aproksimatif}%
+ \index{aproksimatif!identitas!sekuensial}%
+\df{identitas aproksimatif sekuensial}. Dalam literatur, berhati-hatilah terhadap definisi yang
+beragam: banyak penulis menghilangkan syarat bahwa jaring tersebut menaik dan/atau bahwa jaring itu
+terbatas.
+\end{defn}
+
+\begin{exam} Misalkan $A = \fml C_0(\R)$. Untuk setiap $n \in \N$, misalkan $U_n = (-n,n)$ dan
+$e_n\colon \R \sto [0,1]$ suatu fungsi dalam $A$ yang dukungannya termuat dalam $U_{n+1}$
+dan sedemikian sehingga $e_n(x) = 1$ untuk setiap $x \in U_n$. Maka $(e_n)$ adalah identitas
+aproksimatif (sekuensial) bagi~$A$.
+\end{exam}
+
+\begin{prop} Jika $A$ adalah aljabar-$C^*$, maka himpunan
+ \index{lambda@$\Lambda$ (anggota $A^+$ dalam bola satuan terbuka)}%
+   \[ \Lambda := \{a \in A^+\colon \norm a < 1\} \]
+merupakan himpunan terarah (terhadap urutan yang diwarisinya dari $\ofml H(A)$).
+\end{prop}
+
+\begin{proof}[\emph{Petunjuk bukti}] Periksa bahwa fungsi
+  \[ f\colon [0,1) \sto \R^+\colon t \mapsto (1 - t)^{-1} - 1 = \frac t{1 - t} \]
+menginduksi isomorfisme urutan $f\colon \Lambda \sto A^+$. (Suatu
+ \index{urutan!isomorfisme}%
+ \index{isomorfisme!urutan}%
+\df{isomorfisme urutan} antara himpunan-himpunan terurut parsial adalah bijeksi yang mempertahankan urutan,
+yang inversnya juga mempertahankan urutan.) Bukti yang saksama untuk hasil ini melibatkan pemeriksaan
+terhadap cukup banyak rincian. \ns
+\end{proof}
+
+\begin{prop} Jika $A$ adalah aljabar-$C^*$, maka himpunan
+  \[ \Lambda := \{a \in A^+\colon \norm a < 1\} \]
+merupakan identitas aproksimatif bagi~$A$.
+\end{prop}
+
+\begin{cor}\label{00190161} Setiap aljabar-$C^*$ $A$ memiliki identitas aproksimatif.
+ \index{aproksimatif!identitas!keberadaan}%
+Jika $A$ separabel, maka $A$ memiliki identitas aproksimatif sekuensial.
+\end{cor}
+
+\begin{prop}\label{0019017} Setiap ideal aljabar (dua sisi) tertutup dalam suatu aljabar-$C^*$
+bersifat swaadjoin.
+\end{prop}
+
+\begin{prop}\label{001902} Jika $J$ ideal dalam suatu aljabar-$C^*$ $A$, maka
+ \index{hasil bagi!aljabar-$C^*$}%
+$A/J$ adalah aljabar-$C^*$.
+\end{prop}
+
+\begin{proof} Lihat \cite{HigsonR:2000}, teorema 1.7.4, atau \cite{Davidson:1996}, halaman
+13--14, atau~\cite{Fillmore:1996}, teorema 2.5.4. \ns
+\end{proof}
+
+\begin{exam} Jika $J$ ideal dalam suatu aljabar-$C^*$ $A$, maka barisan
+  \[ \vc 0 \to J \to A \to^\pi A/J \to \vc 0 \]
+adalah barisan eksak pendek.
+\end{exam}
+
+\begin{prop}\label{0019023} Jangkauan suatu homomorfisme-$*$ antara aljabar-$C^*$ bersifat tertutup
+(dan karena itu merupakan aljabar-$C^*$).
+\end{prop}
+
+\begin{defn} Suatu subaljabar-$C^*$ $B$ dari aljabar-$C^*$ $A$ disebut
+ \index{herediter}%
+\df{herediter} jika $a \in B$ setiap kali $a \in A$, $b \in B$, dan $\vc 0 \le a \le b$.
+\end{defn}
+
+\begin{prop}\label{001915} Andaikan $x^*x \le a$ dalam suatu aljabar-$C^*$ $A$. Maka terdapat
+$b \in A$ sedemikian sehingga $x = ba^{\frac14}$ dan $\norm b \le {\norm a}^\frac14$.
+\end{prop}
+
+\begin{proof} Lihat \cite{Davidson:1996}, halaman 13. \ns
+\end{proof}
+
+\begin{prop} Andaikan $J$ ideal dalam suatu aljabar-$C^*$ $A$, $j \in J^+$, dan
+$a^*a \le j$. Maka $a \in J$. Jadi, ideal-ideal dalam aljabar-$C^*$ bersifat herediter.
+\end{prop}
+
+\begin{thm}\label{001922} Misalkan $A$ dan $B$ aljabar-$C^*$ dan $J$ ideal dalam~$A$.\newline
+Jika $\phi$ \mbox{homomorfisme-$*\,$} dari $A$ ke $B$ dan $\ker\phi \supseteq J$, maka terdapat
+tepat satu \mbox{homomorfisme-$*\,$} $\widetilde\phi\colon A/J \sto B$ yang membuat
+diagram berikut komutatif.
+ \[ \xymatrix@+30pt{A \ar[d]_*+{\pi} \ar[dr]^*+{\phi} & \\
+            A/J \ar[r]_*+{\widetilde\phi} & B  } \]
+Selain itu, $\widetilde\phi$ injektif jika dan hanya jika $\ker\phi = J$; dan
+$\widetilde\phi$ surjektif jika dan hanya jika $\phi$ surjektif.
+\end{thm}
+
+\begin{cor}\label{001923} Jika $\vc 0 \to A \to^\phi E \to B \to \vc 0$ adalah barisan eksak
+pendek dari aljabar-$C^*$, maka $E/\ran\phi$ dan $B$ isomorfik-$*\,$ secara isometrik.
+\end{cor}
+
+\begin{cor}\label{001924} Setiap aljabar-$C^*$ $A$ memiliki kodimensi satu dalam
+unitalisasinya~$\wt A$; yaitu, $\dim \wt A/A = 1$.
+\end{cor}
+
+\begin{prop} Misalkan $A$ aljabar-$C^*$, $B$ subaljabar-$C^*$ dari $A$, dan $J$
+ideal dalam~$A$. Maka
+   \[  B/(B \cap J) \cong (B + J)/J\,. \]
+\end{prop}
+
+Misalkan $B$ subaljabar beridentitas dari suatu aljabar sembarang $A$. Jelas bahwa jika suatu
+elemen $b \in B$ invertibel dalam $B$, maka elemen itu juga invertibel dalam~$A$. Ternyata
+konversnya benar dalam aljabar-$C^*$: jika $b$ invertibel dalam $A$, maka inversnya
+terletak dalam~$B$. Hal ini biasanya dinyatakan dengan mengatakan bahwa \emph{setiap subaljabar-$C^*$
+beridentitas dari suatu aljabar-$C^*$ bersifat}
+ \index{invers!tertutup}%
+ \index{tertutup!invers}%
+\df{tertutup terhadap invers}.
+
+\begin{prop} Misalkan $B$ subaljabar-$C^*$ beridentitas dari suatu aljabar-$C^*$ $A$. Jika $b \in \inv(A)$,
+maka $b^{-1} \in B$.
+\end{prop}
+
+\begin{cor}\label{0019283} Misalkan $B$ subaljabar-$C^*$ beridentitas dari suatu aljabar-$C^*$ $A$ dan
+$b \in B$. Maka
+   \[ \sigma_B(b) = \sigma_A(b)\,. \]
+\end{cor}
+
+\begin{cor}\label{0019286} Misalkan $\phi\colon A \sto B$ adalah monomorfisme-$C^*$ beridentitas dari
+suatu aljabar-$C^*$ $A$ dan $a \in A$. Maka
+   \[ \sigma(a) = \sigma(\phi(a))\,. \]
+\end{cor}
+
+
+
+\endinput

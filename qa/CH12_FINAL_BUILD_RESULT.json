@@ -1,0 +1,22 @@
+﻿{
+    "schema_version":  "o008.ch12-final-build.v1",
+    "source_date_epoch":  1444126743,
+    "fixed_output_path":  "qa/build-through-ch12-final",
+    "input_count":  15,
+    "inputs_unchanged":  true,
+    "replay_1":  {
+                     "bytes":  2001449,
+                     "sha256":  "476b1f1fd6ca82deddeeb9edac1b07286567ede5663a6df32906a36dd3ea5ab6"
+                 },
+    "replay_2":  {
+                     "bytes":  2001449,
+                     "sha256":  "476b1f1fd6ca82deddeeb9edac1b07286567ede5663a6df32906a36dd3ea5ab6"
+                 },
+    "byte_identical":  true,
+    "pages":  179,
+    "pdf":  {
+                "path":  "qa/build-through-ch12-final/functional-analysis-id-through-ch12.pdf",
+                "bytes":  2001449,
+                "sha256":  "476b1f1fd6ca82deddeeb9edac1b07286567ede5663a6df32906a36dd3ea5ab6"
+            }
+}

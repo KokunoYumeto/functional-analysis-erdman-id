@@ -1,0 +1,62 @@
+{
+  "counts": {
+    "citation_only_proofs": 2,
+    "citations": 17,
+    "classified_math_edit_blocks": 8,
+    "defined_terms": 42,
+    "environment_begins": 154,
+    "environment_tokens": 308,
+    "exercises_or_problems": 0,
+    "indexes": 102,
+    "labels": 65,
+    "math_surfaces": 931,
+    "placeholders": 0,
+    "proof_hints": 8,
+    "proofs": 12,
+    "references": 46,
+    "sections": 6,
+    "visible_english_residue": 0
+  },
+  "digests": {
+    "citations": "2cbc5e7df50b3ead2868941664cd6836fbc4bcef02b6509e0436584d73650c4f",
+    "environment_topology": "e85a9cfb894fcac0fc983f2c09275262d1ebaf15d56747234fcee798a1a800fd",
+    "index_shapes": "219655a7cb7c91ee1a4a2334fcac307381e7a051897df709ad077cffd1d3e594",
+    "labels": "3ee868a697a56d3022a362c427fb5e5e58e0890c70d3de58509668d44486dae7",
+    "math_edits": "06d83331345e11ad9d9e380123f749973f2c0c4b12d0c1f7cbba4a3eeaafc8c4",
+    "math_records": "7690af38c30f905448c61b5718737a8217f56efd1b498a38a043d5ee83297481",
+    "proof_roles": "7a4a4957f5a41076f443809b5ff135b083de294d03faa06bb6b772866621450b",
+    "references": "6a66906cf606e040c20b1b85c150aea636c129e6a6558f5f8d0998609a891450"
+  },
+  "errors": [],
+  "master": {
+    "bytes": 10275,
+    "lf": 341,
+    "path": "source/id-ID/functional-analysis-id-through-ch12.tex",
+    "sha256": "d84965e27ee26d71575838a42a8410cf5956b967d188d77a040c0f018fd007de"
+  },
+  "model_id": "OpenAI Codex gpt-5.6-sol, Ultra",
+  "report_path": "qa/ch12-translation-report.json",
+  "schema_version": "o008.ch12-translation-report.v1",
+  "source": {
+    "bytes": 47994,
+    "lf": 1158,
+    "path": "source/upstream/no_identity.tex",
+    "sha256": "8da3ffa45bcc07cbe1897a09f309db51e1c5c38080459ffb1f6947bf45a20b6c"
+  },
+  "source_correction_ledger": {
+    "bytes": 35824,
+    "declared_status": "adjudicated_and_applied",
+    "lf": 612,
+    "path": "provenance/SOURCE_CORRECTIONS_CH12.json",
+    "record_count": 29,
+    "sha256": "10e253d32ef1677c8d1f2cb65e78d41bb1bb0818ba72a5e4ca0872044723805c"
+  },
+  "status": "pass",
+  "target": {
+    "bytes": 49730,
+    "lf": 1173,
+    "path": "source/id-ID/no_identity-id.tex",
+    "sha256": "da74193601c80828c8bebb59f20f82481c47627a746fc6c841602d538837d884"
+  },
+  "unit_id": "FAOA-2015-CH12"
+}

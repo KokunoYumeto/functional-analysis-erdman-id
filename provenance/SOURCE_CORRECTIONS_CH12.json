@@ -1,0 +1,612 @@
+{
+  "schema_version": "o008.source-corrections.v1",
+  "unit_id": "FAOA-2015-CH12",
+  "chapter": 12,
+  "status": "adjudicated_and_applied",
+  "source": {
+    "path": "source/upstream/no_identity.tex",
+    "bytes": 47994,
+    "logical_records": 1158,
+    "line_endings": "CRLF",
+    "sha256": "8da3ffa45bcc07cbe1897a09f309db51e1c5c38080459ffb1f6947bf45a20b6c"
+  },
+  "target": {
+    "path": "source/id-ID/no_identity-id.tex",
+    "bytes": 49730,
+    "logical_records": 1173,
+    "line_endings": "LF",
+    "sha256": "da74193601c80828c8bebb59f20f82481c47627a746fc6c841602d538837d884"
+  },
+  "normalization": {
+    "id": "explicit-range-nfc-whitespace-v1",
+    "source_selection": "inclusive physical source-line range",
+    "target_mapping": "inclusive physical target-line range after translation and bounded repair",
+    "steps": [
+      "discard blank records and strip trailing whitespace",
+      "join selected records with LF",
+      "normalize Unicode NFC",
+      "collapse Unicode whitespace runs, including indentation and line boundaries, to ASCII spaces",
+      "trim leading and trailing ASCII space after collapse",
+      "hash UTF-8 bytes with SHA-256"
+    ]
+  },
+  "record_count": 29,
+  "class_counts": {
+    "CROSS_REFERENCE_SOURCE_REPAIR": 3,
+    "MATHEMATICAL_SOURCE_REPAIR": 6,
+    "MATHEMATICAL_TEXT_LOCALIZATION": 7,
+    "MECHANICAL_INDEX_SOURCE_REPAIR": 3,
+    "MECHANICAL_PROSE_SOURCE_REPAIR": 4,
+    "MECHANICAL_TEX_SOURCE_REPAIR": 5,
+    "PARTIAL_READER_NAVIGATION_ADAPTATION": 1
+  },
+  "independent_review": {
+    "pretranslation_math_review": "qa/CH12_PRETRANSLATION_MATH_REVIEW.md",
+    "formula_policy": "source repairs and translated text inside math are separately classified",
+    "upstream_contact": "none during production"
+  },
+  "records": [
+    {
+      "id": "FAOA-2015-CH12-CORR-001",
+      "source_lines": {
+        "start": 89,
+        "end": 90
+      },
+      "target_lines": {
+        "start": 90,
+        "end": 91
+      },
+      "classification": "MECHANICAL_INDEX_SOURCE_REPAIR",
+      "decision": "index the defined object as a right, not left, identity relative to an ideal",
+      "source_normalized_snippet": "\\index{identity!left!with respect to an ideal}% \\df{right identity with respect to $J$}. Similarly, a right ideal $J$ in $A$ is a",
+      "target_normalized_snippet": "\\index{identitas!kanan!terhadap suatu ideal}% \\df{identitas kanan terhadap $J$}. Demikian pula, suatu ideal kanan $J$ dalam $A$ adalah",
+      "source_normalized_snippet_sha256": "e35813a1cba75aa574dc8b994600def2af8a843408868e18516469513703528c",
+      "target_normalized_snippet_sha256": "0de751f17beab3e458dc3a033bf4b1cbc275526404590d615dba5eeb3652998e",
+      "forbidden_source_anchor": "\\index{identity!left!with respect to an ideal}%",
+      "required_target_anchor": "\\index{identitas!kanan!terhadap suatu ideal}%"
+    },
+    {
+      "id": "FAOA-2015-CH12-CORR-002",
+      "source_lines": {
+        "start": 175,
+        "end": 179
+      },
+      "target_lines": {
+        "start": 178,
+        "end": 183
+      },
+      "classification": "MATHEMATICAL_SOURCE_REPAIR",
+      "decision": "restore the omitted domain and mapping arrow in the nonunital Gelfand-transform signature",
+      "source_normalized_snippet": "\\begin{thm} If $A$ is a commutative Banach algebra with a nonempty character space, then the Gelfand transform \\[ \\Gamma = \\Gamma_A\\colon \\fml C_0(\\Delta A)\\colon a \\mapsto \\wh a = \\Gamma_a \\] is a contractive algebra homomorphism and $\\rho(a) = \\norm{\\wh a}_u$. Furthermore, if $A$ is \\emph{not} unital, then $\\sigma(a) = \\ran \\wh a \\cup \\{0\\}$ for every $a \\in A$.",
+      "target_normalized_snippet": "\\begin{thm} Jika $A$ suatu aljabar Banach komutatif dengan ruang karakter yang tidak kosong, maka transformasi Gelfand \\[ \\Gamma = \\Gamma_A\\colon A \\sto \\fml C_0(\\Delta A)\\colon a \\mapsto \\wh a = \\Gamma_a \\] adalah suatu homomorfisme aljabar kontraktif dan $\\rho(a) = \\norm{\\wh a}_u$. Lebih lanjut, jika $A$ \\emph{tidak} beridentitas, maka $\\sigma(a) = \\ran \\wh a \\cup \\{0\\}$ untuk setiap $a \\in A$.",
+      "source_normalized_snippet_sha256": "1affc12f3ac65713f1efe11ab8ef573506c6864be16637033e277b947baa7c09",
+      "target_normalized_snippet_sha256": "8c7c3291154c25670b56d7a45f7e971f6987b02d55d8632792fe43eb0381f74f",
+      "forbidden_source_anchor": "\\Gamma = \\Gamma_A\\colon \\fml C_0(\\Delta A)\\colon a \\mapsto",
+      "required_target_anchor": "\\Gamma = \\Gamma_A\\colon A \\sto \\fml C_0(\\Delta A)\\colon a \\mapsto",
+      "affects_math": true
+    },
+    {
+      "id": "FAOA-2015-CH12-CORR-003",
+      "source_lines": {
+        "start": 226,
+        "end": 226
+      },
+      "target_lines": {
+        "start": 230,
+        "end": 230
+      },
+      "classification": "CROSS_REFERENCE_SOURCE_REPAIR",
+      "decision": "point the first local short-exact-sequence reference to the globally unique Chapter 12 label",
+      "source_normalized_snippet": "exact sequence of $C^*$-algebras~\\eqref{001500202i} is",
+      "target_normalized_snippet": "eksak pendek aljabar-$C^*$~\\eqref{001500202i2} adalah",
+      "source_normalized_snippet_sha256": "96eb6d3345185102136253d2ac2130e4865ecf28dcc8e4082a4d0a75bac42145",
+      "target_normalized_snippet_sha256": "79d383d35a864bbdc44735340647c2ed085162ae477958b027f8e3828a647019",
+      "forbidden_source_anchor": "\\eqref{001500202i}",
+      "required_target_anchor": "\\eqref{001500202i2}"
+    },
+    {
+      "id": "FAOA-2015-CH12-CORR-004",
+      "source_lines": {
+        "start": 240,
+        "end": 240
+      },
+      "target_lines": {
+        "start": 243,
+        "end": 243
+      },
+      "classification": "CROSS_REFERENCE_SOURCE_REPAIR",
+      "decision": "point the second local short-exact-sequence reference to the globally unique Chapter 12 label",
+      "source_normalized_snippet": "Often in the context of $C^*$-algebras the exact sequence \\eqref{001500202i} is referred",
+      "target_normalized_snippet": "Sering kali, dalam konteks aljabar-$C^*$, barisan eksak \\eqref{001500202i2} disebut suatu",
+      "source_normalized_snippet_sha256": "3d16dd3cc89112dcc15aa0efee23b655b6f4b0ba42df0d04f0c804526f5aa691",
+      "target_normalized_snippet_sha256": "afa685a347e7de5d8c859ac15feb5ad58ad95f2625e47a3460e0928f9cc649bd",
+      "forbidden_source_anchor": "\\eqref{001500202i}",
+      "required_target_anchor": "\\eqref{001500202i2}"
+    },
+    {
+      "id": "FAOA-2015-CH12-CORR-005",
+      "source_lines": {
+        "start": 247,
+        "end": 247
+      },
+      "target_lines": {
+        "start": 249,
+        "end": 249
+      },
+      "classification": "CROSS_REFERENCE_SOURCE_REPAIR",
+      "decision": "point the third local reference to the Chapter 12 label and use equation-reference typography",
+      "source_normalized_snippet": "\\emph{extension} is defined to be the sequence~\\ref{001500202i}; in",
+      "target_normalized_snippet": "\\cite{Blackadar:2006}, \\emph{ekstensi} didefinisikan sebagai barisan~\\eqref{001500202i2};",
+      "source_normalized_snippet_sha256": "43ff0ac039b224faf57ef8a9c57750d56b198ff10ec813f1424ed199f81310bb",
+      "target_normalized_snippet_sha256": "081c1638e9094bfda6d70c44579fca6c4bc0d270ca933d5a210aea78ac52929c",
+      "forbidden_source_anchor": "\\ref{001500202i}",
+      "required_target_anchor": "\\eqref{001500202i2}"
+    },
+    {
+      "id": "FAOA-2015-CH12-CORR-006",
+      "source_lines": {
+        "start": 323,
+        "end": 324
+      },
+      "target_lines": {
+        "start": 327,
+        "end": 328
+      },
+      "classification": "MATHEMATICAL_TEXT_LOCALIZATION",
+      "decision": "translate the conjunction embedded in the displayed map pair without changing either map",
+      "source_normalized_snippet": "\\[ \\iota_1\\colon A \\sto A \\oplus B\\colon a \\mapsto (a,\\vc 0) \\qquad \\text{and} \\qquad \\pi_2 \\colon A \\oplus B \\sto B: (a,b) \\mapsto b\\,. \\]",
+      "target_normalized_snippet": "\\[ \\iota_1\\colon A \\sto A \\oplus B\\colon a \\mapsto (a,\\vc 0) \\qquad \\text{dan} \\qquad \\pi_2 \\colon A \\oplus B \\sto B: (a,b) \\mapsto b\\,. \\]",
+      "source_normalized_snippet_sha256": "04c1b6127499866adc82474ba757614bd70a6cf39e814ebd9c603c45535cff6e",
+      "target_normalized_snippet_sha256": "db5af6ebb9d0d0de7907484253ae4f83f1f96ef703775856d1f344201f790457",
+      "forbidden_source_anchor": "\\text{and}",
+      "required_target_anchor": "\\text{dan}",
+      "affects_math": true
+    },
+    {
+      "id": "FAOA-2015-CH12-CORR-007",
+      "source_lines": {
+        "start": 431,
+        "end": 431
+      },
+      "target_lines": {
+        "start": 437,
+        "end": 437
+      },
+      "classification": "MECHANICAL_PROSE_SOURCE_REPAIR",
+      "decision": "supply the missing preposition in the proof-hint opening",
+      "source_normalized_snippet": "\\begin{proof}[\\emph{Hint for proof}] The proof this result is a little complicated.",
+      "target_normalized_snippet": "\\begin{proof}[\\emph{Petunjuk untuk pembuktian}] Pembuktian hasil ini agak rumit. Setiap orang",
+      "source_normalized_snippet_sha256": "b0b8009480584bd04188bd57ac8909f0e97948cb6acf3eb95abf7597469c6060",
+      "target_normalized_snippet_sha256": "3491f7b8767d6398eea0ecfcba178bc9293721caa8ef2124e3fdad389a104549",
+      "forbidden_source_anchor": "The proof this result is a little complicated.",
+      "required_target_anchor": "Pembuktian hasil ini agak rumit."
+    },
+    {
+      "id": "FAOA-2015-CH12-CORR-008",
+      "source_lines": {
+        "start": 435,
+        "end": 436
+      },
+      "target_lines": {
+        "start": 441,
+        "end": 443
+      },
+      "classification": "MECHANICAL_PROSE_SOURCE_REPAIR",
+      "decision": "supply the missing article before C-star algebra in the source sentence",
+      "source_normalized_snippet": "Notice that we speak of the unitization of $C^*$-algebra $A$ \\emph{whether or not $A$ already has a unit (multiplicative identity)}. We divide the argument into two cases.",
+      "target_normalized_snippet": "Perhatikan bahwa kita berbicara tentang unitalisasi dari suatu aljabar-$C^*$ $A$ \\emph{baik $A$ sudah memiliki unit (identitas perkalian) maupun belum}. Kita membagi argumen menjadi dua kasus.",
+      "source_normalized_snippet_sha256": "8be54de5e294e537eacf2cc806d59774b327b54ba8d19a67d5976f6646f95f70",
+      "target_normalized_snippet_sha256": "711b1c4ebef3d9df95ffae4e7590a44fb7535a1dcf48c669ab26e20f365b847d",
+      "forbidden_source_anchor": "the unitization of $C^*$-algebra $A$",
+      "required_target_anchor": "unitalisasi dari suatu aljabar-$C^*$ $A$"
+    },
+    {
+      "id": "FAOA-2015-CH12-CORR-009",
+      "source_lines": {
+        "start": 448,
+        "end": 448
+      },
+      "target_lines": {
+        "start": 455,
+        "end": 456
+      },
+      "classification": "MECHANICAL_TEX_SOURCE_REPAIR",
+      "decision": "typeset the star as a superscript in C-star norm",
+      "source_normalized_snippet": "\\item Show that it is, in fact, a $C*$-norm on $A \\bowtie \\C$.",
+      "target_normalized_snippet": "\\item Tunjukkan bahwa norma ini, sesungguhnya, merupakan norma-$C^*$ pada $A \\bowtie \\C$.",
+      "source_normalized_snippet_sha256": "e236ac513cd8faab686e58a41823a12640ad5f610de1428df220cfab33884d7e",
+      "target_normalized_snippet_sha256": "85d7edad249542492062dc9850d9acd4a5f54e88deb2349b9652d4bb02935468",
+      "forbidden_source_anchor": "$C*$-norm",
+      "required_target_anchor": "norma-$C^*$",
+      "affects_math": true
+    },
+    {
+      "id": "FAOA-2015-CH12-CORR-010",
+      "source_lines": {
+        "start": 471,
+        "end": 473
+      },
+      "target_lines": {
+        "start": 480,
+        "end": 482
+      },
+      "classification": "MATHEMATICAL_TEXT_LOCALIZATION",
+      "decision": "translate the conjunction inside the A-sharp set-builder formula",
+      "source_normalized_snippet": "\\[ A^{\\sharp} := \\{ L_a + \\lambda I_A \\in \\ofml B(A)\\colon a \\in A \\text{ and } \\lambda \\in \\C\\} \\] and show that $A^\\sharp$ is a normed algebra.",
+      "target_normalized_snippet": "\\[ A^{\\sharp} := \\{ L_a + \\lambda I_A \\in \\ofml B(A)\\colon a \\in A \\text{ dan } \\lambda \\in \\C\\} \\] dan tunjukkan bahwa $A^\\sharp$ adalah suatu aljabar bernorma.",
+      "source_normalized_snippet_sha256": "d0bfb7eda473991b75d8fc310ea65656409df2d1001d4a827d837729b69e2286",
+      "target_normalized_snippet_sha256": "a02956aa60ba223325551342993ee17bbae9f3a1fc9c0898cf55cf98c680ca2a",
+      "forbidden_source_anchor": "\\text{ and } \\lambda",
+      "required_target_anchor": "\\text{ dan } \\lambda",
+      "affects_math": true
+    },
+    {
+      "id": "FAOA-2015-CH12-CORR-011",
+      "source_lines": {
+        "start": 483,
+        "end": 483
+      },
+      "target_lines": {
+        "start": 491,
+        "end": 493
+      },
+      "classification": "MECHANICAL_PROSE_SOURCE_REPAIR",
+      "decision": "close the enumerated instruction with a period",
+      "source_normalized_snippet": "algebra. Let $\\wt A := A \\bowtie \\C$ with the norm pulled back by $\\phi$ from $A^\\sharp$",
+      "target_normalized_snippet": "\\item Gunakan (9) untuk melengkapi $A \\bowtie \\C$ dengan suatu norma yang menjadikannya aljabar bernorma beridentitas. Misalkan $\\wt A := A \\bowtie \\C$ dengan norma yang ditarik balik oleh $\\phi$ dari $A^\\sharp$.",
+      "source_normalized_snippet_sha256": "dedc5dcccbc352970c8f95cc8b5aef3bb851d12fc51e92a00cab973305163fbf",
+      "target_normalized_snippet_sha256": "7d49c30fd7efe79eeb9e9dcd1fb096c32160688deb3746c34f253f21b02ed77e",
+      "forbidden_source_anchor": "with the norm pulled back by $\\phi$ from $A^\\sharp$",
+      "required_target_anchor": "norma yang ditarik balik oleh $\\phi$ dari $A^\\sharp$."
+    },
+    {
+      "id": "FAOA-2015-CH12-CORR-012",
+      "source_lines": {
+        "start": 505,
+        "end": 505
+      },
+      "target_lines": {
+        "start": 516,
+        "end": 516
+      },
+      "classification": "MATHEMATICAL_SOURCE_REPAIR",
+      "decision": "use the proposition's precise not-isomorphic conclusion instead of an undefined equivalence",
+      "source_normalized_snippet": "\\item The $C^*$-algebra $\\wt A$ is \\emph{not} equivalent to $A \\oplus \\C$.",
+      "target_normalized_snippet": "\\item Aljabar-$C^*$ $\\wt A$ \\emph{tidak} isomorfik dengan $A \\oplus \\C$.",
+      "source_normalized_snippet_sha256": "6e89f8ed6d11a056578d5034ee1eeefceced3fc8f73ed8b0737808c68d1d7ac9",
+      "target_normalized_snippet_sha256": "3fde08609d5cf6c5ddebe5f4d648c1843f644b2967a9085d9acd9b5a2a853775",
+      "forbidden_source_anchor": "\\emph{not} equivalent to $A \\oplus \\C$",
+      "required_target_anchor": "\\emph{tidak} isomorfik dengan $A \\oplus \\C$"
+    },
+    {
+      "id": "FAOA-2015-CH12-CORR-013",
+      "source_lines": {
+        "start": 536,
+        "end": 537
+      },
+      "target_lines": {
+        "start": 547,
+        "end": 549
+      },
+      "classification": "MECHANICAL_PROSE_SOURCE_REPAIR",
+      "decision": "repair the source article in given an algebra",
+      "source_normalized_snippet": "given a algebra $A$ with involution there is at most one norm which makes $A$ into a $C^*$-algebra.",
+      "target_normalized_snippet": "\\begin{cor}\\label{00152144} Norma suatu aljabar-$C^*$ bersifat tunggal dalam arti bahwa, jika diberikan suatu aljabar $A$ dengan involusi, paling banyak ada satu norma yang menjadikan $A$ suatu aljabar-$C^*$.",
+      "source_normalized_snippet_sha256": "80d58eec1442ea917581f53cf297f330c42439cecaa125ddd0b8391bbd6ef976",
+      "target_normalized_snippet_sha256": "ea52a15caa3faa49ce94334c5b6ed9784546edfa44153333a0cff1fce80cdf67",
+      "forbidden_source_anchor": "given a algebra $A$ with involution",
+      "required_target_anchor": "diberikan suatu aljabar $A$ dengan involusi"
+    },
+    {
+      "id": "FAOA-2015-CH12-CORR-014",
+      "source_lines": {
+        "start": 554,
+        "end": 559
+      },
+      "target_lines": {
+        "start": 567,
+        "end": 572
+      },
+      "classification": "MATHEMATICAL_SOURCE_REPAIR",
+      "decision": "remove unitally from the general nonunital Gelfand--Naimark II description",
+      "source_normalized_snippet": "An immediate result of the preceding results is the second version of the \\emph{Gelfand-Naimark theorem}, which says that any commutative $C^*$-algebra is (isometrically unitally $*\\,$-isomorphic to) the algebra of all those continuous functions on some locally compact Hausdorff space which vanish at infinity. As was the case with the first version of this theorem (see~\\ref{00142}) the locally compact Hausdorff space referred to is the character space of the algebra.",
+      "target_normalized_snippet": "Akibat langsung dari hasil-hasil sebelumnya adalah versi kedua dari \\emph{teorema Gelfand--Naimark}, yang menyatakan bahwa setiap aljabar-$C^*$ komutatif (isomorfik-$*\\,$ secara isometrik dengan) aljabar dari semua fungsi kontinu pada suatu ruang Hausdorff kompak lokal yang lenyap di tak hingga. Seperti halnya pada versi pertama teorema ini (lihat~\\ref{00142}), ruang Hausdorff kompak lokal yang dimaksud adalah ruang karakter dari aljabar tersebut.",
+      "source_normalized_snippet_sha256": "d7a06aacc2c7a644198c25a86cbb71d206611a471f638c82bf5262a1ec3deed2",
+      "target_normalized_snippet_sha256": "0b893a37ec789767630a2a6a8f11b4a99f8c56beeab22af7b609e6ed43a21358",
+      "forbidden_source_anchor": "isometrically unitally $*\\,$-isomorphic",
+      "required_target_anchor": "isomorfik-$*\\,$ secara isometrik"
+    },
+    {
+      "id": "FAOA-2015-CH12-CORR-015",
+      "source_lines": {
+        "start": 561,
+        "end": 565
+      },
+      "target_lines": {
+        "start": 574,
+        "end": 579
+      },
+      "classification": "MATHEMATICAL_SOURCE_REPAIR",
+      "decision": "remove unital from the theorem's isomorphism for a general commutative C-star algebra",
+      "source_normalized_snippet": "\\begin{thm}[Gelfand-Naimark Theorem II]\\label{00152156} Let $A$ be a commutative \\index{Gelfand-Naimark!Theorem II}% $C^*$-algebra. Then the Gelfand transform $\\Gamma_A\\colon a \\mapsto \\wh a$ is an isometric unital $*\\,$-isomorphism of $A$ onto $\\fml C_0(\\Delta A)$. \\end{thm}",
+      "target_normalized_snippet": "\\begin{thm}[Teorema Gelfand--Naimark II]\\label{00152156} Misalkan $A$ suatu aljabar-$C^*$ komutatif. \\index{Gelfand-Naimark!Teorema II}% Maka transformasi Gelfand $\\Gamma_A\\colon a \\mapsto \\wh a$ adalah suatu isomorfisme-$*\\,$ isometrik dari $A$ pada $\\fml C_0(\\Delta A)$. \\end{thm}",
+      "source_normalized_snippet_sha256": "8a941b681d223497175853807f605a98b0f69b7b85892979363621f7e6947f55",
+      "target_normalized_snippet_sha256": "39e70152c99af0128a4c55b1a7fd71484999139eebbce3af87cdb7f3814ba02e",
+      "forbidden_source_anchor": "isometric unital $*\\,$-isomorphism",
+      "required_target_anchor": "isomorfisme-$*\\,$ isometrik dari $A$ pada $\\fml C_0(\\Delta A)$"
+    },
+    {
+      "id": "FAOA-2015-CH12-CORR-016",
+      "source_lines": {
+        "start": 591,
+        "end": 596
+      },
+      "target_lines": {
+        "start": 605,
+        "end": 610
+      },
+      "classification": "MATHEMATICAL_TEXT_LOCALIZATION",
+      "decision": "translate the two conditional labels inside the piecewise display",
+      "source_normalized_snippet": "\\[ \\wt f(x) = \\left\\{% \\begin{array}{ll} f(x), & \\hbox{if $x \\in X$;} \\\\ 0, & \\hbox{if $x = \\infty$.} \\\\ \\end{array}% \\right. \\]",
+      "target_normalized_snippet": "\\[ \\wt f(x) = \\left\\{% \\begin{array}{ll} f(x), & \\hbox{jika $x \\in X$;} \\\\ 0, & \\hbox{jika $x = \\infty$.} \\\\ \\end{array}% \\right. \\]",
+      "source_normalized_snippet_sha256": "598d652a32164c13d46af5836b770771b28cbd280846e517c931a89029b824e8",
+      "target_normalized_snippet_sha256": "ceb0ee21a3811935a09ba0904bd39424e37e9f27c2b164596a372a6e8e115a5c",
+      "forbidden_source_anchor": "\\hbox{if $x",
+      "required_target_anchor": "\\hbox{jika $x",
+      "affects_math": true
+    },
+    {
+      "id": "FAOA-2015-CH12-CORR-017",
+      "source_lines": {
+        "start": 611,
+        "end": 611
+      },
+      "target_lines": {
+        "start": 625,
+        "end": 626
+      },
+      "classification": "PARTIAL_READER_NAVIGATION_ADAPTATION",
+      "decision": "show the official future printed locator until Chapter 14 supplies the live label",
+      "source_normalized_snippet": "additional (isolated) point. (See also the terminology we introduce in~\\ref{0038614}.)",
+      "target_normalized_snippet": "(terisolasi). (Lihat pula istilah yang kita perkenalkan dalam~\\futurexref{14.3.1}{0038614}.)",
+      "source_normalized_snippet_sha256": "714a9c908205d2de96e75a1463c6955407b51a8ca27d8669515410d859020e8c",
+      "target_normalized_snippet_sha256": "2669ac96d8f21cc875bd13e5942fb70c594fa8bcb53b9bceac674f07e100f279",
+      "forbidden_source_anchor": "\\ref{0038614}",
+      "required_target_anchor": "\\futurexref{14.3.1}{0038614}"
+    },
+    {
+      "id": "FAOA-2015-CH12-CORR-018",
+      "source_lines": {
+        "start": 659,
+        "end": 663
+      },
+      "target_lines": {
+        "start": 674,
+        "end": 678
+      },
+      "classification": "MATHEMATICAL_TEXT_LOCALIZATION",
+      "decision": "repeat the variable b explicitly where Indonesian grammar requires the subject",
+      "source_normalized_snippet": "\\begin{defn} An element $b$ of an algebra $A$ is a \\df{left quasi-inverse} for $a \\in A$ if $ba = a + b$. It is a \\df{right quasi-inverse} for $a$ if $ab = a + b$. If $b$ is both a left and a right quasi-inverse for $a$ it is a \\index{quasi-inverse}% \\df{quasi-inverse} for~$a$. When $a$ has a quasi-inverse denote it by~$a'$.",
+      "target_normalized_snippet": "\\begin{defn} Suatu elemen $b$ dari aljabar $A$ adalah \\df{kuasi-invers kiri} bagi $a \\in A$ jika $ba = a + b$. Elemen tersebut adalah \\df{kuasi-invers kanan} bagi $a$ jika $ab = a + b$. Jika $b$ sekaligus merupakan kuasi-invers kiri dan kuasi-invers kanan bagi $a$, maka $b$ adalah \\index{kuasi-invers}% \\df{kuasi-invers} bagi~$a$. Jika $a$ memiliki kuasi-invers, kita lambangkan kuasi-invers itu dengan~$a'$.",
+      "source_normalized_snippet_sha256": "2486b308bc1f3abe5e5015a9581c4114848b868ea4c592314708dac69e5e2b4e",
+      "target_normalized_snippet_sha256": "26e987aa8ba8d8b205fba8d7a742cf49a7741bc8029232c19d781c7e18f1d58e",
+      "forbidden_source_anchor": "If $b$ is both a",
+      "required_target_anchor": "maka $b$ adalah",
+      "affects_math": true
+    },
+    {
+      "id": "FAOA-2015-CH12-CORR-019",
+      "source_lines": {
+        "start": 670,
+        "end": 670
+      },
+      "target_lines": {
+        "start": 685,
+        "end": 685
+      },
+      "classification": "MECHANICAL_TEX_SOURCE_REPAIR",
+      "decision": "insert the missing space after the proposition opener",
+      "source_normalized_snippet": "\\begin{prop}Let $A$ be a unital algebra and let $a$, $b \\in A$. Then",
+      "target_normalized_snippet": "\\begin{prop} Misalkan $A$ aljabar beridentitas dan $a$, $b \\in A$. Maka",
+      "source_normalized_snippet_sha256": "391decd8dcc7f1cde567aa443caa9592bdcdcc114d38c5082a1e70c9f60927c6",
+      "target_normalized_snippet_sha256": "c63a76b3e16d2e4dddec1e1083787c09c4bf985665e5b2406403de4f2c0eecb5",
+      "forbidden_source_anchor": "\\begin{prop}Let $A$ be a unital algebra",
+      "required_target_anchor": "\\begin{prop} Misalkan $A$ aljabar beridentitas"
+    },
+    {
+      "id": "FAOA-2015-CH12-CORR-020",
+      "source_lines": {
+        "start": 689,
+        "end": 689
+      },
+      "target_lines": {
+        "start": 704,
+        "end": 704
+      },
+      "classification": "MECHANICAL_TEX_SOURCE_REPAIR",
+      "decision": "insert the missing space after the proposition opener",
+      "source_normalized_snippet": "\\begin{prop}Let $A$ be a Banach algebra and $a \\in A$. If $\\norm{a} < 1$, then $a'$ exists",
+      "target_normalized_snippet": "\\begin{prop} Misalkan $A$ aljabar Banach dan $a \\in A$. Jika $\\norm{a} < 1$, maka $a'$ ada",
+      "source_normalized_snippet_sha256": "60149de03fba8112a157ed692e5c73a6b43638d439b88a7107343db53f3bebbd",
+      "target_normalized_snippet_sha256": "a348aadf97241868fa3c4c0b88edeb9bd07ea7e517d228f8eb1ddf021d0784aa",
+      "forbidden_source_anchor": "\\begin{prop}Let $A$ be a Banach algebra",
+      "required_target_anchor": "\\begin{prop} Misalkan $A$ aljabar Banach dan $a \\in A$. Jika $\\norm{a} < 1$"
+    },
+    {
+      "id": "FAOA-2015-CH12-CORR-021",
+      "source_lines": {
+        "start": 709,
+        "end": 710
+      },
+      "target_lines": {
+        "start": 723,
+        "end": 726
+      },
+      "classification": "MECHANICAL_INDEX_SOURCE_REPAIR",
+      "decision": "close the unmatched explanatory parenthesis in the Q_A index entry",
+      "source_normalized_snippet": "\\index{q@$Q_A$ (quasi-invertible elements}% quasi-invertible elements of a Banach algebra $A$ is open in $A$, and the map $a \\mapsto",
+      "target_normalized_snippet": "\\begin{prop} Himpunan $Q_A$ yang terdiri atas \\index{q@$Q_A$ (elemen kuasi-invertibel)}% elemen-elemen kuasi-invertibel dari aljabar Banach $A$ adalah himpunan terbuka dalam $A$, dan pemetaan $a \\mapsto a'$ merupakan homeomorfisme dari $Q_A$ ke dirinya sendiri.",
+      "source_normalized_snippet_sha256": "572980e3201f892f73f36450978087976707435101b845c26f487f2354576cf1",
+      "target_normalized_snippet_sha256": "71da6d1d21c436ea68597f330d38009aa2f1d18bce1aa770483aec787a865ba5",
+      "forbidden_source_anchor": "\\index{q@$Q_A$ (quasi-invertible elements}%",
+      "required_target_anchor": "\\index{q@$Q_A$ (elemen kuasi-invertibel)}%"
+    },
+    {
+      "id": "FAOA-2015-CH12-CORR-022",
+      "source_lines": {
+        "start": 728,
+        "end": 733
+      },
+      "target_lines": {
+        "start": 743,
+        "end": 748
+      },
+      "classification": "MATHEMATICAL_TEXT_LOCALIZATION",
+      "decision": "repair the source article and translate the conjunction inside the q-spectrum display",
+      "source_normalized_snippet": "\\begin{defn} If $A$ is a algebra and $a \\in A$, we define the \\index{q-spectrum}% \\index{spectrum!q-}% \\df{q-spectrum} of $a$ in $A$ by \\[ \\breve{\\sigma}_A(a) := \\{\\lambda \\in \\C\\colon \\lambda \\ne 0 \\text{ and } \\dfrac a\\lambda \\notin Q_A\\}\\cup\\{0\\}. \\]",
+      "target_normalized_snippet": "\\begin{defn} Jika $A$ aljabar dan $a \\in A$, kita definisikan \\index{spektrum-q}% \\index{spektrum!q-}% \\df{spektrum-q} dari $a$ dalam $A$ dengan \\[ \\breve{\\sigma}_A(a) := \\{\\lambda \\in \\C\\colon \\lambda \\ne 0 \\text{ dan } \\dfrac a\\lambda \\notin Q_A\\}\\cup\\{0\\}. \\]",
+      "source_normalized_snippet_sha256": "a848f1b7a0a698f2d2488d0198d840ba87b88caeb8d56b4636a181d39d29e0b2",
+      "target_normalized_snippet_sha256": "58f48acc0074f154bd87aca00c69e3497c718b3664729f39250491ea7aea6a0a",
+      "forbidden_source_anchor": "If $A$ is a algebra",
+      "required_target_anchor": "Jika $A$ aljabar dan $a \\in A$",
+      "affects_math": true
+    },
+    {
+      "id": "FAOA-2015-CH12-CORR-023",
+      "source_lines": {
+        "start": 858,
+        "end": 860
+      },
+      "target_lines": {
+        "start": 873,
+        "end": 875
+      },
+      "classification": "MATHEMATICAL_TEXT_LOCALIZATION",
+      "decision": "render nth root idiomatically as akar pangkat n while preserving the quantified symbol",
+      "source_normalized_snippet": "\\begin{prop}\\label{001804} Every positive element of a $C^*$-algebra $A$ has a unique positive $n^{\\text{th}}$ root ($n \\in \\N$). That is, if $a \\in A^+$, then there exists a unique $b \\in A^+$ such that $b^n = a$.",
+      "target_normalized_snippet": "\\begin{prop}\\label{001804} Setiap elemen positif dari suatu aljabar-$C^*$ $A$ memiliki akar pangkat $n$ positif yang tunggal ($n \\in \\N$). Artinya, jika $a \\in A^+$, maka terdapat tepat satu $b \\in A^+$ sedemikian sehingga $b^n = a$.",
+      "source_normalized_snippet_sha256": "7deddb7a4697448d48c7163d4e2ed9e8a95c7a1088b8153b5c8b756713f31c46",
+      "target_normalized_snippet_sha256": "bac3d65615ba0877a550a36220e7ae195f80d7cc6ae6091c6f787bccca06da02",
+      "forbidden_source_anchor": "$n^{\\text{th}}$ root",
+      "required_target_anchor": "akar pangkat\n$n$ positif",
+      "affects_math": true
+    },
+    {
+      "id": "FAOA-2015-CH12-CORR-024",
+      "source_lines": {
+        "start": 887,
+        "end": 893
+      },
+      "target_lines": {
+        "start": 902,
+        "end": 908
+      },
+      "classification": "MATHEMATICAL_SOURCE_REPAIR",
+      "decision": "name the ambient C-star algebra A before item (iii) quantifies an element of A",
+      "source_normalized_snippet": "\\begin{prop}\\label{00180731} If $c$ is an element of a $C^*$-algebra, then the following are equivalent: \\begin{enumerate} \\item[(i)] $c \\ge \\vc 0$; \\item[(ii)] there exists $b \\ge \\vc 0$ such that $c = b^2$; and \\item[(iii)] there exists $a \\in A$ such that $c = a^*a$, \\end{enumerate}",
+      "target_normalized_snippet": "\\begin{prop}\\label{00180731} Jika $c$ adalah elemen dari suatu aljabar-$C^*$ $A$, maka pernyataan-pernyataan berikut ekuivalen: \\begin{enumerate} \\item[(i)] $c \\ge \\vc 0$; \\item[(ii)] terdapat $b \\ge \\vc 0$ sedemikian sehingga $c = b^2$; dan \\item[(iii)] terdapat $a \\in A$ sedemikian sehingga $c = a^*a$, \\end{enumerate}",
+      "source_normalized_snippet_sha256": "91df8ac7ebde8364d27c4f50c3d1955b7481596b187c136edddfc8ca10057740",
+      "target_normalized_snippet_sha256": "b35d304d21f03d0afd31f282f5dc7391e1d1b7d96f010869a498d48a02fb4ad6",
+      "forbidden_source_anchor": "If $c$ is an element of a $C^*$-algebra, then the following",
+      "required_target_anchor": "Jika $c$ adalah elemen dari suatu aljabar-$C^*$ $A$",
+      "affects_math": true
+    },
+    {
+      "id": "FAOA-2015-CH12-CORR-025",
+      "source_lines": {
+        "start": 907,
+        "end": 907
+      },
+      "target_lines": {
+        "start": 921,
+        "end": 922
+      },
+      "classification": "MECHANICAL_TEX_SOURCE_REPAIR",
+      "decision": "insert protected spacing before the Jordan-decomposition reference",
+      "source_normalized_snippet": "theorem}\\ref{001807} to write $T$ as $T^+ - T^-$. For arbitrary $u \\in H$ let $x = T^-u$",
+      "target_normalized_snippet": "dilihat bahwa ini mengakibatkan $T$ swaadjoin. Gunakan \\emph{teorema dekomposisi Jordan}~\\ref{001807} untuk menuliskan $T$ sebagai $T^+ - T^-$. Untuk sembarang $u \\in H$, misalkan $x = T^-u$",
+      "source_normalized_snippet_sha256": "c80ceaa1576c6167f522c5b7209981a335e5ab2c3dd3520d9b2be23328aeb735",
+      "target_normalized_snippet_sha256": "c552f4d46b8e92f9cc43d8da73ac15320cf7f9fded98145a353b4369486f8a84",
+      "forbidden_source_anchor": "theorem}\\ref{001807}",
+      "required_target_anchor": "Jordan}~\\ref{001807}"
+    },
+    {
+      "id": "FAOA-2015-CH12-CORR-026",
+      "source_lines": {
+        "start": 945,
+        "end": 947
+      },
+      "target_lines": {
+        "start": 960,
+        "end": 962
+      },
+      "classification": "MATHEMATICAL_SOURCE_REPAIR",
+      "decision": "state the positivity inequality in the unitization because a general C-star algebra has no 1_A",
+      "source_normalized_snippet": "\\begin{prop}\\label{0018203} If $a$ is a self-adjoint element of a $C^*$-algebra $A$, then $\\norm a \\vc 1_A \\pm a \\ge \\vc 0$. \\end{prop}",
+      "target_normalized_snippet": "\\begin{prop}\\label{0018203} Jika $a$ adalah elemen swaadjoin dari suatu aljabar-$C^*$ $A$, maka $\\norm a\\,\\vc 1_{\\wt A} \\pm a \\ge \\vc 0$ dalam~$\\wt A$. \\end{prop}",
+      "source_normalized_snippet_sha256": "36c3f759ef8e549e8c67ca736fc87c34217876877d576e5bd59ec8848c910b0d",
+      "target_normalized_snippet_sha256": "393d4adbb9316315cb2966d1921423b8bffa122581118e612f53e1183217a78a",
+      "forbidden_source_anchor": "\\norm a \\vc 1_A \\pm a \\ge \\vc 0",
+      "required_target_anchor": "\\norm a\\,\\vc 1_{\\wt A} \\pm a \\ge \\vc 0$ dalam~$\\wt A$",
+      "affects_math": true
+    },
+    {
+      "id": "FAOA-2015-CH12-CORR-027",
+      "source_lines": {
+        "start": 961,
+        "end": 962
+      },
+      "target_lines": {
+        "start": 976,
+        "end": 977
+      },
+      "classification": "MECHANICAL_TEX_SOURCE_REPAIR",
+      "decision": "insert the missing space after the proposition opener",
+      "source_normalized_snippet": "\\begin{prop}Let $A$ be a unital $C^*$-algebra and $c \\in A$. If $c \\ge \\vc 1$, then $c$ is invertible and $\\vc 0 \\le c^{-1} \\le \\vc 1$.",
+      "target_normalized_snippet": "\\begin{prop} Misalkan $A$ aljabar-$C^*$ beridentitas dan $c \\in A$. Jika $c \\ge \\vc 1$, maka $c$ invertibel dan $\\vc 0 \\le c^{-1} \\le \\vc 1$.",
+      "source_normalized_snippet_sha256": "af5b0d479248ece50281cda8ce5964963ad19f4342f8ab6e6c4b298cbe4e1eff",
+      "target_normalized_snippet_sha256": "30680361d8f1ca991dde5de876fa7695ca515b5c8d627fe12c004233059972dd",
+      "forbidden_source_anchor": "\\begin{prop}Let $A$ be a unital $C^*$-algebra",
+      "required_target_anchor": "\\begin{prop} Misalkan $A$ aljabar-$C^*$ beridentitas"
+    },
+    {
+      "id": "FAOA-2015-CH12-CORR-028",
+      "source_lines": {
+        "start": 1033,
+        "end": 1035
+      },
+      "target_lines": {
+        "start": 1048,
+        "end": 1050
+      },
+      "classification": "MECHANICAL_INDEX_SOURCE_REPAIR",
+      "decision": "correct the approximate spelling in the sequential approximate identity index",
+      "source_normalized_snippet": "\\index{sequential!approxiamte identity}% \\index{approximate!identity!sequential}% \\df{sequential approximate identity}. In the literature be careful of varying",
+      "target_normalized_snippet": "\\index{sekuensial!identitas aproksimatif}% \\index{aproksimatif!identitas!sekuensial}% \\df{identitas aproksimatif sekuensial}. Dalam literatur, berhati-hatilah terhadap definisi yang",
+      "source_normalized_snippet_sha256": "f2e188ece6aeaf9c55f8f27749f49caf5e48f5f9eb41a5198e2cda3158b8577d",
+      "target_normalized_snippet_sha256": "78f9d3b4fb952cc6c20a85f00fda97099a36dcda28921c42dbdefcecdabe8f6f",
+      "forbidden_source_anchor": "sequential!approxiamte identity",
+      "required_target_anchor": "sekuensial!identitas aproksimatif"
+    },
+    {
+      "id": "FAOA-2015-CH12-CORR-029",
+      "source_lines": {
+        "start": 1062,
+        "end": 1069
+      },
+      "target_lines": {
+        "start": 1077,
+        "end": 1084
+      },
+      "classification": "MATHEMATICAL_TEXT_LOCALIZATION",
+      "decision": "retain the named algebra A explicitly in idiomatic Indonesian proposition and corollary prose",
+      "source_normalized_snippet": "\\begin{prop} If $A$ is a $C^*$-algebra, then the set \\[ \\Lambda := \\{a \\in A^+\\colon \\norm a < 1\\} \\] is an approximate identity for~$A$. \\end{prop} \\begin{cor}\\label{00190161} Every $C^*$-algebra $A$ has an approximate identity. \\index{approximate!identity!existence of an}% If $A$ is separable then it has a sequential approximate identity.",
+      "target_normalized_snippet": "\\begin{prop} Jika $A$ adalah aljabar-$C^*$, maka himpunan \\[ \\Lambda := \\{a \\in A^+\\colon \\norm a < 1\\} \\] merupakan identitas aproksimatif bagi~$A$. \\end{prop} \\begin{cor}\\label{00190161} Setiap aljabar-$C^*$ $A$ memiliki identitas aproksimatif. \\index{aproksimatif!identitas!keberadaan}% Jika $A$ separabel, maka $A$ memiliki identitas aproksimatif sekuensial.",
+      "source_normalized_snippet_sha256": "60ba0eeb8ee84ee8369cf1502027868b815890956fb2f91c3997ae3e83ffb063",
+      "target_normalized_snippet_sha256": "e201d2955a5e95074bc8a6516788ad106d27357cc8efcd9d9979fc280669cb52",
+      "forbidden_source_anchor": "Every $C^*$-algebra $A$ has an approximate identity.",
+      "required_target_anchor": "Setiap aljabar-$C^*$ $A$ memiliki identitas aproksimatif.",
+      "affects_math": true
+    }
+  ]
+}

@@ -37,6 +37,7 @@
 /qa/build-through-ch11-a/
 /qa/render-through-ch11-a/
 /qa/release-ch11/
+/qa/release-ch12/
 
 # TeX intermediates
 *.aux

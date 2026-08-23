@@ -1,0 +1,44 @@
+{
+  "schema_version": "o008.backend-validation.v1",
+  "timestamp": "2026-08-23",
+  "status": "pass",
+  "unit_id": "FAOA-2015-CH12",
+  "binding_state": "bound",
+  "source_sha256": "8da3ffa45bcc07cbe1897a09f309db51e1c5c38080459ffb1f6947bf45a20b6c",
+  "target_sha256": "da74193601c80828c8bebb59f20f82481c47627a746fc6c841602d538837d884",
+  "master_sha256": "d84965e27ee26d71575838a42a8410cf5956b967d188d77a040c0f018fd007de",
+  "chapter12": {
+    "semantic_units": 137,
+    "segments": 153,
+    "relations": 674,
+    "formula_map": {
+      "records": 931,
+      "source_surfaces_covered": 927,
+      "target_insertions": 3,
+      "classified_delta_maps": 12
+    },
+    "index_terms": 102,
+    "new_terms": 31,
+    "corrections": 29,
+    "qa_events": 10,
+    "artifacts": 14
+  },
+  "aggregate_records": 21004,
+  "global_stable_ids": "unique",
+  "relation_endpoints": "resolved",
+  "deterministic_round_trip": "pass",
+  "chapter1_ch11_prefix_lock": "pass",
+  "chapter11_swaadjoin_reconciliation": {
+    "semantic_fragment_hashes_reconciled": 5,
+    "segment_hashes_reconciled": 5,
+    "index_rows_reconciled": 2,
+    "fields_changed_this_run": 0
+  },
+  "backend_manifest_sha256": "6e94a55dc47e0c112bdc6a9cab30ac811fdeec6bf86295ae9e196c1bbf095959",
+  "validator": {
+    "path": "backend/validate_ch12_backend.py",
+    "bytes": 14226,
+    "logical_records": 275,
+    "sha256": "ab790f341dc91a556109d903b8533a61a2dafdcdc666d6bfe6739dc753c3c91b"
+  }
+}

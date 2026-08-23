@@ -8,6 +8,7 @@ import csv
 import hashlib
 import io
 import json
+import re
 import subprocess
 import zipfile
 from pathlib import Path, PurePosixPath
@@ -52,6 +53,8 @@ def include(path: str) -> bool:
         return False
     if path.startswith("qa/build-") or path.startswith("qa/renders/"):
         return False
+    if path.startswith("qa/release-"):
+        return False
     if "backend-scratch" in path or "/__pycache__/" in path:
         return False
     suffix = PurePosixPath(path).suffix.lower()
@@ -78,12 +81,29 @@ def main() -> None:
     parser.add_argument("--output-dir", type=Path, required=True)
     args = parser.parse_args()
 
+    if not re.fullmatch(r"[0-9a-f]{40}", args.commit):
+        raise SystemExit("--commit must be an exact lowercase 40-character ID")
+    if not re.fullmatch(r"[0-9a-f]{40}", args.tree):
+        raise SystemExit("--tree must be an exact lowercase 40-character ID")
+    resolved_commit = subprocess.check_output(
+        [args.git, "rev-parse", "--verify", f"{args.commit}^{{commit}}"], text=True
+    ).strip()
+    resolved_tree = subprocess.check_output(
+        [args.git, "rev-parse", "--verify", f"{args.commit}^{{tree}}"], text=True
+    ).strip()
+    if resolved_commit != args.commit or resolved_tree != args.tree:
+        raise SystemExit("supplied commit/tree identity does not resolve exactly")
+
     root = Path(__file__).resolve().parents[1]
     output_dir = args.output_dir.resolve()
     output_dir.mkdir(parents=True, exist_ok=True)
     pdf_path = root / "output" / "pdf" / PDF_NAME
     if not pdf_path.is_file():
         raise SystemExit(f"missing reader: {pdf_path}")
+    pdf_data = pdf_path.read_bytes()
+    committed_pdf = git_bytes(args.git, args.commit, f"output/pdf/{PDF_NAME}")
+    if pdf_data != committed_pdf:
+        raise SystemExit("worktree reader differs from the supplied commit blob")
 
     listed = subprocess.check_output(
         [args.git, "ls-tree", "-r", "--name-only", args.commit], text=True
@@ -96,6 +116,14 @@ def main() -> None:
         raise SystemExit("forbidden component selected")
 
     payloads = [(path, git_bytes(args.git, args.commit, path)) for path in paths]
+    private_path_markers = (b"C:/Users/", b"C:\\Users\\")
+    private_paths = [
+        path
+        for path, data in payloads
+        if any(marker in data for marker in private_path_markers)
+    ]
+    if private_paths:
+        raise SystemExit(f"private absolute path found in release payload: {private_paths}")
     manifest_buffer = io.StringIO(newline="")
     writer = csv.writer(manifest_buffer, lineterminator="\n")
     writer.writerow(["path", "bytes", "sha256"])
@@ -149,7 +177,6 @@ def main() -> None:
         if forbidden_names:
             raise SystemExit(f"forbidden ZIP entries: {forbidden_names}")
 
-    pdf_data = pdf_path.read_bytes()
     zip_data = zip_path.read_bytes()
     sums = (
         f"{sha256(pdf_data)}  {PDF_NAME}\n"
@@ -183,6 +210,9 @@ def main() -> None:
             "sha256": sha256(sums),
         },
         "forbidden_entries": 0,
+        "commit_tree_verified": True,
+        "reader_matches_commit_blob": True,
+        "private_absolute_paths": 0,
         "all_entry_streams_read": True,
     }
     print(json.dumps(result, ensure_ascii=False, indent=2, sort_keys=True))

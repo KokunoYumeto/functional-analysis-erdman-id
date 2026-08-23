@@ -1,0 +1,62 @@
+{
+  "schema_version": "o008.ch12-prefix-locks.v1",
+  "unit_id": "FAOA-2015-CH12",
+  "scope": "Chapter 1--11 after the authorized Chapter 11 swaadjoin derived-record reconciliation; excludes all Chapter 12 records",
+  "files": {
+    "units.jsonl": {
+      "bytes": 18504,
+      "sha256": "d3c850bff6e4fab7f3885e7d214099e5c5d990186ff3268d0b2a6589fb651497",
+      "records": 18
+    },
+    "semantic_units.jsonl": {
+      "bytes": 1068293,
+      "sha256": "716fefee85554a9c8371343548d064044ce99bd7ea84a8657caf1211659a2c1f",
+      "records": 1280
+    },
+    "segments.jsonl": {
+      "bytes": 1196279,
+      "sha256": "691b66b2a22001abdcb33c4e703886c87bd8e3e5258129c07bfa35f9c106be2d",
+      "records": 1515
+    },
+    "relations.jsonl": {
+      "bytes": 1488346,
+      "sha256": "9f0a6550c5e4daaad2ade44e3da58cc6321f2ff80563aa52dffc8fecffffc97a",
+      "records": 5668
+    },
+    "formula_map.jsonl": {
+      "bytes": 4962217,
+      "sha256": "07f58f091281a733e005c0d67cf2b35266ddb1a221ea886615a902862e161f1c",
+      "records": 8142
+    },
+    "exercise_support.jsonl": {
+      "bytes": 25503,
+      "sha256": "45b128f45d61057837c2eddcf1e45024e62b231e7d4b46e2b2dfb7c849a44925",
+      "records": 48
+    },
+    "artifacts.jsonl": {
+      "bytes": 61207,
+      "sha256": "ff510f912955e8ad27b239489d1f5e3bbb98db88653b66b93104384fed1d460d",
+      "records": 100
+    },
+    "qa_events.jsonl": {
+      "bytes": 81106,
+      "sha256": "1d1ed986d1755e2e36bd8e597f8b78194aed516c3ae48bf9e31b7fa74c74b9c5",
+      "records": 85
+    },
+    "corrections.jsonl": {
+      "bytes": 151576,
+      "sha256": "544ce455a6f19c013685ecc902fb33ee7fedd97c74bf27855df24cd55fab6e7e",
+      "records": 178
+    },
+    "terminology.jsonl": {
+      "bytes": 122922,
+      "sha256": "ef3a10e225b55737af209c50f174f1030736612b37a13ec7873433efbed86958",
+      "records": 300
+    },
+    "index_terms.csv": {
+      "bytes": 407544,
+      "sha256": "097da9332d7f19fb4ad3c8dbc2e61e50d6550fd9c407a2e30d8a081533c53277",
+      "records": 1589
+    }
+  }
+}

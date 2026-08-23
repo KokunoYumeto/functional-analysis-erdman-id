@@ -7,6 +7,7 @@ import argparse
 import hashlib
 import json
 import re
+import zipfile
 from pathlib import Path
 from typing import Any
 
@@ -31,6 +32,47 @@ def digest(path: Path) -> dict[str, Any]:
         "md5": hashlib.md5(data).hexdigest(),  # Zenodo exposes MD5 checksums.
         "sha256": hashlib.sha256(data).hexdigest(),
     }
+
+
+def validate_payload(
+    pdf_path: Path, zip_path: Path, sums_path: Path, github_commit: str
+) -> tuple[list[dict[str, Any]], dict[str, Any]]:
+    receipts = [digest(path) for path in (pdf_path, zip_path, sums_path)]
+    expected = {item["filename"]: item["sha256"] for item in receipts[:2]}
+    parsed: dict[str, str] = {}
+    for line in sums_path.read_text(encoding="ascii").splitlines():
+        match = re.fullmatch(r"([0-9a-f]{64})  (.+)", line)
+        if not match or match.group(2) in parsed:
+            raise RuntimeError("SHA256SUMS.txt is malformed or duplicated")
+        parsed[match.group(2)] = match.group(1)
+    if parsed != expected:
+        raise RuntimeError("SHA256SUMS.txt does not bind the PDF and source archive")
+
+    with zipfile.ZipFile(zip_path, "r") as archive:
+        if archive.testzip() is not None:
+            raise RuntimeError("source/backend ZIP failed integrity replay")
+        metadata_names = [
+            name for name in archive.namelist() if name.endswith("/RELEASE_METADATA.json")
+        ]
+        manifest_names = [
+            name for name in archive.namelist() if name.endswith("/RELEASE_MANIFEST.csv")
+        ]
+        if len(metadata_names) != 1 or len(manifest_names) != 1:
+            raise RuntimeError("source/backend ZIP lacks one exact release metadata/manifest pair")
+        release_metadata = json.loads(archive.read(metadata_names[0]))
+    required_metadata = {
+        "schema_version": "o008.release-source-backend.v1",
+        "release": VERSION,
+        "git_commit": github_commit,
+        "license": "CC BY-SA 4.0",
+        "reader_uploaded_separately": PDF_NAME,
+    }
+    if any(release_metadata.get(key) != value for key, value in required_metadata.items()):
+        raise RuntimeError("source/backend ZIP metadata differs from the release transaction")
+    tree = release_metadata.get("git_tree", "")
+    if not re.fullmatch(r"[0-9a-f]{40}", tree):
+        raise RuntimeError("source/backend ZIP has no exact Git tree identity")
+    return receipts, release_metadata
 
 
 def token_candidates(path: Path) -> list[str]:
@@ -222,9 +264,34 @@ def main() -> None:
         path.is_file() for path in files
     ):
         raise SystemExit("release payload filenames or paths are incorrect")
-    file_receipts = [digest(path) for path in files]
+    file_receipts, release_metadata = validate_payload(
+        files[0], files[1], files[2], github_commit
+    )
 
     session = authenticated_session(args.token_file.resolve())
+    depositions = [
+        item
+        for item in deposition_search(session)
+        if str(item.get("conceptrecid")) == EXPECTED_CONCEPTRECID
+    ]
+    current = [
+        item
+        for item in depositions
+        if item.get("state") == "done"
+        and item.get("submitted") is True
+        and item.get("metadata", {}).get("version") == VERSION
+    ]
+    if current:
+        raise RuntimeError("this Zenodo version is already published; refusing a duplicate")
+    active = [
+        item
+        for item in depositions
+        if item.get("state") != "done" or item.get("submitted") is not True
+    ]
+    if active:
+        raise RuntimeError(
+            "an active draft already exists in the O008 concept; refusing to create another"
+        )
     original = latest_published_deposition(session)
     if str(original.get("conceptrecid")) != EXPECTED_CONCEPTRECID:
         raise RuntimeError("latest deposition is outside the existing O008 concept")
@@ -241,6 +308,7 @@ def main() -> None:
                     "has_newversion_link": "newversion" in original["links"],
                     "has_latest_draft_link": "latest_draft" in original["links"],
                     "github_commit": github_commit,
+                    "github_tree": release_metadata["git_tree"],
                     "payload": file_receipts,
                 },
                 indent=2,
@@ -276,6 +344,16 @@ def main() -> None:
                 {200, 201},
             )
 
+    uploaded = checked(session.get(draft_url, timeout=30), {200}).json()
+    uploaded_by_name = {item["filename"]: item for item in uploaded.get("files", [])}
+    if set(uploaded_by_name) != set(expected_names):
+        raise RuntimeError("Zenodo draft file inventory differs after upload")
+    for receipt in file_receipts:
+        item = uploaded_by_name[receipt["filename"]]
+        checksum = str(item.get("checksum", "")).removeprefix("md5:")
+        if int(item.get("filesize", -1)) != receipt["bytes"] or checksum != receipt["md5"]:
+            raise RuntimeError(f"Zenodo draft file identity differs: {receipt['filename']}")
+
     metadata = writable_metadata(draft["metadata"], github_commit)
     draft = checked(
         session.put(draft_url, json={"metadata": metadata}, timeout=60), {200}
@@ -287,6 +365,8 @@ def main() -> None:
         raise RuntimeError("published version left the existing O008 concept")
     if published.get("metadata", {}).get("version") != VERSION:
         raise RuntimeError("published Zenodo version metadata mismatch")
+    if published.get("state") != "done" or published.get("submitted") is not True:
+        raise RuntimeError("published Zenodo response is not final")
 
     result = {
         "result": "published",
@@ -299,6 +379,7 @@ def main() -> None:
         "submitted": published["submitted"],
         "version": published["metadata"]["version"],
         "github_commit": github_commit,
+        "github_tree": release_metadata["git_tree"],
         "files": file_receipts,
         "credential_material_recorded": False,
     }

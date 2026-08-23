@@ -196,23 +196,113 @@ authorized.
 
 ## Chapter 11
 
-The following six high-confidence source defects were checked against the
-frozen Gelfand_Naimark.tex witness and are repaired or normalized in
-source/id-ID/Gelfand_Naimark-id.tex. Labels, references, citations, index
-topology, and mathematical order remain unchanged.
+The following six source candidates are adjudicated and applied in
+`source/id-ID/Gelfand_Naimark-id.tex`. The exact machine-verifiable ledger is
+`provenance/SOURCE_CORRECTIONS_CH11.json`; it binds the inclusive source and
+target ranges, normalized snippets and hashes, required anchors, and current
+target identity.
 
-1. Gelfand_Naimark.tex:83: close the idempotent equation as
-   $a^2=a$; the source has an unmatched closing parenthesis inside math.
-2. Gelfand_Naimark.tex:205: punctuate the proof hint after
-   \ref{C073147} before the question that follows.
-3. Gelfand_Naimark.tex:470: translate the singular grammatical slip
-   “compact Hausdorff space” as the intended plural ruang Hausdorff kompak.
-4. Gelfand_Naimark.tex:480: use the summation index consistently,
-   a_k z^k, rather than the source's a_n z^n under a k-sum.
-5. Gelfand_Naimark.tex:519: remove the unmatched closing parenthesis after
-   citation HewittS:1965, exercise 18.45.
-6. Gelfand_Naimark.tex:750: remove the duplicated “is” in the spectrum
-   hypothesis; the Indonesian sentence is rendered once as termuat.
+1. `Gelfand_Naimark.tex:83`: close the unmatched parenthesis in the idempotent
+   equation.
+2. `Gelfand_Naimark.tex:205`: punctuate the proof hint after its `C073147`
+   reference before the following question.
+3. `Gelfand_Naimark.tex:470`: render the intended plural “compact Hausdorff
+   spaces.”
+4. `Gelfand_Naimark.tex:480`: use `a_kz^k`, not `a_nz^n`, under the
+   `k`-indexed sum in the Gelfand-transform identity.
+5. `Gelfand_Naimark.tex:519`: remove the unmatched closing parenthesis after
+   the bibliographic locator “exercise 18.45.”
+6. `Gelfand_Naimark.tex:750`: remove the duplicated “is” in the spectrum
+   hypothesis.
+
+At the Chapter 12 cumulative boundary, the seven Chapter 11 reader occurrences
+and two Chapter 11 index occurrences of `swadjoin` were reconciled to the
+whole-edition form `swaadjoin`, already used from Chapter 1 onward. This is a
+derived-record terminology correction, not an upstream source correction; its
+evidence and treatment of the historical Chapter 11 release are recorded in
+`provenance/SELF_ADJOINT_TERMINOLOGY_ADJUDICATION.md`.
+
+No upstream contact occurs during production. These entries are held for the
+single deduplicated post-corpus report only if that report is separately
+authorized.
+
+## Chapter 12
+
+The following 29 decisions are adjudicated and applied in
+`source/id-ID/no_identity-id.tex`. The exact machine-verifiable ledger is
+`provenance/SOURCE_CORRECTIONS_CH12.json`; it binds every inclusive source and
+target range, classification, normalized source/target snippet hash, required
+and forbidden anchors, and the complete 29-record closure.
+
+Mechanical, indexing, and cross-reference repairs:
+
+1. `no_identity.tex:89--90`: index the defined object as a right, not left,
+   identity relative to an ideal.
+2. `no_identity.tex:226`: point the first local short-exact-sequence reference
+   to the globally unique Chapter 12 label.
+3. `no_identity.tex:240`: repair the second local reference in the same way.
+4. `no_identity.tex:247`: repair the third local reference and use equation
+   reference typography.
+5. `no_identity.tex:431`: supply the missing preposition in the proof-hint
+   opening.
+6. `no_identity.tex:435--436`: supply the missing article before “C-star
+   algebra.”
+7. `no_identity.tex:448`: typeset the star as a superscript in the C-star norm.
+8. `no_identity.tex:483`: close the enumerated instruction with a period.
+9. `no_identity.tex:536--537`: repair the article in “given an algebra.”
+10. `no_identity.tex:670`: insert the missing space after the proposition
+    opener.
+11. `no_identity.tex:689`: insert the missing space after the proposition
+    opener.
+12. `no_identity.tex:709--710`: close the unmatched explanatory parenthesis in
+    the `Q_A` index entry.
+13. `no_identity.tex:907`: insert protected spacing before the
+    Jordan-decomposition reference.
+14. `no_identity.tex:961--962`: insert the missing space after the proposition
+    opener.
+15. `no_identity.tex:1033--1035`: correct the spelling of “approximate” in the
+    sequential approximate-identity index entry.
+
+Mathematical source repairs:
+
+16. `no_identity.tex:175--179`: restore the omitted domain and mapping arrow in
+    the nonunital Gelfand-transform signature.
+17. `no_identity.tex:505`: state the proposition's precise
+    “not isomorphic” conclusion instead of an undefined equivalence.
+18. `no_identity.tex:554--559`: remove “unitally” from the general nonunital
+    Gelfand--Naimark II description.
+19. `no_identity.tex:561--565`: remove the false unital qualifier from the
+    theorem's isomorphism for a general commutative C-star algebra.
+20. `no_identity.tex:887--893`: name the ambient C-star algebra `A` before item
+    (iii) quantifies an element of `A`.
+21. `no_identity.tex:945--947`: state the positivity inequality in the
+    unitization, using `1_{\widetilde A}`, because a general C-star algebra has
+    no `1_A`.
+
+Reader-facing mathematical localization and navigation:
+
+22. `no_identity.tex:323--324`: translate the conjunction embedded in the
+    displayed map pair without changing either map.
+23. `no_identity.tex:471--473`: translate the conjunction inside the
+    `A^\sharp` set-builder formula.
+24. `no_identity.tex:591--596`: translate the two conditional labels inside
+    the piecewise display.
+25. `no_identity.tex:611`: retain the official future printed locator for
+    Proposition 14.3.1 until Chapter 14 supplies the live label.
+26. `no_identity.tex:659--663`: repeat the variable `b` where Indonesian
+    grammar requires an explicit subject.
+27. `no_identity.tex:728--733`: repair the source article and translate the
+    conjunction inside the Q-spectrum display.
+28. `no_identity.tex:858--860`: render “nth root” idiomatically as *akar
+    pangkat n* while preserving the quantified symbol.
+29. `no_identity.tex:1062--1069`: retain the named algebra `A` explicitly in
+    idiomatic Indonesian proposition and corollary prose.
+
+Two target-only `\newline`/`\mbox` treatments in Propositions 12.2.10 and
+12.6.13 keep the compound `homomorfisme-*` intact under modern TeX line
+breaking. They are visual reflow, not source corrections; they preserve every
+mathematical surface and remove the two Chapter 12 overfull lines observed in
+the provisional render.
 
 No upstream contact occurs during production. These entries are held for the
 single deduplicated post-corpus report only if that report is separately

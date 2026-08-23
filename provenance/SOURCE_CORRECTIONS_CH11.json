@@ -12,10 +12,10 @@
   },
   "target": {
     "path": "source/id-ID/Gelfand_Naimark-id.tex",
-    "bytes": 32551,
+    "bytes": 32558,
     "logical_records": 764,
     "line_endings": "LF",
-    "sha256": "69bd9ba794ef0d5eb74e444cf2676878b7797e5dd5b75fcfc4abdd247b1b5ee5"
+    "sha256": "2756540bd5c58e405ee07e10b00d102fada7c21e806d59f072a8afbd24587bde"
   },
   "normalization": {
     "id": "explicit-range-nfc-whitespace-v1",
