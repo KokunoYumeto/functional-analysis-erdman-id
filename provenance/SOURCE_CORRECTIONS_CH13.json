@@ -1,0 +1,192 @@
+{
+  "schema_version": "o008.source-corrections.v1",
+  "unit_id": "FAOA-2015-CH13",
+  "chapter": 13,
+  "status": "adjudicated_and_applied",
+  "source": {
+    "path": "source/upstream/GNS_construction.tex",
+    "bytes": 11965,
+    "logical_records": 289,
+    "line_endings": "CRLF",
+    "sha256": "fcc774cecc607d9860540da7b757ae04a3c43afe9d9a17e8c881e077f02682c1"
+  },
+  "target": {
+    "path": "source/id-ID/GNS_construction-id.tex",
+    "bytes": 12601,
+    "logical_records": 289,
+    "line_endings": "LF",
+    "sha256": "4c95b339702180ef8f2ea42cfba9e19a60a1740ca7d25a0568a6290f0170371f"
+  },
+  "normalization": {
+    "id": "explicit-range-nfc-whitespace-v1",
+    "source_selection": "inclusive physical source-line range",
+    "target_mapping": "inclusive physical target-line range",
+    "steps": [
+      "discard blank records and strip trailing whitespace",
+      "join selected records with LF",
+      "normalize Unicode NFC",
+      "collapse Unicode whitespace runs to ASCII spaces",
+      "trim leading and trailing ASCII space",
+      "hash UTF-8 bytes with SHA-256"
+    ]
+  },
+  "record_count": 6,
+  "class_counts": {
+    "MECHANICAL_PROSE_SOURCE_REPAIR": 3,
+    "MATHEMATICAL_SOURCE_REPAIR": 3
+  },
+  "independent_review": {
+    "pretranslation_math_review": "qa/CH13_PRETRANSLATION_MATH_REVIEW.md",
+    "terminology_plan": "provenance/CH13_TERMINOLOGY_PLAN.md",
+    "upstream_contact": "none during production"
+  },
+  "records": [
+    {
+      "id": "FAOA-2015-CH13-CORR-001",
+      "source_lines": {
+        "start": 27,
+        "end": 31
+      },
+      "target_lines": {
+        "start": 27,
+        "end": 31
+      },
+      "classification": "MECHANICAL_PROSE_SOURCE_REPAIR",
+      "decision": "remove the duplicated positivity quantifier while retaining the exact domain and order condition",
+      "source_normalized_snippet": "\\begin{defn} A linear functional $\\tau$ on a $C^*$-algebra $A$ is \\index{positive!linear functional}% \\index{linear!functional!positive}% \\df{positive} if $\\tau(a) \\ge 0$ whenever $a \\ge \\vc 0$ in~$A$ for all $a \\in A$. \\end{defn}",
+      "target_normalized_snippet": "\\begin{defn} Suatu fungsional linear $\\tau$ pada aljabar-$C^*$ $A$ bersifat \\index{positif!fungsional linear}% \\index{linear!fungsional!positif}% \\df{positif} jika $\\tau(a) \\ge 0$ untuk setiap $a \\in A$ yang memenuhi $a \\ge \\vc 0$. \\end{defn}",
+      "source_normalized_snippet_sha256": "a36792ef477d5ed9323365c1ebe68aba0ca2c5b15bc2d8e3cbe33a01d768211e",
+      "target_normalized_snippet_sha256": "82b113ab72067491a3a722cd74150398bd86ff1900410a12eb62d12039dc9286",
+      "forbidden_target_anchors": [
+        "dalam~$A$ untuk semua $a \\in A$"
+      ],
+      "required_target_anchors": [
+        "untuk setiap $a \\in A$ yang memenuhi $a \\ge \\vc 0$"
+      ],
+      "affects_math": true
+    },
+    {
+      "id": "FAOA-2015-CH13-CORR-002",
+      "source_lines": {
+        "start": 43,
+        "end": 47
+      },
+      "target_lines": {
+        "start": 43,
+        "end": 47
+      },
+      "classification": "MATHEMATICAL_SOURCE_REPAIR",
+      "decision": "define a state on a possibly nonunital C-star algebra as a positive norm-one functional and state the identity criterion only as the unital equivalent",
+      "source_normalized_snippet": "\\begin{defn} A \\index{state}% \\df{state} of a $C^*$-algebra $A$ is a positive linear functional $\\tau$ on $A$ such that $\\tau(\\vc 1) = 1$. \\end{defn}",
+      "target_normalized_snippet": "\\begin{defn} Suatu \\index{keadaan}% \\df{keadaan} pada aljabar-$C^*$ $A$ adalah fungsional linear positif $\\tau$ pada $A$ sedemikian sehingga $\\norm\\tau = 1$. Jika $A$ beridentitas, syarat ini ekuivalen dengan $\\tau(\\vc 1_A) = 1$. \\end{defn}",
+      "source_normalized_snippet_sha256": "8d26ff47b5d9abc436c82e0bac66550310e96d9e73473841f53e8890778518de",
+      "target_normalized_snippet_sha256": "0962f367b4e4647dd1e724db99e866c65c25333b7dc3b9972633a25b994fc4e3",
+      "forbidden_target_anchors": [
+        "$\\tau(\\vc 1) = 1$"
+      ],
+      "required_target_anchors": [
+        "$\\norm\\tau = 1$",
+        "$\\tau(\\vc 1_A) = 1$"
+      ],
+      "affects_math": true
+    },
+    {
+      "id": "FAOA-2015-CH13-CORR-003",
+      "source_lines": {
+        "start": 66,
+        "end": 68
+      },
+      "target_lines": {
+        "start": 66,
+        "end": 68
+      },
+      "classification": "MATHEMATICAL_SOURCE_REPAIR",
+      "decision": "restrict the norm-at-the-identity positivity criterion to a unital C-star algebra so that the displayed identity exists",
+      "source_normalized_snippet": "\\begin{prop} A linear functional $\\tau$ on a $C^*$-algebra $A$ is positive if and only if it is bounded and $\\norm\\tau = \\tau(\\vc 1_A)$. \\end{prop}",
+      "target_normalized_snippet": "\\begin{prop} Suatu fungsional linear $\\tau$ pada aljabar-$C^*$ beridentitas $A$ bersifat positif jika dan hanya jika fungsional itu terbatas dan $\\norm\\tau = \\tau(\\vc 1_A)$. \\end{prop}",
+      "source_normalized_snippet_sha256": "0821d0bb6f7bf06671d08844ef52f6d34ab9b3cccf1a1c4d6a8b4c8eae495f5a",
+      "target_normalized_snippet_sha256": "fa60bad4bc5c6b527159845adbf56bde058cc11e50d08854a2382185d2e24d9f",
+      "forbidden_target_anchors": [
+        "pada aljabar-$C^*$ $A$ bersifat positif jika dan hanya jika"
+      ],
+      "required_target_anchors": [
+        "pada aljabar-$C^*$ beridentitas $A$ bersifat positif jika dan hanya jika"
+      ],
+      "affects_math": false
+    },
+    {
+      "id": "FAOA-2015-CH13-CORR-004",
+      "source_lines": {
+        "start": 146,
+        "end": 149
+      },
+      "target_lines": {
+        "start": 146,
+        "end": 149
+      },
+      "classification": "MECHANICAL_PROSE_SOURCE_REPAIR",
+      "decision": "replace the doubled exercise-final period with one period",
+      "source_normalized_snippet": "\\begin{exer} Let $X$ be a locally compact Hausdorff space. Find an isometric (therefore faithful) representation $(\\pi,H)$ of the $C^*$-algebra $C_0(X)$ on some Hilbert space~$H$.. \\end{exer}",
+      "target_normalized_snippet": "\\begin{exer} Misalkan $X$ suatu ruang Hausdorff kompak lokal. Carilah suatu representasi isometrik (dan karena itu setia) $(\\pi,H)$ dari aljabar-$C^*$ $C_0(X)$ pada suatu ruang Hilbert~$H$. \\end{exer}",
+      "source_normalized_snippet_sha256": "478cbcf92d6254b5820063470f9e03d2ff677c052497dcb9b5ffb958370e4a87",
+      "target_normalized_snippet_sha256": "4e1070ad8eda7d253d19e87e3c23b0736cf4cea8eb7bec1c36eecee9d923380f",
+      "forbidden_target_anchors": [
+        "$H$.."
+      ],
+      "required_target_anchors": [
+        "$H$."
+      ],
+      "affects_math": false
+    },
+    {
+      "id": "FAOA-2015-CH13-CORR-005",
+      "source_lines": {
+        "start": 215,
+        "end": 219
+      },
+      "target_lines": {
+        "start": 215,
+        "end": 219
+      },
+      "classification": "MATHEMATICAL_SOURCE_REPAIR",
+      "decision": "complete the notation sentence by naming the given C-star algebra A and adding terminal punctuation",
+      "source_normalized_snippet": "\\begin{notn} In the following material $\\pi_\\rho$, $H_\\rho$, and $x_\\rho$ are the cyclic representation, the Hilbert space, and the unit cyclic vector guaranteed by the GNS-construction starting with a given state $\\rho$ of a $C^*$-algebra \\end{notn}",
+      "target_normalized_snippet": "\\begin{notn} Dalam pembahasan berikut, $\\pi_\\rho$, $H_\\rho$, dan $x_\\rho$ adalah representasi siklik, ruang Hilbert, dan vektor satuan siklik yang keberadaannya dijamin oleh konstruksi GNS ketika diterapkan pada suatu keadaan $\\rho$ yang diberikan pada suatu aljabar-$C^*$ $A$. \\end{notn}",
+      "source_normalized_snippet_sha256": "d12d0afd5246c488beecdb0ec2af2a99998c92af85f8bbc1293cb89dabfee37f",
+      "target_normalized_snippet_sha256": "3805ab0e9166d8d60791518a2a9f160834e9361a456cda805f5f5954de42ce37",
+      "forbidden_target_anchors": [
+        "suatu aljabar-$C^*$\n\\end{notn}"
+      ],
+      "required_target_anchors": [
+        "suatu aljabar-$C^*$ $A$.\n\\end{notn}"
+      ],
+      "affects_math": true
+    },
+    {
+      "id": "FAOA-2015-CH13-CORR-006",
+      "source_lines": {
+        "start": 230,
+        "end": 237
+      },
+      "target_lines": {
+        "start": 230,
+        "end": 237
+      },
+      "classification": "MECHANICAL_PROSE_SOURCE_REPAIR",
+      "decision": "repair 'that is.' punctuation and remove intrusive parentheses without changing the well-definedness claim",
+      "source_normalized_snippet": "\\mapsto x_\\lambda$ such that $x_\\lambda \\in H_\\lambda$ for each $\\lambda \\in \\Lambda$ and $\\D\\sum\\limits_{\\lambda \\in \\Lambda} \\norm{x_\\lambda}^2 < \\infty$. On $\\bigoplus\\limits_{\\lambda \\in \\Lambda} H_\\lambda$ define addition and scalar multiplication pointwise; that is. $(x + y)_\\lambda = x_\\lambda + y_\\lambda$ and $(\\alpha x)_\\lambda = \\alpha x_\\lambda$ for all $\\lambda \\in \\Lambda$, and define an inner product by $\\langle x,y \\rangle = \\sum_{\\lambda \\in \\Lambda} \\langle x_\\lambda,y_\\lambda\\rangle$. These operations (are well defined and) make $\\bigoplus\\limits_{\\lambda \\in \\Lambda} H_\\lambda$ into a Hilbert space. It is the",
+      "target_normalized_snippet": "\\mapsto x_\\lambda$ sedemikian sehingga $x_\\lambda \\in H_\\lambda$ untuk setiap $\\lambda \\in \\Lambda$ dan $\\D\\sum\\limits_{\\lambda \\in \\Lambda} \\norm{x_\\lambda}^2 < \\infty$. Pada $\\bigoplus\\limits_{\\lambda \\in \\Lambda} H_\\lambda$, definisikan penjumlahan dan perkalian skalar secara titik demi titik; yaitu, $(x + y)_\\lambda = x_\\lambda + y_\\lambda$ dan $(\\alpha x)_\\lambda = \\alpha x_\\lambda$ untuk semua $\\lambda \\in \\Lambda$, dan definisikan hasil kali dalam dengan $\\langle x,y \\rangle = \\sum_{\\lambda \\in \\Lambda} \\langle x_\\lambda,y_\\lambda\\rangle$. Operasi-operasi ini terdefinisi dengan baik dan menjadikan $\\bigoplus\\limits_{\\lambda \\in \\Lambda} H_\\lambda$ suatu ruang Hilbert. Ruang ini adalah",
+      "source_normalized_snippet_sha256": "b17120d812c58697099ccafb26a09be7f40976fb21a3035b0933fe28ea08e163",
+      "target_normalized_snippet_sha256": "197d4817c1da8cb399f431dc84c5b5a9f9fff78815eb2b09cbdb33aabbf7b24d",
+      "forbidden_target_anchors": [
+        "yaitu.",
+        "(terdefinisi dengan baik dan)"
+      ],
+      "required_target_anchors": [
+        "yaitu,",
+        "Operasi-operasi ini terdefinisi dengan baik dan menjadikan"
+      ],
+      "affects_math": false
+    }
+  ]
+}

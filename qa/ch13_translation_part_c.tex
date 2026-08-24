@@ -1,0 +1,86 @@
+\section{Konstruksi GNS dan Teorema Gelfand-Naimark Ketiga}
+Teorema berikut dikenal sebagai
+ \index{Gelfand-Naimark-Segal!konstruksi}%
+ \index{konstruksi!Gelfand-Naimark-Segal}%
+\emph{konstruksi Gelfand-Naimark-Segal} (\emph{konstruksi GNS}).
+
+\begin{thm}[Konstruksi GNS]\label{0029} Misalkan $\rho$ suatu keadaan pada aljabar-$C^*$ $A$. Maka
+terdapat suatu representasi siklik $\pi_\rho$ dari $A$ pada ruang Hilbert $H_\rho$ dan suatu
+vektor satuan siklik $x_\rho$ untuk $\pi_\rho$ sedemikian sehingga $\rho = \omega_{x_\rho} \circ
+\pi_\rho$.
+\end{thm}
+
+\begin{notn} Dalam pembahasan berikut, $\pi_\rho$, $H_\rho$, dan $x_\rho$ adalah representasi
+siklik, ruang Hilbert, dan vektor satuan siklik yang keberadaannya dijamin oleh konstruksi
+GNS ketika diterapkan pada suatu keadaan $\rho$ yang diberikan pada suatu aljabar-$C^*$ $A$.
+\end{notn}
+
+\begin{prop} Misalkan $\rho$ suatu keadaan pada aljabar-$C^*$ $A$ dan $\pi$ suatu representasi siklik
+dari $A$ pada ruang Hilbert $H$ sedemikian sehingga $\rho = \omega_x \circ \pi$ untuk suatu vektor
+satuan siklik $x$ bagi~$\pi$. Maka terdapat suatu pemetaan uniter $U$ dari $H_\rho$ ke~$H$ sedemikian sehingga
+$x = Ux_\rho$ dan $\pi(a) = U \pi_\rho(a) U^*$ untuk semua $a \in A$.
+\end{prop}
+
+\begin{defn} Misalkan $\{H_\lambda\colon \lambda \in \Lambda\}$ suatu keluarga ruang Hilbert.
+Nyatakan dengan $\bigoplus\limits_{\lambda \in \Lambda} H_\lambda$ himpunan semua fungsi
+$x\colon \Lambda \sto \bigcup\limits_{\lambda \in \Lambda} H_\lambda\colon \lambda
+\mapsto x_\lambda$ sedemikian sehingga $x_\lambda \in H_\lambda$ untuk setiap $\lambda \in \Lambda$ dan
+$\D\sum\limits_{\lambda \in \Lambda} \norm{x_\lambda}^2 < \infty$. Pada
+$\bigoplus\limits_{\lambda \in \Lambda} H_\lambda$, definisikan penjumlahan dan perkalian
+skalar secara titik demi titik; yaitu, $(x + y)_\lambda = x_\lambda + y_\lambda$ dan $(\alpha
+x)_\lambda = \alpha x_\lambda$ untuk semua $\lambda \in \Lambda$, dan definisikan hasil kali dalam
+dengan $\langle x,y \rangle = \sum_{\lambda \in \Lambda} \langle x_\lambda,y_\lambda\rangle$.
+Operasi-operasi ini terdefinisi dengan baik dan menjadikan $\bigoplus\limits_{\lambda \in \Lambda}
+H_\lambda$ suatu ruang Hilbert. Ruang ini adalah
+ \index{jumlah langsung!ruang Hilbert}%
+\df{jumlah langsung} dari ruang-ruang Hilbert~$H_\lambda$. Berbagai notasi untuk elemen-elemen jumlah
+langsung ini digunakan dalam literatur: $x$, $(x_\lambda)$, $(x_\lambda)_{\lambda \in
+\Lambda}$, dan $\oplus_\lambda x_\lambda$ lazim digunakan.
+
+Sekarang andaikan bahwa $\{T_\lambda\colon \lambda \in \Lambda\}$ suatu keluarga operator ruang
+Hilbert dengan $T_\lambda \in \ofml B(H_\lambda)$ untuk setiap $\lambda \in \Lambda$.
+Andaikan pula bahwa $\sup\{\norm{T_\lambda}\colon \lambda \in \Lambda\} < \infty$. Maka
+$T(x_\lambda)_{\lambda \in \Lambda} = (T_\lambda x_\lambda)_{\lambda \in \Lambda}$
+mendefinisikan suatu operator pada ruang Hilbert $\bigoplus_\lambda H_\lambda$. Operator $T$
+biasanya dinotasikan dengan $\bigoplus_\lambda T_\lambda$ dan disebut
+ \index{jumlah langsung!operator ruang Hilbert}%
+\df{jumlah langsung} dari operator-operator~$T_\lambda$.
+\end{defn}
+
+\begin{prop} Pernyataan-pernyataan dalam definisi sebelumnya bahwa
+\smash[b]{$\bigoplus\limits_{\lambda \in \Lambda} H_\lambda$} merupakan ruang Hilbert dan
+$\bigoplus_\lambda T_\lambda$ merupakan operator pada $\bigoplus\limits_{\lambda \in \Lambda}
+H_\lambda$ adalah benar.
+\end{prop}
+
+\begin{exam} Misalkan $A$ suatu aljabar-$C^*$ dan $\{\pi_\lambda\colon \lambda \in \Lambda\}$ suatu
+keluarga representasi dari $A$ pada ruang-ruang Hilbert $H_\lambda$ sedemikian sehingga $\pi_\lambda(a)
+\in \ofml B(H_\lambda)$ untuk setiap $\lambda \in \Lambda$ dan setiap $a \in A$. Maka
+  \[ \pi = \textstyle{ \bigoplus_\lambda \pi_\lambda\colon A \sto
+       \ofml B\bigl(\bigoplus_\lambda H_\lambda\bigr)
+       \colon a \mapsto \bigoplus_\lambda \pi_\lambda(a)} \]
+merupakan representasi dari $A$ pada ruang Hilbert $\bigoplus_\lambda H_\lambda$. Representasi ini adalah
+ \index{jumlah langsung!representasi}%
+\df{jumlah langsung} dari representasi-representasi~$\pi_\lambda$.
+\end{exam}
+
+\begin{thm}\label{thm_exist_faith_rep} Setiap aljabar-$C^*$ memiliki suatu representasi setia.
+\end{thm}
+
+\begin{proof} Lihat \cite{Blackadar:2006}, Korolari II.6.4.10; \cite{Conway:1990}, halaman 253;
+\cite{DoranB:1986}, Teorema 19.1; \cite{Fillmore:1996}, Teorema 5.4.1;
+\cite{KadisonR:1983}, halaman 281; atau \cite{Murphy:1990}, Teorema 3.4.1. \ns
+\end{proof}
+
+Suatu perumusan ulang yang jelas dari teorema sebelumnya adalah versi ketiga dari
+\emph{teorema Gelfand-Naimark}, yang menyatakan bahwa setiap aljabar-$C^*$ (pada hakikatnya)
+merupakan suatu aljabar operator ruang Hilbert.
+
+\begin{cor}[Teorema Gelfand-Naimark III]\label{002973} Setiap aljabar-$C^*$
+ \index{Gelfand-Naimark!Teorema III}
+isomorfik-$*\,$ secara isometrik dengan suatu subaljabar-$C^*$ dari $\ofml B(H)$ untuk suatu ruang
+Hilbert~$H$.
+\end{cor}
+
+
+\endinput

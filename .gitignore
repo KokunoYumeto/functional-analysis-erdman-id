@@ -38,6 +38,11 @@
 /qa/render-through-ch11-a/
 /qa/release-ch11/
 /qa/release-ch12/
+/qa/build-through-ch13-final/
+/qa/render-through-ch13-final/
+/qa/release-ch13/
+/qa/CH13_FINAL_BUILD_PASS1_LOG.txt
+/qa/CH13_FINAL_BUILD_PASS2_LOG.txt
 
 # TeX intermediates
 *.aux

@@ -1,0 +1,36 @@
+{
+  "schema_version": "o008.ch13-final-build.v1",
+  "source_date_epoch": 1444126743,
+  "fixed_output_path": "qa/build-through-ch13-final",
+  "input_count": 16,
+  "inputs_unchanged": true,
+  "replay_1": {
+    "bytes": 2031973,
+    "sha256": "b7810718cb9a633c694aed126fc5c10786864650b076c2ad5bb7329191db3b65"
+  },
+  "replay_2": {
+    "bytes": 2031973,
+    "sha256": "b7810718cb9a633c694aed126fc5c10786864650b076c2ad5bb7329191db3b65"
+  },
+  "byte_identical": true,
+  "pages": 183,
+  "final_log_forbidden_counts": {
+    "tex_error": 0,
+    "undefined_reference": 0,
+    "undefined_citation": 0,
+    "unresolved_summary": 0,
+    "rerun_required": 0,
+    "multiply_defined": 0,
+    "missing_character": 0
+  },
+  "pdf": {
+    "path": "qa/build-through-ch13-final/functional-analysis-id-through-ch13.pdf",
+    "bytes": 2031973,
+    "sha256": "b7810718cb9a633c694aed126fc5c10786864650b076c2ad5bb7329191db3b65"
+  },
+  "reader": {
+    "path": "output/pdf/analisis-fungsional-dan-aljabar-operator-id-bab-1-13.pdf",
+    "bytes": 2031973,
+    "sha256": "b7810718cb9a633c694aed126fc5c10786864650b076c2ad5bb7329191db3b65"
+  }
+}

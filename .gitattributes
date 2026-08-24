@@ -31,3 +31,6 @@ provenance/*_RENDER_MANIFEST.csv -text
 # admitted bytes on every platform.
 /provenance/SOURCE_CORRECTIONS_CH11.json -text
 /qa/CH11_BACKEND_RECONCILIATION.md -text
+
+# Chapter 13 correction ledger is likewise admitted with its exact CRLF bytes.
+/provenance/SOURCE_CORRECTIONS_CH13.json -text

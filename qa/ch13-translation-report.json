@@ -1,0 +1,105 @@
+{
+  "schema_version": "o008.ch13-translation-qa.v1",
+  "unit_id": "FAOA-2015-CH13",
+  "status": "pass",
+  "identities": {
+    "source_bytes": 11965,
+    "source_sha256": "fcc774cecc607d9860540da7b757ae04a3c43afe9d9a17e8c881e077f02682c1",
+    "target_bytes": 12601,
+    "target_sha256": "4c95b339702180ef8f2ea42cfba9e19a60a1740ca7d25a0568a6290f0170371f",
+    "master_bytes": 10345,
+    "master_sha256": "d1734ea09a576c9e5c8f38bb9430a132e8cd38551c9b0c6cbd9bf65b4923c87e"
+  },
+  "structure": {
+    "source_records": 289,
+    "target_records": 289,
+    "sections": 3,
+    "environment_openings": 32,
+    "environment_counts": {
+      "cau": 1,
+      "conv": 1,
+      "cor": 2,
+      "defn": 7,
+      "exam": 5,
+      "exer": 1,
+      "notn": 1,
+      "proof": 2,
+      "prop": 10,
+      "thm": 2
+    },
+    "labels": 7,
+    "references": 2,
+    "citations": 7,
+    "index_hooks": 28,
+    "defined_terms": 13,
+    "exercises": 1,
+    "proofs": 2
+  },
+  "math": {
+    "source_surfaces": 237,
+    "target_surfaces": 239,
+    "classified_edit_blocks": [
+      {
+        "operation": "insert",
+        "source_start": 24,
+        "source_end": 24,
+        "target_start": 24,
+        "target_end": 25,
+        "source": [],
+        "target": [
+          "a \\in A"
+        ]
+      },
+      {
+        "operation": "delete",
+        "source_start": 25,
+        "source_end": 27,
+        "target_start": 26,
+        "target_end": 26,
+        "source": [
+          "A",
+          "a \\in A"
+        ],
+        "target": []
+      },
+      {
+        "operation": "replace",
+        "source_start": 35,
+        "source_end": 36,
+        "target_start": 34,
+        "target_end": 37,
+        "source": [
+          "\\tau(\\vc 1) = 1"
+        ],
+        "target": [
+          "\\norm\\tau = 1",
+          "A",
+          "\\tau(\\vc 1_A) = 1"
+        ]
+      },
+      {
+        "operation": "insert",
+        "source_start": 174,
+        "source_end": 174,
+        "target_start": 175,
+        "target_end": 176,
+        "source": [],
+        "target": [
+          "A"
+        ]
+      }
+    ]
+  },
+  "linkage": {
+    "cumulative_labels": 476,
+    "unresolved_references": [],
+    "unresolved_citations": []
+  },
+  "rights_and_provenance": {
+    "license": "CC BY-SA 4.0",
+    "model_provenance": "OpenAI Codex gpt-5.6-sol, Ultra",
+    "excluded_components_absent": true,
+    "nonendorsement_present": true
+  },
+  "errors": []
+}

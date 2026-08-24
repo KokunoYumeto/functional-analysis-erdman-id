@@ -1,0 +1,289 @@
+\chapter{KONSTRUKSI GELFAND-NAIMARK-SEGAL}\label{gelfand_naimark_segal}
+
+\section{Fungsional Linear Positif}
+\begin{defn} Misalkan $A$ suatu aljabar dengan involusi. Untuk setiap fungsional linear $\tau$ pada
+$A$ dan setiap $a \in A$ definisikan
+ \index{<unopurstar@$\tau^\star$ (konjugat dari $\tau$)}%
+$\tau^\star(a) = \conj{\tau(a^*)}$.  Kita mengatakan bahwa $\tau$ bersifat
+ \index{Hermitian!fungsional linear}%
+ \index{linear!fungsional!Hermitian}%
+\df{Hermitian} jika $\tau^\star = \tau$.  Perhatikan bahwa suatu fungsional linear $\tau\colon A
+\sto \C$ bersifat Hermitian jika dan hanya jika mempertahankan involusi; yaitu, $\tau^\star =
+\tau$ jika dan hanya jika $\tau(a^*) = \conj{\tau(a)}$ untuk semua $a \in A$.
+\end{defn}
+
+\begin{cau} $\tau^\star$ yang didefinisikan di atas jangan dikacaukan dengan pemetaan adjoin
+biasa $\tau^*\colon \C^* \sto A^*$. Konteks (atau penggunaan kaca pembesar) semestinya
+memperjelas mana yang dimaksud.
+\end{cau}
+
+\begin{prop} Suatu fungsional linear $\tau$ pada aljabar-$C^*$ $A$ bersifat Hermitian jika dan hanya jika
+$\tau(a)~\in~\R$ setiap kali $a$ swaadjoin.
+\end{prop}
+
+Seperti halnya selalu terjadi pada pemetaan di antara ruang-ruang vektor terurut, pemetaan
+\emph{positif} ialah pemetaan yang membawa elemen positif ke elemen positif.
+
+\begin{defn} Suatu fungsional linear $\tau$ pada aljabar-$C^*$ $A$ bersifat
+ \index{positif!fungsional linear}%
+ \index{linear!fungsional!positif}%
+\df{positif} jika $\tau(a) \ge 0$ untuk setiap $a \in A$ yang memenuhi $a \ge \vc 0$.
+\end{defn}
+
+
+\begin{prop} Setiap fungsional linear positif pada suatu aljabar-$C^*$ bersifat Hermitian.
+\end{prop}
+
+\begin{prop} Keluarga fungsional linear positif merupakan suatu kerucut konveks proper dalam ruang
+vektor real semua fungsional linear Hermitian pada suatu aljabar-$C^*$. Kerucut itu menginduksi suatu
+urutan parsial pada ruang vektor tersebut: $\tau_1 \le \tau_2$ setiap kali $\tau_2 - \tau_1$
+bersifat positif.
+\end{prop}
+
+\begin{defn} Suatu
+ \index{keadaan}%
+\df{keadaan} pada aljabar-$C^*$ $A$ adalah fungsional linear positif $\tau$ pada $A$ sedemikian sehingga
+$\norm\tau = 1$. Jika $A$ beridentitas, syarat ini ekuivalen dengan $\tau(\vc 1_A) = 1$.
+\end{defn}
+
+\begin{exam} Misalkan $x$ suatu vektor dalam ruang Hilbert $H$. Definisikan
+   \[ \omega_x:\ofml B(H) \sto \C\colon T \mapsto \langle Tx,x \rangle\,. \]
+Maka $\omega_x$ merupakan fungsional linear positif pada $\ofml B(H)$. Jika $x$ suatu
+vektor satuan, maka $\omega_x$ merupakan keadaan pada~$\ofml B(H)$. Suatu keadaan $\tau$ disebut
+ \index{vektor!keadaan}%
+ \index{keadaan!vektor}%
+\df{keadaan vektor} jika $\tau = \omega_x$ untuk suatu vektor satuan~$x$.
+\end{exam}
+
+\begin{prop}[Ketaksamaan Schwarz]\label{0025105} Jika $\tau$ suatu fungsional linear positif pada
+aljabar-$C^*$ $A$, maka
+   \[ \abs{\tau(b^*a)}^2 \le \tau(a^*a)\tau(b^*b) \]
+untuk semua $a$, $b \in A$.
+ \index{ketaksamaan Schwarz}%
+ \index{ketaksamaan!Schwarz}%
+\end{prop}
+
+\begin{prop} Suatu fungsional linear $\tau$ pada aljabar-$C^*$ beridentitas $A$ bersifat positif jika dan hanya jika
+fungsional itu terbatas dan $\norm\tau = \tau(\vc 1_A)$.
+\end{prop}
+
+\begin{proof} Lihat \cite{KadisonR:1983}, halaman 256--257. \ns
+\end{proof}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Representasi}
+\begin{defn}\label{0028} Misalkan $A$ suatu aljabar-$C^*$. Suatu
+ \index{representasi}%
+\df{representasi} dari $A$ adalah pasangan $(\pi,H)$ dengan $H$ ruang Hilbert dan $\pi
+\colon A \sto \ofml B(H)$ suatu homomorfisme-$*\,$. Biasanya cukup dikatakan bahwa $\pi$ merupakan
+representasi dari~$A$. Apabila kita ingin menekankan peran ruang Hilbert tertentu itu,
+kita mengatakan bahwa $\pi$ \emph{merupakan representasi dari $A$ pada~$H$.} Bergantung pada konteks, kita
+dapat menulis $\pi_a$ atau $\pi(a)$ untuk operator ruang Hilbert yang merupakan citra
+elemen aljabar $a$ di bawah~$\pi$. Suatu representasi $\pi$ dari $A$ pada $H$ disebut
+ \index{representasi!tak terdegenerasi}%
+ \index{tak terdegenerasi!representasi}%
+\df{tak terdegenerasi} jika $\pi(A)H$ padat di~$H$.
+\end{defn}
+
+ \index{konvensi!representasi aljabar-$C*$ beridentitas bersifat beridentitas}%
+\begin{conv} Kita menambahkan persyaratan berikut pada definisi sebelumnya: jika aljabar-$C^*$
+$A$ beridentitas, maka suatu representasi dari $A$ harus berupa homomorfisme-$*\,$ \emph{beridentitas}.
+\end{conv}
+
+\begin{defn} Suatu representasi $\pi$ dari aljabar-$C^*$ $A$ pada ruang Hilbert $H$ disebut
+ \index{representasi!setia}%
+ \index{representasi setia}%
+\df{setia} jika representasi itu injektif. Jika terdapat suatu vektor $x \in H$ sedemikian sehingga
+$\pi^{\sto}(A)x = \{\pi_a(x)\colon a \in A\}$ padat di $H$, maka kita mengatakan bahwa
+representasi $\pi$ bersifat
+ \index{representasi!siklik}%
+ \index{siklik!representasi}%
+\df{siklik} dan bahwa $x$ merupakan
+ \index{representasi!vektor siklik bagi suatu}%
+ \index{siklik!vektor}%
+\df{vektor siklik} bagi~$\pi$.
+\end{defn}
+
+\begin{exam}\label{002802} Misalkan $(S, \sfml A, \mu)$ suatu ruang ukur $\sigma$-hingga dan
+$L_\infty = L_\infty(S, \sfml A, \mu)$ aljabar-$C^*$ dari fungsi-fungsi yang terbatas secara esensial dan
+terukur terhadap $\mu$ pada~$S$. Seperti yang kita lihat dalam contoh~\ref{C063527}, untuk setiap $\phi \in
+L_\infty$ operator perkalian $M_\phi$ yang bersesuaian merupakan operator pada
+ruang Hilbert $L_2 = L_2(S, \sfml A, \mu)$. Pemetaan $M\colon L_\infty \sto \ofml
+B(L_2)\colon \phi \mapsto M_\phi$ merupakan representasi setia dari aljabar-$C^*$
+$L_\infty$ pada ruang Hilbert~$L_2$.
+\end{exam}
+
+\begin{exam} Misalkan $\fml C([0,1])$ aljabar-$C^*$ dari fungsi-fungsi kontinu
+pada interval~$[0,1]$. Untuk setiap $\phi \in \fml C([0,1])$, operator perkalian
+$M_\phi$ yang bersesuaian merupakan operator pada ruang Hilbert $L_2 = L_2([0,1])$
+dari fungsi-fungsi pada~$[0,1]$ yang terintegralkan kuadrat terhadap ukuran Lebesgue.
+Pemetaan $M\colon \fml C([0,1]) \sto \ofml B(L_2)\colon \phi \mapsto M_\phi$ merupakan
+representasi setia dari aljabar-$C^*$ $\fml C([0,1])$ pada ruang Hilbert~$L_2$.
+\end{exam}
+
+\begin{exam} Andaikan $\pi$ suatu representasi dari aljabar-$C^*$ beridentitas $A$ pada
+ruang Hilbert~$H$ dan $x$ suatu vektor satuan dalam~$H$. Jika $\omega _x$ merupakan
+keadaan vektor yang bersesuaian pada $\ofml B(H)$, maka $\omega_x \circ \pi$ merupakan keadaan pada~$A$.
+\end{exam}
+
+\begin{exer} Misalkan $X$ suatu ruang Hausdorff kompak lokal. Carilah suatu representasi
+isometrik (dan karena itu setia) $(\pi,H)$ dari aljabar-$C^*$ $C_0(X)$ pada suatu
+ruang Hilbert~$H$.
+\end{exer}
+
+\begin{defn} Misalkan $\rho$ suatu keadaan pada aljabar-$C^*$ $A$. Maka
+   \[ L_\rho := \{a \in A\colon \rho(a^*a) = 0\} \]
+disebut
+ \index{kiri!kernel}%
+ \index{kernel!kiri}%
+\df{kernel kiri} dari~$\rho$.
+\end{defn}
+
+Ingat bahwa sebagai bagian dari pembuktian \emph{ketaksamaan Schwarz}~\ref{0025105} bagi fungsional
+linear positif, kita telah memverifikasi hasil berikut.
+
+\begin{prop} Jika $\rho$ suatu keadaan pada aljabar-$C^*$ $A$, maka $\langle a,b \rangle_0 :=
+\rho(b^*a)$ mendefinisikan suatu hasil kali dalam semu pada~$A$.
+\end{prop}
+
+\begin{cor} Jika $\rho$ suatu keadaan pada aljabar-$C^*$ $A$, maka kernel kirinya $L_\rho$ merupakan suatu
+subruang vektor dari $A$ dan $\langle\,[a],[b]\,\rangle := \langle a,b \rangle_0$ mendefinisikan
+suatu hasil kali dalam pada ruang vektor hasil bagi~$A/L_\rho$.
+\end{cor}
+
+\begin{prop} Misalkan $\rho$ suatu keadaan pada aljabar-$C^*$ $A$ dan $a \in L_\rho$. Maka $\rho(b^*a)
+= 0$ untuk setiap $b \in A$.
+\end{prop}
+
+\begin{prop} Jika $\rho$ suatu keadaan pada aljabar-$C^*$ $A$, maka kernel kirinya $L_\rho$ merupakan suatu
+ideal kiri tertutup dalam~$A$.
+\end{prop}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Konstruksi GNS dan Teorema Gelfand-Naimark Ketiga}
+Teorema berikut dikenal sebagai
+ \index{Gelfand-Naimark-Segal!konstruksi}%
+ \index{konstruksi!Gelfand-Naimark-Segal}%
+\emph{konstruksi Gelfand-Naimark-Segal} (\emph{konstruksi GNS}).
+
+\begin{thm}[Konstruksi GNS]\label{0029} Misalkan $\rho$ suatu keadaan pada aljabar-$C^*$ $A$. Maka
+terdapat suatu representasi siklik $\pi_\rho$ dari $A$ pada ruang Hilbert $H_\rho$ dan suatu
+vektor satuan siklik $x_\rho$ untuk $\pi_\rho$ sedemikian sehingga $\rho = \omega_{x_\rho} \circ
+\pi_\rho$.
+\end{thm}
+
+\begin{notn} Dalam pembahasan berikut, $\pi_\rho$, $H_\rho$, dan $x_\rho$ adalah representasi
+siklik, ruang Hilbert, dan vektor satuan siklik yang keberadaannya dijamin oleh konstruksi
+GNS ketika diterapkan pada suatu keadaan $\rho$ yang diberikan pada suatu aljabar-$C^*$ $A$.
+\end{notn}
+
+\begin{prop} Misalkan $\rho$ suatu keadaan pada aljabar-$C^*$ $A$ dan $\pi$ suatu representasi siklik
+dari $A$ pada ruang Hilbert $H$ sedemikian sehingga $\rho = \omega_x \circ \pi$ untuk suatu vektor
+satuan siklik $x$ bagi~$\pi$. Maka terdapat suatu pemetaan uniter $U$ dari $H_\rho$ ke~$H$ sedemikian sehingga
+$x = Ux_\rho$ dan $\pi(a) = U \pi_\rho(a) U^*$ untuk semua $a \in A$.
+\end{prop}
+
+\begin{defn} Misalkan $\{H_\lambda\colon \lambda \in \Lambda\}$ suatu keluarga ruang Hilbert.
+Nyatakan dengan $\bigoplus\limits_{\lambda \in \Lambda} H_\lambda$ himpunan semua fungsi
+$x\colon \Lambda \sto \bigcup\limits_{\lambda \in \Lambda} H_\lambda\colon \lambda
+\mapsto x_\lambda$ sedemikian sehingga $x_\lambda \in H_\lambda$ untuk setiap $\lambda \in \Lambda$ dan
+$\D\sum\limits_{\lambda \in \Lambda} \norm{x_\lambda}^2 < \infty$. Pada
+$\bigoplus\limits_{\lambda \in \Lambda} H_\lambda$, definisikan penjumlahan dan perkalian
+skalar secara titik demi titik; yaitu, $(x + y)_\lambda = x_\lambda + y_\lambda$ dan $(\alpha
+x)_\lambda = \alpha x_\lambda$ untuk semua $\lambda \in \Lambda$, dan definisikan hasil kali dalam
+dengan $\langle x,y \rangle = \sum_{\lambda \in \Lambda} \langle x_\lambda,y_\lambda\rangle$.
+Operasi-operasi ini terdefinisi dengan baik dan menjadikan $\bigoplus\limits_{\lambda \in \Lambda}
+H_\lambda$ suatu ruang Hilbert. Ruang ini adalah
+ \index{jumlah langsung!ruang Hilbert}%
+\df{jumlah langsung} dari ruang-ruang Hilbert~$H_\lambda$. Berbagai notasi untuk elemen-elemen jumlah
+langsung ini digunakan dalam literatur: $x$, $(x_\lambda)$, $(x_\lambda)_{\lambda \in
+\Lambda}$, dan $\oplus_\lambda x_\lambda$ lazim digunakan.
+
+Sekarang andaikan bahwa $\{T_\lambda\colon \lambda \in \Lambda\}$ suatu keluarga operator ruang
+Hilbert dengan $T_\lambda \in \ofml B(H_\lambda)$ untuk setiap $\lambda \in \Lambda$.
+Andaikan pula bahwa $\sup\{\norm{T_\lambda}\colon \lambda \in \Lambda\} < \infty$. Maka
+$T(x_\lambda)_{\lambda \in \Lambda} = (T_\lambda x_\lambda)_{\lambda \in \Lambda}$
+mendefinisikan suatu operator pada ruang Hilbert $\bigoplus_\lambda H_\lambda$. Operator $T$
+biasanya dinotasikan dengan $\bigoplus_\lambda T_\lambda$ dan disebut
+ \index{jumlah langsung!operator ruang Hilbert}%
+\df{jumlah langsung} dari operator-operator~$T_\lambda$.
+\end{defn}
+
+\begin{prop} Pernyataan-pernyataan dalam definisi sebelumnya bahwa
+\smash[b]{$\bigoplus\limits_{\lambda \in \Lambda} H_\lambda$} merupakan ruang Hilbert dan
+$\bigoplus_\lambda T_\lambda$ merupakan operator pada $\bigoplus\limits_{\lambda \in \Lambda}
+H_\lambda$ adalah benar.
+\end{prop}
+
+\begin{exam} Misalkan $A$ suatu aljabar-$C^*$ dan $\{\pi_\lambda\colon \lambda \in \Lambda\}$ suatu
+keluarga representasi dari $A$ pada ruang-ruang Hilbert $H_\lambda$ sedemikian sehingga $\pi_\lambda(a)
+\in \ofml B(H_\lambda)$ untuk setiap $\lambda \in \Lambda$ dan setiap $a \in A$. Maka
+  \[ \pi = \textstyle{ \bigoplus_\lambda \pi_\lambda\colon A \sto
+       \ofml B\bigl(\bigoplus_\lambda H_\lambda\bigr)
+       \colon a \mapsto \bigoplus_\lambda \pi_\lambda(a)} \]
+merupakan representasi dari $A$ pada ruang Hilbert $\bigoplus_\lambda H_\lambda$. Representasi ini adalah
+ \index{jumlah langsung!representasi}%
+\df{jumlah langsung} dari representasi-representasi~$\pi_\lambda$.
+\end{exam}
+
+\begin{thm}\label{thm_exist_faith_rep} Setiap aljabar-$C^*$ memiliki suatu representasi setia.
+\end{thm}
+
+\begin{proof} Lihat \cite{Blackadar:2006}, Korolari II.6.4.10; \cite{Conway:1990}, halaman 253;
+\cite{DoranB:1986}, Teorema 19.1; \cite{Fillmore:1996}, Teorema 5.4.1;
+\cite{KadisonR:1983}, halaman 281; atau \cite{Murphy:1990}, Teorema 3.4.1. \ns
+\end{proof}
+
+Suatu perumusan ulang yang jelas dari teorema sebelumnya adalah versi ketiga dari
+\emph{teorema Gelfand-Naimark}, yang menyatakan bahwa setiap aljabar-$C^*$ (pada hakikatnya)
+merupakan suatu aljabar operator ruang Hilbert.
+
+\begin{cor}[Teorema Gelfand-Naimark III]\label{002973} Setiap aljabar-$C^*$
+ \index{Gelfand-Naimark!Teorema III}
+isomorfik-$*\,$ secara isometrik dengan suatu subaljabar-$C^*$ dari $\ofml B(H)$ untuk suatu ruang
+Hilbert~$H$.
+\end{cor}
+
+
+\endinput

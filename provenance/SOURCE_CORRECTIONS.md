@@ -194,6 +194,34 @@ No upstream contact occurs during production. These entries are held for the
 single deduplicated post-corpus report only if that report is separately
 authorized.
 
+## Chapter 13
+
+The following six source-facing changes are adjudicated and applied in
+`source/id-ID/GNS_construction-id.tex`. The exact machine-verifiable ledger is
+`provenance/SOURCE_CORRECTIONS_CH13.json`, 10,653 bytes, SHA-256
+`9fdcdc4fe5b8f3d621ace0ac0efad2ae684766efcb4341d38bbc2e923e652a05`.
+
+1. `GNS_construction.tex:27--31`: remove the redundant repeated positivity
+   quantifier while retaining the exact domain and order condition.
+2. `GNS_construction.tex:43--47`: define a state on a possibly nonunital
+   `$C^*$`-algebra as a positive norm-one functional; retain
+   `τ(1_A)=1` as the equivalent unital criterion. This is required after the
+   source's own Chapter 12 admits algebras without identities.
+3. `GNS_construction.tex:66--68`: restrict the norm-at-the-identity
+   characterization of positivity to a unital `$C^*$`-algebra, where `1_A`
+   exists.
+4. `GNS_construction.tex:146--149`: replace the exercise's doubled final
+   period with one period.
+5. `GNS_construction.tex:215--219`: complete the GNS notation sentence by
+   naming the given algebra `A` and adding terminal punctuation.
+6. `GNS_construction.tex:230--237`: repair `that is.` punctuation and remove
+   intrusive parentheses without changing the claim that the direct-sum
+   operations are well defined.
+
+No upstream contact occurs during production. These entries remain candidates
+for the one deduplicated post-corpus report only if that report is separately
+authorized.
+
 ## Chapter 11
 
 The following six source candidates are adjudicated and applied in
