@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.0.0",
+  "receipt_id": "FAOA-2015-HTML-READER-ZENODO-PUBLICATION",
+  "verified_utc": "2026-08-24T20:33:56Z",
+  "conceptrecid": "22059739",
+  "record_id": "22086801",
+  "doi": "10.5281/zenodo.22086801",
+  "record_url": "https://zenodo.org/records/22086801",
+  "version": "2026.08.24-html-reader",
+  "license": "CC BY-SA 4.0",
+  "title": "Analisis Fungsional dan Aljabar Operator: Suatu Pengantar — Edisi Bahasa Indonesia",
+  "publication_date": "2026-08-24",
+  "language": "ind",
+  "overall_status": "in_progress",
+  "source_text_status": "complete",
+  "semantic_html_status": "complete",
+  "github_commit": "1471a3719f52463b01b71e48330ec7fe3c7b704a",
+  "github_tree": "ceb2e50e9678614e9cadc7f690445711b9e29253",
+  "source_author_credit_present": true,
+  "scope_nonendorsement_component_model_metadata_present": true,
+  "required_related_identifiers_present": true,
+  "reader_first_surface": {
+    "sole_primary_reader_pdf": "analisis-fungsional-dan-aljabar-operator-id-teks-sumber-lengkap.pdf",
+    "description_introduces_pdf_before_archive": true,
+    "api_file_array_treated_as_unordered": true,
+    "default_preview": null,
+    "explicit_file_order": []
+  },
+  "status": "published",
+  "latest_in_concept": true,
+  "unique_version_in_lineage": true,
+  "record_page_resolves": true,
+  "doi_resolves": true,
+  "anonymous_metadata_readback": true,
+  "anonymous_file_byte_readback": true,
+  "files": [
+    {
+      "filename": "analisis-fungsional-dan-aljabar-operator-id-teks-sumber-lengkap.pdf",
+      "bytes": 2480109,
+      "sha256": "efa2358b3c3e6e8c47e0caee9a02f6afe78d15bea1b0f1822ea8449d801b2b10",
+      "matches_local_bytes": true
+    },
+    {
+      "filename": "functional-analysis-erdman-id-2026.08.24-html-reader-source-backend.zip",
+      "bytes": 3313598,
+      "sha256": "6b911f7d1a061b5e9e09f974aa36a675f2b261136ef471825be41ddd5cbc109b",
+      "matches_local_bytes": true
+    },
+    {
+      "filename": "SHA256SUMS.txt",
+      "bytes": 272,
+      "sha256": "4df2347e29ee70a14d1cee35c3379a2ca9b45d6c3c490da876de09494e2b5821",
+      "matches_local_bytes": true
+    }
+  ],
+  "credential_material_recorded": false,
+  "result": "pass"
+}

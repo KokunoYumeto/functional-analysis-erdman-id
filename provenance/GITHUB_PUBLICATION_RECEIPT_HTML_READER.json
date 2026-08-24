@@ -1,0 +1,84 @@
+{
+  "schema_version": "1.0.0",
+  "receipt_id": "FAOA-2015-ID-HTML-GITHUB-PUBLICATION",
+  "verified_utc": "2026-08-24T20:24:20Z",
+  "repository": "https://github.com/KokunoYumeto/functional-analysis-erdman-id",
+  "branch": "main",
+  "commit": "1471a3719f52463b01b71e48330ec7fe3c7b704a",
+  "tree": "ceb2e50e9678614e9cadc7f690445711b9e29253",
+  "remote_head": "1471a3719f52463b01b71e48330ec7fe3c7b704a",
+  "remote_tree": "ceb2e50e9678614e9cadc7f690445711b9e29253",
+  "remote_head_matches": true,
+  "remote_tree_matches": true,
+  "anonymous_changed_path_readback": {
+    "path_count": 131,
+    "total_bytes": 11772963,
+    "all_paths_match_local_bytes": true,
+    "mismatch_count": 0
+  },
+  "representative_raw_readback": [
+    {
+      "path": "BUILD.md",
+      "bytes": 2808,
+      "sha256": "76fbbb2a242d8de0b3bb5d91aa11cbd6d12c0a024baeef7bbbee5780c52fa8a2",
+      "match": true
+    },
+    {
+      "path": "README.md",
+      "bytes": 7274,
+      "sha256": "08635f3fc382aba1e56547e1bd2d6dbdc6509d8462351d12cff9033dc57282e2",
+      "match": true
+    },
+    {
+      "path": "backend/BACKEND_MANIFEST.csv",
+      "bytes": 5684,
+      "sha256": "06ad5f9c6931ef1838a8307c60b8b3b94a4c89a25d6ddc12dbfb2a3ddc591cfc",
+      "match": true
+    },
+    {
+      "path": "backend/html_routes.jsonl",
+      "bytes": 852785,
+      "sha256": "36fb1838ae99ad850c8f4832c318d64d87f5aee1eb22415583f4ec8178a7c0f5",
+      "match": true
+    },
+    {
+      "path": "html/build_reader.py",
+      "bytes": 77812,
+      "sha256": "e07c2a4b281f9f6091ae37663db719d53b74822fc72552aca706d801db9d7c2a",
+      "match": true
+    },
+    {
+      "path": "html/qa_reader.py",
+      "bytes": 68657,
+      "sha256": "69d4443b4da61147a7f447fff71c7be0109045268786bcdff496a81faa757403",
+      "match": true
+    },
+    {
+      "path": "output/html/MANIFEST.csv",
+      "bytes": 11616,
+      "sha256": "3a3a4a4cdd03d1cae2c49c316fc1f94fe36dad6aa9da79f3764930f011045576",
+      "match": true
+    },
+    {
+      "path": "output/html/index.html",
+      "bytes": 5808,
+      "sha256": "0ca936f99fd68dcb455806576d0ea1d3098bdb0c75039f1e1f430152430e6069",
+      "match": true
+    },
+    {
+      "path": "provenance/HTML_READER_BUILD_AND_QA_RECEIPT.md",
+      "bytes": 6716,
+      "sha256": "66fbf6a9c601b323fd30e3bcf2e4f22bfc2543a5c3c677eb73e9e520940d5314",
+      "match": true
+    },
+    {
+      "path": "qa/HTML_VISUAL_QA.json",
+      "bytes": 3785,
+      "sha256": "1a93fb137994c418d987e3ad527282509eaec7f9efa6cf0bcaa8b4a114b53c1a",
+      "match": true
+    }
+  ],
+  "private_or_transient_paths_published": false,
+  "credential_material_recorded": false,
+  "result": "pass"
+}

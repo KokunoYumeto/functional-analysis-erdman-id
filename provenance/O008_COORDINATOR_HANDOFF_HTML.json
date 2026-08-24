@@ -1,0 +1,121 @@
+{
+  "schema_version": "o008.coordinator-handoff-html.v1",
+  "handoff_id": "O008-FAOA-2015-ID-HTML-SOURCE-TEXT-PUBLIC",
+  "created_utc": "2026-08-24T20:33:56Z",
+  "role": "O008 / D20 Functional Analysis",
+  "locale": "id-ID",
+  "whole_edition_state": "in_progress",
+  "completion": {
+    "translated_source_text": "complete",
+    "semantic_html_reader": "complete",
+    "o001_mastery_solutions": "pending",
+    "compact_spectral_svd_bridge": "pending"
+  },
+  "authority": {
+    "work": "John M. Erdman, Functional Analysis and Operator Algebras: An Introduction",
+    "version": "4 October 2015",
+    "official_source_zip_sha256": "0c667cfa7420b61dda8f8cb4ed9d619db8abd1b53d17eafe7d4a2e153342e53",
+    "official_pdf_sha256": "f320b16af7448fbb43582c21569840fe657fccf6f31d97f176913fdd0e1eb823",
+    "source_manifest_sha256": "e222e326d8ff5fcd30b66b3b44642043295e1cb39920c58ff353eaafafd276d1",
+    "license": "CC BY-SA 4.0",
+    "non_endorsement": true
+  },
+  "source_text": {
+    "scope": "preface, Chapters 1-17, bibliography, and translated index",
+    "master": {
+      "path": "source/id-ID/functional-analysis-id-complete-source.tex",
+      "bytes": 11176,
+      "sha256": "7f06919a8ec9088a3bc812fab962a48b5f1b3b0d5d3bce80eb21055f65089041"
+    },
+    "pdf": {
+      "path": "output/pdf/analisis-fungsional-dan-aljabar-operator-id-teks-sumber-lengkap.pdf",
+      "bytes": 2480109,
+      "pages": 238,
+      "sha256": "efa2358b3c3e6e8c47e0caee9a02f6afe78d15bea1b0f1822ea8449d801b2b10",
+      "tagging_status": "untagged; semantic HTML is the additive accessibility surface"
+    }
+  },
+  "semantic_html": {
+    "surface_id": "FAOA-2015-ID-HTML-SOURCE-TEXT",
+    "root": "output/html/",
+    "files": 105,
+    "bytes": 7656969,
+    "inventory_sha256": "f04bb3f5ee883c794474b191faf0e724987ebc01c4711bac8f6dc5421e543f32",
+    "manifest_sha256": "3a3a4a4cdd03d1cae2c49c316fc1f94fe36dad6aa9da79f3764930f011045576",
+    "routes": 22,
+    "mathml_nodes": 11193,
+    "accessible_svgs": 80,
+    "internal_references": 12805,
+    "route_records": 4838,
+    "desktop_mobile_visual_qa": "pass",
+    "machine_qa_findings": 0,
+    "admission_receipt_sha256": "66fbf6a9c601b323fd30e3bcf2e4f22bfc2543a5c3c677eb73e9e520940d5314"
+  },
+  "backend": {
+    "manifest_sha256": "06ad5f9c6931ef1838a8307c60b8b3b94a4c89a25d6ddc12dbfb2a3ddc591cfc",
+    "html_route_map_sha256": "36fb1838ae99ad850c8f4832c318d64d87f5aee1eb22415583f4ec8178a7c0f5",
+    "source_text_prefix_state": "byte_identical",
+    "validation": "pass",
+    "case_sensitive_ids_preserved": true
+  },
+  "github": {
+    "repository": "https://github.com/KokunoYumeto/functional-analysis-erdman-id",
+    "branch": "main",
+    "content_commit": "1471a3719f52463b01b71e48330ec7fe3c7b704a",
+    "content_tree": "ceb2e50e9678614e9cadc7f690445711b9e29253",
+    "changed_paths": 131,
+    "changed_path_bytes": 11772963,
+    "anonymous_full_byte_readback": "pass",
+    "receipt": "provenance/GITHUB_PUBLICATION_RECEIPT_HTML_READER.json",
+    "receipt_bytes": 2621,
+    "receipt_sha256": "0032281b521cfe12895fd57bb358e224f64bd3d18a1225e0ce1860f61345dd9c"
+  },
+  "zenodo": {
+    "conceptrecid": "22059739",
+    "concept_doi": "10.5281/zenodo.22059739",
+    "record_id": "22086801",
+    "version": "2026.08.24-html-reader",
+    "version_doi": "10.5281/zenodo.22086801",
+    "record_url": "https://zenodo.org/records/22086801",
+    "latest_in_concept": true,
+    "unique_version_in_lineage": true,
+    "files": [
+      {
+        "name": "analisis-fungsional-dan-aljabar-operator-id-teks-sumber-lengkap.pdf",
+        "bytes": 2480109,
+        "sha256": "efa2358b3c3e6e8c47e0caee9a02f6afe78d15bea1b0f1822ea8449d801b2b10"
+      },
+      {
+        "name": "functional-analysis-erdman-id-2026.08.24-html-reader-source-backend.zip",
+        "bytes": 3313598,
+        "sha256": "6b911f7d1a061b5e9e09f974aa36a675f2b261136ef471825be41ddd5cbc109b"
+      },
+      {
+        "name": "SHA256SUMS.txt",
+        "bytes": 272,
+        "sha256": "4df2347e29ee70a14d1cee35c3379a2ca9b45d6c3c490da876de09494e2b5821"
+      }
+    ],
+    "anonymous_metadata_and_full_byte_readback": "pass",
+    "receipt": "provenance/ZENODO_PUBLICATION_RECEIPT_HTML_READER.json",
+    "receipt_bytes": 2173,
+    "receipt_sha256": "646da091d0c4df244016c04f80db16073bb3ccd6b9fc6928d4a6f12d3d3cb8ec"
+  },
+  "provenance": {
+    "model": "OpenAI Codex gpt-5.6-sol, Ultra",
+    "source_author_credit_preserved": true,
+    "component_rights_preserved": true,
+    "forbidden_components_excluded": [
+      "TABLE.TEX",
+      "by-sa.eps",
+      "by-sa.pdf",
+      "Wiener_quote.tex"
+    ],
+    "upstream_contact_during_production": false
+  },
+  "figshare": {
+    "status": "recorded operational exception; not a production hold",
+    "evidence": "provenance/FIGSHARE_CH13_OPERATIONAL_FAILURE.md"
+  },
+  "next_executable_action": "Publish this handoff and the sanitized HTML publication receipts to the GitHub mirror, verify those exact public bytes, then begin the separately provenanced O001 mastery/solutions layer followed by the compact-spectral/SVD bridge."
+}
