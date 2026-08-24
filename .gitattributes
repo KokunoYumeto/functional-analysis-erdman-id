@@ -20,6 +20,9 @@ provenance/*_RENDER_MANIFEST.csv -text
 /source/id-ID/*.bib text eol=lf
 /qa/*.py text eol=lf
 /qa/*.md text eol=lf
+/qa/*.json text eol=lf
+/qa/*.ps1 text eol=lf
+/qa/ch*_translation_part*.tex text eol=lf
 /qa/ch*_translation_parts/*.tex text eol=lf
 /provenance/*.md text eol=lf
 /provenance/*.json text eol=lf
@@ -40,3 +43,6 @@ provenance/*_RENDER_MANIFEST.csv -text
 
 # The Chapter 14 fixed-build result is bound with its exact PowerShell CRLF bytes.
 /qa/CH14_FINAL_BUILD_RESULT.json -text
+
+# The Chapter 15 fixed-build result is bound with its exact PowerShell CRLF bytes.
+/qa/CH15_FINAL_BUILD_RESULT.json -text

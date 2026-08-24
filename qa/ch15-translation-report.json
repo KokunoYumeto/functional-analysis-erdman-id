@@ -1,0 +1,158 @@
+{
+  "corrections": {
+    "function_space_omission_preserved": true,
+    "ledger_sha256": "c33a8ab24250c376e63ce6fd45aeb42cdd4590a169f9a00efab705fac087e887",
+    "records": 9
+  },
+  "errors": [],
+  "identities": {
+    "master_bytes": 10541,
+    "master_sha256": "f2df36c70dcca86f44687efe450ea46a5611be2d1170a9ded16dbfbfcdb73a33",
+    "source_bytes": 16977,
+    "source_sha256": "0ef2e5be3c716a099e8609a84528d77ad6387ec531c52f9890d4e34175c57d91",
+    "target_bytes": 17672,
+    "target_sha256": "174b1ad2557f7dfa10e8171bd7482d907f858389b509f4d55de9cc785e2b43ba"
+  },
+  "linkage": {
+    "cumulative_labels": 529,
+    "unresolved_citations": [],
+    "unresolved_references": []
+  },
+  "math": {
+    "classified_transformations": [
+      {
+        "correction": "FAOA-2015-CH15-CORR-001",
+        "kind": "mathematical_source_repair_insert",
+        "target": "\\lambda \\in \\C\\setminus\\{0\\}",
+        "target_index": 0
+      },
+      {
+        "index": 3,
+        "kind": "localized_math_text",
+        "source": "\n   \\lambda f(s) &- \\int_0^1 k(s,t)f(t)\\,dt = g(s)\\label{004011i} \\text{ and}    \\tag{1}\\\\\n   \\conj{\\lambda} h(s) &- \\int_0^1 \\conj{k(t,s)}h(t)\\,dt = j(s)\\label{004011ii} \\tag{2}\n ",
+        "target": "\n   \\lambda f(s) &- \\int_0^1 k(s,t)f(t)\\,dt = g(s)\\label{004011i} \\text{ dan}    \\tag{1}\\\\\n   \\conj{\\lambda} h(s) &- \\int_0^1 \\conj{k(t,s)}h(t)\\,dt = j(s)\\label{004011ii} \\tag{2}\n "
+      },
+      {
+        "index": 8,
+        "kind": "localized_math_text",
+        "source": " \\lambda f(s) &- \\int_0^1 k(s,t)f(t)\\,dt = 0\\label{004011iii} \\text{ and} \\tag{3}\\\\\n        \\conj{\\lambda} h(s) &- \\int_0^1 \\conj{k(t,s)}h(t)\\,dt = 0\\label{004011iv} \\tag{4}\n ",
+        "target": " \\lambda f(s) &- \\int_0^1 k(s,t)f(t)\\,dt = 0\\label{004011iii} \\text{ dan} \\tag{3}\\\\\n        \\conj{\\lambda} h(s) &- \\int_0^1 \\conj{k(t,s)}h(t)\\,dt = 0\\label{004011iv} \\tag{4}\n "
+      },
+      {
+        "index": 13,
+        "kind": "localized_math_text",
+        "source": " \\int_0^1 h_k(t)\\conj{g(t)}\\,dt &= 0\\label{004011v} \\text{ and} \\tag{5}\\\\\n              \\int_0^1 j(t) \\conj{f_k(t)}\\,dt &= 0\\label{004011vi} \\tag{6}\n ",
+        "target": " \\int_0^1 h_k(t)\\conj{g(t)}\\,dt &= 0\\label{004011v} \\text{ dan} \\tag{5}\\\\\n              \\int_0^1 j(t) \\conj{f_k(t)}\\,dt &= 0\\label{004011vi} \\tag{6}\n "
+      },
+      {
+        "index": 20,
+        "kind": "localized_math_text",
+        "source": "\n            Tf &= g\\label{004031i} \\text{ and} \\tag{1'}\\\\\n            T^* h &= j\\label{004031ii} \\tag{2'}\n ",
+        "target": "\n            Tf &= g\\label{004031i} \\text{ dan} \\tag{1'}\\\\\n            T^* h &= j\\label{004031ii} \\tag{2'}\n "
+      },
+      {
+        "index": 25,
+        "kind": "localized_math_text",
+        "source": "\n            Tf &= 0\\label{004031iii} \\text{ and} \\tag{3'}\\\\\n          T^*h &= 0\\label{004031iv} \\tag{4'}\n ",
+        "target": "\n            Tf &= 0\\label{004031iii} \\text{ dan} \\tag{3'}\\\\\n          T^*h &= 0\\label{004031iv} \\tag{4'}\n "
+      },
+      {
+        "index": 30,
+        "kind": "localized_math_text",
+        "source": " h_k &\\perp g\\label{004031v} \\text{ and} \\tag{5'}\\\\\n                 j &\\perp f_k\\label{004031vi} \\tag{6'}\n ",
+        "target": " h_k &\\perp g\\label{004031v} \\text{ dan} \\tag{5'}\\\\\n                 j &\\perp f_k\\label{004031vi} \\tag{6'}\n "
+      },
+      {
+        "index": 15,
+        "kind": "localized_math_text",
+        "source": "20^{\\text{th}}",
+        "target": "20"
+      },
+      {
+        "correction": "FAOA-2015-CH15-CORR-002",
+        "index": 18,
+        "kind": "mathematical_source_repair_replace",
+        "source": "\\lambda \\in \\C",
+        "target": "\\lambda \\in \\C\\setminus\\{0\\}"
+      },
+      {
+        "correction": "FAOA-2015-CH15-CORR-003",
+        "index": 34,
+        "kind": "mathematical_source_repair_replace",
+        "source": "\\lambda \\in \\C",
+        "target": "\\lambda \\in \\C\\setminus\\{0\\}"
+      },
+      {
+        "correction": "FAOA-2015-CH15-CORR-004",
+        "kind": "mathematical_source_repair_delete",
+        "source": "SK = KS",
+        "source_index": 44
+      },
+      {
+        "correction": "FAOA-2015-CH15-CORR-005",
+        "kind": "mathematical_source_repair_insert",
+        "target": "B",
+        "target_index": 51
+      }
+    ],
+    "ordered_top_level_source_surfaces": 203,
+    "ordered_top_level_target_surfaces": 204,
+    "raw_census": {
+      "source": {
+        "align_surfaces": 6,
+        "display_surfaces": 7,
+        "inline_dollar_pairs": 190,
+        "inventory_surfaces": 203,
+        "unescaped_close_braces": 309,
+        "unescaped_open_braces": 309
+      },
+      "target": {
+        "align_surfaces": 6,
+        "display_surfaces": 7,
+        "inline_dollar_pairs": 191,
+        "inventory_surfaces": 204,
+        "unescaped_close_braces": 307,
+        "unescaped_open_braces": 307
+      }
+    }
+  },
+  "rights_and_provenance": {
+    "author": "John M. Erdman",
+    "excluded_components_absent": true,
+    "license": "CC BY-SA 4.0",
+    "model_provenance": "OpenAI Codex gpt-5.6-sol, Ultra",
+    "nonendorsement_present": true
+  },
+  "schema_version": "o008.ch15-translation-qa.v1",
+  "status": "pass",
+  "structure": {
+    "citations": 17,
+    "defined_terms": 11,
+    "environment_counts": {
+      "align": 6,
+      "cor": 2,
+      "defn": 6,
+      "enumerate": 4,
+      "exam": 8,
+      "lem": 3,
+      "notn": 1,
+      "proof": 13,
+      "prop": 16,
+      "thm": 1
+    },
+    "environment_openings": 60,
+    "examples": 8,
+    "exercises": 0,
+    "index_hooks": 46,
+    "labels": 33,
+    "manual_equation_tags": 12,
+    "proof_hints": 2,
+    "proofs": 13,
+    "references": 27,
+    "sections": 4,
+    "semantic_environment_openings": 50,
+    "source_records": 444,
+    "target_records": 444
+  },
+  "unit_id": "FAOA-2015-CH15"
+}

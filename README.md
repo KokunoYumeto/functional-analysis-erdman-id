@@ -6,12 +6,13 @@ John M. Erdman, *Functional Analysis and Operator Algebras: An Introduction*
 
 ## Baca edisi saat ini
 
-[Buka PDF kumulatif Bab 1--14](output/pdf/analisis-fungsional-dan-aljabar-operator-id-bab-1-14.pdf)
+[Buka PDF kumulatif Bab 1--15](output/pdf/analisis-fungsional-dan-aljabar-operator-id-bab-1-15.pdf)
 
-Bab 1 sampai Bab 14 telah diterjemahkan lengkap dan melewati pemeriksaan struktur,
+Bab 1 sampai Bab 15 telah diterjemahkan lengkap dan melewati pemeriksaan struktur,
 matematika, residu bahasa, hak komponen, build bersih berulang yang menghasilkan
-PDF identik, serta inspeksi visual seluruh 193 halaman. PDF ini merupakan batas
-produksi keempat belas, bukan edisi lengkap. [PDF Bab 1--13](output/pdf/analisis-fungsional-dan-aljabar-operator-id-bab-1-13.pdf),
+PDF identik, serta inspeksi visual seluruh 200 halaman. PDF ini merupakan batas
+produksi kelima belas, bukan edisi lengkap. [PDF Bab 1--14](output/pdf/analisis-fungsional-dan-aljabar-operator-id-bab-1-14.pdf),
+[PDF Bab 1--13](output/pdf/analisis-fungsional-dan-aljabar-operator-id-bab-1-13.pdf),
 [PDF Bab 1--12](output/pdf/analisis-fungsional-dan-aljabar-operator-id-bab-1-12.pdf),
 [PDF Bab 1--11](output/pdf/analisis-fungsional-dan-aljabar-operator-id-bab-1-11.pdf),
 [PDF Bab 1--10](output/pdf/analisis-fungsional-dan-aljabar-operator-id-bab-1-10.pdf),
@@ -46,7 +47,7 @@ seluruh berkas substantif tetap berlisensi CC BY-SA 4.0.
 Edisi yang dipilih mencakup seluruh buku 17 bab, kata pengantar, bibliografi,
 dan indeks. Bab 1–8 membentuk rute inti D20; Bab 9–17 merupakan lanjutan
 analisis fungsional dan aljabar operator. Penandaan kurikuler tidak menghapus
-isi sumber. Pekerjaan berikutnya dimulai pada Bab 15, teori Fredholm.
+isi sumber. Pekerjaan berikutnya dimulai pada Bab 16, ekstensi aljabar operator.
 
 Sumber resmi:
 
@@ -76,7 +77,7 @@ mengalir ulang; nomor halaman bukan pengenal tetap.
 
 ## Aksesibilitas
 
-PDF kumulatif Bab 1--14 memiliki metadata, bookmark, tautan silang, indeks,
+PDF kumulatif Bab 1--15 memiliki metadata, bookmark, tautan silang, indeks,
 warna tautan berkontras tinggi, dan pemetaan Unicode untuk seluruh 46 objek
 font. PDF ini belum merupakan PDF bertag. Reader HTML semantik dan aksesibel
 adalah keluaran wajib edisi lengkap dan masih dalam pengerjaan. Tidak ada

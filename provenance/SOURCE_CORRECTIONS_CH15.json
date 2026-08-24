@@ -1,0 +1,297 @@
+{
+  "schema_version": "o008.source-corrections.v1",
+  "unit_id": "FAOA-2015-CH15",
+  "chapter": 15,
+  "status": "adjudicated_and_applied",
+  "source": {
+    "path": "source/upstream/fredholm_theory.tex",
+    "bytes": 16977,
+    "logical_records": 444,
+    "line_endings": "CRLF",
+    "sha256": "0ef2e5be3c716a099e8609a84528d77ad6387ec531c52f9890d4e34175c57d91"
+  },
+  "target": {
+    "path": "source/id-ID/fredholm_theory-id.tex",
+    "bytes": 17672,
+    "logical_records": 444,
+    "line_endings": "LF",
+    "sha256": "174b1ad2557f7dfa10e8171bd7482d907f858389b509f4d55de9cc785e2b43ba"
+  },
+  "normalization": {
+    "id": "explicit-range-nfc-whitespace-v1",
+    "source_selection": "inclusive physical source-line range",
+    "target_mapping": "inclusive physical target-line range",
+    "steps": [
+      "discard blank records and strip trailing whitespace",
+      "join selected records with LF",
+      "normalize Unicode NFC",
+      "collapse Unicode whitespace runs to ASCII spaces",
+      "trim leading and trailing ASCII space",
+      "hash UTF-8 bytes with SHA-256"
+    ]
+  },
+  "record_count": 9,
+  "class_counts": {
+    "MATHEMATICAL_SOURCE_REPAIR": 7,
+    "MECHANICAL_PROSE_SOURCE_REPAIR": 1,
+    "FORMAL_SCOPE_CLARIFICATION": 1
+  },
+  "independent_review": {
+    "source_inventory": "qa/CH15_SOURCE_INVENTORY.md",
+    "pretranslation_math_review": "qa/CH15_PRETRANSLATION_MATH_REVIEW.md",
+    "terminology_plan": "provenance/CH15_TERMINOLOGY_PLAN.md",
+    "bilingual_math_review": "qa/CH15_BILINGUAL_MATH_REVIEW.md",
+    "upstream_contact": "none during production"
+  },
+  "records": [
+    {
+      "id": "FAOA-2015-CH15-CORR-001",
+      "source_lines": {
+        "start": 10,
+        "end": 32
+      },
+      "target_lines": {
+        "start": 10,
+        "end": 32
+      },
+      "classification": "MATHEMATICAL_SOURCE_REPAIR",
+      "decision": "quantify the scalar in Fredholm Alternative I as fixed and nonzero; lambda=0 makes the stated finite-dimensional alternative false",
+      "source_normalized_snippet": "\\begin{prop}[Fredholm Alternative I]\\label{004011} Let $k$ be a continuous complex valued function on the unit square $[0,1] \\times [0,1]$. \\textbf{Either} the nonhomogeneous \\index{Fredholm alternative!version I}% equations \\begin{align} \\lambda f(s) &- \\int_0^1 k(s,t)f(t)\\,dt = g(s)\\label{004011i} \\text{ and} \\tag{1}\\\\ \\conj{\\lambda} h(s) &- \\int_0^1 \\conj{k(t,s)}h(t)\\,dt = j(s)\\label{004011ii} \\tag{2} \\end{align} have solutions $f$ and $h$ for every given $g$ and $j$, respectively, the solutions being unique, in which case the corresponding homogeneous equations \\begin{align} \\lambda f(s) &- \\int_0^1 k(s,t)f(t)\\,dt = 0\\label{004011iii} \\text{ and} \\tag{3}\\\\ \\conj{\\lambda} h(s) &- \\int_0^1 \\conj{k(t,s)}h(t)\\,dt = 0\\label{004011iv} \\tag{4} \\end{align} have only the trivial solution; \\textbf{---or else---}\\\\ the homogeneous equations \\eqref{004011iii} and \\eqref{004011iv} have the same (nonzero) finite number of linearly independent solutions $f_1,\\dots,f_n$ and $h_1,\\dots,h_n$, respectively, in which case the nonhomogeneous equations \\eqref{004011i} and \\eqref{004011ii} have a solution if and only if $g$ and $j$ satisfy \\begin{align} \\int_0^1 h_k(t)\\conj{g(t)}\\,dt &= 0\\label{004011v} \\text{ and} \\tag{5}\\\\ \\int_0^1 j(t) \\conj{f_k(t)}\\,dt &= 0\\label{004011vi} \\tag{6} \\end{align} for $k = 1, \\dots, n$. \\end{prop}",
+      "target_normalized_snippet": "\\begin{prop}[Alternatif Fredholm I]\\label{004011} Tetapkan $\\lambda \\in \\C\\setminus\\{0\\}$ dan misalkan $k$ suatu fungsi kontinu bernilai kompleks pada persegi satuan $[0,1] \\times [0,1]$. \\textbf{Entah} persamaan-persamaan \\index{alternatif Fredholm!versi I}% tak homogen \\begin{align} \\lambda f(s) &- \\int_0^1 k(s,t)f(t)\\,dt = g(s)\\label{004011i} \\text{ dan} \\tag{1}\\\\ \\conj{\\lambda} h(s) &- \\int_0^1 \\conj{k(t,s)}h(t)\\,dt = j(s)\\label{004011ii} \\tag{2} \\end{align} memiliki solusi $f$ dan $h$ untuk setiap $g$ dan $j$ yang diberikan, masing-masing, dengan solusi-solusi tersebut tunggal; dalam hal ini persamaan homogen yang bersesuaian \\begin{align} \\lambda f(s) &- \\int_0^1 k(s,t)f(t)\\,dt = 0\\label{004011iii} \\text{ dan} \\tag{3}\\\\ \\conj{\\lambda} h(s) &- \\int_0^1 \\conj{k(t,s)}h(t)\\,dt = 0\\label{004011iv} \\tag{4} \\end{align} hanya memiliki solusi trivial; \\textbf{---atau---}\\\\ persamaan homogen \\eqref{004011iii} dan \\eqref{004011iv} masing-masing memiliki sejumlah hingga (dan tak nol) solusi bebas linear yang sama banyaknya, yaitu $f_1,\\dots,f_n$ dan $h_1,\\dots,h_n$, secara berturut-turut; dalam hal ini persamaan tak homogen \\eqref{004011i} dan \\eqref{004011ii} memiliki solusi jika dan hanya jika $g$ dan $j$ memenuhi \\begin{align} \\int_0^1 h_k(t)\\conj{g(t)}\\,dt &= 0\\label{004011v} \\text{ dan} \\tag{5}\\\\ \\int_0^1 j(t) \\conj{f_k(t)}\\,dt &= 0\\label{004011vi} \\tag{6} \\end{align} untuk $k = 1, \\dots, n$. \\end{prop}",
+      "source_normalized_snippet_sha256": "8e0e033eb4ec005affb189b3367f540a59ff5f0f18dcb6008ca017fe9a2fdb05",
+      "target_normalized_snippet_sha256": "6c71cdcb2c3ce87d3aa2deacdd860248806a93061c52fdbaf2170a0bdedd5b1a",
+      "source_required_anchors": [
+        "\\begin{prop}[Fredholm Alternative I]\\label{004011} Let $k$"
+      ],
+      "forbidden_target_anchors": [
+        "\\begin{prop}[Alternatif Fredholm I]\\label{004011} Misalkan $k$"
+      ],
+      "required_target_anchors": [
+        "\\begin{prop}[Alternatif Fredholm I]\\label{004011} Tetapkan $\\lambda \\in \\C\\setminus\\{0\\}$"
+      ],
+      "affects_math": true
+    },
+    {
+      "id": "FAOA-2015-CH15-CORR-002",
+      "source_lines": {
+        "start": 43,
+        "end": 66
+      },
+      "target_lines": {
+        "start": 43,
+        "end": 66
+      },
+      "classification": "MATHEMATICAL_SOURCE_REPAIR",
+      "decision": "restrict lambda to the nonzero complex scalars in Fredholm Alternative II; the assertion fails for lambda=0",
+      "source_normalized_snippet": "\\begin{prop}[Fredholm Alternative II]\\label{004031} If $K$ is a compact Hilbert \\index{Fredholm alternative!version II}% space operator, $\\lambda \\in \\C$, and $T = \\lambda I - K$, then \\textbf{either} the nonhomogeneous equations \\begin{align} Tf &= g\\label{004031i} \\text{ and} \\tag{1'}\\\\ T^* h &= j\\label{004031ii} \\tag{2'} \\end{align} have solutions $f$ and $h$ for every given $g$ and $j$, respectively, the solutions being unique, in which case the corresponding homogeneous equations \\begin{align} Tf &= 0\\label{004031iii} \\text{ and} \\tag{3'}\\\\ T^*h &= 0\\label{004031iv} \\tag{4'} \\end{align} have only the trivial solution; \\textbf{---or else---}\\\\ the homogeneous equations \\eqref{004031iii} and \\eqref{004031iv} have the same (nonzero) finite number of linearly independent solutions $f_1,\\dots,f_n$ and $h_1,\\dots,h_n$, respectively, in which case the nonhomogeneous equations \\eqref{004031i} and \\eqref{004031ii} have a solution if and only if $g$ and $j$ satisfy \\begin{align} h_k &\\perp g\\label{004031v} \\text{ and} \\tag{5'}\\\\ j &\\perp f_k\\label{004031vi} \\tag{6'} \\end{align} for $k = 1, \\dots, n$. \\end{prop}",
+      "target_normalized_snippet": "\\begin{prop}[Alternatif Fredholm II]\\label{004031} Jika $K$ suatu operator kompak pada ruang \\index{alternatif Fredholm!versi II}% Hilbert, $\\lambda \\in \\C\\setminus\\{0\\}$, dan $T = \\lambda I - K$, maka \\textbf{entah} persamaan-persamaan tak homogen \\begin{align} Tf &= g\\label{004031i} \\text{ dan} \\tag{1'}\\\\ T^* h &= j\\label{004031ii} \\tag{2'} \\end{align} memiliki solusi $f$ dan $h$ untuk setiap $g$ dan $j$ yang diberikan, masing-masing, dengan solusi-solusi tersebut tunggal; dalam hal ini persamaan homogen yang bersesuaian \\begin{align} Tf &= 0\\label{004031iii} \\text{ dan} \\tag{3'}\\\\ T^*h &= 0\\label{004031iv} \\tag{4'} \\end{align} hanya memiliki solusi trivial; \\textbf{---atau---}\\\\ persamaan homogen \\eqref{004031iii} dan \\eqref{004031iv} masing-masing memiliki sejumlah hingga (dan tak nol) solusi bebas linear yang sama banyaknya, yaitu $f_1,\\dots,f_n$ dan $h_1,\\dots,h_n$, secara berturut-turut; dalam hal ini persamaan tak homogen \\eqref{004031i} dan \\eqref{004031ii} memiliki solusi jika dan hanya jika $g$ dan $j$ memenuhi \\begin{align} h_k &\\perp g\\label{004031v} \\text{ dan} \\tag{5'}\\\\ j &\\perp f_k\\label{004031vi} \\tag{6'} \\end{align} untuk $k = 1, \\dots, n$. \\end{prop}",
+      "source_normalized_snippet_sha256": "9f5d3ce2236ea9116541a63dc8d6c9b81d62399026de986f749134d3da3cbb63",
+      "target_normalized_snippet_sha256": "5107e3896e5465a4c56b8ca2ffafdd166f60c270ae4b3b84fa81d5c074517fe9",
+      "source_required_anchors": [
+        "space operator, $\\lambda \\in \\C$, and $T = \\lambda I - K$"
+      ],
+      "forbidden_target_anchors": [
+        "Hilbert, $\\lambda \\in \\C$, dan $T = \\lambda I - K$"
+      ],
+      "required_target_anchors": [
+        "Hilbert, $\\lambda \\in \\C\\setminus\\{0\\}$, dan $T = \\lambda I - K$"
+      ],
+      "affects_math": true
+    },
+    {
+      "id": "FAOA-2015-CH15-CORR-003",
+      "source_lines": {
+        "start": 72,
+        "end": 81
+      },
+      "target_lines": {
+        "start": 72,
+        "end": 81
+      },
+      "classification": "MATHEMATICAL_SOURCE_REPAIR",
+      "decision": "restrict lambda to the nonzero complex scalars in Fredholm Alternative IIIa; the injective-surjective equivalence fails for lambda=0",
+      "source_normalized_snippet": "\\begin{prop}[Fredholm Alternative IIIa]\\label{004033} If $T = \\lambda I - K$ where \\index{Fredholm alternative!version IIIa}% $K$ is a compact Hilbert space operator and $\\lambda \\in \\C$, then \\begin{enumerate} \\item $T$ is injective if and only if it is surjective, \\item $\\ran T^* = (\\ker T)^\\perp$, and \\item $\\dim\\ker T = \\dim \\ker T^*$. \\end{enumerate} Also, conditions (1) and (2) hold for $T^*$ as well as~$T$. \\end{prop}",
+      "target_normalized_snippet": "\\begin{prop}[Alternatif Fredholm IIIa]\\label{004033} Jika $T = \\lambda I - K$ dengan \\index{alternatif Fredholm!versi IIIa}% $K$ suatu operator kompak pada ruang Hilbert dan $\\lambda \\in \\C\\setminus\\{0\\}$, maka \\begin{enumerate} \\item $T$ injektif jika dan hanya jika bersifat surjektif, \\item $\\ran T^* = (\\ker T)^\\perp$, dan \\item $\\dim\\ker T = \\dim \\ker T^*$. \\end{enumerate} Selain itu, syarat (1) dan (2) berlaku untuk $T^*$ maupun~$T$. \\end{prop}",
+      "source_normalized_snippet_sha256": "1e09eab41ce6723be409c6d4dbf8d00e8c007346aa0fe5aae0a7c4d448c72a4e",
+      "target_normalized_snippet_sha256": "710a5664422c11041f79cb529b10eafa95a522313c1ecf41d43c3c80114f8d8a",
+      "source_required_anchors": [
+        "$K$ is a compact Hilbert space operator and $\\lambda \\in \\C$, then"
+      ],
+      "forbidden_target_anchors": [
+        "ruang Hilbert dan $\\lambda \\in \\C$, maka"
+      ],
+      "required_target_anchors": [
+        "ruang Hilbert dan $\\lambda \\in \\C\\setminus\\{0\\}$, maka"
+      ],
+      "affects_math": true
+    },
+    {
+      "id": "FAOA-2015-CH15-CORR-004",
+      "source_lines": {
+        "start": 101,
+        "end": 106
+      },
+      "target_lines": {
+        "start": 101,
+        "end": 106
+      },
+      "classification": "MATHEMATICAL_SOURCE_REPAIR",
+      "decision": "remove the commuting condition SK=KS from the Riesz--Schauder definition so that it agrees with the chapter's proved invertible-plus-compact characterization",
+      "source_normalized_snippet": "\\begin{defn}\\label{004034} An operator $T$ on a Banach space is a \\index{Riesz-Schauder operator}% \\index{operator!Riesz-Schauder}% \\df{Riesz-Schauder} operator if it can be written in the form $T = S + K$ where $S$ is invertible, $K$ is compact, and $SK = KS$. \\end{defn}",
+      "target_normalized_snippet": "\\begin{defn}\\label{004034} Suatu operator $T$ pada ruang Banach disebut \\index{operator Riesz--Schauder}% \\index{operator!Riesz--Schauder}% \\df{operator Riesz--Schauder} jika dapat ditulis dalam bentuk $T = S + K$ dengan $S$ invertibel dan $K$ kompak. \\end{defn}",
+      "source_normalized_snippet_sha256": "71e91a361c55cd6eba54ca3c11d4f4e344f243d10a85117c2a476874ad756dd9",
+      "target_normalized_snippet_sha256": "e52da1b091bd0bffb6e2f60aa770f809dfad91e537da34956f6295a5865b9a31",
+      "source_required_anchors": [
+        "invertible, $K$ is compact, and $SK = KS$."
+      ],
+      "forbidden_target_anchors": [
+        "$SK = KS$"
+      ],
+      "required_target_anchors": [
+        "invertibel dan $K$ kompak."
+      ],
+      "affects_math": true
+    },
+    {
+      "id": "FAOA-2015-CH15-CORR-005",
+      "source_lines": {
+        "start": 123,
+        "end": 125
+      },
+      "target_lines": {
+        "start": 123,
+        "end": 125
+      },
+      "classification": "MATHEMATICAL_SOURCE_REPAIR",
+      "decision": "name the ambient Banach space B so that the quotient (B/M)^* is defined",
+      "source_normalized_snippet": "\\begin{prop} If $M$ is a closed subspace of a Banach space, then $M^\\perp \\cong (B/M)^*$. \\end{prop}",
+      "target_normalized_snippet": "\\begin{prop} Jika $M$ subruang tertutup dari ruang Banach $B$, maka $M^\\perp \\cong (B/M)^*$. \\end{prop}",
+      "source_normalized_snippet_sha256": "89f27ba1b38cc4968fe9252cedcf46612e5ca7d5d325c5087c8f353dbdffd728",
+      "target_normalized_snippet_sha256": "d2f58ad38d2e48a40c5be7177b66f19ae849ee6d85b4ca23d4960f0870f2d9ef",
+      "source_required_anchors": [
+        "If $M$ is a closed subspace of a Banach space, then $M^\\perp \\cong (B/M)^*$"
+      ],
+      "forbidden_target_anchors": [
+        "subruang tertutup dari suatu ruang Banach, maka $M^\\perp"
+      ],
+      "required_target_anchors": [
+        "subruang tertutup dari ruang Banach $B$, maka $M^\\perp \\cong (B/M)^*$"
+      ],
+      "affects_math": true
+    },
+    {
+      "id": "FAOA-2015-CH15-CORR-006",
+      "source_lines": {
+        "start": 150,
+        "end": 157
+      },
+      "target_lines": {
+        "start": 150,
+        "end": 157
+      },
+      "classification": "MATHEMATICAL_SOURCE_REPAIR",
+      "decision": "correct the false claim that a sum of subspaces need not be a subspace: the example instead shows that a sum of closed subspaces need not be closed",
+      "source_normalized_snippet": "Although it is incidental to our present purposes this is a convenient place to note the fact that the sum of two subspaces of a Hilbert space need not be a subspace. \\begin{exam}\\label{004071} Let $T$ be the operator on the Hilbert space $l_2$ defined in \\index{subspace!sum of subspaces need not be a}% example~\\ref{004066}, $M = l_2 \\oplus \\{\\vc 0\\}$, and $N$ be the graph of~$T$. Then $M$ and $N$ are both (closed) subspaces of the Hilbert space $l_2 \\oplus l_2$ but $M + N$ is not.",
+      "target_normalized_snippet": "Walaupun tidak langsung berkaitan dengan tujuan kita saat ini, inilah tempat yang tepat untuk mencatat fakta bahwa jumlah dua subruang tertutup dari suatu ruang Hilbert tidak harus tertutup. \\begin{exam}\\label{004071} Misalkan $T$ operator pada ruang Hilbert $l_2$ yang didefinisikan dalam \\index{subruang!jumlah subruang tertutup tidak harus tertutup}% contoh~\\ref{004066}, $M = l_2 \\oplus \\{\\vc 0\\}$, dan $N$ graf dari~$T$. Maka $M$ dan $N$ keduanya merupakan subruang tertutup dari ruang Hilbert $l_2 \\oplus l_2$, tetapi $M + N$ tidak tertutup.",
+      "source_normalized_snippet_sha256": "7b03a002622f58160d1fbbc06d1322eb9d55e1bbb7234706b0fb7759ba387f04",
+      "target_normalized_snippet_sha256": "9d18e82ecddc92d68d375a0445b1a31f2f58603e3f0ccebb64eae7fcc0dc0649",
+      "source_required_anchors": [
+        "the sum of two subspaces of a Hilbert space need not be a subspace",
+        "but $M + N$ is\nnot."
+      ],
+      "forbidden_target_anchors": [
+        "jumlah dua subruang dari suatu ruang Hilbert tidak harus menjadi subruang"
+      ],
+      "required_target_anchors": [
+        "jumlah dua subruang tertutup dari suatu ruang Hilbert tidak harus tertutup",
+        "\\index{subruang!jumlah subruang tertutup tidak harus tertutup}%",
+        "dan $N$ keduanya merupakan subruang tertutup",
+        "$M + N$\ntidak tertutup."
+      ],
+      "affects_math": false
+    },
+    {
+      "id": "FAOA-2015-CH15-CORR-007",
+      "source_lines": {
+        "start": 247,
+        "end": 252
+      },
+      "target_lines": {
+        "start": 247,
+        "end": 252
+      },
+      "classification": "MECHANICAL_PROSE_SOURCE_REPAIR",
+      "decision": "remove the extra closing parenthesis from the Fredholm-index index hook",
+      "source_normalized_snippet": "\\begin{defn} If $T$ is a Fredholm operator on a Hilbert space then its \\index{index!of a Fredholm operator}% \\index{Fredholm!index (\\seeonly{index}))}% \\df{Fredholm index} (or just \\df{index}) is defined by \\[ \\ind T := \\dim\\ker T - \\dim\\coker T\\,. \\] \\end{defn}",
+      "target_normalized_snippet": "\\begin{defn} Jika $T$ adalah operator Fredholm pada suatu ruang Hilbert, maka \\index{indeks!operator Fredholm}% \\index{Fredholm!indeks (\\seeonly{indeks})}% \\df{indeks Fredholm} operator tersebut (atau cukup \\df{indeks}) didefinisikan oleh \\[ \\ind T := \\dim\\ker T - \\dim\\coker T\\,. \\] \\end{defn}",
+      "source_normalized_snippet_sha256": "763e1b95d7b184e42aa9da45623fbe21a4737648b5d20413570ce92281975c6d",
+      "target_normalized_snippet_sha256": "6f30007a559c7c13f4ef65fa9370275096d0a7cd4ab0f234af071607ecc751d8",
+      "source_required_anchors": [
+        "\\index{Fredholm!index (\\seeonly{index}))}%"
+      ],
+      "forbidden_target_anchors": [
+        "\\seeonly{indeks}))"
+      ],
+      "required_target_anchors": [
+        "\\index{Fredholm!indeks (\\seeonly{indeks})}%"
+      ],
+      "affects_math": false
+    },
+    {
+      "id": "FAOA-2015-CH15-CORR-008",
+      "source_lines": {
+        "start": 268,
+        "end": 270
+      },
+      "target_lines": {
+        "start": 268,
+        "end": 270
+      },
+      "classification": "FORMAL_SCOPE_CLARIFICATION",
+      "decision": "state the standard cross-space Fredholm convention before applying it to maps V to W; the earlier Calkin-algebra definition covers endomorphisms only",
+      "source_normalized_snippet": "\\begin{exam} Every linear map $T\\colon V \\sto W$ between finite dimensional vector spaces is Fredholm and $\\ind T = \\dim V - \\dim W$. \\end{exam}",
+      "target_normalized_snippet": "\\begin{exam} Untuk pemetaan antar-ruang, kita memakai konvensi standar: pemetaan linear disebut Fredholm jika jangkauannya tertutup serta kernel dan kokernelnya berdimensi hingga. Dengan konvensi ini, setiap pemetaan linear $T\\colon V \\sto W$ antara ruang-ruang vektor berdimensi hingga bersifat Fredholm dan $\\ind T = \\dim V - \\dim W$. \\end{exam}",
+      "source_normalized_snippet_sha256": "b6f175baab4cde7aa4223eb158686b3d1b561465cb7cbcb18b6c0b650de1a8ef",
+      "target_normalized_snippet_sha256": "a74975ecb4bb87b6c919d4d5ef699e269eb18049bbbeb7a65b33f6de9dd72402",
+      "source_required_anchors": [
+        "\\begin{exam} Every linear map $T\\colon V \\sto W$ between finite dimensional vector spaces is"
+      ],
+      "forbidden_target_anchors": [
+        "\\begin{exam} Setiap pemetaan linear $T\\colon V \\sto W$"
+      ],
+      "required_target_anchors": [
+        "Untuk pemetaan antar-ruang, kita memakai konvensi standar: pemetaan linear disebut Fredholm jika",
+        "jangkauannya tertutup serta kernel dan kokernelnya berdimensi hingga. Dengan konvensi ini",
+        "$\\ind T = \\dim V - \\dim W$. \\end{exam}"
+      ],
+      "affects_math": false
+    },
+    {
+      "id": "FAOA-2015-CH15-CORR-009",
+      "source_lines": {
+        "start": 300,
+        "end": 303
+      },
+      "target_lines": {
+        "start": 300,
+        "end": 303
+      },
+      "classification": "MATHEMATICAL_SOURCE_REPAIR",
+      "decision": "add the infinite-dimensional hypothesis required for the Fredholm index to be surjective onto the integers",
+      "source_normalized_snippet": "\\begin{prop} Let $H$ be a Hilbert space. Then the set $\\ofml F(H)$ of Fredholm operators on $H$ is a semigroup under composition and the index function $\\ind$ is an epimorphism from $\\ofml F(H)$ onto the additive semigroup $\\Z$ of integers. \\end{prop}",
+      "target_normalized_snippet": "\\begin{prop} Misalkan $H$ ruang Hilbert berdimensi tak hingga. Maka himpunan $\\ofml F(H)$ yang terdiri atas operator Fredholm pada $H$ merupakan semigrup terhadap komposisi dan fungsi indeks $\\ind$ adalah epimorfisme dari $\\ofml F(H)$ ke semigrup aditif bilangan bulat~$\\Z$. \\end{prop}",
+      "source_normalized_snippet_sha256": "34ecc56bffa640a26713b577a3953c64c0d38b162020f3f00e14e7393eb35f17",
+      "target_normalized_snippet_sha256": "27e837ee045bc6534d0be2ecb2586deb2aadd8a5e610bda1b67ca8695382c1f6",
+      "source_required_anchors": [
+        "\\begin{prop} Let $H$ be a Hilbert space. Then the set $\\ofml F(H)$"
+      ],
+      "forbidden_target_anchors": [
+        "\\begin{prop} Misalkan $H$ ruang Hilbert. Maka himpunan $\\ofml F(H)$"
+      ],
+      "required_target_anchors": [
+        "\\begin{prop} Misalkan $H$ ruang Hilbert berdimensi tak hingga. Maka himpunan $\\ofml F(H)$"
+      ],
+      "affects_math": false
+    }
+  ]
+}

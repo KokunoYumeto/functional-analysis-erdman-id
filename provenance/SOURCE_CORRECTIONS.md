@@ -194,6 +194,46 @@ No upstream contact occurs during production. These entries are held for the
 single deduplicated post-corpus report only if that report is separately
 authorized.
 
+## Chapter 15
+
+The following nine source decisions are adjudicated and applied in
+`source/id-ID/fredholm_theory-id.tex`. The exact machine-verifiable ledger is
+`provenance/SOURCE_CORRECTIONS_CH15.json`; it binds every inclusive source and
+target line range, correction class, normalized snippet hash, and required or
+forbidden target anchor.
+
+Mathematical source repairs:
+
+1. `fredholm_theory.tex:10--32`: quantify the scalar in Fredholm Alternative I
+   as fixed and nonzero; the stated finite-dimensional alternative fails for
+   `lambda=0`.
+2. `fredholm_theory.tex:43--66`: restrict the scalar in Fredholm Alternative II
+   to the nonzero complex scalars.
+3. `fredholm_theory.tex:72--81`: impose the same necessary nonzero-scalar
+   restriction in Fredholm Alternative IIIa.
+4. `fredholm_theory.tex:101--106`: remove the unwarranted commuting condition
+   `SK=KS` from the Riesz--Schauder definition so that it agrees with the
+   chapter's invertible-plus-compact characterization.
+5. `fredholm_theory.tex:123--125`: name the ambient Banach space `B`, making the
+   quotient-dual expression `(B/M)^*` defined.
+6. `fredholm_theory.tex:150--157`: replace the false claim that a sum of
+   subspaces need not be a subspace by the demonstrated fact that a sum of two
+   closed subspaces need not be closed.
+7. `fredholm_theory.tex:300--303`: add the infinite-dimensional hypothesis
+   required for the Fredholm index map to be surjective onto the integers.
+
+Mechanical and formal-scope repairs:
+
+8. `fredholm_theory.tex:247--252`: remove the extra closing parenthesis from
+   the Fredholm-index index hook.
+9. `fredholm_theory.tex:268--270`: state the standard closed-range,
+   finite-kernel, finite-cokernel convention before applying Fredholm theory to
+   maps `V` to `W`; the earlier Calkin-algebra definition covers endomorphisms.
+
+No upstream contact occurs during production. These entries are held for the
+single deduplicated post-corpus report only if that report is separately
+authorized.
+
 ## Chapter 14
 
 The following nine source candidates are adjudicated and applied in

@@ -1,0 +1,444 @@
+\chapter{TEORI FREDHOLM}
+
+\section{Alternatif Fredholm}
+
+Pada tahun 1903, Erik Ivar Fredholm menerbitkan sebuah makalah rintisan tentang persamaan integral dalam jurnal
+\emph{Acta Mathematica}. Di antara banyak hasil pentingnya terdapat teorema yang kini kita kenal sebagai
+\emph{alternatif Fredholm}. Kita menyatakan suatu versi hasil ini dalam bahasa
+yang tersedia bagi Fredholm pada masa itu.
+
+\begin{prop}[Alternatif Fredholm I]\label{004011} Tetapkan $\lambda \in \C\setminus\{0\}$ dan misalkan $k$ suatu fungsi kontinu bernilai kompleks
+pada persegi satuan $[0,1] \times [0,1]$. \textbf{Entah} persamaan-persamaan
+ \index{alternatif Fredholm!versi I}%
+tak homogen
+ \begin{align}
+   \lambda f(s) &- \int_0^1 k(s,t)f(t)\,dt = g(s)\label{004011i} \text{ dan}    \tag{1}\\
+   \conj{\lambda} h(s) &- \int_0^1 \conj{k(t,s)}h(t)\,dt = j(s)\label{004011ii} \tag{2}
+ \end{align}
+memiliki solusi $f$ dan $h$ untuk setiap $g$ dan $j$ yang diberikan, masing-masing, dengan solusi-solusi tersebut
+tunggal; dalam hal ini persamaan homogen yang bersesuaian
+ \begin{align} \lambda f(s) &- \int_0^1 k(s,t)f(t)\,dt = 0\label{004011iii} \text{ dan} \tag{3}\\
+        \conj{\lambda} h(s) &- \int_0^1 \conj{k(t,s)}h(t)\,dt = 0\label{004011iv} \tag{4}
+ \end{align}
+hanya memiliki solusi trivial; \textbf{---atau---}\\
+persamaan homogen \eqref{004011iii} dan \eqref{004011iv} masing-masing memiliki
+sejumlah hingga (dan tak nol) solusi bebas linear yang sama banyaknya, yaitu $f_1,\dots,f_n$ dan $h_1,\dots,h_n$,
+secara berturut-turut; dalam hal ini persamaan tak homogen \eqref{004011i} dan
+\eqref{004011ii} memiliki solusi jika dan hanya jika $g$ dan $j$ memenuhi
+ \begin{align} \int_0^1 h_k(t)\conj{g(t)}\,dt &= 0\label{004011v} \text{ dan} \tag{5}\\
+              \int_0^1 j(t) \conj{f_k(t)}\,dt &= 0\label{004011vi} \tag{6}
+ \end{align}
+untuk $k = 1, \dots, n$.
+\end{prop}
+
+Pada tahun 1906, David Hilbert telah menyadari bahwa pengintegralan itu sendiri sangat sedikit berkaitan dengan
+kebenaran hasil ini. Ia menemukan bahwa yang penting adalah kekompakan
+operator integral yang dihasilkan. (Pada awal abad ke-$20$
+\emph{kekompakan} disebut \emph{kontinuitas lengkap}. Istilah \emph{ruang Hilbert}
+telah digunakan sejak tahun 1911 sehubungan dengan ruang barisan~$l_2$. Baru pada
+tahun 1929 John von Neumann memperkenalkan gagasan---dan aksioma yang
+mendefinisikan---\emph{ruang Hilbert abstrak}.) Jadi, berikut suatu versi yang agak lebih mutakhir dari
+\emph{alternatif Fredholm}.
+
+\begin{prop}[Alternatif Fredholm II]\label{004031} Jika $K$ suatu operator kompak pada ruang
+ \index{alternatif Fredholm!versi II}%
+Hilbert, $\lambda \in \C\setminus\{0\}$, dan $T = \lambda I - K$, maka \textbf{entah} persamaan-persamaan
+tak homogen
+ \begin{align}
+            Tf &= g\label{004031i} \text{ dan} \tag{1'}\\
+            T^* h &= j\label{004031ii} \tag{2'}
+ \end{align}
+memiliki solusi $f$ dan $h$ untuk setiap $g$ dan $j$ yang diberikan, masing-masing, dengan solusi-solusi tersebut
+tunggal; dalam hal ini persamaan homogen yang bersesuaian
+ \begin{align}
+            Tf &= 0\label{004031iii} \text{ dan} \tag{3'}\\
+          T^*h &= 0\label{004031iv} \tag{4'}
+ \end{align}
+hanya memiliki solusi trivial; \textbf{---atau---}\\
+persamaan homogen \eqref{004031iii} dan \eqref{004031iv} masing-masing memiliki
+sejumlah hingga (dan tak nol) solusi bebas linear yang sama banyaknya, yaitu $f_1,\dots,f_n$ dan $h_1,\dots,h_n$,
+secara berturut-turut; dalam hal ini persamaan tak homogen \eqref{004031i} dan
+\eqref{004031ii} memiliki solusi jika dan hanya jika $g$ dan $j$ memenuhi
+ \begin{align} h_k &\perp g\label{004031v} \text{ dan} \tag{5'}\\
+                 j &\perp f_k\label{004031vi} \tag{6'}
+ \end{align}
+untuk $k = 1, \dots, n$.
+\end{prop}
+
+Perhatikan bahwa dengan menggunakan beberapa fakta elementer mengenai kernel dan jangkauan
+operator serta keortogonalan dalam ruang Hilbert, kita dapat meringkas pernyataan
+dari~\ref{004031} secara cukup banyak.
+
+\begin{prop}[Alternatif Fredholm IIIa]\label{004033} Jika $T = \lambda I - K$ dengan
+ \index{alternatif Fredholm!versi IIIa}%
+$K$ suatu operator kompak pada ruang Hilbert dan $\lambda \in \C\setminus\{0\}$, maka
+ \begin{enumerate}
+  \item $T$ injektif jika dan hanya jika bersifat surjektif,
+  \item $\ran T^* = (\ker T)^\perp$, dan
+  \item $\dim\ker T = \dim \ker T^*$.
+ \end{enumerate}
+Selain itu, syarat (1) dan (2) berlaku untuk $T^*$ maupun~$T$.
+\end{prop}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Alternatif Fredholm -- lanjutan}
+\begin{defn}\label{004034} Suatu operator $T$ pada ruang Banach disebut
+ \index{operator Riesz--Schauder}%
+ \index{operator!Riesz--Schauder}%
+\df{operator Riesz--Schauder} jika dapat ditulis dalam bentuk $T = S + K$ dengan $S$
+invertibel dan $K$ kompak.
+\end{defn}
+
+Materi dalam bagian~\ref{sec_onbases} dan definisi sebelumnya memungkinkan kita
+memperumum versi \emph{alternatif Fredholm} yang diberikan dalam~\ref{004033} ke ruang
+Banach.
+
+\begin{prop}[Alternatif Fredholm IIIb]\label{0040343} Jika $T$ suatu operator Riesz--Schauder
+ \index{alternatif Fredholm!versi IIIb}%
+pada ruang Banach, maka
+ \begin{enumerate}
+  \item $T$ injektif jika dan hanya jika bersifat surjektif,
+  \item $\ran T^* = (\ker T)^\perp$, dan
+  \item $\dim\ker T = \dim \ker T^* < \infty$.
+ \end{enumerate}
+Selain itu, syarat (1) dan (2) berlaku untuk $T^*$ maupun~$T$.
+\end{prop}
+
+\begin{prop} Jika $M$ subruang tertutup dari ruang Banach $B$, maka $M^\perp \cong (B/M)^*$.
+\end{prop}
+
+\begin{proof} Lihat \cite{Conway:1990}, halaman 89. \ns \end{proof}
+
+\begin{defn} Jika $T\colon V \sto W$ suatu pemetaan linear antara ruang vektor, maka
+ \index{kokernel}%
+\df{kokernel} pemetaan tersebut didefinisikan oleh
+  \[ \coker T = W/ \ran T\,. \]
+Ingat bahwa
+ \index{kodimensi}%
+\df{kodimensi} dari suatu subruang $U$ dalam ruang vektor $V$ adalah dimensi dari~$V/U$. Jadi,
+apabila $T$ suatu pemetaan linear, $\dim\coker T = \codim\ran T$.
+\end{defn}
+
+Dalam kategori $\cat{HIL}$ dari ruang Hilbert dan pemetaan linear kontinu, jangkauan suatu
+morfisme tidak harus menjadi objek kategori tersebut. Secara khusus, jangkauan suatu operator
+tidak harus tertutup.
+
+\begin{exam}\label{004066} Operator ruang Hilbert
+   \[ T\colon l_2 \sto l_2\colon (x_1,x_2,x_3,\dots) \mapsto
+                                   (x_1, \tfrac12 x_2, \tfrac13 x_3, \dots) \]
+bersifat injektif, swaadjoin, kompak, dan kontraktif,
+ \index{operator!dengan jangkauan tak tertutup}%
+tetapi jangkauannya, walaupun padat dalam $l_2$, tidak mencakup seluruh~$l_2$.
+\end{exam}
+
+Walaupun tidak langsung berkaitan dengan tujuan kita saat ini, inilah tempat yang tepat untuk mencatat
+fakta bahwa jumlah dua subruang tertutup dari suatu ruang Hilbert tidak harus tertutup.
+
+\begin{exam}\label{004071} Misalkan $T$ operator pada ruang Hilbert $l_2$ yang didefinisikan dalam
+ \index{subruang!jumlah subruang tertutup tidak harus tertutup}%
+contoh~\ref{004066}, $M = l_2 \oplus \{\vc 0\}$, dan $N$ graf dari~$T$. Maka $M$
+dan $N$ keduanya merupakan subruang tertutup dari ruang Hilbert $l_2 \oplus l_2$, tetapi $M + N$
+tidak tertutup.
+\end{exam}
+
+\begin{proof} Verifikasi contoh~\ref{004071} diperoleh dengan mudah dari hasil berikut
+dan contoh~\ref{004066}. \ns
+\end{proof}
+
+\begin{prop} Misalkan $H$ suatu ruang Hilbert, $T \in \ofml B(H)$, $M = H \oplus \{\vc 0\}$, dan $N$
+merupakan graf dari~$T$. Maka
+ \begin{enumerate}
+   \item[(a)] Himpunan $N$ merupakan subruang dari $H \oplus H$.
+   \item[(b)] Operator $T$ injektif jika dan hanya jika $M \cap N = \{\,(\vc 0,\vc 0)\,\}$.
+   \item[(c)] Jangkauan $T$ padat dalam $H$ jika dan hanya jika $M + N$ padat dalam $H \oplus H$.
+   \item[(d)] Operator $T$ surjektif jika dan hanya jika $M + N = H \oplus H$.
+ \end{enumerate}
+\end{prop}
+
+Kabar baik bagi teori operator Fredholm adalah bahwa operator dengan kokernel
+berdimensi hingga secara otomatis mempunyai jangkauan tertutup.
+
+\begin{prop}\label{00411} Jika suatu pemetaan linear terbatas $A\colon H \sto K$ antara ruang Hilbert
+memiliki kokernel berdimensi hingga, maka $\ran A$ tertutup dalam~$K$.
+\end{prop}
+
+Dalam \emph{Alternatif Fredholm IIIb}~\ref{0040343}, kita mengamati bahwa syarat (1)
+berlebih dan juga bahwa (2) berlaku untuk \emph{sebarang} operator ruang Banach dengan jangkauan tertutup.
+Hal ini memungkinkan kita menyatakan kembali~\ref{0040343} secara lebih hemat.
+
+\begin{prop}[Alternatif Fredholm IV]\label{00413}
+ \index{alternatif Fredholm!versi IV}%
+Jika $T$ suatu operator Riesz--Schauder pada ruang Banach, maka
+ \begin{enumerate}
+    \item $T$ mempunyai jangkauan tertutup dan
+    \item  $\dim\ker T = \dim \ker T^* < \infty$.
+ \end{enumerate}
+\end{prop}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Operator Fredholm}
+\begin{defn} Misalkan $H$ adalah ruang Hilbert dan $\ofml K(H)$ merupakan ideal operator kompak di dalam
+aljabar-$C^*$~$\ofml B(H)$. Maka aljabar hasil bagi (lihat proposisi~\ref{001902})
+$\ofml Q(H) := \ofml B(H)/\ofml K(H)$ adalah
+ \index{aljabar Calkin}%
+ \index{aljabar!Calkin}%
+ \index{Q@$\ofml Q(H)$ (aljabar Calkin)}%
+\df{aljabar Calkin}. Seperti biasa, pemetaan hasil bagi dari $\ofml B(H)$ ke $\ofml
+B(H)/\ofml K(H)$
+ \index{pi@$\pi$ (pemetaan hasil bagi)}%
+ \index{pi@$\pi(T)$ (elemen aljabar Calkin yang memuat $T$)}%
+dilambangkan dengan $\pi$, sehingga jika $T \in \ofml B(H)$ maka $\pi(T) = [T] = T + \ofml K(H)$ adalah
+elemen yang bersesuaian dengannya dalam aljabar Calkin. Suatu elemen $T \in \ofml B(H)$ adalah
+ \index{Fredholm!operator}%
+ \index{operator!Fredholm}%
+\df{operator Fredholm} jika $\pi(T)$ invertibel di dalam~$\ofml Q(H)$. Keluarga
+ \index{F@$\ofml F(H)$ (operator Fredholm pada $H$)}%
+semua operator Fredholm pada $H$ dilambangkan dengan~$\ofml F(H)$.
+\end{defn}
+
+\begin{prop} Jika $H$ ruang Hilbert, maka $\ofml F(H)$ merupakan subhimpunan terbuka swaadjoin
+dari~$\ofml B(H)$ dan tertutup terhadap
+ \index{perturbasi}%
+perturbasi kompak (yakni, jika $T$ Fredholm dan $K$ kompak, maka $T + K$ juga Fredholm).
+\end{prop}
+
+\begin{thm}[Teorema Atkinson]\label{004352}
+ \index{teorema Atkinson}%
+Suatu operator ruang Hilbert bersifat Fredholm jika dan hanya jika kernel dan kokernelnya
+berdimensi hingga.
+\end{thm}
+
+\begin{proof} Lihat \cite{Arveson:2002}, teorema 3.3.2; \cite{Blackadar:2006}, teorema I.8.3.6;
+\cite{Douglas:1972}, teorema 5.17; \cite{HigsonR:2000}, teorema 2.1.4;
+atau~\cite{Wegge-Olsen:1993}, teorema 14.1.1. \ns
+\end{proof}
+
+Menariknya, dimensi kernel dan kokernel suatu operator Fredholm bukanlah besaran yang
+sangat penting. Namun, selisih keduanya ternyata sangat penting.
+
+\begin{defn} Jika $T$ adalah operator Fredholm pada suatu ruang Hilbert, maka
+ \index{indeks!operator Fredholm}%
+ \index{Fredholm!indeks (\seeonly{indeks})}%
+\df{indeks Fredholm} operator tersebut (atau cukup \df{indeks}) didefinisikan oleh
+   \[ \ind T := \dim\ker T - \dim\coker T\,. \]
+\end{defn}
+
+\begin{exam}\label{0044125} Setiap operator ruang Hilbert yang invertibel bersifat Fredholm
+ \index{indeks!operator invertibel}%
+ \index{operator!invertibel!indeks}%
+ \index{invertibel!operator!indeks}%
+dengan indeks nol.
+\end{exam}
+
+\begin{exam}\label{0044128} Indeks Fredholm dari
+ \index{indeks!operator geser unilateral}%
+ \index{operator geser unilateral!indeks}%
+ \index{operator!geser unilateral!indeks}%
+operator geser unilateral adalah~$-1$.
+\end{exam}
+
+\begin{exam} Untuk pemetaan antar-ruang, kita memakai konvensi standar: pemetaan linear disebut Fredholm jika
+jangkauannya tertutup serta kernel dan kokernelnya berdimensi hingga. Dengan konvensi ini, setiap pemetaan linear $T\colon V \sto W$ antara ruang-ruang vektor berdimensi hingga bersifat Fredholm dan
+$\ind T = \dim V - \dim W$. \end{exam}
+
+\begin{exam}\label{004413} Jika $T$ adalah operator Fredholm pada suatu ruang Hilbert,
+ \index{indeks!adjoin operator}%
+ \index{operator!adjoin!indeks}%
+ \index{adjoin!indeks}%
+maka $\ind T^* = -\ind T$.
+\end{exam}
+
+\begin{exam} Indeks setiap operator Fredholm
+ \index{indeks!operator Fredholm normal}%
+ \index{operator!Fredholm normal!indeks}%
+ \index{normal!operator Fredholm!indeks}%
+normal adalah~$0$.
+\end{exam}
+
+\begin{lem}\label{004432} Misalkan $S\colon U \sto V$ dan $T\colon V \sto W$ adalah transformasi linear
+antara ruang-ruang vektor. Maka (terdapat pemetaan linear sedemikian sehingga) barisan
+berikut eksak.
+ \[ \vc 0 \to \ker S \to \ker TS \to \ker T \to \coker S
+                            \to \coker TS \to \coker T \to \vc 0\,. \]
+\end{lem}
+
+\begin{lem}\label{004433} Jika $V_0, V_1, \dots, V_n$ adalah ruang-ruang vektor berdimensi hingga
+dan barisan
+  \[ \vc 0 \to V_0 \to V_1 \to \dots \to V_n \to \vc 0 \]
+eksak, maka
+  \[ \sum_{k=0}^n (-1)^k \dim V_k = 0\,. \]
+\end{lem}
+
+\begin{prop} Misalkan $H$ ruang Hilbert berdimensi tak hingga. Maka himpunan $\ofml F(H)$ yang terdiri atas operator Fredholm
+pada $H$ merupakan semigrup terhadap komposisi dan fungsi indeks $\ind$ adalah epimorfisme
+dari $\ofml F(H)$ ke semigrup aditif bilangan bulat~$\Z$.
+\end{prop}
+
+\begin{proof} \emph{Petunjuk.} Gunakan \ref{004432}, \ref{004433}, \ref{0044125}, \ref{0044128},
+dan~\ref{004413}. \ns
+\end{proof}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Alternatif Fredholm -- Penutup}
+Hasil berikut menyiratkan bahwa setiap operator Fredholm berindeks nol dapat ditulis sebagai
+jumlah suatu operator invertibel dan operator kompak.
+
+\begin{prop}\label{004712} Jika $T$ adalah operator Fredholm berindeks nol pada suatu ruang Hilbert,
+maka terdapat isometri parsial berperingkat hingga $V$ sedemikian sehingga $T - V$ bersifat invertibel.
+\end{prop}
+
+\begin{proof} Lihat \cite{Pedersen:1995}, lemma 3.3.14 atau \cite{Wegge-Olsen:1993}, proposisi
+14.1.3.  \ns
+\end{proof}
+
+\begin{lem} Jika $F$ adalah operator berperingkat hingga pada suatu ruang Hilbert, maka $I + F$ bersifat Fredholm dengan
+indeks nol.
+\end{lem}
+
+\begin{proof} Lihat \cite{Pedersen:1995}, lemma 3.3.13 atau \cite{Wegge-Olsen:1993}, lemma 14.1.4. \ns
+\end{proof}
+
+\begin{notn} Misalkan $H$ adalah ruang Hilbert. Untuk setiap bilangan bulat $n$, kita melambangkan
+ \index{F@$\ofml F_n(H)$, $\ofml F_n$ (operator Fredholm berindeks~$n$)}%
+keluarga semua operator Fredholm berindeks $n$ pada $H$ dengan $\ofml F_n(H)$ atau cukup $\ofml
+F_n$.
+\end{notn}
+
+\begin{prop}\label{004724} Untuk setiap ruang Hilbert berlaku $\ofml F_0 + \ofml K = \ofml F_0$.
+\end{prop}
+
+\begin{proof} Lihat \cite{Douglas:1972}, lemma 5.20 atau \cite{Wegge-Olsen:1993}, 14.1.5. \ns
+\end{proof}
+
+\begin{cor}[Alternatif Fredholm V]\label{004725}
+ \index{alternatif Fredholm!versi V}%
+Setiap operator Riesz--Schauder pada suatu ruang Hilbert bersifat Fredholm berindeks nol.
+\end{cor}
+
+\begin{proof} Ini segera mengikuti proposisi sebelumnya~\ref{004724} dan
+contoh~\ref{0044125}.
+\end{proof}
+
+Kita sebenarnya telah membuktikan hasil yang lebih kuat: versi terakhir (yang cukup umum) dari
+\emph{alternatif Fredholm}.
+
+\begin{cor}[Alternatif Fredholm VI]\label{0047253} Suatu operator ruang Hilbert merupakan operator
+ \index{alternatif Fredholm!versi VI}%
+Riesz--Schauder jika dan hanya jika operator itu merupakan operator Fredholm berindeks nol.
+\end{cor}
+
+\begin{proof} Proposisi~\ref{004712} dan korolari~\ref{004725}.
+\end{proof}
+
+\begin{prop} Jika $T$ adalah operator Fredholm berindeks $n \in \Z$ pada ruang Hilbert $H$
+dan $K$ operator kompak pada~$H$, maka $T + K$ juga merupakan operator Fredholm berindeks~$n$; yakni,
+  \[ \ofml F_n + \ofml K = \ofml F_n\,. \]
+\end{prop}
+
+\begin{proof} Lihat \cite{HigsonR:2000}, proposisi 2.1.6; \cite{Pedersen:1995}, teorema
+3.3.17; atau \cite{Wegge-Olsen:1993}, proposisi 14.1.6. \ns
+\end{proof}
+
+\begin{prop} Misalkan $H$ adalah ruang Hilbert. Maka $\ofml F_n(H)$ merupakan subhimpunan terbuka dari $\ofml B(H)$
+untuk setiap bilangan bulat~$n$.
+\end{prop}
+
+\begin{proof} Lihat \cite{Wegge-Olsen:1993}, proposisi 14.1.8. \ns \end{proof}
+
+\begin{defn}\label{004735} Suatu
+ \index{lintasan}%
+\df{lintasan} dalam ruang topologis $X$ adalah pemetaan kontinu dari interval $[0,1]$
+ke~$X$. Dua titik $p$ dan $q$ dalam $X$ dikatakan
+ \index{lintasan!titik-titik yang terhubung oleh}%
+ \index{terhubung!oleh lintasan}%
+\df{terhubung oleh lintasan} (atau
+ \index{homotop!titik-titik dalam ruang topologis}%
+\df{homotop dalam~$X$}) jika terdapat lintasan $f\colon [0,1] \sto X$ dalam $X$ sedemikian sehingga
+$f(0) = p$ dan $f(1) = q$. Dalam hal ini kita
+ \index{<binrelequivh@$p \sim_h q$ (homotopi titik-titik)}%
+menulis $p \sim_h q$ dalam~$X$ (atau cukup $p \sim_h q$ ketika ruang $X$ jelas dari konteks).
+\end{defn}
+
+
+\begin{exam} Misalkan $a$ adalah elemen invertibel dalam aljabar-$C^*$ beridentitas $A$ dan $b$ adalah elemen $A$
+sedemikian sehingga $\norm{a - b} < \norm{a^{-1}}^{-1}$. Maka $a \sim_h b$ dalam~$\inv(A)$.
+\end{exam}
+
+\begin{proof}[\emph{Petunjuk bukti}] Terapkan korolari~\ref{cor2_Neumann_series} pada titik-titik dalam ruas garis tertutup~$[a,b]$. \ns
+\end{proof}
+
+\begin{prop}\label{K002011} Relasi $\sim_h$ untuk ekuivalensi homotopi yang didefinisikan di atas merupakan suatu relasi
+ \index{ekuivalensi!homotopi!titik-titik}%
+ekuivalensi pada himpunan titik-titik suatu ruang topologis.
+\end{prop}
+
+\begin{defn} Jika $X$ adalah ruang topologis dan $\sim_h$ adalah relasi ekuivalensi homotopi,
+maka kelas-kelas ekuivalensi yang dihasilkan adalah
+ \index{lintasan!komponen}%
+ \index{komponen!lintasan}%
+\df{komponen lintasan} dari~$X$.
+\end{defn}
+
+Proposisi berikut mengidentifikasi komponen-komponen lintasan himpunan operator Fredholm sebagai
+himpunan $\ofml F_n$ yang terdiri atas operator berindeks~$n$.
+
+\begin{prop} Operator $S$ dan $T$ di dalam ruang operator Fredholm $\ofml F(H)$ pada
+ruang Hilbert $H$ bersifat homotop dalam $\ofml F(H)$ jika dan hanya jika keduanya memiliki indeks yang sama.
+\end{prop}
+
+\begin{proof} Lihat \cite{Wegge-Olsen:1993}, korolari 14.1.9. \ns \end{proof}
+
+
+
+
+
+
+
+\endinput

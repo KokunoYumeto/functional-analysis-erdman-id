@@ -1,0 +1,206 @@
+\chapter{TEORI FREDHOLM}
+
+\section{Alternatif Fredholm}
+
+Pada tahun 1903, Erik Ivar Fredholm menerbitkan sebuah makalah rintisan tentang persamaan integral dalam jurnal
+\emph{Acta Mathematica}. Di antara banyak hasil pentingnya terdapat teorema yang kini kita kenal sebagai
+\emph{alternatif Fredholm}. Kita menyatakan suatu versi hasil ini dalam bahasa
+yang tersedia bagi Fredholm pada masa itu.
+
+\begin{prop}[Alternatif Fredholm I]\label{004011} Tetapkan $\lambda \in \C\setminus\{0\}$ dan misalkan $k$ suatu fungsi kontinu bernilai kompleks
+pada persegi satuan $[0,1] \times [0,1]$. \textbf{Entah} persamaan-persamaan
+ \index{alternatif Fredholm!versi I}%
+tak homogen
+ \begin{align}
+   \lambda f(s) &- \int_0^1 k(s,t)f(t)\,dt = g(s)\label{004011i} \text{ dan}    \tag{1}\\
+   \conj{\lambda} h(s) &- \int_0^1 \conj{k(t,s)}h(t)\,dt = j(s)\label{004011ii} \tag{2}
+ \end{align}
+memiliki solusi $f$ dan $h$ untuk setiap $g$ dan $j$ yang diberikan, masing-masing, dengan solusi-solusi tersebut
+tunggal; dalam hal ini persamaan homogen yang bersesuaian
+ \begin{align} \lambda f(s) &- \int_0^1 k(s,t)f(t)\,dt = 0\label{004011iii} \text{ dan} \tag{3}\\
+        \conj{\lambda} h(s) &- \int_0^1 \conj{k(t,s)}h(t)\,dt = 0\label{004011iv} \tag{4}
+ \end{align}
+hanya memiliki solusi trivial; \textbf{---atau---}\\
+persamaan homogen \eqref{004011iii} dan \eqref{004011iv} masing-masing memiliki
+sejumlah hingga (dan tak nol) solusi bebas linear yang sama banyaknya, yaitu $f_1,\dots,f_n$ dan $h_1,\dots,h_n$,
+secara berturut-turut; dalam hal ini persamaan tak homogen \eqref{004011i} dan
+\eqref{004011ii} memiliki solusi jika dan hanya jika $g$ dan $j$ memenuhi
+ \begin{align} \int_0^1 h_k(t)\conj{g(t)}\,dt &= 0\label{004011v} \text{ dan} \tag{5}\\
+              \int_0^1 j(t) \conj{f_k(t)}\,dt &= 0\label{004011vi} \tag{6}
+ \end{align}
+untuk $k = 1, \dots, n$.
+\end{prop}
+
+Pada tahun 1906, David Hilbert telah menyadari bahwa pengintegralan itu sendiri sangat sedikit berkaitan dengan
+kebenaran hasil ini. Ia menemukan bahwa yang penting adalah kekompakan
+operator integral yang dihasilkan. (Pada awal abad ke-$20$
+\emph{kekompakan} disebut \emph{kontinuitas lengkap}. Istilah \emph{ruang Hilbert}
+telah digunakan sejak tahun 1911 sehubungan dengan ruang barisan~$l_2$. Baru pada
+tahun 1929 John von Neumann memperkenalkan gagasan---dan aksioma yang
+mendefinisikan---\emph{ruang Hilbert abstrak}.) Jadi, berikut suatu versi yang agak lebih mutakhir dari
+\emph{alternatif Fredholm}.
+
+\begin{prop}[Alternatif Fredholm II]\label{004031} Jika $K$ suatu operator kompak pada ruang
+ \index{alternatif Fredholm!versi II}%
+Hilbert, $\lambda \in \C\setminus\{0\}$, dan $T = \lambda I - K$, maka \textbf{entah} persamaan-persamaan
+tak homogen
+ \begin{align}
+            Tf &= g\label{004031i} \text{ dan} \tag{1'}\\
+            T^* h &= j\label{004031ii} \tag{2'}
+ \end{align}
+memiliki solusi $f$ dan $h$ untuk setiap $g$ dan $j$ yang diberikan, masing-masing, dengan solusi-solusi tersebut
+tunggal; dalam hal ini persamaan homogen yang bersesuaian
+ \begin{align}
+            Tf &= 0\label{004031iii} \text{ dan} \tag{3'}\\
+          T^*h &= 0\label{004031iv} \tag{4'}
+ \end{align}
+hanya memiliki solusi trivial; \textbf{---atau---}\\
+persamaan homogen \eqref{004031iii} dan \eqref{004031iv} masing-masing memiliki
+sejumlah hingga (dan tak nol) solusi bebas linear yang sama banyaknya, yaitu $f_1,\dots,f_n$ dan $h_1,\dots,h_n$,
+secara berturut-turut; dalam hal ini persamaan tak homogen \eqref{004031i} dan
+\eqref{004031ii} memiliki solusi jika dan hanya jika $g$ dan $j$ memenuhi
+ \begin{align} h_k &\perp g\label{004031v} \text{ dan} \tag{5'}\\
+                 j &\perp f_k\label{004031vi} \tag{6'}
+ \end{align}
+untuk $k = 1, \dots, n$.
+\end{prop}
+
+Perhatikan bahwa dengan menggunakan beberapa fakta elementer mengenai kernel dan jangkauan
+operator serta keortogonalan dalam ruang Hilbert, kita dapat meringkas pernyataan
+dari~\ref{004031} secara cukup banyak.
+
+\begin{prop}[Alternatif Fredholm IIIa]\label{004033} Jika $T = \lambda I - K$ dengan
+ \index{alternatif Fredholm!versi IIIa}%
+$K$ suatu operator kompak pada ruang Hilbert dan $\lambda \in \C\setminus\{0\}$, maka
+ \begin{enumerate}
+  \item $T$ injektif jika dan hanya jika bersifat surjektif,
+  \item $\ran T^* = (\ker T)^\perp$, dan
+  \item $\dim\ker T = \dim \ker T^*$.
+ \end{enumerate}
+Selain itu, syarat (1) dan (2) berlaku untuk $T^*$ maupun~$T$.
+\end{prop}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Alternatif Fredholm -- lanjutan}
+\begin{defn}\label{004034} Suatu operator $T$ pada ruang Banach disebut
+ \index{operator Riesz--Schauder}%
+ \index{operator!Riesz--Schauder}%
+\df{operator Riesz--Schauder} jika dapat ditulis dalam bentuk $T = S + K$ dengan $S$
+invertibel dan $K$ kompak.
+\end{defn}
+
+Materi dalam bagian~\ref{sec_onbases} dan definisi sebelumnya memungkinkan kita
+memperumum versi \emph{alternatif Fredholm} yang diberikan dalam~\ref{004033} ke ruang
+Banach.
+
+\begin{prop}[Alternatif Fredholm IIIb]\label{0040343} Jika $T$ suatu operator Riesz--Schauder
+ \index{alternatif Fredholm!versi IIIb}%
+pada ruang Banach, maka
+ \begin{enumerate}
+  \item $T$ injektif jika dan hanya jika bersifat surjektif,
+  \item $\ran T^* = (\ker T)^\perp$, dan
+  \item $\dim\ker T = \dim \ker T^* < \infty$.
+ \end{enumerate}
+Selain itu, syarat (1) dan (2) berlaku untuk $T^*$ maupun~$T$.
+\end{prop}
+
+\begin{prop} Jika $M$ subruang tertutup dari ruang Banach $B$, maka $M^\perp \cong (B/M)^*$.
+\end{prop}
+
+\begin{proof} Lihat \cite{Conway:1990}, halaman 89. \ns \end{proof}
+
+\begin{defn} Jika $T\colon V \sto W$ suatu pemetaan linear antara ruang vektor, maka
+ \index{kokernel}%
+\df{kokernel} pemetaan tersebut didefinisikan oleh
+  \[ \coker T = W/ \ran T\,. \]
+Ingat bahwa
+ \index{kodimensi}%
+\df{kodimensi} dari suatu subruang $U$ dalam ruang vektor $V$ adalah dimensi dari~$V/U$. Jadi,
+apabila $T$ suatu pemetaan linear, $\dim\coker T = \codim\ran T$.
+\end{defn}
+
+Dalam kategori $\cat{HIL}$ dari ruang Hilbert dan pemetaan linear kontinu, jangkauan suatu
+morfisme tidak harus menjadi objek kategori tersebut. Secara khusus, jangkauan suatu operator
+tidak harus tertutup.
+
+\begin{exam}\label{004066} Operator ruang Hilbert
+   \[ T\colon l_2 \sto l_2\colon (x_1,x_2,x_3,\dots) \mapsto
+                                   (x_1, \tfrac12 x_2, \tfrac13 x_3, \dots) \]
+bersifat injektif, swaadjoin, kompak, dan kontraktif,
+ \index{operator!dengan jangkauan tak tertutup}%
+tetapi jangkauannya, walaupun padat dalam $l_2$, tidak mencakup seluruh~$l_2$.
+\end{exam}
+
+Walaupun tidak langsung berkaitan dengan tujuan kita saat ini, inilah tempat yang tepat untuk mencatat
+fakta bahwa jumlah dua subruang tertutup dari suatu ruang Hilbert tidak harus tertutup.
+
+\begin{exam}\label{004071} Misalkan $T$ operator pada ruang Hilbert $l_2$ yang didefinisikan dalam
+ \index{subruang!jumlah subruang tertutup tidak harus tertutup}%
+contoh~\ref{004066}, $M = l_2 \oplus \{\vc 0\}$, dan $N$ graf dari~$T$. Maka $M$
+dan $N$ keduanya merupakan subruang tertutup dari ruang Hilbert $l_2 \oplus l_2$, tetapi $M + N$
+tidak tertutup.
+\end{exam}
+
+\begin{proof} Verifikasi contoh~\ref{004071} diperoleh dengan mudah dari hasil berikut
+dan contoh~\ref{004066}. \ns
+\end{proof}
+
+\begin{prop} Misalkan $H$ suatu ruang Hilbert, $T \in \ofml B(H)$, $M = H \oplus \{\vc 0\}$, dan $N$
+merupakan graf dari~$T$. Maka
+ \begin{enumerate}
+   \item[(a)] Himpunan $N$ merupakan subruang dari $H \oplus H$.
+   \item[(b)] Operator $T$ injektif jika dan hanya jika $M \cap N = \{\,(\vc 0,\vc 0)\,\}$.
+   \item[(c)] Jangkauan $T$ padat dalam $H$ jika dan hanya jika $M + N$ padat dalam $H \oplus H$.
+   \item[(d)] Operator $T$ surjektif jika dan hanya jika $M + N = H \oplus H$.
+ \end{enumerate}
+\end{prop}
+
+Kabar baik bagi teori operator Fredholm adalah bahwa operator dengan kokernel
+berdimensi hingga secara otomatis mempunyai jangkauan tertutup.
+
+\begin{prop}\label{00411} Jika suatu pemetaan linear terbatas $A\colon H \sto K$ antara ruang Hilbert
+memiliki kokernel berdimensi hingga, maka $\ran A$ tertutup dalam~$K$.
+\end{prop}
+
+Dalam \emph{Alternatif Fredholm IIIb}~\ref{0040343}, kita mengamati bahwa syarat (1)
+berlebih dan juga bahwa (2) berlaku untuk \emph{sebarang} operator ruang Banach dengan jangkauan tertutup.
+Hal ini memungkinkan kita menyatakan kembali~\ref{0040343} secara lebih hemat.
+
+\begin{prop}[Alternatif Fredholm IV]\label{00413}
+ \index{alternatif Fredholm!versi IV}%
+Jika $T$ suatu operator Riesz--Schauder pada ruang Banach, maka
+ \begin{enumerate}
+    \item $T$ mempunyai jangkauan tertutup dan
+    \item  $\dim\ker T = \dim \ker T^* < \infty$.
+ \end{enumerate}
+\end{prop}
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
