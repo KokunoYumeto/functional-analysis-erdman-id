@@ -1,0 +1,567 @@
+\chapter{FUNKTOR $\mathbf{\emph{K}_0}$}
+
+Sekarang kita meninjau secara singkat apa yang disebut teori-$K$ untuk aljabar-$C^*$. Barangkali pengantar terbaik untuk pokok bahasan ini adalah~\cite{RordamLL:2000},
+yang beberapa bagian elementernya diikuti dengan cukup saksama dalam catatan ini. Pengantar lain yang sangat mudah dibaca adalah~\cite{Wegge-Olsen:1993}.
+
+Diberikan suatu aljabar-$C^*$ $A$, kita terutama akan memperhatikan dua grup yang dikenal sebagai $K_0(A)$ dan~$K_1(A)$. Bab ini membahas
+grup yang pertama, yakni grup proyeksi di $A$ dengan operasi penjumlahan. Tentu saja, jika kita ingin menjumlahkan proyeksi sembarang, kita langsung
+menghadapi kesulitan serius. Sebelumnya telah kita tunjukkan (dalam proposisi~\ref{prop_sum_projs}) bahwa agar proyeksi dapat dijumlahkan, proyeksi-proyeksi itu harus komutatif
+(dan hasil kalinya nol)! Penyelesaian dilema ini mencerminkan cara berpikir yang lazim dalam teori-$K$ secara umum. Jika dua proyeksi tidak
+komutatif, singkirkan penghalang yang mencegah keduanya menjadi komutatif. Jika tidak cukup ruang bagi keduanya untuk saling melewati, berilah keduanya lebih banyak
+ruang. Jangan bersikeras memandang keduanya sebagai makhluk yang mencoba hidup dalam dunia matriks $1 \times 1$ berentri di~$A$ yang sesak tanpa harapan.
+Biarkan keduanya, misalnya, menjelajahi dunia matriks $2 \times 2$ yang jauh lebih lapang. % SOURCE-CORRECTION: CH17-C001
+Untuk mewujudkan gagasan ini secara teknis, kita mencari relasi ekuivalensi $\sim$ yang mengidentifikasi proyeksi $p$ di $A$ dengan matriks $\begin{bmatrix} p & \vc 0 \\ \vc 0 & \vc 0 \end{bmatrix}$
+dan $\begin{bmatrix} \vc 0 & \vc 0 \\ \vc 0 & p \end{bmatrix}$. Sebagai motivasi heuristik saja---bukan sebagai konsekuensi suatu kongruensi perkalian yang telah dibuktikan---hambatan itu tampak hilang: jika $p$ dan $q$ proyeksi di~$A$, maka % SOURCE-CORRECTION: CH17-C002
+    \[ pq \sim \begin{bmatrix} p & \vc 0 \\ \vc 0 & \vc 0 \end{bmatrix} \begin{bmatrix} \vc 0 & \vc 0 \\ \vc 0 & q \end{bmatrix}  \\
+                   = \begin{bmatrix} \vc 0 & \vc 0 \\ \vc 0 & \vc 0 \end{bmatrix}           \\
+                   =  \begin{bmatrix} \vc 0 & \vc 0 \\ \vc 0 &  q \end{bmatrix}\begin{bmatrix} p & \vc 0 \\ \vc 0 & \vc 0 \end{bmatrix}  \\
+                   \sim qp\,. \]
+Dalam gambaran heuristik ini, $p$ dan $q$ komutatif modulo relasi ekuivalensi $\sim$, dan kita dapat mendefinisikan penjumlahan dengan sesuatu seperti
+$p \oplus q = \begin{bmatrix} p & \vc 0 \\ \vc 0 & q \end{bmatrix}$.
+
+Cukup jelas bahwa perangkat sederhana di atas tidak akan langsung menghasilkan sesuatu yang menyerupai grup Abelian, tetapi ini merupakan suatu permulaan. Jika Anda menduga
+bahwa pada akhirnya konstruksi $K_0(A)$ mungkin agak rumit, dugaan Anda sepenuhnya benar.
+
+
+
+
+\section{Relasi Ekuivalensi pada Proyeksi}
+
+Kita mendefinisikan beberapa relasi ekuivalensi, yang semuanya sesuai untuk proyeksi dalam aljabar-$C^*$ beridentitas.
+
+\begin{defn} Dalam suatu aljabar beridentitas, elemen $a$ dan $b$ disebut
+ \index{serupa!elemen suatu aljabar}%
+\df{serupa} jika terdapat elemen invertibel $s$ sedemikian sehingga $b = sas^{-1}$.
+ \index{<binrelequivs@$a \sim_s b$ (keserupaan elemen suatu aljabar)}%
+Dalam hal ini kita menulis $a \sim_s b$.
+\end{defn}
+
+\begin{prop} Relasi keserupaan $\sim_s$ yang didefinisikan di atas merupakan relasi ekuivalensi pada elemen-elemen suatu aljabar beridentitas.
+\end{prop}
+
+\begin{defn} Dalam suatu aljabar-$C^*$, elemen $a$ dan $b$ disebut
+ \index{uniter!ekuivalensi}%
+\df{ekuivalen secara uniter} jika terdapat suatu elemen uniter $u \in \wt A$ sedemikian sehingga $b = uau^*$. % SOURCE-CORRECTION: CH17-C003
+ \index{<binrelequivu@$a \sim_u b$ (ekuivalensi uniter)}%
+Dalam hal ini kita menulis $a \sim_u b$.
+\end{defn}
+
+\begin{prop} Relasi ekuivalensi uniter $\sim_u$ yang didefinisikan di atas merupakan relasi ekuivalensi pada elemen-elemen suatu aljabar-$C^*$.
+\end{prop}
+
+\begin{prop}\label{0060224fa} Elemen $a$ dan $b$ dari suatu aljabar-$C^*$ beridentitas $A$ ekuivalen secara uniter jika dan hanya jika
+terdapat elemen $u \in \ofml U(A)$ sedemikian sehingga $b = uau^*$.
+\end{prop}
+
+\begin{proof}[\emph{Petunjuk untuk bukti}] Andaikan terdapat $v \in \ofml U(\wt A)$ sedemikian sehingga $b = vav^*$. Berdasarkan proposisi~\ref{0015213},
+terdapat $u \in A$ dan $\alpha \in \C$ sedemikian sehingga $v = u + \alpha \vc j$ (dengan $\vc j = \vc 1_{\wt A} - \vc 1_A$). Tunjukkan
+bahwa $\abs\alpha = 1$, $u$ uniter, dan $b = uau^*$.
+
+Untuk arah sebaliknya, andaikan terdapat $u \in \ofml U(A)$ sedemikian sehingga $b = uau^*$. Misalkan $v = u + \vc j$. \ns
+\end{proof}
+
+\begin{prop}[Dekomposisi polar]\label{0060141} Untuk setiap elemen invertibel $s$ dari suatu
+ \index{dekomposisi polar!elemen invertibel aljabar-$C^*$}%
+ \index{dekomposisi!polar}%
+aljabar-$C^*$ beridentitas, terdapat suatu elemen uniter $\omega(s)$ dalam aljabar tersebut sedemikian sehingga % SOURCE-CORRECTION: CH17-C004
+   \[   s = \omega(s) \abs s\,. \]
+\end{prop}
+
+\begin{proof}[\emph{Petunjuk untuk bukti}] Gunakan Akibat~\ref{00183313}.   \ns
+\end{proof}
+
+\begin{prop}\label{K002021} Jika $A$ suatu aljabar-$C^*$ beridentitas, maka fungsi $\omega\colon \inv A \sto \ofml U(A)$
+yang didefinisikan dalam proposisi sebelumnya kontinu.
+\end{prop}
+
+\begin{proof}[\emph{Petunjuk untuk bukti}] Gunakan proposisi~\ref{000646fa} dan~\ref{001449}.   \ns
+\end{proof}
+
+\begin{prop}\label{K002024} Misalkan $s = u\abs s$ dekomposisi polar dari elemen invertibel $s$ dalam aljabar-$C^*$ beridentitas~$A$.
+Maka $u \sim_h s$ dalam $\inv A$.
+\end{prop}
+
+\begin{proof}[\emph{Petunjuk untuk bukti}] Untuk $0 \le t \le 1$, misalkan $c_t = u(t\abs s + (1 - t)\vc 1)$. Simpulkan dari
+proposisi~\ref{0018301} bahwa terdapat $\epsilon \in (0,1]$ sedemikian sehingga $\abs s \ge \epsilon \vc 1$. Gunakan proposisi yang sama
+untuk menunjukkan bahwa $t\abs s + (1 - t)\vc 1$ invertibel untuk setiap $t \in [0,1]$.   \ns
+\end{proof}
+
+\begin{prop}\label{K002027} Misalkan $u$ dan $v$ elemen-elemen uniter dalam aljabar-$C^*$ beridentitas~$A$. Jika $u \sim_h v$ dalam $\inv A$,
+maka $u \sim_h v$ dalam~$\ofml U(A)$.
+\end{prop}
+
+\begin{prop}\label{K002031} Misalkan $u_1$, $u_2$, $u_3$, dan $u_4$ elemen-elemen uniter dalam aljabar-$C^*$ beridentitas~$A$.
+Jika $u_1 \sim_h u_2$ dalam $\ofml U(A)$ dan $u_3 \sim_h u_4$ dalam $\ofml U(A)$, maka $u_1u_3 \sim_h u_2u_4$ dalam~$\ofml U(A)$.
+\end{prop}
+
+\begin{exam}\label{0060116} Misalkan $h$ suatu elemen swaadjoin dari aljabar-$C^*$ beridentitas~$A$. Maka $\exp(ih)$ uniter dan
+homotop dengan~$\vc 1$ dalam~$\ofml U(A)$.
+\end{exam}
+
+\begin{proof}[\emph{Petunjuk untuk bukti}] Pertimbangkan lintasan $c\colon [0,1] \sto \ofml U(A)\colon t \mapsto \exp(ith)$. Gunakan % SOURCE-CORRECTION: CH17-C005
+proposisi~\ref{001449}.  \ns
+\end{proof}
+
+\begin{notn} Jika $p$ dan $q$ proyeksi dalam suatu aljabar-$C^*$ $A$, kita menulis $p \sim q$
+ \index{ekuivalensi Murray--von Neumann}%
+ \index{ekuivalensi!Murray--von Neumann}%
+ \index{<binrelequiv@$p \sim q$ (ekuivalensi Murray--von Neumann)}%
+($p$ \df{ekuivalen Murray--von Neumann} dengan~$q$) jika terdapat elemen $v \in A$
+sedemikian sehingga $v^*v = p$ dan $vv^* = q$. Perhatikan bahwa $v$ demikian secara otomatis merupakan isometri
+parsial. Kita akan menyebutnya
+ \index{realisasi ekuivalensi Murray--von Neumann}%
+ \index{ekuivalensi!Murray--von Neumann!realisasi}%
+ \index{Murray--von Neumann!ekuivalensi!realisasi}%
+\emph{isometri parsial yang merealisasikan ekuivalensi}.
+\end{notn}
+
+\begin{prop}\label{0060216} Relasi ekuivalensi Murray--von Neumann $\sim$ merupakan
+relasi ekuivalensi pada keluarga $\fml P(A)$ dari proyeksi-proyeksi dalam suatu aljabar-$C^*$~$A$.
+\end{prop}
+
+\begin{prop}\label{0060144} Misalkan $a$ dan $b$ elemen-elemen swaadjoin dari suatu aljabar-$C^*$ beridentitas. Jika $a \sim_s b$, maka $a \sim_u b$.
+Bahkan, jika $b = sas^{-1}$ dan $s = u\abs s$ adalah dekomposisi polar dari $s$, maka $b = uau^*$.
+\end{prop}
+
+\begin{proof}[\emph{Petunjuk untuk bukti}] Andaikan terdapat elemen invertibel $s$ sedemikian sehingga $b = sas^{-1}$. Misalkan $s = u\abs s$
+dekomposisi polar dari~$s$. Tunjukkan bahwa $a$ komutatif dengan ${\abs s}^2$, sehingga juga komutatif dengan setiap elemen dalam aljabar $C^*(\vc 1,{\abs s}^2)$.
+Secara khusus, $a$ komutatif dengan~${\abs s}^{-1}$. Dari sini diperoleh $uau^* = b$.   \ns
+\end{proof}
+
+\begin{prop}\label{0060221} Jika $p$ dan $q$ proyeksi dalam suatu aljabar-$C^*$, maka
+   \[ p \sim_h q \implies p \sim_u q \implies p \sim q\,. \]
+\end{prop}
+
+\begin{proof}[\emph{Petunjuk untuk bukti}] Dalam petunjuk ini $\vc 1 = \vc 1_{\wt A}$. Untuk implikasi pertama, tunjukkan bahwa tanpa mengurangi keumuman
+kita dapat mengandaikan $\norm{p - q} < \frac12$. Misalkan $s = pq + (\vc 1 - p)(\vc 1 - q)$. Buktikan bahwa $p \sim_s q$. Untuk
+itu, tuliskan $s - \vc 1$ sebagai $p(q - p) + (\vc 1 - p)((\vc 1 - q) - (\vc 1 - p))$ dan gunakan akibat~\ref{cor_Neumann_series}.
+Kemudian gunakan proposisi~\ref{0060144}.
+
+Untuk membuktikan implikasi kedua, perhatikan bahwa jika $upu^* = q$ untuk suatu elemen uniter dalam~$\wt A$, maka $up$ merupakan isometri parsial
+dalam~$A$.  \ns
+\end{proof}
+
+Secara umum, kebalikan dari implikasi kedua, $p \sim q \implies p \sim_u q$, dalam proposisi sebelumnya tidak berlaku (lihat % SOURCE-CORRECTION: CH17-C024
+contoh~\ref{0060233} di bawah). Namun, untuk proyeksi $p$ dan $q$ dalam suatu aljabar-$C^*$ beridentitas, jika berlaku baik $p \sim q$ maupun
+$\vc 1 - p \sim \vc 1 - q$, maka kita dapat menyimpulkan $p \sim_u q$.
+
+\begin{prop}\label{0060224} Misalkan $p$ dan $q$ proyeksi dalam suatu aljabar-$C^*$ beridentitas~$A$. Maka $p \sim_u q$ jika dan hanya jika
+$p \sim q$ dan $\vc 1 - p \sim \vc 1 - q$.
+\end{prop}
+
+\begin{proof}[\emph{Petunjuk untuk bukti}] Untuk arah sebaliknya, andaikan isometri parsial $v$ merealisasikan ekuivalensi $p \sim q$
+dan $w$ merealisasikan $\vc 1 - p \sim \vc 1 - q$. Pertimbangkan elemen $u = v + w + \vc j$ dalam~$\wt A$.   \ns
+\end{proof}
+
+\begin{defn} Suatu elemen $s$ dari aljabar-$C^*$ beridentitas disebut
+ \index{isometri!dalam aljabar-$C^*$ beridentitas}%
+\df{isometri} jika $s^*s = \vc 1$.
+\end{defn}
+
+\begin{exer} Jelaskan mengapa terminologi dalam definisi sebelumnya masuk akal.
+\end{exer}
+
+Tidak sulit untuk melihat bahwa kebalikan dari implikasi kedua dalam proposisi~\ref{0060221} pada umumnya gagal.
+
+\begin{exam}\label{0060233} Jika $p$ dan $q$ proyeksi dalam suatu aljabar-$C^*$, maka
+   \[ p \sim q \,\,\,\,\not\!\!\!\!\implies p \sim_u q\,. \]
+Sebagai contoh, jika $s$ merupakan isometri tak uniter (seperti geser unilateral), maka $s^*s \sim ss^*$, tetapi $s^*s \nsim_u ss^*$.
+\end{exam}
+
+\begin{proof}[\emph{Petunjuk untuk bukti}] Buktikan, dan ingatlah, bahwa tidak ada proyeksi tak nol yang dapat ekuivalen Murray--von Neumann
+dengan proyeksi nol.   \ns
+\end{proof}
+
+\begin{rem} Kebalikan dari implikasi pertama, $p \sim_u q \implies p \sim_h q$, dalam proposisi~\ref{0060221} juga tidak berlaku % SOURCE-CORRECTION: CH17-C025
+secara umum untuk proyeksi dalam suatu aljabar-$C^*$. Namun, contoh yang menggambarkan gejala ini tidak mudah ditemukan. Untuk melihat
+apa yang terlibat, lihat~\cite{RordamLL:2000}, contoh 2.2.9 dan 11.3.4.
+\end{rem}
+
+Alangkah baiknya jika implikasi-implikasi dalam proposisi~\ref{0060221} dapat dibalik. Namun, seperti telah kita lihat, hal itu tidak terjadi.
+Salah satu cara menghadapi fakta yang membandel, sebagaimana dicatat pada awal bab ini, adalah memberi objek-objek matematika
+yang sedang kita kaji ruang yang lebih luas untuk bergerak. Beralihlah ke matriks. Proposisi~\ref{0060236} dan~\ref{0060244} merupakan contoh
+cara kerja teknik ini. Dalam arti tertentu, kita dapat membuat implikasi-implikasi dalam~\ref{0060221} berbalik arah.
+
+\begin{notn} Jika $a_1$, $a_2$, \dots $a_n$ elemen-elemen dari suatu aljabar-$C^*$ $A$, maka
+ \index{diagonal@$\diag(a_1,\dots,a_n)$ (matriks diagonal dalam $\M nA$)}%
+$\diag(a_1,a_2,\dots,a_n)$ adalah matriks diagonal dalam $\M nA$ yang diagonal utamanya terdiri atas
+elemen-elemen $a_1$, \dots, $a_n$. Notasi ini juga kita gunakan untuk matriks blok. Sebagai
+contoh, jika $a$ matriks $m \times m$ dan $b$ matriks $n \times n$, maka
+$\diag(a,b)$ adalah matriks $(m+n) \times (m+n)$ $\begin{bmatrix} a & \vc 0 \\ \vc 0 & b
+\end{bmatrix}$. (Tentu saja, $\vc 0$ di sudut kanan atas matriks ini adalah matriks $m \times n$ yang semua
+entrinya nol, sedangkan $\vc 0$ di sudut kiri bawah adalah matriks $n \times m$ yang setiap entrinya nol.)
+\end{notn}
+
+\begin{prop}\label{0060236} Misalkan $p$ dan $q$ proyeksi dalam suatu aljabar-$C^*$~$A$. Maka
+   \[ p \sim q \implies \diag(p,\vc 0) \sim_u \diag(q,\vc 0) \text{ dalam $\M 2A$.} \]
+\end{prop}
+
+\begin{proof}[\emph{Petunjuk untuk bukti}] Misalkan $v$ isometri parsial dalam $A$ yang merealisasikan ekuivalensi Murray--von Neumann $p \sim q$.
+Pertimbangkan matriks $u = \begin{bmatrix} v  &  \vc 1_{\wt A} - q  \\  \vc 1_{\wt A} - p  &  v^* \end{bmatrix}$.  \ns
+\end{proof}
+
+Ingat dari akibat~\ref{001311005fa} bahwa spektrum setiap elemen uniter dari suatu aljabar-$C^*$ beridentitas terletak pada lingkaran satuan.
+Hebatnya, jika spektrumnya bukan seluruh lingkaran, elemen itu homotop dengan~$\vc 1$ dalam~$\ofml U(A)$.
+
+\begin{prop}\label{0060121} Misalkan $u$ suatu elemen uniter dalam aljabar-$C^*$ beridentitas. Jika $\sigma(u) \ne \T$, maka $u \sim_h \vc 1$ dalam~$\ofml U(A)$.
+\end{prop}
+
+\begin{proof}[\emph{Petunjuk untuk bukti}] Pilih $\theta \in \R$ sedemikian sehingga $\exp(i\theta) \notin \sigma(u)$. Maka terdapat fungsi kontinu yang tunggal
+   \[ \phi\colon \sigma(u) \sto (\theta, \theta + 2\pi)\colon \exp(it) \mapsto t\,. \]
+Misalkan $h = \phi(u)$ dan gunakan contoh~\ref{0060116}.   \ns
+\end{proof}
+
+\begin{exam}\label{0060129a} Jika $A$ suatu aljabar-$C^*$ beridentitas, maka $\begin{bmatrix} \vc 0  &  \vc 1  \\  \vc 1  &  \vc 0  \end{bmatrix} \sim_h
+\begin{bmatrix} \vc 1  &  \vc 0  \\ \vc 0  & \vc 1 \end{bmatrix}$ dalam~$\ofml U(\M 2A)$.
+\end{exam}
+
+Matriks $J = \begin{bmatrix} \vc 0  &  \vc 1  \\ \vc 1 & \vc 0 \end{bmatrix}$ sangat berguna jika dipakai bersama
+proposisi~\ref{K002031} untuk membentuk homotopi antara matriks-matriks dalam $\ofml U(A)$. Dalam memeriksa beberapa contoh
+berikutnya, matriks ini sangat membantu. Perhatikan bahwa mengalikan matriks $2 \times 2$ dari kanan dengan $J$ menukar kolom-kolomnya; mengalikan
+dari kiri dengan $J$ menukar baris-barisnya; dan mengalikan dari kiri serta kanan dengan $J$ menukar elemen-elemen pada kedua diagonal.
+
+\begin{exam}\label{0060129b} Jika $u$ dan $v$ elemen-elemen uniter dalam suatu aljabar-$C^*$ beridentitas~$A$, maka
+   \[ \diag(u,v) \sim_h \diag(v,u) \]
+dalam~$\ofml U(\M 2A)$.
+\end{exam}
+
+\begin{exam}\label{0060129c} Jika $u$ dan $v$ elemen-elemen uniter dalam suatu aljabar-$C^*$ beridentitas $A$, maka
+  \[ \diag(u,v) \sim_h \diag(uv, \vc 1) \]
+dalam $\ofml U(\M 2A)$.
+\end{exam}
+
+\begin{exam}\label{0060129d} Jika $u$ dan $v$ elemen-elemen uniter dalam suatu aljabar-$C^*$ beridentitas~$A$, maka
+   \[ \diag(uv,\vc 1) \sim_h \diag(vu, \vc 1) \]
+dalam~$\ofml U(\M 2A)$.
+\end{exam}
+
+\begin{prop}\label{0060244} Misalkan $p$ dan $q$ proyeksi dalam suatu aljabar-$C^*$~$A$. Maka
+   \[ p \sim_u q \implies \diag(p,\vc 0) \sim_h \diag(q,\vc 0) \text{ dalam $\ofml P(\M 2A)$.} \]
+\end{prop}
+
+\begin{exam}\label{0060247fa} Dua proyeksi dalam $\mathbf M_n$ ekuivalen Murray--von Neumann jika dan hanya jika keduanya memiliki teras yang sama,
+yang pada gilirannya ekuivalen dengan jangkauan keduanya berdimensi sama.
+\end{exam}
+
+\begin{proof}[\emph{Petunjuk untuk bukti}] Gunakan proposisi~\ref{tr0121}--\ref{tr0124} dan~\ref{pi0117}--\ref{pi0121}.   \ns
+\end{proof}
+
+Dalam contoh~\ref{000533a} kita memperkenalkan aljabar matriks $n \times n$ $\M nA$, dengan $A$ suatu aljabar. Jika $A$ suatu
+aljabar-$*\,$ dan $n \in \N$, kita dapat memperlengkapi $\M nA$ dengan involusi secara alami. Involusi itu didefinisikan, seperti yang dapat diduga,
+sebagai analog dari ``transposisi konjugat'': jika $\vc a \in \M nA$, maka
+   \[ \vc a^* = \bigl[a_{ij}\bigr]^* := \bigl[{a_{ji}}^*\bigr]. \]
+
+Jika $A$ suatu aljabar-$C^*$, kita dapat memperkenalkan norma pada $\M nA$ yang membuatnya juga menjadi aljabar-$C^*$.
+ \index{Ma@$\M nA$!sebagai aljabar-$C^*$}%
+ \index{C*@aljabar-$C^*$!$\M nA$ sebagai suatu}%
+Pilih representasi setia $\phi\colon A \sto \ofml B(H)$ dari $A$, dengan $H$ suatu ruang Hilbert. Untuk setiap $n \in \N$
+definisikan
+   \[ \phi_n\colon \M nA \sto \ofml B(H^n)\colon \bigl[a_{ij}\bigr] \mapsto \bigl[ \phi(a_{ij})\bigr] \]
+dengan $H^n$ jumlah langsung $n$ rangkap dari $H$ dengan dirinya sendiri. Kemudian definisikan norma suatu elemen $\vc a \in \M nA$ sebagai
+norma operator $\phi_n(\vc a) \in \ofml B(H^n)$. Yakni, $\norm{\vc a} := \norm{\phi_n(\vc a)}$.
+
+Norma ini merupakan norma-$C^*$ pada $\M nA$. Norma tersebut tidak bergantung pada representasi khusus yang kita pilih berkat
+ketunggalan norma-$C^*$ (lihat akibat~\ref{00152144}).
+
+\begin{prop} Misalkan $A$ suatu aljabar-$C^*$ dan $\vc a \in \M nA$. Maka
+   \[ \max\{\norm{a_{ij}}\colon 1 \le i,j \le n\} \le \norm{\vc a} \le \sum_{i,j = 1}^n \norm{a_{ij}}. \]
+\end{prop}
+
+\begin{proof}[\emph{Petunjuk untuk bukti}] Karena setiap representasi setia merupakan isometri (lihat proposisi~\ref{00152181}),
+Anda dapat menyederhanakan persoalan dengan memandang representasi $\phi\colon A \sto \ofml B(H)$ yang dibahas di atas sebagai
+pemetaan inklusi.
+
+Untuk ketaksamaan pertama, bagi $v \in H$ definisikan vektor $\vc E_j(v) \in H^n$ sebagai $n$-tupel
+yang semua entrinya nol kecuali entri ke-$j$, yang bernilai~$v$. Kemudian periksa bahwa
+   \[ \norm{a_{ij}v} \le \norm{\vc a\vc E_j(v)} \le \norm{\vc a} \]
+setiap kali $\vc a \in \M nA$, $v \in H$, dan $\norm v \le 1$.
+
+Untuk ketaksamaan kedua, tunjukkan bahwa
+   \[ {\norm{\vc a\vc v}}^2 \le \sum_{i=1}^n\biggl(\sum_{j=1}^n \norm{a_{ij}}\biggr)^2 \le \biggl(\sum_{i=1}^n\sum_{j=1}^n \norm{a_{ij}}\biggr)^2 \]
+setiap kali $\vc a \in \M nA$, $\vc v \in H^n$, dan $\norm{\vc v} \le 1$.    \ns
+\end{proof}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Semigrup Proyeksi}
+
+\begin{notn} Jika $A$ suatu aljabar-$C^*$ dan $n \in \N$, kita menetapkan
+ \index{P@$\fml P_n(A)$, $\fml P_\infty(A)$ (proyeksi dalam aljabar matriks)}%
+  \begin{align*}
+       \fml P_n(A) &= \fml P(\M nA) \quad\text{ dan} \\
+       \fml P_\infty(A) &= \bigcup_{n=1}^\infty \fml P_n(A).
+  \end{align*}
+\end{notn}
+
+Sekarang kita memperluas ekuivalensi Murray--von Neumann ke matriks-matriks yang ukurannya berbeda.
+
+\begin{notn} Jika $A$ suatu aljabar-$C^*$, misalkan
+ \index{Ma@$\M {n,m}A$ (matriks dengan entri dari~$A$)}%
+$\M {n,m}A$ menyatakan himpunan matriks $n \times m$ berentri dalam~$A$.
+\end{notn}
+
+Selanjutnya kita memperluas ekuivalensi Murray--von Neumann ke matriks proyeksi yang ukurannya tidak harus sama.
+
+\begin{defn}\label{0060316fa} Jika $A$ suatu aljabar-$C^*$, $p \in \fml P_m(A)$, dan $q \in \fml P_n(A)$, kita menetapkan
+ \index{ekuivalensi Murray--von Neumann}%
+ \index{ekuivalensi!Murray--von Neumann}%
+ \index{<binrelequiv@$p \sim q$ (ekuivalensi Murray--von Neumann)}%
+$p \sim q$ jika terdapat $v \in \M {n,m}A$ sedemikian sehingga
+  \[ v^*v = p \qquad\text{ dan } \qquad  vv^* = q. \]
+Kita akan memperluas penggunaan nama \emph{ekuivalensi Murray--von Neumann} untuk relasi baru ini pada~$\fml P_\infty(A)$.
+\end{defn}
+
+\begin{prop}\label{0060317} Relasi $\sim$ yang didefinisikan di atas merupakan relasi
+ekuivalensi pada~$\fml P_\infty(A)$.
+\end{prop}
+
+\begin{defn} Untuk setiap aljabar-$C^*$ $A$, kita mendefinisikan operasi biner $\oplus$ pada $\fml
+P_\infty(A)$ dengan
+   \[ p \oplus q = \diag(p,q)\,. \]
+Jadi, jika $p \in \fml P_m(A)$ dan $q \in \fml P_n(A)$, maka $p \oplus q \in \fml
+P_{m+n}(A)$.
+\end{defn}
+
+Dalam proposisi berikut, $\vc 0_n$ adalah identitas aditif dalam~$\fml P_n(A)$.
+
+\begin{prop}\label{0060324} Misalkan $A$ suatu aljabar-$C^*$ dan $p \in \fml P_\infty(A)$.
+ \index{<sum@$p \oplus q$ (operasi biner dalam $\fml P_\infty(A)$)}%
+Maka $p \sim p \oplus \vc 0_n$ untuk setiap $n \in \N$.
+\end{prop}
+
+\begin{prop}\label{0060327} Misalkan $A$ suatu aljabar-$C^*$ dan $p$, $p'$, $q$, $q' \in
+\fml P_\infty(A)$. Jika $p \sim p'$ dan $q \sim q'$, maka $p \oplus q \sim p' \oplus q'$.
+\end{prop}
+
+\begin{prop}\label{0060331} Misalkan $A$ suatu aljabar-$C^*$ dan $p$, $q \in \fml P_\infty(A)$.
+Maka $p \oplus q \sim q \oplus p$.
+\end{prop}
+
+\begin{prop}\label{0060334} Misalkan $A$ suatu aljabar-$C^*$ dan $p$, $q \in \fml P_n(A)$ untuk
+suatu $n$. Jika $p \perp q$, maka $p + q$ suatu proyeksi dalam $\M nA$ dan $p + q \sim p \oplus q$.
+\end{prop}
+
+\begin{prop}\label{0060337} Jika $A$ suatu aljabar-$C^*$, maka operasi $\oplus$ pada $\fml P_\infty(A)$ bersifat
+asosiatif secara ketat dan komutatif hanya hingga ekuivalensi Murray--von Neumann. % SOURCE-CORRECTION: CH17-C006
+\end{prop}
+
+\begin{notn}\label{0060411} Jika $A$ suatu aljabar-$C^*$ dan $p \in \fml P_\infty(A)$, misalkan
+ \index{<bracsqr@$\sbsb{[p]}{\fml D}$ (kelas ekuivalensi $\sim$ dari $p$)}%
+$\sbsb{[p\,]}{\fml D}$ adalah kelas ekuivalensi yang memuat $p$ dan ditentukan oleh
+relasi ekuivalensi~$\sim$. Tetapkan pula
+ \index{D@$\fml D(A)$ (himpunan kelas ekuivalensi proyeksi)}%
+$\fml D(A) := \{\,\sbsb{[p\,]}{\fml D}\colon p \in \fml P_\infty(A)\,\}$.
+\end{notn}
+
+\begin{defn}\label{0060414} Misalkan $A$ suatu aljabar-$C^*$. Definisikan operasi biner $+$ pada
+$\fml D(A)$ dengan
+ \index{<binop@$\sbsb{[p\,]}{\fml D} + \sbsb{[q\,]}{\fml D}$ (penjumlahan dalam $\fml D(A)$)}%
+   \[ \sbsb{[p\,]}{\fml D} + \sbsb{[q\,]}{\fml D} := \sbsb{[p \oplus q\,]}{\fml D} \]
+dengan $p$, $q \in \fml P_\infty(A)$.
+\end{defn}
+
+\begin{prop}\label{0060417} Operasi $+$ yang didefinisikan dalam~\ref{0060414} terdefinisi dengan baik
+dan menjadikan $\fml D(A)$ suatu semigrup komutatif.
+\end{prop}
+
+\begin{exam}\label{0060421} Semigrup $\fml D(\C)$ isomorfik dengan semigrup aditif bilangan bulat tak negatif; yaitu, % SOURCE-CORRECTION: CH17-C007
+    \[ \fml D(\C) \cong \Z^+ = \{0,1,2,\dots\}\,.  \]
+\end{exam}
+
+\begin{proof}[\emph{Petunjuk untuk bukti}] Gunakan contoh~\ref{0060247fa}. \ns
+\end{proof}
+
+\begin{exam}\label{0060424} Jika $H$ suatu ruang Hilbert terpisahkan berdimensi tak hingga, maka % SOURCE-CORRECTION: CH17-C008
+   \[ \fml D(\ofml B(H)) \cong \Z^+ \cup \{\infty\}. \]
+(Gunakan penjumlahan biasa pada $\Z^+$ dan tetapkan $n + \infty = \infty + n = \infty$ setiap kali $n
+\in \Z^+ \cup \{\infty\}$.)
+\end{exam}
+
+\begin{exam}\label{0060427} Untuk aljabar-$C^*$ $\C \oplus \C$, kita mempunyai
+   \[ \fml D(\C \oplus \C) \cong \Z^+ \oplus \Z^+\,. \]
+\end{exam}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Konstruksi Grothendieck}
+Dalam konstruksi medan bilangan real, kita dapat menggunakan teknik yang sama untuk beralih dari (semigrup aditif) bilangan asli ke
+(grup aditif semua) bilangan bulat seperti yang kita gunakan untuk beralih dari (semigrup multiplikatif) bilangan bulat tak nol ke (grup multiplikatif
+semua) bilangan rasional tak nol. Teknik ini disebut \emph{konstruksi Grothendieck}.
+
+\begin{defn}\label{0062111} Misalkan $(S,+)$ suatu semigrup komutatif. Definisikan relasi
+ \index{<binrelequiv@$(a,b) \sim (c,d)$ (ekuivalensi Grothendieck)}%
+$\sim$ pada $S \times S$ dengan
+   \[ (a,b) \sim (c,d) \text{ jika terdapat $k \in S$ sedemikian sehingga } a + d + k = b + c + k. \]
+\end{defn}
+
+\begin{prop}\label{0062114} Relasi $\sim$ yang didefinisikan di atas merupakan relasi ekuivalensi.
+\end{prop}
+
+\begin{notn} Untuk relasi ekuivalensi $\sim$ yang didefinisikan dalam~\ref{0062111}, kelas ekuivalensi
+yang memuat pasangan $(a,b)$ akan dinotasikan dengan % SOURCE-CORRECTION: CH17-C009
+ \index{<bracpnt@$\langle a,b \rangle$ (pasangan dalam konstruksi Grothendieck)}%
+$\langle a,b \rangle$, bukan dengan~$[(a,b)]$.
+\end{notn}
+
+\begin{defn} Misalkan $(S,+)$ suatu semigrup komutatif. Pada $G(S)$, definisikan operasi biner
+ \index{penjumlahan!pada grup Grothendieck}%
+(yang juga dinotasikan dengan $+$) sebagai berikut:
+  \[ \langle a,b \rangle + \langle c,d \rangle := \langle a + c,b + d\rangle\,. \]
+\end{defn}
+
+\begin{prop}\label{0062119} Operasi $+$ yang didefinisikan di atas terdefinisi dengan baik, dan di bawah
+operasi ini $G(S)$ menjadi grup Abelian. % SOURCE-CORRECTION: CH17-C010
+\end{prop}
+
+Grup Abelian $(G(S),+)$ disebut
+ \index{G@$G(S)$ (grup Grothendieck dari $S$)}%
+ \index{Grothendieck!grup}%
+ \index{grup!Grothendieck}%
+\df{grup Grothendieck} dari~$S$.
+
+\begin{prop}\label{0062124} Untuk suatu semigrup $S$ dan sembarang $a \in S$, definisikan
+pemetaan
+ \index{gamma@$\sbsb{\gamma}S$ (pemetaan Grothendieck)}%
+   \[ \sbsb{\gamma}S \colon S \sto G(S) \colon s \mapsto \langle s + a, a \rangle\,. \]
+Pemetaan $\sbsb{\gamma}S$, yang disebut
+ \index{Grothendieck!pemetaan}%
+\df{pemetaan Grothendieck}, terdefinisi dengan baik dan merupakan homomorfisme semigrup.
+\end{prop}
+
+Pernyataan bahwa pemetaan Grothendieck terdefinisi dengan baik berarti bahwa definisinya tidak bergantung
+pada pilihan~$a$. Kita sering hanya menulis $\gamma$ untuk~$\sbsb{\gamma}S$.
+
+\begin{exam}\label{0062126} Baik $\N = \{1,2,3,\dots\}$ maupun $\Z^+ = \{0,1,2,\dots\}$ merupakan
+semigrup komutatif di bawah penjumlahan. Keduanya menghasilkan grup Grothendieck yang sama,
+   \[G(\N) = G(\Z^+) = \Z\,. \]
+\end{exam}
+
+Tidak ada yang menjamin bahwa grup Grothendieck dari suatu semigrup sembarang akan sangat menarik.
+
+\begin{exam}\label{0062127} Misalkan $S$ semigrup aditif komutatif $\Z^+ \cup \{\infty\}$. Maka $G(S) = \{\vc 0\}$.
+\end{exam}
+
+\begin{exam}\label{0062128} Misalkan $\Z_0$ semigrup multiplikatif (komutatif) bilangan bulat tak nol.
+Maka $G(\Z_0) = \Q_0$, yaitu grup multiplikatif Abelian dari bilangan rasional tak
+nol.
+\end{exam}
+
+\begin{prop}\label{0062141} Jika $S$ suatu semigrup komutatif, maka
+   \[ G(S) = \{\gamma(s) - \gamma(t)\colon s,t \in S\}\,. \]
+\end{prop}
+
+\begin{prop}\label{0062142} Jika $r$, $s \in S$, dengan $S$ suatu semigrup komutatif, maka $\gamma(r) = \gamma(s)$ jika dan hanya jika
+terdapat $t \in S$ sedemikian sehingga $r + t = s + t$.
+\end{prop}
+
+\begin{defn} Suatu semigrup komutatif $S$ memiliki
+ \index{sifat pembatalan}%
+\df{sifat pembatalan} jika setiap kali $r$, $s$, $t \in S$ memenuhi $r + t = s + t$, berlaku $r = s$.
+\end{defn}
+
+\begin{cor}\label{0062144} Misalkan $S$ suatu semigrup komutatif. Pemetaan Grothendieck $\sbsb\gamma S\colon S \sto G(S)$ injektif
+jika dan hanya jika $S$ memiliki sifat pembatalan.
+\end{cor}
+
+Proposisi berikut menyatakan sifat universal grup Grothendieck.
+
+\begin{prop}\label{0062151} Misalkan $S$ suatu semigrup (aditif) komutatif dan $G(S)$ grup Grothendieck-nya.
+ \index{universal!sifat!pemetaan Grothendieck}%
+ \index{Grothendieck!pemetaan!sifat universal}%
+Jika $H$ suatu grup Abelian dan $\phi\colon S \sto H$ suatu pemetaan aditif, maka terdapat
+homomorfisme grup tunggal $\psi\colon G(S) \sto H$ sedemikian sehingga diagram berikut
+komutatif.
+ \begin{equation}\label{0062151i}
+   \xy
+     \qtriangle/{>}`{>}`{-->}/[S`\abs{G(S)}`\abs{H};\gamma`\phi`\abs{\psi}]
+     \morphism(1100,500)|r|/{-->}/<0,-500>[G(S)`H;\psi]
+   \endxy
+ \end{equation}
+\end{prop}
+
+Dalam diagram sebelumnya, $\abs{G(S)}$ dan $\abs{H}$ hanyalah $G(S)$ dan $H$ yang dipandang sebagai
+semigrup, sedangkan $\abs{\psi}$ adalah homomorfisme semigrup yang bersesuaian. Dengan kata lain,
+funktor pelupa $\abs{\hphantom{G}}$ ``melupakan'' hanya identitas dan invers, tetapi tidak
+operasi penjumlahan. Jadi, segitiga di sebelah kiri merupakan diagram komutatif dalam
+kategori semigrup dan homomorfisme semigrup.
+
+\begin{prop}\label{0062154} Misalkan $\phi\colon S \sto T$ homomorfisme semigrup
+komutatif. Maka pemetaan $\sbsb{\gamma}T \circ \phi\colon S \sto G(T)$ aditif. Berdasarkan
+proposisi~\ref{0062151}, terdapat homomorfisme grup tunggal $G(\phi)\colon G(S)
+\sto G(T)$ sedemikian sehingga diagram berikut komutatif.
+   \[ \xy
+          \Square[S`T`G(S)`G(T);\phi`\sbsb{\gamma}S`\sbsb{\gamma}T`G(\phi)]
+      \endxy \]
+\end{prop}
+
+\begin{prop}\label{0062155} Pasangan pemetaan $S \mapsto G(S)$, yang memetakan semigrup komutatif ke
+ \index{funktor!Grothendieck}%
+ \index{Grothendieck!konstruksi!sifat funktorial}%
+grup Grothendieck yang bersesuaian, dan $\phi \mapsto G(\phi)$, yang memetakan homomorfisme semigrup ke
+homomorfisme-homomorfisme grup (sebagaimana didefinisikan dalam~\ref{0062154}), merupakan funktor kovarian dari kategori % SOURCE-CORRECTION: CH17-C011
+semigrup komutatif dan homomorfisme semigrup ke kategori grup Abelian
+dan homomorfisme grup.
+\end{prop}
+
+Salah satu keuntungan kecil dari penyertaan funktor pelupa yang agak bertele-tele dalam
+diagram~\eqref{0062151i} adalah bahwa hal itu memungkinkan kita memandang pemetaan Grothendieck
+$\gamma\colon S \mapsto \sbsb{\gamma}S$ sebagai transformasi alami antarfungtor.
+
+\begin{cor}[Kealamian Pemetaan Grothendieck]\label{0062157} Misalkan $\abs{\hphantom{G}}$ funktor pelupa
+pada grup Abelian yang ``melupakan'' identitas dan invers, tetapi tidak
+operasi grup, seperti dalam~\ref{0062151}. Maka $\abs{G(\hphantom{S})}$ merupakan funktor kovarian dari
+kategori semigrup komutatif dan homomorfisme semigrup ke dirinya sendiri.
+ \index{Grothendieck!pemetaan!kealamian}%
+ \index{alami!transformasi!pemetaan Grothendieck sebagai suatu}%
+Selanjutnya, pemetaan Grothendieck $\gamma\colon S \mapsto \sbsb{\gamma}S$ merupakan transformasi
+alami dari funktor identitas ke funktor~$\abs{G(\hphantom{S})}$.
+  \[ \xy
+          \Square[S`T`\abs{G(S)}`\abs{G(T)};\phi`\sbsb{\gamma}S`\sbsb{\gamma}T`\abs{G(\phi)}]
+      \endxy \]
+\end{cor}

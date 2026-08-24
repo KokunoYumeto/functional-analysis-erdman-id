@@ -1,0 +1,790 @@
+\section{Grup $\mathbf{\emph{K}_0}$ untuk Aljabar-$C^*$ Beridentitas}
+
+\begin{defn} Misalkan $A$ aljabar-$C^*$ beridentitas. Misalkan
+ \index{K0@$K_0(A)$!untuk $A$ beridentitas}%
+$K_0(A) := G(\fml D(A))$, grup Grothendieck dari semigrup $\fml D(A)$ yang didefinisikan dalam~\ref{0060411} dan~\ref{0060414},
+dan definisikan
+ \index{<bracsqr@$[p\,]$ (citra $[p\,]_{\fml D}$ di bawah pemetaan Grothendieck)}%
+   \[ [\hphantom{P}]\colon \fml P_\infty(A) \sto K_0(A)
+           \colon p \mapsto \sbsb{\gamma}{\fml D(A)}\bigl([p\,]_{\fml D}\bigr)\,. \]
+\end{defn}
+
+Proposisi berikut merupakan konsekuensi langsung dari definisi ini.
+
+\begin{prop}\label{0062188fa} Misalkan $A$ aljabar-$C^*$ beridentitas dan $p$, $q \in \fml P_\infty(A)$. Jika $p$ dan $q$
+ekuivalen Murray--von Neumann, maka $[p\,] = [q\,]$ dalam~$K_0(A)$.
+\end{prop}
+
+\begin{defn} Misalkan $A$ aljabar-$C^*$ beridentitas dan $p$, $q \in \fml P_\infty(A)$. Kita mengatakan bahwa $p$
+ \index{ekuivalensi!stabil}%
+ \index{ekuivalensi stabil}%
+\df{ekuivalen secara stabil} dengan $q$ dan menulis
+ \index{<binrelequivst@$p \sim_{st} q$ (ekuivalensi stabil)}%
+$p \sim_{st} q$ jika terdapat proyeksi $r \in \fml P_\infty(A)$ sedemikian sehingga $p \oplus r \sim q \oplus r$.
+\end{defn}
+
+\begin{prop} Ekuivalensi stabil $\sim_{st}$ merupakan relasi ekuivalensi pada $\fml P_\infty(A)$.
+\end{prop}
+
+\begin{prop} Misalkan $A$ aljabar-$C^*$ beridentitas dan $p$, $q \in \fml P_\infty(A)$. Maka $p
+\sim_{st} q$ jika dan hanya jika $p \oplus \vc 1_n \sim q \oplus \vc 1_n$ untuk suatu $n \in \N$.
+\end{prop}
+
+Di sini, tentu saja, $\vc 1_n$ adalah identitas perkalian dalam $\M nA$.
+
+\begin{prop}[Gambaran Standar $K_0(A)$ ketika $A$ beridentitas]\label{0062224} Jika $A$ suatu
+aljabar-$C^*$ beridentitas, maka
+ \index{standar!gambaran $K_0(A)$!ketika $A$ beridentitas}%
+ \index{gambaran (\seeonly{gambaran standar}))}%
+   \begin{align*}
+         K_0(A) &= \{ [p\,] - [q\,]\colon p,q \in \fml P_\infty(A)\}  \\
+                &= \{ [p\,] - [q\,]\colon  p,q \in \fml P_n(A) \text{ untuk suatu $n \in \N$}\}\,.
+   \end{align*}
+\end{prop}
+
+\begin{prop} Misalkan $A$ aljabar-$C^*$ beridentitas dan $p$, $q \in \fml P_\infty(A)$. Maka $[p
+\oplus q\,] = [p\,] + [q\,]$.
+\end{prop}
+
+\begin{prop} Misalkan $A$ aljabar-$C^*$ beridentitas dan $p$, $q \in \fml P_n(A)$. Jika $p \sim_h q$
+dalam $\fml P_n(A)$, maka $[p\,] = [q\,]$.
+\end{prop}
+
+\begin{prop} Misalkan $A$ aljabar-$C^*$ beridentitas dan $p$, $q \in \fml P_n(A)$. Jika $p \perp q$
+dalam $\fml P_n(A)$, maka $p + q \in \fml P_n(A)$ dan $[p + q\,] = [p\,] + [q\,]$.
+\end{prop}
+
+\begin{prop} Misalkan $A$ aljabar-$C^*$ beridentitas dan $p$, $q \in \fml P_\infty(A)$. Maka
+$[p\,] = [q\,]$ jika dan hanya jika $p \sim_{st} q$.
+\end{prop}
+
+ Proposisi berikut menetapkan suatu sifat universal dari $K_0(A)$ ketika $A$ beridentitas. Di dalamnya, funktor pelupa $\abs{\hphantom{G}}$
+ adalah funktor yang dijelaskan dalam proposisi~\ref{0062151}.
+
+\begin{prop}\label{0062244} Misalkan $A$ aljabar-$C^*$ beridentitas, $G$ grup Abelian, dan $\nu\colon \fml P_\infty(A) \sto \abs G$
+homomorfisme semigrup yang memenuhi
+ \index{universal!sifat!dari $K_0$ (kasus beridentitas)}%
+ \index{K0@$K_0$!sifat universal dari}%
+ \begin{enumerate}[label=\rm{(\alph*)}]
+    \item $\nu(\vc 0_A) = \vc 0_G$ dan
+    \item jika $p \sim_h q$ dalam $\fml P_n(A)$ untuk suatu $n$, maka $\nu(p) = \nu(q)$.
+ \end{enumerate}
+Maka terdapat homomorfisme grup tunggal $\wt\nu\colon K_0(A) \sto G$ sedemikian sehingga diagram berikut komutatif.
+   \[\xy
+      \qtriangle/{>}`{>}`{-->}/<1000,700>[\fml P_\infty(A)`\abs{K_0(A)}`\abs G;{[\hphantom{P}]}`\nu`\abs{\wt\nu}]
+      \morphism(1600,700)|r|/{-->}/<0,-700>[K_0(A)`G;\wt\nu]
+     \endxy\]
+\end{prop}
+
+\begin{proof}[\emph{Petunjuk untuk bukti}] Misalkan $\tau\colon \fml D(A) \sto \abs G\colon \sbsb{[p\,]}{\fml D} \mapsto \nu(p)$. % SOURCE-CORRECTION: CH17-C026
+Periksa bahwa $\tau$ terdefinisi dengan baik dan merupakan homomorfisme semigrup. Kemudian gunakan proposisi~\ref{0062151}.  \ns
+\end{proof}
+
+\begin{defn} Homomorfisme-$*\,$ $\phi\colon A \sto B$ di antara aljabar-$C^*$ diperluas, untuk
+setiap $n \in \N$, menjadi homomorfisme-$*\,$ $\phi\colon \M nA \sto \M nB$ dan juga (karena homomorfisme-$*\,$ membawa proyeksi
+ke proyeksi) memiliki pembatasan berupa pemetaan $\phi$ dari $\fml P_\infty(A)$ ke $\fml P_\infty(B)$. % SOURCE-CORRECTION: CH17-C012
+Untuk homomorfisme-$*\,$ $\phi$ semacam itu, definisikan
+   \[ \nu\colon \fml P_\infty(A) \sto K_0(B)\colon p \mapsto [\phi(p)]\,. \]
+Maka $\nu$ merupakan homomorfisme semigrup yang memenuhi syarat (a) dan (b) dalam proposisi~\ref{0062244}, sehingga
+terdapat homomorfisme grup tunggal
+ \index{K0@$K_0(\phi)$!kasus beridentitas}%
+$K_0(\phi)\colon K_0(A) \sto K_0(B)$ sedemikian sehingga $K_0(\phi)\bigl([p\,]\bigr) = \nu(p)$ untuk setiap $p \in \fml P_\infty(A)$.
+\end{defn}
+
+\begin{prop} Pasangan pemetaan $A \mapsto K_0(A)$, $\phi \mapsto K_0(\phi)$ merupakan funktor kovarian
+dari kategori aljabar-$C^*$ beridentitas dan homomorfisme-$*\,$ ke kategori grup Abelian dan
+homomorfisme grup. Lebih lanjut, untuk semua homomorfisme-$*\,$ $\phi\colon A \sto B$ di antara aljabar-$C^*$ beridentitas, diagram
+berikut komutatif.
+  \[\xy
+         \Square[\fml P_\infty(A)`\fml
+         P_\infty(B)`K_0(A)`K_0(B);\phi`{[\hphantom{P}]}`{[\hphantom{P}]}`K_0(\phi)]
+  \endxy\]
+\end{prop}
+
+\begin{notn} Untuk aljabar-$C^*$ $A$ dan $B$, misalkan
+ \index{hom@$\Hom(A,B)$ (himpunan homomorfisme-$*\,$ di antara aljabar-$C^*$)}%
+$\Hom(A,B)$ adalah keluarga semua homomorfisme-$*\,$ dari $A$ ke~$B$.
+\end{notn}
+
+\begin{defn} Misalkan $A$ dan $B$ aljabar-$C^*$ serta $a \in A$. Untuk $\phi$, $\psi \in \Hom(A,B)$,
+misalkan
+   \[ d_a(\phi,\psi) = \norm{\phi(a) - \psi(a)}\,. \]
+Maka $d_a$ merupakan pseudometrik pada $\Hom (A,B)$. Topologi yang dibangkitkan oleh keluarga $\{d_a\colon a \in A\}$ adalah
+ \index{topologi norma-titik}%
+ \index{topologi!norma-titik}%
+\df{topologi norma-titik} pada~$\Hom(A,B)$. (Untuk setiap $a \in A$, misalkan $\sfml B_a$ adalah keluarga bola terbuka dalam $\Hom(A,B)$ yang dibangkitkan oleh
+pseudometrik~$d_a$. Keluarga $\bigcup\{\sfml B_a\colon a \in A\}$ merupakan subbasis bagi topologi norma-titik.)
+\end{defn}
+
+\begin{defn} Misalkan $A$ dan $B$ aljabar-$C^*$. Kita mengatakan bahwa homomorfisme-$*\,$ $\phi$, $\psi\colon A \sto B$
+ \index{homotop!homomorfisme-$*\,$}%
+ \index{<star@homomorfisme-$*\,$!homotopi dari}%
+ \index{<binrelequivh@$\phi\sim_h\psi$ (homotopi homomorfisme-$*\,$)}%
+\df{homotop}, dan menulis $\phi \sim_h \psi$, jika terdapat suatu fungsi
+   \[ c\colon [0,1] \times A \sto B\colon (t,a) \mapsto c_t(a) \]
+sedemikian sehingga
+  \begin{enumerate}[label=\rm{(\alph*)}]
+     \item untuk setiap $t \in [0,1]$, pemetaan $c_t\colon A \sto B \colon a \mapsto c_t(a)$ merupakan homomorfisme-$*\,$,
+     \item untuk setiap $a \in A$, pemetaan $c(a)\colon [0,1] \sto B\colon t \mapsto c_t(a)$ merupakan lintasan (kontinu) dalam~$B$,
+     \item $c_0 = \phi$, dan
+     \item $c_1 = \psi$.
+  \end{enumerate}
+\end{defn}
+
+\begin{prop} Dua homomorfisme-$*\,$ $\phi_0$, $\phi_1\colon A \sto B$ di antara aljabar-$C^*$
+homotop jika dan hanya jika terdapat lintasan kontinu norma-titik dari $\phi_0$ ke $\phi_1$ dalam~$\Hom(A,B)$.
+\end{prop}
+
+\begin{defn} Kita mengatakan bahwa aljabar-$C^*$ $A$ dan $B$
+ \index{homotop!ekuivalensi!homomorfisme-$*\,$}%
+ \index{ekuivalensi!homotopi!homomorfisme-$*\,$}%
+\df{ekuivalen secara homotopi} jika terdapat homomorfisme-$*\,$ $\phi\colon A \sto B$ dan $\psi\colon B \sto A$ sedemikian sehingga $\psi
+\circ \phi \sim_h \id A$ dan $\phi \circ \psi \sim_h \id B$. Suatu aljabar-$C^*$ disebut
+ \index{kontraktibel!aljabar-$C^*$}%
+\df{kontraktibel} jika ekuivalen secara homotopi dengan~$\{\vc 0\}$.
+\end{defn}
+
+\begin{prop}\label{0062327} Misalkan $A$ dan $B$ aljabar-$C^*$ beridentitas. Jika $\phi \sim_h \psi$
+dalam $\Hom(A,B)$, maka $K_0(\phi) = K_0(\psi)$.
+\end{prop}
+
+%\begin{proof} Lihat \cite{RordamLL:2000}, proposisi 3.2.6.  \ns \end{proof}
+
+\begin{prop}\label{0062331} Jika aljabar-$C^*$ beridentitas $A$ dan $B$
+ \index{homotopi!invariansi $K_0$}%
+ \index{K0@$K_0$!invariansi homotopi dari}%
+ekuivalen secara homotopi, maka $K_0(A) \cong K_0(B)$.
+\end{prop}
+
+\begin{prop}\label{0062334} Jika $A$ suatu aljabar-$C^*$ beridentitas, maka barisan eksak terbelah
+   \begin{equation}\label{0062334i}
+      \vc 0 \to A \to^\iota \wt A \two/->`<-/^Q_\psi \C \to \vc 0
+   \end{equation}
+\emph{(lihat \ref{0015213}, Kasus 1, butir (7)\,)} menginduksi barisan eksak terbelah lainnya
+   \begin{equation}\label{0062334ii}
+      \vc 0 \to K_0(A) \to^{K_0(\iota)} K_0(\wt A) \two/->`<-/^{K_0(Q)}_{K_0(\psi)} K_0(\C) \to \vc 0 \,.
+   \end{equation}
+\end{prop}
+
+\begin{proof}[\emph{Petunjuk untuk bukti}] Definisikan dua fungsi tambahan
+   \[ \mu\colon \wt A \sto A\colon a + \lambda \vc j \mapsto a \]
+dan
+   \[ \psi' \colon \C \sto \wt A \colon \lambda \mapsto \lambda \vc j\,. \]
+Kemudian periksa bahwa
+   \begin{enumerate}[label=\rm{(\alph*)}]
+     \item $\mu \circ \iota = \id A$,
+     \item $\iota \circ \mu + \psi' \circ Q = \id{\wt A}$,
+     \item $Q \circ \iota = \vc 0$, dan
+     \item $Q \circ \psi' = \id{\C}$. % SOURCE-CORRECTION: CH17-C013
+   \end{enumerate}   \ns
+\end{proof}
+
+\begin{exam} Untuk setiap $n \in \N$,
+ \index{K0@$K_0(A)$!adalah $\Z$ ketika $A = \mathbf M_n$}%
+$K_0(\mathbf M_n) \cong \Z$.
+\end{exam}
+
+\begin{exam} Jika $H$ ruang Hilbert terpisahkan berdimensi tak hingga,
+ \index{K0@$K_0(A)$!adalah $\vc 0$ ketika $A = \ofml B(H)$}%
+maka $K_0(\ofml B(H)) \cong \vc 0$.
+\end{exam}
+
+\begin{defn} Ingat bahwa suatu ruang topologis $X$ disebut
+ \index{kontraktibel!ruang topologis}%
+\df{kontraktibel} jika terdapat titik $a$ dalam ruang tersebut dan fungsi kontinu $f\colon [0,1] \times X \sto X$ sedemikian sehingga $f(1,x) = x$
+dan $f(0,x) = a$ untuk setiap $x \in X$.
+\end{defn}
+
+\begin{exam} Jika $X$ ruang Hausdorff kompak yang kontraktibel, maka
+ \index{K0@$K_0(A)$!adalah $\Z$ ketika $A = \fml C(X)$, $X$ kontraktibel}%
+$K_0(\fml C(X)) \cong \Z$.
+\end{exam}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{$\mathbf{\emph{K}_0}(A)$---Kasus Tak Beridentitas}
+\begin{defn} Misalkan $A$ aljabar-$C^*$ tak beridentitas. Ingat bahwa barisan eksak terbelah
+ ~\eqref{0062334i} bagi unitalisasi $A$ menginduksi barisan eksak terbelah
+~\eqref{0062334ii} di antara grup-grup $K_0$ yang bersesuaian.
+ \index{K0@$K_0(A)$!untuk $A$ tak beridentitas}%
+Definisikan
+   \[ \pi:=Q,\qquad K_0(A) = \ker(K_0(\pi))\,. \] % SOURCE-CORRECTION: CH17-C014
+\end{defn}
+
+\begin{prop}\label{0062413} Untuk aljabar-$C^*$ tak beridentitas $A$, pemetaan $[\hphantom{P}] \colon \fml
+P_\infty(A) \sto K_0(\wt A)$ dapat dipandang sebagai pemetaan dari $\fml P_\infty(A)$ ke dalam~$K_0(A)$.
+\end{prop}
+
+\begin{prop}\label{0062416} Untuk aljabar-$C^*$ beridentitas maupun tak beridentitas, barisan
+  \[ \vc 0 \to K_0(A) \to K_0(\wt A) \to K_0(\C) \to \vc 0 \]
+bersifat eksak.
+\end{prop}
+
+\begin{prop}\label{0062418} Untuk aljabar-$C^*$ beridentitas maupun tak beridentitas, grup $K_0(A)$ (isomorfik
+dengan) $\ker(K_0(\pi))$.
+\end{prop}
+
+\begin{prop}\label{0062424} Jika $\phi\colon A \sto B$ merupakan homomorfisme-$*\,$ di antara aljabar-$C^*$, maka
+terdapat homomorfisme grup tunggal % SOURCE-CORRECTION: CH17-C015
+ \index{K0@$K_0(\phi)$!kasus tak beridentitas}%
+$K_0(\phi)$ yang membuat diagram berikut komutatif.
+   \[\xy
+     \hSquares/>`>`.>`>`=`>`>/[K_0(A)`K_0(\wt A)`K_0(\C)`K_0(B)`K_0(\wt
+     B)`K_0(\C);`K_0(\pi_A)`K_0(\phi)`K_0(\wt\phi)```K_0(\pi_B)]
+   \endxy\]
+\end{prop}
+
+\begin{prop}\label{0062511} Pasangan pemetaan $A \mapsto K_0(A)$, $\phi \mapsto K_0(\phi)$ merupakan
+ \index{funktor!$K_0$}%
+ \index{K0@$K_0$!sebagai funktor kovarian}%
+funktor kovarian dari kategori $\cat{CSA}$ aljabar-$C^*$ dan homomorfisme-$*\,$ ke
+kategori grup Abelian dan homomorfisme grup.
+\end{prop}
+
+Dalam proposisi~\ref{0062327} dan~\ref{0062331}, kita menyatakan invariansi homotopi dari
+funktor $K_0$ untuk aljabar-$C^*$ beridentitas. Sekarang kita memperluas hasil tersebut ke sebarang
+aljabar-$C^*$.
+
+\begin{prop}\label{0062521} Misalkan $A$ dan $B$ aljabar-$C^*$. Jika $\phi \sim_h \psi$
+dalam $\Hom(A,B)$, maka $K_0(\phi) = K_0(\psi)$.
+\end{prop}
+
+%\begin{proof} Lihat \cite{RordamLL:2000}, proposisi 4.1.4.  \ns \end{proof}
+
+\begin{prop}\label{0062524} Jika aljabar-$C^*$ $A$ dan $B$ ekuivalen secara homotopi,
+maka $K_0(A) \cong K_0(B)$.
+\end{prop}
+
+%\begin{proof} Lihat \cite{RordamLL:2000}, proposisi 4.1.4.  \ns \end{proof}
+
+\begin{defn} Misalkan $\pi:=Q$ dan $\lambda:=\psi$ adalah homomorfisme-$*\,$ yang berturut-turut berperan sebagai pemetaan hasil bagi dan penampang kanonik dalam barisan eksak
+terbelah~\eqref{0062334i} bagi unitalisasi suatu aljabar-$C^*$~$A$. Definisikan % SOURCE-CORRECTION: CH17-C016
+ \index{skalar!pemetaan}%
+\df{pemetaan skalar} $s\colon \wt A \sto \wt A$ untuk $\wt A$ dengan $s :=  \lambda \circ \pi$. Setiap
+anggota $\wt A$ dapat ditulis dalam bentuk $a + \alpha \vc 1_{\wt A}$ untuk suatu $a \in A$ dan
+$\alpha \in \C$. Perhatikan bahwa $s(a + \alpha \vc 1_{\wt A}) = \alpha \vc 1_{\wt A}$ dan bahwa $x
+- s(x) \in A$ untuk setiap $x \in \wt A$. Untuk setiap bilangan asli $n$, pemetaan skalar menginduksi
+pemetaan yang bersesuaian $s = s_n\colon \M n{\wt A} \sto \M n{\wt A}$. Suatu elemen $x \in \M n{\wt
+A}$ merupakan
+ \index{skalar!elemen}%
+\df{elemen skalar} dari $\M n{\wt A}$ jika $s(x) = x$.
+\end{defn}
+
+\begin{prop}[Gambaran Standar $K_0(A)$ untuk sebarang $A$]\label{0062544} Jika $A$ suatu
+aljabar-$C^*$,
+ \index{standar!gambaran $K_0(A)$!untuk sebarang $A$}%
+ \index{gambaran (\seeonly{gambaran standar}))}%
+maka
+     \[ K_0(A) = \{\,[p\,] - [s(p)]\colon p \in \fml P_\infty(\wt A)\}\,. \] % SOURCE-CORRECTION: CH17-C017
+\end{prop}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Sifat Keeksakan dan Stabilitas Funktor $K_0$}
+\begin{defn} Funktor kovarian $F$ dari kategori $\cat A$ ke kategori $\cat B$ disebut
+ \index{eksak terbelah!funktor}%
+ \index{funktor!eksak terbelah}%
+\df{eksak terbelah} jika membawa barisan eksak terbelah ke barisan eksak terbelah. Funktor tersebut disebut
+ \index{funktor eksak separuh}%
+ \index{funktor!eksak separuh}%
+\df{eksak separuh} jika setiap kali barisan
+   \[ \vc 0 \to A_1 \to^j A_2 \to^k A_3 \to \vc 0 \]
+eksak dalam $\cat A$, maka
+   \[ F(A_1) \to^{F(j)} F(A_2) \to^{F(k)} F(A_3) \]
+eksak dalam~$\cat B$.
+\end{defn}
+
+\begin{prop}\label{0062664} Funktor $K_0$ eksak separuh.
+\end{prop}
+
+%\begin{proof} Lihat~\cite{RordamLL:2000}, proposisi 4.3.2.  \ns \end{proof}
+
+\begin{prop}\label{0062667} Funktor $K_0$ eksak terbelah.
+\end{prop}
+
+%\begin{proof} Lihat~\cite{RordamLL:2000}, proposisi 4.3.3.  \ns \end{proof}
+
+\begin{prop}\label{0062671} Funktor $K_0$ mempertahankan jumlah langsung. Artinya, jika $A$ dan $B$
+aljabar-$C^*$, maka $K_0(A \oplus B) = K_0(A) \oplus K_0(B)$.
+\end{prop}
+
+\begin{exam}\label{0062674} Jika $A$ aljabar-$C^*$, maka $K_0(\wt A) = K_0(A) \oplus \Z$.
+\end{exam}
+
+Meskipun eksak terbelah sekaligus eksak separuh, funktor $K_0$ tidak eksak. Masing-masing dari dua
+contoh berikut cukup untuk menunjukkan hal ini.
+
+\begin{exam}\label{0062677} Barisan
+   \[ \vc 0 \to \fml C_0\bigl((0,1)\bigr) \to^\iota \fml C\bigl([0,1]\bigr)
+                               \to^\psi \C \oplus \C \to \vc 0 \]
+dengan $\psi(f) = \bigl(f(0),f(1)\bigr)$ jelas eksak; tetapi $K_0(\psi)$ tidak surjektif.
+\end{exam}
+
+\begin{exam}\label{0062679} Jika $H$ ruang Hilbert berdimensi tak hingga, barisan eksak % SOURCE-CORRECTION: CH17-C018
+  \[ \vc 0 \to \ofml K(H) \to^\iota \ofml B(H) \to^\pi \ofml Q(H) \to \vc 0 \]
+yang terkait dengan aljabar Calkin $\ofml Q(H)$ bersifat eksak, tetapi $K_0(\iota)$ tidak injektif.
+(Contoh ini memerlukan fakta yang belum kita turunkan: $K_0(\ofml K(H)) \cong \Z$; untuk itu, lihat~\cite{RordamLL:2000}, Akibat~6.4.2.)
+\end{exam}
+
+Berikutnya adalah sifat stabilitas penting dari funktor~$K_0$.
+\begin{prop}\label{0062681} Jika $A$ aljabar-$C^*$, maka $K_0(A) \cong K_0(\M nA)$.
+\end{prop}
+
+%\begin{proof} Lihat~\cite{RordamLL:2000}, proposisi 4.3.8.   \ns \end{proof}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Limit Induktif}
+Dalam bagian~\ref{sec_ind_limits}, kita mendefinisikan \emph{limit induktif} untuk sebarang kategori, dan dalam
+bagian~\ref{sec_LFsps}, kita membatasi perhatian pada limit induktif ketat dari ruang vektor topologis
+konveks lokal, yang berguna dalam konteks teori distribusi. Dalam bagian
+ini, kita menelaah limit induktif dari barisan aljabar-$C^*$.
+
+\begin{defn} Dalam sebarang kategori, suatu
+ \index{induktif!barisan}%
+ \index{barisan!induktif}%
+\df{barisan induktif} adalah pasangan $(A,\phi)$, dengan $A = (A_j)$ barisan objek dan
+$\phi = (\phi_j)$ barisan morfisme sedemikian sehingga $\phi_j\colon A_j \sto A_{j+1}$ untuk
+setiap~$j$. Suatu
+ \index{induktif!limit}%
+ \index{limit!induktif}%
+\df{limit induktif} (atau
+ \index{langsung!limit}%
+ \index{limit!langsung}%
+\df{limit langsung}) dari barisan $(A,\phi)$ adalah pasangan $(L,\mu)$, dengan $L$ suatu objek dan
+$\mu = (\mu_n)$ barisan morfisme $\mu_j\colon A_j \sto L$ yang memenuhi
+ \begin{enumerate}
+  \item[(i)] $\mu_j = \mu_{j+1} \circ \phi_j$ untuk setiap $j \in \N$, dan
+  \item[(ii)] jika $(M,\lambda)$ adalah pasangan dengan $M$ suatu objek dan $\lambda = (\lambda_j)$
+suatu barisan morfisme $\lambda_j\colon A_j \sto M$ yang memenuhi $\lambda_j = \lambda_{j+1}
+\circ \phi_j$, maka terdapat morfisme tunggal $\psi\colon L \sto M$ sedemikian sehingga $\lambda_j
+= \psi \circ \mu_j$ untuk setiap $j \in \N$.
+ \end{enumerate}
+Dengan sedikit penyalahgunaan bahasa, biasanya kita mengatakan bahwa $L$ adalah limit induktif dari barisan $(A_j)$ dan
+ \index{limit@$\underrightarrow{\lim} A_j$ (limit induktif)}%
+menulis $L = \underrightarrow{\lim} A_j$.
+
+\vskip 15 pt
+
+   \[\xymatrix@+15pt@C+25pt{&&&& L\ar@{-->}[dddd]^\psi \\
+                   &&&&   \\
+                  {\cdots}\ar[r] & A_j \ar[uurrr]^{\mu_j}\ar[ddrrr]^{\lambda_j}\ar[r]^(.6){\phi_j} &
+                       A_{j+1}\ar[uurr]^{\mu_{j+1}}\ar[ddrr]^{\lambda_{j+1}}\ar[r] & {\cdots} &  \\
+                   &&&&   \\
+                   &&&& M
+    }\]
+\end{defn}
+
+\begin{prop} Limit induktif dari barisan induktif (jika ada dalam suatu kategori) tunggal (hingga isomorfisme).
+\end{prop}
+
+\begin{prop} Setiap barisan induktif $(A,\phi)$ dari aljabar-$C^*$
+ \index{cstaralg@aljabar-$C^*$!limit induktif}%
+memiliki limit induktif. (Demikian pula setiap barisan induktif dari grup Abelian.)
+\end{prop}
+
+\begin{proof} Lihat \cite{Blackadar:2006}, II.8.2.1; \cite{RordamLL:2000}, proposisi 6.2.4; atau
+\cite{Wegge-Olsen:1993}, lampiran~L.  \ns
+\end{proof}
+
+\begin{prop} Jika $(L,\mu)$ merupakan limit induktif dari barisan induktif $(A,\phi)$ dari
+aljabar-$C^*$, maka $L = \clo{\bigcup {\mu_n}^\sto(A_n)}$ dan $\norm{\mu_m(a)} = \lim_{n \sto
+\infty}\norm{\phi_{n,m}(a)} = \inf_{n \ge m}\norm{\phi_{n,m}(a)}$ untuk semua $m \in \N$ dan $a
+\in A$.
+\end{prop}
+
+\begin{proof} Lihat \cite{RordamLL:2000}, proposisi 6.2.4.   \ns \end{proof}
+
+\begin{defn} Suatu
+ \index{aljabar-$C^*$ berdimensi hingga secara aproksimatif}%
+ \index{aljabar-AF}%
+ \index{hingga!berdimensi!secara aproksimatif}%
+ \index{cstaralg@aljabar-$C^*$!aljabar-AF}%
+\df{aljabar-$C^*$ berdimensi hingga secara aproksimatif} (singkatnya aljabar-AF) adalah limit induktif
+dari suatu barisan aljabar-$C^*$ berdimensi hingga.
+\end{defn}
+
+\begin{exam} Jika $(A_n)$ merupakan barisan meningkat yang terdiri atas subaljabar-$C^*$ dari suatu aljabar-$C^*$ $D$
+(dengan $\iota_n\colon A_n \sto A_{n+1}$ pemetaan inklusi untuk setiap~$n$), maka $(A,\iota)$
+merupakan barisan induktif aljabar-$C^*$ yang limit induktifnya adalah $(B,j)$, dengan $B =
+\clo{\bigcup_{n=1}^\infty A_n}$ dan $j_n\colon A_n \sto B$ pemetaan inklusi untuk setiap~$n$. % SOURCE-CORRECTION: CH17-C019
+\end{exam}
+
+\begin{exam} Barisan $\mathbf M_1 = \C \to^{\phi_1} \mathbf M_2 \to^{\phi_2} \mathbf M_3
+\to^{\phi_3} \dots$ (dengan $\phi_n(a) = \diag(a,0)$ untuk setiap $n \in \N$ dan $a \in \mathbf
+M_n$) merupakan barisan induktif aljabar-$C^*$ yang limit induktifnya adalah aljabar-$C^*$
+$\ofml K(H)$ yang terdiri atas operator kompak pada ruang Hilbert terpisahkan berdimensi tak hingga~$H$. % SOURCE-CORRECTION: CH17-C020
+\end{exam}
+
+\begin{proof} Lihat \cite{RordamLL:2000}, bagian 6.4.  \ns \end{proof}
+
+\begin{exam} Barisan $\Z \to^{\vc 1} \Z \to^{\vc 2} \Z \to^{\vc 3} \Z \to^{\vc 4} \dots$
+(dengan $\vc n \colon \Z \sto \Z$ memenuhi $\vc n(1) = n$) merupakan barisan induktif grup
+Abelian yang limit induktifnya adalah himpunan $\Q$ dari bilangan rasional.
+\end{exam}
+
+\begin{exam} Barisan $\Z \to^{\vc 2} \Z \to^{\vc 2} \Z \to^{\vc 2} \Z \to^{\vc 2} \dots$
+merupakan barisan induktif grup Abelian yang limit induktifnya adalah himpunan bilangan rasional
+diadik.
+\end{exam}
+
+Hasil berikut disebut
+ \index{kekontinuan!dari $K_0$}%
+ \index{K0@$K_0$!kekontinuan dari}%
+\emph{sifat kekontinuan $K_0$}.
+
+\begin{prop} Jika $(A,\phi)$ barisan induktif aljabar-$C^*$, maka
+   \[ K_0\bigl(\,\underrightarrow{\lim}\, A_n\bigr) = \underrightarrow{\lim}\,K_0(A_n)\,. \]
+\end{prop}
+
+\begin{proof} Lihat \cite{RordamLL:2000}, teorema 6.3.2.   \ns \end{proof}
+
+\begin{exam} Jika $H$ ruang Hilbert,
+ \index{K0@$K_0(A)$!adalah $\Z$ ketika $A = \ofml K(H)$}%
+maka $K_0(\ofml K(H)) \cong \Z$.
+\end{exam}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Diagram Bratteli}
+\begin{prop} Homomorfisme-$*\,$ tak nol dari $M_k$ ke $M_n$ ada hanya jika $n \ge k$; dalam
+hal ini, semuanya tepat merupakan pemetaan berbentuk
+   \[ \phi\colon a \mapsto u\,\diag(a, a, \dots, a, \vc 0)\, u^* \] % SOURCE-CORRECTION: CH17-C021
+dengan $u$ matriks uniter. Di sini terdapat $m$ salinan $a$, dan $\vc 0$ adalah matriks nol berukuran $r \times
+r$, dengan $n = mk + r$. Bilangan $m$ adalah
+ \index{multiplisitas!dari homomorfisme-$*\,$}%
+\df{multiplisitas} dari~$\phi$.
+\end{prop}
+
+\begin{proof} Lihat \cite{Power:1992}, akibat 1.3.  \ns \end{proof}
+
+\begin{exam} Contoh homomorfisme-$*\,$ dari $M_2$ ke $M_7$ adalah
+ \[  A =
+  \begin{bmatrix} a & b \\ c & d  \end{bmatrix} \mapsto
+    \begin{bmatrix}
+      a & b & 0 & 0 & 0 & 0 & 0 \\
+      c & d & 0 & 0 & 0 & 0 & 0 \\
+      0 & 0 & a & b & 0 & 0 & 0 \\
+      0 & 0 & c & d & 0 & 0 & 0 \\
+      0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+      0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+      0 & 0 & 0 & 0 & 0 & 0 & 0
+    \end{bmatrix} = \diag(A,A, \vc 0)\]
+ dengan $m = 2$ dan $r = 3$.
+\end{exam}
+
+\enlargethispage{\baselineskip}
+
+\begin{prop}\label{0068117} Setiap aljabar-$C^*$ berdimensi hingga $A$ isomorfik dengan
+jumlah langsung aljabar matriks
+   \[ A \simeq M_{k_1} \oplus \dots \oplus M_{k_r}.\]
+Misalkan $A$ dan $B$ aljabar-$C^*$ berdimensi hingga, sehingga
+   \[ A \simeq M_{k_1} \oplus \dots \oplus M_{k_r} \qquad \text{dan}
+                          \qquad B \simeq M_{n_1} \oplus \dots \oplus M_{n_s} \]
+dan misalkan $\phi\colon A \sto B$ homomorfisme-$*\,$ beridentitas. Maka $\phi$
+ditentukan (hingga ekuivalensi uniter dalam~$B$) oleh matriks $s \times r$ $\vc m = \bigl[
+m_{ij}\bigr]$ yang berentri bilangan bulat tak negatif sedemikian sehingga % SOURCE-CORRECTION: CH17-C022
+   \begin{equation}\label{0068117i}
+    \vc m\, \vc k = \vc n.
+   \end{equation}
+\emph{Di sini $\vc k = (k_1, \dots,k_r)$, $\vc n = (n_1, \dots, n_s)$, dan bilangan $m_{ij}$ adalah
+multiplisitas pemetaan}
+ \[\xymatrix@1{M_{k_j} \ar[r] & A \ar[r]^\phi & B \ar[r] & M_{n_i}
+ }\]
+\end{prop}
+
+\begin{proof} Lihat \cite{Davidson:1996}, teorema III.1.1.  \ns \end{proof}
+
+\begin{defn} Misalkan $\phi$ seperti dalam proposisi~\ref{0068117} sebelumnya. Suatu
+ \index{diagram Bratteli}%
+ \index{diagram!Bratteli}%
+\df{diagram Bratteli} untuk $\phi$ terdiri atas dua baris (atau kolom) simpul yang diberi label
+$k_j$ dan $n_i$, bersama $m_{ij}$ sisi yang menghubungkan $k_j$ ke $n_i$ (untuk $1 \le j \le
+r$ dan $1 \le i \le s$).
+\end{defn}
+
+\begin{exam} Misalkan $\phi\colon \C \oplus \C \sto M_4 \oplus M_3$ diberikan oleh
+ \[ (\lambda, \mu) \mapsto \left(
+      \begin{bmatrix}
+        \lambda & 0 & 0 & 0 \\
+        0 & \lambda & 0 & 0 \\
+        0 & 0 & \lambda & 0 \\
+        0 & 0 & 0 & \mu
+      \end{bmatrix}\, , \,
+      \begin{bmatrix}
+        \lambda & 0 & 0 \\
+        0 & \lambda & 0 \\
+        0 & 0 & \mu
+      \end{bmatrix}\right)\, .\]
+Maka $m_{11} = 3$, $m_{12} = 1$, $m_{21} = 2$, dan $m_{22} = 1$. Perhatikan bahwa
+   \[\vc m \,\vc k = \begin{bmatrix} 3 & 1 \\ 2 & 1 \end{bmatrix}\,
+             \begin{bmatrix} 1 \\ 1 \end{bmatrix} =
+             \begin{bmatrix} 4 \\ 3 \end{bmatrix} = \vc n.\]
+Suatu diagram Bratteli untuk $\phi$ adalah
+    \[\xymatrix@=90pt{1 \ar@<.7ex>[r]\ar[r]\ar@<-.7ex>[r]\ar@<.5ex>[dr]\ar@<-.5ex>[dr] & 4 \\
+                1 \ar[ur]\ar[r] & 3
+     }\]
+\end{exam}
+
+\begin{exam} Misalkan $\phi\colon \C \oplus M_2 \sto M_3 \oplus M_5 \oplus M_2$
+diberikan oleh
+ \[ (\lambda, b) \mapsto \left(
+    \begin{bmatrix}
+        \lambda & 0  \\
+            0 &  b
+      \end{bmatrix}\, , \,
+      \begin{bmatrix}
+        \lambda & 0 & 0  \\
+              0 & b & 0  \\
+              0 & 0 &  b
+      \end{bmatrix} \,,\, b \, \right).
+    \]
+Maka $m_{11} = 1$, $m_{12} = 1$, $m_{21} = 1$, $m_{22} = 2$, $m_{31} = 0$, dan $m_{32} = 1$.
+Perhatikan bahwa
+ \[\vc m \,\vc k = \begin{bmatrix} 1 & 1 \\ 1 & 2 \\ 0 & 1 \end{bmatrix}\,
+             \begin{bmatrix} 1 \\ 2 \end{bmatrix} =
+             \begin{bmatrix} 3 \\ 5 \\2 \end{bmatrix} = \vc n.\]
+Suatu diagram Bratteli untuk $\phi$ adalah
+ \[\xymatrix@=20pt@C+30pt{&& 3                    \\
+                   1 \ar[urr]\ar[drr] &&   \\
+                   && 5                    \\
+         2\ar[uuurr]\ar@<+.5ex>[urr]\ar@<-.5ex>[urr]\ar[drr] && \\
+                   && 2
+   }\]
+\end{exam}
+
+\begin{exam} Misalkan $\phi\colon M_3 \oplus M_2 \oplus M_2 \sto M_9 \oplus M_7$
+diberikan oleh
+
+\vskip 10 pt
+
+ \[ (a,b,c) \mapsto \left(
+    \begin{bmatrix}
+            a & \vc 0 & \vc 0 \\
+        \vc 0 &     a & \vc 0 \\
+        \vc 0 & \vc 0 & \vc 0
+      \end{bmatrix}\, , \,
+      \begin{bmatrix}
+            a & \vc 0 & \vc 0  \\
+        \vc 0 &     b & \vc 0  \\
+        \vc 0 & \vc 0 &     c
+      \end{bmatrix}\, \right)\, .\]
+Maka $m_{11} = 2$, $m_{12} = 0$, $m_{13} = 0$, $m_{21} = 1$, $m_{22} = 1$, dan $m_{23} = 1$.
+Perhatikan bahwa kali ini terjadi sesuatu yang ganjil: kita mempunyai $\vc m\,\vc k \ne \vc n$:
+ \[\vc m \,\vc k = \begin{bmatrix} 2 & 0 & 0 \\ 1 & 1 & 1 \end{bmatrix}\,
+             \begin{bmatrix} 3 \\ 2 \\ 2 \end{bmatrix} =
+             \begin{bmatrix} 6 \\ 7 \end{bmatrix} \le
+             \begin{bmatrix} 9 \\ 7 \end{bmatrix} = \vc n.\]
+Apa masalahnya di sini? Nah, hasil yang dinyatakan sebelumnya berlaku untuk homomorfisme-$*\,$
+\emph{beridentitas}, sedangkan $\phi$ ini \emph{tidak} beridentitas. Secara umum, inilah hasil terbaik
+yang dapat kita harapkan: $\vc m\,\vc k \le \vc n$.
+
+\noindent Berikut diagram Bratteli yang dihasilkan untuk $\phi$:
+   \[\xymatrix@=+20pt@C+20pt@R-7pt{
+        3\ar@<+.5ex>[drr]\ar@<-.5ex>[drr]\ar[dddrr] && \\
+                            && 9                   \\
+                           2\ar[drr] &&            \\
+                            && 7                   \\
+                           2\ar[urr] &&
+   }\]
+\end{exam}
+
+\begin{exam} Jika $K$ himpunan Cantor, maka $\fml C(K)$ merupakan aljabar-AF.
+ \index{AF@aljabar-AF!$\fml C(K)$ merupakan aljabar-AF ($K$ himpunan Cantor)}%
+Untuk melihatnya, tuliskan $K$ sebagai irisan dari suatu keluarga menurun yang terdiri atas himpunan bagian tertutup $K_j$, yang masing-masing
+terdiri atas $2^j$ subinterval tertutup yang saling lepas dari $[0,1]$. Untuk setiap $j \ge 0$, misalkan
+$A_j$ subaljabar yang terdiri atas fungsi-fungsi dalam $\fml C(K)$ yang konstan pada setiap
+interval penyusun~$K_j$. Jadi $A_j \simeq \C^{2^j}$ untuk setiap~$j \ge 0$. Pembenaman
+ \[\phi_j \colon A_j \sto A_{j+1}\colon
+      (a_1, a_2, \dots, a_{2^j}) \mapsto
+        (a_1, a_1, a_2, a_2,\dots, a_{2^j}, a_{2^j})\]
+memecah setiap proyeksi minimal menjadi jumlah dua proyeksi minimal. Untuk $\phi_0$, matriks
+$\vc m_0$ dari ``multiplisitas parsial'' yang bersesuaian adalah $\begin{bmatrix} 1 \\ 1
+\end{bmatrix}$; matriks $\vc m_1$ yang bersesuaian dengan $\phi_1$ adalah
+$\begin{bmatrix} 1 & 0\\ 1 & 0 \\ 0 & 1 \\ 0 & 1 \end{bmatrix}$; dan seterusnya. Jadi diagram Bratteli
+untuk limit induktif $\fml C(K) = \underrightarrow{\lim}A_j$ adalah:
+
+\vskip 20 pt
+
+ \[\xymatrix@=+7pt@C+20pt@R-7pt{
+     &&& 1 & \\
+     && 1\ar[ur]\ar[dr] && \\
+     &&& 1 & \\
+     & 1\ar[uur]\ar[ddr] &&& \\
+     &&& 1 & \\
+     && 1\ar[ur]\ar[dr] && \\
+     &&& 1 & \\
+     1\ar[uuuur]\ar[ddddr] &&&& \cdots \\
+     &&& 1 & \\
+     && 1\ar[ur]\ar[dr] && \\
+     &&& 1 & \\
+     & 1\ar[uur]\ar[ddr] &&& \\
+     &&&1 & \\
+     && 1\ar[ur]\ar[dr] && \\
+     &&& 1 &
+   }\]
+\end{exam}
+
+\begin{exam} Berikut suatu contoh dari apa yang disebut
+ \index{aljabar CAR}%
+ \index{cstaralg@aljabar-$C^*$!aljabar CAR}%
+aljabar CAR (CAR = Relasi Antikomutasi Kanonik). Untuk $j \ge 0$, misalkan $A_j = % SOURCE-CORRECTION: CH17-C023
+M_{\spsp{2}j}$ dan
+ \[\phi_j\colon A_j \to A_{j+1}\colon \vc a \mapsto
+      \begin{bmatrix} \vc a & 0 \\ 0 & \vc a \end{bmatrix}.\]
+``Matriks'' multiplisitas $\vc m$ untuk setiap $\phi_j$ hanyalah matriks $1 \times 1$~$[2]$.
+Kita melihat bahwa untuk setiap $j$
+ \[\vc m\, \vc k(j) = [2]\,[2^j] = [2^{j+1}] = \vc n(j).\]
+Ini menghasilkan diagram Bratteli berikut
+
+\vskip 15pt
+
+ \[\xymatrix{1 \ar@<.5ex>[r]\ar@<-.5ex>[r] & 2 \ar@<.5ex>[r]\ar@<-.5ex>[r] & 4
+        \ar@<.5ex>[r]\ar@<-.5ex>[r] & 8 \ar@<.5ex>[r]\ar@<-.5ex>[r] & 16
+        \ar@<.5ex>[r]\ar@<-.5ex>[r] & 32
+        \ar@<.5ex>[r]\ar@<-.5ex>[r]& {\cdots}
+   }\]
+\vskip 15pt
+\noindent untuk limit induktif $C = \underrightarrow{\lim}A_j$.
+
+\textbf{Namun}, jangkauan $\phi_j$ termuat dalam subaljabar $B_{j+1} \simeq M_{2^j}
+\oplus M_{2^j}$ dari~$A_{j+1}$. (Ambil $B_0 = A_0 = \C$.) Jadi, untuk $j \in \N$, kita dapat memandang
+$\phi_j$ sebagai pemetaan dari $B_j$ ke~$B_{j+1}$:
+ \[ \phi_j\colon(\vc b, \vc c) \mapsto
+    \left(\begin{bmatrix} \vc b & 0 \\ 0 & \vc c \end{bmatrix},
+          \begin{bmatrix} \vc b & 0 \\ 0 & \vc c \end{bmatrix}
+              \right)\,.\]
+Sekarang matriks multiplisitas $\vc m$ untuk setiap $\phi_j$ adalah $\begin{bmatrix} 1 & 1 \\ 1 & 1
+\end{bmatrix}$, dan kita melihat bahwa untuk setiap $j$
+ \[\vc m\, \vc k(j) =
+   \begin{bmatrix} 1 & 1 \\ 1 & 1 \end{bmatrix}\,
+        \begin{bmatrix} 2^{j-1} \\ 2^{j-1} \end{bmatrix} =
+   \begin{bmatrix} 2^j \\ 2^j \end{bmatrix} = \vc n(j).\]
+Karena $C = \underrightarrow{\lim}A_j = \underrightarrow{\lim}B_j$, kita memperoleh diagram Bratteli kedua
+(yang cukup berbeda) untuk aljabar-AF~$C$.
+   \[\xymatrix@-10pt{&& 1 \ar[rr]\ar[rrdd] && 2 \ar[rr]\ar[rrdd] && 4 \ar[rr]\ar[rrdd]
+                                && 8 \ar[rr]\ar[rrdd] && 16 \ar[rr]\ar[rrdd]&& \cdots\\
+              1 \ar[urr]\ar[drr]&&&&&&&&&&  \\
+             && 1 \ar[rr]\ar[rruu] && 2 \ar[rr]\ar[rruu] && 4 \ar[rr]\ar[rruu]
+                                && 8 \ar[rr]\ar[rruu] && 16 \ar[rr]\ar[rruu]&& \cdots \\
+   }\]
+\end{exam}
+
+\begin{exam} Ini adalah
+ \index{aljabar Fibonacci}%
+ \index{cstaralg@aljabar-$C^*$!aljabar Fibonacci}%
+\df{aljabar Fibonacci}. Untuk $j \in \N$, definisikan barisan $\bigl(p_j\bigr)$ dan
+$\bigl(q_j\bigr)$ dengan relasi rekursi yang dikenal:
+ \begin{align*}
+       p_1 = &q_1 = 1, \\
+       p_{j+1} = &p_j + q_j, \text{ dan } \\
+       q_{j+1} &= p_j.
+ \end{align*}
+Untuk semua $j \in \N$, misalkan $A_j = M_{p_j} \oplus M_{q_j}$ dan
+
+\vskip 10 pt
+
+ \[\phi_j\colon A_j \sto A_{j+1}\colon (a,b) \mapsto
+     \left(\begin{bmatrix} a & 0 \\ 0 & b
+          \end{bmatrix},  a \right). \]
+Matriks multiplisitas $\vc m$ untuk setiap $\phi_j$ adalah $\begin{bmatrix} 1 & 1 \\ 1 & 0
+\end{bmatrix}$, dan untuk setiap $j$
+ \[\vc m\, \vc k(j) =
+   \begin{bmatrix} 1 & 1 \\ 1 & 0 \end{bmatrix}\,
+        \begin{bmatrix} p_j \\ q_j \end{bmatrix} =
+   \begin{bmatrix} p_j + q_j \\ p_j \end{bmatrix} =
+        \begin{bmatrix} p_{j+1} \\ q_{j+1} \end{bmatrix} =
+                          \vc n(j).\]
+Diagram Bratteli yang dihasilkan untuk $F = \underrightarrow{\lim}A_j$ adalah
+   \[\xymatrix@-10pt{&& 1 \ar[rr]\ar[rrdd] && 2 \ar[rr]\ar[rrdd] &&
+         3 \ar[rr]\ar[rrdd] && 5 \ar[rr]\ar[rrdd] && 8 \ar[rr]\ar[rrdd]&& \cdots\\
+              1 \ar[urr]\ar[drr]&&&&&&&&&&  \\
+             && 1 \ar[rruu] && 1 \ar[rruu] && 2 \ar[rruu] &&
+              3 \ar[rruu] && 5 \ar[rruu]&& \cdots \\
+   }\]
+\end{exam}
+
+
+
+
+
+
+
+
+
+
+
+
+
+\endinput

@@ -1,0 +1,45 @@
+{
+  "acroform": false,
+  "action_types": {
+    "/GoTo": 2965,
+    "/URI": 9
+  },
+  "annotation_subtypes": {
+    "/Link": 2974
+  },
+  "catalog_language": "id-ID",
+  "embedded_files_name_tree": false,
+  "encrypted": false,
+  "failures": [],
+  "file_attachment_annotations": 0,
+  "internal_links": 2965,
+  "javascript_actions": 0,
+  "javascript_name_tree": false,
+  "launch_actions": 0,
+  "mark_info": false,
+  "metadata_stream": false,
+  "named_destinations": 2312,
+  "open_action": "/GoTo",
+  "outline_entries": 104,
+  "pages": 232,
+  "pdf": {
+    "bytes": 2432395,
+    "path": "output/pdf/analisis-fungsional-dan-aljabar-operator-id-bab-1-17.pdf",
+    "sha256": "22fda5f25205f2a442c2b907db015fb4c93cb46cfcba6a1fa8814449469073f1"
+  },
+  "rich_media_annotations": 0,
+  "schema_version": "o008.ch17-pdf-security-navigation-audit.v1",
+  "status": "pass",
+  "struct_tree_root": false,
+  "tagged": false,
+  "unique_uri_targets": [
+    "http://en.wikipedia.org",
+    "http://web.pdx.edu/~erdman/CRA/CRAlicensepage.html",
+    "http://www.imn.htwk-leipzig.de/~mfrank/mlit.pdf",
+    "https://creativecommons.org/licenses/by-sa/4.0/",
+    "https://doi.org/10.1142/11896",
+    "https://web.pdx.edu/~erdman/FAOA/functional_analysis_operator_algebras_pdf.pdf",
+    "https://web.pdx.edu/~erdman/FAOA/functional_analysis_operator_algebras_web.zip"
+  ],
+  "unresolved_internal_links": 0
+}

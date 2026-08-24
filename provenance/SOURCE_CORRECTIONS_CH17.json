@@ -1,0 +1,833 @@
+{
+  "schema_version": "o008.source-corrections.v1",
+  "unit_id": "FAOA-2015-CH17",
+  "chapter": 17,
+  "status": "adjudicated_and_applied",
+  "source": {
+    "path": "source/upstream/K0_functor.tex",
+    "bytes": 59639,
+    "logical_records": 1362,
+    "line_endings": "CRLF",
+    "sha256": "e8ebcaa4e5dbc1cc9b907edb235465610f3bd61e0bfa1ce2f1b5b26e9abf8c6a"
+  },
+  "target": {
+    "path": "source/id-ID/K0_functor-id.tex",
+    "bytes": 61673,
+    "logical_records": 1362,
+    "line_endings": "LF",
+    "sha256": "061ffd28907e2251fc8b01077888de3e11b3bce67fec1ba52b080c924a241059"
+  },
+  "normalization": {
+    "id": "explicit-range-nfc-whitespace-v1",
+    "source_selection": "inclusive physical source-line range",
+    "target_mapping": "same inclusive physical target-line range",
+    "steps": [
+      "discard blank records and strip trailing whitespace",
+      "join selected records with LF",
+      "normalize Unicode NFC",
+      "collapse Unicode whitespace runs to ASCII spaces",
+      "trim leading and trailing ASCII space",
+      "hash UTF-8 bytes with SHA-256"
+    ]
+  },
+  "record_count": 26,
+  "class_counts": {
+    "MECHANICAL_PROSE_SOURCE_REPAIR": 6,
+    "MATHEMATICAL_STATUS_CLARIFICATION": 1,
+    "MATHEMATICAL_TYPE_SOURCE_REPAIR": 2,
+    "MATHEMATICAL_EQUALITY_SOURCE_REPAIR": 1,
+    "MATHEMATICAL_CATEGORY_SOURCE_REPAIR": 4,
+    "FORMAL_SCOPE_CLARIFICATION": 3,
+    "MECHANICAL_CATEGORY_PROSE_REPAIR": 1,
+    "MAP_IDENTITY_SOURCE_REPAIR": 1,
+    "IDENTIFIER_ALIAS_SOURCE_REPAIR": 1,
+    "MATHEMATICAL_NOTATION_SOURCE_REPAIR": 1,
+    "MATHEMATICAL_TOPOLOGY_SOURCE_REPAIR": 1,
+    "MATHEMATICAL_RANGE_SOURCE_REPAIR": 1,
+    "MECHANICAL_TEX_SOURCE_REPAIR": 1,
+    "MATHEMATICAL_IMPLICATION_SOURCE_REPAIR": 2
+  },
+  "math_surface_affecting_record_ids": [
+    "FAOA-2015-CH17-CORR-005",
+    "FAOA-2015-CH17-CORR-013",
+    "FAOA-2015-CH17-CORR-014",
+    "FAOA-2015-CH17-CORR-017",
+    "FAOA-2015-CH17-CORR-019",
+    "FAOA-2015-CH17-CORR-021",
+    "FAOA-2015-CH17-CORR-024",
+    "FAOA-2015-CH17-CORR-025",
+    "FAOA-2015-CH17-CORR-026"
+  ],
+  "independent_review": {
+    "source_inventory": "qa/CH17_SOURCE_INVENTORY.md",
+    "pretranslation_math_review": "qa/CH17_PRETRANSLATION_MATH_REVIEW.md",
+    "terminology_plan": "provenance/CH17_TERMINOLOGY_PLAN.md",
+    "upstream_contact": "none during production"
+  },
+  "records": [
+    {
+      "id": "FAOA-2015-CH17-CORR-001",
+      "source_lines": {
+        "start": 12,
+        "end": 12
+      },
+      "target_lines": {
+        "start": 12,
+        "end": 12
+      },
+      "classification": "MECHANICAL_PROSE_SOURCE_REPAIR",
+      "decision": "remove the extra source verb in the intended invitation to let stabilized projections roam",
+      "source_normalized_snippet": "Allow them, for example, to be roam about the much roomier world of $2 \\times 2$ matrices. To accomplish this technically we search for an",
+      "target_normalized_snippet": "Biarkan keduanya, misalnya, menjelajahi dunia matriks $2 \\times 2$ yang jauh lebih lapang. % SOURCE-CORRECTION: CH17-C001",
+      "source_normalized_snippet_sha256": "c71ccd0aeaba9811823806767aeebadb43e62d1a73055fb322af2c0b38e802b7",
+      "target_normalized_snippet_sha256": "1fb031017e09f67c744d06950439cb6c693b95c3f25ab4c3c4974032229b900c",
+      "source_required_anchors": [
+        "to be roam about"
+      ],
+      "forbidden_target_anchors": [
+        "untuk menjelajah"
+      ],
+      "required_target_anchors": [
+        "menjelajahi dunia matriks"
+      ],
+      "affects_math": false,
+      "target_marker": "% SOURCE-CORRECTION: CH17-C001",
+      "target_marker_line": 12
+    },
+    {
+      "id": "FAOA-2015-CH17-CORR-002",
+      "source_lines": {
+        "start": 13,
+        "end": 19
+      },
+      "target_lines": {
+        "start": 13,
+        "end": 19
+      },
+      "classification": "MATHEMATICAL_STATUS_CLARIFICATION",
+      "decision": "retain the motivational stabilization display but identify it as heuristic rather than a proved multiplicative congruence",
+      "source_normalized_snippet": "equivalence relation $\\sim$ that identifies a projection $p$ in $A$ with the matrices $\\begin{bmatrix} p & \\vc 0 \\\\ \\vc 0 & \\vc 0 \\end{bmatrix}$ and $\\begin{bmatrix} \\vc 0 & \\vc 0 \\\\ \\vc 0 & p \\end{bmatrix}$. Then the problem is solved: if $p$ and $q$ are projections in~$A$, then \\[ pq \\sim \\begin{bmatrix} p & \\vc 0 \\\\ \\vc 0 & \\vc 0 \\end{bmatrix} \\begin{bmatrix} \\vc 0 & \\vc 0 \\\\ \\vc 0 & q \\end{bmatrix} \\\\ = \\begin{bmatrix} \\vc 0 & \\vc 0 \\\\ \\vc 0 & \\vc 0 \\end{bmatrix} \\\\ = \\begin{bmatrix} \\vc 0 & \\vc 0 \\\\ \\vc 0 & q \\end{bmatrix}\\begin{bmatrix} p & \\vc 0 \\\\ \\vc 0 & \\vc 0 \\end{bmatrix} \\\\ \\sim qp\\,. \\] Now $p$ and $q$ commute modulo the equivalence relation $\\sim$ and we may define addition by something like",
+      "target_normalized_snippet": "Untuk mewujudkan gagasan ini secara teknis, kita mencari relasi ekuivalensi $\\sim$ yang mengidentifikasi proyeksi $p$ di $A$ dengan matriks $\\begin{bmatrix} p & \\vc 0 \\\\ \\vc 0 & \\vc 0 \\end{bmatrix}$ dan $\\begin{bmatrix} \\vc 0 & \\vc 0 \\\\ \\vc 0 & p \\end{bmatrix}$. Sebagai motivasi heuristik saja---bukan sebagai konsekuensi suatu kongruensi perkalian yang telah dibuktikan---hambatan itu tampak hilang: jika $p$ dan $q$ proyeksi di~$A$, maka % SOURCE-CORRECTION: CH17-C002 \\[ pq \\sim \\begin{bmatrix} p & \\vc 0 \\\\ \\vc 0 & \\vc 0 \\end{bmatrix} \\begin{bmatrix} \\vc 0 & \\vc 0 \\\\ \\vc 0 & q \\end{bmatrix} \\\\ = \\begin{bmatrix} \\vc 0 & \\vc 0 \\\\ \\vc 0 & \\vc 0 \\end{bmatrix} \\\\ = \\begin{bmatrix} \\vc 0 & \\vc 0 \\\\ \\vc 0 & q \\end{bmatrix}\\begin{bmatrix} p & \\vc 0 \\\\ \\vc 0 & \\vc 0 \\end{bmatrix} \\\\ \\sim qp\\,. \\] Dalam gambaran heuristik ini, $p$ dan $q$ komutatif modulo relasi ekuivalensi $\\sim$, dan kita dapat mendefinisikan penjumlahan dengan sesuatu seperti",
+      "source_normalized_snippet_sha256": "4ec69cc5e17500cf92db2407e08984284f51dc78015805a31662aacdb8e734f7",
+      "target_normalized_snippet_sha256": "a881f01cf9042f7831ef1fd597b1e1568f3999d83b9816dd9db04ea80594a0cc",
+      "source_required_anchors": [
+        "Then the problem is solved"
+      ],
+      "forbidden_target_anchors": [
+        "maka masalah itu terbukti selesai"
+      ],
+      "required_target_anchors": [
+        "motivasi heuristik saja"
+      ],
+      "affects_math": false,
+      "target_marker": "% SOURCE-CORRECTION: CH17-C002",
+      "target_marker_line": 14
+    },
+    {
+      "id": "FAOA-2015-CH17-CORR-003",
+      "source_lines": {
+        "start": 42,
+        "end": 46
+      },
+      "target_lines": {
+        "start": 42,
+        "end": 46
+      },
+      "classification": "MECHANICAL_PROSE_SOURCE_REPAIR",
+      "decision": "repair the source article while translating the unitary-equivalence definition",
+      "source_normalized_snippet": "\\begin{defn} In a $C^*$-algebra elements $a$ and $b$ are \\index{unitary!equivalence}% \\df{unitarily equivalent} if there exists an unitary element $u \\in \\wt A$ such that $b = uau^*$. \\index{<binrelequivu@$a \\sim_u b$ (unitary equivalence)}% In this case we write $a \\sim_u b$.",
+      "target_normalized_snippet": "\\begin{defn} Dalam suatu aljabar-$C^*$, elemen $a$ dan $b$ disebut \\index{uniter!ekuivalensi}% \\df{ekuivalen secara uniter} jika terdapat suatu elemen uniter $u \\in \\wt A$ sedemikian sehingga $b = uau^*$. % SOURCE-CORRECTION: CH17-C003 \\index{<binrelequivu@$a \\sim_u b$ (ekuivalensi uniter)}% Dalam hal ini kita menulis $a \\sim_u b$.",
+      "source_normalized_snippet_sha256": "454c2cb54268ebe1ba9511fc034c3df443ed94c6fe60823c3e42171d2074cd55",
+      "target_normalized_snippet_sha256": "2a2bf03a550fdbb7ab95d986cc61fe9cfdb891dfc332fa13726dc3c6c5756f6c",
+      "source_required_anchors": [
+        "an unitary element"
+      ],
+      "forbidden_target_anchors": [
+        "sebuah suatu elemen uniter"
+      ],
+      "required_target_anchors": [
+        "suatu elemen uniter"
+      ],
+      "affects_math": false,
+      "target_marker": "% SOURCE-CORRECTION: CH17-C003",
+      "target_marker_line": 44
+    },
+    {
+      "id": "FAOA-2015-CH17-CORR-004",
+      "source_lines": {
+        "start": 63,
+        "end": 67
+      },
+      "target_lines": {
+        "start": 63,
+        "end": 67
+      },
+      "classification": "MECHANICAL_PROSE_SOURCE_REPAIR",
+      "decision": "repair the malformed every-then quantifier construction without changing its scope",
+      "source_normalized_snippet": "\\begin{prop}[Polar decomposition]\\label{0060141} For every invertible element $s$ of a \\index{polar decomposition!of an invertible $C^*$-algebra element}% \\index{decomposition!polar}% unital $C^*$-algebra, then there exists a unitary element $\\omega(s)$ in the algebra such that \\[ s = \\omega(s) \\abs s\\,. \\]",
+      "target_normalized_snippet": "\\begin{prop}[Dekomposisi polar]\\label{0060141} Untuk setiap elemen invertibel $s$ dari suatu \\index{dekomposisi polar!elemen invertibel aljabar-$C^*$}% \\index{dekomposisi!polar}% aljabar-$C^*$ beridentitas, terdapat suatu elemen uniter $\\omega(s)$ dalam aljabar tersebut sedemikian sehingga % SOURCE-CORRECTION: CH17-C004 \\[ s = \\omega(s) \\abs s\\,. \\]",
+      "source_normalized_snippet_sha256": "834138cd3e904ed68c5bb4471c1d7fc846fa0668376403615be923c62a3c6605",
+      "target_normalized_snippet_sha256": "a566ccaf7088cb21cbc34161d0c318bbe5453fb3f495f24fa8807165486c20d6",
+      "source_required_anchors": [
+        "For every invertible element",
+        "then there exists"
+      ],
+      "forbidden_target_anchors": [
+        "untuk setiap elemen invertibel, maka"
+      ],
+      "required_target_anchors": [
+        "terdapat suatu elemen uniter"
+      ],
+      "affects_math": false,
+      "target_marker": "% SOURCE-CORRECTION: CH17-C004",
+      "target_marker_line": 66
+    },
+    {
+      "id": "FAOA-2015-CH17-CORR-005",
+      "source_lines": {
+        "start": 101,
+        "end": 103
+      },
+      "target_lines": {
+        "start": 101,
+        "end": 103
+      },
+      "classification": "MATHEMATICAL_TYPE_SOURCE_REPAIR",
+      "decision": "give the operator-valued exponential path its correct codomain in the unitary group of A",
+      "source_normalized_snippet": "\\begin{proof}[\\emph{Hint for proof}] Consider the path $c\\colon [0,1] \\sto \\T\\colon t \\mapsto \\exp(ith)$. Use proposition~\\ref{001449}. \\ns \\end{proof}",
+      "target_normalized_snippet": "\\begin{proof}[\\emph{Petunjuk untuk bukti}] Pertimbangkan lintasan $c\\colon [0,1] \\sto \\ofml U(A)\\colon t \\mapsto \\exp(ith)$. Gunakan % SOURCE-CORRECTION: CH17-C005 proposisi~\\ref{001449}. \\ns \\end{proof}",
+      "source_normalized_snippet_sha256": "7a98721087347fa90fe87c0cf14bebf2b2911cb216729c50decdffd5af2b7c9b",
+      "target_normalized_snippet_sha256": "0cea3bc0f8dbfcb6b34c49802db883ed434cdc84152f1a79a1191a4b9bec5bbd",
+      "source_required_anchors": [
+        "\\sto \\T\\colon t \\mapsto \\exp(ith)"
+      ],
+      "forbidden_target_anchors": [
+        "\\sto \\T\\colon t \\mapsto \\exp(ith)"
+      ],
+      "required_target_anchors": [
+        "\\sto \\ofml U(A)\\colon t \\mapsto \\exp(ith)"
+      ],
+      "affects_math": true,
+      "target_marker": "% SOURCE-CORRECTION: CH17-C005",
+      "target_marker_line": 101
+    },
+    {
+      "id": "FAOA-2015-CH17-CORR-006",
+      "source_lines": {
+        "start": 367,
+        "end": 369
+      },
+      "target_lines": {
+        "start": 367,
+        "end": 369
+      },
+      "classification": "MATHEMATICAL_EQUALITY_SOURCE_REPAIR",
+      "decision": "state that block sum is strictly associative and commutative only up to Murray--von Neumann equivalence on projections",
+      "source_normalized_snippet": "\\begin{prop}\\label{0060337} If $A$ is a $C^*$-algebra, then $\\fml P_\\infty(A)$ is a commutative semigroup under the operation~$\\oplus$. \\end{prop}",
+      "target_normalized_snippet": "\\begin{prop}\\label{0060337} Jika $A$ suatu aljabar-$C^*$, maka operasi $\\oplus$ pada $\\fml P_\\infty(A)$ bersifat asosiatif secara ketat dan komutatif hanya hingga ekuivalensi Murray--von Neumann. % SOURCE-CORRECTION: CH17-C006 \\end{prop}",
+      "source_normalized_snippet_sha256": "4173536f533de8e68de1bedb8233c850ddb68797d451483d9f7d8b86aaf2c43c",
+      "target_normalized_snippet_sha256": "d3aba0d2fc77f698348b3693dcb5d3afd6dcb4ee8ac6e86c9fe4f11855b7ebec",
+      "source_required_anchors": [
+        "commutative semigroup under the operation"
+      ],
+      "forbidden_target_anchors": [
+        "semigrup komutatif di bawah operasi"
+      ],
+      "required_target_anchors": [
+        "asosiatif secara ketat dan komutatif hanya hingga ekuivalensi Murray--von Neumann"
+      ],
+      "affects_math": false,
+      "target_marker": "% SOURCE-CORRECTION: CH17-C006",
+      "target_marker_line": 368
+    },
+    {
+      "id": "FAOA-2015-CH17-CORR-007",
+      "source_lines": {
+        "start": 390,
+        "end": 392
+      },
+      "target_lines": {
+        "start": 390,
+        "end": 392
+      },
+      "classification": "MATHEMATICAL_CATEGORY_SOURCE_REPAIR",
+      "decision": "identify D(C) as the additive semigroup of nonnegative integers, not a group of positive integers",
+      "source_normalized_snippet": "\\begin{exam}\\label{0060421} The semigroup $\\fml D(\\C)$ is isomorphic to the additive group of positive integers; that is, \\[ \\fml D(\\C) \\cong \\Z^+ = \\{0,1,2,\\dots\\}\\,. \\] \\end{exam}",
+      "target_normalized_snippet": "\\begin{exam}\\label{0060421} Semigrup $\\fml D(\\C)$ isomorfik dengan semigrup aditif bilangan bulat tak negatif; yaitu, % SOURCE-CORRECTION: CH17-C007 \\[ \\fml D(\\C) \\cong \\Z^+ = \\{0,1,2,\\dots\\}\\,. \\] \\end{exam}",
+      "source_normalized_snippet_sha256": "31cf2fb7bdd9690883c29c3ec92ebd7f73c116d8c3e367f4329edb3a40ea8b60",
+      "target_normalized_snippet_sha256": "259ce81957cb7b10c890c217fab705d00e60b82a9b38b1cd58e8197c62861402",
+      "source_required_anchors": [
+        "additive group of positive integers"
+      ],
+      "forbidden_target_anchors": [
+        "grup aditif bilangan bulat positif"
+      ],
+      "required_target_anchors": [
+        "semigrup aditif bilangan bulat tak negatif"
+      ],
+      "affects_math": false,
+      "target_marker": "% SOURCE-CORRECTION: CH17-C007",
+      "target_marker_line": 390
+    },
+    {
+      "id": "FAOA-2015-CH17-CORR-008",
+      "source_lines": {
+        "start": 397,
+        "end": 401
+      },
+      "target_lines": {
+        "start": 397,
+        "end": 401
+      },
+      "classification": "FORMAL_SCOPE_CLARIFICATION",
+      "decision": "restrict the single-infinity projection-semigroup description to separable infinite-dimensional Hilbert space",
+      "source_normalized_snippet": "\\begin{exam}\\label{0060424} If $H$ is a Hilbert space, then \\[ \\fml D(\\ofml B(H)) \\cong \\Z^+ \\cup \\{\\infty\\}. \\] (Use the usual addition on $\\Z^+$ and let $n + \\infty = \\infty + n = \\infty$ whenever $n \\in \\Z^+ \\cup \\{\\infty\\}$.) \\end{exam}",
+      "target_normalized_snippet": "\\begin{exam}\\label{0060424} Jika $H$ suatu ruang Hilbert terpisahkan berdimensi tak hingga, maka % SOURCE-CORRECTION: CH17-C008 \\[ \\fml D(\\ofml B(H)) \\cong \\Z^+ \\cup \\{\\infty\\}. \\] (Gunakan penjumlahan biasa pada $\\Z^+$ dan tetapkan $n + \\infty = \\infty + n = \\infty$ setiap kali $n \\in \\Z^+ \\cup \\{\\infty\\}$.) \\end{exam}",
+      "source_normalized_snippet_sha256": "2e031f71530a9093f4e012fc94770c5817ccb535f0aac5d6aadd798bbb4571ca",
+      "target_normalized_snippet_sha256": "1f1f770332616763d4b2df0cc156bc3ce8803a8ad500d879363c80092f63f79c",
+      "source_required_anchors": [
+        "If $H$ is a Hilbert space"
+      ],
+      "forbidden_target_anchors": [
+        "Jika $H$ suatu ruang Hilbert, maka"
+      ],
+      "required_target_anchors": [
+        "ruang Hilbert terpisahkan berdimensi tak hingga"
+      ],
+      "affects_math": false,
+      "target_marker": "% SOURCE-CORRECTION: CH17-C008",
+      "target_marker_line": 397
+    },
+    {
+      "id": "FAOA-2015-CH17-CORR-009",
+      "source_lines": {
+        "start": 446,
+        "end": 450
+      },
+      "target_lines": {
+        "start": 446,
+        "end": 450
+      },
+      "classification": "MECHANICAL_PROSE_SOURCE_REPAIR",
+      "decision": "translate the intended phrase will be denoted by",
+      "source_normalized_snippet": "\\begin{notn} For the equivalence relation $\\sim$ defined in~\\ref{0062111} the equivalence class containing the pair $(a,b)$ will be denote by \\index{<bracpnt@$\\langle a,b \\rangle$ (pair in Grothendieck construction)}% $\\langle a,b \\rangle$ rather than by~$[(a,b)]$. \\end{notn}",
+      "target_normalized_snippet": "\\begin{notn} Untuk relasi ekuivalensi $\\sim$ yang didefinisikan dalam~\\ref{0062111}, kelas ekuivalensi yang memuat pasangan $(a,b)$ akan dinotasikan dengan % SOURCE-CORRECTION: CH17-C009 \\index{<bracpnt@$\\langle a,b \\rangle$ (pasangan dalam konstruksi Grothendieck)}% $\\langle a,b \\rangle$, bukan dengan~$[(a,b)]$. \\end{notn}",
+      "source_normalized_snippet_sha256": "b699bdedb2047c0eb94b3a022afd149e66c138dcc30800b0d96814ee28c30d04",
+      "target_normalized_snippet_sha256": "6a54e72227e6219822ab336959b9f207b374f510616f713641711ff9f1a9116a",
+      "source_required_anchors": [
+        "will be denote by"
+      ],
+      "forbidden_target_anchors": [
+        "akan dinotasi oleh akan"
+      ],
+      "required_target_anchors": [
+        "akan dinotasikan dengan"
+      ],
+      "affects_math": false,
+      "target_marker": "% SOURCE-CORRECTION: CH17-C009",
+      "target_marker_line": 447
+    },
+    {
+      "id": "FAOA-2015-CH17-CORR-010",
+      "source_lines": {
+        "start": 458,
+        "end": 460
+      },
+      "target_lines": {
+        "start": 458,
+        "end": 460
+      },
+      "classification": "MECHANICAL_PROSE_SOURCE_REPAIR",
+      "decision": "repair the source article in becomes an Abelian group",
+      "source_normalized_snippet": "\\begin{prop}\\label{0062119} The operation $+$ defined above is well defined and under this operation $G(S)$ becomes and Abelian group. \\end{prop}",
+      "target_normalized_snippet": "\\begin{prop}\\label{0062119} Operasi $+$ yang didefinisikan di atas terdefinisi dengan baik, dan di bawah operasi ini $G(S)$ menjadi grup Abelian. % SOURCE-CORRECTION: CH17-C010 \\end{prop}",
+      "source_normalized_snippet_sha256": "f3efeeb6d6a25703de846ada436dbe2e7b64545c3a13cd43bbe3aac2d7c190e2",
+      "target_normalized_snippet_sha256": "6161540b5f2db1dc3466a840ef6ec2a369bd659152253736655afc416cc07f3c",
+      "source_required_anchors": [
+        "becomes and Abelian group"
+      ],
+      "forbidden_target_anchors": [
+        "menjadi dan grup Abelian"
+      ],
+      "required_target_anchors": [
+        "menjadi grup Abelian"
+      ],
+      "affects_math": false,
+      "target_marker": "% SOURCE-CORRECTION: CH17-C010",
+      "target_marker_line": 459
+    },
+    {
+      "id": "FAOA-2015-CH17-CORR-011",
+      "source_lines": {
+        "start": 543,
+        "end": 549
+      },
+      "target_lines": {
+        "start": 543,
+        "end": 549
+      },
+      "classification": "MECHANICAL_CATEGORY_PROSE_REPAIR",
+      "decision": "use the plural group homomorphisms for the image category",
+      "source_normalized_snippet": "\\begin{prop}\\label{0062155} The pair of maps $S \\mapsto G(S)$, which takes commutative semigroups to their corresponding \\index{functor!Grothendieck}% \\index{Grothendieck!construction!functorial property of}% Grothendieck groups, and $\\phi \\mapsto G(\\phi)$, which takes semigroup homomorphisms to group homomorphism (as defined in~\\ref{0062154}) is a covariant functor from the category of commutative semigroups and semigroup homomorphisms to the category of Abelian groups and group homomorphisms.",
+      "target_normalized_snippet": "\\begin{prop}\\label{0062155} Pasangan pemetaan $S \\mapsto G(S)$, yang memetakan semigrup komutatif ke \\index{funktor!Grothendieck}% \\index{Grothendieck!konstruksi!sifat funktorial}% grup Grothendieck yang bersesuaian, dan $\\phi \\mapsto G(\\phi)$, yang memetakan homomorfisme semigrup ke homomorfisme-homomorfisme grup (sebagaimana didefinisikan dalam~\\ref{0062154}), merupakan funktor kovarian dari kategori % SOURCE-CORRECTION: CH17-C011 semigrup komutatif dan homomorfisme semigrup ke kategori grup Abelian dan homomorfisme grup.",
+      "source_normalized_snippet_sha256": "2c72c872eeca5f9656df54d31173c2600d3833d2cc8b09c344c4da9eaac66153",
+      "target_normalized_snippet_sha256": "241f147e5ae258e26d2c21ad164a71edd8d8388b722e11c7ebb6676e9d5bbddb",
+      "source_required_anchors": [
+        "to group homomorphism"
+      ],
+      "forbidden_target_anchors": [
+        "ke homomorfisme grup merupakan"
+      ],
+      "required_target_anchors": [
+        "homomorfisme-homomorfisme grup"
+      ],
+      "affects_math": false,
+      "target_marker": "% SOURCE-CORRECTION: CH17-C011",
+      "target_marker_line": 547
+    },
+    {
+      "id": "FAOA-2015-CH17-CORR-012",
+      "source_lines": {
+        "start": 655,
+        "end": 657
+      },
+      "target_lines": {
+        "start": 655,
+        "end": 657
+      },
+      "classification": "MATHEMATICAL_CATEGORY_SOURCE_REPAIR",
+      "decision": "call the restriction to projection families a map rather than a star-homomorphism",
+      "source_normalized_snippet": "\\begin{defn} A $*\\,$-homomorphism $\\phi\\colon A \\sto B$ between $C^*$-algebras extends, for every $n \\in \\N$, to a $*\\,$-homomorphism $\\phi\\colon \\M nA \\sto \\M nB$ and also (since $*\\,$-homomorphisms take projections to projections) to a $*\\,$-homomorphism $\\phi$ from $\\fml P_\\infty(A)$ to $\\fml P_\\infty(B)$. For such a $*\\,$-homomorphism",
+      "target_normalized_snippet": "\\begin{defn} Homomorfisme-$*\\,$ $\\phi\\colon A \\sto B$ di antara aljabar-$C^*$ diperluas, untuk setiap $n \\in \\N$, menjadi homomorfisme-$*\\,$ $\\phi\\colon \\M nA \\sto \\M nB$ dan juga (karena homomorfisme-$*\\,$ membawa proyeksi ke proyeksi) memiliki pembatasan berupa pemetaan $\\phi$ dari $\\fml P_\\infty(A)$ ke $\\fml P_\\infty(B)$. % SOURCE-CORRECTION: CH17-C012",
+      "source_normalized_snippet_sha256": "68675c8749d8b0ad99fa8600b689310161d0b63cc5f47a64e3f72982757d2f3b",
+      "target_normalized_snippet_sha256": "63139dedebb2fecc061df75d4252ceb36b7297703c8794550f4e5809dbe630a3",
+      "source_required_anchors": [
+        "to a $*\\,$-homomorphism $\\phi$ from $\\fml P_\\infty(A)$"
+      ],
+      "forbidden_target_anchors": [
+        "homomorfisme-$*\\,$ $\\phi$ dari $\\fml P_\\infty(A)$"
+      ],
+      "required_target_anchors": [
+        "memiliki pembatasan berupa pemetaan $\\phi$ dari $\\fml P_\\infty(A)$"
+      ],
+      "affects_math": false,
+      "target_marker": "% SOURCE-CORRECTION: CH17-C012",
+      "target_marker_line": 657
+    },
+    {
+      "id": "FAOA-2015-CH17-CORR-013",
+      "source_lines": {
+        "start": 741,
+        "end": 752
+      },
+      "target_lines": {
+        "start": 741,
+        "end": 752
+      },
+      "classification": "MAP_IDENTITY_SOURCE_REPAIR",
+      "decision": "use the newly defined section psi-prime in the final splitting identity",
+      "source_normalized_snippet": "\\begin{proof}[\\emph{Hint for proof}] Define two additional functions \\[ \\mu\\colon \\wt A \\sto A\\colon a + \\lambda \\vc j \\mapsto a \\] and \\[ \\psi' \\colon \\C \\sto \\wt A \\colon \\lambda \\mapsto \\lambda \\vc j\\,. \\] Then verify that \\begin{enumerate}[label=\\rm{(\\alph*)}] \\item $\\mu \\circ \\iota = \\id A$, \\item $\\iota \\circ \\mu + \\psi' \\circ Q = \\id{\\wt A}$, \\item $Q \\circ \\iota = \\vc 0$, and \\item $Q \\circ \\psi = \\id{\\C}$. \\end{enumerate} \\ns \\end{proof}",
+      "target_normalized_snippet": "\\begin{proof}[\\emph{Petunjuk untuk bukti}] Definisikan dua fungsi tambahan \\[ \\mu\\colon \\wt A \\sto A\\colon a + \\lambda \\vc j \\mapsto a \\] dan \\[ \\psi' \\colon \\C \\sto \\wt A \\colon \\lambda \\mapsto \\lambda \\vc j\\,. \\] Kemudian periksa bahwa \\begin{enumerate}[label=\\rm{(\\alph*)}] \\item $\\mu \\circ \\iota = \\id A$, \\item $\\iota \\circ \\mu + \\psi' \\circ Q = \\id{\\wt A}$, \\item $Q \\circ \\iota = \\vc 0$, dan \\item $Q \\circ \\psi' = \\id{\\C}$. % SOURCE-CORRECTION: CH17-C013 \\end{enumerate} \\ns \\end{proof}",
+      "source_normalized_snippet_sha256": "a979bc38aa650b4733da924890e7f61c1a9742df5bfdacdb6f360b294aef7b26",
+      "target_normalized_snippet_sha256": "51aad1595a27392ab8f8073d78ccab9680be3563f758298ee0f5faeeb0865a97",
+      "source_required_anchors": [
+        "Q \\circ \\psi = \\id{\\C}"
+      ],
+      "forbidden_target_anchors": [
+        "Q \\circ \\psi = \\id{\\C}"
+      ],
+      "required_target_anchors": [
+        "Q \\circ \\psi' = \\id{\\C}"
+      ],
+      "affects_math": true,
+      "target_marker": "% SOURCE-CORRECTION: CH17-C013",
+      "target_marker_line": 750
+    },
+    {
+      "id": "FAOA-2015-CH17-CORR-014",
+      "source_lines": {
+        "start": 793,
+        "end": 850
+      },
+      "target_lines": {
+        "start": 793,
+        "end": 850
+      },
+      "classification": "IDENTIFIER_ALIAS_SOURCE_REPAIR",
+      "decision": "bind pi to Q and lambda to psi so the nonunital quotient and scalar-section notation is closed",
+      "source_normalized_snippet": "\\begin{defn} Let $A$ be a nonunital $C^*$-algebra. Recall that the split exact sequence~\\eqref{0062334i} for the unitization of $A$ induces a split exact sequence~\\eqref{0062334ii} between the corresponding $K_0$ groups. \\index{K0@$K_0(A)$!for nonunital $A$}% Define \\[ K_0(A) = \\ker(K_0(\\pi))\\,. \\] \\end{defn} \\begin{prop}\\label{0062413} For a nonunital $C^*$-algebra $A$ the mapping $[\\hphantom{P}] \\colon \\fml P_\\infty(A) \\sto K_0(\\wt A)$ may be regarded as a mapping from $\\fml P_\\infty(A)$ into~$K_0(A)$. \\end{prop} \\begin{prop}\\label{0062416} For both unital and nonunital $C^*$-algebras the sequence \\[ \\vc 0 \\to K_0(A) \\to K_0(\\wt A) \\to K_0(\\C) \\to \\vc 0 \\] is exact. \\end{prop} \\begin{prop}\\label{0062418} For both unital and nonunital $C^*$-algebras the group $K_0(A)$ is (isomorphic to) $\\ker(K_0(\\pi))$. \\end{prop} \\begin{prop}\\label{0062424} If $\\phi\\colon A \\sto B$ is a $*\\,$-homomorphism between $C^*$-algebras, then there exists a unique $*\\,$-homomorphism \\index{K0@$K_0(\\phi)$!nonunital case}% $K_0(\\phi)$ which makes the following diagram commute. \\[\\xy \\hSquares/>`>`.>`>`=`>`>/[K_0(A)`K_0(\\wt A)`K_0(\\C)`K_0(B)`K_0(\\wt B)`K_0(\\C);`K_0(\\pi_A)`K_0(\\phi)`K_0(\\wt\\phi)```K_0(\\pi_B)] \\endxy\\] \\end{prop} \\begin{prop}\\label{0062511} The pair of maps $A \\mapsto K_0(A)$, $\\phi \\mapsto K_0(\\phi)$ is a \\index{functor!$K_0$}% \\index{K0@$K_0$!as a covariant functor}% covariant functor from the category $\\cat{CSA}$ of $C^*$-algebras and $*\\,$-homomorphisms to the category of Abelian groups and group homomorphisms. \\end{prop} In propositions~\\ref{0062327} and~\\ref{0062331} we asserted the homotopy invariance of the functor $K_0$ for unital $C^*$-algebras. We now extend the result to arbitrary $C^*$-algebras. \\begin{prop}\\label{0062521} Let $A$ and $B$ be $C^*$-algebras. If $\\phi \\sim_h \\psi$ in $\\Hom(A,B)$, then $K_0(\\phi) = K_0(\\psi)$. \\end{prop} %\\begin{proof} See \\cite{RordamLL:2000}, proposition 4.1.4. \\ns \\end{proof} \\begin{prop}\\label{0062524} If $C^*$-algebras $A$ and $B$ are homotopically equivalent, then $K_0(A) \\cong K_0(B)$. \\end{prop} %\\begin{proof} See \\cite{RordamLL:2000}, proposition 4.1.4. \\ns \\end{proof} \\begin{defn} Let $\\pi$ and $\\lambda$ be the $*\\,$-homomorphisms in the split exact sequence~\\eqref{0062334i} for the unitization of as $C^*$-algebra~$A$. Define the \\index{scalar!mapping}% \\df{scalar mapping} $s\\colon \\wt A \\sto \\wt A$ for $\\wt A$ by $s := \\lambda \\circ \\pi$. Every",
+      "target_normalized_snippet": "\\begin{defn} Misalkan $A$ aljabar-$C^*$ tak beridentitas. Ingat bahwa barisan eksak terbelah ~\\eqref{0062334i} bagi unitalisasi $A$ menginduksi barisan eksak terbelah ~\\eqref{0062334ii} di antara grup-grup $K_0$ yang bersesuaian. \\index{K0@$K_0(A)$!untuk $A$ tak beridentitas}% Definisikan \\[ \\pi:=Q,\\qquad K_0(A) = \\ker(K_0(\\pi))\\,. \\] % SOURCE-CORRECTION: CH17-C014 \\end{defn} \\begin{prop}\\label{0062413} Untuk aljabar-$C^*$ tak beridentitas $A$, pemetaan $[\\hphantom{P}] \\colon \\fml P_\\infty(A) \\sto K_0(\\wt A)$ dapat dipandang sebagai pemetaan dari $\\fml P_\\infty(A)$ ke dalam~$K_0(A)$. \\end{prop} \\begin{prop}\\label{0062416} Untuk aljabar-$C^*$ beridentitas maupun tak beridentitas, barisan \\[ \\vc 0 \\to K_0(A) \\to K_0(\\wt A) \\to K_0(\\C) \\to \\vc 0 \\] bersifat eksak. \\end{prop} \\begin{prop}\\label{0062418} Untuk aljabar-$C^*$ beridentitas maupun tak beridentitas, grup $K_0(A)$ (isomorfik dengan) $\\ker(K_0(\\pi))$. \\end{prop} \\begin{prop}\\label{0062424} Jika $\\phi\\colon A \\sto B$ merupakan homomorfisme-$*\\,$ di antara aljabar-$C^*$, maka terdapat homomorfisme grup tunggal % SOURCE-CORRECTION: CH17-C015 \\index{K0@$K_0(\\phi)$!kasus tak beridentitas}% $K_0(\\phi)$ yang membuat diagram berikut komutatif. \\[\\xy \\hSquares/>`>`.>`>`=`>`>/[K_0(A)`K_0(\\wt A)`K_0(\\C)`K_0(B)`K_0(\\wt B)`K_0(\\C);`K_0(\\pi_A)`K_0(\\phi)`K_0(\\wt\\phi)```K_0(\\pi_B)] \\endxy\\] \\end{prop} \\begin{prop}\\label{0062511} Pasangan pemetaan $A \\mapsto K_0(A)$, $\\phi \\mapsto K_0(\\phi)$ merupakan \\index{funktor!$K_0$}% \\index{K0@$K_0$!sebagai funktor kovarian}% funktor kovarian dari kategori $\\cat{CSA}$ aljabar-$C^*$ dan homomorfisme-$*\\,$ ke kategori grup Abelian dan homomorfisme grup. \\end{prop} Dalam proposisi~\\ref{0062327} dan~\\ref{0062331}, kita menyatakan invariansi homotopi dari funktor $K_0$ untuk aljabar-$C^*$ beridentitas. Sekarang kita memperluas hasil tersebut ke sebarang aljabar-$C^*$. \\begin{prop}\\label{0062521} Misalkan $A$ dan $B$ aljabar-$C^*$. Jika $\\phi \\sim_h \\psi$ dalam $\\Hom(A,B)$, maka $K_0(\\phi) = K_0(\\psi)$. \\end{prop} %\\begin{proof} Lihat \\cite{RordamLL:2000}, proposisi 4.1.4. \\ns \\end{proof} \\begin{prop}\\label{0062524} Jika aljabar-$C^*$ $A$ dan $B$ ekuivalen secara homotopi, maka $K_0(A) \\cong K_0(B)$. \\end{prop} %\\begin{proof} Lihat \\cite{RordamLL:2000}, proposisi 4.1.4. \\ns \\end{proof} \\begin{defn} Misalkan $\\pi:=Q$ dan $\\lambda:=\\psi$ adalah homomorfisme-$*\\,$ yang berturut-turut berperan sebagai pemetaan hasil bagi dan penampang kanonik dalam barisan eksak terbelah~\\eqref{0062334i} bagi unitalisasi suatu aljabar-$C^*$~$A$. Definisikan % SOURCE-CORRECTION: CH17-C016 \\index{skalar!pemetaan}% \\df{pemetaan skalar} $s\\colon \\wt A \\sto \\wt A$ untuk $\\wt A$ dengan $s := \\lambda \\circ \\pi$. Setiap",
+      "source_normalized_snippet_sha256": "a665c656f4aaafc0d1b117993a07f7637b694e9bf80630cd0c7fc086d1df031e",
+      "target_normalized_snippet_sha256": "899fa473a3d604b1cc43ba9f58ce8f8135cd5799c74bf2dd9e9a87d9276ba341",
+      "source_required_anchors": [
+        "K_0(A) = \\ker(K_0(\\pi))",
+        "Let $\\pi$ and $\\lambda$ be"
+      ],
+      "forbidden_target_anchors": [
+        "Misalkan $\\pi$ dan $\\lambda$ adalah"
+      ],
+      "required_target_anchors": [
+        "\\pi:=Q",
+        "\\lambda:=\\psi"
+      ],
+      "affects_math": true,
+      "target_marker": "% SOURCE-CORRECTION: CH17-C014",
+      "target_marker_line": 798
+    },
+    {
+      "id": "FAOA-2015-CH17-CORR-015",
+      "source_lines": {
+        "start": 814,
+        "end": 822
+      },
+      "target_lines": {
+        "start": 814,
+        "end": 822
+      },
+      "classification": "MATHEMATICAL_CATEGORY_SOURCE_REPAIR",
+      "decision": "call K_0(phi) a group homomorphism between Abelian groups",
+      "source_normalized_snippet": "\\begin{prop}\\label{0062424} If $\\phi\\colon A \\sto B$ is a $*\\,$-homomorphism between $C^*$-algebras, then there exists a unique $*\\,$-homomorphism \\index{K0@$K_0(\\phi)$!nonunital case}% $K_0(\\phi)$ which makes the following diagram commute. \\[\\xy \\hSquares/>`>`.>`>`=`>`>/[K_0(A)`K_0(\\wt A)`K_0(\\C)`K_0(B)`K_0(\\wt B)`K_0(\\C);`K_0(\\pi_A)`K_0(\\phi)`K_0(\\wt\\phi)```K_0(\\pi_B)] \\endxy\\] \\end{prop}",
+      "target_normalized_snippet": "\\begin{prop}\\label{0062424} Jika $\\phi\\colon A \\sto B$ merupakan homomorfisme-$*\\,$ di antara aljabar-$C^*$, maka terdapat homomorfisme grup tunggal % SOURCE-CORRECTION: CH17-C015 \\index{K0@$K_0(\\phi)$!kasus tak beridentitas}% $K_0(\\phi)$ yang membuat diagram berikut komutatif. \\[\\xy \\hSquares/>`>`.>`>`=`>`>/[K_0(A)`K_0(\\wt A)`K_0(\\C)`K_0(B)`K_0(\\wt B)`K_0(\\C);`K_0(\\pi_A)`K_0(\\phi)`K_0(\\wt\\phi)```K_0(\\pi_B)] \\endxy\\] \\end{prop}",
+      "source_normalized_snippet_sha256": "52e818c709850bb17d0778122231cd2e0ae3243128ca5d2f9e16549d53bba09a",
+      "target_normalized_snippet_sha256": "2bf6f65926bfc1d2b16ba17a5c87e79fec3262ba809003d3bc8d13e9382b6a74",
+      "source_required_anchors": [
+        "unique $*\\,$-homomorphism"
+      ],
+      "forbidden_target_anchors": [
+        "homomorfisme-$*\\,$ tunggal"
+      ],
+      "required_target_anchors": [
+        "homomorfisme grup tunggal"
+      ],
+      "affects_math": false,
+      "target_marker": "% SOURCE-CORRECTION: CH17-C015",
+      "target_marker_line": 815
+    },
+    {
+      "id": "FAOA-2015-CH17-CORR-016",
+      "source_lines": {
+        "start": 847,
+        "end": 850
+      },
+      "target_lines": {
+        "start": 847,
+        "end": 850
+      },
+      "classification": "MECHANICAL_PROSE_SOURCE_REPAIR",
+      "decision": "repair the malformed phrase unitization of a C-star-algebra",
+      "source_normalized_snippet": "\\begin{defn} Let $\\pi$ and $\\lambda$ be the $*\\,$-homomorphisms in the split exact sequence~\\eqref{0062334i} for the unitization of as $C^*$-algebra~$A$. Define the \\index{scalar!mapping}% \\df{scalar mapping} $s\\colon \\wt A \\sto \\wt A$ for $\\wt A$ by $s := \\lambda \\circ \\pi$. Every",
+      "target_normalized_snippet": "\\begin{defn} Misalkan $\\pi:=Q$ dan $\\lambda:=\\psi$ adalah homomorfisme-$*\\,$ yang berturut-turut berperan sebagai pemetaan hasil bagi dan penampang kanonik dalam barisan eksak terbelah~\\eqref{0062334i} bagi unitalisasi suatu aljabar-$C^*$~$A$. Definisikan % SOURCE-CORRECTION: CH17-C016 \\index{skalar!pemetaan}% \\df{pemetaan skalar} $s\\colon \\wt A \\sto \\wt A$ untuk $\\wt A$ dengan $s := \\lambda \\circ \\pi$. Setiap",
+      "source_normalized_snippet_sha256": "eb3ac1266deb6dcdc8bf3f749951324843ba97dc7669be081ddfcf4d85f35704",
+      "target_normalized_snippet_sha256": "1d87ad086d1025fbf33dd228fd7d1e57125cf0f0a1751c6adee7454360553b87",
+      "source_required_anchors": [
+        "unitization of as $C^*$-algebra"
+      ],
+      "forbidden_target_anchors": [
+        "unitalisasi dari sebagai aljabar"
+      ],
+      "required_target_anchors": [
+        "unitalisasi suatu aljabar-$C^*$"
+      ],
+      "affects_math": false,
+      "target_marker": "% SOURCE-CORRECTION: CH17-C016",
+      "target_marker_line": 848
+    },
+    {
+      "id": "FAOA-2015-CH17-CORR-017",
+      "source_lines": {
+        "start": 860,
+        "end": 866
+      },
+      "target_lines": {
+        "start": 860,
+        "end": 866
+      },
+      "classification": "MATHEMATICAL_NOTATION_SOURCE_REPAIR",
+      "decision": "remove the unused q variable from the standard-picture set builder",
+      "source_normalized_snippet": "\\begin{prop}[Standard Picture of $K_0(A)$ for arbitrary $A$]\\label{0062544} If $A$ is a $C^*$-algebra, \\index{standard!picture of $K_0(A)$!for arbitrary $A$}% \\index{picture (\\seeonly{standard picture}))}% then \\[ K_0(A) = \\{\\,[p\\,] - [s(p)]\\colon p,q \\in \\fml P_\\infty(\\wt A)\\}\\,. \\] \\end{prop}",
+      "target_normalized_snippet": "\\begin{prop}[Gambaran Standar $K_0(A)$ untuk sebarang $A$]\\label{0062544} Jika $A$ suatu aljabar-$C^*$, \\index{standar!gambaran $K_0(A)$!untuk sebarang $A$}% \\index{gambaran (\\seeonly{gambaran standar}))}% maka \\[ K_0(A) = \\{\\,[p\\,] - [s(p)]\\colon p \\in \\fml P_\\infty(\\wt A)\\}\\,. \\] % SOURCE-CORRECTION: CH17-C017 \\end{prop}",
+      "source_normalized_snippet_sha256": "fd439990f42e87227b6349b09d4e58d48f82e7811131dc476291f9fc4ece87b8",
+      "target_normalized_snippet_sha256": "2682255403698c47402b7a901c9a0bb2ec6407f937e82b242d5ef6f626de24a1",
+      "source_required_anchors": [
+        "p,q \\in \\fml P_\\infty(\\wt A)"
+      ],
+      "forbidden_target_anchors": [
+        "p,q \\in \\fml P_\\infty(\\wt A)"
+      ],
+      "required_target_anchors": [
+        "p \\in \\fml P_\\infty(\\wt A)"
+      ],
+      "affects_math": true,
+      "target_marker": "% SOURCE-CORRECTION: CH17-C017",
+      "target_marker_line": 865
+    },
+    {
+      "id": "FAOA-2015-CH17-CORR-018",
+      "source_lines": {
+        "start": 930,
+        "end": 934
+      },
+      "target_lines": {
+        "start": 930,
+        "end": 934
+      },
+      "classification": "FORMAL_SCOPE_CLARIFICATION",
+      "decision": "require infinite-dimensional H in the Calkin exact-sequence counterexample",
+      "source_normalized_snippet": "\\begin{exam}\\label{0062679} If $H$ is a Hilbert space the exact sequence \\[ \\vc 0 \\to \\ofml K(H) \\to^\\iota \\ofml B(H) \\to^\\pi \\ofml Q(H) \\to \\vc 0 \\] associated with the Calkin algebra $\\ofml Q(H)$ is exact but $K_0(\\iota)$ is not injective. (This example requires a fact we have not derived: $K_0(\\ofml K(H)) \\cong \\Z$, for which see~\\cite{RordamLL:2000}, Corollary~6.4.2.) \\end{exam}",
+      "target_normalized_snippet": "\\begin{exam}\\label{0062679} Jika $H$ ruang Hilbert berdimensi tak hingga, barisan eksak % SOURCE-CORRECTION: CH17-C018 \\[ \\vc 0 \\to \\ofml K(H) \\to^\\iota \\ofml B(H) \\to^\\pi \\ofml Q(H) \\to \\vc 0 \\] yang terkait dengan aljabar Calkin $\\ofml Q(H)$ bersifat eksak, tetapi $K_0(\\iota)$ tidak injektif. (Contoh ini memerlukan fakta yang belum kita turunkan: $K_0(\\ofml K(H)) \\cong \\Z$; untuk itu, lihat~\\cite{RordamLL:2000}, Akibat~6.4.2.) \\end{exam}",
+      "source_normalized_snippet_sha256": "e56a087113f970dcbfec332d86a840d11c2d95632a5986fe127644e0fdccc8c3",
+      "target_normalized_snippet_sha256": "082f568450d48ddd1e3bb4e688a27c8b20e94334babec3284abcb8a8f8641c06",
+      "source_required_anchors": [
+        "If $H$ is a Hilbert space the exact sequence"
+      ],
+      "forbidden_target_anchors": [
+        "Jika $H$ ruang Hilbert, barisan eksak"
+      ],
+      "required_target_anchors": [
+        "ruang Hilbert berdimensi tak hingga"
+      ],
+      "affects_math": false,
+      "target_marker": "% SOURCE-CORRECTION: CH17-C018",
+      "target_marker_line": 930
+    },
+    {
+      "id": "FAOA-2015-CH17-CORR-019",
+      "source_lines": {
+        "start": 1032,
+        "end": 1036
+      },
+      "target_lines": {
+        "start": 1032,
+        "end": 1036
+      },
+      "classification": "MATHEMATICAL_TOPOLOGY_SOURCE_REPAIR",
+      "decision": "take the norm closure of the increasing union in the C-star inductive limit",
+      "source_normalized_snippet": "\\begin{exam} If $(A_n)$ is an increasing sequence of $C^*$-subalgebras of a $C^*$-algebra $D$ (with $\\iota_n\\colon A_n \\sto A_{n+1}$ being the inclusion map for each~$n$), then $(A,\\iota)$ is an inductive sequence of $C^*$-algebras whose inductive limit is $(B,j)$ where $B = \\bigcup_{n=1}^\\infty A_n$ and $j_n\\colon A_n \\sto B$ is the inclusion map for each~$n$. \\end{exam}",
+      "target_normalized_snippet": "\\begin{exam} Jika $(A_n)$ merupakan barisan meningkat yang terdiri atas subaljabar-$C^*$ dari suatu aljabar-$C^*$ $D$ (dengan $\\iota_n\\colon A_n \\sto A_{n+1}$ pemetaan inklusi untuk setiap~$n$), maka $(A,\\iota)$ merupakan barisan induktif aljabar-$C^*$ yang limit induktifnya adalah $(B,j)$, dengan $B = \\clo{\\bigcup_{n=1}^\\infty A_n}$ dan $j_n\\colon A_n \\sto B$ pemetaan inklusi untuk setiap~$n$. % SOURCE-CORRECTION: CH17-C019 \\end{exam}",
+      "source_normalized_snippet_sha256": "ab0e308eb5ce8bb0b673db89d39721f78943e13add6dc7369a2be0602e39e409",
+      "target_normalized_snippet_sha256": "77f460b60c4ecd18c6d4ba234c773cb7219f86e4c390e1c963ecf50bd02b6260",
+      "source_required_anchors": [
+        "B = \\bigcup_{n=1}^\\infty A_n"
+      ],
+      "forbidden_target_anchors": [
+        "B = \\bigcup_{n=1}^\\infty A_n"
+      ],
+      "required_target_anchors": [
+        "\\clo{\\bigcup_{n=1}^\\infty A_n}"
+      ],
+      "affects_math": true,
+      "target_marker": "% SOURCE-CORRECTION: CH17-C019",
+      "target_marker_line": 1035
+    },
+    {
+      "id": "FAOA-2015-CH17-CORR-020",
+      "source_lines": {
+        "start": 1038,
+        "end": 1042
+      },
+      "target_lines": {
+        "start": 1038,
+        "end": 1042
+      },
+      "classification": "FORMAL_SCOPE_CLARIFICATION",
+      "decision": "identify the compact-operator limit space as separable and infinite-dimensional",
+      "source_normalized_snippet": "\\begin{exam} The sequence $\\mathbf M_1 = \\C \\to^{\\phi_1} \\mathbf M_2 \\to^{\\phi_2} \\mathbf M_3 \\to^{\\phi_3} \\dots$ (where $\\phi_n(a) = \\diag(a,0)$ for each $n \\in \\N$ and $a \\in \\mathbf M_n$) is an inductive sequence of $C^*$-algebras whose inductive limit is the $C^*$-algebra $\\ofml K(H)$ of compact operators on a Hilbert space~$H$. \\end{exam}",
+      "target_normalized_snippet": "\\begin{exam} Barisan $\\mathbf M_1 = \\C \\to^{\\phi_1} \\mathbf M_2 \\to^{\\phi_2} \\mathbf M_3 \\to^{\\phi_3} \\dots$ (dengan $\\phi_n(a) = \\diag(a,0)$ untuk setiap $n \\in \\N$ dan $a \\in \\mathbf M_n$) merupakan barisan induktif aljabar-$C^*$ yang limit induktifnya adalah aljabar-$C^*$ $\\ofml K(H)$ yang terdiri atas operator kompak pada ruang Hilbert terpisahkan berdimensi tak hingga~$H$. % SOURCE-CORRECTION: CH17-C020 \\end{exam}",
+      "source_normalized_snippet_sha256": "3c349c748a7ea8a4e1aa155e10f6a54f0c1528311df71a364124c795098869c9",
+      "target_normalized_snippet_sha256": "0fc1a3e81260bae742fd0f1f35eb7d79c3e9cfb7c243e1112ffd89528ad08977",
+      "source_required_anchors": [
+        "compact operators on a Hilbert space~$H$"
+      ],
+      "forbidden_target_anchors": [
+        "operator kompak pada ruang Hilbert~$H$"
+      ],
+      "required_target_anchors": [
+        "ruang Hilbert terpisahkan berdimensi tak hingga~$H$"
+      ],
+      "affects_math": false,
+      "target_marker": "% SOURCE-CORRECTION: CH17-C020",
+      "target_marker_line": 1041
+    },
+    {
+      "id": "FAOA-2015-CH17-CORR-021",
+      "source_lines": {
+        "start": 1093,
+        "end": 1104
+      },
+      "target_lines": {
+        "start": 1093,
+        "end": 1104
+      },
+      "classification": "MATHEMATICAL_CATEGORY_SOURCE_REPAIR",
+      "decision": "classify nonzero star-homomorphisms, explicitly name the displayed map phi, and preserve that category in the following example",
+      "source_normalized_snippet": "\\begin{prop} Nonzero algebra homomorphisms from $M_k$ into $M_n$ exist only if $n \\ge k$, in which case they are precisely the mappings of the form \\[ a \\mapsto u\\,\\diag(a, a, \\dots, a, \\vc 0)\\, u^* \\] where $u$ is a unitary matrix. Here there are $m$ copies of $a$ and $\\vc 0$ is the $r \\times r$ zero matrix where $n = mk + r$. The number $m$ is the \\index{multiplicity!of an algebra homomorphism}% \\df{multiplicity} of~$\\phi$. \\end{prop} \\begin{proof} See \\cite{Power:1992}, corollary 1.3. \\ns \\end{proof} \\begin{exam} An example of a homomorphism from $M_2$ into $M_7$ is",
+      "target_normalized_snippet": "\\begin{prop} Homomorfisme-$*\\,$ tak nol dari $M_k$ ke $M_n$ ada hanya jika $n \\ge k$; dalam hal ini, semuanya tepat merupakan pemetaan berbentuk \\[ \\phi\\colon a \\mapsto u\\,\\diag(a, a, \\dots, a, \\vc 0)\\, u^* \\] % SOURCE-CORRECTION: CH17-C021 dengan $u$ matriks uniter. Di sini terdapat $m$ salinan $a$, dan $\\vc 0$ adalah matriks nol berukuran $r \\times r$, dengan $n = mk + r$. Bilangan $m$ adalah \\index{multiplisitas!dari homomorfisme-$*\\,$}% \\df{multiplisitas} dari~$\\phi$. \\end{prop} \\begin{proof} Lihat \\cite{Power:1992}, akibat 1.3. \\ns \\end{proof} \\begin{exam} Contoh homomorfisme-$*\\,$ dari $M_2$ ke $M_7$ adalah",
+      "source_normalized_snippet_sha256": "7e33ff6979e3ec94af3208f3ef866b3299e87aa76cf77b1f01a767508fda80ed",
+      "target_normalized_snippet_sha256": "8e72bb737f40126c8047404903a4c572b5f711ad0e1373a2d51678ee368c43fc",
+      "source_required_anchors": [
+        "Nonzero algebra homomorphisms",
+        "a \\mapsto u\\,\\diag",
+        "An example of a homomorphism from"
+      ],
+      "forbidden_target_anchors": [
+        "Homomorfisme aljabar tak nol",
+        "\\[ a \\mapsto u\\,\\diag",
+        "Contoh homomorfisme dari"
+      ],
+      "required_target_anchors": [
+        "Homomorfisme-$*\\,$ tak nol",
+        "\\phi\\colon a \\mapsto u\\,\\diag",
+        "Contoh homomorfisme-$*\\,$ dari"
+      ],
+      "affects_math": true,
+      "target_marker": "% SOURCE-CORRECTION: CH17-C021",
+      "target_marker_line": 1095
+    },
+    {
+      "id": "FAOA-2015-CH17-CORR-022",
+      "source_lines": {
+        "start": 1127,
+        "end": 1130
+      },
+      "target_lines": {
+        "start": 1127,
+        "end": 1130
+      },
+      "classification": "MATHEMATICAL_RANGE_SOURCE_REPAIR",
+      "decision": "allow zero entries in the multiplicity matrix by using nonnegative integers",
+      "source_normalized_snippet": "and suppose that $\\phi\\colon A \\sto B$ is a unital ${}^*$-homomorphism. Then $\\phi$ is determined (up to unitary equivalence in~$B$) by an $s \\times r$ matrix $\\vc m = \\bigl[ m_{ij}\\bigr]$ of positive integers such that \\begin{equation}\\label{0068117i}",
+      "target_normalized_snippet": "dan misalkan $\\phi\\colon A \\sto B$ homomorfisme-$*\\,$ beridentitas. Maka $\\phi$ ditentukan (hingga ekuivalensi uniter dalam~$B$) oleh matriks $s \\times r$ $\\vc m = \\bigl[ m_{ij}\\bigr]$ yang berentri bilangan bulat tak negatif sedemikian sehingga % SOURCE-CORRECTION: CH17-C022 \\begin{equation}\\label{0068117i}",
+      "source_normalized_snippet_sha256": "2816bf821f91c7880ec8459f22c0be6345072d5b364033fc62649acb5e7e9c35",
+      "target_normalized_snippet_sha256": "ecd83811cb117a56b017e5b85f95cf55bd15db22d87e82cab34bb4bd9f5434ed",
+      "source_required_anchors": [
+        "matrix $\\vc m",
+        "of positive integers"
+      ],
+      "forbidden_target_anchors": [
+        "berentri bilangan bulat positif"
+      ],
+      "required_target_anchors": [
+        "berentri bilangan bulat tak negatif"
+      ],
+      "affects_math": false,
+      "target_marker": "% SOURCE-CORRECTION: CH17-C022",
+      "target_marker_line": 1129
+    },
+    {
+      "id": "FAOA-2015-CH17-CORR-023",
+      "source_lines": {
+        "start": 1271,
+        "end": 1275
+      },
+      "target_lines": {
+        "start": 1271,
+        "end": 1275
+      },
+      "classification": "MECHANICAL_TEX_SOURCE_REPAIR",
+      "decision": "remove the empty textbf command while localizing the CAR expansion",
+      "source_normalized_snippet": "\\begin{exam} Here is an example of a so-called \\index{CAR-algebras}% \\index{cstaralg@$C^*$-algebra!CAR-algebras}% CAR\\textbf{}-algebra (CAR = Canonical Anticommutation Relations). For $j \\ge 0$ let $A_j = M_{\\spsp{2}j}$ and",
+      "target_normalized_snippet": "\\begin{exam} Berikut suatu contoh dari apa yang disebut \\index{aljabar CAR}% \\index{cstaralg@aljabar-$C^*$!aljabar CAR}% aljabar CAR (CAR = Relasi Antikomutasi Kanonik). Untuk $j \\ge 0$, misalkan $A_j = % SOURCE-CORRECTION: CH17-C023 M_{\\spsp{2}j}$ dan",
+      "source_normalized_snippet_sha256": "ba5ed1f9006b053f65865d211b178e9147069cb6e8a24cedda44f8e5ec1c6482",
+      "target_normalized_snippet_sha256": "f75e14d0a51fdbddfd5de040dbbbeba616c39a8b1e8f97f8cf114fc1df06f7df",
+      "source_required_anchors": [
+        "CAR\\textbf{}-algebra"
+      ],
+      "forbidden_target_anchors": [
+        "CAR\\textbf{}"
+      ],
+      "required_target_anchors": [
+        "aljabar CAR (CAR = Relasi Antikomutasi Kanonik)"
+      ],
+      "affects_math": false,
+      "target_marker": "% SOURCE-CORRECTION: CH17-C023",
+      "target_marker_line": 1274
+    },
+    {
+      "id": "FAOA-2015-CH17-CORR-024",
+      "source_lines": {
+        "start": 144,
+        "end": 145
+      },
+      "target_lines": {
+        "start": 144,
+        "end": 145
+      },
+      "classification": "MATHEMATICAL_IMPLICATION_SOURCE_REPAIR",
+      "decision": "reverse the displayed implication so it actually states the converse of the second implication in proposition 0060221",
+      "source_normalized_snippet": "In general, the converse of the second implication, $p \\sim_u q \\implies p \\sim q$, in the preceding proposition does not hold (see example~\\ref{0060233} below). However, for projections $p$ and $q$ in a unital $C^*$-algebra, if we have both $p \\sim q$ and",
+      "target_normalized_snippet": "Secara umum, kebalikan dari implikasi kedua, $p \\sim q \\implies p \\sim_u q$, dalam proposisi sebelumnya tidak berlaku (lihat % SOURCE-CORRECTION: CH17-C024 contoh~\\ref{0060233} di bawah). Namun, untuk proyeksi $p$ dan $q$ dalam suatu aljabar-$C^*$ beridentitas, jika berlaku baik $p \\sim q$ maupun",
+      "source_normalized_snippet_sha256": "9c6593c736587cb26e451903b8eafb7fca3b0ec454674ae0c1a647dd99263723",
+      "target_normalized_snippet_sha256": "1ab4ad08839a74600ad915c9444c33f9a72ff4b8d249bc6999429ff65a4ad3df",
+      "source_required_anchors": [
+        "converse of the second implication, $p \\sim_u q \\implies p \\sim q$"
+      ],
+      "forbidden_target_anchors": [
+        "kebalikan dari implikasi kedua, $p \\sim_u q \\implies p \\sim q$"
+      ],
+      "required_target_anchors": [
+        "kebalikan dari implikasi kedua, $p \\sim q \\implies p \\sim_u q$"
+      ],
+      "affects_math": true,
+      "target_marker": "% SOURCE-CORRECTION: CH17-C024",
+      "target_marker_line": 144
+    },
+    {
+      "id": "FAOA-2015-CH17-CORR-025",
+      "source_lines": {
+        "start": 175,
+        "end": 177
+      },
+      "target_lines": {
+        "start": 175,
+        "end": 177
+      },
+      "classification": "MATHEMATICAL_IMPLICATION_SOURCE_REPAIR",
+      "decision": "reverse the displayed implication so it actually states the converse of the first implication in proposition 0060221",
+      "source_normalized_snippet": "\\begin{rem} The converse of the first implication, $p \\sim_h q \\implies p \\sim_u q$, in proposition~\\ref{0060221} also does not hold in general for projections in a $C^*$-algebra. However, an example illustrating this phenomenon is not easy to come by. To see what is involved consult~\\cite{RordamLL:2000}, examples 2.2.9 and 11.3.4.",
+      "target_normalized_snippet": "\\begin{rem} Kebalikan dari implikasi pertama, $p \\sim_u q \\implies p \\sim_h q$, dalam proposisi~\\ref{0060221} juga tidak berlaku % SOURCE-CORRECTION: CH17-C025 secara umum untuk proyeksi dalam suatu aljabar-$C^*$. Namun, contoh yang menggambarkan gejala ini tidak mudah ditemukan. Untuk melihat apa yang terlibat, lihat~\\cite{RordamLL:2000}, contoh 2.2.9 dan 11.3.4.",
+      "source_normalized_snippet_sha256": "9aefa861ab77402447f836807c54617c5595454425052e4907c10e13834b42cf",
+      "target_normalized_snippet_sha256": "68b0dcab49628d843236521fe3445f2a9c7c6da326d35b072f52a154db62cdca",
+      "source_required_anchors": [
+        "converse of the first implication, $p \\sim_h q \\implies p \\sim_u q$"
+      ],
+      "forbidden_target_anchors": [
+        "Kebalikan dari implikasi pertama, $p \\sim_h q \\implies p \\sim_u q$"
+      ],
+      "required_target_anchors": [
+        "Kebalikan dari implikasi pertama, $p \\sim_u q \\implies p \\sim_h q$"
+      ],
+      "affects_math": true,
+      "target_marker": "% SOURCE-CORRECTION: CH17-C025",
+      "target_marker_line": 175
+    },
+    {
+      "id": "FAOA-2015-CH17-CORR-026",
+      "source_lines": {
+        "start": 651,
+        "end": 652
+      },
+      "target_lines": {
+        "start": 651,
+        "end": 652
+      },
+      "classification": "MATHEMATICAL_TYPE_SOURCE_REPAIR",
+      "decision": "give tau the underlying semigroup of G as codomain because its value nu(p) lies there",
+      "source_normalized_snippet": "\\begin{proof}[\\emph{Hint for proof}] Let $\\tau\\colon \\fml D(A) \\sto K_0(A)\\colon \\sbsb{[p\\,]}{\\fml D} \\mapsto \\nu(p)$. Verify that $\\tau$ is well-defined and that it is a semigroup homomorphism. Then use proposition~\\ref{0062151}. \\ns",
+      "target_normalized_snippet": "\\begin{proof}[\\emph{Petunjuk untuk bukti}] Misalkan $\\tau\\colon \\fml D(A) \\sto \\abs G\\colon \\sbsb{[p\\,]}{\\fml D} \\mapsto \\nu(p)$. % SOURCE-CORRECTION: CH17-C026 Periksa bahwa $\\tau$ terdefinisi dengan baik dan merupakan homomorfisme semigrup. Kemudian gunakan proposisi~\\ref{0062151}. \\ns",
+      "source_normalized_snippet_sha256": "58a44b8ce3bc2c088d1743a4237ffdb09e1f7fed5bb9883d179f79541e9b5aaa",
+      "target_normalized_snippet_sha256": "879d27707a155077f9bd926031f8acba600706cf4a105bc344b7d83a41c14902",
+      "source_required_anchors": [
+        "\\tau\\colon \\fml D(A) \\sto K_0(A)"
+      ],
+      "forbidden_target_anchors": [
+        "\\tau\\colon \\fml D(A) \\sto K_0(A)"
+      ],
+      "required_target_anchors": [
+        "\\tau\\colon \\fml D(A) \\sto \\abs G"
+      ],
+      "affects_math": true,
+      "target_marker": "% SOURCE-CORRECTION: CH17-C026",
+      "target_marker_line": 651
+    }
+  ]
+}

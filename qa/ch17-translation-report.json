@@ -1,0 +1,738 @@
+{
+  "corrections": {
+    "class_counts": {
+      "FORMAL_SCOPE_CLARIFICATION": 3,
+      "IDENTIFIER_ALIAS_SOURCE_REPAIR": 1,
+      "MAP_IDENTITY_SOURCE_REPAIR": 1,
+      "MATHEMATICAL_CATEGORY_SOURCE_REPAIR": 4,
+      "MATHEMATICAL_EQUALITY_SOURCE_REPAIR": 1,
+      "MATHEMATICAL_IMPLICATION_SOURCE_REPAIR": 2,
+      "MATHEMATICAL_NOTATION_SOURCE_REPAIR": 1,
+      "MATHEMATICAL_RANGE_SOURCE_REPAIR": 1,
+      "MATHEMATICAL_STATUS_CLARIFICATION": 1,
+      "MATHEMATICAL_TOPOLOGY_SOURCE_REPAIR": 1,
+      "MATHEMATICAL_TYPE_SOURCE_REPAIR": 2,
+      "MECHANICAL_CATEGORY_PROSE_REPAIR": 1,
+      "MECHANICAL_PROSE_SOURCE_REPAIR": 6,
+      "MECHANICAL_TEX_SOURCE_REPAIR": 1
+    },
+    "ledger_sha256": "a2b84cfb272a22669920ee0ef4fd015929b353be651cc80700e370c91329257d",
+    "math_surface_affecting_record_ids": [
+      "FAOA-2015-CH17-CORR-005",
+      "FAOA-2015-CH17-CORR-013",
+      "FAOA-2015-CH17-CORR-014",
+      "FAOA-2015-CH17-CORR-017",
+      "FAOA-2015-CH17-CORR-019",
+      "FAOA-2015-CH17-CORR-021",
+      "FAOA-2015-CH17-CORR-024",
+      "FAOA-2015-CH17-CORR-025",
+      "FAOA-2015-CH17-CORR-026"
+    ],
+    "records": 26
+  },
+  "errors": [],
+  "identities": {
+    "ledger_bytes": 53256,
+    "ledger_sha256": "a2b84cfb272a22669920ee0ef4fd015929b353be651cc80700e370c91329257d",
+    "master_bytes": 10820,
+    "master_sha256": "51b3f4d790e3d09ac6ac4c160284510e4827140ecaa5a961a46c880ae5c8bb39",
+    "source_bytes": 59639,
+    "source_sha256": "e8ebcaa4e5dbc1cc9b907edb235465610f3bd61e0bfa1ce2f1b5b26e9abf8c6a",
+    "target_bytes": 61673,
+    "target_sha256": "061ffd28907e2251fc8b01077888de3e11b3bce67fec1ba52b080c924a241059"
+  },
+  "linkage": {
+    "cumulative_labels": 638,
+    "unresolved_citations": [],
+    "unresolved_references": []
+  },
+  "math": {
+    "active_census": {
+      "source": {
+        "align": 3,
+        "display": 71,
+        "equation": 4,
+        "inline": 969,
+        "raw_inline_delimiter_spans": 973,
+        "total": 1047
+      },
+      "target": {
+        "align": 3,
+        "display": 71,
+        "equation": 4,
+        "inline": 970,
+        "raw_inline_delimiter_spans": 974,
+        "total": 1048
+      }
+    },
+    "classified_correction_ranges": {
+      "FAOA-2015-CH17-CORR-005": [
+        101,
+        103
+      ],
+      "FAOA-2015-CH17-CORR-006": [
+        367,
+        369
+      ],
+      "FAOA-2015-CH17-CORR-012": [
+        655,
+        658
+      ],
+      "FAOA-2015-CH17-CORR-013": [
+        741,
+        752
+      ],
+      "FAOA-2015-CH17-CORR-014": [
+        793,
+        850
+      ],
+      "FAOA-2015-CH17-CORR-017": [
+        860,
+        866
+      ],
+      "FAOA-2015-CH17-CORR-019": [
+        1032,
+        1036
+      ],
+      "FAOA-2015-CH17-CORR-021": [
+        1093,
+        1104
+      ],
+      "FAOA-2015-CH17-CORR-024": [
+        144,
+        145
+      ],
+      "FAOA-2015-CH17-CORR-025": [
+        175,
+        177
+      ],
+      "FAOA-2015-CH17-CORR-026": [
+        651,
+        652
+      ],
+      "LOCALIZED_AF_COMPOUND": [
+        1235,
+        1236
+      ],
+      "LOCALIZED_EXPLICIT_OBJECTS": [
+        710,
+        710
+      ],
+      "LOCALIZED_ORDINAL": [
+        275,
+        275
+      ],
+      "LOCALIZED_STAR_HOMOMORPHISM_1127": [
+        1127,
+        1127
+      ],
+      "LOCALIZED_STAR_HOMOMORPHISM_1221": [
+        1221,
+        1221
+      ]
+    },
+    "classified_differences": [
+      {
+        "classifications": [
+          "FAOA-2015-CH17-CORR-005"
+        ],
+        "operation": "replace",
+        "source_lines": [
+          101
+        ],
+        "source_ordinals": [
+          107,
+          108
+        ],
+        "source_values": [
+          "c\\colon [0,1] \\sto \\T\\colon t \\mapsto \\exp(ith)"
+        ],
+        "target_lines": [
+          101
+        ],
+        "target_ordinals": [
+          107,
+          108
+        ],
+        "target_values": [
+          "c\\colon [0,1] \\sto \\ofml U(A)\\colon t \\mapsto \\exp(ith)"
+        ]
+      },
+      {
+        "classifications": [
+          "FAOA-2015-CH17-CORR-024"
+        ],
+        "operation": "replace",
+        "source_lines": [
+          144
+        ],
+        "source_ordinals": [
+          157,
+          158
+        ],
+        "source_values": [
+          "p \\sim_u q \\implies p \\sim q"
+        ],
+        "target_lines": [
+          144
+        ],
+        "target_ordinals": [
+          157,
+          158
+        ],
+        "target_values": [
+          "p \\sim q \\implies p \\sim_u q"
+        ]
+      },
+      {
+        "classifications": [
+          "FAOA-2015-CH17-CORR-025"
+        ],
+        "operation": "replace",
+        "source_lines": [
+          175
+        ],
+        "source_ordinals": [
+          188,
+          189
+        ],
+        "source_values": [
+          "p \\sim_h q \\implies p \\sim_u q"
+        ],
+        "target_lines": [
+          175
+        ],
+        "target_ordinals": [
+          188,
+          189
+        ],
+        "target_values": [
+          "p \\sim_u q \\implies p \\sim_h q"
+        ]
+      },
+      {
+        "classifications": [
+          "LOCALIZED_ORDINAL"
+        ],
+        "operation": "replace",
+        "source_lines": [
+          275
+        ],
+        "source_ordinals": [
+          306,
+          307
+        ],
+        "source_values": [
+          "j^{\\text{th}}"
+        ],
+        "target_lines": [
+          275
+        ],
+        "target_ordinals": [
+          306,
+          307
+        ],
+        "target_values": [
+          "j"
+        ]
+      },
+      {
+        "classifications": [
+          "FAOA-2015-CH17-CORR-006"
+        ],
+        "operation": "insert",
+        "source_lines": [],
+        "source_ordinals": [
+          382,
+          382
+        ],
+        "source_values": [],
+        "target_lines": [
+          367
+        ],
+        "target_ordinals": [
+          382,
+          383
+        ],
+        "target_values": [
+          "\\oplus"
+        ]
+      },
+      {
+        "classifications": [
+          "FAOA-2015-CH17-CORR-006"
+        ],
+        "operation": "delete",
+        "source_lines": [
+          368
+        ],
+        "source_ordinals": [
+          383,
+          384
+        ],
+        "source_values": [
+          "\\oplus"
+        ],
+        "target_lines": [],
+        "target_ordinals": [
+          384,
+          384
+        ],
+        "target_values": []
+      },
+      {
+        "classifications": [
+          "FAOA-2015-CH17-CORR-026"
+        ],
+        "operation": "replace",
+        "source_lines": [
+          651
+        ],
+        "source_ordinals": [
+          583,
+          584
+        ],
+        "source_values": [
+          "\\tau\\colon \\fml D(A) \\sto K_0(A)\\colon \\sbsb{[p\\,]}{\\fml D} \\mapsto \\nu(p)"
+        ],
+        "target_lines": [
+          651
+        ],
+        "target_ordinals": [
+          583,
+          584
+        ],
+        "target_values": [
+          "\\tau\\colon \\fml D(A) \\sto \\abs G\\colon \\sbsb{[p\\,]}{\\fml D} \\mapsto \\nu(p)"
+        ]
+      },
+      {
+        "classifications": [
+          "FAOA-2015-CH17-CORR-012"
+        ],
+        "operation": "delete",
+        "source_lines": [
+          656
+        ],
+        "source_ordinals": [
+          591,
+          592
+        ],
+        "source_values": [
+          "*\\,"
+        ],
+        "target_lines": [],
+        "target_ordinals": [
+          591,
+          591
+        ],
+        "target_values": []
+      },
+      {
+        "classifications": [
+          "LOCALIZED_EXPLICIT_OBJECTS"
+        ],
+        "operation": "insert",
+        "source_lines": [],
+        "source_ordinals": [
+          666,
+          666
+        ],
+        "source_values": [],
+        "target_lines": [
+          710
+        ],
+        "target_ordinals": [
+          665,
+          667
+        ],
+        "target_values": [
+          "A",
+          "B"
+        ]
+      },
+      {
+        "classifications": [
+          "FAOA-2015-CH17-CORR-013"
+        ],
+        "operation": "replace",
+        "source_lines": [
+          750
+        ],
+        "source_ordinals": [
+          697,
+          698
+        ],
+        "source_values": [
+          "Q \\circ \\psi = \\id{\\C}"
+        ],
+        "target_lines": [
+          750
+        ],
+        "target_ordinals": [
+          698,
+          699
+        ],
+        "target_values": [
+          "Q \\circ \\psi' = \\id{\\C}"
+        ]
+      },
+      {
+        "classifications": [
+          "FAOA-2015-CH17-CORR-014"
+        ],
+        "operation": "replace",
+        "source_lines": [
+          798
+        ],
+        "source_ordinals": [
+          727,
+          728
+        ],
+        "source_values": [
+          "K_0(A) = \\ker(K_0(\\pi))\\,."
+        ],
+        "target_lines": [
+          798
+        ],
+        "target_ordinals": [
+          728,
+          729
+        ],
+        "target_values": [
+          "\\pi:=Q,\\qquad K_0(A) = \\ker(K_0(\\pi))\\,."
+        ]
+      },
+      {
+        "classifications": [
+          "FAOA-2015-CH17-CORR-014"
+        ],
+        "operation": "delete",
+        "source_lines": [
+          815
+        ],
+        "source_ordinals": [
+          741,
+          742
+        ],
+        "source_values": [
+          "*\\,"
+        ],
+        "target_lines": [],
+        "target_ordinals": [
+          742,
+          742
+        ],
+        "target_values": []
+      },
+      {
+        "classifications": [
+          "FAOA-2015-CH17-CORR-014"
+        ],
+        "operation": "replace",
+        "source_lines": [
+          847
+        ],
+        "source_ordinals": [
+          765,
+          767
+        ],
+        "source_values": [
+          "\\pi",
+          "\\lambda"
+        ],
+        "target_lines": [
+          847
+        ],
+        "target_ordinals": [
+          765,
+          767
+        ],
+        "target_values": [
+          "\\pi:=Q",
+          "\\lambda:=\\psi"
+        ]
+      },
+      {
+        "classifications": [
+          "FAOA-2015-CH17-CORR-017"
+        ],
+        "operation": "replace",
+        "source_lines": [
+          865
+        ],
+        "source_ordinals": [
+          791,
+          792
+        ],
+        "source_values": [
+          "K_0(A) = \\{\\,[p\\,] - [s(p)]\\colon p,q \\in \\fml P_\\infty(\\wt A)\\}\\,."
+        ],
+        "target_lines": [
+          865
+        ],
+        "target_ordinals": [
+          791,
+          792
+        ],
+        "target_values": [
+          "K_0(A) = \\{\\,[p\\,] - [s(p)]\\colon p \\in \\fml P_\\infty(\\wt A)\\}\\,."
+        ]
+      },
+      {
+        "classifications": [
+          "FAOA-2015-CH17-CORR-019"
+        ],
+        "operation": "replace",
+        "source_lines": [
+          1034
+        ],
+        "source_ordinals": [
+          872,
+          873
+        ],
+        "source_values": [
+          "B = \\bigcup_{n=1}^\\infty A_n"
+        ],
+        "target_lines": [
+          1034
+        ],
+        "target_ordinals": [
+          872,
+          873
+        ],
+        "target_values": [
+          "B = \\clo{\\bigcup_{n=1}^\\infty A_n}"
+        ]
+      },
+      {
+        "classifications": [
+          "FAOA-2015-CH17-CORR-021"
+        ],
+        "operation": "insert",
+        "source_lines": [],
+        "source_ordinals": [
+          899,
+          899
+        ],
+        "source_values": [],
+        "target_lines": [
+          1093
+        ],
+        "target_ordinals": [
+          899,
+          900
+        ],
+        "target_values": [
+          "*\\,"
+        ]
+      },
+      {
+        "classifications": [
+          "FAOA-2015-CH17-CORR-021"
+        ],
+        "operation": "replace",
+        "source_lines": [
+          1095
+        ],
+        "source_ordinals": [
+          902,
+          903
+        ],
+        "source_values": [
+          "a \\mapsto u\\,\\diag(a, a, \\dots, a, \\vc 0)\\, u^*"
+        ],
+        "target_lines": [
+          1095
+        ],
+        "target_ordinals": [
+          903,
+          904
+        ],
+        "target_values": [
+          "\\phi\\colon a \\mapsto u\\,\\diag(a, a, \\dots, a, \\vc 0)\\, u^*"
+        ]
+      },
+      {
+        "classifications": [
+          "FAOA-2015-CH17-CORR-021"
+        ],
+        "operation": "insert",
+        "source_lines": [],
+        "source_ordinals": [
+          910,
+          910
+        ],
+        "source_values": [],
+        "target_lines": [
+          1098
+        ],
+        "target_ordinals": [
+          911,
+          912
+        ],
+        "target_values": [
+          "*\\,"
+        ]
+      },
+      {
+        "classifications": [
+          "FAOA-2015-CH17-CORR-021"
+        ],
+        "operation": "insert",
+        "source_lines": [],
+        "source_ordinals": [
+          911,
+          911
+        ],
+        "source_values": [],
+        "target_lines": [
+          1104
+        ],
+        "target_ordinals": [
+          913,
+          914
+        ],
+        "target_values": [
+          "*\\,"
+        ]
+      },
+      {
+        "classifications": [
+          "LOCALIZED_STAR_HOMOMORPHISM_1127"
+        ],
+        "operation": "replace",
+        "source_lines": [
+          1127
+        ],
+        "source_ordinals": [
+          924,
+          925
+        ],
+        "source_values": [
+          "{}^*"
+        ],
+        "target_lines": [
+          1127
+        ],
+        "target_ordinals": [
+          927,
+          928
+        ],
+        "target_values": [
+          "*\\,"
+        ]
+      },
+      {
+        "classifications": [
+          "LOCALIZED_STAR_HOMOMORPHISM_1221"
+        ],
+        "operation": "replace",
+        "source_lines": [
+          1222
+        ],
+        "source_ordinals": [
+          973,
+          974
+        ],
+        "source_values": [
+          "{}^*"
+        ],
+        "target_lines": [
+          1221
+        ],
+        "target_ordinals": [
+          976,
+          977
+        ],
+        "target_values": [
+          "*\\,"
+        ]
+      },
+      {
+        "classifications": [
+          "LOCALIZED_AF_COMPOUND"
+        ],
+        "operation": "delete",
+        "source_lines": [
+          1235,
+          1236
+        ],
+        "source_ordinals": [
+          980,
+          982
+        ],
+        "source_values": [
+          "AF",
+          "AF"
+        ],
+        "target_lines": [],
+        "target_ordinals": [
+          983,
+          983
+        ],
+        "target_values": []
+      }
+    ],
+    "unclassified_differences": 0
+  },
+  "rights_and_provenance": {
+    "author": "John M. Erdman",
+    "excluded_components_absent": true,
+    "license": "CC BY-SA 4.0",
+    "model_provenance": "OpenAI Codex gpt-5.6-sol, Ultra",
+    "nonendorsement_present": true
+  },
+  "schema_version": "o008.ch17-translation-qa.v1",
+  "status": "pass",
+  "structure": {
+    "bmatrices": 46,
+    "citations": 12,
+    "defined_term_hooks": 24,
+    "diagram_tokens": {
+      "source": {
+        "\\Square": 3,
+        "\\endxy": 6,
+        "\\hSquares": 1,
+        "\\qtriangle": 2,
+        "\\xy": 15,
+        "\\xymatrix": 9
+      },
+      "target": {
+        "\\Square": 3,
+        "\\endxy": 6,
+        "\\hSquares": 1,
+        "\\qtriangle": 2,
+        "\\xy": 15,
+        "\\xymatrix": 9
+      }
+    },
+    "environment_counts": {
+      "align*": 3,
+      "bmatrix": 46,
+      "cor": 2,
+      "defn": 22,
+      "enumerate": 4,
+      "equation": 4,
+      "exam": 31,
+      "exer": 1,
+      "notn": 7,
+      "proof": 22,
+      "prop": 63,
+      "rem": 1
+    },
+    "environment_openings": 206,
+    "examples": 31,
+    "exercises": 1,
+    "index_hooks": 100,
+    "labels": 73,
+    "proof_hints": 16,
+    "proofs": 22,
+    "reader_semantic_environment_openings": 149,
+    "references": 47,
+    "sections": 8,
+    "source_records": 1362,
+    "target_records": 1362
+  },
+  "unit_id": "FAOA-2015-CH17"
+}

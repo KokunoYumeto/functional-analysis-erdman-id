@@ -1,0 +1,222 @@
+{
+  "schema_version": "o008.ch17-render-audit.v1",
+  "pdf": {
+    "path": "qa/build-through-ch17-final/functional-analysis-id-through-ch17.pdf",
+    "bytes": 2432395,
+    "sha256": "22fda5f25205f2a442c2b907db015fb4c93cb46cfcba6a1fa8814449469073f1"
+  },
+  "page_count": 232,
+  "render_dimensions_px": [
+    935,
+    1210
+  ],
+  "aggregate_png_bytes": 56785250,
+  "blank_pages": [
+    6,
+    22,
+    50,
+    80,
+    102,
+    116,
+    138,
+    148,
+    162,
+    166,
+    180,
+    192
+  ],
+  "outer_5px_ink_pages": [],
+  "minimum_nonblank_margins_px": {
+    "left": 109,
+    "top": 72,
+    "right": 78,
+    "bottom": 60
+  },
+  "manifest": {
+    "path": "provenance/CH17_RENDER_MANIFEST.csv",
+    "bytes": 26569,
+    "sha256": "2b3401c99ed6c81fe52f9094122fc48124b08df975dc323efd0a9410de2fcfd1"
+  },
+  "contact_sheets": [
+    {
+      "file": "contact-001-012.png",
+      "pages": [
+        1,
+        12
+      ],
+      "bytes": 447455,
+      "sha256": "0e771b25a16e79a309e3c4f1dd51d5ed4564f6630085f45e74fb86f3df8a747c"
+    },
+    {
+      "file": "contact-013-024.png",
+      "pages": [
+        13,
+        24
+      ],
+      "bytes": 532709,
+      "sha256": "b924300897fb301395030a1dcc43066dd65950ad3fc006bb945930dde5d87c5d"
+    },
+    {
+      "file": "contact-025-036.png",
+      "pages": [
+        25,
+        36
+      ],
+      "bytes": 638368,
+      "sha256": "aadcdf5c9827db8cb71ee89c9d08f843f0384a7dcf34c2db04f7b7725e5b6803"
+    },
+    {
+      "file": "contact-037-048.png",
+      "pages": [
+        37,
+        48
+      ],
+      "bytes": 609687,
+      "sha256": "d01b1dae1736159c58ec25b79337421f931cea322027da8d20faa2f2e52a9489"
+    },
+    {
+      "file": "contact-049-060.png",
+      "pages": [
+        49,
+        60
+      ],
+      "bytes": 530176,
+      "sha256": "f8b729e5abe86396ada7666db6bc3d9d405cbead598848729bd9cbce7e98d6aa"
+    },
+    {
+      "file": "contact-061-072.png",
+      "pages": [
+        61,
+        72
+      ],
+      "bytes": 555397,
+      "sha256": "e3dc198431ef0e925041f94214642a85975bbeefc24dfd101da019ebdd8ddbee"
+    },
+    {
+      "file": "contact-073-084.png",
+      "pages": [
+        73,
+        84
+      ],
+      "bytes": 525638,
+      "sha256": "1c2631626ea125fdbe44307d49ad3115a60720035a5135ab133560e960f656f9"
+    },
+    {
+      "file": "contact-085-096.png",
+      "pages": [
+        85,
+        96
+      ],
+      "bytes": 594901,
+      "sha256": "c380cccbb8b90234351b78e29bf305c3d8fa4cea84f41597ec9a70bd12cd88d5"
+    },
+    {
+      "file": "contact-097-108.png",
+      "pages": [
+        97,
+        108
+      ],
+      "bytes": 492716,
+      "sha256": "0db64e12ee2639d09bb00070df8a29ba99fa8bd75b4671b9ece499aced92fc0c"
+    },
+    {
+      "file": "contact-109-120.png",
+      "pages": [
+        109,
+        120
+      ],
+      "bytes": 520139,
+      "sha256": "cef69fe6e828164bcc841ad8c1a7555e849f6791f2a5451e1117d5525dd410ff"
+    },
+    {
+      "file": "contact-121-132.png",
+      "pages": [
+        121,
+        132
+      ],
+      "bytes": 545187,
+      "sha256": "877dd8c9d0dce1a26304186ef50617b9d28450ce680eba6064c9d8c787c04f56"
+    },
+    {
+      "file": "contact-133-144.png",
+      "pages": [
+        133,
+        144
+      ],
+      "bytes": 486499,
+      "sha256": "b60c53df4d30c84f990a9a6d999657f641e7122db5830cad87822d0fc3040d69"
+    },
+    {
+      "file": "contact-145-156.png",
+      "pages": [
+        145,
+        156
+      ],
+      "bytes": 517223,
+      "sha256": "ca1acb42e400221a4196e134f82346d8af535c114a530eaa5f140bb35d78db3e"
+    },
+    {
+      "file": "contact-157-168.png",
+      "pages": [
+        157,
+        168
+      ],
+      "bytes": 487290,
+      "sha256": "ba7b215944575856ede17e05c57e4b4538b6444db34a143d586a92ca37068f5f"
+    },
+    {
+      "file": "contact-169-180.png",
+      "pages": [
+        169,
+        180
+      ],
+      "bytes": 522002,
+      "sha256": "fcdff26815e5ac06e73cc34366b40a36944aad1cc5ca2049e3dc5f89ea80384a"
+    },
+    {
+      "file": "contact-181-192.png",
+      "pages": [
+        181,
+        192
+      ],
+      "bytes": 511368,
+      "sha256": "0ad9f689e2362f1df56401d93b3b24404268736843bdad1aeef5954a46c44460"
+    },
+    {
+      "file": "contact-193-204.png",
+      "pages": [
+        193,
+        204
+      ],
+      "bytes": 535779,
+      "sha256": "8d88e3e4c0475eb27dda8790e6bb66c18ef46e7684933f8911413478f6b537e5"
+    },
+    {
+      "file": "contact-205-216.png",
+      "pages": [
+        205,
+        216
+      ],
+      "bytes": 416901,
+      "sha256": "703b74ffd11aafe79f107d63da8994175573264641701b5f29911f9826c08646"
+    },
+    {
+      "file": "contact-217-228.png",
+      "pages": [
+        217,
+        228
+      ],
+      "bytes": 391148,
+      "sha256": "d87104cc1f693e68efb2669724f4aa1b71b94e91a92b44852e7232e9abe79bd0"
+    },
+    {
+      "file": "contact-229-232.png",
+      "pages": [
+        229,
+        232
+      ],
+      "bytes": 113997,
+      "sha256": "30f4482de3b3bdf02536d43466676e267e6a853a11ded30f0f366993d583e520"
+    }
+  ]
+}

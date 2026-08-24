@@ -194,6 +194,78 @@ No upstream contact occurs during production. These entries are held for the
 single deduplicated post-corpus report only if that report is separately
 authorized.
 
+## Chapter 17
+
+The following 26 source-facing correction groups are adjudicated and applied
+in `source/id-ID/K0_functor-id.tex`. The exact machine-verifiable ledger is
+`provenance/SOURCE_CORRECTIONS_CH17.json`; it binds every inclusive source and
+target line range, correction class, normalized snippet hash, and required or
+forbidden target anchor.
+
+Mechanical and category-prose repairs:
+
+1. `K0_functor.tex:12`: remove the extra verb from “to be roam about.”
+2. `K0_functor.tex:42--46`: repair the article in the unitary-equivalence
+   definition.
+3. `K0_functor.tex:63--67`: repair the malformed every-then quantifier
+   construction without changing its scope.
+4. `K0_functor.tex:446--450`: restore the intended phrase “will be denoted
+   by.”
+5. `K0_functor.tex:458--460`: repair the article in “becomes an Abelian
+   group.”
+6. `K0_functor.tex:543--549`: use plural “group homomorphisms” for the image
+   category.
+7. `K0_functor.tex:847--850`: repair “unitization of a C-star-algebra.”
+8. `K0_functor.tex:1271--1275`: remove the empty `\textbf{}` command while
+   preserving the CAR expansion.
+
+Mathematical status, type, equality, scope, topology, and notation repairs:
+
+9. `K0_functor.tex:13--19`: retain the stabilization calculation as
+   heuristic motivation rather than presenting it as a proved multiplicative
+   congruence.
+10. `K0_functor.tex:101--103`: give the exponential path its correct codomain
+    in the unitary group of `A`, not the scalar circle.
+11. `K0_functor.tex:144--145`: reverse the implication so it actually states
+    the converse of the second implication in Proposition `0060221`:
+    `p\sim q\Rightarrow p\sim_u q`.
+12. `K0_functor.tex:175--177`: reverse the implication so it actually states
+    the converse of the first implication in Proposition `0060221`:
+    `p\sim_u q\Rightarrow p\sim_h q`.
+13. `K0_functor.tex:367--369`: block sum is strictly associative but
+    commutative only up to Murray--von Neumann equivalence on projections.
+14. `K0_functor.tex:390--392`: identify `D(C)` as the additive semigroup of
+    nonnegative integers, not a group of positive integers.
+15. `K0_functor.tex:397--401`: restrict the single-infinity
+    projection-semigroup description to separable infinite-dimensional
+    Hilbert space.
+16. `K0_functor.tex:651--652`: give `\tau` the underlying semigroup of `G` as
+    codomain because its value `\nu(p)` lies there, not in `K_0(A)`.
+17. `K0_functor.tex:655--657`: call the restriction to projection families a
+    map rather than a star-homomorphism.
+18. `K0_functor.tex:741--752`: use the newly defined section `\psi'` in the
+    final splitting identity.
+19. `K0_functor.tex:793--850`: bind `\pi:=Q` and `\lambda:=\psi` so the
+    nonunital quotient and scalar-section notation is closed.
+20. `K0_functor.tex:814--822`: call `K_0(\phi)` a group homomorphism between
+    Abelian groups.
+21. `K0_functor.tex:860--866`: remove unused `q` from the standard-picture set
+    builder.
+22. `K0_functor.tex:930--934`: require infinite-dimensional `H` in the Calkin
+    exact-sequence counterexample.
+23. `K0_functor.tex:1032--1036`: take the norm closure of the increasing union
+    in the C-star inductive limit.
+24. `K0_functor.tex:1038--1042`: identify the compact-operator limit space as
+    separable and infinite-dimensional.
+25. `K0_functor.tex:1093--1104`: classify nonzero star-homomorphisms, name the
+    displayed map `\phi`, and preserve that category in the following example.
+26. `K0_functor.tex:1127--1130`: allow zero multiplicities by using
+    nonnegative, rather than positive, integer matrix entries.
+
+No upstream contact occurs during production. These entries are held for the
+single deduplicated post-corpus report only if that report is separately
+authorized.
+
 ## Chapter 16
 
 The following 15 source-facing correction groups are adjudicated and applied

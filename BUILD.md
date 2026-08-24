@@ -5,15 +5,16 @@ MakeIndex, Xy-pic, and `latexmk`:
 
 ```powershell
 $env:SOURCE_DATE_EPOCH = '1444126743'
-latexmk -C -outdir='../../qa/build-through-ch16-final' 'functional-analysis-id-through-ch16.tex'
+latexmk -C -outdir='../../qa/build-through-ch17-final' 'functional-analysis-id-through-ch17.tex'
 latexmk -pdf -interaction=nonstopmode -halt-on-error -file-line-error `
-  -outdir='../../qa/build-through-ch16-final' 'functional-analysis-id-through-ch16.tex'
+  -outdir='../../qa/build-through-ch17-final' 'functional-analysis-id-through-ch17.tex'
 ```
 
 The admitted Windows baseline used MiKTeX 26.5, pdfTeX 1.40.29, and latexmk
 4.88. Repeated clean replays in the same fixed path produced byte-identical
-PDFs. The current canonical Bab 1--16 reader artifact and its exact hash are
-recorded in `provenance/CH16_BUILD_AND_QA_RECEIPT.md`. The frozen Bab 1--15,
+PDFs. The current canonical Bab 1--17 reader artifact and its exact hash are
+recorded in `provenance/CH17_BUILD_AND_QA_RECEIPT.md`. The frozen Bab 1--16,
+Bab 1--15,
 Bab 1--14, Bab 1--13, Bab 1--12, Bab 1--11, Bab 1--10,
 Bab 1--9, Bab 1--8, Bab 1--7, Bab
 1--6, Bab 1--5, Bab 1--4, Bab 1--3, Bab 1--2, and Unit 1 masters and receipts
