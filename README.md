@@ -27,13 +27,13 @@ tetap tersedia sebagai artefak batas sebelumnya.
 
 ## Preservasi versi
 
-Versi parsial `2026.08.23-ch12` dipertahankan secara mandiri di Zenodo dengan
-[DOI 10.5281/zenodo.22072541](https://doi.org/10.5281/zenodo.22072541). Catatan
-Zenodo tersebut secara eksplisit berstatus **edisi dalam pengerjaan, Bab 1--12
-dari 17 bab**, bukan buku lengkap. Ketiga berkas publiknya telah dibaca ulang
-secara anonim dan cocok byte demi byte dengan artefak lokal. Batas Bab 13 telah
-diakui secara lokal dan sedang dipreservasi pada garis versi yang sama; bagian
-ini akan diperbarui dengan DOI versi baru setelah pembacaan ulang publik selesai.
+Versi parsial `2026.08.24-ch13` dipertahankan secara mandiri di Zenodo dengan
+[DOI 10.5281/zenodo.22074101](https://doi.org/10.5281/zenodo.22074101). Catatan
+Zenodo tersebut secara eksplisit berstatus **edisi dalam pengerjaan, Bab 1--13
+dari 17 bab**, bukan buku lengkap. Metadata publik dan ketiga berkasnya telah
+dibaca ulang secara anonim dan cocok byte demi byte dengan artefak lokal.
+Mirror GitHub juga telah diverifikasi pada commit
+`08c69f1460d5b92182b78f47af1732b6f36948c4`.
 [Versi Figshare
 v4](https://doi.org/10.6084/m9.figshare.33314709.v4) masih merupakan penunjuk
 historis Bab 1--10 dan bukan bukti untuk batas produksi saat ini.

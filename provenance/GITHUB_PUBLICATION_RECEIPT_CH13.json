@@ -1,0 +1,69 @@
+{
+  "schema_version": "1.0.0",
+  "receipt_id": "FAOA-2015-CH13-GITHUB-PUBLICATION",
+  "verified_utc": "2026-08-24T01:58:00Z",
+  "repository": "https://github.com/KokunoYumeto/functional-analysis-erdman-id",
+  "branch": "main",
+  "commit": "08c69f1460d5b92182b78f47af1732b6f36948c4",
+  "tree": "ba099509adceaffb855a434bb77728723a226a2b",
+  "remote_head": "08c69f1460d5b92182b78f47af1732b6f36948c4",
+  "remote_head_matches": true,
+  "commit_api_state": "anonymous rate limit exhausted; exact public ref and raw bytes used instead",
+  "anonymous_raw_readback": [
+    {
+      "path": "README.md",
+      "bytes": 5511,
+      "sha256": "2d3d65f2675fce448a0fe3a170e85499b0c50c1ff07f23f4486a4249e5b990ee",
+      "match": true
+    },
+    {
+      "path": "source/id-ID/GNS_construction-id.tex",
+      "bytes": 12601,
+      "sha256": "4c95b339702180ef8f2ea42cfba9e19a60a1740ca7d25a0568a6290f0170371f",
+      "match": true
+    },
+    {
+      "path": "source/id-ID/functional-analysis-id-through-ch13.tex",
+      "bytes": 10345,
+      "sha256": "d1734ea09a576c9e5c8f38bb9430a132e8cd38551c9b0c6cbd9bf65b4923c87e",
+      "match": true
+    },
+    {
+      "path": "output/pdf/analisis-fungsional-dan-aljabar-operator-id-bab-1-13.pdf",
+      "bytes": 2031973,
+      "sha256": "b7810718cb9a633c694aed126fc5c10786864650b076c2ad5bb7329191db3b65",
+      "match": true
+    },
+    {
+      "path": "provenance/CH13_BUILD_AND_QA_RECEIPT.md",
+      "bytes": 6928,
+      "sha256": "e85ed359bd7ec4895cf05143be320a06257d4bf1d7176c51509995ad8691c859",
+      "match": true
+    },
+    {
+      "path": "provenance/SOURCE_CORRECTIONS_CH13.json",
+      "bytes": 10653,
+      "sha256": "9fdcdc4fe5b8f3d621ace0ac0efad2ae684766efcb4341d38bbc2e923e652a05",
+      "match": true
+    },
+    {
+      "path": "backend/BACKEND_MANIFEST.csv",
+      "bytes": 3696,
+      "sha256": "d47bd4a492e7e6298e42f1437a7d2a80af17881d1c0b17e2cc29aa648b09cd81",
+      "match": true
+    },
+    {
+      "path": "qa/CH13_BACKEND_VALIDATION.json",
+      "bytes": 1346,
+      "sha256": "5f22e955f8871a45c020001c7149fc7aaa29440debdd948f75dda2e459d37a2c",
+      "match": true
+    },
+    {
+      "path": "qa/publish_ch13_zenodo.py",
+      "bytes": 2689,
+      "sha256": "1950293c658d6052f9e01085806f179024935b18d58abc1b54810a736391a7ec",
+      "match": true
+    }
+  ],
+  "result": "pass"
+}

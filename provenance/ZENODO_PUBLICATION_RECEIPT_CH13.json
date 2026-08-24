@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.0.0",
+  "receipt_id": "FAOA-2015-CH13-ZENODO-PUBLICATION",
+  "verified_utc": "2026-08-24T01:59:11Z",
+  "record_id": 22074101,
+  "record_url": "https://zenodo.org/records/22074101",
+  "doi": "10.5281/zenodo.22074101",
+  "concept_record_id": 22059739,
+  "concept_doi": "10.5281/zenodo.22059739",
+  "version": "2026.08.24-ch13",
+  "status": "published",
+  "creator_credit": [
+    "Erdman, John M."
+  ],
+  "metadata_checks": {
+    "version": true,
+    "access_right": true,
+    "license": true,
+    "language": true,
+    "publication_date": true,
+    "source_author_credit": true,
+    "model_provenance": true,
+    "partial_scope": true,
+    "non_endorsement": true,
+    "github_commit": true,
+    "file_inventory": true,
+    "file_bytes": true
+  },
+  "github_commit": "08c69f1460d5b92182b78f47af1732b6f36948c4",
+  "github_tree": "ba099509adceaffb855a434bb77728723a226a2b",
+  "files": [
+    {
+      "filename": "SHA256SUMS.txt",
+      "bytes": 254,
+      "api_md5": "a18de55b4c4881f72fb36e8913e3b8d7",
+      "anonymous_readback_sha256": "4af287160103abefbed3aac87196c5122c81c48ed8bfaa3740b266085ed1d517",
+      "matches_local": true
+    },
+    {
+      "filename": "analisis-fungsional-dan-aljabar-operator-id-bab-1-13.pdf",
+      "bytes": 2031973,
+      "api_md5": "d0cb838ef2849bd5a3b6ec872141844d",
+      "anonymous_readback_sha256": "b7810718cb9a633c694aed126fc5c10786864650b076c2ad5bb7329191db3b65",
+      "matches_local": true
+    },
+    {
+      "filename": "functional-analysis-erdman-id-2026.08.24-ch13-source-backend.zip",
+      "bytes": 2385150,
+      "api_md5": "d508eccdb2d43e029c9acc10200dd3ee",
+      "anonymous_readback_sha256": "b04bc0e5c58909e477d03473b5d317a419de956084648bbe0b7bab372b15109a",
+      "matches_local": true
+    }
+  ],
+  "credential_material_recorded": false,
+  "anonymous_public_record_readback": true,
+  "anonymous_file_count": 3,
+  "anonymous_file_mismatches": 0,
+  "result": "pass"
+}
