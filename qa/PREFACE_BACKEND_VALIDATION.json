@@ -1,0 +1,53 @@
+{
+  "schema_version": "o008.backend-validation.v1",
+  "timestamp": "2026-08-24",
+  "status": "pass",
+  "unit_id": "FAOA-2015-PREFACE",
+  "binding_state": "bound",
+  "source_sha256": "0976042bbb6ae3b8d1e5bb113a93d51169fada9d3e41f2d01435c76b6729edb9",
+  "target_sha256": "c622dc9d9c1af4e5b1a6112c84eeff7328c778e8ef8643fc267f6fc6e3e7d564",
+  "master_sha256": "7f06919a8ec9088a3bc812fab962a48b5f1b3b0d5d3bce80eb21055f65089041",
+  "model_id": "OpenAI Codex gpt-5.6-sol, Ultra",
+  "preface": {
+    "semantic_units": 9,
+    "segments": 5,
+    "relations": 88,
+    "formula_map": {
+      "records": 224,
+      "source_surfaces_covered": 223,
+      "target_surfaces_covered": 224,
+      "exact": 211,
+      "localized_prose_translation": 8,
+      "classified_source_correction": 5
+    },
+    "index_terms": 53,
+    "new_terms": 18,
+    "term_uses": 21,
+    "citations": 5,
+    "corrections": 14,
+    "artifacts": 18,
+    "qa_events": 10
+  },
+  "aggregate_records": 28073,
+  "global_stable_ids": "unique",
+  "relation_endpoints": "resolved",
+  "deterministic_round_trip": "pass",
+  "chapter1_ch17_prefix_lock": {
+    "status": "pass",
+    "files": 11,
+    "lock_sha256": "3b871da4ba510ab650d01f69b39ccfa74a28aa8613411f8afc087b6deea3a6b2",
+    "prefix_records": 27633
+  },
+  "backend_manifest_sha256": "413756e2e337e8c032c9fba14f07242c47c266503a582f40e537a0e94b4d105b",
+  "admission_claim": "admitted_by_exact_receipt_binding",
+  "receipt_sha256": "76a5b4ecd113b7f3f6cbeaa9dd5613e2d93874baab4506d13ddc5577c92129fc",
+  "reader_sha256": "efa2358b3c3e6e8c47e0caee9a02f6afe78d15bea1b0f1822ea8449d801b2b10",
+  "semantic_accessibility_state": "remediation_required",
+  "html_state": "pending",
+  "validator": {
+    "path": "backend/validate_preface_backend.py",
+    "bytes": 18544,
+    "logical_records": 355,
+    "sha256": "e2fb09217e9c14d549574f139eca12d7faeadee5cd415cc354824fae378b09a9"
+  }
+}

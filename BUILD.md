@@ -1,26 +1,30 @@
-# Reproducible cumulative build
+# Reproducible complete-source build
 
 Run from `source/id-ID` with a TeX distribution providing pdfLaTeX, BibTeX,
 MakeIndex, Xy-pic, and `latexmk`:
 
 ```powershell
 $env:SOURCE_DATE_EPOCH = '1444126743'
-latexmk -C -outdir='../../qa/build-through-ch17-final' 'functional-analysis-id-through-ch17.tex'
+latexmk -C -outdir='../../qa/build-complete-source-final' 'functional-analysis-id-complete-source.tex'
 latexmk -pdf -interaction=nonstopmode -halt-on-error -file-line-error `
-  -outdir='../../qa/build-through-ch17-final' 'functional-analysis-id-through-ch17.tex'
+  -outdir='../../qa/build-complete-source-final' 'functional-analysis-id-complete-source.tex'
 ```
 
 The admitted Windows baseline used MiKTeX 26.5, pdfTeX 1.40.29, and latexmk
 4.88. Repeated clean replays in the same fixed path produced byte-identical
-PDFs. The current canonical Bab 1--17 reader artifact and its exact hash are
-recorded in `provenance/CH17_BUILD_AND_QA_RECEIPT.md`. The frozen Bab 1--16,
+PDFs. The current canonical source-text-complete reader artifact and its exact
+hash are recorded in `provenance/PREFACE_BUILD_AND_QA_RECEIPT.md`. The frozen
+Bab 1--17, Bab 1--16,
 Bab 1--15,
 Bab 1--14, Bab 1--13, Bab 1--12, Bab 1--11, Bab 1--10,
 Bab 1--9, Bab 1--8, Bab 1--7, Bab
 1--6, Bab 1--5, Bab 1--4, Bab 1--3, Bab 1--2, and Unit 1 masters and receipts
 remain available for replay of the earlier boundaries.
 
-The build intentionally includes the unchanged `DIAGXY.TEX`; do not rename,
+The complete-source master inserts `preface-id.tex` after the table of contents,
+then preserves all 17 chapter includes, bibliography, and index in order. It
+loads `tabularx` for the two replacement front-matter tables. The build
+intentionally includes the unchanged `DIAGXY.TEX`; do not rename,
 modify, or silently replace it. The wrapper excludes `TABLE.TEX`, badge art,
 and uncleared quotations. Page reflow is acceptable, but mathematics, labels,
 citations, references, exercises, and logical order are not.

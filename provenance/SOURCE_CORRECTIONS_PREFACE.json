@@ -1,0 +1,355 @@
+{
+  "schema_version": "o008.source-corrections.v1",
+  "unit_id": "FAOA-2015-PREFACE",
+  "unit_role": "front_matter",
+  "status": "applied_verified",
+  "source": {
+    "path": "source/upstream/preface.tex",
+    "bytes": 18107,
+    "logical_records": 351,
+    "line_endings": "CRLF",
+    "encoding": "ASCII",
+    "sha256": "0976042bbb6ae3b8d1e5bb113a93d51169fada9d3e41f2d01435c76b6729edb9"
+  },
+  "record_order": "stable pretranslation order followed by post-review additions",
+  "record_count": 14,
+  "class_counts": {
+    "RIGHTS_ADAPTATION": 1,
+    "FORMAL_SCOPE_CLARIFICATION": 1,
+    "MECHANICAL_PROSE_SOURCE_REPAIR": 4,
+    "LICENSE_METADATA_ADAPTATION": 1,
+    "COMPONENT_RIGHTS_ADAPTATION": 2,
+    "NAVIGATION_ADAPTATION": 1,
+    "MATHEMATICAL_TERMINOLOGY_REPAIR": 3,
+    "MECHANICAL_TEX_SOURCE_REPAIR": 1
+  },
+  "review_evidence": {
+    "source_inventory": "qa/PREFACE_SOURCE_INVENTORY.md",
+    "pretranslation_review": "qa/PREFACE_PRETRANSLATION_REVIEW.md",
+    "terminology_plan": "provenance/PREFACE_TERMINOLOGY_PLAN.md",
+    "rights_authority": "00_control/SOURCE_AUTHORITY.md",
+    "upstream_contact": "none during production",
+    "bilingual_review": "qa/PREFACE_BILINGUAL_REVIEW.md"
+  },
+  "records": [
+    {
+      "id": "FAOA-2015-PREFACE-CORR-001",
+      "source_lines": {
+        "start": 3,
+        "end": 4
+      },
+      "classification": "RIGHTS_ADAPTATION",
+      "decision": "paraphrase the Halmos pedagogical idea in original Indonesian prose while preserving attribution, book title, and citation key; do not reproduce the third-party quotation",
+      "source_required_anchors": [
+        "Paul Halmos famously remarked",
+        "\\cite{Halmos:1982}"
+      ],
+      "required_target_semantics": [
+        "Paul Halmos is attributed",
+        "the cited book title is retained",
+        "\\cite{Halmos:1982} is retained",
+        "the idea is paraphrased without quotation marks"
+      ],
+      "forbidden_target_anchors": [
+        "``",
+        "''"
+      ],
+      "affects_math": false,
+      "target_marker": "% SOURCE-CORRECTION: PREFACE-C001",
+      "target_marker_line": 3
+    },
+    {
+      "id": "FAOA-2015-PREFACE-CORR-002",
+      "source_lines": {
+        "start": 33,
+        "end": 35
+      },
+      "classification": "FORMAL_SCOPE_CLARIFICATION",
+      "decision": "add the complex-field hypothesis to both finite-dimensional inner-product-space claims involving unitary diagonalization or unitary equivalence, matching the Chapter 1 complex spectral theorem",
+      "source_required_anchors": [
+        "unitarily diagonalizable if and only if it is normal",
+        "unitarily equivalent if and only if"
+      ],
+      "required_target_anchors": [
+        "ruang hasil kali dalam kompleks berdimensi hingga",
+        "dapat didiagonalkan secara uniter",
+        "ekuivalen secara uniter"
+      ],
+      "affects_math": true,
+      "target_marker": "% SOURCE-CORRECTION: PREFACE-C002",
+      "target_marker_line": 49
+    },
+    {
+      "id": "FAOA-2015-PREFACE-CORR-003",
+      "source_lines": {
+        "start": 49,
+        "end": 50
+      },
+      "classification": "MECHANICAL_PROSE_SOURCE_REPAIR",
+      "decision": "correct the typographical error calculous to calculus before translation",
+      "source_required_anchors": [
+        "advanced calculous"
+      ],
+      "forbidden_target_anchors": [
+        "calculous"
+      ],
+      "required_target_anchors": [
+        "kalkulus lanjut"
+      ],
+      "affects_math": false,
+      "target_marker": "% SOURCE-CORRECTION: PREFACE-C003",
+      "target_marker_line": 70
+    },
+    {
+      "id": "FAOA-2015-PREFACE-CORR-004",
+      "source_lines": {
+        "start": 65,
+        "end": 71
+      },
+      "classification": "LICENSE_METADATA_ADAPTATION",
+      "decision": "translate the author's ShareAlike rationale while binding the formal edition notice to the exact CC BY-SA 4.0 name and URL already present in the wrapper",
+      "source_required_anchors": [
+        "Share Alike",
+        "Creative Commons"
+      ],
+      "required_target_semantics": [
+        "Creative Commons Attribution--ShareAlike 4.0 International (CC BY-SA 4.0)",
+        "the wrapper license link and non-endorsement remain controlling"
+      ],
+      "affects_math": false,
+      "target_marker": "% SOURCE-CORRECTION: PREFACE-C004",
+      "target_marker_line": 93
+    },
+    {
+      "id": "FAOA-2015-PREFACE-CORR-005",
+      "source_lines": {
+        "start": 83,
+        "end": 109
+      },
+      "classification": "COMPONENT_RIGHTS_ADAPTATION",
+      "decision": "replace the unlicensed TABLE.TEX Greek-letter table machinery with ordinary locally authored LaTeX while preserving three columns, one header, 24 ordered data rows, glyphs, and English pronunciation strings",
+      "source_required_anchors": [
+        "\\table{}",
+        "Upper case",
+        "Alpha (AL-fuh)",
+        "oh-MAY-guh"
+      ],
+      "forbidden_target_anchors": [
+        "\\table{}",
+        "\\rr",
+        "\\caption{}"
+      ],
+      "required_target_semantics": [
+        "three columns",
+        "24 Greek data rows in source order",
+        "pronunciation column identified as approximate English pronunciation"
+      ],
+      "affects_math": false,
+      "target_marker": "% SOURCE-CORRECTION: PREFACE-C005",
+      "target_marker_line": 109
+    },
+    {
+      "id": "FAOA-2015-PREFACE-CORR-006",
+      "source_lines": {
+        "start": 132,
+        "end": 162
+      },
+      "classification": "COMPONENT_RIGHTS_ADAPTATION",
+      "decision": "replace the unlicensed TABLE.TEX Fraktur table machinery with ordinary locally authored LaTeX while preserving three columns, two headers, and all 26 ordered letter rows",
+      "source_required_anchors": [
+        "\\table{}",
+        "Fraktur",
+        "\\mathfrak A",
+        "\\mathfrak Z"
+      ],
+      "forbidden_target_anchors": [
+        "\\table{}",
+        "\\rr",
+        "\\caption{}"
+      ],
+      "required_target_semantics": [
+        "three columns",
+        "26 Fraktur data rows A through Z in source order"
+      ],
+      "affects_math": false,
+      "target_marker": "% SOURCE-CORRECTION: PREFACE-C006",
+      "target_marker_line": 168
+    },
+    {
+      "id": "FAOA-2015-PREFACE-CORR-007",
+      "source_lines": {
+        "start": 168,
+        "end": 168
+      },
+      "classification": "NAVIGATION_ADAPTATION",
+      "decision": "preserve source label C0009 on the starred number-set section and give it a unique hyperlink destination without inventing a section number",
+      "source_required_anchors": [
+        "\\section*{Notation for Sets of Numbers}\\label{C0009}"
+      ],
+      "required_target_anchors": [
+        "\\label{C0009}"
+      ],
+      "required_target_semantics": [
+        "unique hyperlink destination",
+        "unnumbered section topology"
+      ],
+      "affects_math": false,
+      "target_marker": "% SOURCE-CORRECTION: PREFACE-C007",
+      "target_marker_line": 210
+    },
+    {
+      "id": "FAOA-2015-PREFACE-CORR-008",
+      "source_lines": {
+        "start": 187,
+        "end": 187
+      },
+      "classification": "MATHEMATICAL_TERMINOLOGY_REPAIR",
+      "decision": "describe R-plus as the nonnegative real numbers because the displayed definition uses x greater than or equal to zero",
+      "source_required_anchors": [
+        "\\R^+ = \\{x \\in \\R\\colon x \\ge 0\\}"
+      ],
+      "required_target_anchors": [
+        "bilangan real tak negatif"
+      ],
+      "forbidden_target_anchors": [
+        "bilangan real positif"
+      ],
+      "affects_math": true,
+      "target_marker": "% SOURCE-CORRECTION: PREFACE-C008",
+      "target_marker_line": 229
+    },
+    {
+      "id": "FAOA-2015-PREFACE-CORR-009",
+      "source_lines": {
+        "start": 189,
+        "end": 189
+      },
+      "classification": "MATHEMATICAL_TERMINOLOGY_REPAIR",
+      "decision": "describe Q-plus as the nonnegative rational numbers because the displayed definition uses x greater than or equal to zero",
+      "source_required_anchors": [
+        "\\Q^+ = \\{x \\in \\Q\\colon x \\ge 0\\}"
+      ],
+      "required_target_anchors": [
+        "bilangan rasional tak negatif"
+      ],
+      "forbidden_target_anchors": [
+        "bilangan rasional positif"
+      ],
+      "affects_math": true,
+      "target_marker": "% SOURCE-CORRECTION: PREFACE-C009",
+      "target_marker_line": 231
+    },
+    {
+      "id": "FAOA-2015-PREFACE-CORR-010",
+      "source_lines": {
+        "start": 191,
+        "end": 191
+      },
+      "classification": "MATHEMATICAL_TERMINOLOGY_REPAIR",
+      "decision": "describe Z-plus as the nonnegative integers because the displayed set explicitly contains zero",
+      "source_required_anchors": [
+        "\\Z^+ = \\{0,1,2,\\dots\\}"
+      ],
+      "required_target_anchors": [
+        "bilangan bulat tak negatif"
+      ],
+      "forbidden_target_anchors": [
+        "bilangan bulat positif"
+      ],
+      "affects_math": true,
+      "target_marker": "% SOURCE-CORRECTION: PREFACE-C010",
+      "target_marker_line": 233
+    },
+    {
+      "id": "FAOA-2015-PREFACE-CORR-011",
+      "source_lines": {
+        "start": 193,
+        "end": 193
+      },
+      "classification": "MECHANICAL_PROSE_SOURCE_REPAIR",
+      "decision": "insert the missing grammatical separator before the gloss for the first n natural numbers without changing the set formula",
+      "source_required_anchors": [
+        "\\N_n = \\{1,2,3,\\dots,n\\}\\text{ the first $n$ natural numbers}"
+      ],
+      "required_target_semantics": [
+        "the formula is unchanged",
+        "a grammatical separator precedes the Indonesian gloss"
+      ],
+      "affects_math": false,
+      "target_marker": "% SOURCE-CORRECTION: PREFACE-C011",
+      "target_marker_line": 235
+    },
+    {
+      "id": "FAOA-2015-PREFACE-CORR-012",
+      "source_lines": {
+        "start": 305,
+        "end": 308
+      },
+      "classification": "MECHANICAL_PROSE_SOURCE_REPAIR",
+      "decision": "repair the malformed phrase onto) in for to the intended surjectivity condition if for every codomain element",
+      "source_required_anchors": [
+        "\\df{onto}) in for every"
+      ],
+      "forbidden_target_anchors": [
+        "in for"
+      ],
+      "required_target_anchors": [
+        "surjektif",
+        "jika untuk setiap $t \\in T$"
+      ],
+      "affects_math": false,
+      "target_marker": "% SOURCE-CORRECTION: PREFACE-C012",
+      "target_marker_line": 350
+    },
+    {
+      "id": "FAOA-2015-PREFACE-CORR-013",
+      "source_lines": {
+        "start": 309,
+        "end": 313
+      },
+      "classification": "MECHANICAL_PROSE_SOURCE_REPAIR",
+      "decision": "close the parenthetical one-to-one-correspondence synonym before the bijectivity condition",
+      "source_required_anchors": [
+        "\\df{bijective} (or",
+        "\\df{a one-to-one correspondence} if it is both injective and surjective"
+      ],
+      "required_target_anchors": [
+        "\\df{bijektif} (atau",
+        "\\df{korespondensi satu-satu})"
+      ],
+      "affects_math": false,
+      "target_marker": "% SOURCE-CORRECTION: PREFACE-C013",
+      "target_marker_line": 356
+    },
+    {
+      "id": "FAOA-2015-PREFACE-CORR-014",
+      "source_lines": {
+        "start": 236,
+        "end": 236
+      },
+      "classification": "MECHANICAL_TEX_SOURCE_REPAIR",
+      "decision": "place the graph symbol G in math mode in the second function condition, matching its mathematical role and the immediately preceding condition without changing the definition",
+      "source_required_anchors": [
+        "belong to G, then $t_1 = t_2$"
+      ],
+      "required_target_anchors": [
+        "termasuk dalam $G$, maka $t_1 = t_2$"
+      ],
+      "forbidden_target_anchors": [
+        "termasuk dalam G, maka"
+      ],
+      "affects_math": false,
+      "affects_math_surface": true,
+      "target_marker": "% SOURCE-CORRECTION: PREFACE-C014",
+      "target_marker_line": 278
+    }
+  ],
+  "target": {
+    "path": "source/id-ID/preface-id.tex",
+    "bytes": 18140,
+    "logical_records": 394,
+    "line_endings": "LF",
+    "encoding": "UTF-8 without BOM",
+    "sha256": "c622dc9d9c1af4e5b1a6112c84eeff7328c778e8ef8643fc267f6fc6e3e7d564"
+  }
+}

@@ -6,14 +6,17 @@ John M. Erdman, *Functional Analysis and Operator Algebras: An Introduction*
 
 ## Baca edisi saat ini
 
-[Buka PDF kumulatif Bab 1--17](output/pdf/analisis-fungsional-dan-aljabar-operator-id-bab-1-17.pdf)
+[Buka PDF teks sumber lengkap](output/pdf/analisis-fungsional-dan-aljabar-operator-id-teks-sumber-lengkap.pdf)
 
-Bab 1 sampai Bab 17 telah diterjemahkan lengkap dan melewati pemeriksaan struktur,
-matematika, residu bahasa, hak komponen, build bersih berulang yang menghasilkan
-PDF identik, serta inspeksi visual seluruh 232 halaman. PDF ini menyelesaikan
-batas terjemahan bab sumber, tetapi belum merupakan edisi lengkap karena materi
-depan/belakang, reader semantik, lapisan penguasaan, dan jembatan tambahan masih
-dikerjakan. [PDF Bab 1--16](output/pdf/analisis-fungsional-dan-aljabar-operator-id-bab-1-16.pdf),
+Prakata dan Bab 1 sampai Bab 17 telah diterjemahkan lengkap; bibliografi serta
+indeks hasil terjemahan juga disertakan. Reader ini melewati pemeriksaan
+struktur, matematika, residu bahasa, hak komponen, dua build bersih yang
+menghasilkan PDF identik, serta inspeksi visual seluruh 238 halaman. Dengan
+demikian, batas teks sumber lengkap sudah selesai. Edisi keseluruhan masih
+dalam pengerjaan karena reader HTML semantik, lapisan penguasaan/solusi, dan
+jembatan spektral-kompak/SVD berprovenans terpisah belum selesai.
+[PDF Bab 1--17](output/pdf/analisis-fungsional-dan-aljabar-operator-id-bab-1-17.pdf),
+[PDF Bab 1--16](output/pdf/analisis-fungsional-dan-aljabar-operator-id-bab-1-16.pdf),
 [PDF Bab 1--15](output/pdf/analisis-fungsional-dan-aljabar-operator-id-bab-1-15.pdf),
 [PDF Bab 1--14](output/pdf/analisis-fungsional-dan-aljabar-operator-id-bab-1-14.pdf),
 [PDF Bab 1--13](output/pdf/analisis-fungsional-dan-aljabar-operator-id-bab-1-13.pdf),
@@ -33,13 +36,14 @@ tetap tersedia sebagai artefak batas sebelumnya.
 
 ## Preservasi versi
 
-Versi `2026.08.24-ch17` dipertahankan secara mandiri di Zenodo dengan
-[DOI 10.5281/zenodo.22077300](https://doi.org/10.5281/zenodo.22077300). Catatan
-Zenodo tersebut secara eksplisit berstatus **edisi dalam pengerjaan;
-terjemahan semua 17 bab sumber telah lengkap**, bukan edisi final. Metadata
-publik dan ketiga berkasnya telah dibaca ulang secara anonim dan cocok byte
-demi byte dengan artefak lokal. Mirror GitHub juga telah diverifikasi pada
-commit `30c128a7a94a076280ed78941d2be01a596e8854`.
+Semua versi terbit dipertahankan dalam
+[konsep Zenodo O008 yang sama](https://doi.org/10.5281/zenodo.22059739), tanpa
+membuat konsep pesaing. Versi `2026.08.24-ch17` sebelumnya tetap tersedia
+dengan [DOI 10.5281/zenodo.22077300](https://doi.org/10.5281/zenodo.22077300).
+Setiap checkpoint menyatakan cakupan dan keterbatasannya secara eksplisit;
+metadata publik serta semua berkas terbit dibaca ulang secara anonim dan
+dicocokkan byte demi byte dengan artefak lokal. Mirror GitHub juga diverifikasi
+pada setiap batas terbit.
 [Versi Figshare
 v4](https://doi.org/10.6084/m9.figshare.33314709.v4) masih merupakan penunjuk
 historis Bab 1--10 dan bukan bukti untuk batas produksi saat ini.
@@ -48,13 +52,13 @@ seluruh berkas substantif tetap berlisensi CC BY-SA 4.0.
 
 ## Cakupan
 
-Edisi yang dipilih mencakup seluruh buku 17 bab, kata pengantar, bibliografi,
+Edisi yang dipilih mencakup seluruh buku 17 bab, prakata, bibliografi,
 dan indeks. Bab 1–8 membentuk rute inti D20; Bab 9–17 merupakan lanjutan
 analisis fungsional dan aljabar operator. Penandaan kurikuler tidak menghapus
-isi sumber. Terjemahan seluruh 17 bab sumber kini lengkap. Pekerjaan berikutnya
-adalah rekonsiliasi materi depan/belakang dan reader semantik yang aksesibel;
-lapisan penguasaan O001 dan jembatan spektral-kompak/SVD tetap diprovenansikan
-terpisah.
+isi sumber. Terjemahan teks sumber lengkap kini selesai, termasuk prakata dan
+indeks hasil terjemahan. Pekerjaan berikutnya adalah reader semantik yang
+aksesibel; lapisan penguasaan O001 dan jembatan spektral-kompak/SVD tetap
+ditulis dan diprovenansikan terpisah.
 
 Sumber resmi:
 
@@ -84,9 +88,9 @@ mengalir ulang; nomor halaman bukan pengenal tetap.
 
 ## Aksesibilitas
 
-PDF kumulatif Bab 1--17 memiliki metadata, bookmark, tautan silang, indeks,
-warna tautan berkontras tinggi, dan pemetaan Unicode untuk seluruh 48 objek
-font. PDF ini belum merupakan PDF bertag. Reader HTML semantik dan aksesibel
+PDF teks sumber lengkap memiliki metadata, 109 bookmark, 3.043 tautan, indeks,
+warna tautan berkontras tinggi, dan pemetaan Unicode untuk seluruh 49 objek
+font. PDF 238 halaman ini belum merupakan PDF bertag. Reader HTML semantik dan aksesibel
 adalah keluaran wajib edisi lengkap dan masih dalam pengerjaan. Tidak ada
 klaim aksesibilitas yang melampaui keadaan ini.
 

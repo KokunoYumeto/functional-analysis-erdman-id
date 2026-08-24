@@ -48,6 +48,13 @@
 /qa/release-ch17/
 /qa/CH17_FINAL_BUILD_PASS1_LOG.txt
 /qa/CH17_FINAL_BUILD_PASS2_LOG.txt
+/qa/build-complete-source-layout2/
+/qa/build-complete-source-preface-c014/
+/qa/build-complete-source-final/
+/qa/render-complete-source-final/
+/qa/release-complete-source/
+/qa/COMPLETE_SOURCE_FINAL_BUILD_PASS1_LOG.txt
+/qa/COMPLETE_SOURCE_FINAL_BUILD_PASS2_LOG.txt
 
 # TeX intermediates
 *.aux

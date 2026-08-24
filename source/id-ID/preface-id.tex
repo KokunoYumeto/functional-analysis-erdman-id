@@ -1,0 +1,394 @@
+\chapter*{Prakata}
+
+% SOURCE-CORRECTION: PREFACE-C001
+Dalam karyanya yang elok, \emph{Hilbert Space Problem
+Book}~\cite{Halmos:1982}, Paul Halmos terkenal menekankan bahwa praktik aktif merupakan
+syarat mutlak untuk belajar matematika. Halmos tentu bukan satu-satunya yang meyakini hal
+itu. Kumpulan catatan ini merupakan pendamping berorientasi aktivitas
+untuk mempelajari analisis fungsional linear dan aljabar operator. Catatan ini dimaksudkan
+sebagai pendamping pedagogis bagi pemula, pengantar menuju beberapa gagasan utama dalam
+bidang analisis ini, kumpulan soal yang menurut saya berguna untuk mempelajari pokok
+bahasannya, serta daftar bacaan dan referensi beranotasi.
+
+Sebagian besar hasil dalam pengantar analisis fungsional bersifat lugas dan dapat
+diperiksa oleh mahasiswa yang menelaahnya dengan saksama. Bahkan, itulah tujuan utama
+catatan ini---meyakinkan pemula bahwa bidang ini dapat dipelajari. Dalam materi berikut
+terdapat banyak penanda yang mengajak pembaca untuk berperan aktif: kata-kata seperti
+``proposisi'', ``contoh'', ``latihan'', dan ``akibat'', jika tidak diikuti oleh bukti
+atau rujukan kepada suatu bukti, merupakan undangan untuk memeriksa pernyataan yang
+diajukan. Tentu saja, ada beberapa teorema yang, menurut saya, memerlukan waktu dan usaha
+pembuktian yang lebih besar daripada manfaat yang diperoleh. Dalam kasus seperti itu,
+apabila saya tidak dapat menyempurnakan bukti bakunya, saya memberikan rujukan alih-alih
+mengulang bukti tersebut.
+
+Materi dalam catatan ini mencerminkan isi sebagian dari dua mata kuliah pascasarjana
+sepanjang tahun tentang beberapa topik dasar dalam \emph{analisis fungsional (linear)}
+dan \emph{aljabar operator}, yang telah berkali-kali saya ajarkan di Portland State
+University. Dalam mata kuliah tersebut, selain menggunakan catatan ini, saya meminta
+mahasiswa memilih sumber informasi lain---baik buku cetak maupun dokumen daring---yang
+sesuai dengan gaya belajar (dan anggaran) masing-masing. Prasyarat untuk mempelajari
+catatan ini cukup ringan; bahkan pengenalan sepintas terhadap \emph{aljabar linear},
+\emph{analisis real}, dan \emph{topologi} semestinya memadai. Dengan kata lain, istilah
+seperti \emph{ruang vektor}, \emph{pemetaan linear}, \emph{limit}, \emph{ukuran Lebesgue}
+dan \emph{integral Lebesgue}, \emph{himpunan terbuka}, \emph{himpunan kompak}, serta
+\emph{fungsi kontinu} semestinya sudah tidak asing.
+
+Karena \emph{analisis fungsional linear}, setidaknya dalam suatu pengertian, dapat
+dipandang sebagai `aljabar linear berdimensi tak hingga', bab pertama catatan ini
+dikhususkan bagi tinjauan (yang cukup ringkas) atas beberapa gagasan penting yang,
+  dalam dunia angan-angan saya, dibawa pulang mahasiswa dari mata kuliah
+aljabar linear pertama mereka. Tiga wawasan utama yang dikembangkan dalam bab pertama
+adalah:
+\begin{enumerate}
+  \item operator yang dapat didiagonalkan pada ruang vektor berdimensi hingga merupakan
+  kombinasi linear dari proyeksi;
+  \item operator pada ruang hasil kali dalam kompleks berdimensi hingga dapat didiagonalkan secara
+  uniter jika dan hanya jika operator itu normal; dan
+  \item dua operator normal pada ruang hasil kali dalam kompleks berdimensi hingga ekuivalen secara
+  uniter jika dan hanya jika keduanya memiliki nilai-nilai eigen yang sama, masing-masing
+  dengan multiplisitas yang sama. % SOURCE-CORRECTION: PREFACE-C002
+\end{enumerate}
+Saya memandang hasil-hasil tersebut sangat mendasar karena wawasan luar biasa yang lahir
+dari berbagai upaya para ahli teori operator selama seabad terakhir untuk membawanya ke
+dalam ranah \emph{analisis fungsional}, yakni menggeneralisasikannya ke kasus berdimensi
+tak hingga. Salah satu akibat penjelajahan yang subur dan luar biasa rumit ini ialah
+ditemukannya banyak hubungan yang mencengangkan, erat, dan kompleks antara \emph{teori
+operator} dan bidang-bidang seperti \emph{teori fungsi variabel kompleks}, \emph{topologi
+aljabar}, serta \emph{aljabar homologis}. Dalam bagian-bagian selanjutnya dari catatan ini, saya
+berusaha menelusuri kembali beberapa langkah tersebut. Kuliah yang menjadi dasar catatan
+ini berpuncak pada hasil menakjubkan Brown, Douglas, dan Fillmore yang pertama kali
+diterbitkan pada 1973 (lihat~\cite{BrownDF:1973}). Bahkan sekarang, sebagian besar mahasiswa
+pascasarjana masih kesulitan menemukan uraian yang cukup mudah dicerna mengenai banyak
+materi latar yang diperlukan untuk mengembangkan materi indah ini. Sayangnya, penalaran
+transfinit yang serba informal dan masih cukup berhasil di ruang kuliah sangat sukar dialihkan ke kertas
+atau media elektronik. Akibatnya, catatan ini masih berada dalam keadaan yang sungguh
+belum selesai. Saya terus mengerjakannya; dan mungkin orang lain kelak akan menyelesaikan
+apa yang tidak saya selesaikan.
+
+Jika materi aljabar linear dalam bab pertama terasa terlalu ringkas, uraian yang lebih
+santai dan lebih menyeluruh dapat ditemukan dalam catatan daring saya~\cite{Erdman:2010}.
+% SOURCE-CORRECTION: PREFACE-C003
+Demikian pula, materi latar tambahan tentang kalkulus lanjut, ruang metrik dan ruang
+topologis, integral Lebesgue, dan sebagainya dapat ditemukan dalam banyak sekali sumber,
+termasuk~\cite{Erdman:2005} dan~\cite{Erdman:2007}.
+
+Tentu terdapat sejumlah kelebihan dan kekurangan ketika sebuah dokumen diterbitkan secara
+elektronik. Salah satu kelebihannya ialah rujuk silang dapat diikuti dengan cepat melalui
+pranala. Menelusuri sebuah buku untuk mencari \emph{lema 3.14.8} dapat memakan waktu
+(terutama apabila seorang penulis menerapkan kebiasaan yang sepenuhnya logis tetapi
+sangat menjengkelkan, yakni memberi nomor secara terpisah kepada lema, proposisi, teorema,
+akibat, dan sebagainya). Kelebihan yang mungkin lebih penting ialah kemampuan untuk
+segera memperbaiki kesalahan, menambahkan bagian yang hilang, memperjelas argumen yang
+samar, dan membenahi ungkapan yang kurang baik. Kekurangan yang menyertainya ialah bahwa
+seorang pembaca yang kembali ke laman web setelah waktu singkat mungkin mendapati segala
+sesuatu (halaman, definisi, teorema, bagian) telah memperoleh nomor yang berbeda.
+({\LaTeX} adalah alat yang mengagumkan.) Saya akan mengubah tanggal pada halaman judul
+untuk memberi tahu pembaca kapan pembaruan tak sepele terakhir dilakukan (yakni pembaruan
+yang memengaruhi nomor atau rujuk silang).
+
+Kekurangan paling serius dari kehidupan elektronik ialah ketidaklestariannya. Dalam
+kebanyakan kasus, ketika sebuah laman web menghilang, untuk segala keperluan praktis
+informasi di dalamnya turut menghilang. Karena alasan ini (dan karena saya ingin materi
+ini tersedia secara bebas bagi siapa pun yang menginginkannya), saya menggunakan lisensi
+``BerbagiSerupa'' dari \emph{Creative Commons}. % SOURCE-CORRECTION: PREFACE-C004
+Saya berharap siapa pun yang menganggap
+materi ini berguna akan memperbaiki yang keliru, menambahkan yang hilang, dan menyempurnakan
+yang canggung. Saya akan menyertakan berkas sumber {\LaTeX} di situs web saya agar
+pemanfaatan dokumen ini, atau bagian-bagiannya, tidak mengharuskan pengetikan ulang tanpa
+henti. Mengenai teksnya sendiri, silakan kirim koreksi, saran, keluhan, dan komentar lain
+kepada penulis melalui
+   \[ \textrm{erdman@pdx.edu} \]
+
+
+\vfill\eject
+
+
+\section*{Huruf Yunani}
+
+ \index{huruf!Yunani}%
+% SOURCE-CORRECTION: PREFACE-C005
+% Markup tabel warisan yang dikecualikan diganti dengan tabularx; data dipertahankan.
+\begin{center}
+{\renewcommand{\arraystretch}{1.10}%
+\begin{tabularx}{\textwidth}{@{}>{\centering\arraybackslash}p{0.23\textwidth}>{\centering\arraybackslash}p{0.27\textwidth}>{\raggedright\arraybackslash}X@{}}
+\hline
+\textbf{Huruf kapital} & \textbf{Huruf kecil} & \textbf{Nama dalam bahasa Inggris (perkiraan pelafalan)} \\
+\hline
+A         & $\alpha$                    & Alpha (AL-fuh) \\
+B         & $\beta$                     & Beta (BAY-tuh) \\
+$\Gamma$  & $\gamma$                    & Gamma (GAM-uh) \\
+$\Delta$  & $\delta$                    & Delta (DEL-tuh) \\
+$E$       & $\epsilon$ atau $\varepsilon$ & Epsilon (EPP-suh-lon) \\
+Z         & $\zeta$                     & Zeta (ZAY-tuh) \\
+H         & $\eta$                      & Eta (AY-tuh) \\
+$\Theta$  & $\theta$                    & Theta (THAY-tuh) \\
+I         & $\iota$                     & Iota (eye-OH-tuh) \\
+K         & $\kappa$                    & Kappa (KAP-uh) \\
+$\Lambda$ & $\lambda$                   & Lambda (LAM-duh) \\
+M         & $\mu$                       & Mu (MYOO) \\
+N         & $\nu$                       & Nu (NOO) \\
+$\Xi$     & $\xi$                       & Xi (KSEE) \\
+O         & o                            & Omicron (OHM-ih-kron) \\
+$\Pi$     & $\pi$                       & Pi (PIE) \\
+P         & $\rho$                      & Rho (ROH) \\
+$\Sigma$  & $\sigma$                    & Sigma (SIG-muh) \\
+T         & $\tau$                      & Tau (TAU) \\
+Y         & $\upsilon$                  & Upsilon (OOP-suh-lon) \\
+$\Phi$    & $\phi$                      & Phi (FEE or FAHY) \\
+X         & $\chi$                      & Chi (KHAY) \\
+$\Psi$    & $\psi$                      & Psi (PSEE or PSAHY) \\
+$\Omega$  & $\omega$                    & Omega (oh-MAY-guh) \\
+\hline
+\end{tabularx}}
+\end{center}
+
+
+
+
+
+
+
+
+\vfill\eject
+
+
+
+
+
+
+
+\section*{Font Fraktur}
+
+Dalam catatan ini digunakan font Fraktur (paling sering untuk keluarga himpunan dan
+keluarga operator). Padanan huruf Roman bagi setiap huruf diberikan di bawah ini. Ketika
+menulis dengan tangan atau menyajikan materi di papan tulis, biasanya paling baik
+menggantinya dengan huruf Latin kaligrafis.
+ \index{font!Fraktur}
+
+% SOURCE-CORRECTION: PREFACE-C006
+% Markup tabel warisan yang dikecualikan diganti dengan tabularx; data dipertahankan.
+\begin{center}
+{\renewcommand{\arraystretch}{1.10}%
+\begin{tabularx}{\textwidth}{@{}>{\centering\arraybackslash}X>{\centering\arraybackslash}X>{\centering\arraybackslash}X@{}}
+\hline
+\textbf{Fraktur} & \textbf{Fraktur} & \textbf{Roman} \\
+\textbf{Huruf kapital} & \textbf{Huruf kecil} & \textbf{Huruf kecil} \\
+\hline
+$\mathfrak A$ & $\mathfrak a$ & a \\
+$\mathfrak B$ & $\mathfrak b$ & b \\
+$\mathfrak C$ & $\mathfrak c$ & c \\
+$\mathfrak D$ & $\mathfrak d$ & d \\
+$\mathfrak E$ & $\mathfrak e$ & e \\
+$\mathfrak F$ & $\mathfrak f$ & f \\
+$\mathfrak G$ & $\mathfrak g$ & g \\
+$\mathfrak H$ & $\mathfrak h$ & h \\
+$\mathfrak I$ & $\mathfrak i$ & i \\
+$\mathfrak J$ & $\mathfrak j$ & j \\
+$\mathfrak K$ & $\mathfrak k$ & k \\
+$\mathfrak L$ & $\mathfrak l$ & l \\
+$\mathfrak M$ & $\mathfrak m$ & m \\
+$\mathfrak N$ & $\mathfrak n$ & n \\
+$\mathfrak O$ & $\mathfrak o$ & o \\
+$\mathfrak P$ & $\mathfrak p$ & p \\
+$\mathfrak Q$ & $\mathfrak q$ & q \\
+$\mathfrak R$ & $\mathfrak r$ & r \\
+$\mathfrak S$ & $\mathfrak s$ & s \\
+$\mathfrak T$ & $\mathfrak t$ & t \\
+$\mathfrak U$ & $\mathfrak u$ & u \\
+$\mathfrak V$ & $\mathfrak v$ & v \\
+$\mathfrak W$ & $\mathfrak w$ & w \\
+$\mathfrak X$ & $\mathfrak x$ & x \\
+$\mathfrak Y$ & $\mathfrak y$ & y \\
+$\mathfrak Z$ & $\mathfrak z$ & z \\
+\hline
+\end{tabularx}}
+\end{center}
+
+
+  \vfill\eject
+\phantomsection
+\section*{Notasi untuk Himpunan Bilangan}\label{C0009} % SOURCE-CORRECTION: PREFACE-C007
+Berikut adalah daftar notasi yang cukup baku untuk beberapa himpunan bilangan yang sering
+muncul dalam catatan ini:
+ \index{real!garis!subhimpunan khusus dari}%
+ \index{bilangan!himpunan khusus dari}%
+ \index{C@$\C$ (himpunan bilangan kompleks)}%
+ \index{R@$\R$ (himpunan bilangan real)}%
+ \index{R@$\R^n$!himpunan tupel-$n$ bilangan real}%
+ \index{Q@$\Q$ (himpunan bilangan rasional)}%
+ \index{Z@$\Z$ (himpunan bilangan bulat)}%
+ \index{N@$\N$ (himpunan bilangan asli)}%
+ \index{N@$\N_n$ ($n$ bilangan asli pertama)}%
+ \index{D@$\Di$ (cakram satuan terbuka)}%
+ \index{T@$\T$ (lingkaran satuan)}%
+ \index{S@$\Sp^1$ (lingkaran satuan)}%
+\begin{align*}
+ &\C \text{ adalah himpunan bilangan kompleks} \\
+ &\R \text{ adalah himpunan bilangan real} \\
+ &\R^n \text{ adalah himpunan semua tupel-$n$ $(r_1,r_2,\dots,r_n)$ bilangan real} \\
+ &\R^+ = \{x \in \R\colon x \ge 0\}, \text{ himpunan bilangan real tak negatif} \\ % SOURCE-CORRECTION: PREFACE-C008
+ &\Q \text{ adalah himpunan bilangan rasional} \\
+ &\Q^+ = \{x \in \Q\colon x \ge 0\}, \text{ himpunan bilangan rasional tak negatif} \\ % SOURCE-CORRECTION: PREFACE-C009
+ &\Z \text{ adalah himpunan bilangan bulat} \\
+ &\Z^+ = \{0,1,2,\dots\}, \text{ himpunan bilangan bulat tak negatif} \\ % SOURCE-CORRECTION: PREFACE-C010
+ &\N = \{1,2,3,\dots\}\text{, himpunan bilangan asli} \\
+ &\N_n = \{1,2,3,\dots,n\}\text{, $n$ bilangan asli pertama} \\ % SOURCE-CORRECTION: PREFACE-C011
+ &[a,b] = \{x \in \R\colon a \le x \le b\} \\
+ &[a,b) = \{x \in \R\colon a \le x < b\} \\
+ &(a,b] = \{x \in \R\colon a < x \le b\} \\
+ &(a,b) = \{x \in \R\colon a < x < b\} \\
+ &[a,\infty) = \{x \in \R\colon a \le x\} \\
+ &(a,\infty) = \{x \in \R\colon a < x\} \\
+ &(-\infty,b] = \{x \in \R\colon x \le b\} \\
+ &(-\infty,b) = \{x \in \R\colon  x < b\} \\
+\index{cakram!satuan terbuka}%
+ &\Di = \{(x,y) \in \R^2\colon x^2 + y^2 < 1\},\text{ cakram satuan terbuka} \\
+ &\T = \Sp^1 = \{(x,y) \in \R^2\colon x^2 + y^2 = 1\},\text{ lingkaran satuan} \\
+\end{align*}
+
+
+
+\vfill\eject
+
+
+
+
+
+
+
+
+
+
+\section*{Notasi untuk Fungsi}
+\enlargethispage{2\baselineskip}
+Fungsi sudah tidak asing sejak kalkulus dasar. Secara informal, suatu \emph{fungsi} terdiri atas sepasang
+himpunan dan suatu ``aturan'' yang mengaitkan setiap anggota himpunan pertama (yaitu
+\emph{domain}) dengan tepat satu anggota himpunan kedua (yaitu \emph{kodomain}). Walaupun
+``definisi'' informal ini tentu memadai untuk sebagian besar keperluan dan jarang menimbulkan
+kesalahpahaman, kadang-kadang perumusan yang lebih tepat tetap berguna. Perumusan itu diperoleh
+dengan mendefinisikan fungsi melalui suatu jenis khusus relasi antara dua himpunan.
+
+Suatu
+ \index{fungsi}%
+\df{fungsi} $f$ adalah tripel terurut $(S,T,G)$, dengan $S$ dan $T$ himpunan serta $G$
+subhimpunan dari $S \times T$ yang memenuhi:
+ \begin{enumerate}
+   \item untuk setiap $s \in S$ terdapat $t \in T$ sedemikian sehingga $(s,t) \in
+G$; dan
+   \item jika $(s,t_1)$ dan $(s,t_2)$ termasuk dalam $G$, maka $t_1 = t_2$. % SOURCE-CORRECTION: PREFACE-C014
+ \end{enumerate}
+Dalam keadaan ini kita mengatakan bahwa $f$ adalah \emph{fungsi dari} $S$ \emph{ke} $T$ (atau bahwa
+$f$ \emph{memetakan} $S$ \emph{ke} $T$) dan menulis $f\colon S \sto T$. Himpunan $S$ adalah
+ \index{domain}%
+\df{domain} (atau
+ \index{masukan!ruang}%
+ \index{ruang!masukan}%
+\df{ruang masukan}) dari~$f$. Himpunan $T$ adalah
+ \index{kodomain}%
+\df{kodomain} (atau
+ \index{sasaran!ruang}%
+ \index{ruang!sasaran}%
+\df{ruang sasaran}, atau
+ \index{keluaran!ruang}%
+ \index{ruang!keluaran}%
+\df{ruang keluaran}) dari~$f$. Relasi $G$ adalah
+ \index{graf}%
+\df{graf} dari~$f$. Untuk menghindari penyebutan graf $G$ secara eksplisit, biasanya
+ungkapan ``$(x,y) \in G\,$'' diganti dengan ``$y = f(x)$''; elemen $f(x)$ adalah
+ \index{citra!dari suatu titik}%
+\df{citra} $x$ di bawah~$f$. Dalam catatan ini (tetapi tidak di semua tempat), kata
+ \index{transformasi}%
+ \index{konvensi!fungsi = peta = pemetaan = transformasi}%
+``transformasi'',
+ \index{peta}%
+``peta'', dan
+ \index{pemetaan}%
+``pemetaan'' digunakan sebagai sinonim ``fungsi''. Domain $f$ dinotasikan
+ \index{domain@$\dom f$ (domain fungsi $f$)}%
+dengan~$\dom f$.
+
+Jika $S$ dan $T$ himpunan, keluarga semua fungsi yang berdomain $S$ dan
+berkodomain $T$ dinotasikan
+ \index{F@$\fml F(S,T)$ (himpunan fungsi dari $S$ ke~$T$)}%
+dengan~$\fml F(S,T)$.
+
+Jika $f \colon S \sto T$ dan $A\subseteq S$, maka
+ %\index{<@$\bigl.f\bigr"|_A$ (pembatasan $f$ pada $A$)}%
+ \index{<@$f\mid_{{}_A}$ (pembatasan $f$ pada $A$)}%
+ \index{pembatasan}%
+\df{pembatasan} $f$ pada $A$, yang dinotasikan dengan $\bigl.f\bigr|_A$, adalah
+pemetaan dari $A$ ke $T$ yang nilainya pada setiap $x$ di $A$ sama dengan $f(x)$.
+
+Jika $f\colon S \sto T$ dan $A \subseteq S$, maka $f^{\sto} (A)$, yaitu
+ \index{<arrowto@$f^{\sto}(A)$ (citra himpunan $A$ di bawah fungsi $f$)}%
+ \index{citra!dari suatu himpunan}%
+\df{citra} $A$ di bawah $f$ adalah $\{f(x)\colon x \in A\}$. Lazim pula menulis
+$f(A)$ sebagai pengganti $f^{\sto}(A)$. Himpunan $f^{\sto}(S)$ adalah
+ \index{jangkauan}%
+ \index{jangkauan@$\ran f$ (jangkauan fungsi $f$)}%
+\df{jangkauan} (atau
+ \index{citra!dari suatu fungsi}%
+\df{citra}) dari $f$; biasanya kita menulis $\ran f$ sebagai pengganti $f^{\sto}(S)$.
+
+Jika $f\colon S \sto T$ dan $B \subseteq T$, maka
+$f^\gets (B)$, yaitu
+ \index{<arrowgets@$f^{\gets}(B)$ (pracitra himpunan $B$ di bawah fungsi $f$)}%
+ \index{pracitra!dari suatu himpunan}%
+ \index{citra!invers!dari suatu himpunan}%
+\df{pracitra} $B$ di bawah~$f$ (atau citra inversnya) adalah $\{x \in S\colon f(x) \in B\}$. Dalam banyak buku,
+$f^{\gets}(B)$ dinotasikan dengan $f^{-1}(B)$. Notasi ini dapat membingungkan karena menyiratkan
+bahwa fungsi $f$ memiliki invers, padahal belum tentu demikian.
+
+Suatu fungsi $f\colon S \sto T$ bersifat
+ \index{injektif}%
+\df{injektif} (atau
+ \index{satu-satu}%
+\df{satu-satu}) jika $f(x) = f(y)$ mengakibatkan $x = y$ untuk semua $x$, $y \in S$. Fungsi itu bersifat
+ \index{surjektif}%
+\df{surjektif} (atau
+ \index{onto}%
+\df{onto}) jika untuk setiap $t \in T$ terdapat $x \in S$ sedemikian sehingga $f(x) = t$. % SOURCE-CORRECTION: PREFACE-C012
+Fungsi itu bersifat
+ \index{bijektif}%
+\df{bijektif} (atau merupakan
+ \index{satu-satu!korespondensi}%
+ \index{korespondensi!satu-satu}%
+\df{korespondensi satu-satu}) jika fungsi itu injektif sekaligus surjektif. % SOURCE-CORRECTION: PREFACE-C013
+
+Sering kali berguna untuk memandang fungsi sebagai panah dalam diagram. Sebagai contoh, keadaan
+$j\colon R \sto U$, $f\colon R \sto S$, $k\colon S \sto T$, $h\colon U \sto T$
+dapat direpresentasikan oleh
+ \index{diagram}%
+diagram berikut.
+  \[ \xy
+       \square[R`U`S`T;j`f`h`k]
+  \endxy \]
+Diagram itu dikatakan
+ \index{berkomutasi}%
+\df{berkomutasi} (atau disebut
+ \index{komutatif!diagram}%
+ \index{diagram!komutatif}%
+\df{diagram komutatif}) jika $h \circ j = k \circ f$.
+
+Diagram tidak harus berbentuk persegi panjang. Sebagai contoh,
+ \[ \xy
+     \btriangle[R`S`T;f`g`k]
+ \endxy \]
+adalah diagram komutatif jika $g = k \circ f$.
+
+
+\vfill\eject
+
+
+
+
+
+
+
+
+
+
+
+
+
+  \endinput

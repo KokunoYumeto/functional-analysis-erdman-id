@@ -1,0 +1,2820 @@
+{
+  "schema_version": "o008.preface-translation-qa.v1",
+  "unit_id": "FAOA-2015-PREFACE",
+  "status": "pass",
+  "determinism": {
+    "generated_timestamp": null,
+    "checker_path": "qa/check_preface_translation.py",
+    "checker_sha256": "dd56486b7c57449b65ab78e4f496c3cb2eaa3a25b2dbb2b6cfcc4a25b52bcb1e",
+    "report_serialization": "UTF-8 without BOM; LF; JSON indent=2; insertion-order keys"
+  },
+  "identities": {
+    "source/upstream/preface.tex": {
+      "path": "source/upstream/preface.tex",
+      "bytes": 18107,
+      "logical_records": 351,
+      "line_endings": "CRLF",
+      "sha256": "0976042bbb6ae3b8d1e5bb113a93d51169fada9d3e41f2d01435c76b6729edb9",
+      "encoding": "ASCII"
+    },
+    "source/id-ID/preface-id.tex": {
+      "path": "source/id-ID/preface-id.tex",
+      "bytes": 18140,
+      "logical_records": 394,
+      "line_endings": "LF",
+      "sha256": "c622dc9d9c1af4e5b1a6112c84eeff7328c778e8ef8643fc267f6fc6e3e7d564",
+      "encoding": "UTF-8 without BOM"
+    },
+    "source/id-ID/functional-analysis-id-complete-source.tex": {
+      "path": "source/id-ID/functional-analysis-id-complete-source.tex",
+      "bytes": 11176,
+      "logical_records": 353,
+      "line_endings": "LF",
+      "sha256": "7f06919a8ec9088a3bc812fab962a48b5f1b3b0d5d3bce80eb21055f65089041",
+      "encoding": "UTF-8 without BOM"
+    },
+    "qa/build-through-ch17-final/input-snapshot.csv": {
+      "path": "qa/build-through-ch17-final/input-snapshot.csv",
+      "bytes": 2302,
+      "logical_records": 21,
+      "line_endings": "CRLF",
+      "sha256": "be4af8b068adb360f3768e74244397bae5cd874bf0b3db031d90e302c18259e8",
+      "encoding": "ASCII"
+    }
+  },
+  "topology": {
+    "source_headings": [
+      "chapter*:PREFACE",
+      "section*:Greek Letters",
+      "section*:Fraktur Fonts",
+      "section*:Notation for Sets of Numbers",
+      "section*:Notation for Functions"
+    ],
+    "target_headings": [
+      "chapter*:Prakata",
+      "section*:Huruf Yunani",
+      "section*:Font Fraktur",
+      "section*:Notasi untuk Himpunan Bilangan",
+      "section*:Notasi untuk Fungsi"
+    ],
+    "source_environment_begins": [
+      "enumerate",
+      "align*",
+      "enumerate"
+    ],
+    "source_environment_ends": [
+      "enumerate",
+      "align*",
+      "enumerate"
+    ],
+    "target_environment_begins": [
+      "enumerate",
+      "center",
+      "tabularx",
+      "center",
+      "tabularx",
+      "align*",
+      "enumerate"
+    ],
+    "target_environment_ends": [
+      "enumerate",
+      "tabularx",
+      "center",
+      "tabularx",
+      "center",
+      "align*",
+      "enumerate"
+    ],
+    "additional_target_environments": {
+      "center": 2,
+      "tabularx": 2
+    }
+  },
+  "references": {
+    "label": {
+      "source": [
+        "C0009"
+      ],
+      "target": [
+        "C0009"
+      ]
+    },
+    "ref": {
+      "source": [],
+      "target": []
+    },
+    "eqref": {
+      "source": [],
+      "target": []
+    },
+    "pageref": {
+      "source": [],
+      "target": []
+    },
+    "cite": {
+      "source": [
+        "Halmos:1982",
+        "BrownDF:1973",
+        "Erdman:2010",
+        "Erdman:2005",
+        "Erdman:2007"
+      ],
+      "target": [
+        "Halmos:1982",
+        "BrownDF:1973",
+        "Erdman:2010",
+        "Erdman:2005",
+        "Erdman:2007"
+      ]
+    }
+  },
+  "index_terms_and_items": {
+    "source_active_indexes": 53,
+    "target_active_indexes": 53,
+    "source_commented_index_candidates": 1,
+    "target_commented_index_candidates": 1,
+    "source_defined_terms": 21,
+    "target_defined_terms": 21,
+    "source_items": 5,
+    "target_items": 5
+  },
+  "greek_table": {
+    "row_count": 24,
+    "source_english_name_pronunciation_order": [
+      "Alpha (AL-fuh)",
+      "Beta (BAY-tuh)",
+      "Gamma (GAM-uh)",
+      "Delta (DEL-tuh)",
+      "Epsilon (EPP-suh-lon)",
+      "Zeta (ZAY-tuh)",
+      "Eta (AY-tuh)",
+      "Theta (THAY-tuh)",
+      "Iota (eye-OH-tuh)",
+      "Kappa (KAP-uh)",
+      "Lambda (LAM-duh)",
+      "Mu (MYOO)",
+      "Nu (NOO)",
+      "Xi (KSEE)",
+      "Omicron (OHM-ih-kron)",
+      "Pi (PIE)",
+      "Rho (ROH)",
+      "Sigma (SIG-muh)",
+      "Tau (TAU)",
+      "Upsilon (OOP-suh-lon)",
+      "Phi (FEE or FAHY)",
+      "Chi (KHAY)",
+      "Psi (PSEE or PSAHY)",
+      "Omega (oh-MAY-guh)"
+    ],
+    "target_english_name_pronunciation_order": [
+      "Alpha (AL-fuh)",
+      "Beta (BAY-tuh)",
+      "Gamma (GAM-uh)",
+      "Delta (DEL-tuh)",
+      "Epsilon (EPP-suh-lon)",
+      "Zeta (ZAY-tuh)",
+      "Eta (AY-tuh)",
+      "Theta (THAY-tuh)",
+      "Iota (eye-OH-tuh)",
+      "Kappa (KAP-uh)",
+      "Lambda (LAM-duh)",
+      "Mu (MYOO)",
+      "Nu (NOO)",
+      "Xi (KSEE)",
+      "Omicron (OHM-ih-kron)",
+      "Pi (PIE)",
+      "Rho (ROH)",
+      "Sigma (SIG-muh)",
+      "Tau (TAU)",
+      "Upsilon (OOP-suh-lon)",
+      "Phi (FEE or FAHY)",
+      "Chi (KHAY)",
+      "Psi (PSEE or PSAHY)",
+      "Omega (oh-MAY-guh)"
+    ],
+    "exact_match": true
+  },
+  "fraktur_table": {
+    "row_count": 26,
+    "header_rows": 2,
+    "source_rows": [
+      [
+        "A",
+        "a",
+        "a"
+      ],
+      [
+        "B",
+        "b",
+        "b"
+      ],
+      [
+        "C",
+        "c",
+        "c"
+      ],
+      [
+        "D",
+        "d",
+        "d"
+      ],
+      [
+        "E",
+        "e",
+        "e"
+      ],
+      [
+        "F",
+        "f",
+        "f"
+      ],
+      [
+        "G",
+        "g",
+        "g"
+      ],
+      [
+        "H",
+        "h",
+        "h"
+      ],
+      [
+        "I",
+        "i",
+        "i"
+      ],
+      [
+        "J",
+        "j",
+        "j"
+      ],
+      [
+        "K",
+        "k",
+        "k"
+      ],
+      [
+        "L",
+        "l",
+        "l"
+      ],
+      [
+        "M",
+        "m",
+        "m"
+      ],
+      [
+        "N",
+        "n",
+        "n"
+      ],
+      [
+        "O",
+        "o",
+        "o"
+      ],
+      [
+        "P",
+        "p",
+        "p"
+      ],
+      [
+        "Q",
+        "q",
+        "q"
+      ],
+      [
+        "R",
+        "r",
+        "r"
+      ],
+      [
+        "S",
+        "s",
+        "s"
+      ],
+      [
+        "T",
+        "t",
+        "t"
+      ],
+      [
+        "U",
+        "u",
+        "u"
+      ],
+      [
+        "V",
+        "v",
+        "v"
+      ],
+      [
+        "W",
+        "w",
+        "w"
+      ],
+      [
+        "X",
+        "x",
+        "x"
+      ],
+      [
+        "Y",
+        "y",
+        "y"
+      ],
+      [
+        "Z",
+        "z",
+        "z"
+      ]
+    ],
+    "target_rows": [
+      [
+        "A",
+        "a",
+        "a"
+      ],
+      [
+        "B",
+        "b",
+        "b"
+      ],
+      [
+        "C",
+        "c",
+        "c"
+      ],
+      [
+        "D",
+        "d",
+        "d"
+      ],
+      [
+        "E",
+        "e",
+        "e"
+      ],
+      [
+        "F",
+        "f",
+        "f"
+      ],
+      [
+        "G",
+        "g",
+        "g"
+      ],
+      [
+        "H",
+        "h",
+        "h"
+      ],
+      [
+        "I",
+        "i",
+        "i"
+      ],
+      [
+        "J",
+        "j",
+        "j"
+      ],
+      [
+        "K",
+        "k",
+        "k"
+      ],
+      [
+        "L",
+        "l",
+        "l"
+      ],
+      [
+        "M",
+        "m",
+        "m"
+      ],
+      [
+        "N",
+        "n",
+        "n"
+      ],
+      [
+        "O",
+        "o",
+        "o"
+      ],
+      [
+        "P",
+        "p",
+        "p"
+      ],
+      [
+        "Q",
+        "q",
+        "q"
+      ],
+      [
+        "R",
+        "r",
+        "r"
+      ],
+      [
+        "S",
+        "s",
+        "s"
+      ],
+      [
+        "T",
+        "t",
+        "t"
+      ],
+      [
+        "U",
+        "u",
+        "u"
+      ],
+      [
+        "V",
+        "v",
+        "v"
+      ],
+      [
+        "W",
+        "w",
+        "w"
+      ],
+      [
+        "X",
+        "x",
+        "x"
+      ],
+      [
+        "Y",
+        "y",
+        "y"
+      ],
+      [
+        "Z",
+        "z",
+        "z"
+      ]
+    ]
+  },
+  "number_notation": {
+    "row_count": 20,
+    "formula_prefixes": [
+      "\\C",
+      "\\R",
+      "\\R^n",
+      "\\R^+ = \\{x \\in \\R\\colon x \\ge 0\\},",
+      "\\Q",
+      "\\Q^+ = \\{x \\in \\Q\\colon x \\ge 0\\},",
+      "\\Z",
+      "\\Z^+ = \\{0,1,2,\\dots\\},",
+      "\\N = \\{1,2,3,\\dots\\}",
+      "\\N_n = \\{1,2,3,\\dots,n\\}",
+      "[a,b] = \\{x \\in \\R\\colon a \\le x \\le b\\}",
+      "[a,b) = \\{x \\in \\R\\colon a \\le x < b\\}",
+      "(a,b] = \\{x \\in \\R\\colon a < x \\le b\\}",
+      "(a,b) = \\{x \\in \\R\\colon a < x < b\\}",
+      "[a,\\infty) = \\{x \\in \\R\\colon a \\le x\\}",
+      "(a,\\infty) = \\{x \\in \\R\\colon a < x\\}",
+      "(-\\infty,b] = \\{x \\in \\R\\colon x \\le b\\}",
+      "(-\\infty,b) = \\{x \\in \\R\\colon x < b\\}",
+      "\\Di = \\{(x,y) \\in \\R^2\\colon x^2 + y^2 < 1\\},",
+      "\\T = \\Sp^1 = \\{(x,y) \\in \\R^2\\colon x^2 + y^2 = 1\\},"
+    ],
+    "source_target_exact_match": true
+  },
+  "diagrams": {
+    "source": [
+      "\\square[R`U`S`T;j`f`h`k]",
+      "\\btriangle[R`S`T;f`g`k]"
+    ],
+    "target": [
+      "\\square[R`U`S`T;j`f`h`k]",
+      "\\btriangle[R`S`T;f`g`k]"
+    ],
+    "equalities": [
+      "h \\circ j = k \\circ f",
+      "g = k \\circ f"
+    ]
+  },
+  "math_span_delta": {
+    "source_count": 204,
+    "target_count": 205,
+    "sole_insertion_zero_based_index": 113,
+    "context": {
+      "source_before": "(s,t_2)",
+      "target_inserted": "G",
+      "source_after": "t_1 = t_2"
+    },
+    "classification": "PREFACE-C014 / MECHANICAL_TEX_SOURCE_REPAIR / no mathematical change",
+    "unified_diff": [
+      "--- source\n",
+      "+++ target\n",
+      "@@ -113,2 +113,3 @@\n",
+      " (s,t_2)",
+      "+G",
+      " t_1 = t_2"
+    ]
+  },
+  "correction_ledger": {
+    "path": "provenance/SOURCE_CORRECTIONS_PREFACE.json",
+    "identity": {
+      "path": "provenance/SOURCE_CORRECTIONS_PREFACE.json",
+      "bytes": 12159,
+      "logical_records": 355,
+      "line_endings": "LF",
+      "sha256": "927a74c63cbbc625fb910bfd9a30915179e689d0b5eac64545d2aafcd0bb62ce"
+    },
+    "status": "applied_verified",
+    "record_count": 14,
+    "records": [
+      {
+        "id": "FAOA-2015-PREFACE-CORR-001",
+        "classification": "RIGHTS_ADAPTATION",
+        "marker": "% SOURCE-CORRECTION: PREFACE-C001",
+        "marker_count": 1,
+        "marker_line": 3,
+        "source_anchors": {
+          "Paul Halmos famously remarked": true,
+          "\\cite{Halmos:1982}": true
+        },
+        "target_anchors": {},
+        "forbidden_anchors_absent": {
+          "``": true,
+          "''": true
+        }
+      },
+      {
+        "id": "FAOA-2015-PREFACE-CORR-002",
+        "classification": "FORMAL_SCOPE_CLARIFICATION",
+        "marker": "% SOURCE-CORRECTION: PREFACE-C002",
+        "marker_count": 1,
+        "marker_line": 49,
+        "source_anchors": {
+          "unitarily diagonalizable if and only if it is normal": true,
+          "unitarily equivalent if and only if": true
+        },
+        "target_anchors": {
+          "ruang hasil kali dalam kompleks berdimensi hingga": true,
+          "dapat didiagonalkan secara uniter": true,
+          "ekuivalen secara uniter": true
+        },
+        "forbidden_anchors_absent": {}
+      },
+      {
+        "id": "FAOA-2015-PREFACE-CORR-003",
+        "classification": "MECHANICAL_PROSE_SOURCE_REPAIR",
+        "marker": "% SOURCE-CORRECTION: PREFACE-C003",
+        "marker_count": 1,
+        "marker_line": 70,
+        "source_anchors": {
+          "advanced calculous": true
+        },
+        "target_anchors": {
+          "kalkulus lanjut": true
+        },
+        "forbidden_anchors_absent": {
+          "calculous": true
+        }
+      },
+      {
+        "id": "FAOA-2015-PREFACE-CORR-004",
+        "classification": "LICENSE_METADATA_ADAPTATION",
+        "marker": "% SOURCE-CORRECTION: PREFACE-C004",
+        "marker_count": 1,
+        "marker_line": 93,
+        "source_anchors": {
+          "Share Alike": true,
+          "Creative Commons": true
+        },
+        "target_anchors": {},
+        "forbidden_anchors_absent": {}
+      },
+      {
+        "id": "FAOA-2015-PREFACE-CORR-005",
+        "classification": "COMPONENT_RIGHTS_ADAPTATION",
+        "marker": "% SOURCE-CORRECTION: PREFACE-C005",
+        "marker_count": 1,
+        "marker_line": 109,
+        "source_anchors": {
+          "\\table{}": true,
+          "Upper case": true,
+          "Alpha (AL-fuh)": true,
+          "oh-MAY-guh": true
+        },
+        "target_anchors": {},
+        "forbidden_anchors_absent": {
+          "\\table{}": true,
+          "\\rr": true,
+          "\\caption{}": true
+        }
+      },
+      {
+        "id": "FAOA-2015-PREFACE-CORR-006",
+        "classification": "COMPONENT_RIGHTS_ADAPTATION",
+        "marker": "% SOURCE-CORRECTION: PREFACE-C006",
+        "marker_count": 1,
+        "marker_line": 168,
+        "source_anchors": {
+          "\\table{}": true,
+          "Fraktur": true,
+          "\\mathfrak A": true,
+          "\\mathfrak Z": true
+        },
+        "target_anchors": {},
+        "forbidden_anchors_absent": {
+          "\\table{}": true,
+          "\\rr": true,
+          "\\caption{}": true
+        }
+      },
+      {
+        "id": "FAOA-2015-PREFACE-CORR-007",
+        "classification": "NAVIGATION_ADAPTATION",
+        "marker": "% SOURCE-CORRECTION: PREFACE-C007",
+        "marker_count": 1,
+        "marker_line": 210,
+        "source_anchors": {
+          "\\section*{Notation for Sets of Numbers}\\label{C0009}": true
+        },
+        "target_anchors": {
+          "\\label{C0009}": true
+        },
+        "forbidden_anchors_absent": {}
+      },
+      {
+        "id": "FAOA-2015-PREFACE-CORR-008",
+        "classification": "MATHEMATICAL_TERMINOLOGY_REPAIR",
+        "marker": "% SOURCE-CORRECTION: PREFACE-C008",
+        "marker_count": 1,
+        "marker_line": 229,
+        "source_anchors": {
+          "\\R^+ = \\{x \\in \\R\\colon x \\ge 0\\}": true
+        },
+        "target_anchors": {
+          "bilangan real tak negatif": true
+        },
+        "forbidden_anchors_absent": {
+          "bilangan real positif": true
+        }
+      },
+      {
+        "id": "FAOA-2015-PREFACE-CORR-009",
+        "classification": "MATHEMATICAL_TERMINOLOGY_REPAIR",
+        "marker": "% SOURCE-CORRECTION: PREFACE-C009",
+        "marker_count": 1,
+        "marker_line": 231,
+        "source_anchors": {
+          "\\Q^+ = \\{x \\in \\Q\\colon x \\ge 0\\}": true
+        },
+        "target_anchors": {
+          "bilangan rasional tak negatif": true
+        },
+        "forbidden_anchors_absent": {
+          "bilangan rasional positif": true
+        }
+      },
+      {
+        "id": "FAOA-2015-PREFACE-CORR-010",
+        "classification": "MATHEMATICAL_TERMINOLOGY_REPAIR",
+        "marker": "% SOURCE-CORRECTION: PREFACE-C010",
+        "marker_count": 1,
+        "marker_line": 233,
+        "source_anchors": {
+          "\\Z^+ = \\{0,1,2,\\dots\\}": true
+        },
+        "target_anchors": {
+          "bilangan bulat tak negatif": true
+        },
+        "forbidden_anchors_absent": {
+          "bilangan bulat positif": true
+        }
+      },
+      {
+        "id": "FAOA-2015-PREFACE-CORR-011",
+        "classification": "MECHANICAL_PROSE_SOURCE_REPAIR",
+        "marker": "% SOURCE-CORRECTION: PREFACE-C011",
+        "marker_count": 1,
+        "marker_line": 235,
+        "source_anchors": {
+          "\\N_n = \\{1,2,3,\\dots,n\\}\\text{ the first $n$ natural numbers}": true
+        },
+        "target_anchors": {},
+        "forbidden_anchors_absent": {}
+      },
+      {
+        "id": "FAOA-2015-PREFACE-CORR-012",
+        "classification": "MECHANICAL_PROSE_SOURCE_REPAIR",
+        "marker": "% SOURCE-CORRECTION: PREFACE-C012",
+        "marker_count": 1,
+        "marker_line": 350,
+        "source_anchors": {
+          "\\df{onto}) in for every": true
+        },
+        "target_anchors": {
+          "surjektif": true,
+          "jika untuk setiap $t \\in T$": true
+        },
+        "forbidden_anchors_absent": {
+          "in for": true
+        }
+      },
+      {
+        "id": "FAOA-2015-PREFACE-CORR-013",
+        "classification": "MECHANICAL_PROSE_SOURCE_REPAIR",
+        "marker": "% SOURCE-CORRECTION: PREFACE-C013",
+        "marker_count": 1,
+        "marker_line": 356,
+        "source_anchors": {
+          "\\df{bijective} (or": true,
+          "\\df{a one-to-one correspondence} if it is both injective and surjective": true
+        },
+        "target_anchors": {
+          "\\df{bijektif} (atau": true,
+          "\\df{korespondensi satu-satu})": true
+        },
+        "forbidden_anchors_absent": {}
+      },
+      {
+        "id": "FAOA-2015-PREFACE-CORR-014",
+        "classification": "MECHANICAL_TEX_SOURCE_REPAIR",
+        "marker": "% SOURCE-CORRECTION: PREFACE-C014",
+        "marker_count": 1,
+        "marker_line": 278,
+        "source_anchors": {
+          "belong to G, then $t_1 = t_2$": true
+        },
+        "target_anchors": {
+          "termasuk dalam $G$, maka $t_1 = t_2$": true
+        },
+        "forbidden_anchors_absent": {
+          "termasuk dalam G, maka": true
+        }
+      }
+    ],
+    "required_semantics": {
+      "FAOA-2015-PREFACE-CORR-001": true,
+      "FAOA-2015-PREFACE-CORR-004": true,
+      "FAOA-2015-PREFACE-CORR-005": true,
+      "FAOA-2015-PREFACE-CORR-006": true,
+      "FAOA-2015-PREFACE-CORR-007": true,
+      "FAOA-2015-PREFACE-CORR-011": true
+    }
+  },
+  "exclusions": {
+    "legacy TABLE input": {
+      "target": 0,
+      "master": 0
+    },
+    "legacy TABLE call": {
+      "target": 0,
+      "master": 0
+    },
+    "legacy TABLE double-row macro": {
+      "target": 0,
+      "master": 0
+    },
+    "legacy custom empty caption": {
+      "target": 0,
+      "master": 0
+    },
+    "Wiener epigraph/name": {
+      "target": 0,
+      "master": 0
+    },
+    "CC badge EPS": {
+      "target": 0,
+      "master": 0
+    },
+    "CC badge PDF": {
+      "target": 0,
+      "master": 0
+    },
+    "direct Halmos sentence": {
+      "target": 0,
+      "master": 0
+    }
+  },
+  "wrapper": {
+    "required_anchors": {
+      "John M. Erdman": true,
+      "Creative Commons": true,
+      "Attribution--ShareAlike 4.0 International (CC BY-SA 4.0)": true,
+      "https://creativecommons.org/licenses/by-sa/4.0/": true,
+      "Terjemahan Bahasa Indonesia dan adaptasi teknis": true,
+      "OpenAI Codex gpt-5.6-sol, Ultra": true,
+      "kredit John M. Erdman dan kontributor komponen tetap dipertahankan": true,
+      "Edisi ini tidak disponsori atau didukung oleh John M. Erdman maupun Portland State University": true
+    },
+    "preface_placement_positions": {
+      "\\frontmatter": 6506,
+      "\\tableofcontents": 8886,
+      "\\include{preface-id}": 8906,
+      "\\mainmatter": 8948
+    },
+    "ordered_includes": [
+      "preface-id",
+      "linalg-id",
+      "categories-id",
+      "normlinspaces-id",
+      "Hilbert_spaces-id",
+      "Hilbert_space_operators-id",
+      "Banach_spaces-id",
+      "compact_operators-id",
+      "spectrum-id",
+      "topvecspaces-id",
+      "distributions-id",
+      "Gelfand_Naimark-id",
+      "no_identity-id",
+      "GNS_construction-id",
+      "multiplier_algebras-id",
+      "fredholm_theory-id",
+      "extensions-id",
+      "K0_functor-id"
+    ]
+  },
+  "inherited_chapter17_input_lock": {
+    "snapshot_path": "qa/build-through-ch17-final/input-snapshot.csv",
+    "snapshot_identity": {
+      "path": "qa/build-through-ch17-final/input-snapshot.csv",
+      "bytes": 2302,
+      "logical_records": 21,
+      "line_endings": "CRLF",
+      "sha256": "be4af8b068adb360f3768e74244397bae5cd874bf0b3db031d90e302c18259e8",
+      "encoding": "ASCII"
+    },
+    "excluded_prior_master": {
+      "path": "source/id-ID/functional-analysis-id-through-ch17.tex",
+      "reason": "superseded wrapper; snapshot metadata retained but current file deliberately not re-locked",
+      "snapshot_record": {
+        "relative_path": "source/id-ID/functional-analysis-id-through-ch17.tex",
+        "bytes": "10820",
+        "sha256": "51b3f4d790e3d09ac6ac4c160284510e4827140ecaa5a961a46c880ae5c8bb39"
+      }
+    },
+    "verified_non_master_input_count": 19,
+    "inputs": [
+      {
+        "path": "source/id-ID/DIAGXY.TEX",
+        "bytes": 41908,
+        "sha256": "3df2bc0a4d57650280fd92006c904fc876ebcbe989cee76ee7a73d9d3fa9eefb",
+        "snapshot_match": true
+      },
+      {
+        "path": "source/id-ID/functional_analysis_op_algs_bib.bib",
+        "bytes": 17409,
+        "sha256": "72b33be29e0728654e4b623e454639927046f425fb81e5b13b8c05e1888fd6fa",
+        "snapshot_match": true
+      },
+      {
+        "path": "source/id-ID/linalg-id.tex",
+        "bytes": 60798,
+        "sha256": "4ab3098cab358f425190bfe6defa20d3ec7b2a81653e0e61bbfa67e497e2654d",
+        "snapshot_match": true
+      },
+      {
+        "path": "source/id-ID/categories-id.tex",
+        "bytes": 29254,
+        "sha256": "39c4a0b345c49fc7a925331497dca37f5b7b296d77717ef1c97322dfeb96e2dd",
+        "snapshot_match": true
+      },
+      {
+        "path": "source/id-ID/normlinspaces-id.tex",
+        "bytes": 94040,
+        "sha256": "c44f20890d5fb6b7445f0b2eeca8f477cc970d147d5c54aa4bc5df709f6b1f9d",
+        "snapshot_match": true
+      },
+      {
+        "path": "source/id-ID/Hilbert_spaces-id.tex",
+        "bytes": 62947,
+        "sha256": "b8e728e1f26a66ec2a420373e6104e3db4e5c954d7001acda1c13eb348322215",
+        "snapshot_match": true
+      },
+      {
+        "path": "source/id-ID/Hilbert_space_operators-id.tex",
+        "bytes": 51529,
+        "sha256": "323f0b156eb6e945e3b6ed273da298af4e0e2b2d9abb73514a9018cbe0d0b29f",
+        "snapshot_match": true
+      },
+      {
+        "path": "source/id-ID/Banach_spaces-id.tex",
+        "bytes": 82940,
+        "sha256": "ca32547e4b47af3444d454476beac71ad8870e88b436dc008e1cb5dbb6755e9c",
+        "snapshot_match": true
+      },
+      {
+        "path": "source/id-ID/compact_operators-id.tex",
+        "bytes": 22735,
+        "sha256": "8e68cf72e711ac95569883cf64a8f1f6a89ee43a1f85f5319fec6cb54b4f787a",
+        "snapshot_match": true
+      },
+      {
+        "path": "source/id-ID/spectrum-id.tex",
+        "bytes": 26947,
+        "sha256": "1120da36ebd0793690ecb47b33b921c81376d1bf7d2f03d9821b79356dfd03bc",
+        "snapshot_match": true
+      },
+      {
+        "path": "source/id-ID/topvecspaces-id.tex",
+        "bytes": 37705,
+        "sha256": "791868776a07f4c854f1c13d295da23a2559b88dcac48523fb0390e1e5330ee1",
+        "snapshot_match": true
+      },
+      {
+        "path": "source/id-ID/distributions-id.tex",
+        "bytes": 42627,
+        "sha256": "6456f9def822da572e117f3ec368931f0bfb441840aa0785be1df6080bbb6840",
+        "snapshot_match": true
+      },
+      {
+        "path": "source/id-ID/Gelfand_Naimark-id.tex",
+        "bytes": 32558,
+        "sha256": "2756540bd5c58e405ee07e10b00d102fada7c21e806d59f072a8afbd24587bde",
+        "snapshot_match": true
+      },
+      {
+        "path": "source/id-ID/no_identity-id.tex",
+        "bytes": 49730,
+        "sha256": "da74193601c80828c8bebb59f20f82481c47627a746fc6c841602d538837d884",
+        "snapshot_match": true
+      },
+      {
+        "path": "source/id-ID/GNS_construction-id.tex",
+        "bytes": 12601,
+        "sha256": "4c95b339702180ef8f2ea42cfba9e19a60a1740ca7d25a0568a6290f0170371f",
+        "snapshot_match": true
+      },
+      {
+        "path": "source/id-ID/multiplier_algebras-id.tex",
+        "bytes": 31900,
+        "sha256": "2688ec9c2370371060aada680f5f95e9511ecb61cb99c2a126385f525a3c9142",
+        "snapshot_match": true
+      },
+      {
+        "path": "source/id-ID/fredholm_theory-id.tex",
+        "bytes": 17672,
+        "sha256": "174b1ad2557f7dfa10e8171bd7482d907f858389b509f4d55de9cc785e2b43ba",
+        "snapshot_match": true
+      },
+      {
+        "path": "source/id-ID/extensions-id.tex",
+        "bytes": 43804,
+        "sha256": "59d745a18c74f9abe2ebe6eda3a78eb7c89bdc7fdef935cbc31ea0a552bfbbc3",
+        "snapshot_match": true
+      },
+      {
+        "path": "source/id-ID/K0_functor-id.tex",
+        "bytes": 61673,
+        "sha256": "061ffd28907e2251fc8b01077888de3e11b3bce67fec1ba52b080c924a241059",
+        "snapshot_match": true
+      }
+    ]
+  },
+  "checks": [
+    {
+      "name": "source decodes as ASCII",
+      "passed": true,
+      "detail": "ASCII"
+    },
+    {
+      "name": "target has no UTF-8 BOM",
+      "passed": true,
+      "detail": "no BOM"
+    },
+    {
+      "name": "master has no UTF-8 BOM",
+      "passed": true,
+      "detail": "no BOM"
+    },
+    {
+      "name": "identity source/upstream/preface.tex bytes",
+      "passed": true,
+      "detail": {
+        "expected": 18107,
+        "observed": 18107
+      }
+    },
+    {
+      "name": "identity source/upstream/preface.tex logical_records",
+      "passed": true,
+      "detail": {
+        "expected": 351,
+        "observed": 351
+      }
+    },
+    {
+      "name": "identity source/upstream/preface.tex line_endings",
+      "passed": true,
+      "detail": {
+        "expected": "CRLF",
+        "observed": "CRLF"
+      }
+    },
+    {
+      "name": "identity source/upstream/preface.tex sha256",
+      "passed": true,
+      "detail": {
+        "expected": "0976042bbb6ae3b8d1e5bb113a93d51169fada9d3e41f2d01435c76b6729edb9",
+        "observed": "0976042bbb6ae3b8d1e5bb113a93d51169fada9d3e41f2d01435c76b6729edb9"
+      }
+    },
+    {
+      "name": "identity source/id-ID/preface-id.tex bytes",
+      "passed": true,
+      "detail": {
+        "expected": 18140,
+        "observed": 18140
+      }
+    },
+    {
+      "name": "identity source/id-ID/preface-id.tex logical_records",
+      "passed": true,
+      "detail": {
+        "expected": 394,
+        "observed": 394
+      }
+    },
+    {
+      "name": "identity source/id-ID/preface-id.tex line_endings",
+      "passed": true,
+      "detail": {
+        "expected": "LF",
+        "observed": "LF"
+      }
+    },
+    {
+      "name": "identity source/id-ID/preface-id.tex sha256",
+      "passed": true,
+      "detail": {
+        "expected": "c622dc9d9c1af4e5b1a6112c84eeff7328c778e8ef8643fc267f6fc6e3e7d564",
+        "observed": "c622dc9d9c1af4e5b1a6112c84eeff7328c778e8ef8643fc267f6fc6e3e7d564"
+      }
+    },
+    {
+      "name": "identity source/id-ID/functional-analysis-id-complete-source.tex bytes",
+      "passed": true,
+      "detail": {
+        "expected": 11176,
+        "observed": 11176
+      }
+    },
+    {
+      "name": "identity source/id-ID/functional-analysis-id-complete-source.tex logical_records",
+      "passed": true,
+      "detail": {
+        "expected": 353,
+        "observed": 353
+      }
+    },
+    {
+      "name": "identity source/id-ID/functional-analysis-id-complete-source.tex line_endings",
+      "passed": true,
+      "detail": {
+        "expected": "LF",
+        "observed": "LF"
+      }
+    },
+    {
+      "name": "identity source/id-ID/functional-analysis-id-complete-source.tex sha256",
+      "passed": true,
+      "detail": {
+        "expected": "7f06919a8ec9088a3bc812fab962a48b5f1b3b0d5d3bce80eb21055f65089041",
+        "observed": "7f06919a8ec9088a3bc812fab962a48b5f1b3b0d5d3bce80eb21055f65089041"
+      }
+    },
+    {
+      "name": "identity qa/build-through-ch17-final/input-snapshot.csv bytes",
+      "passed": true,
+      "detail": {
+        "expected": 2302,
+        "observed": 2302
+      }
+    },
+    {
+      "name": "identity qa/build-through-ch17-final/input-snapshot.csv logical_records",
+      "passed": true,
+      "detail": {
+        "expected": 21,
+        "observed": 21
+      }
+    },
+    {
+      "name": "identity qa/build-through-ch17-final/input-snapshot.csv line_endings",
+      "passed": true,
+      "detail": {
+        "expected": "CRLF",
+        "observed": "CRLF"
+      }
+    },
+    {
+      "name": "identity qa/build-through-ch17-final/input-snapshot.csv sha256",
+      "passed": true,
+      "detail": {
+        "expected": "be4af8b068adb360f3768e74244397bae5cd874bf0b3db031d90e302c18259e8",
+        "observed": "be4af8b068adb360f3768e74244397bae5cd874bf0b3db031d90e302c18259e8"
+      }
+    },
+    {
+      "name": "source heading topology",
+      "passed": true,
+      "detail": [
+        "chapter*:PREFACE",
+        "section*:Greek Letters",
+        "section*:Fraktur Fonts",
+        "section*:Notation for Sets of Numbers",
+        "section*:Notation for Functions"
+      ]
+    },
+    {
+      "name": "target heading topology",
+      "passed": true,
+      "detail": [
+        "chapter*:Prakata",
+        "section*:Huruf Yunani",
+        "section*:Font Fraktur",
+        "section*:Notasi untuk Himpunan Bilangan",
+        "section*:Notasi untuk Fungsi"
+      ]
+    },
+    {
+      "name": "source ordered label calls",
+      "passed": true,
+      "detail": [
+        "C0009"
+      ]
+    },
+    {
+      "name": "target ordered label calls",
+      "passed": true,
+      "detail": [
+        "C0009"
+      ]
+    },
+    {
+      "name": "source ordered ref calls",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "target ordered ref calls",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "source ordered eqref calls",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "target ordered eqref calls",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "source ordered pageref calls",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "target ordered pageref calls",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "source citation order",
+      "passed": true,
+      "detail": [
+        "Halmos:1982",
+        "BrownDF:1973",
+        "Erdman:2010",
+        "Erdman:2005",
+        "Erdman:2007"
+      ]
+    },
+    {
+      "name": "target citation order",
+      "passed": true,
+      "detail": [
+        "Halmos:1982",
+        "BrownDF:1973",
+        "Erdman:2010",
+        "Erdman:2005",
+        "Erdman:2007"
+      ]
+    },
+    {
+      "name": "source active index count",
+      "passed": true,
+      "detail": 53
+    },
+    {
+      "name": "target active index count",
+      "passed": true,
+      "detail": 53
+    },
+    {
+      "name": "source one commented index candidate",
+      "passed": true,
+      "detail": 1
+    },
+    {
+      "name": "target one commented index candidate",
+      "passed": true,
+      "detail": 1
+    },
+    {
+      "name": "source commented restriction index retained",
+      "passed": true,
+      "detail": "exact source candidate"
+    },
+    {
+      "name": "target commented restriction index retained",
+      "passed": true,
+      "detail": "exact target candidate"
+    },
+    {
+      "name": "source defined-term hook count",
+      "passed": true,
+      "detail": 21
+    },
+    {
+      "name": "target defined-term hook count",
+      "passed": true,
+      "detail": 21
+    },
+    {
+      "name": "source item count",
+      "passed": true,
+      "detail": 5
+    },
+    {
+      "name": "target item count",
+      "passed": true,
+      "detail": 5
+    },
+    {
+      "name": "source environment closure",
+      "passed": true,
+      "detail": {
+        "begin": [
+          "enumerate",
+          "align*",
+          "enumerate"
+        ],
+        "end": [
+          "enumerate",
+          "align*",
+          "enumerate"
+        ]
+      }
+    },
+    {
+      "name": "target environment closure",
+      "passed": true,
+      "detail": {
+        "begin": [
+          "enumerate",
+          "center",
+          "tabularx",
+          "center",
+          "tabularx",
+          "align*",
+          "enumerate"
+        ],
+        "end": [
+          "enumerate",
+          "tabularx",
+          "center",
+          "tabularx",
+          "center",
+          "align*",
+          "enumerate"
+        ]
+      }
+    },
+    {
+      "name": "source environment sequence",
+      "passed": true,
+      "detail": [
+        "enumerate",
+        "align*",
+        "enumerate"
+      ]
+    },
+    {
+      "name": "target environment sequence",
+      "passed": true,
+      "detail": [
+        "enumerate",
+        "center",
+        "tabularx",
+        "center",
+        "tabularx",
+        "align*",
+        "enumerate"
+      ]
+    },
+    {
+      "name": "target adds only table-layout environments",
+      "passed": true,
+      "detail": [
+        "enumerate",
+        "align*",
+        "enumerate"
+      ]
+    },
+    {
+      "name": "target adds exactly two center and two tabularx environments",
+      "passed": true,
+      "detail": {
+        "center": 2,
+        "tabularx": 2
+      }
+    },
+    {
+      "name": "source Greek name/pronunciation order",
+      "passed": true,
+      "detail": [
+        "Alpha (AL-fuh)",
+        "Beta (BAY-tuh)",
+        "Gamma (GAM-uh)",
+        "Delta (DEL-tuh)",
+        "Epsilon (EPP-suh-lon)",
+        "Zeta (ZAY-tuh)",
+        "Eta (AY-tuh)",
+        "Theta (THAY-tuh)",
+        "Iota (eye-OH-tuh)",
+        "Kappa (KAP-uh)",
+        "Lambda (LAM-duh)",
+        "Mu (MYOO)",
+        "Nu (NOO)",
+        "Xi (KSEE)",
+        "Omicron (OHM-ih-kron)",
+        "Pi (PIE)",
+        "Rho (ROH)",
+        "Sigma (SIG-muh)",
+        "Tau (TAU)",
+        "Upsilon (OOP-suh-lon)",
+        "Phi (FEE or FAHY)",
+        "Chi (KHAY)",
+        "Psi (PSEE or PSAHY)",
+        "Omega (oh-MAY-guh)"
+      ]
+    },
+    {
+      "name": "target preserves all Greek name/pronunciation strings",
+      "passed": true,
+      "detail": [
+        "Alpha (AL-fuh)",
+        "Beta (BAY-tuh)",
+        "Gamma (GAM-uh)",
+        "Delta (DEL-tuh)",
+        "Epsilon (EPP-suh-lon)",
+        "Zeta (ZAY-tuh)",
+        "Eta (AY-tuh)",
+        "Theta (THAY-tuh)",
+        "Iota (eye-OH-tuh)",
+        "Kappa (KAP-uh)",
+        "Lambda (LAM-duh)",
+        "Mu (MYOO)",
+        "Nu (NOO)",
+        "Xi (KSEE)",
+        "Omicron (OHM-ih-kron)",
+        "Pi (PIE)",
+        "Rho (ROH)",
+        "Sigma (SIG-muh)",
+        "Tau (TAU)",
+        "Upsilon (OOP-suh-lon)",
+        "Phi (FEE or FAHY)",
+        "Chi (KHAY)",
+        "Psi (PSEE or PSAHY)",
+        "Omega (oh-MAY-guh)"
+      ]
+    },
+    {
+      "name": "source Fraktur rows A-Z",
+      "passed": true,
+      "detail": [
+        [
+          "A",
+          "a",
+          "a"
+        ],
+        [
+          "B",
+          "b",
+          "b"
+        ],
+        [
+          "C",
+          "c",
+          "c"
+        ],
+        [
+          "D",
+          "d",
+          "d"
+        ],
+        [
+          "E",
+          "e",
+          "e"
+        ],
+        [
+          "F",
+          "f",
+          "f"
+        ],
+        [
+          "G",
+          "g",
+          "g"
+        ],
+        [
+          "H",
+          "h",
+          "h"
+        ],
+        [
+          "I",
+          "i",
+          "i"
+        ],
+        [
+          "J",
+          "j",
+          "j"
+        ],
+        [
+          "K",
+          "k",
+          "k"
+        ],
+        [
+          "L",
+          "l",
+          "l"
+        ],
+        [
+          "M",
+          "m",
+          "m"
+        ],
+        [
+          "N",
+          "n",
+          "n"
+        ],
+        [
+          "O",
+          "o",
+          "o"
+        ],
+        [
+          "P",
+          "p",
+          "p"
+        ],
+        [
+          "Q",
+          "q",
+          "q"
+        ],
+        [
+          "R",
+          "r",
+          "r"
+        ],
+        [
+          "S",
+          "s",
+          "s"
+        ],
+        [
+          "T",
+          "t",
+          "t"
+        ],
+        [
+          "U",
+          "u",
+          "u"
+        ],
+        [
+          "V",
+          "v",
+          "v"
+        ],
+        [
+          "W",
+          "w",
+          "w"
+        ],
+        [
+          "X",
+          "x",
+          "x"
+        ],
+        [
+          "Y",
+          "y",
+          "y"
+        ],
+        [
+          "Z",
+          "z",
+          "z"
+        ]
+      ]
+    },
+    {
+      "name": "target Fraktur rows A-Z",
+      "passed": true,
+      "detail": [
+        [
+          "A",
+          "a",
+          "a"
+        ],
+        [
+          "B",
+          "b",
+          "b"
+        ],
+        [
+          "C",
+          "c",
+          "c"
+        ],
+        [
+          "D",
+          "d",
+          "d"
+        ],
+        [
+          "E",
+          "e",
+          "e"
+        ],
+        [
+          "F",
+          "f",
+          "f"
+        ],
+        [
+          "G",
+          "g",
+          "g"
+        ],
+        [
+          "H",
+          "h",
+          "h"
+        ],
+        [
+          "I",
+          "i",
+          "i"
+        ],
+        [
+          "J",
+          "j",
+          "j"
+        ],
+        [
+          "K",
+          "k",
+          "k"
+        ],
+        [
+          "L",
+          "l",
+          "l"
+        ],
+        [
+          "M",
+          "m",
+          "m"
+        ],
+        [
+          "N",
+          "n",
+          "n"
+        ],
+        [
+          "O",
+          "o",
+          "o"
+        ],
+        [
+          "P",
+          "p",
+          "p"
+        ],
+        [
+          "Q",
+          "q",
+          "q"
+        ],
+        [
+          "R",
+          "r",
+          "r"
+        ],
+        [
+          "S",
+          "s",
+          "s"
+        ],
+        [
+          "T",
+          "t",
+          "t"
+        ],
+        [
+          "U",
+          "u",
+          "u"
+        ],
+        [
+          "V",
+          "v",
+          "v"
+        ],
+        [
+          "W",
+          "w",
+          "w"
+        ],
+        [
+          "X",
+          "x",
+          "x"
+        ],
+        [
+          "Y",
+          "y",
+          "y"
+        ],
+        [
+          "Z",
+          "z",
+          "z"
+        ]
+      ]
+    },
+    {
+      "name": "source Fraktur has two header rows",
+      "passed": true,
+      "detail": [
+        "Fraktur ! Fraktur ! Roman \\r",
+        "Upper case ! Lower case ! Lower Case \\rr"
+      ]
+    },
+    {
+      "name": "target Fraktur has two header rows",
+      "passed": true,
+      "detail": [
+        "\\textbf{Fraktur} & \\textbf{Fraktur} & \\textbf{Roman} \\\\",
+        "\\textbf{Huruf kapital} & \\textbf{Huruf kecil} & \\textbf{Huruf kecil} \\\\"
+      ]
+    },
+    {
+      "name": "target Fraktur two-level header values",
+      "passed": true,
+      "detail": [
+        "Fraktur",
+        "Fraktur",
+        "Roman",
+        "Huruf kapital",
+        "Huruf kecil",
+        "Huruf kecil"
+      ]
+    },
+    {
+      "name": "source number-notation row count",
+      "passed": true,
+      "detail": 20
+    },
+    {
+      "name": "target number-notation row count",
+      "passed": true,
+      "detail": 20
+    },
+    {
+      "name": "number-notation formula prefixes preserved",
+      "passed": true,
+      "detail": [
+        "\\C",
+        "\\R",
+        "\\R^n",
+        "\\R^+ = \\{x \\in \\R\\colon x \\ge 0\\},",
+        "\\Q",
+        "\\Q^+ = \\{x \\in \\Q\\colon x \\ge 0\\},",
+        "\\Z",
+        "\\Z^+ = \\{0,1,2,\\dots\\},",
+        "\\N = \\{1,2,3,\\dots\\}",
+        "\\N_n = \\{1,2,3,\\dots,n\\}",
+        "[a,b] = \\{x \\in \\R\\colon a \\le x \\le b\\}",
+        "[a,b) = \\{x \\in \\R\\colon a \\le x < b\\}",
+        "(a,b] = \\{x \\in \\R\\colon a < x \\le b\\}",
+        "(a,b) = \\{x \\in \\R\\colon a < x < b\\}",
+        "[a,\\infty) = \\{x \\in \\R\\colon a \\le x\\}",
+        "(a,\\infty) = \\{x \\in \\R\\colon a < x\\}",
+        "(-\\infty,b] = \\{x \\in \\R\\colon x \\le b\\}",
+        "(-\\infty,b) = \\{x \\in \\R\\colon x < b\\}",
+        "\\Di = \\{(x,y) \\in \\R^2\\colon x^2 + y^2 < 1\\},",
+        "\\T = \\Sp^1 = \\{(x,y) \\in \\R^2\\colon x^2 + y^2 = 1\\},"
+      ]
+    },
+    {
+      "name": "source diagram topology",
+      "passed": true,
+      "detail": [
+        "\\square[R`U`S`T;j`f`h`k]",
+        "\\btriangle[R`S`T;f`g`k]"
+      ]
+    },
+    {
+      "name": "target diagram topology",
+      "passed": true,
+      "detail": [
+        "\\square[R`U`S`T;j`f`h`k]",
+        "\\btriangle[R`S`T;f`g`k]"
+      ]
+    },
+    {
+      "name": "source xy closure",
+      "passed": true,
+      "detail": {
+        "xy": 2,
+        "endxy": 2
+      }
+    },
+    {
+      "name": "target xy closure",
+      "passed": true,
+      "detail": {
+        "xy": 2,
+        "endxy": 2
+      }
+    },
+    {
+      "name": "diagram equality preserved: $h \\circ j = k \\circ f$",
+      "passed": true,
+      "detail": {
+        "source": 1,
+        "target": 1
+      }
+    },
+    {
+      "name": "diagram equality preserved: $g = k \\circ f$",
+      "passed": true,
+      "detail": {
+        "source": 1,
+        "target": 1
+      }
+    },
+    {
+      "name": "source raw dollar-math span count",
+      "passed": true,
+      "detail": 204
+    },
+    {
+      "name": "target raw dollar-math span count",
+      "passed": true,
+      "detail": 205
+    },
+    {
+      "name": "sole math-sequence delta is inserted G",
+      "passed": true,
+      "detail": [
+        113
+      ]
+    },
+    {
+      "name": "C014 math delta has the exact function-condition context",
+      "passed": true,
+      "detail": {
+        "source_before": "(s,t_2)",
+        "target_inserted": "G",
+        "source_after": "t_1 = t_2"
+      }
+    },
+    {
+      "name": "ledger schema",
+      "passed": true,
+      "detail": "o008.source-corrections.v1"
+    },
+    {
+      "name": "ledger unit",
+      "passed": true,
+      "detail": "FAOA-2015-PREFACE"
+    },
+    {
+      "name": "ledger applied state",
+      "passed": true,
+      "detail": "applied_verified"
+    },
+    {
+      "name": "ledger record count field",
+      "passed": true,
+      "detail": 14
+    },
+    {
+      "name": "ledger actual record count",
+      "passed": true,
+      "detail": 14
+    },
+    {
+      "name": "ledger stable record IDs",
+      "passed": true,
+      "detail": [
+        "FAOA-2015-PREFACE-CORR-001",
+        "FAOA-2015-PREFACE-CORR-002",
+        "FAOA-2015-PREFACE-CORR-003",
+        "FAOA-2015-PREFACE-CORR-004",
+        "FAOA-2015-PREFACE-CORR-005",
+        "FAOA-2015-PREFACE-CORR-006",
+        "FAOA-2015-PREFACE-CORR-007",
+        "FAOA-2015-PREFACE-CORR-008",
+        "FAOA-2015-PREFACE-CORR-009",
+        "FAOA-2015-PREFACE-CORR-010",
+        "FAOA-2015-PREFACE-CORR-011",
+        "FAOA-2015-PREFACE-CORR-012",
+        "FAOA-2015-PREFACE-CORR-013",
+        "FAOA-2015-PREFACE-CORR-014"
+      ]
+    },
+    {
+      "name": "ledger class counts",
+      "passed": true,
+      "detail": {
+        "RIGHTS_ADAPTATION": 1,
+        "FORMAL_SCOPE_CLARIFICATION": 1,
+        "MECHANICAL_PROSE_SOURCE_REPAIR": 4,
+        "LICENSE_METADATA_ADAPTATION": 1,
+        "COMPONENT_RIGHTS_ADAPTATION": 2,
+        "NAVIGATION_ADAPTATION": 1,
+        "MATHEMATICAL_TERMINOLOGY_REPAIR": 3,
+        "MECHANICAL_TEX_SOURCE_REPAIR": 1
+      }
+    },
+    {
+      "name": "ledger source identity",
+      "passed": true,
+      "detail": {
+        "path": "source/upstream/preface.tex",
+        "bytes": 18107,
+        "logical_records": 351,
+        "line_endings": "CRLF",
+        "encoding": "ASCII",
+        "sha256": "0976042bbb6ae3b8d1e5bb113a93d51169fada9d3e41f2d01435c76b6729edb9"
+      }
+    },
+    {
+      "name": "ledger target identity",
+      "passed": true,
+      "detail": {
+        "path": "source/id-ID/preface-id.tex",
+        "bytes": 18140,
+        "logical_records": 394,
+        "line_endings": "LF",
+        "encoding": "UTF-8 without BOM",
+        "sha256": "c622dc9d9c1af4e5b1a6112c84eeff7328c778e8ef8643fc267f6fc6e3e7d564"
+      }
+    },
+    {
+      "name": "every narrative ledger semantic has a deterministic check",
+      "passed": true,
+      "detail": [
+        "FAOA-2015-PREFACE-CORR-001",
+        "FAOA-2015-PREFACE-CORR-004",
+        "FAOA-2015-PREFACE-CORR-005",
+        "FAOA-2015-PREFACE-CORR-006",
+        "FAOA-2015-PREFACE-CORR-007",
+        "FAOA-2015-PREFACE-CORR-011"
+      ]
+    },
+    {
+      "name": "FAOA-2015-PREFACE-CORR-001 marker occurs once",
+      "passed": true,
+      "detail": 1
+    },
+    {
+      "name": "FAOA-2015-PREFACE-CORR-001 marker line",
+      "passed": true,
+      "detail": {
+        "ledger": 3,
+        "actual": 3
+      }
+    },
+    {
+      "name": "FAOA-2015-PREFACE-CORR-001 source anchors",
+      "passed": true,
+      "detail": {
+        "Paul Halmos famously remarked": true,
+        "\\cite{Halmos:1982}": true
+      }
+    },
+    {
+      "name": "FAOA-2015-PREFACE-CORR-001 target anchors",
+      "passed": true,
+      "detail": {}
+    },
+    {
+      "name": "FAOA-2015-PREFACE-CORR-001 forbidden anchors",
+      "passed": true,
+      "detail": {
+        "``": true,
+        "''": true
+      }
+    },
+    {
+      "name": "FAOA-2015-PREFACE-CORR-002 marker occurs once",
+      "passed": true,
+      "detail": 1
+    },
+    {
+      "name": "FAOA-2015-PREFACE-CORR-002 marker line",
+      "passed": true,
+      "detail": {
+        "ledger": 49,
+        "actual": 49
+      }
+    },
+    {
+      "name": "FAOA-2015-PREFACE-CORR-002 source anchors",
+      "passed": true,
+      "detail": {
+        "unitarily diagonalizable if and only if it is normal": true,
+        "unitarily equivalent if and only if": true
+      }
+    },
+    {
+      "name": "FAOA-2015-PREFACE-CORR-002 target anchors",
+      "passed": true,
+      "detail": {
+        "ruang hasil kali dalam kompleks berdimensi hingga": true,
+        "dapat didiagonalkan secara uniter": true,
+        "ekuivalen secara uniter": true
+      }
+    },
+    {
+      "name": "FAOA-2015-PREFACE-CORR-002 forbidden anchors",
+      "passed": true,
+      "detail": {}
+    },
+    {
+      "name": "FAOA-2015-PREFACE-CORR-003 marker occurs once",
+      "passed": true,
+      "detail": 1
+    },
+    {
+      "name": "FAOA-2015-PREFACE-CORR-003 marker line",
+      "passed": true,
+      "detail": {
+        "ledger": 70,
+        "actual": 70
+      }
+    },
+    {
+      "name": "FAOA-2015-PREFACE-CORR-003 source anchors",
+      "passed": true,
+      "detail": {
+        "advanced calculous": true
+      }
+    },
+    {
+      "name": "FAOA-2015-PREFACE-CORR-003 target anchors",
+      "passed": true,
+      "detail": {
+        "kalkulus lanjut": true
+      }
+    },
+    {
+      "name": "FAOA-2015-PREFACE-CORR-003 forbidden anchors",
+      "passed": true,
+      "detail": {
+        "calculous": true
+      }
+    },
+    {
+      "name": "FAOA-2015-PREFACE-CORR-004 marker occurs once",
+      "passed": true,
+      "detail": 1
+    },
+    {
+      "name": "FAOA-2015-PREFACE-CORR-004 marker line",
+      "passed": true,
+      "detail": {
+        "ledger": 93,
+        "actual": 93
+      }
+    },
+    {
+      "name": "FAOA-2015-PREFACE-CORR-004 source anchors",
+      "passed": true,
+      "detail": {
+        "Share Alike": true,
+        "Creative Commons": true
+      }
+    },
+    {
+      "name": "FAOA-2015-PREFACE-CORR-004 target anchors",
+      "passed": true,
+      "detail": {}
+    },
+    {
+      "name": "FAOA-2015-PREFACE-CORR-004 forbidden anchors",
+      "passed": true,
+      "detail": {}
+    },
+    {
+      "name": "FAOA-2015-PREFACE-CORR-005 marker occurs once",
+      "passed": true,
+      "detail": 1
+    },
+    {
+      "name": "FAOA-2015-PREFACE-CORR-005 marker line",
+      "passed": true,
+      "detail": {
+        "ledger": 109,
+        "actual": 109
+      }
+    },
+    {
+      "name": "FAOA-2015-PREFACE-CORR-005 source anchors",
+      "passed": true,
+      "detail": {
+        "\\table{}": true,
+        "Upper case": true,
+        "Alpha (AL-fuh)": true,
+        "oh-MAY-guh": true
+      }
+    },
+    {
+      "name": "FAOA-2015-PREFACE-CORR-005 target anchors",
+      "passed": true,
+      "detail": {}
+    },
+    {
+      "name": "FAOA-2015-PREFACE-CORR-005 forbidden anchors",
+      "passed": true,
+      "detail": {
+        "\\table{}": true,
+        "\\rr": true,
+        "\\caption{}": true
+      }
+    },
+    {
+      "name": "FAOA-2015-PREFACE-CORR-006 marker occurs once",
+      "passed": true,
+      "detail": 1
+    },
+    {
+      "name": "FAOA-2015-PREFACE-CORR-006 marker line",
+      "passed": true,
+      "detail": {
+        "ledger": 168,
+        "actual": 168
+      }
+    },
+    {
+      "name": "FAOA-2015-PREFACE-CORR-006 source anchors",
+      "passed": true,
+      "detail": {
+        "\\table{}": true,
+        "Fraktur": true,
+        "\\mathfrak A": true,
+        "\\mathfrak Z": true
+      }
+    },
+    {
+      "name": "FAOA-2015-PREFACE-CORR-006 target anchors",
+      "passed": true,
+      "detail": {}
+    },
+    {
+      "name": "FAOA-2015-PREFACE-CORR-006 forbidden anchors",
+      "passed": true,
+      "detail": {
+        "\\table{}": true,
+        "\\rr": true,
+        "\\caption{}": true
+      }
+    },
+    {
+      "name": "FAOA-2015-PREFACE-CORR-007 marker occurs once",
+      "passed": true,
+      "detail": 1
+    },
+    {
+      "name": "FAOA-2015-PREFACE-CORR-007 marker line",
+      "passed": true,
+      "detail": {
+        "ledger": 210,
+        "actual": 210
+      }
+    },
+    {
+      "name": "FAOA-2015-PREFACE-CORR-007 source anchors",
+      "passed": true,
+      "detail": {
+        "\\section*{Notation for Sets of Numbers}\\label{C0009}": true
+      }
+    },
+    {
+      "name": "FAOA-2015-PREFACE-CORR-007 target anchors",
+      "passed": true,
+      "detail": {
+        "\\label{C0009}": true
+      }
+    },
+    {
+      "name": "FAOA-2015-PREFACE-CORR-007 forbidden anchors",
+      "passed": true,
+      "detail": {}
+    },
+    {
+      "name": "FAOA-2015-PREFACE-CORR-008 marker occurs once",
+      "passed": true,
+      "detail": 1
+    },
+    {
+      "name": "FAOA-2015-PREFACE-CORR-008 marker line",
+      "passed": true,
+      "detail": {
+        "ledger": 229,
+        "actual": 229
+      }
+    },
+    {
+      "name": "FAOA-2015-PREFACE-CORR-008 source anchors",
+      "passed": true,
+      "detail": {
+        "\\R^+ = \\{x \\in \\R\\colon x \\ge 0\\}": true
+      }
+    },
+    {
+      "name": "FAOA-2015-PREFACE-CORR-008 target anchors",
+      "passed": true,
+      "detail": {
+        "bilangan real tak negatif": true
+      }
+    },
+    {
+      "name": "FAOA-2015-PREFACE-CORR-008 forbidden anchors",
+      "passed": true,
+      "detail": {
+        "bilangan real positif": true
+      }
+    },
+    {
+      "name": "FAOA-2015-PREFACE-CORR-009 marker occurs once",
+      "passed": true,
+      "detail": 1
+    },
+    {
+      "name": "FAOA-2015-PREFACE-CORR-009 marker line",
+      "passed": true,
+      "detail": {
+        "ledger": 231,
+        "actual": 231
+      }
+    },
+    {
+      "name": "FAOA-2015-PREFACE-CORR-009 source anchors",
+      "passed": true,
+      "detail": {
+        "\\Q^+ = \\{x \\in \\Q\\colon x \\ge 0\\}": true
+      }
+    },
+    {
+      "name": "FAOA-2015-PREFACE-CORR-009 target anchors",
+      "passed": true,
+      "detail": {
+        "bilangan rasional tak negatif": true
+      }
+    },
+    {
+      "name": "FAOA-2015-PREFACE-CORR-009 forbidden anchors",
+      "passed": true,
+      "detail": {
+        "bilangan rasional positif": true
+      }
+    },
+    {
+      "name": "FAOA-2015-PREFACE-CORR-010 marker occurs once",
+      "passed": true,
+      "detail": 1
+    },
+    {
+      "name": "FAOA-2015-PREFACE-CORR-010 marker line",
+      "passed": true,
+      "detail": {
+        "ledger": 233,
+        "actual": 233
+      }
+    },
+    {
+      "name": "FAOA-2015-PREFACE-CORR-010 source anchors",
+      "passed": true,
+      "detail": {
+        "\\Z^+ = \\{0,1,2,\\dots\\}": true
+      }
+    },
+    {
+      "name": "FAOA-2015-PREFACE-CORR-010 target anchors",
+      "passed": true,
+      "detail": {
+        "bilangan bulat tak negatif": true
+      }
+    },
+    {
+      "name": "FAOA-2015-PREFACE-CORR-010 forbidden anchors",
+      "passed": true,
+      "detail": {
+        "bilangan bulat positif": true
+      }
+    },
+    {
+      "name": "FAOA-2015-PREFACE-CORR-011 marker occurs once",
+      "passed": true,
+      "detail": 1
+    },
+    {
+      "name": "FAOA-2015-PREFACE-CORR-011 marker line",
+      "passed": true,
+      "detail": {
+        "ledger": 235,
+        "actual": 235
+      }
+    },
+    {
+      "name": "FAOA-2015-PREFACE-CORR-011 source anchors",
+      "passed": true,
+      "detail": {
+        "\\N_n = \\{1,2,3,\\dots,n\\}\\text{ the first $n$ natural numbers}": true
+      }
+    },
+    {
+      "name": "FAOA-2015-PREFACE-CORR-011 target anchors",
+      "passed": true,
+      "detail": {}
+    },
+    {
+      "name": "FAOA-2015-PREFACE-CORR-011 forbidden anchors",
+      "passed": true,
+      "detail": {}
+    },
+    {
+      "name": "FAOA-2015-PREFACE-CORR-012 marker occurs once",
+      "passed": true,
+      "detail": 1
+    },
+    {
+      "name": "FAOA-2015-PREFACE-CORR-012 marker line",
+      "passed": true,
+      "detail": {
+        "ledger": 350,
+        "actual": 350
+      }
+    },
+    {
+      "name": "FAOA-2015-PREFACE-CORR-012 source anchors",
+      "passed": true,
+      "detail": {
+        "\\df{onto}) in for every": true
+      }
+    },
+    {
+      "name": "FAOA-2015-PREFACE-CORR-012 target anchors",
+      "passed": true,
+      "detail": {
+        "surjektif": true,
+        "jika untuk setiap $t \\in T$": true
+      }
+    },
+    {
+      "name": "FAOA-2015-PREFACE-CORR-012 forbidden anchors",
+      "passed": true,
+      "detail": {
+        "in for": true
+      }
+    },
+    {
+      "name": "FAOA-2015-PREFACE-CORR-013 marker occurs once",
+      "passed": true,
+      "detail": 1
+    },
+    {
+      "name": "FAOA-2015-PREFACE-CORR-013 marker line",
+      "passed": true,
+      "detail": {
+        "ledger": 356,
+        "actual": 356
+      }
+    },
+    {
+      "name": "FAOA-2015-PREFACE-CORR-013 source anchors",
+      "passed": true,
+      "detail": {
+        "\\df{bijective} (or": true,
+        "\\df{a one-to-one correspondence} if it is both injective and surjective": true
+      }
+    },
+    {
+      "name": "FAOA-2015-PREFACE-CORR-013 target anchors",
+      "passed": true,
+      "detail": {
+        "\\df{bijektif} (atau": true,
+        "\\df{korespondensi satu-satu})": true
+      }
+    },
+    {
+      "name": "FAOA-2015-PREFACE-CORR-013 forbidden anchors",
+      "passed": true,
+      "detail": {}
+    },
+    {
+      "name": "FAOA-2015-PREFACE-CORR-014 marker occurs once",
+      "passed": true,
+      "detail": 1
+    },
+    {
+      "name": "FAOA-2015-PREFACE-CORR-014 marker line",
+      "passed": true,
+      "detail": {
+        "ledger": 278,
+        "actual": 278
+      }
+    },
+    {
+      "name": "FAOA-2015-PREFACE-CORR-014 source anchors",
+      "passed": true,
+      "detail": {
+        "belong to G, then $t_1 = t_2$": true
+      }
+    },
+    {
+      "name": "FAOA-2015-PREFACE-CORR-014 target anchors",
+      "passed": true,
+      "detail": {
+        "termasuk dalam $G$, maka $t_1 = t_2$": true
+      }
+    },
+    {
+      "name": "FAOA-2015-PREFACE-CORR-014 forbidden anchors",
+      "passed": true,
+      "detail": {
+        "termasuk dalam G, maka": true
+      }
+    },
+    {
+      "name": "FAOA-2015-PREFACE-CORR-001 required semantics",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "FAOA-2015-PREFACE-CORR-004 required semantics",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "FAOA-2015-PREFACE-CORR-005 required semantics",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "FAOA-2015-PREFACE-CORR-006 required semantics",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "FAOA-2015-PREFACE-CORR-007 required semantics",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "FAOA-2015-PREFACE-CORR-011 required semantics",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "C014 classifies only a TeX math-surface repair",
+      "passed": true,
+      "detail": {
+        "classification": "MECHANICAL_TEX_SOURCE_REPAIR",
+        "affects_math": false,
+        "affects_math_surface": true
+      }
+    },
+    {
+      "name": "excluded surface absent: legacy TABLE input",
+      "passed": true,
+      "detail": {
+        "target": 0,
+        "master": 0
+      }
+    },
+    {
+      "name": "excluded surface absent: legacy TABLE call",
+      "passed": true,
+      "detail": {
+        "target": 0,
+        "master": 0
+      }
+    },
+    {
+      "name": "excluded surface absent: legacy TABLE double-row macro",
+      "passed": true,
+      "detail": {
+        "target": 0,
+        "master": 0
+      }
+    },
+    {
+      "name": "excluded surface absent: legacy custom empty caption",
+      "passed": true,
+      "detail": {
+        "target": 0,
+        "master": 0
+      }
+    },
+    {
+      "name": "excluded surface absent: Wiener epigraph/name",
+      "passed": true,
+      "detail": {
+        "target": 0,
+        "master": 0
+      }
+    },
+    {
+      "name": "excluded surface absent: CC badge EPS",
+      "passed": true,
+      "detail": {
+        "target": 0,
+        "master": 0
+      }
+    },
+    {
+      "name": "excluded surface absent: CC badge PDF",
+      "passed": true,
+      "detail": {
+        "target": 0,
+        "master": 0
+      }
+    },
+    {
+      "name": "excluded surface absent: direct Halmos sentence",
+      "passed": true,
+      "detail": {
+        "target": 0,
+        "master": 0
+      }
+    },
+    {
+      "name": "badge/image include commands absent from preface",
+      "passed": true,
+      "detail": "none"
+    },
+    {
+      "name": "wrapper attribution/license/model/nonendorsement anchors",
+      "passed": true,
+      "detail": {
+        "John M. Erdman": true,
+        "Creative Commons": true,
+        "Attribution--ShareAlike 4.0 International (CC BY-SA 4.0)": true,
+        "https://creativecommons.org/licenses/by-sa/4.0/": true,
+        "Terjemahan Bahasa Indonesia dan adaptasi teknis": true,
+        "OpenAI Codex gpt-5.6-sol, Ultra": true,
+        "kredit John M. Erdman dan kontributor komponen tetap dipertahankan": true,
+        "Edisi ini tidak disponsori atau didukung oleh John M. Erdman maupun Portland State University": true
+      }
+    },
+    {
+      "name": "wrapper retains exact DIAGXY input",
+      "passed": true,
+      "detail": 1
+    },
+    {
+      "name": "wrapper loads tabularx",
+      "passed": true,
+      "detail": 1
+    },
+    {
+      "name": "preface placement tokens unique",
+      "passed": true,
+      "detail": {
+        "\\frontmatter": 1,
+        "\\tableofcontents": 1,
+        "\\include{preface-id}": 1,
+        "\\mainmatter": 1
+      }
+    },
+    {
+      "name": "preface is between ToC and main matter",
+      "passed": true,
+      "detail": {
+        "\\frontmatter": 6506,
+        "\\tableofcontents": 8886,
+        "\\include{preface-id}": 8906,
+        "\\mainmatter": 8948
+      }
+    },
+    {
+      "name": "wrapper include order",
+      "passed": true,
+      "detail": [
+        "preface-id",
+        "linalg-id",
+        "categories-id",
+        "normlinspaces-id",
+        "Hilbert_spaces-id",
+        "Hilbert_space_operators-id",
+        "Banach_spaces-id",
+        "compact_operators-id",
+        "spectrum-id",
+        "topvecspaces-id",
+        "distributions-id",
+        "Gelfand_Naimark-id",
+        "no_identity-id",
+        "GNS_construction-id",
+        "multiplier_algebras-id",
+        "fredholm_theory-id",
+        "extensions-id",
+        "K0_functor-id"
+      ]
+    },
+    {
+      "name": "snapshot row count",
+      "passed": true,
+      "detail": 20
+    },
+    {
+      "name": "snapshot exact path order",
+      "passed": true,
+      "detail": [
+        "source/id-ID/functional-analysis-id-through-ch17.tex",
+        "source/id-ID/DIAGXY.TEX",
+        "source/id-ID/functional_analysis_op_algs_bib.bib",
+        "source/id-ID/linalg-id.tex",
+        "source/id-ID/categories-id.tex",
+        "source/id-ID/normlinspaces-id.tex",
+        "source/id-ID/Hilbert_spaces-id.tex",
+        "source/id-ID/Hilbert_space_operators-id.tex",
+        "source/id-ID/Banach_spaces-id.tex",
+        "source/id-ID/compact_operators-id.tex",
+        "source/id-ID/spectrum-id.tex",
+        "source/id-ID/topvecspaces-id.tex",
+        "source/id-ID/distributions-id.tex",
+        "source/id-ID/Gelfand_Naimark-id.tex",
+        "source/id-ID/no_identity-id.tex",
+        "source/id-ID/GNS_construction-id.tex",
+        "source/id-ID/multiplier_algebras-id.tex",
+        "source/id-ID/fredholm_theory-id.tex",
+        "source/id-ID/extensions-id.tex",
+        "source/id-ID/K0_functor-id.tex"
+      ]
+    },
+    {
+      "name": "snapshot paths unique",
+      "passed": true,
+      "detail": [
+        "source/id-ID/functional-analysis-id-through-ch17.tex",
+        "source/id-ID/DIAGXY.TEX",
+        "source/id-ID/functional_analysis_op_algs_bib.bib",
+        "source/id-ID/linalg-id.tex",
+        "source/id-ID/categories-id.tex",
+        "source/id-ID/normlinspaces-id.tex",
+        "source/id-ID/Hilbert_spaces-id.tex",
+        "source/id-ID/Hilbert_space_operators-id.tex",
+        "source/id-ID/Banach_spaces-id.tex",
+        "source/id-ID/compact_operators-id.tex",
+        "source/id-ID/spectrum-id.tex",
+        "source/id-ID/topvecspaces-id.tex",
+        "source/id-ID/distributions-id.tex",
+        "source/id-ID/Gelfand_Naimark-id.tex",
+        "source/id-ID/no_identity-id.tex",
+        "source/id-ID/GNS_construction-id.tex",
+        "source/id-ID/multiplier_algebras-id.tex",
+        "source/id-ID/fredholm_theory-id.tex",
+        "source/id-ID/extensions-id.tex",
+        "source/id-ID/K0_functor-id.tex"
+      ]
+    },
+    {
+      "name": "prior master occurs once and is intentionally excluded",
+      "passed": true,
+      "detail": [
+        {
+          "relative_path": "source/id-ID/functional-analysis-id-through-ch17.tex",
+          "bytes": "10820",
+          "sha256": "51b3f4d790e3d09ac6ac4c160284510e4827140ecaa5a961a46c880ae5c8bb39"
+        }
+      ]
+    },
+    {
+      "name": "inherited Chapter 17 input lock: source/id-ID/DIAGXY.TEX",
+      "passed": true,
+      "detail": {
+        "expected_bytes": 41908,
+        "observed_bytes": 41908,
+        "expected_sha256": "3df2bc0a4d57650280fd92006c904fc876ebcbe989cee76ee7a73d9d3fa9eefb",
+        "observed_sha256": "3df2bc0a4d57650280fd92006c904fc876ebcbe989cee76ee7a73d9d3fa9eefb"
+      }
+    },
+    {
+      "name": "inherited Chapter 17 input lock: source/id-ID/functional_analysis_op_algs_bib.bib",
+      "passed": true,
+      "detail": {
+        "expected_bytes": 17409,
+        "observed_bytes": 17409,
+        "expected_sha256": "72b33be29e0728654e4b623e454639927046f425fb81e5b13b8c05e1888fd6fa",
+        "observed_sha256": "72b33be29e0728654e4b623e454639927046f425fb81e5b13b8c05e1888fd6fa"
+      }
+    },
+    {
+      "name": "inherited Chapter 17 input lock: source/id-ID/linalg-id.tex",
+      "passed": true,
+      "detail": {
+        "expected_bytes": 60798,
+        "observed_bytes": 60798,
+        "expected_sha256": "4ab3098cab358f425190bfe6defa20d3ec7b2a81653e0e61bbfa67e497e2654d",
+        "observed_sha256": "4ab3098cab358f425190bfe6defa20d3ec7b2a81653e0e61bbfa67e497e2654d"
+      }
+    },
+    {
+      "name": "inherited Chapter 17 input lock: source/id-ID/categories-id.tex",
+      "passed": true,
+      "detail": {
+        "expected_bytes": 29254,
+        "observed_bytes": 29254,
+        "expected_sha256": "39c4a0b345c49fc7a925331497dca37f5b7b296d77717ef1c97322dfeb96e2dd",
+        "observed_sha256": "39c4a0b345c49fc7a925331497dca37f5b7b296d77717ef1c97322dfeb96e2dd"
+      }
+    },
+    {
+      "name": "inherited Chapter 17 input lock: source/id-ID/normlinspaces-id.tex",
+      "passed": true,
+      "detail": {
+        "expected_bytes": 94040,
+        "observed_bytes": 94040,
+        "expected_sha256": "c44f20890d5fb6b7445f0b2eeca8f477cc970d147d5c54aa4bc5df709f6b1f9d",
+        "observed_sha256": "c44f20890d5fb6b7445f0b2eeca8f477cc970d147d5c54aa4bc5df709f6b1f9d"
+      }
+    },
+    {
+      "name": "inherited Chapter 17 input lock: source/id-ID/Hilbert_spaces-id.tex",
+      "passed": true,
+      "detail": {
+        "expected_bytes": 62947,
+        "observed_bytes": 62947,
+        "expected_sha256": "b8e728e1f26a66ec2a420373e6104e3db4e5c954d7001acda1c13eb348322215",
+        "observed_sha256": "b8e728e1f26a66ec2a420373e6104e3db4e5c954d7001acda1c13eb348322215"
+      }
+    },
+    {
+      "name": "inherited Chapter 17 input lock: source/id-ID/Hilbert_space_operators-id.tex",
+      "passed": true,
+      "detail": {
+        "expected_bytes": 51529,
+        "observed_bytes": 51529,
+        "expected_sha256": "323f0b156eb6e945e3b6ed273da298af4e0e2b2d9abb73514a9018cbe0d0b29f",
+        "observed_sha256": "323f0b156eb6e945e3b6ed273da298af4e0e2b2d9abb73514a9018cbe0d0b29f"
+      }
+    },
+    {
+      "name": "inherited Chapter 17 input lock: source/id-ID/Banach_spaces-id.tex",
+      "passed": true,
+      "detail": {
+        "expected_bytes": 82940,
+        "observed_bytes": 82940,
+        "expected_sha256": "ca32547e4b47af3444d454476beac71ad8870e88b436dc008e1cb5dbb6755e9c",
+        "observed_sha256": "ca32547e4b47af3444d454476beac71ad8870e88b436dc008e1cb5dbb6755e9c"
+      }
+    },
+    {
+      "name": "inherited Chapter 17 input lock: source/id-ID/compact_operators-id.tex",
+      "passed": true,
+      "detail": {
+        "expected_bytes": 22735,
+        "observed_bytes": 22735,
+        "expected_sha256": "8e68cf72e711ac95569883cf64a8f1f6a89ee43a1f85f5319fec6cb54b4f787a",
+        "observed_sha256": "8e68cf72e711ac95569883cf64a8f1f6a89ee43a1f85f5319fec6cb54b4f787a"
+      }
+    },
+    {
+      "name": "inherited Chapter 17 input lock: source/id-ID/spectrum-id.tex",
+      "passed": true,
+      "detail": {
+        "expected_bytes": 26947,
+        "observed_bytes": 26947,
+        "expected_sha256": "1120da36ebd0793690ecb47b33b921c81376d1bf7d2f03d9821b79356dfd03bc",
+        "observed_sha256": "1120da36ebd0793690ecb47b33b921c81376d1bf7d2f03d9821b79356dfd03bc"
+      }
+    },
+    {
+      "name": "inherited Chapter 17 input lock: source/id-ID/topvecspaces-id.tex",
+      "passed": true,
+      "detail": {
+        "expected_bytes": 37705,
+        "observed_bytes": 37705,
+        "expected_sha256": "791868776a07f4c854f1c13d295da23a2559b88dcac48523fb0390e1e5330ee1",
+        "observed_sha256": "791868776a07f4c854f1c13d295da23a2559b88dcac48523fb0390e1e5330ee1"
+      }
+    },
+    {
+      "name": "inherited Chapter 17 input lock: source/id-ID/distributions-id.tex",
+      "passed": true,
+      "detail": {
+        "expected_bytes": 42627,
+        "observed_bytes": 42627,
+        "expected_sha256": "6456f9def822da572e117f3ec368931f0bfb441840aa0785be1df6080bbb6840",
+        "observed_sha256": "6456f9def822da572e117f3ec368931f0bfb441840aa0785be1df6080bbb6840"
+      }
+    },
+    {
+      "name": "inherited Chapter 17 input lock: source/id-ID/Gelfand_Naimark-id.tex",
+      "passed": true,
+      "detail": {
+        "expected_bytes": 32558,
+        "observed_bytes": 32558,
+        "expected_sha256": "2756540bd5c58e405ee07e10b00d102fada7c21e806d59f072a8afbd24587bde",
+        "observed_sha256": "2756540bd5c58e405ee07e10b00d102fada7c21e806d59f072a8afbd24587bde"
+      }
+    },
+    {
+      "name": "inherited Chapter 17 input lock: source/id-ID/no_identity-id.tex",
+      "passed": true,
+      "detail": {
+        "expected_bytes": 49730,
+        "observed_bytes": 49730,
+        "expected_sha256": "da74193601c80828c8bebb59f20f82481c47627a746fc6c841602d538837d884",
+        "observed_sha256": "da74193601c80828c8bebb59f20f82481c47627a746fc6c841602d538837d884"
+      }
+    },
+    {
+      "name": "inherited Chapter 17 input lock: source/id-ID/GNS_construction-id.tex",
+      "passed": true,
+      "detail": {
+        "expected_bytes": 12601,
+        "observed_bytes": 12601,
+        "expected_sha256": "4c95b339702180ef8f2ea42cfba9e19a60a1740ca7d25a0568a6290f0170371f",
+        "observed_sha256": "4c95b339702180ef8f2ea42cfba9e19a60a1740ca7d25a0568a6290f0170371f"
+      }
+    },
+    {
+      "name": "inherited Chapter 17 input lock: source/id-ID/multiplier_algebras-id.tex",
+      "passed": true,
+      "detail": {
+        "expected_bytes": 31900,
+        "observed_bytes": 31900,
+        "expected_sha256": "2688ec9c2370371060aada680f5f95e9511ecb61cb99c2a126385f525a3c9142",
+        "observed_sha256": "2688ec9c2370371060aada680f5f95e9511ecb61cb99c2a126385f525a3c9142"
+      }
+    },
+    {
+      "name": "inherited Chapter 17 input lock: source/id-ID/fredholm_theory-id.tex",
+      "passed": true,
+      "detail": {
+        "expected_bytes": 17672,
+        "observed_bytes": 17672,
+        "expected_sha256": "174b1ad2557f7dfa10e8171bd7482d907f858389b509f4d55de9cc785e2b43ba",
+        "observed_sha256": "174b1ad2557f7dfa10e8171bd7482d907f858389b509f4d55de9cc785e2b43ba"
+      }
+    },
+    {
+      "name": "inherited Chapter 17 input lock: source/id-ID/extensions-id.tex",
+      "passed": true,
+      "detail": {
+        "expected_bytes": 43804,
+        "observed_bytes": 43804,
+        "expected_sha256": "59d745a18c74f9abe2ebe6eda3a78eb7c89bdc7fdef935cbc31ea0a552bfbbc3",
+        "observed_sha256": "59d745a18c74f9abe2ebe6eda3a78eb7c89bdc7fdef935cbc31ea0a552bfbbc3"
+      }
+    },
+    {
+      "name": "inherited Chapter 17 input lock: source/id-ID/K0_functor-id.tex",
+      "passed": true,
+      "detail": {
+        "expected_bytes": 61673,
+        "observed_bytes": 61673,
+        "expected_sha256": "061ffd28907e2251fc8b01077888de3e11b3bce67fec1ba52b080c924a241059",
+        "observed_sha256": "061ffd28907e2251fc8b01077888de3e11b3bce67fec1ba52b080c924a241059"
+      }
+    },
+    {
+      "name": "all 19 non-master inherited inputs checked",
+      "passed": true,
+      "detail": 19
+    }
+  ],
+  "failed_checks": []
+}

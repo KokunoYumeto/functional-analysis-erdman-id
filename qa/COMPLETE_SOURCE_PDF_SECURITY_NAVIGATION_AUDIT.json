@@ -1,0 +1,56 @@
+{
+  "accessibility_limitation": "PDF is honestly untagged; the required semantic accessible HTML remains a separate production surface.",
+  "acroform": false,
+  "action_types": {
+    "/GoTo": 3033,
+    "/URI": 10
+  },
+  "annotation_subtypes": {
+    "/Link": 3043
+  },
+  "catalog_language": "id-ID",
+  "embedded_files_name_tree": false,
+  "encrypted": false,
+  "failures": [],
+  "file_attachment_annotations": 0,
+  "fonts": {
+    "all_embedded": true,
+    "all_subset": true,
+    "all_unicode_mapped": true,
+    "font_rows": 49,
+    "nonembedded": [],
+    "nonsubset": [],
+    "without_unicode_map": []
+  },
+  "internal_links": 3033,
+  "javascript_actions": 0,
+  "javascript_name_tree": false,
+  "launch_actions": 0,
+  "mark_info": false,
+  "metadata_stream": false,
+  "named_destinations": 2331,
+  "open_action": "/GoTo",
+  "outline_entries": 109,
+  "pages": 238,
+  "pdf": {
+    "bytes": 2480109,
+    "path": "output/pdf/analisis-fungsional-dan-aljabar-operator-id-teks-sumber-lengkap.pdf",
+    "sha256": "efa2358b3c3e6e8c47e0caee9a02f6afe78d15bea1b0f1822ea8449d801b2b10"
+  },
+  "rich_media_annotations": 0,
+  "schema_version": "o008.complete-source-pdf-security-navigation-audit.v1",
+  "status": "pass",
+  "struct_tree_root": false,
+  "tagged": false,
+  "unique_uri_targets": [
+    "http://en.wikipedia.org",
+    "http://web.pdx.edu/~erdman/CRA/CRAlicensepage.html",
+    "http://web.pdx.edu/~erdman/PTAC/PTAClicensepage.html",
+    "http://www.imn.htwk-leipzig.de/~mfrank/mlit.pdf",
+    "https://creativecommons.org/licenses/by-sa/4.0/",
+    "https://doi.org/10.1142/11896",
+    "https://web.pdx.edu/~erdman/FAOA/functional_analysis_operator_algebras_pdf.pdf",
+    "https://web.pdx.edu/~erdman/FAOA/functional_analysis_operator_algebras_web.zip"
+  ],
+  "unresolved_internal_links": 0
+}

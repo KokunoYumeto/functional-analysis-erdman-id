@@ -1,5 +1,48 @@
 # Source corrections
 
+## Preface
+
+The exact machine-verifiable ledger for the translated preface is
+`provenance/SOURCE_CORRECTIONS_PREFACE.json`. It contains fourteen stable,
+applied, independently reviewed records bound to exact source and target
+anchors. The frozen upstream member remains unchanged.
+
+1. `preface.tex:3--4`: paraphrase the third-party Halmos pedagogical idea in
+   original Indonesian prose while retaining attribution, title, and citation,
+   rather than reproducing the quotation.
+2. `preface.tex:33--35`: state the required complex-field hypothesis for the
+   two finite-dimensional unitary spectral claims.
+3. `preface.tex:49--50`: repair the source typo `calculous` before translation.
+4. `preface.tex:65--71`: translate the author's ShareAlike rationale while the
+   edition wrapper supplies the exact CC BY-SA 4.0 name and URL.
+5. `preface.tex:83--109`: replace the excluded `TABLE.TEX` Greek-table
+   machinery with locally authored `tabularx`, preserving all three columns,
+   24 ordered rows, glyphs, and English pronunciation strings.
+6. `preface.tex:132--162`: replace the excluded `TABLE.TEX` Fraktur-table
+   machinery with locally authored `tabularx`, preserving three columns, two
+   headers, and all 26 ordered rows.
+7. `preface.tex:176`: retain source label `C0009` on the localized number-set
+   notation section.
+8. `preface.tex:185`: describe the displayed `\R^+` set as nonnegative, not
+   positive, because its formula includes zero.
+9. `preface.tex:189`: likewise describe the displayed `\Q^+` set as
+   nonnegative.
+10. `preface.tex:191`: likewise describe the displayed `\Z^+` set as
+    nonnegative.
+11. `preface.tex:193`: insert the missing grammatical separator before the
+    gloss of `\N_n`, without changing the formula.
+12. `preface.tex:305--308`: repair the malformed phrase `onto) in for every`
+    to the intended surjectivity condition.
+13. `preface.tex:309--313`: close the parenthetical one-to-one-correspondence
+    synonym before the bijectivity condition.
+14. `preface.tex:236`: place graph symbol `G` in math mode in the second
+    function condition, matching its role and the preceding condition without
+    changing the definition.
+
+No upstream contact occurs during production. These entries are held for the
+single deduplicated post-corpus report only if that report is separately
+authorized.
+
 ## Chapter 1
 
 These source-backed corrections are present in the Indonesian Chapter 1

@@ -100,7 +100,7 @@ they are reproducibility aids, not a corpus-frequency claim.
 | `ruang dual` (3) | `ruang dual` | Exact agreement; retain. |
 | `norma operator` (9) | `norma operator` | Exact agreement; retain. |
 | `operator linear terbatas` (3) | `pemetaan linear terbatas` when the source says *bounded linear map* | Keep the source-sensitive map/operator distinction. Use `operator linear terbatas` only as a scoped recognition variant, not a global replacement. |
-| `operator adjoint` (6) | preferred `adjoin`; Chapter 11 uses `swadjoin` for *self-adjoint* | The imported spelling is a real field-recognition form. It does not justify changing the established `adjoin`/`swadjoin` choices. |
+| `operator adjoint` (6) | preferred `adjoin`; the reader uses `swaadjoin` for *self-adjoint* | The imported spelling is a real field-recognition form. It does not justify changing the established `adjoin`/`swaadjoin` choices; `swadjoin` and `adjoin-diri` remain recognition variants. |
 | `operator kompak` (1) | `operator kompak` | Agreement with the whole-edition glossary; retain. |
 | `konvergen lemah` (5) | preferred `konvergen secara lemah` | Both are intelligible field forms. Retain the explicit current wording for edition-wide consistency; recognize the shorter form. |
 | `terukur lemah` (3) | no instantiated Chapter 11 term | Keep only as a future/domain recognition candidate beside `terukur secara lemah`; do not add it to current prose without a source that introduces *weakly measurable*. |
@@ -110,9 +110,11 @@ semantic and morphological consistency but are **not** directly attested by
 this narrower witness: `karakter`, `ruang karakter`, `ruang ideal maksimal`,
 `transformasi Gelfand`, `kuasinilpoten`, `semisederhana`, `kalkulus
 fungsional`, `pemisah`, `aljabar-$C^*$`, `beridentitas`, `uniter`, `proyeksi`,
-and `swadjoin`. They are retained: replacing them based on this article would
+and `swaadjoin`. They are retained: replacing them based on this article would
 be an unsupported extrapolation and could collapse distinct algebraic
-concepts. The draft snapshot inspected was
+concepts. A later cross-chapter check corrected the Chapter 11 spelling to the
+already established reader form `swaadjoin`; see
+`provenance/SELF_ADJOINT_TERMINOLOGY_ADJUDICATION.md`. The draft snapshot inspected was
 `source/id-ID/Gelfand_Naimark-id.tex` (32,521 bytes, SHA-256
 `3804b274a75e1aa9485d8a9fa50a44cfc805224344c659423aef95da21e1162d`); this is
 an observation hash, not a claim that the in-progress target is final.
@@ -128,4 +130,3 @@ an observation hash, not a claim that the in-progress target is final.
   reconciliation. They are not instructions for indiscriminate prose
   replacement.
 * Resume the existing Chapter 11 production/build cursor after this report.
-

@@ -1,0 +1,66 @@
+{
+  "schema_version": "o008.complete-source-final-build.v1",
+  "source_date_epoch": 1444126743,
+  "fixed_output_path": "qa/build-complete-source-final",
+  "input_count": 21,
+  "inherited_ch17_input_count": 19,
+  "inherited_ch17_inputs_exact": true,
+  "inputs_unchanged": true,
+  "replay_1": {
+    "bytes": 2480109,
+    "sha256": "efa2358b3c3e6e8c47e0caee9a02f6afe78d15bea1b0f1822ea8449d801b2b10"
+  },
+  "replay_2": {
+    "bytes": 2480109,
+    "sha256": "efa2358b3c3e6e8c47e0caee9a02f6afe78d15bea1b0f1822ea8449d801b2b10"
+  },
+  "byte_identical": true,
+  "pages": 238,
+  "final_log_forbidden_counts": {
+    "tex_error": 0,
+    "undefined_reference": 0,
+    "undefined_citation": 0,
+    "unresolved_summary": 0,
+    "rerun_required": 0,
+    "multiply_defined": 0,
+    "missing_character": 0
+  },
+  "overfull_boxes": [
+    {
+      "points": 2.90276,
+      "context": "in paragraph at lines 323--326"
+    },
+    {
+      "points": 7.30707,
+      "context": "in paragraph at lines 380--383"
+    },
+    {
+      "points": 11.09703,
+      "context": "in paragraph at lines 385--387"
+    },
+    {
+      "points": 21.73163,
+      "context": "in paragraph at lines 185--193"
+    },
+    {
+      "points": 14.48387,
+      "context": "in paragraph at lines 214--216"
+    },
+    {
+      "points": 3.32439,
+      "context": "in paragraph at lines 337--339"
+    }
+  ],
+  "inherited_overfull_box_count": 6,
+  "preface_overfull_box_count": 0,
+  "pdf": {
+    "path": "qa/build-complete-source-final/functional-analysis-id-complete-source.pdf",
+    "bytes": 2480109,
+    "sha256": "efa2358b3c3e6e8c47e0caee9a02f6afe78d15bea1b0f1822ea8449d801b2b10"
+  },
+  "reader": {
+    "path": "output/pdf/analisis-fungsional-dan-aljabar-operator-id-teks-sumber-lengkap.pdf",
+    "bytes": 2480109,
+    "sha256": "efa2358b3c3e6e8c47e0caee9a02f6afe78d15bea1b0f1822ea8449d801b2b10"
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "schema_version": "o008.preface-prefix-locks.v1",
+  "unit_id": "FAOA-2015-PREFACE",
+  "scope": "exact complete admitted Chapters 1--17 aggregate backend plus the existing queued original bridge record; excludes every preface-derived record",
+  "append_policy": "all preface records follow the byte-identical frozen prefix",
+  "files": {
+    "units.jsonl": {
+      "bytes": 24619,
+      "records": 18,
+      "sha256": "1b022e83fa5a5f8aef32403e9ee1343f8dbad91eff86cb156e532027904d04ed"
+    },
+    "semantic_units.jsonl": {
+      "bytes": 1566276,
+      "records": 1858,
+      "sha256": "26ec130a54380ba309631be9a7d42326a856d34957612d369e096adf8310079a"
+    },
+    "segments.jsonl": {
+      "bytes": 1749183,
+      "records": 2191,
+      "sha256": "add457ecd4367183e2f42a4eebd247066f5371a5d84f9f6029b6e2a563542de7"
+    },
+    "relations.jsonl": {
+      "bytes": 2255697,
+      "records": 8539,
+      "sha256": "77a97bee7d19df54403a61395e9beb7f90ef5590d75847e50b91544bd16c3a2f"
+    },
+    "formula_map.jsonl": {
+      "bytes": 7331945,
+      "records": 11911,
+      "sha256": "40c2b21772d74cb3f96eaf965a9b258854027c6911e857ec8dccd43495f413d6"
+    },
+    "exercise_support.jsonl": {
+      "bytes": 27679,
+      "records": 52,
+      "sha256": "415c30bfc50b4525897f11ce50b1d6e56cfb2f1d519e51a060746adb9abcebaf"
+    },
+    "artifacts.jsonl": {
+      "bytes": 98305,
+      "records": 189,
+      "sha256": "f053dbafd49b7a208c48af81318bfbdb74c4624d55c4606f98995814191fad29"
+    },
+    "qa_events.jsonl": {
+      "bytes": 120032,
+      "records": 145,
+      "sha256": "be1ebda4900c30714ad8242f376476753eff6a07a14d0b439007b28f2558b4d5"
+    },
+    "corrections.jsonl": {
+      "bytes": 266999,
+      "records": 272,
+      "sha256": "f70cc7931e8a90c22fc58f89bcf80d3a16425cadccb5487d322f3ce72f21e605"
+    },
+    "terminology.jsonl": {
+      "bytes": 171497,
+      "records": 407,
+      "sha256": "2464af7ef8add6e5e01c95a73e967c64f47eacf20d4146e432e1378be890fb2a"
+    },
+    "index_terms.csv": {
+      "bytes": 527164,
+      "records": 2051,
+      "sha256": "2fda60dbb12c80cf5db5c9bbead70d904c0012fcf1674f473346a22dc27d457d"
+    }
+  }
+}
