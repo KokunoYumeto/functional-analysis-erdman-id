@@ -1,0 +1,114 @@
+{
+  "schema_version": "o008-html-visual-qa-v1",
+  "checked_at_utc": "2026-08-24T19:47:20.408Z",
+  "status": "passed",
+  "target": "output/html",
+  "artifact": {
+    "files": 105,
+    "bytes": 7656969,
+    "inventory_sha256": "f04bb3f5ee883c794474b191faf0e724987ebc01c4711bac8f6dc5421e543f32",
+    "manifest_sha256": "3a3a4a4cdd03d1cae2c49c316fc1f94fe36dad6aa9da79f3764930f011045576",
+    "route_map_sha256": "36fb1838ae99ad850c8f4832c318d64d87f5aee1eb22415583f4ec8178a7c0f5"
+  },
+  "routes": [
+    "/",
+    "/prakata/",
+    "/bab-01/",
+    "/bab-02/",
+    "/bab-03/",
+    "/bab-04/",
+    "/bab-05/",
+    "/bab-06/",
+    "/bab-07/",
+    "/bab-08/",
+    "/bab-09/",
+    "/bab-10/",
+    "/bab-11/",
+    "/bab-12/",
+    "/bab-13/",
+    "/bab-14/",
+    "/bab-15/",
+    "/bab-16/",
+    "/bab-17/",
+    "/daftar-pustaka/",
+    "/indeks/",
+    "/tentang/"
+  ],
+  "browser_surface": "Codex in-app browser",
+  "desktop": {
+    "viewport_css_pixels": {
+      "width": 1440,
+      "height": 900
+    },
+    "routes_checked": 22,
+    "mathml_nodes_observed": 11193,
+    "svg_images_observed": 80,
+    "document_horizontal_overflow_failures": 0,
+    "unconfined_element_failures": 0,
+    "article_center_delta_css_pixels_max": 0,
+    "article_to_main_width_ratio": 0.64,
+    "navigation_position": "sticky",
+    "console_warning_or_error_count": 0
+  },
+  "mobile": {
+    "viewport_css_pixels": {
+      "width": 390,
+      "height": 844
+    },
+    "routes_checked": 22,
+    "mathml_nodes_observed": 11193,
+    "svg_images_observed": 80,
+    "svg_images_loaded_with_positive_intrinsic_and_rendered_dimensions": 80,
+    "svg_images_outside_viewport": 0,
+    "document_horizontal_overflow_failures": 0,
+    "unconfined_element_failures": 0,
+    "article_center_delta_css_pixels_max": 0,
+    "article_to_main_width_ratio": 0.911,
+    "navigation_position": "static",
+    "console_warning_or_error_count": 0
+  },
+  "dark_mode": {
+    "status_text_color": "#e5edf5",
+    "status_background_color": "#173427",
+    "status_contrast_ratio": 11.41,
+    "diagram_foreground_after_filter": "#ffffff",
+    "diagram_panel_background": "#17232d",
+    "diagram_contrast_ratio": 15.973,
+    "diagram_filter": "invert(1) hue-rotate(180deg)",
+    "representative_visual_checks": [
+      "home/status panel",
+      "Chapter 6 diagram and visible Indonesian transcript",
+      "mobile table of contents and reading column",
+      "Chapter 5 long inline MathML containment",
+      "bibliography URL wrapping"
+    ]
+  },
+  "defects_found_and_resolved": [
+    {
+      "id": "dark.status_contrast",
+      "resolution": "Introduced a dark-mode status background with 11.410:1 text contrast."
+    },
+    {
+      "id": "dark.diagram_contrast",
+      "resolution": "Inverted path-only TeX diagram artwork in dark mode and disabled the filter for print."
+    },
+    {
+      "id": "mobile.inline_math_overflow",
+      "affected_routes": [
+        "/bab-03/",
+        "/bab-05/",
+        "/bab-17/"
+      ],
+      "resolution": "Contained long inline MathML in a max-width inline scroll box below 36rem."
+    },
+    {
+      "id": "mobile.bibliography_url_overflow",
+      "affected_routes": [
+        "/daftar-pustaka/"
+      ],
+      "resolution": "Enabled anywhere wrapping for retained non-clickable HTTP source text."
+    }
+  ],
+  "source_text_changed": false,
+  "evidence_boundary": "All 22 routes were measured at both viewports. All 80 final SVG images were loaded and dimension-checked at the stricter mobile viewport. Representative rendered surfaces were visually inspected in dark mode. Skip-link topology and target tabindex are covered by HTML_READER_QA.json; activation is not claimed as browser-visual evidence because the browser-control surface did not transfer keyboard focus into the page chrome-independently."
+}

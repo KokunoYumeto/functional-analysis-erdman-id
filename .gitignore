@@ -55,6 +55,13 @@
 /qa/release-complete-source/
 /qa/COMPLETE_SOURCE_FINAL_BUILD_PASS1_LOG.txt
 /qa/COMPLETE_SOURCE_FINAL_BUILD_PASS2_LOG.txt
+/qa/html-build-probe/
+/qa/html-site-probe/
+/qa/html-final-build/
+/qa/html-replay-*-build/
+/qa/html-replay-*-site/
+/qa/release-html-reader/
+/tmp/
 
 # TeX intermediates
 *.aux

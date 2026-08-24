@@ -21,6 +21,11 @@
     "corrections.jsonl",
     "qa_events.jsonl",
     "artifacts.jsonl",
+    "html_surfaces.jsonl",
+    "html_assets.jsonl",
     "BACKEND_MANIFEST.csv"
+  ],
+  "auxiliary_sets": [
+    "html_routes.jsonl"
   ]
 }

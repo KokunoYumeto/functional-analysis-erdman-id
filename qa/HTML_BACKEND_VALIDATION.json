@@ -1,0 +1,22 @@
+{
+  "backend_manifest_sha256": "06ad5f9c6931ef1838a8307c60b8b3b94a4c89a25d6ddc12dbfb2a3ddc591cfc",
+  "deterministic_generator_replays": 2,
+  "global_entity_ids": "unique",
+  "html_admission_receipt_sha256": "66fbf6a9c601b323fd30e3bcf2e4f22bfc2543a5c3c677eb73e9e520940d5314",
+  "html_artifact_records": 10,
+  "html_asset_records": 80,
+  "html_prefix_locks_sha256": "5cd7b200349b2b05f7df0a0f56f8ff279f40649793e67d81d307c933dcf57d97",
+  "html_qa_records": 5,
+  "html_relation_records": 97,
+  "html_surface_records": 1,
+  "relation_endpoints": "resolved",
+  "route_ids": "case_sensitive_unique",
+  "route_records": 4838,
+  "schema_version": "o008.html-backend-validation.v1",
+  "site_inventory_sha256": "f04bb3f5ee883c794474b191faf0e724987ebc01c4711bac8f6dc5421e543f32",
+  "source_text_manifest_sha256": "413756e2e337e8c032c9fba14f07242c47c266503a582f40e537a0e94b4d105b",
+  "source_text_prefix_state": "byte_identical",
+  "status": "pass",
+  "surface_id": "FAOA-2015-ID-HTML-SOURCE-TEXT",
+  "whole_edition_state": "in_progress"
+}

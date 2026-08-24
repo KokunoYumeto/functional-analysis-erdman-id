@@ -1,0 +1,25 @@
+{
+  "schema_version": "o008.html-prefix-locks.v1",
+  "boundary": "complete translated source-text backend before semantic HTML append",
+  "source_text_backend_manifest_sha256": "413756e2e337e8c032c9fba14f07242c47c266503a582f40e537a0e94b4d105b",
+  "append_policy": "Preserve each locked byte prefix exactly; all semantic HTML records follow it.",
+  "prefixes": {
+    "artifacts.jsonl": {
+      "bytes": 105861,
+      "records": 207,
+      "sha256": "6d4eee148186e9f71deae438ef1f7525011d7e1f9bad5e40b9d09b140ffa9365"
+    },
+    "qa_events.jsonl": {
+      "bytes": 126742,
+      "records": 155,
+      "sha256": "c0d8a88080caab5b439e728596cd06d40193c1fba168a80c26cea88395c3fa94"
+    },
+    "relations.jsonl": {
+      "bytes": 2282344,
+      "records": 8627,
+      "sha256": "12f6888069cdf4a2efe331b0b4d9a641b7fcbc20c6aa1e2699920bf477a90255"
+    }
+  },
+  "route_id_policy": "HTML fragment IDs are case-sensitive; exam_dual_C0 and exam_dual_c0 remain distinct inherited source labels.",
+  "whole_edition_state_after_append": "in_progress"
+}

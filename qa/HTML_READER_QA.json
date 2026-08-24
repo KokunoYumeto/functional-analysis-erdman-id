@@ -1,0 +1,21 @@
+{
+  "artifacts": {
+    "inventory_sha256": "f04bb3f5ee883c794474b191faf0e724987ebc01c4711bac8f6dc5421e543f32",
+    "manifest_sha256": "3a3a4a4cdd03d1cae2c49c316fc1f94fe36dad6aa9da79f3764930f011045576",
+    "route_map_sha256": "36fb1838ae99ad850c8f4832c318d64d87f5aee1eb22415583f4ec8178a7c0f5"
+  },
+  "counts": {
+    "files": 105,
+    "findings": 0,
+    "html_documents": 22,
+    "images": 80,
+    "internal_references": 12805,
+    "mathml_elements": 11193,
+    "route_records": 4838,
+    "standalone_svgs": 80,
+    "tables": 3
+  },
+  "findings": [],
+  "passed": true,
+  "schema_version": "o008-html-reader-qa-v1"
+}

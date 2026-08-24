@@ -6,15 +6,22 @@ John M. Erdman, *Functional Analysis and Operator Algebras: An Introduction*
 
 ## Baca edisi saat ini
 
+[Buka beranda reader HTML semantik](output/html/index.html) setelah mengunduh
+atau mengklon repositori ini. Reader offline tersebut mencakup prakata, seluruh
+17 bab, bibliografi, indeks, 11.193 rumus MathML, serta 80 diagram SVG dengan
+teks alternatif dan transkrip Bahasa Indonesia.
+
 [Buka PDF teks sumber lengkap](output/pdf/analisis-fungsional-dan-aljabar-operator-id-teks-sumber-lengkap.pdf)
 
 Prakata dan Bab 1 sampai Bab 17 telah diterjemahkan lengkap; bibliografi serta
 indeks hasil terjemahan juga disertakan. Reader ini melewati pemeriksaan
 struktur, matematika, residu bahasa, hak komponen, dua build bersih yang
 menghasilkan PDF identik, serta inspeksi visual seluruh 238 halaman. Dengan
-demikian, batas teks sumber lengkap sudah selesai. Edisi keseluruhan masih
-dalam pengerjaan karena reader HTML semantik, lapisan penguasaan/solusi, dan
-jembatan spektral-kompak/SVD berprovenans terpisah belum selesai.
+demikian, batas teks sumber lengkap sudah selesai. Reader HTML semantik juga
+sudah selesai, lolos pemeriksaan build deterministik, struktur, aksesibilitas,
+tautan, formula, dan reflow desktop/seluler. Edisi keseluruhan masih dalam
+pengerjaan karena lapisan penguasaan/solusi dan jembatan
+spektral-kompak/SVD berprovenans terpisah belum selesai.
 [PDF Bab 1--17](output/pdf/analisis-fungsional-dan-aljabar-operator-id-bab-1-17.pdf),
 [PDF Bab 1--16](output/pdf/analisis-fungsional-dan-aljabar-operator-id-bab-1-16.pdf),
 [PDF Bab 1--15](output/pdf/analisis-fungsional-dan-aljabar-operator-id-bab-1-15.pdf),
@@ -61,9 +68,9 @@ Edisi yang dipilih mencakup seluruh buku 17 bab, prakata, bibliografi,
 dan indeks. Bab 1–8 membentuk rute inti D20; Bab 9–17 merupakan lanjutan
 analisis fungsional dan aljabar operator. Penandaan kurikuler tidak menghapus
 isi sumber. Terjemahan teks sumber lengkap kini selesai, termasuk prakata dan
-indeks hasil terjemahan. Pekerjaan berikutnya adalah reader semantik yang
-aksesibel; lapisan penguasaan O001 dan jembatan spektral-kompak/SVD tetap
-ditulis dan diprovenansikan terpisah.
+indeks hasil terjemahan. Reader semantik yang aksesibel juga sudah tersedia;
+lapisan penguasaan O001 dan jembatan spektral-kompak/SVD tetap ditulis dan
+disajikan dengan ID serta provenans terpisah.
 
 Sumber resmi:
 
@@ -87,17 +94,19 @@ terbukti hanya ditambahkan sebagai varian pencarian/interoperabilitas dalam
 
 ## Build
 
-Lihat [BUILD.md](BUILD.md). Build memerlukan distribusi TeX dengan pdfLaTeX,
-BibTeX, MakeIndex, `latexmk`, serta paket Xy-pic. Build modern sengaja boleh
-mengalir ulang; nomor halaman bukan pengenal tetap.
+Lihat [BUILD.md](BUILD.md). Build PDF memerlukan distribusi TeX dengan
+pdfLaTeX, BibTeX, MakeIndex, `latexmk`, serta paket Xy-pic. Build HTML
+memerlukan Python, Pandoc dengan MathML, `lxml`, LaTeX, dan `dvisvgm`. Build
+modern sengaja boleh mengalir ulang; nomor halaman bukan pengenal tetap.
 
 ## Aksesibilitas
 
 PDF teks sumber lengkap memiliki metadata, 109 bookmark, 3.043 tautan, indeks,
 warna tautan berkontras tinggi, dan pemetaan Unicode untuk seluruh 49 objek
-font. PDF 238 halaman ini belum merupakan PDF bertag. Reader HTML semantik dan aksesibel
-adalah keluaran wajib edisi lengkap dan masih dalam pengerjaan. Tidak ada
-klaim aksesibilitas yang melampaui keadaan ini.
+font. PDF 238 halaman ini belum merupakan PDF bertag. Reader HTML semantik
+menyediakan struktur judul, navigasi, MathML, diagram berlabel, transkrip
+diagram, dan reflow responsif sebagai permukaan aksesibilitas tambahan. Tidak
+ada klaim bahwa PDF itu sendiri sudah bertag atau sepenuhnya aksesibel.
 
 ## Lisensi dan atribusi
 

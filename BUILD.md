@@ -1,4 +1,6 @@
-# Reproducible complete-source build
+# Reproducible PDF and semantic HTML builds
+
+## PDF
 
 Run from `source/id-ID` with a TeX distribution providing pdfLaTeX, BibTeX,
 MakeIndex, Xy-pic, and `latexmk`:
@@ -33,3 +35,28 @@ The current wrapper also loads `cmap` and Latin Modern so that all embedded
 font resources carry Unicode mappings, fixes derivative PDF dates explicitly, and
 uses one high-contrast link color. The PDF remains untagged; semantic HTML or a
 later tagged-PDF derivative remains the edition-level accessibility surface.
+
+## Semantic HTML
+
+From the repository root, with Python 3, Pandoc, `lxml`, LaTeX, and `dvisvgm`
+available:
+
+```powershell
+python html/build_reader.py `
+  --site-root output/html `
+  --build-root qa/html-final-build `
+  --route-map backend/html_routes.jsonl `
+  --report qa/HTML_BUILD_RESULT.json
+python html/qa_reader.py output/html backend/html_routes.jsonl `
+  --output qa/HTML_READER_QA.json
+python backend/generate_backend.py
+python backend/validate_backend.py
+```
+
+The admitted baseline used Python 3.13.9, Pandoc 3.9.0.2, `lxml` 6.1.1,
+MiKTeX-pdfTeX 4.27, and `dvisvgm` 3.6. Two clean replays and the canonical
+output produced the same 105 paths, byte counts, and SHA-256 values. The site
+is static and works offline: open `output/html/index.html` after building or
+downloading the repository. The exact admitted identities and all-route
+responsive QA are recorded in
+`provenance/HTML_READER_BUILD_AND_QA_RECEIPT.md`.

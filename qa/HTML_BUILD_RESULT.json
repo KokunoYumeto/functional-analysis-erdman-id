@@ -1,0 +1,2133 @@
+{
+  "bibliography_entry_count": 55,
+  "bibliography_mathml_count": 2,
+  "canonical_inputs_after": {
+    "diagram_text": {
+      "bytes": 93523,
+      "sha256": "d16f699fafd89254cc325de3eee1b4219ad821e7a8392845951cb9f1d1371606"
+    },
+    "diagxy": {
+      "bytes": 41908,
+      "sha256": "3df2bc0a4d57650280fd92006c904fc876ebcbe989cee76ee7a73d9d3fa9eefb"
+    },
+    "master": {
+      "bytes": 11176,
+      "sha256": "7f06919a8ec9088a3bc812fab962a48b5f1b3b0d5d3bce80eb21055f65089041"
+    },
+    "pdf": {
+      "bytes": 2480109,
+      "sha256": "efa2358b3c3e6e8c47e0caee9a02f6afe78d15bea1b0f1822ea8449d801b2b10"
+    }
+  },
+  "canonical_inputs_before": {
+    "diagram_text": {
+      "bytes": 93523,
+      "sha256": "d16f699fafd89254cc325de3eee1b4219ad821e7a8392845951cb9f1d1371606"
+    },
+    "diagxy": {
+      "bytes": 41908,
+      "sha256": "3df2bc0a4d57650280fd92006c904fc876ebcbe989cee76ee7a73d9d3fa9eefb"
+    },
+    "master": {
+      "bytes": 11176,
+      "sha256": "7f06919a8ec9088a3bc812fab962a48b5f1b3b0d5d3bce80eb21055f65089041"
+    },
+    "pdf": {
+      "bytes": 2480109,
+      "sha256": "efa2358b3c3e6e8c47e0caee9a02f6afe78d15bea1b0f1822ea8449d801b2b10"
+    }
+  },
+  "diagram_count": 80,
+  "failures": {
+    "duplicate_ids": 0,
+    "math_fallbacks": 0,
+    "missing_segment_ids": 0,
+    "pandoc_math_warnings": 0,
+    "unresolved_references": 0
+  },
+  "index_occurrence_count": 2104,
+  "input_receipts": [
+    {
+      "bytes": 18140,
+      "path": "source/id-ID/preface-id.tex",
+      "sha256": "c622dc9d9c1af4e5b1a6112c84eeff7328c778e8ef8643fc267f6fc6e3e7d564"
+    },
+    {
+      "bytes": 60798,
+      "path": "source/id-ID/linalg-id.tex",
+      "sha256": "4ab3098cab358f425190bfe6defa20d3ec7b2a81653e0e61bbfa67e497e2654d"
+    },
+    {
+      "bytes": 29254,
+      "path": "source/id-ID/categories-id.tex",
+      "sha256": "39c4a0b345c49fc7a925331497dca37f5b7b296d77717ef1c97322dfeb96e2dd"
+    },
+    {
+      "bytes": 94040,
+      "path": "source/id-ID/normlinspaces-id.tex",
+      "sha256": "c44f20890d5fb6b7445f0b2eeca8f477cc970d147d5c54aa4bc5df709f6b1f9d"
+    },
+    {
+      "bytes": 62947,
+      "path": "source/id-ID/Hilbert_spaces-id.tex",
+      "sha256": "b8e728e1f26a66ec2a420373e6104e3db4e5c954d7001acda1c13eb348322215"
+    },
+    {
+      "bytes": 51529,
+      "path": "source/id-ID/Hilbert_space_operators-id.tex",
+      "sha256": "323f0b156eb6e945e3b6ed273da298af4e0e2b2d9abb73514a9018cbe0d0b29f"
+    },
+    {
+      "bytes": 82940,
+      "path": "source/id-ID/Banach_spaces-id.tex",
+      "sha256": "ca32547e4b47af3444d454476beac71ad8870e88b436dc008e1cb5dbb6755e9c"
+    },
+    {
+      "bytes": 22735,
+      "path": "source/id-ID/compact_operators-id.tex",
+      "sha256": "8e68cf72e711ac95569883cf64a8f1f6a89ee43a1f85f5319fec6cb54b4f787a"
+    },
+    {
+      "bytes": 26947,
+      "path": "source/id-ID/spectrum-id.tex",
+      "sha256": "1120da36ebd0793690ecb47b33b921c81376d1bf7d2f03d9821b79356dfd03bc"
+    },
+    {
+      "bytes": 37705,
+      "path": "source/id-ID/topvecspaces-id.tex",
+      "sha256": "791868776a07f4c854f1c13d295da23a2559b88dcac48523fb0390e1e5330ee1"
+    },
+    {
+      "bytes": 42627,
+      "path": "source/id-ID/distributions-id.tex",
+      "sha256": "6456f9def822da572e117f3ec368931f0bfb441840aa0785be1df6080bbb6840"
+    },
+    {
+      "bytes": 32558,
+      "path": "source/id-ID/Gelfand_Naimark-id.tex",
+      "sha256": "2756540bd5c58e405ee07e10b00d102fada7c21e806d59f072a8afbd24587bde"
+    },
+    {
+      "bytes": 49730,
+      "path": "source/id-ID/no_identity-id.tex",
+      "sha256": "da74193601c80828c8bebb59f20f82481c47627a746fc6c841602d538837d884"
+    },
+    {
+      "bytes": 12601,
+      "path": "source/id-ID/GNS_construction-id.tex",
+      "sha256": "4c95b339702180ef8f2ea42cfba9e19a60a1740ca7d25a0568a6290f0170371f"
+    },
+    {
+      "bytes": 31900,
+      "path": "source/id-ID/multiplier_algebras-id.tex",
+      "sha256": "2688ec9c2370371060aada680f5f95e9511ecb61cb99c2a126385f525a3c9142"
+    },
+    {
+      "bytes": 17672,
+      "path": "source/id-ID/fredholm_theory-id.tex",
+      "sha256": "174b1ad2557f7dfa10e8171bd7482d907f858389b509f4d55de9cc785e2b43ba"
+    },
+    {
+      "bytes": 43804,
+      "path": "source/id-ID/extensions-id.tex",
+      "sha256": "59d745a18c74f9abe2ebe6eda3a78eb7c89bdc7fdef935cbc31ea0a552bfbbc3"
+    },
+    {
+      "bytes": 61673,
+      "path": "source/id-ID/K0_functor-id.tex",
+      "sha256": "061ffd28907e2251fc8b01077888de3e11b3bce67fec1ba52b080c924a241059"
+    }
+  ],
+  "manifest_sha256": "3a3a4a4cdd03d1cae2c49c316fc1f94fe36dad6aa9da79f3764930f011045576",
+  "model_provenance": "OpenAI Codex gpt-5.6-sol, Ultra",
+  "reference_totals": {
+    "citations_rewritten": 213,
+    "references_rewritten": 571,
+    "unresolved": 0
+  },
+  "route_count": 22,
+  "route_map_count": 4838,
+  "route_map_sha256": "36fb1838ae99ad850c8f4832c318d64d87f5aee1eb22415583f4ec8178a7c0f5",
+  "routes": [
+    {
+      "diagram_count": 2,
+      "duplicate_ids": [],
+      "math_fallbacks": [],
+      "mathml_count": 192,
+      "missing_segment_ids": [],
+      "pandoc_stderr": "",
+      "pandoc_warning_count": 0,
+      "route": "prakata",
+      "segment_count": 5
+    },
+    {
+      "diagram_count": 1,
+      "duplicate_ids": [],
+      "math_fallbacks": [],
+      "mathml_count": 884,
+      "missing_segment_ids": [],
+      "pandoc_stderr": "",
+      "pandoc_warning_count": 0,
+      "route": "bab-01",
+      "segment_count": 154
+    },
+    {
+      "diagram_count": 0,
+      "duplicate_ids": [],
+      "math_fallbacks": [],
+      "mathml_count": 351,
+      "missing_segment_ids": [],
+      "pandoc_stderr": "",
+      "pandoc_warning_count": 0,
+      "route": "bab-02",
+      "segment_count": 41
+    },
+    {
+      "diagram_count": 2,
+      "duplicate_ids": [],
+      "math_fallbacks": [],
+      "mathml_count": 1243,
+      "missing_segment_ids": [],
+      "pandoc_stderr": "",
+      "pandoc_warning_count": 0,
+      "route": "bab-03",
+      "segment_count": 228
+    },
+    {
+      "diagram_count": 11,
+      "duplicate_ids": [],
+      "math_fallbacks": [],
+      "mathml_count": 806,
+      "missing_segment_ids": [],
+      "pandoc_stderr": "",
+      "pandoc_warning_count": 0,
+      "route": "bab-04",
+      "segment_count": 160
+    },
+    {
+      "diagram_count": 0,
+      "duplicate_ids": [],
+      "math_fallbacks": [],
+      "mathml_count": 755,
+      "missing_segment_ids": [],
+      "pandoc_stderr": "",
+      "pandoc_warning_count": 0,
+      "route": "bab-05",
+      "segment_count": 158
+    },
+    {
+      "diagram_count": 22,
+      "duplicate_ids": [],
+      "math_fallbacks": [],
+      "mathml_count": 1067,
+      "missing_segment_ids": [],
+      "pandoc_stderr": "",
+      "pandoc_warning_count": 0,
+      "route": "bab-06",
+      "segment_count": 206
+    },
+    {
+      "diagram_count": 0,
+      "duplicate_ids": [],
+      "math_fallbacks": [],
+      "mathml_count": 264,
+      "missing_segment_ids": [],
+      "pandoc_stderr": "",
+      "pandoc_warning_count": 0,
+      "route": "bab-07",
+      "segment_count": 85
+    },
+    {
+      "diagram_count": 0,
+      "duplicate_ids": [],
+      "math_fallbacks": [],
+      "mathml_count": 387,
+      "missing_segment_ids": [],
+      "pandoc_stderr": "",
+      "pandoc_warning_count": 0,
+      "route": "bab-08",
+      "segment_count": 96
+    },
+    {
+      "diagram_count": 0,
+      "duplicate_ids": [],
+      "math_fallbacks": [],
+      "mathml_count": 580,
+      "missing_segment_ids": [],
+      "pandoc_stderr": "",
+      "pandoc_warning_count": 0,
+      "route": "bab-09",
+      "segment_count": 137
+    },
+    {
+      "diagram_count": 1,
+      "duplicate_ids": [],
+      "math_fallbacks": [],
+      "mathml_count": 591,
+      "missing_segment_ids": [],
+      "pandoc_stderr": "",
+      "pandoc_warning_count": 0,
+      "route": "bab-10",
+      "segment_count": 132
+    },
+    {
+      "diagram_count": 1,
+      "duplicate_ids": [],
+      "math_fallbacks": [],
+      "mathml_count": 587,
+      "missing_segment_ids": [],
+      "pandoc_stderr": "",
+      "pandoc_warning_count": 0,
+      "route": "bab-11",
+      "segment_count": 118
+    },
+    {
+      "diagram_count": 14,
+      "duplicate_ids": [],
+      "math_fallbacks": [],
+      "mathml_count": 879,
+      "missing_segment_ids": [],
+      "pandoc_stderr": "",
+      "pandoc_warning_count": 0,
+      "route": "bab-12",
+      "segment_count": 153
+    },
+    {
+      "diagram_count": 0,
+      "duplicate_ids": [],
+      "math_fallbacks": [],
+      "mathml_count": 235,
+      "missing_segment_ids": [],
+      "pandoc_stderr": "",
+      "pandoc_warning_count": 0,
+      "route": "bab-13",
+      "segment_count": 43
+    },
+    {
+      "diagram_count": 0,
+      "duplicate_ids": [],
+      "math_fallbacks": [],
+      "mathml_count": 589,
+      "missing_segment_ids": [],
+      "pandoc_stderr": "",
+      "pandoc_warning_count": 0,
+      "route": "bab-14",
+      "segment_count": 86
+    },
+    {
+      "diagram_count": 0,
+      "duplicate_ids": [],
+      "math_fallbacks": [],
+      "mathml_count": 194,
+      "missing_segment_ids": [],
+      "pandoc_stderr": "",
+      "pandoc_warning_count": 0,
+      "route": "bab-15",
+      "segment_count": 68
+    },
+    {
+      "diagram_count": 9,
+      "duplicate_ids": [],
+      "math_fallbacks": [],
+      "mathml_count": 642,
+      "missing_segment_ids": [],
+      "pandoc_stderr": "",
+      "pandoc_warning_count": 0,
+      "route": "bab-16",
+      "segment_count": 141
+    },
+    {
+      "diagram_count": 17,
+      "duplicate_ids": [],
+      "math_fallbacks": [],
+      "mathml_count": 945,
+      "missing_segment_ids": [],
+      "pandoc_stderr": "",
+      "pandoc_warning_count": 0,
+      "route": "bab-17",
+      "segment_count": 185
+    }
+  ],
+  "schema": "o008-html-build-result-v1",
+  "segment_count": 2196,
+  "semantic_unit_count": 1867,
+  "site_file_count_excluding_manifest": 104,
+  "site_tree_sha256": "f04bb3f5ee883c794474b191faf0e724987ebc01c4711bac8f6dc5421e543f32",
+  "source_date_epoch": "1444126743",
+  "status": "passed",
+  "svg_count": 80,
+  "svg_results": [
+    {
+      "bytes": 15409,
+      "diagxy_sha256": "3df2bc0a4d57650280fd92006c904fc876ebcbe989cee76ee7a73d9d3fa9eefb",
+      "dvi_sha256": "c28c8072f8694d923c514d487afcf812d45ec98c8df3ac2033965119ab7131f7",
+      "height": 72.620002,
+      "id": "FAOA-2015-DIAGRAM-PREFACE-001",
+      "normalized_svg_sha256": "4d385282fb1267f4d0d5cffd1a644db1f495c6fdc752471a52d9f297a7df55e5",
+      "page_count": 1,
+      "path_count": 12,
+      "raw_svg_sha256": "b368f46fb3332a6fbfbf8c619df0dbdccabe4ef92ca7a326829dd21f901e62b1",
+      "sha256": "4d385282fb1267f4d0d5cffd1a644db1f495c6fdc752471a52d9f297a7df55e5",
+      "source_tex_sha256": "bc270dc3731a9ba4c3bd7dd199844db5ba31325daf21ef83449ea2b6bb81735d",
+      "use_count": 20,
+      "view_box": [
+        198.561027,
+        72.719996,
+        69.310614,
+        72.620002
+      ],
+      "width": 69.310614,
+      "wrapper_sha256": "3398995e5e43a2e142eedb8c3ce2d27dbfc0c291cd2495ae200f33c88a411979"
+    },
+    {
+      "bytes": 13954,
+      "diagxy_sha256": "3df2bc0a4d57650280fd92006c904fc876ebcbe989cee76ee7a73d9d3fa9eefb",
+      "dvi_sha256": "5153464e30cf6c5c80678ee6953d089563146effe219bdc9daa9e175c89284ee",
+      "height": 66.733494,
+      "id": "FAOA-2015-DIAGRAM-PREFACE-002",
+      "normalized_svg_sha256": "479fa5de640cd292e91ad0ab48a413eb4d96b4f952451d95b62e10daf8dfde76",
+      "page_count": 1,
+      "path_count": 13,
+      "raw_svg_sha256": "2f2c3f04f9238a4a23609ff6bfa01faf59901e2518bc0632b6b80a30dd99d68e",
+      "sha256": "479fa5de640cd292e91ad0ab48a413eb4d96b4f952451d95b62e10daf8dfde76",
+      "source_tex_sha256": "befd0c9d7ceb647ad73327b9d3375f01ec4217016c6f80dc89c3f328d524608f",
+      "use_count": 27,
+      "view_box": [
+        200.522832,
+        72.730894,
+        65.43408,
+        66.733494
+      ],
+      "width": 65.43408,
+      "wrapper_sha256": "4a4ec47e811d7ffb4df53472f0e0ac6f9818ddc093095bf3e014c28cbada37fc"
+    },
+    {
+      "bytes": 47539,
+      "diagxy_sha256": "3df2bc0a4d57650280fd92006c904fc876ebcbe989cee76ee7a73d9d3fa9eefb",
+      "dvi_sha256": "5aef1cbb223caecee7c9123a95c9e25b88e31e9fa242c5e5121cf8a1a1a5abe5",
+      "height": 135.460894,
+      "id": "FAOA-2015-DIAGRAM-CH04-001",
+      "normalized_svg_sha256": "41b8389b8843b73980b5f4022841cd4e425cba1f2a13905e150aac8b42a250e1",
+      "page_count": 1,
+      "path_count": 9,
+      "raw_svg_sha256": "1002126e942dac0aa486b87775e3cde85437b3d2bc044c28890d7ac63e0fdecb",
+      "sha256": "41b8389b8843b73980b5f4022841cd4e425cba1f2a13905e150aac8b42a250e1",
+      "source_tex_sha256": "35c466c5326fa586c15c2ad57fa3836b2c4ee2b0ae493ba220a57b0beee3e0fb",
+      "use_count": 33,
+      "view_box": [
+        146.212183,
+        81.949252,
+        173.977219,
+        135.460894
+      ],
+      "width": 173.977219,
+      "wrapper_sha256": "f3ed83415b086ae46a547afa527324fa4351c99b9195e5f6ca1878308dbffec6"
+    },
+    {
+      "bytes": 17379,
+      "diagxy_sha256": "3df2bc0a4d57650280fd92006c904fc876ebcbe989cee76ee7a73d9d3fa9eefb",
+      "dvi_sha256": "83600d75e650ce97922d619be59b65f3dac99fed0b2643bfb0fd5da72507c015",
+      "height": 66.955502,
+      "id": "FAOA-2015-DIAGRAM-CH04-002",
+      "normalized_svg_sha256": "31b8461e74d3ce8059e65d9f37cee5d06ec710417c1d4d804bff12a37a5327a5",
+      "page_count": 1,
+      "path_count": 23,
+      "raw_svg_sha256": "6cc902e9e0aea2847a4618ff67b76a645d1f0ea6a772cf7e27703a055f5f94d2",
+      "sha256": "31b8461e74d3ce8059e65d9f37cee5d06ec710417c1d4d804bff12a37a5327a5",
+      "source_tex_sha256": "c0b3291baa361442a21a12e87eacd66b6e551de3cd0b7f6f58c3df23ff636d83",
+      "use_count": 63,
+      "view_box": [
+        173.208744,
+        72.644028,
+        238.154755,
+        66.955502
+      ],
+      "width": 238.154755,
+      "wrapper_sha256": "eb2bcec2387f542ebf629226e5881fd4e26e76384ed8aa10a1cbaafdddbddfc4"
+    },
+    {
+      "bytes": 15277,
+      "diagxy_sha256": "3df2bc0a4d57650280fd92006c904fc876ebcbe989cee76ee7a73d9d3fa9eefb",
+      "dvi_sha256": "349db3d2b42f6a22a0ad6ade64b20bde74b588c0706ea1dae6bcaafb4a463903",
+      "height": 66.955502,
+      "id": "FAOA-2015-DIAGRAM-CH04-003",
+      "normalized_svg_sha256": "bb515d2f9586ca89ab59d9aee9ce264a89e887ef97be77e07a705069704be661",
+      "page_count": 1,
+      "path_count": 17,
+      "raw_svg_sha256": "220f247abd723673933bc303bf68daf3c7c04a7283b0f94925abf31c4fa666d5",
+      "sha256": "bb515d2f9586ca89ab59d9aee9ce264a89e887ef97be77e07a705069704be661",
+      "source_tex_sha256": "40e4ef02ce687d7e6b8ce40dece76000f708275f57e56627166dc4216e7e2efb",
+      "use_count": 55,
+      "view_box": [
+        172.489961,
+        72.644028,
+        121.131156,
+        66.955502
+      ],
+      "width": 121.131156,
+      "wrapper_sha256": "94bee20bfbf254db18268ab214076194e0ff5fbe23033a4397d9fc556a704a14"
+    },
+    {
+      "bytes": 13387,
+      "diagxy_sha256": "3df2bc0a4d57650280fd92006c904fc876ebcbe989cee76ee7a73d9d3fa9eefb",
+      "dvi_sha256": "48de368cb26076edf004827ef091749c3eedcbefd45ec784dad12dcf132b21ee",
+      "height": 64.22823,
+      "id": "FAOA-2015-DIAGRAM-CH04-004",
+      "normalized_svg_sha256": "3b97d4329fbecb610154e11f6a5ecfa7b0191e294024c9097cdc62469f4a8df7",
+      "page_count": 1,
+      "path_count": 15,
+      "raw_svg_sha256": "012b59fc9fa77ee662ce992a24c14d3c452100eaaa8ec117bde6de5ae8169788",
+      "sha256": "3b97d4329fbecb610154e11f6a5ecfa7b0191e294024c9097cdc62469f4a8df7",
+      "source_tex_sha256": "940671ed8461574635c32433ad8e7e27d31bfa2a236345c89785e03d7ddd04fa",
+      "use_count": 34,
+      "view_box": [
+        199.590938,
+        72.644028,
+        66.929201,
+        64.22823
+      ],
+      "width": 66.929201,
+      "wrapper_sha256": "cdc06c5f7a86d2d48966dabf0a7a439b0cb2f2ffb6694b79c1326405546ab2a4"
+    },
+    {
+      "bytes": 14407,
+      "diagxy_sha256": "3df2bc0a4d57650280fd92006c904fc876ebcbe989cee76ee7a73d9d3fa9eefb",
+      "dvi_sha256": "3caf43cd1890230ac00cbb75074d24c45ed9d669d0fe5869f98ea9928b7d59e6",
+      "height": 66.955502,
+      "id": "FAOA-2015-DIAGRAM-CH04-005",
+      "normalized_svg_sha256": "6bc43ab8b4ecf5c2320d12492d714babb4e0d34695e391e901dbc129afcc454f",
+      "page_count": 1,
+      "path_count": 16,
+      "raw_svg_sha256": "c0e37f7ee9517f0d5f6db88569b5ccd2870e3d0fbc39e9d12e959dfeb8ff2868",
+      "sha256": "6bc43ab8b4ecf5c2320d12492d714babb4e0d34695e391e901dbc129afcc454f",
+      "source_tex_sha256": "a5d5ac2db21dc1f2fbcbb6d69f0955adf6e4ae87ecad6b6a0a544cab3f8a5a25",
+      "use_count": 53,
+      "view_box": [
+        168.273579,
+        72.644028,
+        131.971547,
+        66.955502
+      ],
+      "width": 131.971547,
+      "wrapper_sha256": "9a1019681aae774565c8288ca75670408689cb3cdf5fc9d4fbd255627c34f494"
+    },
+    {
+      "bytes": 14576,
+      "diagxy_sha256": "3df2bc0a4d57650280fd92006c904fc876ebcbe989cee76ee7a73d9d3fa9eefb",
+      "dvi_sha256": "5df2fa7cd93b31faeacbdea923073149a71b1d3145f9beba8b137115f83256ab",
+      "height": 66.955502,
+      "id": "FAOA-2015-DIAGRAM-CH04-006",
+      "normalized_svg_sha256": "f4715d11f6ddeb0135de7fb432efce2e304050ecfbd62bf9a2088463593fcde0",
+      "page_count": 1,
+      "path_count": 16,
+      "raw_svg_sha256": "2870032131e154d804b10ffc92d6540c57c88e260b176bc262c24bc6e88c25e3",
+      "sha256": "f4715d11f6ddeb0135de7fb432efce2e304050ecfbd62bf9a2088463593fcde0",
+      "source_tex_sha256": "894ad7d4d4dc20e1c8620b98324d8d5a664710a5d5fa58876033fc7f6421ba43",
+      "use_count": 53,
+      "view_box": [
+        168.273579,
+        72.644028,
+        130.615418,
+        66.955502
+      ],
+      "width": 130.615418,
+      "wrapper_sha256": "2fba12afec7c19b5cee9e4a1006b7aad41384587511da98e6a3940a5a2fddb85"
+    },
+    {
+      "bytes": 18928,
+      "diagxy_sha256": "3df2bc0a4d57650280fd92006c904fc876ebcbe989cee76ee7a73d9d3fa9eefb",
+      "dvi_sha256": "83c35d75d88f1f28410ec75b6a16c7b6df8e63bc46bcae5f9809cb696ed9ee50",
+      "height": 65.657513,
+      "id": "FAOA-2015-DIAGRAM-CH04-007",
+      "normalized_svg_sha256": "02484086deab46a6ca873277439ff81105cf6a15a803fd400a70ac653adcad6b",
+      "page_count": 1,
+      "path_count": 24,
+      "raw_svg_sha256": "5db1afe1d0600ffdb82977a2a5a3cc2a10c10ff7d38d0a9bc7137d307b9ff430",
+      "sha256": "02484086deab46a6ca873277439ff81105cf6a15a803fd400a70ac653adcad6b",
+      "source_tex_sha256": "6ba4de9c5515f0c082fb686c305bbf604c75019bc12e88d5a39fe788904e1d40",
+      "use_count": 60,
+      "view_box": [
+        172.848608,
+        72.730894,
+        238.514891,
+        65.657513
+      ],
+      "width": 238.514891,
+      "wrapper_sha256": "3787d4a88377dd47894b37d7046d10c8c3cc2c775a38a4cd7379e53252c3628f"
+    },
+    {
+      "bytes": 17807,
+      "diagxy_sha256": "3df2bc0a4d57650280fd92006c904fc876ebcbe989cee76ee7a73d9d3fa9eefb",
+      "dvi_sha256": "646ad004144cc365f4a9f44c0d1b03e40eb46326c3fec082b85c6307019b6775",
+      "height": 66.955502,
+      "id": "FAOA-2015-DIAGRAM-CH04-008",
+      "normalized_svg_sha256": "b6c9ecdc92c2da69049812528c6f2471439ab7245119476eed44d2b29511eceb",
+      "page_count": 1,
+      "path_count": 23,
+      "raw_svg_sha256": "d723722eeb2540dfce74f9a83801b0f9a0bf92fbaaeef0a57fa2ee29001d5aa2",
+      "sha256": "b6c9ecdc92c2da69049812528c6f2471439ab7245119476eed44d2b29511eceb",
+      "source_tex_sha256": "242da0e3b5b53b7b2169cc990c8ef613e4205cd3d571e593b59f71195517f514",
+      "use_count": 60,
+      "view_box": [
+        173.292409,
+        72.644028,
+        238.07109,
+        66.955502
+      ],
+      "width": 238.07109,
+      "wrapper_sha256": "2726264cde8c1e0b8c805507ce26ff2fbc27d8d76efbd483d0f52e38c955becd"
+    },
+    {
+      "bytes": 17371,
+      "diagxy_sha256": "3df2bc0a4d57650280fd92006c904fc876ebcbe989cee76ee7a73d9d3fa9eefb",
+      "dvi_sha256": "869864180ce6468ee02d3b9033bb49280a77d5613281ef20ac53f4fcacf96021",
+      "height": 66.955502,
+      "id": "FAOA-2015-DIAGRAM-CH04-009",
+      "normalized_svg_sha256": "990796d23ce37a651f3fce06242214da3eca6d877b15348d038acd0d90a52823",
+      "page_count": 1,
+      "path_count": 23,
+      "raw_svg_sha256": "e05cd9ec034b7e8e206d0523ec375a247f9c4a33dd9ca440532a1a5cc98d71e3",
+      "sha256": "990796d23ce37a651f3fce06242214da3eca6d877b15348d038acd0d90a52823",
+      "source_tex_sha256": "19b2658d107bbc522c1b047d8e829d01c2a7536f1cf216c7c3ff67e5dda9c672",
+      "use_count": 63,
+      "view_box": [
+        173.208744,
+        72.644028,
+        238.154755,
+        66.955502
+      ],
+      "width": 238.154755,
+      "wrapper_sha256": "82d36cf7001738896c31b40abeb7ab0926e6a6b5cf030bc99cf6e20d2efdf26e"
+    },
+    {
+      "bytes": 19025,
+      "diagxy_sha256": "3df2bc0a4d57650280fd92006c904fc876ebcbe989cee76ee7a73d9d3fa9eefb",
+      "dvi_sha256": "3793df213f7cf66cf8e0e4aebc13335cb96edab3924cb82cb5a43a0eb74c5573",
+      "height": 65.657513,
+      "id": "FAOA-2015-DIAGRAM-CH04-010",
+      "normalized_svg_sha256": "a35a5b615deabd8b1869ed14e7400e07a8a351af439766960d4ce52709102ac9",
+      "page_count": 1,
+      "path_count": 24,
+      "raw_svg_sha256": "5b9422c2bed12ebc3cfcff270e4ca11b03cc43e1ff35d98db5367f4f57812b5b",
+      "sha256": "a35a5b615deabd8b1869ed14e7400e07a8a351af439766960d4ce52709102ac9",
+      "source_tex_sha256": "fbd4dbb6dc1921cc358d0cfab4966e2620ad2b0dc0877b54276834666e52250b",
+      "use_count": 60,
+      "view_box": [
+        172.848608,
+        72.730894,
+        238.514891,
+        65.657513
+      ],
+      "width": 238.514891,
+      "wrapper_sha256": "5497dbe7273add854a632b8793958d79e534453d8ed31b40bbbdb82ce8263ee2"
+    },
+    {
+      "bytes": 12835,
+      "diagxy_sha256": "3df2bc0a4d57650280fd92006c904fc876ebcbe989cee76ee7a73d9d3fa9eefb",
+      "dvi_sha256": "5be182ee1ba98a4e6928d978cf256af746baaf98c37bfaa0e71a53015f3635b8",
+      "height": 66.955502,
+      "id": "FAOA-2015-DIAGRAM-CH04-011",
+      "normalized_svg_sha256": "f8d531b37da900aedfc2844d2212230786eec5b1fae2b1b57e674cee26647a35",
+      "page_count": 1,
+      "path_count": 14,
+      "raw_svg_sha256": "7aa9a67d8c911b3380df1722aa0790d33f4ab934e7aaeb8a3f6e27afe4700d3c",
+      "sha256": "f8d531b37da900aedfc2844d2212230786eec5b1fae2b1b57e674cee26647a35",
+      "source_tex_sha256": "10ad618b88ac2958c6ff2338fb4c1615f2721c9bbee834c922e6aea657187f91",
+      "use_count": 51,
+      "view_box": [
+        167.050851,
+        72.644028,
+        132.608036,
+        66.955502
+      ],
+      "width": 132.608036,
+      "wrapper_sha256": "cfc29e2dc4d37f31e48d6a8417fca99fd0fb5911af2a2d1a07deec7d53f48493"
+    },
+    {
+      "bytes": 17608,
+      "diagxy_sha256": "3df2bc0a4d57650280fd92006c904fc876ebcbe989cee76ee7a73d9d3fa9eefb",
+      "dvi_sha256": "a10f6467edcf9a56f0b1804778a6b51cdb5405683a7af981fb4f7be3f8336e17",
+      "height": 101.514027,
+      "id": "FAOA-2015-DIAGRAM-CH06-001",
+      "normalized_svg_sha256": "ff3f0b3913bc490a2ce5b7dac55e2dbeb672131a5201799577c3acf766aa9a72",
+      "page_count": 1,
+      "path_count": 14,
+      "raw_svg_sha256": "d919095ef9f7185bd66672d7172eb172edc07d9d2f224b973e6859427d26961b",
+      "sha256": "ff3f0b3913bc490a2ce5b7dac55e2dbeb672131a5201799577c3acf766aa9a72",
+      "source_tex_sha256": "7f1a6d7e0a9a934ae2b161d2459c93367252f681faf053871871b22ddf03c22a",
+      "use_count": 30,
+      "view_box": [
+        167.473484,
+        75.72089,
+        130.854992,
+        101.514027
+      ],
+      "width": 130.854992,
+      "wrapper_sha256": "9609cd922ccddefb051df7dead498d8842838b90111ad9dd8e4692458383c9b6"
+    },
+    {
+      "bytes": 11708,
+      "diagxy_sha256": "3df2bc0a4d57650280fd92006c904fc876ebcbe989cee76ee7a73d9d3fa9eefb",
+      "dvi_sha256": "bc26a3e2b85e750ad90913f02a411546fdc03b77a402e025a258050adcad3194",
+      "height": 92.736757,
+      "id": "FAOA-2015-DIAGRAM-CH06-002",
+      "normalized_svg_sha256": "deea42529d27f9d3ee7d644dabcc16b35696acf9e7d48863aa950bd5e34e61f5",
+      "page_count": 1,
+      "path_count": 14,
+      "raw_svg_sha256": "50a31ce6a305eecf715c079c87576611e56835869c30e108fcb0b10fede3d252",
+      "sha256": "deea42529d27f9d3ee7d644dabcc16b35696acf9e7d48863aa950bd5e34e61f5",
+      "source_tex_sha256": "fcf70863c9c50d1852b5d3b12150d1bf8975e4d44a097c82b2d739a842cadf8a",
+      "use_count": 32,
+      "view_box": [
+        189.138383,
+        74.480506,
+        90.683439,
+        92.736757
+      ],
+      "width": 90.683439,
+      "wrapper_sha256": "86b00631241470a8e095192603d56c365d4ca3195591d525ed85bb6ecfd5da34"
+    },
+    {
+      "bytes": 22825,
+      "diagxy_sha256": "3df2bc0a4d57650280fd92006c904fc876ebcbe989cee76ee7a73d9d3fa9eefb",
+      "dvi_sha256": "f97f658e1a6130c3f0c48f96ebe03995ff6fdeaa1e441e4d7bd000972e0be9da",
+      "height": 91.676131,
+      "id": "FAOA-2015-DIAGRAM-CH06-003",
+      "normalized_svg_sha256": "5bcdc37d3b8cdd115190f656e224dbaf60dd0efaad9443b2867d6efd5ec82216",
+      "page_count": 1,
+      "path_count": 24,
+      "raw_svg_sha256": "cea3d72965afd632546c6f1bb40e771ae9374b952a3143a5340ff88623d15d94",
+      "sha256": "5bcdc37d3b8cdd115190f656e224dbaf60dd0efaad9443b2867d6efd5ec82216",
+      "source_tex_sha256": "2eab817e5ac61399d4f32d017223c43f9fa8670e2a556950f6ece99de6d7a889",
+      "use_count": 78,
+      "view_box": [
+        153.354471,
+        72.370894,
+        159.714478,
+        91.676131
+      ],
+      "width": 159.714478,
+      "wrapper_sha256": "9bfbfae45ce6381901d701ba06ec55fec2594758e97e25237d6e4bcd5ef7f120"
+    },
+    {
+      "bytes": 11262,
+      "diagxy_sha256": "3df2bc0a4d57650280fd92006c904fc876ebcbe989cee76ee7a73d9d3fa9eefb",
+      "dvi_sha256": "3c9171a173dc3bc12fec7c390038979a59d468c9fd3232d8d73827f71232d0da",
+      "height": 15.506922,
+      "id": "FAOA-2015-DIAGRAM-CH06-004",
+      "normalized_svg_sha256": "65848998f3b982e8d3cbac67e023b8965433d63e91b0f3365a5f6c720778c188",
+      "page_count": 1,
+      "path_count": 12,
+      "raw_svg_sha256": "2a21ba7f504ca028e84cb7ab5698f5831b1e9bfb129c16e91d3b654872ab9b17",
+      "sha256": "65848998f3b982e8d3cbac67e023b8965433d63e91b0f3365a5f6c720778c188",
+      "source_tex_sha256": "ce939ccdad14ac7bb58fea47d9862bc2d2aa717fd33d91f75f16db16402237f6",
+      "use_count": 30,
+      "view_box": [
+        129.873938,
+        72.785713,
+        206.50612,
+        15.506922
+      ],
+      "width": 206.50612,
+      "wrapper_sha256": "a8341eff65a74293a1c796d41369d21a5fa94294ca108fc81abff07e0d124862"
+    },
+    {
+      "bytes": 11446,
+      "diagxy_sha256": "3df2bc0a4d57650280fd92006c904fc876ebcbe989cee76ee7a73d9d3fa9eefb",
+      "dvi_sha256": "2c071ed1af9d755ccc24745debd9f9c664902a425d945feecc9d4a22bca7df03",
+      "height": 14.054283,
+      "id": "FAOA-2015-DIAGRAM-CH06-005",
+      "normalized_svg_sha256": "641cf2cbc9c4391e2b68294348cdcb2ce6e4851cad6357436a2ff9deeeeceaf5",
+      "page_count": 1,
+      "path_count": 11,
+      "raw_svg_sha256": "fedc66c7c194786852a559a7353915449f1de93dfe1e54770bcf9384dd1b6775",
+      "sha256": "641cf2cbc9c4391e2b68294348cdcb2ce6e4851cad6357436a2ff9deeeeceaf5",
+      "source_tex_sha256": "b88b226773ec5fc94add2c7f342b65d921c154a7e15340e794d67bb5ca5168c2",
+      "use_count": 18,
+      "view_box": [
+        155.530365,
+        72.56255,
+        255.833134,
+        14.054283
+      ],
+      "width": 255.833134,
+      "wrapper_sha256": "b47a18185efd70b33f62435dd6b02e088baff1a13323435b83c247b47d1b4b30"
+    },
+    {
+      "bytes": 17943,
+      "diagxy_sha256": "3df2bc0a4d57650280fd92006c904fc876ebcbe989cee76ee7a73d9d3fa9eefb",
+      "dvi_sha256": "f10bf651b32962072a1f8cef05d4d1cb112e2ed6e236a3869793ada6cc4d2f9e",
+      "height": 58.371643,
+      "id": "FAOA-2015-DIAGRAM-CH06-006",
+      "normalized_svg_sha256": "f2797bcf23692a212d680b38e8e8a0f1b4b0fb33bc614609764d56251ef8a415",
+      "page_count": 1,
+      "path_count": 16,
+      "raw_svg_sha256": "2ca4900bb48f2460b2800ba2f83735e24bb63ddba5844f8ae0a94fe02e2c58c8",
+      "sha256": "f2797bcf23692a212d680b38e8e8a0f1b4b0fb33bc614609764d56251ef8a415",
+      "source_tex_sha256": "befea8c24128840cfc1498e077e49c57f48ed44539380555208978f8fdeb0812",
+      "use_count": 47,
+      "view_box": [
+        151.337759,
+        72.719996,
+        163.565152,
+        58.371643
+      ],
+      "width": 163.565152,
+      "wrapper_sha256": "7a5b0f4b655ee94e7ed27e4601a42afee0dfa3efe4f97a8a1a0319bf87813eb8"
+    },
+    {
+      "bytes": 17622,
+      "diagxy_sha256": "3df2bc0a4d57650280fd92006c904fc876ebcbe989cee76ee7a73d9d3fa9eefb",
+      "dvi_sha256": "f3162543ae53b55260772543675fc3a4bf44f59388806c2dc91aa8e023612ac7",
+      "height": 58.371643,
+      "id": "FAOA-2015-DIAGRAM-CH06-007",
+      "normalized_svg_sha256": "31315b6885ad7ca20826753f0c123d91e380d6cb5ddfc16450c16bfa655f32bf",
+      "page_count": 1,
+      "path_count": 15,
+      "raw_svg_sha256": "1b8035f77f4c4456dd904a0024faa92b88f1e6c2c9e9d62557a397d17d10dc38",
+      "sha256": "31315b6885ad7ca20826753f0c123d91e380d6cb5ddfc16450c16bfa655f32bf",
+      "source_tex_sha256": "832a61684f1aa3e41a37a13fc789feec9c170263d42122ae10d6a06aa88e4384",
+      "use_count": 44,
+      "view_box": [
+        151.337759,
+        72.719996,
+        163.565152,
+        58.371643
+      ],
+      "width": 163.565152,
+      "wrapper_sha256": "68b0fa668a5676cd12235ce02957d7b698d949d67cc273dde36b8cdef09357e8"
+    },
+    {
+      "bytes": 25705,
+      "diagxy_sha256": "3df2bc0a4d57650280fd92006c904fc876ebcbe989cee76ee7a73d9d3fa9eefb",
+      "dvi_sha256": "bd82ebf8394923263e80f714e08390bad34161e9f402fd5723e5e2cf7e19f4e2",
+      "height": 92.863227,
+      "id": "FAOA-2015-DIAGRAM-CH06-008",
+      "normalized_svg_sha256": "e6f643027ee21890a801a69029bf9f0d110b850d3fc8d5514bc29703f14eeec2",
+      "page_count": 1,
+      "path_count": 26,
+      "raw_svg_sha256": "484d5465f234adac1fdceaebae92a7753714d4f8144058e6f6f866c4c2d97607",
+      "sha256": "e6f643027ee21890a801a69029bf9f0d110b850d3fc8d5514bc29703f14eeec2",
+      "source_tex_sha256": "655692e0b36896ede7b81ccf0b2c1df876f71d52e730f10e8b6d9808167db38a",
+      "use_count": 86,
+      "view_box": [
+        149.036607,
+        72.730894,
+        168.388025,
+        92.863227
+      ],
+      "width": 168.388025,
+      "wrapper_sha256": "f168f2ef2afb360d1a660c1b560a9e834e0c1aacfba5169e5d6892ab454effd7"
+    },
+    {
+      "bytes": 8327,
+      "diagxy_sha256": "3df2bc0a4d57650280fd92006c904fc876ebcbe989cee76ee7a73d9d3fa9eefb",
+      "dvi_sha256": "81af7c6532dbcc140320cccc8ffa0a4192ab922167a64f9465f76c0c7918628d",
+      "height": 11.567011,
+      "id": "FAOA-2015-DIAGRAM-CH06-009",
+      "normalized_svg_sha256": "65561aaa53d8f4f5369f841e289eb973fc0c6d5659f1475b9b7db6f404f7d1f0",
+      "page_count": 1,
+      "path_count": 7,
+      "raw_svg_sha256": "c8e8e8f25a17f2eec9b3cdd5be360c970e81cbd31993a9d0dc8262ed9d595d85",
+      "sha256": "65561aaa53d8f4f5369f841e289eb973fc0c6d5659f1475b9b7db6f404f7d1f0",
+      "source_tex_sha256": "33c8a1d192493f7560c5005e528ee8f39ce27c043661c23c52a655f0ed4ca348",
+      "use_count": 9,
+      "view_box": [
+        190.82917,
+        72.56255,
+        84.688701,
+        11.567011
+      ],
+      "width": 84.688701,
+      "wrapper_sha256": "029f92bb6fb555de9b10fc5ab02ad57baa18195543d7ada3f8c8ce10629653fb"
+    },
+    {
+      "bytes": 10883,
+      "diagxy_sha256": "3df2bc0a4d57650280fd92006c904fc876ebcbe989cee76ee7a73d9d3fa9eefb",
+      "dvi_sha256": "53a1a0f1a2eb2863b5e8834cbb9365a36fd6158052d2a50f08048cb9dee9df54",
+      "height": 11.567011,
+      "id": "FAOA-2015-DIAGRAM-CH06-010",
+      "normalized_svg_sha256": "43b9e7ce316c13fc78418d5a8235ee5e507ee77bc24708a3bd75135ae56b2c79",
+      "page_count": 1,
+      "path_count": 9,
+      "raw_svg_sha256": "bfa3b580d393c2fbd7bf9a4b96706e7f47702e3ea780a759d775e68d86c09802",
+      "sha256": "43b9e7ce316c13fc78418d5a8235ee5e507ee77bc24708a3bd75135ae56b2c79",
+      "source_tex_sha256": "7fb6e01549c3eb28131f1afa34f9f70fcfacfa276baa00f6d66b95e989ca816f",
+      "use_count": 14,
+      "view_box": [
+        183.894334,
+        72.710342,
+        97.950274,
+        11.567011
+      ],
+      "width": 97.950274,
+      "wrapper_sha256": "7413bf892f52dc737ced7de895f637a40d4ea6d5d2ae4545a6fa44cab7f20d5b"
+    },
+    {
+      "bytes": 18742,
+      "diagxy_sha256": "3df2bc0a4d57650280fd92006c904fc876ebcbe989cee76ee7a73d9d3fa9eefb",
+      "dvi_sha256": "b3925c8bbecc83206d21d8d3b4b665558dd8b7f0e9a4455e8645aabbeab2215b",
+      "height": 61.113646,
+      "id": "FAOA-2015-DIAGRAM-CH06-011",
+      "normalized_svg_sha256": "110ad006ca838ee40161d658769e35632193abc7c195a64f7a6da9ede42edbc8",
+      "page_count": 1,
+      "path_count": 18,
+      "raw_svg_sha256": "e62a08c397ce66119ea40abdd75474ad92cdd1138c960e58131b56894450d5a9",
+      "sha256": "110ad006ca838ee40161d658769e35632193abc7c195a64f7a6da9ede42edbc8",
+      "source_tex_sha256": "a864891b14f8bddf4d1fd98fe4cc172bfdf22ca7fac73995351ae519d7c944c6",
+      "use_count": 55,
+      "view_box": [
+        150.604683,
+        72.723729,
+        260.758816,
+        61.113646
+      ],
+      "width": 260.758816,
+      "wrapper_sha256": "557e4aca354f7dd52de0fc82dee9ea229a7e01d57ab89ecc0de18691c08267d1"
+    },
+    {
+      "bytes": 11412,
+      "diagxy_sha256": "3df2bc0a4d57650280fd92006c904fc876ebcbe989cee76ee7a73d9d3fa9eefb",
+      "dvi_sha256": "c543c7fcac4a1adc170470e3cd897afabed4b75a6a09b2347dc0ff57f9862775",
+      "height": 71.927822,
+      "id": "FAOA-2015-DIAGRAM-CH06-012",
+      "normalized_svg_sha256": "592729f1cce01c65afbf5842eee91511fa1ca340b6e1a9ef0ddbeb1a2a9513c1",
+      "page_count": 1,
+      "path_count": 10,
+      "raw_svg_sha256": "417fe5ac6f9e23fff9e592f4bbe79f809b30c3bdbab27aef7a79793daa6741f9",
+      "sha256": "592729f1cce01c65afbf5842eee91511fa1ca340b6e1a9ef0ddbeb1a2a9513c1",
+      "source_tex_sha256": "8894a2b2fb34f3c9c766e6bccb49eb4f55c48f8733dc25c0781285f211e47748",
+      "use_count": 26,
+      "view_box": [
+        193.876945,
+        72.706693,
+        78.287788,
+        71.927822
+      ],
+      "width": 78.287788,
+      "wrapper_sha256": "3bc90870cfb23e29d040a65414d66fe6e64e591dca9f4aaafe4a0df3110b4b49"
+    },
+    {
+      "bytes": 14047,
+      "diagxy_sha256": "3df2bc0a4d57650280fd92006c904fc876ebcbe989cee76ee7a73d9d3fa9eefb",
+      "dvi_sha256": "592a37ae820beb24d7af6344761d1c6b0fac868e5ae44ef8bc46d7fd147f9968",
+      "height": 13.432465,
+      "id": "FAOA-2015-DIAGRAM-CH06-013",
+      "normalized_svg_sha256": "ff499c2edf2ebb89e29a5f90bea0990e553d29bd36fceab08b110355506aad8f",
+      "page_count": 1,
+      "path_count": 11,
+      "raw_svg_sha256": "f6e233b1d33b0050ab6ccbae6651aae6483956dffd6667361ad9840115595a63",
+      "sha256": "ff499c2edf2ebb89e29a5f90bea0990e553d29bd36fceab08b110355506aad8f",
+      "source_tex_sha256": "8acaafc1309404a7288ea10a284eabd188aeee6715d17bf72a2fc48f73c20de6",
+      "use_count": 29,
+      "view_box": [
+        81.45077,
+        83.521454,
+        303.80822,
+        13.432465
+      ],
+      "width": 303.80822,
+      "wrapper_sha256": "206b5b8a1fc2f9a50cdba6835b6735990dd5223b0bd817f3ca8e536d3d180db1"
+    },
+    {
+      "bytes": 14097,
+      "diagxy_sha256": "3df2bc0a4d57650280fd92006c904fc876ebcbe989cee76ee7a73d9d3fa9eefb",
+      "dvi_sha256": "83628bc6d59faaddcd3d17875b742fa6a3006a51e3d1e71a3a79e41fd65d16f7",
+      "height": 75.373469,
+      "id": "FAOA-2015-DIAGRAM-CH06-014",
+      "normalized_svg_sha256": "eb0b41d365e62db8d99b44a1677b0a07af58d20b324cda957770f9e44dcdade5",
+      "page_count": 1,
+      "path_count": 12,
+      "raw_svg_sha256": "cb94d72575300529e252ced559c22f05e02852ad1084a03874f93803b0713278",
+      "sha256": "eb0b41d365e62db8d99b44a1677b0a07af58d20b324cda957770f9e44dcdade5",
+      "source_tex_sha256": "e4140374dbd9947508f8f56b4b19cd7e5df317c80ecc2029bebbd0832864c0e1",
+      "use_count": 32,
+      "view_box": [
+        185.62782,
+        72.728938,
+        94.17558,
+        75.373469
+      ],
+      "width": 94.17558,
+      "wrapper_sha256": "008df849977dec3792c32a7da413e048390d490bda619bf48b9f8c0d1bf8c174"
+    },
+    {
+      "bytes": 18612,
+      "diagxy_sha256": "3df2bc0a4d57650280fd92006c904fc876ebcbe989cee76ee7a73d9d3fa9eefb",
+      "dvi_sha256": "48fa4489166756f415453faa846d7758dd60a885cc7507586521d40ffad645cf",
+      "height": 68.505248,
+      "id": "FAOA-2015-DIAGRAM-CH17-001",
+      "normalized_svg_sha256": "ee5e7ecb62ca6ff357fbc9e3145d1a9b66ff454f7d45247052ab10a7d8fe0997",
+      "page_count": 1,
+      "path_count": 21,
+      "raw_svg_sha256": "43da86e10a369fafb6c14fc442477d6aedd125f9df22a16ae158f522cd0e3591",
+      "sha256": "ee5e7ecb62ca6ff357fbc9e3145d1a9b66ff454f7d45247052ab10a7d8fe0997",
+      "source_tex_sha256": "2116f93c38c980fb34abacd14f10e68bcd9dd457ab3b6a68e63b289580dae0d1",
+      "use_count": 62,
+      "view_box": [
+        166.146226,
+        72.644028,
+        245.217273,
+        68.505248
+      ],
+      "width": 245.217273,
+      "wrapper_sha256": "bbca0d83c79ef70f9e49de9dbc7d203692df4cf522cd58842ebbc267c5ef1b59"
+    },
+    {
+      "bytes": 17716,
+      "diagxy_sha256": "3df2bc0a4d57650280fd92006c904fc876ebcbe989cee76ee7a73d9d3fa9eefb",
+      "dvi_sha256": "fbe2ca0872438daf6a6115f83c50a3c1f64124a912ffa0f12959153d30b8a702",
+      "height": 75.230655,
+      "id": "FAOA-2015-DIAGRAM-CH17-002",
+      "normalized_svg_sha256": "48df5c8e08c5de679d4cd7ec92e6803ac97876e90a4d6c4612cd0a92e9850233",
+      "page_count": 1,
+      "path_count": 16,
+      "raw_svg_sha256": "c5f3e759f6e520708cae20825a74f7bbee6c1679027834f61a9be78db8a325a7",
+      "sha256": "48df5c8e08c5de679d4cd7ec92e6803ac97876e90a4d6c4612cd0a92e9850233",
+      "source_tex_sha256": "7dcfcac4090f32755e9f6fa045292fb16eab24e06c8618aaac32d9fd12a8a7ad",
+      "use_count": 37,
+      "view_box": [
+        178.691011,
+        72.730817,
+        107.848108,
+        75.230655
+      ],
+      "width": 107.848108,
+      "wrapper_sha256": "7a18858fc728c8e8a5c21c1e5522a382a35e90eb2b0783a561feb7fb868c4ab5"
+    },
+    {
+      "bytes": 18801,
+      "diagxy_sha256": "3df2bc0a4d57650280fd92006c904fc876ebcbe989cee76ee7a73d9d3fa9eefb",
+      "dvi_sha256": "ba3b097110d81a1627dc00085f8d268e39834cb80de2372be7788421dbcdc736",
+      "height": 75.230655,
+      "id": "FAOA-2015-DIAGRAM-CH17-003",
+      "normalized_svg_sha256": "710c76d08203e0fe76d74da077e9fb3296af71e28cc4c4e0ff1d41e4bb2acc82",
+      "page_count": 1,
+      "path_count": 18,
+      "raw_svg_sha256": "6f9e0842fb45a95f5f9d3c6275b15ba8cae88b74daffbfc555c6f5fb6c8d2e3e",
+      "sha256": "710c76d08203e0fe76d74da077e9fb3296af71e28cc4c4e0ff1d41e4bb2acc82",
+      "source_tex_sha256": "2cdde53669d062b187bf7cef5432e772661f0d7878c89e8b8824631619eacfef",
+      "use_count": 47,
+      "view_box": [
+        173.31395,
+        72.730817,
+        119.626109,
+        75.230655
+      ],
+      "width": 119.626109,
+      "wrapper_sha256": "9e69cd5b6ee05eb42b76d20c395714b28cb88d8ed4325ded518dbf8727e064a0"
+    },
+    {
+      "bytes": 19518,
+      "diagxy_sha256": "3df2bc0a4d57650280fd92006c904fc876ebcbe989cee76ee7a73d9d3fa9eefb",
+      "dvi_sha256": "0df2f5f77346ba9355d7e606d98e19459f5029286322dace27c4eefe1f1a6bed",
+      "height": 93.091577,
+      "id": "FAOA-2015-DIAGRAM-CH17-004",
+      "normalized_svg_sha256": "54752e2abb9c45fd0dd6c63273225432ca31ba43abb3dbd85cc2894f2f878c22",
+      "page_count": 1,
+      "path_count": 22,
+      "raw_svg_sha256": "90897605f5ddd2fbbaff8f22a733f9f20845638590dc064ec03a16a9e6dfd858",
+      "sha256": "54752e2abb9c45fd0dd6c63273225432ca31ba43abb3dbd85cc2894f2f878c22",
+      "source_tex_sha256": "dc9cb22df4b17c04429d16c6bf93a373cf91e663adf464c6c09391d517914b00",
+      "use_count": 86,
+      "view_box": [
+        130.649429,
+        72.727273,
+        204.08111,
+        93.091577
+      ],
+      "width": 204.08111,
+      "wrapper_sha256": "4cb85b59259203afb6e5dae7b2f53eac759ce5803861b693d3c5de1fdd620703"
+    },
+    {
+      "bytes": 19314,
+      "diagxy_sha256": "3df2bc0a4d57650280fd92006c904fc876ebcbe989cee76ee7a73d9d3fa9eefb",
+      "dvi_sha256": "5b56ea5b26ba064779dd238407b0fbf1a00791bd50327a641ba8a99da97241bb",
+      "height": 75.230655,
+      "id": "FAOA-2015-DIAGRAM-CH17-005",
+      "normalized_svg_sha256": "b23390aaee9fe681a7034ce50291b13ae5facdf3212ac9696378f961e79886ba",
+      "page_count": 1,
+      "path_count": 19,
+      "raw_svg_sha256": "166173a12ca4e5c4b3a5420bd89c414811cd3b789371f533e399f9063b827c55",
+      "sha256": "b23390aaee9fe681a7034ce50291b13ae5facdf3212ac9696378f961e79886ba",
+      "source_tex_sha256": "9d79732494d87220bd84ec42101fc99a46c4625167c4d12d58e1ffd20a5aa507",
+      "use_count": 58,
+      "view_box": [
+        170.664214,
+        72.730817,
+        124.051526,
+        75.230655
+      ],
+      "width": 124.051526,
+      "wrapper_sha256": "3773f523486ba9f524458351b269e4009e7e17d9a4fb45225ade9aa0139faaaf"
+    },
+    {
+      "bytes": 27899,
+      "diagxy_sha256": "3df2bc0a4d57650280fd92006c904fc876ebcbe989cee76ee7a73d9d3fa9eefb",
+      "dvi_sha256": "850019a42d0f63f0ba54b417f21300070616085a30d0c3bcdcfc9dc35b764c1c",
+      "height": 76.119763,
+      "id": "FAOA-2015-DIAGRAM-CH17-006",
+      "normalized_svg_sha256": "d8c6ccf1f75e0af210e3053a71df7ca71e601c9e46334c888f291121931f0b01",
+      "page_count": 1,
+      "path_count": 20,
+      "raw_svg_sha256": "70902c6f538ec440675061398fb08802af7f491147e0e045f1545b2f87472e9e",
+      "sha256": "d8c6ccf1f75e0af210e3053a71df7ca71e601c9e46334c888f291121931f0b01",
+      "source_tex_sha256": "5f6b6b0cd862868e4e45f050ee87da21c1907622600a17e9c2e37bad37426c65",
+      "use_count": 123,
+      "view_box": [
+        129.504047,
+        72.727273,
+        206.544216,
+        76.119763
+      ],
+      "width": 206.544216,
+      "wrapper_sha256": "53c42a9cccee27e15299cbe6a16090457a6e31f4e9481cfc63a5f44cf82f04b1"
+    },
+    {
+      "bytes": 33822,
+      "diagxy_sha256": "3df2bc0a4d57650280fd92006c904fc876ebcbe989cee76ee7a73d9d3fa9eefb",
+      "dvi_sha256": "9c100467014c5b761cac381dd181dd90e937d5cd87db7f44973bec4a92370d2f",
+      "height": 204.873566,
+      "id": "FAOA-2015-DIAGRAM-CH17-007",
+      "normalized_svg_sha256": "3945e23ba997a0cfa7fef3d6c763621c928bff316a83651c92da792f22fe73d0",
+      "page_count": 1,
+      "path_count": 31,
+      "raw_svg_sha256": "407b9da76a26ad411a9e1a913d0a2bb20006b5776a78ff7ce9703917d0053a6d",
+      "sha256": "3945e23ba997a0cfa7fef3d6c763621c928bff316a83651c92da792f22fe73d0",
+      "source_tex_sha256": "d2847dd2bfaefec8f42006ad06cd73b8562bb5b3dc9c3c9cfe4117bcee0daaf6",
+      "use_count": 238,
+      "view_box": [
+        57.72523,
+        85.79941,
+        353.665513,
+        204.873566
+      ],
+      "width": 353.665513,
+      "wrapper_sha256": "583adb557f9b28ac3f3360889542113e4074fba42cfb5c3ed38878ec0e454734"
+    },
+    {
+      "bytes": 13073,
+      "diagxy_sha256": "3df2bc0a4d57650280fd92006c904fc876ebcbe989cee76ee7a73d9d3fa9eefb",
+      "dvi_sha256": "8e0343c4763890c5fed37f9ec4adac3843bdce36bedaa995eab25e6e7f4b73f1",
+      "height": 17.008802,
+      "id": "FAOA-2015-DIAGRAM-CH17-008",
+      "normalized_svg_sha256": "f1ce9c1481c93fe0ce66328d913f843349f1a7777c240c2ffaba060b37ba9d2f",
+      "page_count": 1,
+      "path_count": 10,
+      "raw_svg_sha256": "3a8c2c414fad72499b751d454f961909c8f3f27a499bcfd389ca456585367e97",
+      "sha256": "f1ce9c1481c93fe0ce66328d913f843349f1a7777c240c2ffaba060b37ba9d2f",
+      "source_tex_sha256": "e5d9db36cef868d6d12c27889f74020bee168b203ff1d8e58cd94416a33d7a7c",
+      "use_count": 15,
+      "view_box": [
+        166.84023,
+        72.730817,
+        131.664798,
+        17.008802
+      ],
+      "width": 131.664798,
+      "wrapper_sha256": "d77160d3c0161911092801a35635f150de979cc77a3754b6c4eb8bccced5f5df"
+    },
+    {
+      "bytes": 11737,
+      "diagxy_sha256": "3df2bc0a4d57650280fd92006c904fc876ebcbe989cee76ee7a73d9d3fa9eefb",
+      "dvi_sha256": "284940cd00385669a7239bf4c622a7c81b66c3a6e99d2c2f330db169e2cf0382",
+      "height": 110.509594,
+      "id": "FAOA-2015-DIAGRAM-CH17-009",
+      "normalized_svg_sha256": "d9e73c72415e72738fccfca9e8bcf67ec11c605cb0f4ad4223b7813118f0e657",
+      "page_count": 1,
+      "path_count": 11,
+      "raw_svg_sha256": "1b560ed97f4daec04db53e28dd3892b2e35f694f1d36d337135c7e2c61c0e69f",
+      "sha256": "d9e73c72415e72738fccfca9e8bcf67ec11c605cb0f4ad4223b7813118f0e657",
+      "source_tex_sha256": "dce9be724ce6aa8d7b9f8d464cb63bcad75926a71890c2a4191e859ab4c13b7f",
+      "use_count": 96,
+      "view_box": [
+        180.821494,
+        74.53288,
+        105.263138,
+        110.509594
+      ],
+      "width": 105.263138,
+      "wrapper_sha256": "afeb20d6f0212ec4cd36f3db0bf17f0f6075065df768dd5d2e29d2f4658d16d1"
+    },
+    {
+      "bytes": 17226,
+      "diagxy_sha256": "3df2bc0a4d57650280fd92006c904fc876ebcbe989cee76ee7a73d9d3fa9eefb",
+      "dvi_sha256": "ffb9c5b0962a0894dff09005dd164c7f4d1d8bb52950f2420cee0f1cc24adfac",
+      "height": 138.355773,
+      "id": "FAOA-2015-DIAGRAM-CH17-010",
+      "normalized_svg_sha256": "bfe9d735ff62b7a504a8fe3ad5215365773ed3b7df12d60ec3ca0503f297ecd0",
+      "page_count": 1,
+      "path_count": 13,
+      "raw_svg_sha256": "3c7e566948b52789fde2ef6413d82a0a9cf2ce95cd5ef3a0ab444eb3c6b8427a",
+      "sha256": "bfe9d735ff62b7a504a8fe3ad5215365773ed3b7df12d60ec3ca0503f297ecd0",
+      "source_tex_sha256": "fc412dc784215f63cbcb18b44a2356841076d6b7350c6ff25aa27301da2328c2",
+      "use_count": 160,
+      "view_box": [
+        172.425927,
+        75.025961,
+        121.476089,
+        138.355773
+      ],
+      "width": 121.476089,
+      "wrapper_sha256": "37e162cbf788e1147fe6145d12db2b4acecb93762b33785216f4d952204cf2c9"
+    },
+    {
+      "bytes": 14323,
+      "diagxy_sha256": "3df2bc0a4d57650280fd92006c904fc876ebcbe989cee76ee7a73d9d3fa9eefb",
+      "dvi_sha256": "89994af84181ccabb4f8700cdfa5da3751e7ab91283c3eb7176ea96a08e5cbba",
+      "height": 110.460381,
+      "id": "FAOA-2015-DIAGRAM-CH17-011",
+      "normalized_svg_sha256": "3917db62ae5dba575e9ec34cc8c1c2e2022a8fdcd7f486f479fb6036ff658bb3",
+      "page_count": 1,
+      "path_count": 13,
+      "raw_svg_sha256": "3bcdafb9c01c58230396b311b2503194dd91ed73f6f95f9677ad86b4b45a6a8b",
+      "sha256": "3917db62ae5dba575e9ec34cc8c1c2e2022a8fdcd7f486f479fb6036ff658bb3",
+      "source_tex_sha256": "c4bfa3f94b257efd5e7a4742bf02bfac4984db7d223023349af24566cefdd3c7",
+      "use_count": 109,
+      "view_box": [
+        182.301294,
+        75.025961,
+        101.943536,
+        110.460381
+      ],
+      "width": 101.943536,
+      "wrapper_sha256": "2f58230baf9bc5a9e5b495a2ae7b10f4b11c2d40b9acdfd14dba82cb94869ec8"
+    },
+    {
+      "bytes": 16844,
+      "diagxy_sha256": "3df2bc0a4d57650280fd92006c904fc876ebcbe989cee76ee7a73d9d3fa9eefb",
+      "dvi_sha256": "999b564948ea8566e5560fbc9079ec1c38828368fa82622fc85f06918127a43b",
+      "height": 187.127651,
+      "id": "FAOA-2015-DIAGRAM-CH17-012",
+      "normalized_svg_sha256": "0646591308c8939a12b0cafe7a0f662ab5ae1baff3920cc5ba369d3e84fa7d69",
+      "page_count": 1,
+      "path_count": 20,
+      "raw_svg_sha256": "d875d440c23a43d7c17548d1e46e756225d86a448c76b3ab6518e24478cff3e6",
+      "sha256": "0646591308c8939a12b0cafe7a0f662ab5ae1baff3920cc5ba369d3e84fa7d69",
+      "source_tex_sha256": "07129f3f4e854a149529986ed4aed40d454e5cca32309d9e1ad2433a94160a46",
+      "use_count": 142,
+      "view_box": [
+        151.070617,
+        75.025961,
+        164.14549,
+        187.127651
+      ],
+      "width": 164.14549,
+      "wrapper_sha256": "b552f47f5fe0b5e442255e4e90cff79fc1be0bda3daa2ba01fd7188173b6253e"
+    },
+    {
+      "bytes": 9475,
+      "diagxy_sha256": "3df2bc0a4d57650280fd92006c904fc876ebcbe989cee76ee7a73d9d3fa9eefb",
+      "dvi_sha256": "31c12552e1b961c11da48d205744e8054bda2e9cc6dccd4200c99f5dec62dc13",
+      "height": 8.750101,
+      "id": "FAOA-2015-DIAGRAM-CH17-013",
+      "normalized_svg_sha256": "92547fc9c1003889855e86563048cf4abc6376e24327d1d4abb98f4660b35376",
+      "page_count": 1,
+      "path_count": 9,
+      "raw_svg_sha256": "5f4ecd61772f27b98fa98a855f2ac4fbe1898282506f4769e52725e933a6db3e",
+      "sha256": "92547fc9c1003889855e86563048cf4abc6376e24327d1d4abb98f4660b35376",
+      "source_tex_sha256": "bbced3810bcb9176e72adb749798f2dbde266593560189cba133a1c8827f70a9",
+      "use_count": 35,
+      "view_box": [
+        116.251208,
+        74.905961,
+        233.784307,
+        8.750101
+      ],
+      "width": 233.784307,
+      "wrapper_sha256": "518d2af7d0694db9846f6dd16b8bc19f5b17d415bc40c3eb1cba7853a209618c"
+    },
+    {
+      "bytes": 24980,
+      "diagxy_sha256": "3df2bc0a4d57650280fd92006c904fc876ebcbe989cee76ee7a73d9d3fa9eefb",
+      "dvi_sha256": "6a1dfa523b301be8b54d7bc7b7a59ae12e7eb806b7046290184f52ca35ff7d7a",
+      "height": 61.215445,
+      "id": "FAOA-2015-DIAGRAM-CH17-014",
+      "normalized_svg_sha256": "3d17c06e7f96d77bda27de9dba4ba4c30d382387929e7e81522b065707f82ba5",
+      "page_count": 1,
+      "path_count": 28,
+      "raw_svg_sha256": "828e1f0c98fc7e5150b9c332b3514ff739638fd95e8ad5d3802c40cb5506e89c",
+      "sha256": "3d17c06e7f96d77bda27de9dba4ba4c30d382387929e7e81522b065707f82ba5",
+      "source_tex_sha256": "55599bdd414d442109eeeb8f8493a91667b018a0e1cc1e6137315f76721db35a",
+      "use_count": 193,
+      "view_box": [
+        89.090564,
+        85.864865,
+        288.105596,
+        61.215445
+      ],
+      "width": 288.105596,
+      "wrapper_sha256": "b02a4631be71a36cf0aa2792821488fb5dbfa7940ca423664d6a3d6e73166d7f"
+    },
+    {
+      "bytes": 24109,
+      "diagxy_sha256": "3df2bc0a4d57650280fd92006c904fc876ebcbe989cee76ee7a73d9d3fa9eefb",
+      "dvi_sha256": "6b6040367c90d7fea24050fe7acb483e4ffed31c9bf0a2aab0521c584e276bda",
+      "height": 61.095445,
+      "id": "FAOA-2015-DIAGRAM-CH17-015",
+      "normalized_svg_sha256": "6f2c6ac06c8ea681a73fcfa87d8d82fa1e5bc8fda8ab66d06e232a5025651b50",
+      "page_count": 1,
+      "path_count": 26,
+      "raw_svg_sha256": "6dbe8292851b9c3c24209e22d5ba4badb9e5f1b1403a18c4ecc1fc6d5c735ea1",
+      "sha256": "6f2c6ac06c8ea681a73fcfa87d8d82fa1e5bc8fda8ab66d06e232a5025651b50",
+      "source_tex_sha256": "f6a13add8900d900bc56ffaaeb9e1695ae5e38525e2a5c86037fca56c2d4ca3c",
+      "use_count": 179,
+      "view_box": [
+        91.81784,
+        85.984865,
+        282.651045,
+        61.095445
+      ],
+      "width": 282.651045,
+      "wrapper_sha256": "403577dd1b7bc62dbae711e591a22da687548a226bd8cc1fd2494f1d56a37a19"
+    },
+    {
+      "bytes": 9440,
+      "diagxy_sha256": "3df2bc0a4d57650280fd92006c904fc876ebcbe989cee76ee7a73d9d3fa9eefb",
+      "dvi_sha256": "f7c28770020344eee9d3f5e2494970e9aaf78836ef898f3a68c12e1a0b877477",
+      "height": 59.46307,
+      "id": "FAOA-2015-DIAGRAM-CH01-001",
+      "normalized_svg_sha256": "e5ed0bcbf5df0c1d7d18fa5f71992006c91074228e54c17b7e1bbef5fe82b1fe",
+      "page_count": 1,
+      "path_count": 11,
+      "raw_svg_sha256": "8d3736778274866528430843b061d9cc61422f719623ef72482b133304af868a",
+      "sha256": "e5ed0bcbf5df0c1d7d18fa5f71992006c91074228e54c17b7e1bbef5fe82b1fe",
+      "source_tex_sha256": "8f056c95c5e57e684729459af7246bd0fbc3fe1b384a582aa585d3519237ad9c",
+      "use_count": 41,
+      "view_box": [
+        178.190699,
+        71.989764,
+        109.874072,
+        59.46307
+      ],
+      "width": 109.874072,
+      "wrapper_sha256": "80994ee52ec9fdf40d70798f7161fd0f076cd50b86546890c611e0a11ee05888"
+    },
+    {
+      "bytes": 13488,
+      "diagxy_sha256": "3df2bc0a4d57650280fd92006c904fc876ebcbe989cee76ee7a73d9d3fa9eefb",
+      "dvi_sha256": "e6105441f3b20915b82e05b86b2f6a8a741474c9bcb096f03755a09255d6a762",
+      "height": 90.01919,
+      "id": "FAOA-2015-DIAGRAM-CH03-001",
+      "normalized_svg_sha256": "65ec59e0ad78c8433b8b869813bbb56ce0c0500dd38b0c4d055dfc3a12f18e75",
+      "page_count": 1,
+      "path_count": 14,
+      "raw_svg_sha256": "f1661f48445995e92ced36bb896c60b2aac17bf3ec28d0fd6b9093e1f13332fd",
+      "sha256": "65ec59e0ad78c8433b8b869813bbb56ce0c0500dd38b0c4d055dfc3a12f18e75",
+      "source_tex_sha256": "c38a760e0be5eb11a37fc3017929ffdebb6f392243d3f181830b773dd503bbfd",
+      "use_count": 32,
+      "view_box": [
+        186.774734,
+        74.840506,
+        95.59995,
+        90.01919
+      ],
+      "width": 95.59995,
+      "wrapper_sha256": "7a27147fb87d13584dc4edf74f9c153138703483060785c5552fe3e4ecdf04ce"
+    },
+    {
+      "bytes": 13515,
+      "diagxy_sha256": "3df2bc0a4d57650280fd92006c904fc876ebcbe989cee76ee7a73d9d3fa9eefb",
+      "dvi_sha256": "e6105441f3b20915b82e05b86b2f6a8a741474c9bcb096f03755a09255d6a762",
+      "height": 90.01919,
+      "id": "FAOA-2015-DIAGRAM-CH03-002",
+      "normalized_svg_sha256": "d8ee405aa7481cc599c83e23b5ef62781d84ec9093cb117ca13343030e01f992",
+      "page_count": 1,
+      "path_count": 14,
+      "raw_svg_sha256": "f1661f48445995e92ced36bb896c60b2aac17bf3ec28d0fd6b9093e1f13332fd",
+      "sha256": "d8ee405aa7481cc599c83e23b5ef62781d84ec9093cb117ca13343030e01f992",
+      "source_tex_sha256": "b9460a59ecf022f0e58677a3be8058d55241df5b62b8169ad1c392ca0fc9c06d",
+      "use_count": 32,
+      "view_box": [
+        186.774734,
+        74.840506,
+        95.59995,
+        90.01919
+      ],
+      "width": 95.59995,
+      "wrapper_sha256": "7dd6cef70349f4c8e0c0b9f6094e3a36c8a52d02f76bd8dbf3634ea2a931e915"
+    },
+    {
+      "bytes": 33990,
+      "diagxy_sha256": "3df2bc0a4d57650280fd92006c904fc876ebcbe989cee76ee7a73d9d3fa9eefb",
+      "dvi_sha256": "228ced712d9e2ae75d606b9ce2216c3ae29b0f51248924ef94f8115a1fda61e0",
+      "height": 204.873566,
+      "id": "FAOA-2015-DIAGRAM-CH10-001",
+      "normalized_svg_sha256": "b9f029988f394ede3f0bd0050be9218737e862c9ba5638d470cf77d8669ae93f",
+      "page_count": 1,
+      "path_count": 29,
+      "raw_svg_sha256": "881650fde836128b1a384395871132f2533a098ffa3ef0d82ee62d8b295c5c61",
+      "sha256": "b9f029988f394ede3f0bd0050be9218737e862c9ba5638d470cf77d8669ae93f",
+      "source_tex_sha256": "f7ddb226c4a67c215b59053a327aaaa1641c4ee4f90679752478a553c24a0067",
+      "use_count": 229,
+      "view_box": [
+        62.448272,
+        85.79941,
+        341.844211,
+        204.873566
+      ],
+      "width": 341.844211,
+      "wrapper_sha256": "c1a9d86e6adcfd4f0e2dc2404f082a6021f37a7e8edbd33a31ba8aac4f9a0fee"
+    },
+    {
+      "bytes": 17034,
+      "diagxy_sha256": "3df2bc0a4d57650280fd92006c904fc876ebcbe989cee76ee7a73d9d3fa9eefb",
+      "dvi_sha256": "c4e9bb55e6b9e0098eb76530ee72fb48fddfe1f1d09be5e3c697349533716bf0",
+      "height": 67.687261,
+      "id": "FAOA-2015-DIAGRAM-CH11-001",
+      "normalized_svg_sha256": "ab1546f637b5a493ec774677e6af2144a7f7fb695942b847339b73cd7f927cc6",
+      "page_count": 1,
+      "path_count": 19,
+      "raw_svg_sha256": "9f4dc14a657446b78425a6d0addc315ab318a05635f851e5777cc2d9300a05c0",
+      "sha256": "ab1546f637b5a493ec774677e6af2144a7f7fb695942b847339b73cd7f927cc6",
+      "source_tex_sha256": "72096527722a012561eb20f2fda5c8be193ba34edbf41f9629691ff17efda9fa",
+      "use_count": 39,
+      "view_box": [
+        196.358916,
+        72.769685,
+        73.640397,
+        67.687261
+      ],
+      "width": 73.640397,
+      "wrapper_sha256": "b24b70b61d0ca60543dc532e8a1a72da988dea579dec9ecf4012b5c4023e22ac"
+    },
+    {
+      "bytes": 10777,
+      "diagxy_sha256": "3df2bc0a4d57650280fd92006c904fc876ebcbe989cee76ee7a73d9d3fa9eefb",
+      "dvi_sha256": "c2426e68d0b81fbec56a4eecf44a47fb6f3f2f614a653c93d8be9999b9116630",
+      "height": 15.650384,
+      "id": "FAOA-2015-DIAGRAM-CH12-001",
+      "normalized_svg_sha256": "a742ba5c57df6d1c5381917e2248663b776dd43537eec1eb8d13564e90e10988",
+      "page_count": 1,
+      "path_count": 12,
+      "raw_svg_sha256": "09264a05fce285d051df236845980f0ed57569b084b30297e4ec627b84aaedc8",
+      "sha256": "a742ba5c57df6d1c5381917e2248663b776dd43537eec1eb8d13564e90e10988",
+      "source_tex_sha256": "e0718f33c911495ec35c321ea27abe8c630305c0a4706037d62810d1ddae2010",
+      "use_count": 30,
+      "view_box": [
+        130.013171,
+        72.730817,
+        206.227654,
+        15.650384
+      ],
+      "width": 206.227654,
+      "wrapper_sha256": "7d6920a04fdc4981106299448be861a1264d94c0ece6062a1c1dde452c35c390"
+    },
+    {
+      "bytes": 11640,
+      "diagxy_sha256": "3df2bc0a4d57650280fd92006c904fc876ebcbe989cee76ee7a73d9d3fa9eefb",
+      "dvi_sha256": "7086f4fb011266c36da45622c2370b41a3603c472f55af8275648415a6d69c99",
+      "height": 15.524328,
+      "id": "FAOA-2015-DIAGRAM-CH12-002",
+      "normalized_svg_sha256": "44fbe98f9ddaaa49ce882ef6c4cb18065f9ce04d7ff1b1174cf576649d685391",
+      "page_count": 1,
+      "path_count": 11,
+      "raw_svg_sha256": "0f670b0ec064b42d46208f109ac668fa8181c8c998c7ff0ca420e4078b7872cf",
+      "sha256": "44fbe98f9ddaaa49ce882ef6c4cb18065f9ce04d7ff1b1174cf576649d685391",
+      "source_tex_sha256": "2a7c9e9e445124c8792a06f3477901367b83328b1761d9263dd0d16511b24558",
+      "use_count": 18,
+      "view_box": [
+        155.478086,
+        72.730817,
+        255.885413,
+        15.524328
+      ],
+      "width": 255.885413,
+      "wrapper_sha256": "61ef704a59b996415ca0e6438343fa963463cd29217cb70b375f16432f8607e4"
+    },
+    {
+      "bytes": 17953,
+      "diagxy_sha256": "3df2bc0a4d57650280fd92006c904fc876ebcbe989cee76ee7a73d9d3fa9eefb",
+      "dvi_sha256": "f10bf651b32962072a1f8cef05d4d1cb112e2ed6e236a3869793ada6cc4d2f9e",
+      "height": 58.371643,
+      "id": "FAOA-2015-DIAGRAM-CH12-003",
+      "normalized_svg_sha256": "e6ae86de23ba4ad4b8958efd5596801610d5f3cf2caf3f25f382c3b35b1c7a8b",
+      "page_count": 1,
+      "path_count": 16,
+      "raw_svg_sha256": "2ca4900bb48f2460b2800ba2f83735e24bb63ddba5844f8ae0a94fe02e2c58c8",
+      "sha256": "e6ae86de23ba4ad4b8958efd5596801610d5f3cf2caf3f25f382c3b35b1c7a8b",
+      "source_tex_sha256": "befea8c24128840cfc1498e077e49c57f48ed44539380555208978f8fdeb0812",
+      "use_count": 47,
+      "view_box": [
+        151.337759,
+        72.719996,
+        163.565152,
+        58.371643
+      ],
+      "width": 163.565152,
+      "wrapper_sha256": "7a5b0f4b655ee94e7ed27e4601a42afee0dfa3efe4f97a8a1a0319bf87813eb8"
+    },
+    {
+      "bytes": 17627,
+      "diagxy_sha256": "3df2bc0a4d57650280fd92006c904fc876ebcbe989cee76ee7a73d9d3fa9eefb",
+      "dvi_sha256": "f3162543ae53b55260772543675fc3a4bf44f59388806c2dc91aa8e023612ac7",
+      "height": 58.371643,
+      "id": "FAOA-2015-DIAGRAM-CH12-004",
+      "normalized_svg_sha256": "b819e956b6040c0b8384514f82a4e79c3f530d74c51bb8ad793a41b1572edb5c",
+      "page_count": 1,
+      "path_count": 15,
+      "raw_svg_sha256": "1b8035f77f4c4456dd904a0024faa92b88f1e6c2c9e9d62557a397d17d10dc38",
+      "sha256": "b819e956b6040c0b8384514f82a4e79c3f530d74c51bb8ad793a41b1572edb5c",
+      "source_tex_sha256": "832a61684f1aa3e41a37a13fc789feec9c170263d42122ae10d6a06aa88e4384",
+      "use_count": 44,
+      "view_box": [
+        151.337759,
+        72.719996,
+        163.565152,
+        58.371643
+      ],
+      "width": 163.565152,
+      "wrapper_sha256": "68b0fa668a5676cd12235ce02957d7b698d949d67cc273dde36b8cdef09357e8"
+    },
+    {
+      "bytes": 9574,
+      "diagxy_sha256": "3df2bc0a4d57650280fd92006c904fc876ebcbe989cee76ee7a73d9d3fa9eefb",
+      "dvi_sha256": "f6b458f2fba374a8325506f33c6764bde67fe133b0e9620563435e63accf6d72",
+      "height": 11.243275,
+      "id": "FAOA-2015-DIAGRAM-CH12-005",
+      "normalized_svg_sha256": "2bbd9a45c6586702292d98fb9280a08b8342769a6fce7c2f1cbff4939fe15065",
+      "page_count": 1,
+      "path_count": 10,
+      "raw_svg_sha256": "d53c480e612fcbf8548734ccaf1dde1d0d1499e571d3eda3283e05b99c4a1c31",
+      "sha256": "2bbd9a45c6586702292d98fb9280a08b8342769a6fce7c2f1cbff4939fe15065",
+      "source_tex_sha256": "5e4a1fe7e079edc9cc1dcf0abe698cb2c822d816935dfbc4359ba1da8623ff3c",
+      "use_count": 19,
+      "view_box": [
+        143.897729,
+        71.953593,
+        178.445204,
+        11.243275
+      ],
+      "width": 178.445204,
+      "wrapper_sha256": "4f3006266f8803cea66a882d48765855b8bc769bfbd9e03cb6f145b37d7a5131"
+    },
+    {
+      "bytes": 11042,
+      "diagxy_sha256": "3df2bc0a4d57650280fd92006c904fc876ebcbe989cee76ee7a73d9d3fa9eefb",
+      "dvi_sha256": "9f4edfa3d1522c3b9f0dfe7f88b85fb51c4a6dd9539eaee6b8a8053826e7442d",
+      "height": 45.859427,
+      "id": "FAOA-2015-DIAGRAM-CH12-006",
+      "normalized_svg_sha256": "4716bb3662e6468092dcd67dc908bc68481bb5c36b588a81cf903d82daf925ee",
+      "page_count": 1,
+      "path_count": 10,
+      "raw_svg_sha256": "6639eea4050024a0a71ee192e08b99afb9f02ca778d36fffb0924d19c8e3e0d5",
+      "sha256": "4716bb3662e6468092dcd67dc908bc68481bb5c36b588a81cf903d82daf925ee",
+      "source_tex_sha256": "e165679676866cd28eb1646668fbbda7512184a82bf984d2710d14611f7a585f",
+      "use_count": 30,
+      "view_box": [
+        154.080541,
+        74.480506,
+        158.079589,
+        45.859427
+      ],
+      "width": 158.079589,
+      "wrapper_sha256": "97d5caec0b03bf9e4d3f3f73ec72b81703ae4e11dccde92cb8763d9678b4c414"
+    },
+    {
+      "bytes": 9659,
+      "diagxy_sha256": "3df2bc0a4d57650280fd92006c904fc876ebcbe989cee76ee7a73d9d3fa9eefb",
+      "dvi_sha256": "1b8466a084ee42aa3acc6857ee081e76f65d4fcccc6a71473f66fe13dbf44449",
+      "height": 12.917056,
+      "id": "FAOA-2015-DIAGRAM-CH12-007",
+      "normalized_svg_sha256": "52935885e9b31d45a495e77afc2a6384595c8f32ba25635eb3d9e3e37f8cb459",
+      "page_count": 1,
+      "path_count": 8,
+      "raw_svg_sha256": "352756f0b2ad8af07ca77b44670baa5acaa69aa3c467f6c93332e558b9f28f06",
+      "sha256": "52935885e9b31d45a495e77afc2a6384595c8f32ba25635eb3d9e3e37f8cb459",
+      "source_tex_sha256": "f038bf4cc79787b79ae2948f5a3cb563c385865915fb49a7d138665a5f1957ee",
+      "use_count": 15,
+      "view_box": [
+        154.72535,
+        72.730817,
+        156.789961,
+        12.917056
+      ],
+      "width": 156.789961,
+      "wrapper_sha256": "b8c68761d12551e1d593fb5930d47a51af74e4a673282e8250f656175918ebf2"
+    },
+    {
+      "bytes": 11506,
+      "diagxy_sha256": "3df2bc0a4d57650280fd92006c904fc876ebcbe989cee76ee7a73d9d3fa9eefb",
+      "dvi_sha256": "7086f4fb011266c36da45622c2370b41a3603c472f55af8275648415a6d69c99",
+      "height": 15.524328,
+      "id": "FAOA-2015-DIAGRAM-CH12-008",
+      "normalized_svg_sha256": "f62ad26b232082ef7b1feedbef5c0b73c52aaaed57d409a372c39cd6e0dceedf",
+      "page_count": 1,
+      "path_count": 11,
+      "raw_svg_sha256": "0f670b0ec064b42d46208f109ac668fa8181c8c998c7ff0ca420e4078b7872cf",
+      "sha256": "f62ad26b232082ef7b1feedbef5c0b73c52aaaed57d409a372c39cd6e0dceedf",
+      "source_tex_sha256": "4b7b9eea349bbb8cdca21d4aa8bf83cbf080d1c6d875b04005b2286f54bb7c66",
+      "use_count": 18,
+      "view_box": [
+        155.478086,
+        72.730817,
+        255.885413,
+        15.524328
+      ],
+      "width": 255.885413,
+      "wrapper_sha256": "e990cb5901a6b005cc3e8148e4bebba979873a7175a2182fc804234937bc645f"
+    },
+    {
+      "bytes": 12497,
+      "diagxy_sha256": "3df2bc0a4d57650280fd92006c904fc876ebcbe989cee76ee7a73d9d3fa9eefb",
+      "dvi_sha256": "0e8a75d583e96e4fdef74aae67e91a4cef69dc501d78c9f4d440bfef325bbb02",
+      "height": 16.147326,
+      "id": "FAOA-2015-DIAGRAM-CH12-009",
+      "normalized_svg_sha256": "965e9c3e3f78ec4ecd9a8d97996a7d3701512bdc6791da80324c6c320f687a78",
+      "page_count": 1,
+      "path_count": 13,
+      "raw_svg_sha256": "b08f4f5ad4c72b50794b8c99c0f3037cbe233d0b6fd79283966d7fc95e19a26c",
+      "sha256": "965e9c3e3f78ec4ecd9a8d97996a7d3701512bdc6791da80324c6c320f687a78",
+      "source_tex_sha256": "99bbc7f4eac44f07438c7d3e4f57077926be26f8bafce8b01583a711925e366d",
+      "use_count": 21,
+      "view_box": [
+        154.080541,
+        72.706693,
+        257.282958,
+        16.147326
+      ],
+      "width": 257.282958,
+      "wrapper_sha256": "748531c5c9885b2df554407f83a543adfb88e2180436092d1ffe4ff801c18289"
+    },
+    {
+      "bytes": 8116,
+      "diagxy_sha256": "3df2bc0a4d57650280fd92006c904fc876ebcbe989cee76ee7a73d9d3fa9eefb",
+      "dvi_sha256": "fe681db7ea65998acfa59de6d2927ec4a7689a95e3e40173ea5d4dc02430f9e7",
+      "height": 13.08537,
+      "id": "FAOA-2015-DIAGRAM-CH12-010",
+      "normalized_svg_sha256": "337acf04a95d286b615038824f0acc9e13f0e3544edef7aacf586a2c1e044506",
+      "page_count": 1,
+      "path_count": 9,
+      "raw_svg_sha256": "27f1a590478241806279e420144479ff95465caa2a4186acddc04052009100c0",
+      "sha256": "337acf04a95d286b615038824f0acc9e13f0e3544edef7aacf586a2c1e044506",
+      "source_tex_sha256": "32d5541f9711b674f88d34105d612c087c6cca9651db45d7965903f19e71519f",
+      "use_count": 17,
+      "view_box": [
+        155.446933,
+        71.933315,
+        255.916566,
+        13.08537
+      ],
+      "width": 255.916566,
+      "wrapper_sha256": "13de19ae835158b1dad9e070a76a83a4a86faa080ada505667999b66104721f5"
+    },
+    {
+      "bytes": 11163,
+      "diagxy_sha256": "3df2bc0a4d57650280fd92006c904fc876ebcbe989cee76ee7a73d9d3fa9eefb",
+      "dvi_sha256": "c91c044a19c27fd032db8160b99f67d999560128668809f00a0bbfc3ced59ad8",
+      "height": 25.280313,
+      "id": "FAOA-2015-DIAGRAM-CH12-011",
+      "normalized_svg_sha256": "143915d00732233696166b714f58924f3b62014cc56837646d11aa8a1b1d42b1",
+      "page_count": 1,
+      "path_count": 11,
+      "raw_svg_sha256": "45c4d4d4a6bdeba269bc21be10c370cdec63abea2f69d1c6075d7f60965e83c8",
+      "sha256": "143915d00732233696166b714f58924f3b62014cc56837646d11aa8a1b1d42b1",
+      "source_tex_sha256": "3ab8f883c78522269d60441aad7a5ca4f3f8e0d2346a3727c99e8f534cb3e3dc",
+      "use_count": 19,
+      "view_box": [
+        159.143976,
+        72.56255,
+        147.952743,
+        25.280313
+      ],
+      "width": 147.952743,
+      "wrapper_sha256": "36c13deed10978949a3426b718abf6e83fe834f4f100b1b291478c2757a70c81"
+    },
+    {
+      "bytes": 8326,
+      "diagxy_sha256": "3df2bc0a4d57650280fd92006c904fc876ebcbe989cee76ee7a73d9d3fa9eefb",
+      "dvi_sha256": "012f769561e5146acaa8c1147b9ac2caca88bc26c90fc032bf0b381367de260f",
+      "height": 13.08537,
+      "id": "FAOA-2015-DIAGRAM-CH12-012",
+      "normalized_svg_sha256": "0f47df0cb39ece8ad1b4ed1be1c8899dc2602dcb639f4675d3eca35afbcf5b01",
+      "page_count": 1,
+      "path_count": 9,
+      "raw_svg_sha256": "605c08cec89f24b6546dcf49411bc6bcff9978a086f5ea7b5cfad5d51fd42308",
+      "sha256": "0f47df0cb39ece8ad1b4ed1be1c8899dc2602dcb639f4675d3eca35afbcf5b01",
+      "source_tex_sha256": "b29b4c89941badd8b02876e79f076e6f88e6ed951f6bea1a918bc57c2e5117a0",
+      "use_count": 17,
+      "view_box": [
+        156.199669,
+        71.933315,
+        255.16383,
+        13.08537
+      ],
+      "width": 255.16383,
+      "wrapper_sha256": "46e7551b790c2f6607d6fc8cebc437c9ec6a67166e41645c08dbd9bee4b40fbe"
+    },
+    {
+      "bytes": 20441,
+      "diagxy_sha256": "3df2bc0a4d57650280fd92006c904fc876ebcbe989cee76ee7a73d9d3fa9eefb",
+      "dvi_sha256": "7df4e0f6d9ba84d63774cf5d59c274ca1aff347fd4b49af79011b46a5caca491",
+      "height": 54.834951,
+      "id": "FAOA-2015-DIAGRAM-CH12-013",
+      "normalized_svg_sha256": "3fdd89a5e5cef59ba565ae2788303ffae46702d3f7cc1960290de4c6b0be1087",
+      "page_count": 1,
+      "path_count": 19,
+      "raw_svg_sha256": "2bee5a5e3803539b168666c64d6d35a06debaec423da8d95f4a9d4ef16489b96",
+      "sha256": "3fdd89a5e5cef59ba565ae2788303ffae46702d3f7cc1960290de4c6b0be1087",
+      "source_tex_sha256": "79e842759c377333fb3e55a1b071d7fdf9901e870d35bf1dc1462bd70800d51a",
+      "use_count": 51,
+      "view_box": [
+        127.417724,
+        73.16086,
+        211.405222,
+        54.834951
+      ],
+      "width": 211.405222,
+      "wrapper_sha256": "6c6b89c5a61e23fa862e4f88fb650ba056086e57a8e9a2179f62783c427f72da"
+    },
+    {
+      "bytes": 11736,
+      "diagxy_sha256": "3df2bc0a4d57650280fd92006c904fc876ebcbe989cee76ee7a73d9d3fa9eefb",
+      "dvi_sha256": "bc26a3e2b85e750ad90913f02a411546fdc03b77a402e025a258050adcad3194",
+      "height": 92.736757,
+      "id": "FAOA-2015-DIAGRAM-CH12-014",
+      "normalized_svg_sha256": "3570802d55d2faeb7c7971c5048bf33165e5924aad6c0c6c761868a5b1256709",
+      "page_count": 1,
+      "path_count": 14,
+      "raw_svg_sha256": "50a31ce6a305eecf715c079c87576611e56835869c30e108fcb0b10fede3d252",
+      "sha256": "3570802d55d2faeb7c7971c5048bf33165e5924aad6c0c6c761868a5b1256709",
+      "source_tex_sha256": "1260b56e0ab45f0a09b8c491e48b9723f4399436f4b4fc1e5650c40df8595b0a",
+      "use_count": 32,
+      "view_box": [
+        189.138383,
+        74.480506,
+        90.683439,
+        92.736757
+      ],
+      "width": 90.683439,
+      "wrapper_sha256": "b4016cf137a2debe0542431aa7922f6c3f522d678e6c8cb3329a2bd933fc188a"
+    },
+    {
+      "bytes": 18993,
+      "diagxy_sha256": "3df2bc0a4d57650280fd92006c904fc876ebcbe989cee76ee7a73d9d3fa9eefb",
+      "dvi_sha256": "bdf1f9ffc94a184c035a773807b8fad88dd62a540f6d2360ba0016e646763d17",
+      "height": 23.573815,
+      "id": "FAOA-2015-DIAGRAM-CH16-001",
+      "normalized_svg_sha256": "3ec0953755ed5ed288e9b0db0c41d0c5957f6d5a8eb94b7d7ff43873a7387bc6",
+      "page_count": 1,
+      "path_count": 18,
+      "raw_svg_sha256": "3245c29ba6e6b3ac099afd29b2a4328452298faef367a25a6fb2a069d9a217dc",
+      "sha256": "3ec0953755ed5ed288e9b0db0c41d0c5957f6d5a8eb94b7d7ff43873a7387bc6",
+      "source_tex_sha256": "b812f6e4a4aa53e855b72817a90f27faad94950d36f8408176dfa6adf5bff777",
+      "use_count": 27,
+      "view_box": [
+        141.586085,
+        72.643145,
+        269.777414,
+        23.573815
+      ],
+      "width": 269.777414,
+      "wrapper_sha256": "0526d5596ac602c59452ea00fd37c7ec351b418cedfb91ea80277b077cc4bf7a"
+    },
+    {
+      "bytes": 18152,
+      "diagxy_sha256": "3df2bc0a4d57650280fd92006c904fc876ebcbe989cee76ee7a73d9d3fa9eefb",
+      "dvi_sha256": "389e5f3d54471b0a236a265c0bf1b1201faa34c4a163f871a7b5ce8330d156f9",
+      "height": 50.944161,
+      "id": "FAOA-2015-DIAGRAM-CH16-002",
+      "normalized_svg_sha256": "f66d18759a35d7344a81b8715d4dc48438ce79eee8284f17f53e7850b9fe5476",
+      "page_count": 1,
+      "path_count": 18,
+      "raw_svg_sha256": "cd0f9135a6565f6c8936c4491f2d704452b048dcf66ef55b9f920d91091beb51",
+      "sha256": "f66d18759a35d7344a81b8715d4dc48438ce79eee8284f17f53e7850b9fe5476",
+      "source_tex_sha256": "5c0afc8144fb4515f2b58fc34d3d5c89a3a4d71e79a811b06e001d312c225d2b",
+      "use_count": 43,
+      "view_box": [
+        153.909395,
+        72.730817,
+        257.454104,
+        50.944161
+      ],
+      "width": 257.454104,
+      "wrapper_sha256": "81678a5d64f473dfebd19e5bc73562988aa022b85bf7f0c10379385cf5605652"
+    },
+    {
+      "bytes": 12109,
+      "diagxy_sha256": "3df2bc0a4d57650280fd92006c904fc876ebcbe989cee76ee7a73d9d3fa9eefb",
+      "dvi_sha256": "c39808bc9e7ac168db03e43845def17b843e660a8ab11e8919e5a446d6000501",
+      "height": 71.88231,
+      "id": "FAOA-2015-DIAGRAM-CH16-003",
+      "normalized_svg_sha256": "9768a2ac327368892bc28b62693c9181e4ba0969fc6c0aa063c6970c4d9981b7",
+      "page_count": 1,
+      "path_count": 13,
+      "raw_svg_sha256": "0734e5c4fec28ca3ba339a0eb01196cae275576c840d91f09806ab5750b06611",
+      "sha256": "9768a2ac327368892bc28b62693c9181e4ba0969fc6c0aa063c6970c4d9981b7",
+      "source_tex_sha256": "62586fef9609eba6022be90c823068ef53b9f7a3118505b3ddd073186295e8ec",
+      "use_count": 28,
+      "view_box": [
+        192.324777,
+        72.723729,
+        80.898001,
+        71.88231
+      ],
+      "width": 80.898001,
+      "wrapper_sha256": "34011ba0894bb52a40059cd656b81ea91e365d7ed0e190ba1fb9d782cccf9639"
+    },
+    {
+      "bytes": 12029,
+      "diagxy_sha256": "3df2bc0a4d57650280fd92006c904fc876ebcbe989cee76ee7a73d9d3fa9eefb",
+      "dvi_sha256": "88a7509acf9d200400d0909924de8d027b61ca61c50f430780c56d224e7bccc7",
+      "height": 72.404809,
+      "id": "FAOA-2015-DIAGRAM-CH16-004",
+      "normalized_svg_sha256": "802114b80f1c4015830e6f0c56bd57d2589d59e67d3ad54537826fc4080e6c62",
+      "page_count": 1,
+      "path_count": 13,
+      "raw_svg_sha256": "4c59c34fbe68370b0e00a7140ffd1405155d92945adbcb1fcee5b112470e5bb2",
+      "sha256": "802114b80f1c4015830e6f0c56bd57d2589d59e67d3ad54537826fc4080e6c62",
+      "source_tex_sha256": "bf731cf9b9fe0b336d1f9323467380e6c9e1320bfcf6c1772b014a33ece84cb3",
+      "use_count": 28,
+      "view_box": [
+        192.619801,
+        72.644028,
+        80.339834,
+        72.404809
+      ],
+      "width": 80.339834,
+      "wrapper_sha256": "179ab665757fba8a3ba935827277a9af5eb3969d6e800c5d0df94e1c834071ba"
+    },
+    {
+      "bytes": 23643,
+      "diagxy_sha256": "3df2bc0a4d57650280fd92006c904fc876ebcbe989cee76ee7a73d9d3fa9eefb",
+      "dvi_sha256": "ce3197a3af479cce63ad9b6d27fd6d909bfdf4951555afaf576fea8ebda7347a",
+      "height": 155.242823,
+      "id": "FAOA-2015-DIAGRAM-CH16-005",
+      "normalized_svg_sha256": "f20bb22843fe4c0f21068059ba51098a7b9f39dcee55cb12e0dc9f8a0e9e4abb",
+      "page_count": 1,
+      "path_count": 25,
+      "raw_svg_sha256": "dbe6b12e89f377b85cd9e1c1c44ff2125a92fcb7e2168b3f321d845ecefb6689",
+      "sha256": "f20bb22843fe4c0f21068059ba51098a7b9f39dcee55cb12e0dc9f8a0e9e4abb",
+      "source_tex_sha256": "5c1d998a8cb5f8b293c4eeb2575896643777162ae0d31d2db294b9f80ee514f7",
+      "use_count": 107,
+      "view_box": [
+        154.954798,
+        72.490894,
+        155.941356,
+        155.242823
+      ],
+      "width": 155.941356,
+      "wrapper_sha256": "7ed5ae5e9e728aa5b2c0e5e24665ea856ad0f8888637b1ce79f33b9781c2698b"
+    },
+    {
+      "bytes": 23065,
+      "diagxy_sha256": "3df2bc0a4d57650280fd92006c904fc876ebcbe989cee76ee7a73d9d3fa9eefb",
+      "dvi_sha256": "ab1a98221365885e812b4ca2156cf5641e668bd1f8d1ee20f97c52c9e72b703a",
+      "height": 53.782384,
+      "id": "FAOA-2015-DIAGRAM-CH16-006",
+      "normalized_svg_sha256": "44bfd38976a8c65eab1124e7e2ca5d8d7fd2b2d4ab16e31287b81708b5143101",
+      "page_count": 1,
+      "path_count": 21,
+      "raw_svg_sha256": "80f0a744df5ddd613160430df42f3905baad9435faf6583c9013f6b0aa0bb23f",
+      "sha256": "44bfd38976a8c65eab1124e7e2ca5d8d7fd2b2d4ab16e31287b81708b5143101",
+      "source_tex_sha256": "0e3b504eeb1f9e03c0513de07370ec6fa7e0687f838a65620e3e0b22b66e549b",
+      "use_count": 52,
+      "view_box": [
+        126.930153,
+        72.033294,
+        284.433346,
+        53.782384
+      ],
+      "width": 284.433346,
+      "wrapper_sha256": "37f2dc19e4992f2e8e69de79a47a170f3a61f7d69a070422374f1501022be5e2"
+    },
+    {
+      "bytes": 17532,
+      "diagxy_sha256": "3df2bc0a4d57650280fd92006c904fc876ebcbe989cee76ee7a73d9d3fa9eefb",
+      "dvi_sha256": "63d0abc7128061089c1f02c5410af070b685b29552e7cbe357c61179bf28612f",
+      "height": 85.322465,
+      "id": "FAOA-2015-DIAGRAM-CH16-007",
+      "normalized_svg_sha256": "544f5a38666a026b5ad95f47b9fd542cacdce084339f78ab1d868d5171bb8b37",
+      "page_count": 1,
+      "path_count": 17,
+      "raw_svg_sha256": "27fcc05fff6b1c4490157beb243126a0cecf150a70d3eb1fb5cb94f4a989c110",
+      "sha256": "544f5a38666a026b5ad95f47b9fd542cacdce084339f78ab1d868d5171bb8b37",
+      "source_tex_sha256": "2bd9e0ec6f1e415ce2755197ac78834f12d68e9a0897a5bfd19e59fd7ada94c4",
+      "use_count": 51,
+      "view_box": [
+        114.352008,
+        73.060541,
+        297.011491,
+        85.322465
+      ],
+      "width": 297.011491,
+      "wrapper_sha256": "cbec87ef5547e3c44774100ae8c95c6ceebef95a4b5359d24e113f7ab2ee323b"
+    },
+    {
+      "bytes": 15812,
+      "diagxy_sha256": "3df2bc0a4d57650280fd92006c904fc876ebcbe989cee76ee7a73d9d3fa9eefb",
+      "dvi_sha256": "9f2e93310b0feedfbf5c77c4d5419676bb055fa625aa009bb11545a3e515c0f4",
+      "height": 65.377115,
+      "id": "FAOA-2015-DIAGRAM-CH16-008",
+      "normalized_svg_sha256": "9a6a0751d150efd4cdbfa67004b616ceb3d4e43aad1791ce6e7ce876c4942057",
+      "page_count": 1,
+      "path_count": 16,
+      "raw_svg_sha256": "3c8c3217823e4829e7ecebb7556f02c5e41dba4918df6a49c3aeb750402c6654",
+      "sha256": "9a6a0751d150efd4cdbfa67004b616ceb3d4e43aad1791ce6e7ce876c4942057",
+      "source_tex_sha256": "b9668968c702b1167e9badb526850f557e28781666ea6e678168756fe7665613",
+      "use_count": 39,
+      "view_box": [
+        197.340428,
+        72.727269,
+        70.862729,
+        65.377115
+      ],
+      "width": 70.862729,
+      "wrapper_sha256": "6ce844f297f411b1a5a9a2cfdb4ce5ca5fa58a83f99f32dc85b7e107f67ac09c"
+    },
+    {
+      "bytes": 10614,
+      "diagxy_sha256": "3df2bc0a4d57650280fd92006c904fc876ebcbe989cee76ee7a73d9d3fa9eefb",
+      "dvi_sha256": "7d777f09ef697c17bf6ba28dc131b44ea80d89c0b0d23ec1ceb976a5ab24d833",
+      "height": 68.279695,
+      "id": "FAOA-2015-DIAGRAM-CH16-009",
+      "normalized_svg_sha256": "0b1416438ba2cc873a957436874922dd4a705efad0d0492a2c5654568359f94c",
+      "page_count": 1,
+      "path_count": 13,
+      "raw_svg_sha256": "1d6ad5134b2c028f67556489b4815ddbe289175163eefff6a9c04d049a89baf7",
+      "sha256": "0b1416438ba2cc873a957436874922dd4a705efad0d0492a2c5654568359f94c",
+      "source_tex_sha256": "c755182eef5f1c86af6b96142a681857b1d1b57c791a82d97b7388825ec2f400",
+      "use_count": 31,
+      "view_box": [
+        199.017428,
+        72.730894,
+        68.405542,
+        68.279695
+      ],
+      "width": 68.405542,
+      "wrapper_sha256": "9452b2ce6b3060ae222ec765d0ca1e8dd6016716d61ab4b70aa9fcded795028e"
+    },
+    {
+      "bytes": 9834,
+      "diagxy_sha256": "3df2bc0a4d57650280fd92006c904fc876ebcbe989cee76ee7a73d9d3fa9eefb",
+      "dvi_sha256": "eec87bb96fae51eec7a19577afaa583ca2c3339d0388757d6dfcc69fcea2cb1c",
+      "height": 11.845736,
+      "id": "FAOA-2015-DIAGRAM-CH06-015",
+      "normalized_svg_sha256": "24cd8ea6ef20b619ac0f3d9e3cdcc69a613c99033b6e36018f61f94f1ee916fa",
+      "page_count": 1,
+      "path_count": 8,
+      "raw_svg_sha256": "c4e8e3f183c531f1c2f52abecc8cfb5c63d57965c8022f30a3bdfa68dd1d9f3a",
+      "sha256": "24cd8ea6ef20b619ac0f3d9e3cdcc69a613c99033b6e36018f61f94f1ee916fa",
+      "source_tex_sha256": "690e30fa4ae662b958805216d1ef2b927987a4bf1b83838b1abad26e171c7717",
+      "use_count": 21,
+      "view_box": [
+        150.872858,
+        74.177055,
+        164.494968,
+        11.845736
+      ],
+      "width": 164.494968,
+      "wrapper_sha256": "cecac2c258a3107fb815eb1eeef4bc0f3c55757885d289223602788df5389fd3"
+    },
+    {
+      "bytes": 22091,
+      "diagxy_sha256": "3df2bc0a4d57650280fd92006c904fc876ebcbe989cee76ee7a73d9d3fa9eefb",
+      "dvi_sha256": "85ce1249f2dd245c4f84f4dbbfd44258b373f93f8a6adb947c432b4c0b0754d9",
+      "height": 202.632491,
+      "id": "FAOA-2015-DIAGRAM-CH06-016",
+      "normalized_svg_sha256": "0d1133e786c42875787925556893485c58e246df4785e37ddab26b892f5d9edf",
+      "page_count": 1,
+      "path_count": 12,
+      "raw_svg_sha256": "719d43166a0016510bedc14e5c7bcaa37484147efdae5b9d876d859d801442a8",
+      "sha256": "0d1133e786c42875787925556893485c58e246df4785e37ddab26b892f5d9edf",
+      "source_tex_sha256": "383446d40293ee23b9707f23f63769233bf121580daa84580877ee512f7428f7",
+      "use_count": 130,
+      "view_box": [
+        133.260453,
+        72.331536,
+        199.719764,
+        202.632491
+      ],
+      "width": 199.719764,
+      "wrapper_sha256": "93a6421181c69d5e0046f03f44e540d673d0262ce9285a01a5c8db8f036744fd"
+    },
+    {
+      "bytes": 9599,
+      "diagxy_sha256": "3df2bc0a4d57650280fd92006c904fc876ebcbe989cee76ee7a73d9d3fa9eefb",
+      "dvi_sha256": "57f320b3f7c9fbc693c00210fd951c2acd32eed80ae0b085e9690349584ffddf",
+      "height": 12.509932,
+      "id": "FAOA-2015-DIAGRAM-CH06-017",
+      "normalized_svg_sha256": "35f803d1fcd395c2f19bec39da50b07f0f8b768db5e49558b1cd3fed614091a8",
+      "page_count": 1,
+      "path_count": 8,
+      "raw_svg_sha256": "8ac7558babb5ece5e8fd03faab3319099c84dab32341311e6419730e2c9514ae",
+      "sha256": "35f803d1fcd395c2f19bec39da50b07f0f8b768db5e49558b1cd3fed614091a8",
+      "source_tex_sha256": "58aea2d1c28c14f1c672f4b28a836b413cf7e1cf6c23021e7edecea6fa7b8197",
+      "use_count": 27,
+      "view_box": [
+        133.712204,
+        73.88924,
+        198.816262,
+        12.509932
+      ],
+      "width": 198.816262,
+      "wrapper_sha256": "a5d3864abbb15a970ac54a656935461f9868c811c45af23632d049b09fdd9a4a"
+    },
+    {
+      "bytes": 9981,
+      "diagxy_sha256": "3df2bc0a4d57650280fd92006c904fc876ebcbe989cee76ee7a73d9d3fa9eefb",
+      "dvi_sha256": "e41cb2cddec4e82fe526a35657e82b35931af45cda668ac75475face52306ea8",
+      "height": 10.413793,
+      "id": "FAOA-2015-DIAGRAM-CH06-018",
+      "normalized_svg_sha256": "60ffcc386d887e0fb1e77d81946cc20cba537663aacf2d0eb622b5e2beec4b3a",
+      "page_count": 1,
+      "path_count": 8,
+      "raw_svg_sha256": "4bf93ee5767a551e2df1e67a4f32c3954e586e5ed866bb09377b6ab4a09a902a",
+      "sha256": "60ffcc386d887e0fb1e77d81946cc20cba537663aacf2d0eb622b5e2beec4b3a",
+      "source_tex_sha256": "546bd6a04187a5d27b6552d5f2b30766712d9dffd60c7ade9509ee6ee15dc4e0",
+      "use_count": 27,
+      "view_box": [
+        133.135692,
+        74.933766,
+        199.969286,
+        10.413793
+      ],
+      "width": 199.969286,
+      "wrapper_sha256": "dd4737d7d237a8b82dafebef4c04ffc59e37713c92d4f82066ce34dc56bd76bc"
+    },
+    {
+      "bytes": 17859,
+      "diagxy_sha256": "3df2bc0a4d57650280fd92006c904fc876ebcbe989cee76ee7a73d9d3fa9eefb",
+      "dvi_sha256": "54f3ccd6c460b9b5fb94e4897d8d7318634de6f159758ddf2261088932cf3d9c",
+      "height": 63.352645,
+      "id": "FAOA-2015-DIAGRAM-CH06-019",
+      "normalized_svg_sha256": "410e7d4ad379770e5e3dc682ae79d8180dca913106772ff2f2c5c707c0a816a2",
+      "page_count": 1,
+      "path_count": 17,
+      "raw_svg_sha256": "a67022a3a1b62f7b834857c7f7a0ae961d12ffb760e611c4164d1051c62a4b57",
+      "sha256": "410e7d4ad379770e5e3dc682ae79d8180dca913106772ff2f2c5c707c0a816a2",
+      "source_tex_sha256": "afab9bf649faf19060bf7c10bda3df1e9ff36353b99353a07db7c9be856b8a1a",
+      "use_count": 70,
+      "view_box": [
+        129.519583,
+        70.658588,
+        281.843916,
+        63.352645
+      ],
+      "width": 281.843916,
+      "wrapper_sha256": "2a7f5c9cd95dfeed83fd6cdc2bd48a8f089bb6452a3be5df7776d6c7a4de6e51"
+    },
+    {
+      "bytes": 16136,
+      "diagxy_sha256": "3df2bc0a4d57650280fd92006c904fc876ebcbe989cee76ee7a73d9d3fa9eefb",
+      "dvi_sha256": "74cfecb05bb689f3e4c1a21e9ddc9dc2f1f3381a45fbff4f314af0fb5aeb5259",
+      "height": 61.256506,
+      "id": "FAOA-2015-DIAGRAM-CH06-020",
+      "normalized_svg_sha256": "8f659d1ebd757a7e4d1196b710390c5e77a6997621232be82edd27221a1628fb",
+      "page_count": 1,
+      "path_count": 14,
+      "raw_svg_sha256": "11d3d914985e70abda00742c80649e135da0ad191c2681195d413ea97d9dbc34",
+      "sha256": "8f659d1ebd757a7e4d1196b710390c5e77a6997621232be82edd27221a1628fb",
+      "source_tex_sha256": "f8d66944456e5fddcb80d6bad342f831abe2581246a271be657c7b65db48662b",
+      "use_count": 67,
+      "view_box": [
+        128.943071,
+        70.6515,
+        208.354513,
+        61.256506
+      ],
+      "width": 208.354513,
+      "wrapper_sha256": "ce51949f5fc5c0baec8f24c1a2386994d5b3dd0f18f3db1e23ab69eac35576ff"
+    },
+    {
+      "bytes": 12162,
+      "diagxy_sha256": "3df2bc0a4d57650280fd92006c904fc876ebcbe989cee76ee7a73d9d3fa9eefb",
+      "dvi_sha256": "8e2d0228282a1fbc077bd263371f2575b64603caa297085b669d2a3a2f930149",
+      "height": 63.017901,
+      "id": "FAOA-2015-DIAGRAM-CH06-021",
+      "normalized_svg_sha256": "95f6cf023b61fcceeb642fb841b59e4c20bb741c548f3eaa335099b4003a3290",
+      "page_count": 1,
+      "path_count": 12,
+      "raw_svg_sha256": "f1ff0515c2e5dbafba560fee9d67ee01d0fb1c6f0a01d6cbc0021b62dd52aac8",
+      "sha256": "95f6cf023b61fcceeb642fb841b59e4c20bb741c548f3eaa335099b4003a3290",
+      "source_tex_sha256": "1f81f8de5c98d3fd2831aa4746e432887f8923022088f059de3d474de65c626c",
+      "use_count": 30,
+      "view_box": [
+        198.199978,
+        70.727468,
+        70.071372,
+        63.017901
+      ],
+      "width": 70.071372,
+      "wrapper_sha256": "32ac83f61a7c23afb21b4466b2c56e86e070e267ebf6abaf1b94f6a300901610"
+    },
+    {
+      "bytes": 12869,
+      "diagxy_sha256": "3df2bc0a4d57650280fd92006c904fc876ebcbe989cee76ee7a73d9d3fa9eefb",
+      "dvi_sha256": "972605aa0237c7a8b4e40a0e7b72c9606d468842adca8e1f7f40af48f777d309",
+      "height": 25.280313,
+      "id": "FAOA-2015-DIAGRAM-CH17-016",
+      "normalized_svg_sha256": "e2e1225e7390eaede24a2ae086fae219a6999737281041793ae5f68c2c984acd",
+      "page_count": 1,
+      "path_count": 14,
+      "raw_svg_sha256": "c5455ccc2b6b285af55c9b496e47440ae14b4649cad24515644414962f3def95",
+      "sha256": "e2e1225e7390eaede24a2ae086fae219a6999737281041793ae5f68c2c984acd",
+      "source_tex_sha256": "914069f29ff8b2b363eb80ab133716bddd546cb306f187b8ea9512e24ab6e6c9",
+      "use_count": 22,
+      "view_box": [
+        159.143976,
+        72.56255,
+        252.219523,
+        25.280313
+      ],
+      "width": 252.219523,
+      "wrapper_sha256": "b3cde8bd15c5fb0711ddffa0bc848d53ca6e9fcaf81cf491a72b5f07ea32720c"
+    },
+    {
+      "bytes": 22476,
+      "diagxy_sha256": "3df2bc0a4d57650280fd92006c904fc876ebcbe989cee76ee7a73d9d3fa9eefb",
+      "dvi_sha256": "911bf4a55c7472ec5c3cd6ce7dabc7f0491b182c50f647e9240e4f8be7304b60",
+      "height": 26.899128,
+      "id": "FAOA-2015-DIAGRAM-CH17-017",
+      "normalized_svg_sha256": "746c776c21bd982922d22166c89969c615047acfb196e59658e5f363d6b00ee5",
+      "page_count": 1,
+      "path_count": 23,
+      "raw_svg_sha256": "bb7680abad53ca0889e198990cca1cea1e78d3032de4570eb22b89f3663be88e",
+      "sha256": "746c776c21bd982922d22166c89969c615047acfb196e59658e5f363d6b00ee5",
+      "source_tex_sha256": "273bf2e9ff3a76d91a0afcfc30f3a509abd9eec117af814bef3a14e9da49a351",
+      "use_count": 47,
+      "view_box": [
+        106.356015,
+        72.727273,
+        305.007484,
+        26.899128
+      ],
+      "width": 305.007484,
+      "wrapper_sha256": "61e6f5f84dca3052a5508a856d87664986ac39c9bbe3ea34185898014ff1b22f"
+    },
+    {
+      "bytes": 18316,
+      "diagxy_sha256": "3df2bc0a4d57650280fd92006c904fc876ebcbe989cee76ee7a73d9d3fa9eefb",
+      "dvi_sha256": "3a90661d0cfb468a404e74d27277226fcd5b26b13fea1854875e499fe75ac593",
+      "height": 64.91611,
+      "id": "FAOA-2015-DIAGRAM-CH06-022",
+      "normalized_svg_sha256": "728ff5e4c69996891cd4f32f3016fca865cf6e435888049b302a0a677cfad8c6",
+      "page_count": 1,
+      "path_count": 18,
+      "raw_svg_sha256": "a078240d05e61f2d705eed899bcd37c45c8accc237dc029252dcb3515a57b47a",
+      "sha256": "728ff5e4c69996891cd4f32f3016fca865cf6e435888049b302a0a677cfad8c6",
+      "source_tex_sha256": "c5aea81ea48b77999101ff5706e18d1948b7aa339809ca42421335c576f4bb96",
+      "use_count": 47,
+      "view_box": [
+        185.837903,
+        70.734745,
+        94.841998,
+        64.91611
+      ],
+      "width": 94.841998,
+      "wrapper_sha256": "64f99ded699b7df721fc1329f8b5cbf99d2cd9b1c2b2231e9701e4b1ac977e03"
+    }
+  ],
+  "toolchain": {
+    "dvisvgm": "dvisvgm 3.6",
+    "latex": "MiKTeX-pdfTeX 4.27 (MiKTeX 26.5)",
+    "lxml": [
+      6,
+      1,
+      1,
+      0
+    ],
+    "pandoc": "pandoc 3.9.0.2",
+    "python": "3.13.9"
+  }
+}

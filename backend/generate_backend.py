@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Regenerate the Chapter 1--10 backend and additive terminology-QA layer."""
+"""Regenerate the latest admitted backend, including the semantic HTML layer."""
 
 from __future__ import annotations
 
@@ -26,14 +26,10 @@ def run_generator(name: str) -> None:
 
 
 def main() -> None:
-    # Earlier chapter projections are immutable inputs to the append-only
-    # Chapter 10 generator. Replaying their historical checkers would wrongly
-    # revalidate obsolete whole-ledger hashes after later chapter appends.
-    # The terminology-QA layer is an immutable additive Chapter 1--9 input.
-    # Its historical generator intentionally requires the exact pre-Chapter-10
-    # terminology file, so replaying it after this append would be invalid.
-    # The full validator still checks its exact ordering, evidence, and IDs.
-    run_generator("generate_ch10_backend.py")
+    # The complete source-text backend is an immutable byte prefix. The latest
+    # generator appends only the admitted semantic-HTML surface, assets,
+    # artifacts, QA events, and relations, then refreshes the exact manifest.
+    run_generator("generate_html_backend.py")
 
 
 if __name__ == "__main__":

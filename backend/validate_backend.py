@@ -4795,4 +4795,9 @@ def main() -> None:
 
 
 if __name__ == "__main__":
-    main()
+    # Historical chapter validators above remain as frozen evidence. The
+    # current whole-backend entrypoint validates the complete source-text byte
+    # prefix plus the additive semantic-HTML surface and auxiliary route map.
+    from validate_html_backend import main as validate_latest_backend
+
+    validate_latest_backend()
