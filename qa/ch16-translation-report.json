@@ -1,0 +1,356 @@
+{
+  "corrections": {
+    "class_counts": {
+      "BIBLIOGRAPHIC_TYPO_SOURCE_REPAIR": 1,
+      "DIAGRAM_TYPO_SOURCE_REPAIR": 1,
+      "FORMAL_SCOPE_CLARIFICATION": 1,
+      "INDEX_TYPO_SOURCE_REPAIR": 1,
+      "MAP_IDENTITY_SOURCE_REPAIR": 1,
+      "MATHEMATICAL_CATEGORY_SOURCE_REPAIR": 1,
+      "MATHEMATICAL_NOTATION_SOURCE_REPAIR": 3,
+      "MATHEMATICAL_SOURCE_REPAIR": 1,
+      "MECHANICAL_PROSE_SOURCE_REPAIR": 1,
+      "MECHANICAL_TEX_SOURCE_REPAIR": 1,
+      "MISSING_THEOREM_HYPOTHESIS": 1,
+      "MISSING_VARIABLE_SOURCE_REPAIR": 1,
+      "STALE_LOCATOR_SOURCE_REPAIR": 1
+    },
+    "ledger_sha256": "9a224bf8833e3504009b696ae3afad4e74967add24c2bedcaf7f44d4d2666794",
+    "records": 15
+  },
+  "errors": [],
+  "identities": {
+    "master_bytes": 10679,
+    "master_sha256": "6e528b0193d3179b58e44169430d043fa5399f7c860f09d832eb3ccd954a5388",
+    "source_bytes": 42614,
+    "source_sha256": "e4a1710bcf5773bf8193bd05f14a1ee82703212f3d123fb4669a4de76ae7e318",
+    "target_bytes": 43804,
+    "target_sha256": "59d745a18c74f9abe2ebe6eda3a78eb7c89bdc7fdef935cbc31ea0a552bfbbc3"
+  },
+  "linkage": {
+    "cumulative_labels": 565,
+    "unresolved_citations": [],
+    "unresolved_references": []
+  },
+  "math": {
+    "active_census": {
+      "source": {
+        "display": 26,
+        "equation": 4,
+        "inline": 672,
+        "total": 702
+      },
+      "target": {
+        "display": 26,
+        "equation": 4,
+        "inline": 670,
+        "total": 700
+      }
+    },
+    "classified_transformations": [
+      {
+        "correction": "FAOA-2015-CH16-CORR-002",
+        "kind": "mathematical_source_repair",
+        "source_ordinals": [
+          29
+        ],
+        "source_values": [
+          "S - UTU^*"
+        ],
+        "target_ordinals": [
+          29
+        ],
+        "target_values": [
+          "S - U^*TU"
+        ]
+      },
+      {
+        "correction": "FAOA-2015-CH16-CORR-002",
+        "kind": "mathematical_source_repair",
+        "source_ordinals": [
+          37
+        ],
+        "source_values": [
+          "S = UTU^*"
+        ],
+        "target_ordinals": [
+          37
+        ],
+        "target_values": [
+          "S = U^*TU"
+        ]
+      },
+      {
+        "correction": null,
+        "kind": "semantic_tex_normalization",
+        "source_ordinals": [
+          74
+        ],
+        "source_values": [
+          "\\norm{T_\\phi} \\le \\norm \\phi_\\infty"
+        ],
+        "target_ordinals": [
+          74
+        ],
+        "target_values": [
+          "\\norm{T_\\phi} \\le \\norm {\\phi}_\\infty"
+        ]
+      },
+      {
+        "correction": null,
+        "kind": "localized_math_text",
+        "source_ordinals": [
+          141
+        ],
+        "source_values": [
+          "\\ofml T = \\{ T_\\phi + K\\colon \\phi \\in \\fml C(\\T) \\text{ and } K \\in \\ofml K(H^2)\\} \\,."
+        ],
+        "target_ordinals": [
+          141
+        ],
+        "target_values": [
+          "\\ofml T = \\{ T_\\phi + K\\colon \\phi \\in \\fml C(\\T) \\text{ dan } K \\in \\ofml K(H^2)\\} \\,."
+        ]
+      },
+      {
+        "correction": "FAOA-2015-CH16-CORR-004",
+        "kind": "mathematical_source_repair",
+        "source_ordinals": [
+          149
+        ],
+        "source_values": [
+          "\\pi \\circ T\\colon \\fml C(\\T) \\sto Q(H^2)\\colon \\phi \\mapsto \\pi(T_\\phi)"
+        ],
+        "target_ordinals": [
+          149
+        ],
+        "target_values": [
+          "\\pi \\circ T\\colon \\fml C(\\T) \\sto \\ofml Q(H^2)\\colon \\phi \\mapsto \\pi(T_\\phi)"
+        ]
+      },
+      {
+        "correction": "FAOA-2015-CH16-CORR-006",
+        "kind": "mathematical_source_repair",
+        "source_ordinals": [
+          179
+        ],
+        "source_values": [
+          "\\beta"
+        ],
+        "target_ordinals": [
+          179
+        ],
+        "target_values": [
+          "T"
+        ]
+      },
+      {
+        "correction": "FAOA-2015-CH16-CORR-008",
+        "kind": "mathematical_source_repair",
+        "source_ordinals": [
+          198
+        ],
+        "source_values": [
+          "\\pi^1(\\C \\setminus 0)"
+        ],
+        "target_ordinals": [
+          198
+        ],
+        "target_values": [
+          "\\pi_1(\\C \\setminus \\{0\\})"
+        ]
+      },
+      {
+        "correction": "FAOA-2015-CH16-CORR-008",
+        "kind": "mathematical_source_repair",
+        "source_ordinals": [
+          200
+        ],
+        "source_values": [
+          "\\pi^1(\\C \\setminus 0)"
+        ],
+        "target_ordinals": [
+          200
+        ],
+        "target_values": [
+          "\\pi_1(\\C \\setminus \\{0\\})"
+        ]
+      },
+      {
+        "correction": "FAOA-2015-CH16-CORR-010",
+        "kind": "mathematical_source_repair",
+        "source_ordinals": [
+          244
+        ],
+        "source_values": [
+          "\\label{005431ii} \\xymatrix{ \\vc 0\\ar[r] & \\ofml K\\ar[r]^\\iota\\ar[d]_{\\psi|_{\\ofml K)}} & \\ofml E\\ar[r]^\\phi\\ar[d]^\\psi & A\\ar[r]\\ar@{=}[d] & \\vc 0 \\\\ \\vc 0\\ar[r] & \\ofml K\\ar[r]^\\iota & \\ofml E\\,'\\ar[r]^{\\phi\\,'} & A\\ar[r] & \\vc 0 }"
+        ],
+        "target_ordinals": [
+          244
+        ],
+        "target_values": [
+          "\\label{005431ii} \\xymatrix{ \\vc 0\\ar[r] & \\ofml K\\ar[r]^\\iota\\ar[d]_{\\psi|_{\\ofml K}} & \\ofml E\\ar[r]^\\phi\\ar[d]^\\psi & A\\ar[r]\\ar@{=}[d] & \\vc 0 \\\\ \\vc 0\\ar[r] & \\ofml K\\ar[r]^\\iota & \\ofml E\\,'\\ar[r]^{\\phi\\,'} & A\\ar[r] & \\vc 0 }"
+        ]
+      },
+      {
+        "correction": "FAOA-2015-CH16-CORR-011",
+        "kind": "mathematical_source_repair",
+        "source_ordinals": [
+          353
+        ],
+        "source_values": [
+          "\\pi_2\\colon \\ofml E \\sto \\ofml A\\colon T \\oplus a \\mapsto a"
+        ],
+        "target_ordinals": [
+          353
+        ],
+        "target_values": [
+          "\\pi_2\\colon \\ofml E \\sto A\\colon T \\oplus a \\mapsto a"
+        ]
+      },
+      {
+        "correction": "FAOA-2015-CH16-CORR-012",
+        "kind": "mathematical_source_repair_restructure",
+        "source_ordinals": [
+          365,
+          366,
+          367,
+          368,
+          369
+        ],
+        "source_values": [
+          "*\\,",
+          "\\tau_1",
+          "\\tau_2",
+          "A",
+          "\\ofml Q(H)"
+        ],
+        "target_ordinals": [
+          365,
+          366,
+          367
+        ],
+        "target_values": [
+          "j=1,2",
+          "\\tau_j\\colon A \\sto \\ofml Q(H)",
+          "*\\,"
+        ]
+      },
+      {
+        "correction": "FAOA-2015-CH16-CORR-012",
+        "kind": "mathematical_source_repair_insert",
+        "source_ordinals": [
+          372
+        ],
+        "source_values": [
+          "H"
+        ],
+        "target_ordinals": [
+          370,
+          371
+        ],
+        "target_values": [
+          "U",
+          "H"
+        ]
+      },
+      {
+        "correction": null,
+        "kind": "localized_ordinal",
+        "source_ordinals": [
+          542
+        ],
+        "source_values": [
+          "j^{\\text{th}}"
+        ],
+        "target_ordinals": [
+          541
+        ],
+        "target_values": [
+          "j"
+        ]
+      },
+      {
+        "correction": null,
+        "kind": "localized_ordinal",
+        "source_ordinals": [
+          543
+        ],
+        "source_values": [
+          "k^{\\text{th}}"
+        ],
+        "target_ordinals": [
+          542
+        ],
+        "target_values": [
+          "k"
+        ]
+      },
+      {
+        "correction": "FAOA-2015-CH16-CORR-015",
+        "kind": "mathematical_source_repair_delete",
+        "source_ordinals": [
+          659
+        ],
+        "source_values": [
+          "*\\,"
+        ],
+        "target_ordinals": [],
+        "target_values": []
+      }
+    ],
+    "formula_affecting_correction_ids": [
+      "FAOA-2015-CH16-CORR-002",
+      "FAOA-2015-CH16-CORR-004",
+      "FAOA-2015-CH16-CORR-006",
+      "FAOA-2015-CH16-CORR-008",
+      "FAOA-2015-CH16-CORR-010",
+      "FAOA-2015-CH16-CORR-011",
+      "FAOA-2015-CH16-CORR-012",
+      "FAOA-2015-CH16-CORR-015"
+    ],
+    "unclassified_differences": 0
+  },
+  "rights_and_provenance": {
+    "author": "John M. Erdman",
+    "excluded_components_absent": true,
+    "license": "CC BY-SA 4.0",
+    "model_provenance": "OpenAI Codex gpt-5.6-sol, Ultra",
+    "nonendorsement_present": true
+  },
+  "schema_version": "o008.ch16-translation-qa.v1",
+  "status": "pass",
+  "structure": {
+    "citations": 59,
+    "defined_term_hooks": 29,
+    "environment_counts": {
+      "bmatrix": 12,
+      "center": 1,
+      "conv": 1,
+      "cor": 6,
+      "defn": 21,
+      "enumerate": 1,
+      "equation": 4,
+      "exam": 15,
+      "notn": 3,
+      "proof": 31,
+      "prop": 38,
+      "rem": 1,
+      "thm": 8
+    },
+    "environment_openings": 142,
+    "examples": 15,
+    "exercises": 0,
+    "index_hooks": 107,
+    "labels": 36,
+    "manual_equation_tags": 1,
+    "proof_hints": 0,
+    "proofs": 31,
+    "reader_semantic_environment_openings": 124,
+    "references": 28,
+    "sections": 4,
+    "source_records": 1000,
+    "target_records": 1000
+  },
+  "unit_id": "FAOA-2015-CH16"
+}

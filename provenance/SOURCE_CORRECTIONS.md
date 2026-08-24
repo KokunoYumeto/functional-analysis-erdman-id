@@ -194,6 +194,58 @@ No upstream contact occurs during production. These entries are held for the
 single deduplicated post-corpus report only if that report is separately
 authorized.
 
+## Chapter 16
+
+The following 15 source-facing correction groups are adjudicated and applied
+in `source/id-ID/extensions-id.tex`. The exact machine-verifiable ledger is
+`provenance/SOURCE_CORRECTIONS_CH16.json`; it binds every inclusive source and
+target line range, correction class, normalized snippet hash, and required
+target anchor.
+
+Mechanical, notation, and bibliographic repairs:
+
+1. `extensions.tex:13`: insert the missing separation after `\begin{prop}`.
+2. `extensions.tex:254--257`: restore the established Calkin-algebra macro in
+   `\ofml Q(H^2)`.
+3. `extensions.tex:256`: read the malformed “and isomorphism” as the intended
+   “an isomorphism.”
+4. `extensions.tex:312--314`: repair the visibly split Douglas theorem number
+   `7.2 6` to `7.26`.
+5. `extensions.tex:407`: replace the stale “after section 9.2” index locator
+   by the stable local locator “mulai bagian Penjumlahan Ekstensi.”
+6. `extensions.tex:444--449`: remove the extra parenthesis from
+   `\psi|_{\ofml K)}` in the extension-equivalence diagram.
+7. `extensions.tex:620--634`: repair both index-only spellings `Topelitz` to
+   `Toeplitz`.
+
+Mathematical, type, map-identity, and scope repairs:
+
+8. `extensions.tex:42--58`: with the declared unitary `U:H\to K`, replace the
+   ill-typed conjugations `UTU^*` by `U^*TU` in both essential and ordinary
+   unitary equivalence.
+9. `extensions.tex:61--63`: require the separable Hilbert spaces in
+   Proposition `005134` to be infinite-dimensional; equality of essential
+   spectra alone does not determine finite-dimensional multiplicities.
+10. `extensions.tex:298--305`: identify `T`, not `\beta`, as the continuous
+    right inverse/section, consistently with `\beta\circ T=I`.
+11. `extensions.tex:344--345`: replace both malformed punctured-plane groups
+    `\pi^1(\C\setminus0)` by `\pi_1(\C\setminus\{0\})`.
+12. `extensions.tex:547--551`: give `\pi_2` codomain `A`, not the accidental
+    font form `\ofml A`, in the pullback proof.
+13. `extensions.tex:559--566`: name the implementing unitary `U` before using
+    it in `\tau_2=\operatorname{ad}_U\tau_1`.
+14. `extensions.tex:886--891`: declare `\phi` to be a unital completely
+    positive linear map in Voiculescu's theorem; without this hypothesis the
+    printed assertion is false.
+15. `extensions.tex:909--924`: retain that `\tau` is unital and replace the
+    claimed star-homomorphic lift by a unital completely positive linear lift.
+    A star-homomorphic lift characterizes a split extension, not merely a
+    semisplit one.
+
+No upstream contact occurs during production. These entries are held for the
+single deduplicated post-corpus report only if that report is separately
+authorized.
+
 ## Chapter 15
 
 The following nine source decisions are adjudicated and applied in

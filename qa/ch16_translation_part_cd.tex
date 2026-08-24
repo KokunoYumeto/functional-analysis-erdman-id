@@ -1,0 +1,596 @@
+\section{Penjumlahan Ekstensi}
+
+ \index{konvensi!ruang Hilbert separabel dan berdimensi tak hingga (mulai bagian Penjumlahan Ekstensi)}%
+\begin{center}
+ \fbox{\parbox{5.5in}{\textbf{Mulai sekarang semua ruang Hilbert akan separabel dan berdimensi
+ tak hingga.}}}
+\end{center}
+
+\begin{prop} Suatu operator ruang Hilbert $T$ bersifat swaadjoin secara esensial jika dan hanya jika
+operator itu merupakan perturbasi kompak dari suatu operator swaadjoin.
+\end{prop}
+
+\begin{prop}\label{005414} Dua operator ruang Hilbert $T_1$ dan $T_2$ yang swaadjoin secara esensial
+ekuivalen uniter secara esensial jika dan hanya jika keduanya memiliki spektrum esensial yang
+sama.
+\end{prop}
+
+Hasil yang analog tidak berlaku bagi operator normal secara esensial.
+
+\begin{exam} Operator Toeplitz $T_\zeta$ dan $T_{\zeta^2}$ bersifat normal secara esensial dengan
+spektrum esensial yang sama, tetapi keduanya tidak ekuivalen uniter secara esensial.
+\end{exam}
+
+\begin{defn} Sekarang kita membatasi perhatian pada suatu kelas khusus ekstensi. Jika $H$ merupakan
+ruang Hilbert dan $A$ merupakan aljabar-$C^*$, kita mengatakan bahwa $(\ofml E,\phi)$ adalah suatu
+ \index{ekstensi!$\ofml K(H)$ oleh $A$}%
+\df{ekstensi $\ofml K = \ofml K(H)$ oleh $A$} jika $\ofml E$ merupakan subaljabar-$C^*$ beridentitas
+dari $\ofml B(H)$ yang memuat $\ofml K$ dan $\phi$ merupakan homomorfisme-$*\,$ beridentitas sedemikian sehingga
+barisan
+ \begin{equation}\label{005431i}
+    \vc 0 \to \ofml K \to^\iota \ofml E \to^\phi A \to \vc 0
+ \end{equation}
+(dengan $\iota$ pemetaan inklusi) eksak. Bahkan, kita hampir secara eksklusif akan
+memperhatikan kasus $A = \fml C(X)$ untuk suatu ruang metrik kompak~$X$. Kita
+mengatakan bahwa dua ekstensi $(\ofml E,\phi)$ dan $(\ofml E\,',\phi\,')$
+ \index{ekuivalensi!ekstensi}%
+ \index{ekstensi!ekuivalensi}%
+\df{ekuivalen} jika terdapat suatu isomorfisme $\psi\colon \ofml E \sto \ofml E\,'$ yang
+membuat diagram berikut komutatif.
+ \begin{equation}\label{005431ii}
+   \xymatrix{
+     \vc 0\ar[r] & \ofml K\ar[r]^\iota\ar[d]_{\psi|_{\ofml K}} & \ofml E\ar[r]^\phi\ar[d]^\psi
+                 & A\ar[r]\ar@{=}[d] & \vc 0 \\
+     \vc 0\ar[r] & \ofml K\ar[r]^\iota & \ofml E\,'\ar[r]^{\phi\,'} & A\ar[r] & \vc 0
+ }\end{equation}
+Perhatikan bahwa definisi ini sedikit berbeda dari \emph{ekuivalensi kuat}
+pada~\ref{0015151}. Keluarga semua kelas ekuivalensi ekstensi semacam ini kita lambangkan
+ \index{ext@$\ext A$, $\ext X$!kelas ekuivalensi ekstensi}%
+dengan~$\ext A$. Jika $A = \fml C(X)$, kita menulis $\ext X$, bukan~$\ext \fml C(X)$.
+\end{defn}
+
+\begin{defn} Jika $U\colon H_1 \sto H_2$ merupakan pemetaan uniter di antara ruang-ruang Hilbert, maka pemetaan
+   \[ \ad_U\colon \ofml B(H_1) \sto \ofml B(H_2)\colon T \mapsto UTU^* \]
+disebut
+ \index{konjugasi}%
+ \index{adU@$\ad_U$ (konjugasi oleh $U$)}%
+\df{konjugasi} oleh~$U$.
+\end{defn}
+
+Jelas bahwa $\ad_U$ merupakan isomorfisme di antara aljabar-$C^*$ $\ofml B(H_1)$ dan
+$\ofml B(H_2)$. Khususnya, jika $U$ merupakan operator uniter pada $H_1$, maka $\ad_U$ merupakan
+automorfisme dari $\ofml K(H_1)$ maupun $\ofml B(H_1)$. Lebih lanjut, konjugasi merupakan
+satu-satunya automorfisme aljabar-$C^*$~$\ofml K(H)$.
+
+\begin{prop}\label{005436} Jika $H$ merupakan ruang Hilbert dan $\phi\colon \ofml K(H) \sto \ofml K(H)$
+merupakan suatu automorfisme, maka $\phi = \ad_U$ untuk suatu operator uniter $U$ pada~$H$.
+\end{prop}
+
+\begin{proof} Lihat \cite{Davidson:1996}, lema V.6.1.  \ns \end{proof}
+
+\begin{prop} Jika $H$ merupakan ruang Hilbert dan $A$ merupakan aljabar-$C^*$, maka ekstensi
+$(\ofml E,\phi)$ dan $(\ofml E\,',\phi\,')$ dalam $\ext A$ ekuivalen jika dan hanya jika
+terdapat suatu operator uniter $U$ dalam $\ofml B(H)$ sedemikian sehingga $\ofml E\,' = U \ofml E
+U^*$ dan $\phi = \phi\,' \ad_U$.
+\end{prop}
+
+\begin{exam} Andaikan $T$ merupakan operator normal secara esensial pada suatu ruang Hilbert~$H$. Misalkan
+ \index{E@$\ofml E_T$ (aljabar-$C^*$ yang dibangkitkan oleh $T$ dan $\ofml K(H)$)}%
+$\ofml E_T$ merupakan aljabar-$C^*$ beridentitas yang dibangkitkan oleh $T$ dan~$\ofml K(H)$. Karena
+$\pi(T)$ merupakan elemen normal aljabar Calkin, aljabar-$C^*$ beridentitas $\ofml
+E_T/\ofml K(H)$ yang dibangkitkannya bersifat komutatif. Jadi \emph{teorema spektral
+abstrak}~\ref{00144} memberi kita suatu isomorfisme aljabar-$C^*$ $\Psi\colon \fml C(\sigma_e(T))
+\sto \ofml E_T/\ofml K(H)$. Misalkan $\sbsb{\phi}T = \Psi^{-1} \circ\pi\bigr|_{\ofml E_T}$.
+Maka barisan
+  \[ \vc 0 \to \ofml K(H) \to^\iota \ofml E_T \to^{\sbsb{\phi}T} \fml C(\sigma_e(T)) \to \vc 0 \]
+eksak. Ini adalah
+ \index{ekstensi!yang ditentukan oleh suatu operator normal secara esensial}%
+\df{ekstensi $\ofml K(H)$ yang ditentukan oleh~$T$}.
+\end{exam}
+
+\begin{prop} Misalkan $T$ dan $T\,'$ operator normal secara esensial pada suatu ruang Hilbert~$H$. Kedua
+operator itu ekuivalen uniter secara esensial jika dan hanya jika ekstensi yang
+ditentukannya ekuivalen.
+\end{prop}
+
+\begin{prop} Jika $\ofml E$ merupakan aljabar-$C^*$ sedemikian sehingga $\ofml K(H) \subseteq \ofml E \subseteq
+\ofml B(H)$ untuk suatu ruang Hilbert~$H$, $X$ merupakan subhimpunan kompak tak kosong dari $\C$, dan
+$(\ofml E,\phi)$ merupakan ekstensi $\ofml K(H)$ oleh $\fml C(X)$, maka setiap elemen
+dari $\ofml E$ bersifat normal secara esensial.
+\end{prop}
+
+\begin{defn} Jika $\phi_1\colon A_1 \sto B$ dan $\phi_2\colon A_2 \sto B$ merupakan
+homomorfisme-$*\,$ beridentitas di antara aljabar-$C^*$, maka suatu
+ \index{tarik balik}%
+\df{tarik balik $A_1$ dan $A_2$ sepanjang $\phi_1$ dan $\phi_2$}, yang dilambangkan dengan
+$(P,\pi_1,\pi_2)$, adalah aljabar-$C^*$ $P$ beserta sepasang
+homomorfisme-$*\,$ beridentitas $\pi_1\colon P \sto A_1$ dan $\pi_2\colon P \sto A_2$ yang memenuhi
+dua syarat berikut:
+ \begin{enumerate}
+    \item[(i)] diagram
+        \[ \xy
+          \Square[P`A_2`A_1`B;\pi_2`\pi_1`\phi_2`\phi_1]
+      \endxy \]
+bersifat komutatif; dan
+    \item[(ii)] jika $\rho_1\colon Q \sto A_1$ dan $\rho_2\colon Q \sto A_2$ merupakan
+homomorfisme-$*\,$ beridentitas dari aljabar-$C^*$ sedemikian sehingga diagram
+        \[ \xy
+          \Square[Q`A_2`A_1`B;\rho_2`\rho_1`\phi_2`\phi_1]
+      \endxy \]
+bersifat komutatif, maka terdapat suatu homomorfisme-$*\,$ beridentitas tunggal $\Psi\colon Q \sto P$
+yang membuat diagram
+       \[  \xy
+         \pullback|brrb|<800,800>[P`A_2`A_1`B;\pi_2`\pi_1`\phi_2`\phi_1]%
+         |amb|/{>}`{-->}`{>}/<500,500>[Q;\rho_2`\Psi`\rho_1]
+       \endxy \]
+komutatif.
+ \end{enumerate}
+\end{defn}
+
+\begin{prop} Misalkan $H$ ruang Hilbert, $A$ aljabar-$C^*$ beridentitas, dan $\tau\colon
+A \sto \ofml Q(H)$ monomorfisme-$*\,$ beridentitas. Maka, hingga isomorfisme,
+terdapat tarik balik tunggal $(\ofml E,\pi_1,\pi_2)$ dari $A$ dan $\ofml B(H)$ sepanjang $\tau$ dan
+$\pi$ sedemikian sehingga $(\ofml E,\pi_2)$ merupakan ekstensi $\ofml K(H)$ oleh $A$ yang membuat
+diagram berikut komutatif.
+ \begin{equation}\label{005464i}
+   \xymatrix{
+     \vc 0\ar[r] & \ofml K(H)\ar[r]^\iota\ar@{=}[d] & \ofml E\ar[r]^{\pi_2}\ar[d]^{\pi_1}
+                 & A\ar[r]\ar[d]^\tau & \vc 0 \\
+     \vc 0\ar[r] & \ofml K(H)\ar[r] & \ofml B(H)\ar[r]^{\pi} & \ofml Q(H)\ar[r] & \vc 0
+ }\end{equation}
+\end{prop}
+
+\begin{proof}(Sketsa.) Misalkan $\ofml E = \{T \oplus a \in \ofml B(H) \oplus A\colon \tau(a) =
+\pi(T)\}$, $\pi_1\colon \ofml E \sto \ofml B(H)\colon T \oplus a \mapsto T$, dan
+$\pi_2\colon \ofml E \sto A\colon T \oplus a \mapsto a$. Ketunggalan (setiap
+tarik balik) dibuktikan memakai ``omong kosong abstrak'' yang biasa.
+\end{proof}
+
+\begin{prop}\label{005466} Misalkan $H$ ruang Hilbert, $A$ aljabar-$C^*$ beridentitas, dan
+$(\ofml E,\phi)$ suatu ekstensi $\ofml K(H)$ oleh~$A$. Maka terdapat suatu
+monomorfisme-$*\,$ tunggal $\tau \colon A \sto \ofml Q(H)$ yang membuat
+diagram~\eqref{005464i} komutatif.
+\end{prop}
+
+\begin{defn} Misalkan $H$ ruang Hilbert dan $A$ aljabar-$C^*$ beridentitas. Untuk $j=1,2$, misalkan
+$\tau_j\colon A \sto \ofml Q(H)$ suatu monomorfisme-$*\,$ beridentitas. Kedua pemetaan ini
+ \index{uniter!ekuivalensi!monomorfisme-$*\,$}%
+ \index{ekuivalensi!uniter!monomorfisme-$*\,$}%
+\df{ekuivalen secara uniter} jika terdapat suatu operator uniter $U$ pada $H$ sedemikian sehingga $\tau_2 =
+\ad_U \tau_1$. Ekuivalensi uniter monomorfisme-$*\,$ beridentitas tentu merupakan suatu
+relasi ekuivalensi. Kelas ekuivalensi yang memuat $\tau_1$ dilambangkan
+dengan~$[\tau_1]$.
+\end{defn}
+
+\begin{prop} Misalkan $H$ ruang Hilbert dan $A$ aljabar-$C^*$ beridentitas. Dua ekstensi
+$\ofml K(H)$ oleh $A$ ekuivalen jika dan hanya jika monomorfisme-$*\,$ beridentitas yang
+bersesuaian dengannya (lihat~\ref{005466}) ekuivalen secara uniter.
+\end{prop}
+
+\begin{cor} Jika $H$ ruang Hilbert dan $A$ aljabar-$C^*$ beridentitas, terdapat suatu korespondensi
+satu-satu di antara kelas-kelas ekuivalensi ekstensi $\ofml K(H)$ oleh $A$ dan
+kelas-kelas ekuivalensi uniter monomorfisme-$*\,$ beridentitas dari $A$ ke aljabar
+Calkin~$\ofml Q(H)$.
+\end{cor}
+
+\begin{conv} Berdasarkan akibat sebelumnya, kita akan memandang anggota $\ext A$ (atau
+$\ext X$) sebagai
+ \index{konvensi!E@$\ext A$ terdiri atas ekstensi atau morfisme}%
+kelas ekuivalensi ekstensi atau kelas ekuivalensi uniter monomorfisme-$*\,$,
+mana pun yang paling sesuai pada saat itu.
+\end{conv}
+
+\begin{prop}\label{0054702} Setiap ruang Hilbert $H$ (yang separabel dan berdimensi tak hingga)
+isomorfik secara isometrik dengan $H \oplus H$. Jadi aljabar-$C^*$ $\ofml B(H)$ dan $\ofml
+B(H \oplus H)$ isomorfik.
+\end{prop}
+
+\begin{defn}\label{0054715} Misalkan $\tau_1$, $\tau_2 \colon A \sto \ofml Q(H)$ merupakan
+monomorfisme-$*\,$ beridentitas (dengan $A$ aljabar-$C^*$ dan $H$ ruang Hilbert). Kita mendefinisikan
+suatu monomorfisme-$*\,$ beridentitas $\tau_1 \oplus \tau_2 \colon A \sto \ofml Q(H)$ melalui
+  \[ (\tau_1 \oplus \tau_2)(a) := \rho\bigl(\tau_1(a) \oplus \tau_2(a)\bigr) \]
+untuk setiap $a \in A$, dengan (seperti dalam Douglas\cite{Douglas:1980}) $\nu$ isomorfisme yang
+ditetapkan dalam~\ref{0054702} dan $\rho$ pemetaan yang membuat diagram berikut
+komutatif.
+ \begin{equation}\label{0054715i}
+  \xymatrix{
+    \ofml B(H) \oplus \ofml B(H)\ar[r]\ar[dd]_{\pi \oplus \pi} & \ofml B(H \oplus H)\ar[r]^-\nu
+                  & \ofml B(H)\ar[dd]^\pi   \\ & & & \\
+    \ofml Q(H) \oplus \ofml Q(H)\ar[rr]_-\rho && \ofml Q(H)
+ }\end{equation}
+ Kemudian kita mendefinisikan operasi penjumlahan yang jelas pada $\ext A$:
+   \[ [\tau_1] + [\tau_2] := [\tau_1 \oplus \tau_2] \]
+untuk $[\tau_1]$, $[\tau_2] \in \ext A$.
+\end{defn}
+
+\begin{prop} Operasi penjumlahan (yang diberikan dalam~\ref{0054715}) pada $\ext A$ terdefinisi dengan baik
+dan di bawah operasi ini $\ext A$ menjadi semigrup komutatif.
+\end{prop}
+
+\begin{defn}\label{0054811} Misalkan $A$ aljabar-$C^*$ beridentitas dan $\mathbf r\colon A \sto
+\ofml B(H)$ representasi tak terdegenerasi dari $A$ pada suatu ruang Hilbert~$H$. Misalkan $P$
+proyeksi ruang Hilbert dan $M$ jangkauan~$P$. Andaikan $P\mathbf r(a) -
+\mathbf r(a)P \in \ofml K(H)$ untuk setiap $a~\in~A$. Lambangkan dengan $P_M$ proyeksi $P$
+yang himpunan kodomainnya sama dengan jangkauannya; yaitu, $P_M\colon H \sto M \colon x \mapsto
+Px$. Maka untuk setiap $a \in A$ kita mendefinisikan
+ \index{operator!Toeplitz!abstrak}%
+ \index{Toeplitz!operator!abstrak}%
+ \index{abstrak!operator!Toeplitz}%
+\df{operator Toeplitz abstrak} $T_a \in \ofml B(M)$
+ \index{simbol!operator Toeplitz abstrak}%
+ \index{T@$T_a$ (operator Toeplitz abstrak)}%
+\df{bersimbol $a$ yang dikaitkan dengan} pasangan~$(\mathbf r,P)$ melalui $T_a = P_M\mathbf
+r(a)\bigr|_M$.
+\end{defn}
+
+\begin{defn} Gunakan notasi seperti dalam definisi sebelumnya~\ref{0054811}. Kemudian kita mendefinisikan
+ \index{ekstensi!Toeplitz!abstrak}%
+ \index{Toeplitz!ekstensi!abstrak}%
+ \index{abstrak!ekstensi!Toeplitz}%
+\df{ekstensi Toeplitz abstrak $\tau_P$ yang dikaitkan dengan pasangan $(\mathbf r,P)$} melalui
+   \[ \tau_P\colon A \sto \ofml Q(M)\colon a \mapsto \pi(T_a)\,. \]
+\end{defn}
+
+Perhatikan bahwa (monomorfisme-$*\,$ beridentitas yang dikaitkan dengan) ekstensi Toeplitz konkret
+yang didefinisikan dalam~\ref{0052531} merupakan contoh ekstensi Toeplitz abstrak, dan
+juga bahwa secara umum ekstensi Toeplitz abstrak tidak harus injektif.
+
+\begin{defn} Misalkan $A$ aljabar-$C^*$ beridentitas dan $H$ ruang Hilbert. Dalam semangat
+\cite{HigsonR:2000}, definisi 2.7.6, kita mengatakan bahwa suatu monomorfisme-$*\,$ beridentitas
+$\tau\colon A \sto \ofml Q(H)$ bersifat
+ \index{semiterbelah}%
+\df{semiterbelah} jika terdapat suatu monomorfisme-$*\,$ beridentitas $\tau\,'\colon A \sto \ofml
+Q(H)$ sedemikian sehingga $\tau \oplus \tau'$ terbelah.
+\end{defn}
+
+\begin{prop} Andaikan $A$ aljabar-$C^*$ beridentitas dan $H$ ruang Hilbert. Maka suatu
+monomorfisme-$*\,$ beridentitas $\tau\colon A \sto \ofml Q(H)$ semiterbelah jika dan hanya jika
+ekuivalen secara uniter dengan suatu ekstensi Toeplitz abstrak.
+\end{prop}
+
+\begin{proof} Lihat \cite{HigsonR:2000}, proposisi 2.7.10.  \ns \end{proof}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\vskip .2 in
+
+
+%\section{Hasil Kali Tensor Aljabar-$C^*$}
+
+
+\vskip .2 in
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Pemetaan Positif Lengkap}
+Dalam contoh~\ref{001306} ditunjukkan bagaimana himpunan $\mathbf M_n$ semua matriks $n \times n$
+atas bilangan kompleks dapat dijadikan aljabar-$C^*$. Sekarang kita memperumum contoh itu ke
+aljabar $\M nA$ semua matriks $n \times n$ yang unsur-unsurnya berasal dari aljabar-$C^*$~$A$.
+
+\begin{exam} Dalam contoh~\ref{000533a} dinyatakan bahwa jika $A$ merupakan aljabar-$C^*$, maka di bawah
+operasi aljabar biasa, himpunan $\M nA$ semua matriks $n \times n$ yang unsur-unsurnya berasal dari
+$A$ merupakan suatu aljabar. Aljabar ini dapat dijadikan aljabar-$*\,$ dengan mengambil transposisi
+konjugat sebagai involusi. Artinya, definisikan
+   \[ [ a_{ij}]^* := \bigl[ {a_{j\,i}}^*\bigr] \]
+dengan $a_{ij} \in A$ untuk $1 \le i,j \le n$.
+
+Misalkan $H$ ruang Hilbert. Untuk sementara, ruang itu tidak harus berdimensi tak hingga atau
+separabel. Lambangkan dengan $H^n$ jumlah langsung rangkap-$n$-nya. Artinya,
+   \[ H^n := \bigoplus_{k=1}^n H_k \]
+dengan $H_k = H$ untuk $k = 1, \dots, n$. Misalkan $[T_{jk}] \in \mathbf M_n(\ofml B(H))$. Untuk
+$\vc x = x_1 \oplus \dots \oplus x_n \in H^n$, definisikan
+   \[ \vc T \colon H^n \sto H^n \colon \vc x \mapsto [T_{jk}] \vc x =
+            \sum_{k=1}^n T_{1k}x_k \oplus \dots \oplus \sum_{k=1}^n T_{nk}x_k \,. \]
+Maka $\vc T \in \ofml B(H^n)$. Lebih lanjut, pemetaan
+   \[ \Psi \colon \mathbf M_n\bigl(\ofml B(H)\bigr) \sto \ofml B(H^n) \colon
+             [T_{jk}] \mapsto \vc T \]
+merupakan isomorfisme aljabar-$*\,$. Gunakan $\Psi$ untuk memindahkan norma operator pada $\ofml
+B(H^n)$ ke~$\mathbf M_n\bigl(\ofml B(H)\bigr)$. Artinya, definisikan
+   \[ \bignorm{\,[T_{jk}]\,} := \norm{\vc T}\,. \]
+Ini menjadikan $\mathbf M_n\bigl(\ofml B(H)\bigr)$ aljabar-$C^*$ yang isomorfik dengan~$\ofml
+B(H^n)$.
+
+Sekarang andaikan $A$ aljabar-$C^*$ sebarang. Gunakan versi III Teorema
+Gelfand--Naimark pada~\ref{002973}. Dengan teorema ini, kita dapat mengidentifikasi $A$ dengan
+subaljabar-$C^*$ dari $\ofml B(H)$ untuk suatu ruang Hilbert $H$ dan, akibatnya,
+ \index{M@$\M nA$!sebagai aljabar-$C^*$}%
+ \index{C*@aljabar-$C^*$!M@$\M nA$ sebagai suatu}%
+$\M nA$ dengan suatu subaljabar-$C^*$ dari $\mathbf M_n\bigl(\ofml B(H)\bigr)$. Dengan
+identifikasi ini, $\M nA$ menjadi aljabar-$C^*$. (Perhatikan bahwa menurut akibat~\ref{00131104},
+norma pada aljabar-$C^*$ bersifat tunggal; jadi jelas bahwa norma pada $\mathbf M_n(A)$
+tidak bergantung pada cara khusus $A$ direpresentasikan sebagai subaljabar-$C^*$ dari
+operator pada suatu ruang Hilbert.)
+\end{exam}
+
+\begin{exam} Misalkan $k \in \N$ dan $A = \mathbf M_k$. Maka untuk setiap $n \in \N$,
+   \[ \mathbf M_n(A) = \mathbf M_n(\mathbf M_k) \cong \mathbf M_{nk}\,. \]
+Isomorfismenya jelas: cukup hapus kurung siku bagian dalam. Sebagai contoh,
+isomorfisme dari $\mathbf M_2(\mathbf M_2)$ ke $\mathbf M_4$ diberikan oleh
+  \[ \begin{bmatrix} {} & {} \\
+          \begin{bmatrix}
+                          a_{11} & a_{12} \\
+                          a_{21} & a_{22}
+          \end{bmatrix}       &
+          \begin{bmatrix} b_{11} & b_{12} \\
+                          b_{21} & b_{22}
+          \end{bmatrix}       \\*[25pt]
+          \begin{bmatrix} c_{11} & c_{12} \\
+                          c_{21} & c_{22}
+          \end{bmatrix}       &
+          \begin{bmatrix} d_{11} & d_{12} \\
+                          d_{21} & d_{22}
+          \end{bmatrix}       \\
+                    {}  & {}
+     \end{bmatrix}
+    \quad \mapsto \quad
+          \begin{bmatrix} a_{11} & a_{12} & b_{11} & b_{12} \\
+                          a_{21} & a_{22} & b_{21} & b_{22} \\
+                          c_{11} & c_{12} & d_{11} & d_{12} \\
+                          c_{21} & c_{22} & d_{21} & d_{22}
+          \end{bmatrix}
+  \]
+\end{exam}
+
+\begin{defn} Suatu pemetaan $\phi\colon A \sto B$ di antara aljabar-$C^*$ disebut \df{positif} jika
+pemetaan itu membawa elemen positif ke elemen positif; yakni, jika $\phi(a) \in B^+$ setiap kali
+$a \in A^+$.
+\end{defn}
+
+\begin{exam} Setiap homomorfisme-$*\,$ di antara aljabar-$C^*$ bersifat positif. (Lihat
+proposisi~\ref{0018201}.)
+\end{exam}
+
+\begin{prop} Setiap pemetaan linear positif di antara aljabar-$C^*$ bersifat terbatas.
+\end{prop}
+
+\begin{notn} Misalkan $A$ dan $B$ aljabar-$C^*$ serta $n \in \N$. Suatu pemetaan linear $\phi\colon A \sto
+B$ menginduksi pemetaan linear $\phi^{(\,n)} := \phi \otimes \id{\mathbf M_n}\colon A \otimes
+\mathbf M_n \sto B \otimes \mathbf M_n$. Seperti telah kita lihat, $A \otimes \mathbf M_n$ dapat
+diidentifikasi dengan $\mathbf M_n(A)$. Jadi kita dapat memandang $\phi^{(\,n)}$ sebagai pemetaan dari
+$\mathbf M_n(A)$ ke $\mathbf M_n(B)$ yang didefinisikan oleh $\phi^{(\,n)}\big(\,[a_{jk}]\,\bigr) =
+\bigl[ \phi(a_{jk})\bigr]$.
+\end{notn}
+
+Mudah dilihat bahwa jika $\phi$ mempertahankan perkalian, maka setiap $\phi^{(\,n)}$ juga demikian,
+dan jika $\phi$ mempertahankan involusi, maka setiap $\phi^{(\,n)}$ juga demikian.
+Akan tetapi, kepositifan tidak selalu dipertahankan, sebagaimana ditunjukkan contoh~\ref{005824} berikut.
+
+\begin{defn} Dalam $\mathbf M_n$,
+ \index{standar!unit matriks}%
+ \index{matriks!unit}%
+ \index{unit!matriks}%
+\df{unit matriks standar} adalah matriks-matriks $e^{jk}$ ($1 \le j,k \le n$) yang entri pada
+baris ke-$j$ dan kolom ke-$k$ bernilai $1$, sedangkan semua entri lainnya
+bernilai~$0$.
+\end{defn}
+
+\begin{exam}\label{005824} Misalkan $A = \mathbf M_2$. Maka $\phi\colon A \sto A\colon a \mapsto a^t$
+(dengan $a^t$ transposisi~$a$) merupakan pemetaan positif. Pemetaan $\phi^{(2)}\colon
+\mathbf M_2(A) \sto \mathbf M_2(A)$ tidak positif. Untuk melihatnya, misalkan $e^{11}$, $e^{12}$,
+$e^{21}$, dan $e^{22}$ unit matriks standar untuk~$A$. Maka
+  \[ \phi^{(2)}\left(\begin{bmatrix} e^{11} & e^{12} \\ e^{21} & e^{22} \end{bmatrix}\right)
+    = \begin{bmatrix} \phi(e^{11}) & \phi(e^{12}) \\ \phi(e^{21}) & \phi(e^{22}) \end{bmatrix}
+    = \begin{bmatrix} e^{11} & e^{21} \\ e^{12} & e^{22} \end{bmatrix}
+    = \begin{bmatrix} 1 & 0 & 0 & 0 \\
+                      0 & 0 & 1 & 0 \\
+                      0 & 1 & 0 & 0 \\
+                      0 & 0 & 0 & 1
+      \end{bmatrix} \]
+yang tidak positif.
+\end{exam}
+
+\begin{defn} Suatu pemetaan linear $\phi\colon A \sto B$ di antara aljabar-$C^*$ beridentitas disebut
+ \index{npositif@$n$-positif}%
+ \index{positif!$n$-}%
+\df{$n$-positif} (untuk $n \in \N$) jika $\phi^{(\,n)}$ positif. Pemetaan itu disebut
+ \index{positif!lengkap}%
+ \index{lengkap!positif}%
+\df{positif lengkap} jika bersifat $n$-positif untuk setiap $n \in \N$.
+\end{defn}
+
+\begin{exam} Setiap homomorfisme-$*\,$ di antara aljabar-$C^*$ bersifat positif lengkap.
+\end{exam}
+
+\begin{prop}\label{00582811} Misalkan $A$ aljabar-$C^*$ beridentitas dan $a \in A$. Maka $\norm a \le 1$ jika dan hanya jika
+$\begin{bmatrix} \vc 1 & a \\ a^* & \vc 1 \end{bmatrix}$ positif dalam~$\mathbf M_2(A)$.
+\end{prop}
+
+\begin{prop} Misalkan $A$ aljabar-$C^*$ beridentitas dan $a$, $b \in A$. Maka $a^*a \le b$ jika
+dan hanya jika $\begin{bmatrix} \vc 1 & a \\ a^* & b \end{bmatrix}$ positif dalam~$\mathbf
+M_2(A)$.
+\end{prop}
+
+\begin{prop} Setiap pemetaan $2$-positif beridentitas di antara aljabar-$C^*$ beridentitas bersifat kontraktif.
+\end{prop}
+
+\begin{prop}[Ketaksamaan Kadison]\label{0058283} Jika $\phi\colon A \sto B$ merupakan pemetaan
+$2$-positif beridentitas
+ \index{ketaksamaan Kadison}%
+ \index{ketaksamaan!Kadison}%
+di antara aljabar-$C^*$ beridentitas, maka
+   \[ \bigl(\phi(a)\bigr)^*\phi(a) \le \phi(a^*a) \]
+untuk setiap $a \in A$.
+\end{prop}
+
+\begin{defn} Mudah dilihat bahwa jika $\phi\colon A \sto B$ merupakan pemetaan linear terbatas
+di antara aljabar-$C^*$, maka $\phi^{(\,n)}$ terbatas untuk setiap~$n \in \N$. Jika
+$\norm{\phi}_{\mathrm{cb}} := \sup\{\norm{\phi^{(\,n)}} \colon n \in \N\} < \infty$, maka
+$\phi$ disebut
+ \index{lengkap!terbatas}%
+ \index{terbatas!lengkap}%
+ \index{<unopn@$\norm{\hphantom{\phi}}_{\mathrm{cb}}$ (norma pemetaan terbatas lengkap)}%
+\df{terbatas lengkap}.
+\end{defn}
+
+\begin{prop}\label{00582921} Jika $\phi\colon A \sto B$ merupakan pemetaan linear beridentitas dan positif lengkap
+di antara aljabar-$C^*$ beridentitas, maka $\phi$ terbatas lengkap dan
+   \[ \norm{\phi(\vc 1)} = \norm\phi = \norm\phi_{\mathrm{cb}}\,. \]
+\end{prop}
+
+\begin{proof} Lihat \cite{Paulsen:2002}. \ns \end{proof}
+
+\begin{thm}[Teorema dilatasi Stinespring]\label{005831} Misalkan $A$ aljabar-$C^*$ beridentitas,
+ \index{Stinespring!teorema dilatasi}%
+ \index{dilatasi!teorema Stinespring}%
+$H$ ruang Hilbert, dan $\phi\colon A \sto \ofml B(H)$ pemetaan linear beridentitas.
+Maka $\phi$ positif lengkap jika dan hanya jika terdapat suatu ruang Hilbert
+$H_0$, suatu isometri $V\colon H \sto H_0$, dan suatu representasi tak terdegenerasi $\vc
+r\colon A \sto \ofml B(H_0)$ sedemikian sehingga $\phi(a) = V^*\vc r(a)V$ untuk setiap $a \in A$.
+\end{thm}
+
+\begin{proof} Lihat \cite{HigsonR:2000}, teorema 3.1.3, atau \cite{Paulsen:2002}, teorema 4.1. \ns
+\end{proof}
+
+\begin{notn} Misalkan $A$ aljabar-$C^*$, $f\colon A \sto \ofml B(H_0)$, dan
+$g\colon A \sto \ofml B(H)$, dengan $H_0$ dan $H$ ruang Hilbert. Kita menulis
+ \index{<relation@$g \lesssim f$ (relasi di antara pemetaan bernilai operator)}%
+$g \lesssim f$ jika terdapat suatu isometri $V\colon H \sto H_0$ sedemikian sehingga $g(a) -
+V^*f(a)V \in \ofml K(H)$ untuk setiap $a \in A$. Relasi $\lesssim$ merupakan praurutan,
+tetapi bukan urutan parsial; yakni, relasi itu refleksif dan transitif, tetapi tidak
+antisimetris.
+\end{notn}
+
+\begin{thm}[Voiculescu]\label{0058335} Misalkan $A$ aljabar-$C^*$ beridentitas yang separabel,
+ \index{teorema Voiculescu}%
+$\vc r\colon A \sto \ofml B(H_0)$ representasi tak terdegenerasi, dan
+$\phi\colon A \sto \ofml B(H)$ pemetaan linear beridentitas dan positif lengkap (dengan $H$ dan $H_0$ ruang Hilbert). Jika $\phi(a) =
+\vc 0$ setiap kali $\vc r(a) \in \ofml K(H_0)$, maka $\phi \lesssim \vc r$.
+\end{thm}
+
+\begin{proof} Buktinya panjang dan rumit, tetapi ``elementer''. Lihat \cite{HigsonR:2000},
+bagian 3.5--3.6. \ns
+\end{proof}
+
+\begin{prop}\label{0058338} Misalkan $A$ aljabar-$C^*$ beridentitas yang separabel, $H$ ruang Hilbert,
+dan $\tau_1$, $\tau_2 \colon A \sto \ofml Q(H)$ monomorfisme-$*\,$ beridentitas. Jika
+$\tau_2$ terbelah, maka $\tau_1 + \tau_2$ ekuivalen secara uniter dengan~$\tau_1$.
+\end{prop}
+
+\begin{proof} Lihat \cite{HigsonR:2000}, teorema 3.4.7. \ns \end{proof}
+
+\begin{cor}\label{0058339} Andaikan $A$ aljabar-$C^*$ beridentitas yang separabel, $H$ ruang
+Hilbert, dan $\tau \colon A \sto \ofml Q(H)$ monomorfisme-$*\,$ beridentitas yang terbelah.
+Maka $[\tau]$ merupakan identitas aditif dalam~$\ext A$.
+\end{cor}
+
+Perhatikan bahwa suatu monomorfisme-$*\,$ beridentitas $\tau\colon A \sto \ofml Q(H)$ dari aljabar-$C^*$
+beridentitas yang separabel ke aljabar Calkin dari suatu ruang Hilbert $H$ bersifat semiterbelah jika dan
+hanya jika $[\tau]$ mempunyai invers aditif dalam $\ext A$. Proposisi berikut mengatakan bahwa
+hal ini terjadi jika dan hanya jika $\tau$ mempunyai suatu pengangkatan positif lengkap ke~$\ofml B(H)$.
+
+\begin{prop}\label{0058411} Misalkan $A$ aljabar-$C^*$ beridentitas yang separabel dan $H$ ruang Hilbert.
+Suatu monomorfisme-$*\,$ beridentitas $\tau\colon A \sto \ofml Q(H)$ semiterbelah jika dan hanya jika
+terdapat suatu pemetaan linear beridentitas dan positif lengkap $\wt\tau\colon A \sto \ofml B(H)$ sedemikian sehingga
+diagram
+  \[
+    \xy
+      \dtriangle/<-`->`->/[\ofml B(H)`A`\ofml Q(H);\wt\tau`\pi`\tau]
+    \endxy
+   \]
+komutatif.
+\end{prop}
+
+\begin{proof} Lihat \cite{HigsonR:2000}, teorema 3.1.5.  \ns \end{proof}
+
+\begin{defn} Suatu aljabar-$C^*$ $A$ disebut
+ \index{nuklir}%
+ \index{C*@aljabar-$C^*$!nuklir}%
+\df{nuklir} jika untuk setiap aljabar-$C^*$ $B$ terdapat suatu norma-$C^*$ tunggal pada hasil kali
+tensor aljabaris $A \odot B$.
+\end{defn}
+
+\begin{exam}\label{0058513} Setiap aljabar-$C^*$ berdimensi hingga bersifat nuklir.
+ \index{nuklir!aljabar berdimensi hingga bersifat}%
+\end{exam}
+
+\begin{proof} Lihat \cite{Murphy:1990}, teorema 6.3.9.  \ns \end{proof}
+
+\begin{exam}\label{0058514} Aljabar-$C^*$ $\mathbf M_n$
+ \index{M@$\mathbf M_n$!sebagai aljabar-$C^*$ nuklir}%
+ \index{nuklir!$\mathbf M_n$ bersifat}%
+bersifat nuklir.
+\end{exam}
+\begin{proof} Lihat \cite{Blackadar:2006}, II.9.4.2.  \ns \end{proof}
+
+\begin{exam}\label{0058515} Jika $H$ ruang Hilbert,
+ \index{K@$\ofml K(H)$!sebagai aljabar-$C^*$ nuklir}%
+ \index{nuklir!$\ofml K(H)$ bersifat}%
+maka aljabar-$C^*$ $\ofml K(H)$ dari operator kompak bersifat nuklir.
+\end{exam}
+\begin{proof} Lihat \cite{Murphy:1990}, contoh 6.3.2.  \ns \end{proof}
+
+\begin{exam}\label{0058517} Jika $X$ ruang Hausdorff kompak, maka aljabar-$C^*$
+ \index{kontinu@$\fml C(X)$!sebagai aljabar-$C^*$ nuklir}%
+ \index{nuklir!$\fml C(X)$ bersifat}%
+$\fml C(X)$ bersifat nuklir.
+\end{exam}
+
+\begin{proof} Lihat \cite{Paulsen:2002}, proposisi 12.9.  \ns \end{proof}
+
+\begin{exam}\label{0058519} Setiap aljabar-$C^*$ komutatif bersifat nuklir.
+ \index{nuklir!aljabar-$C^*$ komutatif bersifat}%
+\end{exam}
+
+\begin{proof} Lihat \cite{Fillmore:1996}, teorema 7.4.1, atau \cite{Wegge-Olsen:1993}, teorema
+T.6.20. \ns
+\end{proof}
+
+Kesimpulan hasil berikut dikenal sebagai
+ \index{lengkap!positif!sifat pengangkatan}%
+\emph{sifat pengangkatan positif lengkap}.
+
+\begin{prop}\label{0058541} Misalkan $A$ aljabar-$C^*$ beridentitas, separabel, dan nuklir, serta $J$ suatu
+ideal separabel dalam aljabar-$C^*$ beridentitas~$B$. Maka untuk setiap pemetaan positif lengkap
+$\phi\colon A \sto B/J$, terdapat suatu pemetaan positif lengkap $\wt\phi\colon A \sto B$
+yang membuat diagram
+  \[
+    \xy
+      \dtriangle/<-`->`->/[B`A`B/J;\wt\phi``\phi]
+    \endxy
+   \]
+komutatif.
+\end{prop}
+
+\begin{proof} Lihat \cite{HigsonR:2000}, teorema 3.3.6.  \ns \end{proof}
+
+\begin{cor}\label{0058543} Jika $A$ merupakan aljabar-$C^*$ beridentitas, separabel, dan nuklir,
+ \index{ext@$\ext A$, $\ext X$!merupakan grup Abelian}%
+maka $\ext A$ merupakan grup Abelian.
+\end{cor}
+
+
+
+
+
+
+
+\endinput

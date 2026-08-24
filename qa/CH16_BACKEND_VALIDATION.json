@@ -1,0 +1,50 @@
+{
+  "schema_version": "o008.backend-validation.v1",
+  "timestamp": "2026-08-24",
+  "status": "pass",
+  "unit_id": "FAOA-2015-CH16",
+  "binding_state": "bound",
+  "source_sha256": "e4a1710bcf5773bf8193bd05f14a1ee82703212f3d123fb4669a4de76ae7e318",
+  "target_sha256": "59d745a18c74f9abe2ebe6eda3a78eb7c89bdc7fdef935cbc31ea0a552bfbbc3",
+  "master_sha256": "6e528b0193d3179b58e44169430d043fa5399f7c860f09d832eb3ccd954a5388",
+  "model_id": "OpenAI Codex gpt-5.6-sol, Ultra",
+  "chapter16": {
+    "semantic_units": 127,
+    "segments": 141,
+    "relations": 601,
+    "formula_map": {
+      "records": 701,
+      "source_surfaces_covered": 702,
+      "target_surfaces_covered": 700,
+      "exact_maps": 684,
+      "localized_maps": 3,
+      "semantic_normalizations": 1,
+      "classified_correction_maps": 13,
+      "target_insertions": 1,
+      "source_only_deletions": 1
+    },
+    "index_terms": 107,
+    "new_terms": 21,
+    "term_uses": 29,
+    "corrections": 15,
+    "exercise_support": 0,
+    "qa_events": 10,
+    "artifacts": 15
+  },
+  "aggregate_records": 25338,
+  "global_stable_ids": "unique",
+  "relation_endpoints": "resolved",
+  "deterministic_round_trip": "pass",
+  "chapter1_ch15_prefix_lock": "pass",
+  "reference_resolution": {
+    "admitted_prior_unit": 12,
+    "local": 16
+  },
+  "backend_manifest_sha256": "e707c21b95641997c72f63acf1ad4d61affe6c321f4d9f269e959cafbf0beff3",
+  "validator": {
+    "path": "backend/validate_ch16_backend.py",
+    "bytes": 16868,
+    "logical_records": 305,
+    "sha256": "d1b82c673cc7af017df3817618d772bb8580e2d2ada090d148705d680be14be7"
+  }
+}

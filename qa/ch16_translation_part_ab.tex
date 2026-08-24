@@ -1,0 +1,402 @@
+\chapter{EKSTENSI}
+
+\section{Operator Normal secara Esensial}
+\begin{defn} Misalkan $T$ suatu operator pada ruang Hilbert~$H$.  
+ \index{spektrum!esensial}%
+ \index{esensial!spektrum}%
+ \index{sigmae@$\sigma_e(T)$ (spektrum esensial dari $T$)}%
+\df{spektrum esensial} dari $T$, yang dinotasikan dengan $\sigma_e(T)$, adalah spektrum citra
+$T$ dalam aljabar Calkin $\ofml Q(H)$; yaitu,
+   \[ \sigma_e(T) = \sigma_{\ofml Q(H)}(\pi(T))\,. \]
+\end{defn}
+
+\begin{prop} Jika $T$ suatu operator pada ruang Hilbert $H$, maka
+  \[ \sigma_e(T) = \{\lambda \in \C\colon T - \lambda I \notin \ofml F(H)\}\,. \]
+\end{prop}
+
+\begin{prop} Spektrum esensial dari operator swaadjoin $T$ pada ruang Hilbert adalah gabungan
+titik-titik akumulasi spektrum $T$ dengan nilai-nilai eigen $T$ yang memiliki
+multiplisitas tak hingga.  Anggota-anggota $\sigma(T) \setminus \sigma_e(T)$ adalah nilai-nilai eigen
+terisolasi dengan multiplisitas hingga.
+\end{prop}
+
+\begin{proof} Lihat \cite{HigsonR:2000}, proposisi 2.2.2. \ns \end{proof}
+
+Berikut dua teorema dari analisis fungsional klasik.
+
+\begin{thm}[Weyl]\label{005121} Jika $S$ dan $T$ merupakan operator pada suatu ruang Hilbert
+ \index{teorema Weyl}%
+yang selisihnya kompak, maka spektrum keduanya sama, kecuali mungkin pada nilai-nilai eigen.
+\end{thm}
+
+\begin{thm}[Weyl--von Neumann]\label{005124} Misalkan $T$ suatu operator swaadjoin pada
+ \index{teorema Weyl--von Neumann}%
+ruang Hilbert terpisahkan~$H$. Untuk setiap $\epsilon > 0$ terdapat operator $D$ yang dapat
+didiagonalkan sedemikian sehingga $T - D$ kompak dan $\norm{T - D} < \epsilon$.
+\end{thm}
+
+\begin{proof} Lihat \cite{Conway:2000}, 38.1; \cite{Davidson:1996}, akibat II.4.2; atau
+\cite{HigsonR:2000}, 2.2.5. \ns
+\end{proof}
+
+\begin{defn} Misalkan $H$ dan $K$ ruang-ruang Hilbert. Operator $S \in \ofml B(H)$ dan $T \in \ofml
+B(K)$ disebut
+ \index{esensial!ekuivalen uniter}%
+ \index{uniter!ekuivalensi!esensial}%
+ \index{ekuivalensi!uniter esensial}%
+\df{ekuivalen uniter secara esensial} (atau
+ \index{kompalen}%
+\df{kompalen}) jika terdapat pemetaan uniter $U\colon H \sto K$ sedemikian sehingga $S - U^*TU$
+merupakan operator kompak pada~$H$. (Kita memperluas definisi~\ref{000161} dan~\ref{0001612} dengan
+cara yang jelas: $U \in \ofml B(H,K)$ disebut
+ \index{uniter!pemetaan linear terbatas}%
+ \index{terbatas!pemetaan linear!uniter}%
+\df{uniter} jika $U^*U = I_H$ dan $UU^* = I_K$; dan $S$ serta $T$ disebut
+ \index{uniter!ekuivalensi!operator}%
+ \index{ekuivalensi!uniter}%
+\df{ekuivalen secara uniter} jika terdapat pemetaan uniter $U\colon H \sto K$ sedemikian sehingga $S =
+U^*TU$.)
+\end{defn}
+
+\begin{prop}\label{005134} Operator-operator swaadjoin $S$ dan $T$ pada ruang-ruang Hilbert terpisahkan berdimensi tak hingga
+ekuivalen uniter secara esensial jika dan hanya jika keduanya memiliki spektrum esensial yang sama.
+\end{prop}
+
+\begin{proof} Lihat \cite{HigsonR:2000}, proposisi 2.2.4.  \ns \end{proof}
+
+\begin{defn} Suatu operator ruang Hilbert $T$ disebut
+ \index{esensial!normal}%
+ \index{normal!secara esensial}
+ \index{operator!normal secara esensial}%
+\df{normal secara esensial} jika
+ \index{komutator}%
+ \index{<brackets@$[T,T^*]$ (komutator dari $T$)}%
+\emph{komutator}-nya $[T,T^*] := TT^* - T^*T$ kompak. Dengan kata lain: $T$ normal secara
+esensial jika citranya $\pi(T)$ merupakan elemen normal dari aljabar Calkin. Operator $T$
+disebut
+ \index{esensial!swaadjoin}%
+ \index{swaadjoin!secara esensial}
+ \index{operator!swaadjoin secara esensial}%
+\df{swaadjoin secara esensial} jika $T - T^*$ kompak; yakni, jika $\pi(T)$
+swaadjoin dalam aljabar Calkin.
+\end{defn}
+
+\begin{exam} Operator geser unilateral $S$ (lihat contoh~\ref{C063526})
+ \index{geser unilateral!normalitas esensial}%
+normal secara esensial (tetapi tidak normal).
+\end{exam}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Operator Toeplitz}
+\begin{defn} Misalkan
+ \index{zeta@$\zeta$ (fungsi identitas pada lingkaran satuan)}%
+$\zeta\colon \T \sto \T\colon z \mapsto z$ merupakan fungsi identitas pada lingkaran satuan.
+Maka $\{\zeta^n\colon n \in \Z\}$ merupakan basis ortonormal bagi ruang Hilbert $L_2(\T)$ yang terdiri atas
+(kelas-kelas ekuivalensi dari) fungsi-fungsi yang terintegralkan kuadrat pada $\T$ terhadap ukuran panjang
+busur (yang dinormalisasi secara sesuai). Kita menyatakan dengan $H^2$ subruang dari $L_2(\T)$ yang merupakan
+rentang linear tertutup dari $\{\zeta^n\colon n \ge 0\}$ dan dengan $P_+$ proyeksi
+(ortogonal) pada $L_2(\T)$ yang jangkauan
+(sekaligus kodomain)-nya adalah~$H^2$. Ruang $H^2$ merupakan
+contoh suatu
+ \index{ruang Hardy!$H^2$}%
+ \index{ruang!Hardy}%
+ \index{H@$H^2$}%
+\emph{ruang Hardy}. Untuk setiap $\phi \in L_\infty(\T)$ kita mendefinisikan pemetaan $T_\phi$ dari
+ruang Hilbert $H^2$ ke dirinya sendiri dengan $T_\phi = P_+M_\phi$ (dengan $M_\phi$ operator
+perkalian yang didefinisikan dalam contoh~\ref{C063527}). Operator demikian disebut
+ \index{Toeplitz!operator}%
+ \index{operator!Toeplitz}%
+ \index{T@$T_\phi$ (operator Toeplitz dengan simbol~$\phi$)}%
+\df{operator Toeplitz} dan $\phi$ disebut
+ \index{simbol!operator Toeplitz}%
+ \index{Toeplitz!operator!simbol}%
+\df{simbol}-nya. Jelas bahwa $T_\phi$ merupakan operator pada $H^2$ dan $\norm{T_\phi} \le \norm
+{\phi}_\infty$.
+\end{defn}
+
+\begin{exam} Operator Toeplitz $T_\zeta$
+ \index{geser unilateral!sebagai operator Toeplitz}%
+ \index{Toeplitz!operator!geser unilateral sebagai}%
+bertindak pada vektor-vektor basis $\zeta^n$ dari $H^2$ menurut $T_\zeta(\zeta^n) = \zeta^{n+1}$, sehingga operator ini
+ekuivalen secara uniter dengan geser unilateral $S$.
+\end{exam}
+
+\begin{prop}\label{005216} Pemetaan $T\colon L_\infty(\T) \sto \ofml B(H^2)\colon \phi
+\mapsto T_\phi$ bersifat positif, linear, dan melestarikan involusi.
+\end{prop}
+
+\begin{exam}\label{005217} Operator Toeplitz $T_\zeta$ dan $T_{\conj\zeta}$ menunjukkan bahwa
+pemetaan $T$ dalam proposisi sebelumnya \emph{bukan} representasi dari $L_\infty(\T)$
+pada~$\ofml B(H^2)$. (Bandingkan dengan contoh~\ref{002802}.)
+\end{exam}
+
+\begin{notn} Misalkan $H^\infty := H^2 \cap L_\infty(\T)$.
+ \index{H@$H^\infty$}%
+ \index{ruang Hardy!$H^\infty$}%
+ \index{ruang!Hardy}%
+Ini merupakan contoh lain dari suatu \emph{ruang Hardy}.
+\end{notn}
+
+\begin{prop} Suatu fungsi terbatas secara esensial $\phi$ pada lingkaran satuan termasuk dalam
+$H^\infty$ jika dan hanya jika operator perkalian $M_\phi$ memetakan $H^2$ ke dalam~$H^2$.
+\end{prop}
+
+Meskipun (seperti telah kita lihat dalam contoh~\ref{005217}) pemetaan $T$ yang didefinisikan dalam
+proposisi~\ref{005216} pada umumnya tidak multiplikatif, pemetaan ini multiplikatif untuk suatu
+kelas fungsi yang luas.
+
+\begin{prop} Jika $\phi \in L_\infty(\T)$ dan $\psi \in H^\infty$, maka $T_{\phi\psi} =
+T_\phi T_\psi$ dan $T_{\conj\psi \phi} = T_{\conj\psi} T_\phi$.
+\end{prop}
+
+\begin{prop} Jika operator Toeplitz $T_\phi$ dengan simbol $\phi \in L_\infty(\T)$
+invertibel, maka fungsi $\phi$ invertibel.
+\end{prop}
+
+\begin{proof} Lihat \cite{Douglas:1972}, proposisi 7.6. \ns \end{proof}
+
+\begin{thm}[Inklusi Spektral Hartman--Wintner] Jika $\phi \in L_\infty(\T)$,
+ \index{teorema inklusi spektral Hartman--Wintner}%
+maka $\sigma(\phi) \subseteq \sigma(T_\phi)$ dan $\rho(T_\phi) = \norm{T_\phi} =
+\norm{\phi}_\infty$.
+\end{thm}
+
+\begin{proof} Lihat \cite{Douglas:1972}, akibat 7.7 atau \cite{Murphy:1990}, teorema 3.5.7. \ns
+\end{proof}
+
+\begin{cor} Pemetaan $T\colon L_\infty(\T) \sto \ofml B(H^2)$ yang didefinisikan dalam
+proposisi~\ref{005216} merupakan suatu isometri.
+\end{cor}
+
+\begin{prop} Suatu operator Toeplitz $T_\phi$ dengan simbol $\phi \in L_\infty(\T)$ kompak jika
+dan hanya jika $\phi = \vc 0$.
+\end{prop}
+
+\begin{proof} Lihat \cite{Murphy:1990}, teorema 3.5.8.  \ns \end{proof}
+
+\begin{prop} Jika $\phi \in \fml C(\T)$ dan $\psi \in L_\infty(\T)$, maka
+semikomutator $T_\phi T_\psi - T_{\phi\psi}$ dan $T_\psi T_\phi - T_{\psi\phi}$ bersifat
+kompak.
+\end{prop}
+
+\begin{proof} Lihat \cite{Arveson:2002}, proposisi 4.3.1; \cite{Davidson:1996}, akibat
+V.1.4; atau \cite{Murphy:1990}, lema 3.5.9. \ns
+\end{proof}
+
+\begin{cor} Setiap operator Toeplitz dengan simbol kontinu bersifat normal secara esensial.
+\end{cor}
+
+\begin{defn} Andaikan $H$ ruang Hilbert terpisahkan dengan basis $\{e_0, e_1, e_2,
+\dots\}$ dan $T$ suatu operator pada $H$ yang representasi matriks (tak hingga)-nya adalah
+$[t_{ij}]$. Jika entri-entri dalam matriks ini hanya bergantung pada selisih indeks $i
+- j$ (yakni, jika setiap diagonal yang sejajar dengan diagonal utama merupakan barisan konstan),
+maka matriks tersebut disebut
+ \index{Toeplitz!matriks}%
+ \index{matriks!Toeplitz}%
+\df{matriks Toeplitz}.
+\end{defn}
+
+\begin{prop} Misalkan $T$ suatu operator pada ruang Hilbert $H^2$. Representasi matriks
+$T$ terhadap basis biasa $\{\zeta^n\colon n \ge 0\}$ merupakan matriks Toeplitz jika
+dan hanya jika $S^*TS = T$ (dengan $S$ geser unilateral).
+\end{prop}
+
+\begin{proof} Lihat \cite{Arveson:2002}, proposisi 4.2.3.  \ns \end{proof}
+
+\begin{prop} Jika $T_\phi$ suatu operator Toeplitz dengan simbol $\phi \in L_\infty(\T)$, maka
+$S^*T_\phi S = T_\phi$. Sebaliknya, jika $R$ suatu operator pada ruang Hilbert $H^2$
+sedemikian sehingga $S^*RS = R$, maka terdapat $\phi \in L_\infty(\T)$ tunggal sedemikian sehingga $R =
+T_\phi$.
+\end{prop}
+
+\begin{proof} Lihat \cite{Arveson:2002}, teorema 4.2.4.  \ns \end{proof}
+
+\begin{defn} 
+ \index{Toeplitz!aljabar}%
+ \index{aljabar!Toeplitz}%
+ \index{T@$\ofml T$ (aljabar Toeplitz)}%
+\df{aljabar Toeplitz} $\ofml T$ adalah subaljabar-$C^*$ dari $\ofml B(H^2)$ yang dibangkitkan oleh
+operator geser unilateral; yaitu, $\ofml T = C^*(S)$.
+\end{defn}
+
+\begin{prop} Himpunan $\ofml K(H^2)$ dari operator-operator kompak pada $H^2$ merupakan ideal dalam aljabar
+Toeplitz~$\ofml T$.
+\end{prop}
+
+\begin{prop} Aljabar Toeplitz terdiri atas semua perturbasi kompak dari operator Toeplitz
+dengan simbol kontinu. Yaitu,
+   \[ \ofml T = \{ T_\phi + K\colon \phi \in \fml C(\T) \text{ dan } K \in \ofml K(H^2)\} \,. \]
+Lebih lanjut, jika $T_\phi + K = T_\psi + L$ dengan $\phi$, $\psi \in \fml C(\T)$ dan $K$, $L
+\in \ofml K(H^2)$, maka $\phi = \psi$ dan $K = L$.
+\end{prop}
+
+\begin{proof} Lihat \cite{Arveson:2002}, teorema 4.3.2 atau \cite{Davidson:1996}, teorema V.1.5.
+\ns \end{proof}
+
+\begin{prop}\label{005251} Pemetaan $\pi \circ T\colon \fml C(\T) \sto \ofml Q(H^2)\colon \phi
+\mapsto \pi(T_\phi)$ merupakan monomorfisme-$*\,$ beridentitas. Jadi pemetaan $\alpha\colon \fml C(\T)
+\sto \ofml T/\ofml K(H^2)\colon \phi \mapsto \pi(T_\phi)$ menghasilkan isomorfisme
+antara aljabar-$C^*$ $\fml C(\T)$ dan $\ofml T/\ofml K(H^2)$.
+\end{prop}
+
+\begin{proof} Lihat \cite{HigsonR:2000}, proposisi 2.3.3 atau \cite{Murphy:1990},
+teorema 3.5.11.  \ns
+\end{proof}
+
+\begin{cor} Jika $\phi \in \fml C(\T)$, maka $\sigma_e(T_\phi) = \ran\phi$.
+\end{cor}
+
+\begin{prop}\label{005253} Barisan
+   \[ \vc 0 \to \ofml K(H^2) \to \ofml T \to^\beta \fml C(\T) \to \vc 0 \]
+bersifat eksak. Barisan ini tidak terbelah.
+\end{prop}
+
+\begin{proof} Pemetaan $\beta$ didefinisikan oleh $\beta(R) := \alpha^{-1}\bigl(\pi(R)\bigr)$ untuk
+setiap $R \in \ofml T$ (dengan $\alpha$ isomorfisme yang didefinisikan dalam
+proposisi sebelumnya~\ref{005251}). Lihat \cite{Arveson:2002}, catatan 4.3.3; \cite{Davidson:1996},
+teorema V.1.5; atau \cite{HigsonR:2000}, halaman 35. \ns
+\end{proof}
+
+\begin{defn}\label{0052531} Barisan eksak pendek dalam proposisi sebelumnya~\ref{005253}
+adalah
+ \index{Toeplitz!ekstensi}%
+ \index{ekstensi!Toeplitz}%
+\df{ekstensi Toeplitz} dari $\fml C(\T)$ oleh~$\ofml K(H^2)$.
+\end{defn}
+
+\begin{rem} Suatu versi diagram ekstensi Toeplitz yang sering muncul kira-kira berbentuk
+seperti
+     \[ \vc 0 \to \ofml K(H^2) \to \ofml T \two/->`<-/^\beta_T \fml C(\T) \to \vc 0 \tag{1} \]
+dengan $\beta$ seperti dalam~\ref{005253} dan $T$ adalah pemetaan $\phi \mapsto T_\phi$. Diagram ini
+dapat disalahtafsirkan. Diagram tersebut mungkin memberi kesan kepada pembaca yang kurang waspada bahwa ini adalah ekstensi
+terbelah, terutama karena memang benar bahwa $\beta \circ T = I_{\fml
+C(\T)}$. Masalahnya, tentu saja, bahwa diagram ini bukan diagram dalam kategori
+$\cat{CSA}$ dari aljabar-$C^*$ dan homomorfisme-$*\,$. Kita telah melihat dalam
+contoh~\ref{005217} bahwa pemetaan $T$ bukan homomorfisme-$*\,$ karena tidak
+selalu melestarikan perkalian. Elemen-elemen invertibel dalam $\fml C(\T)$ belum tentu terangkat menjadi
+elemen-elemen invertibel dalam aljabar Toeplitz~$\ofml T$; jadi epimorfisme-$*\,$ $\beta$
+tidak memiliki invers kanan dalam kategori~$\cat{CSA}$.
+
+Sebagian penulis menangani masalah ini dengan mengatakan bahwa barisan (1) bersifat semiterbelah (lihat, misalnya,
+Arveson~\cite{Arveson:2002}, halaman 112). Penulis lain meminjam istilah dari teori kategori,
+yang menggunakan kata ``penampang'' untuk berarti ``memiliki invers kanan''.
+Davidson~\cite{Davidson:1996}, misalnya, pada halaman 134 menyebut pemetaan $T$ sebagai
+``penampang kontinu'', sedangkan Douglas~\cite{Douglas:1972}, pada halaman 179 menyebutnya
+``penampang silang isometrik''. Meskipun memang benar bahwa $\beta$ memiliki $T$ sebagai invers
+kanan dalam kategori $\cat{SET}$ dari himpunan dan pemetaan, bahkan juga dalam kategori ruang Banach
+dan pemetaan linear terbatas, pemetaan tersebut tidak memiliki invers kanan dalam $\cat{CSA}$.
+\end{rem}
+
+\begin{prop} Jika $\phi$ suatu fungsi dalam $\fml C(\T)$, maka $T_\phi$ Fredholm jika dan hanya jika
+fungsi itu tidak pernah bernilai nol.
+\end{prop}
+
+\begin{proof} Lihat \cite{Arveson:2002}, halaman 112, akibat 1; \cite{Davidson:1996}, teorema
+V.1.6; \cite{Douglas:1972}, teorema 7.26; atau \cite{Murphy:1990}, akibat 3.5.12. \ns
+\end{proof}
+
+\begin{prop}\label{005271} Jika $\phi$ elemen invertibel dari $\fml C(\T)$, maka terdapat
+bilangan bulat $n$ tunggal sedemikian sehingga $\phi = \zeta^n \exp \psi$ untuk suatu $\psi \in \fml
+C(\T)$.
+\end{prop}
+
+\begin{proof} Lihat \cite{Arveson:2002}, proposisi 4.4.1 dan 4.4.2 atau \cite{Murphy:1990},
+lema 3.5.14. \ns
+\end{proof}
+
+\begin{defn} Bilangan bulat yang keberadaannya dinyatakan dalam proposisi sebelumnya~\ref{005271}
+adalah
+ \index{bilangan lilit}%
+ \index{w@$w(\phi)$ (bilangan lilit dari~$\phi$)}%
+\df{bilangan lilit} dari fungsi invertibel $\phi \in \fml C(\T)$. Bilangan ini dinotasikan
+dengan~$w(\phi)$.
+\end{defn}
+
+\begin{thm}[Teorema indeks Toeplitz]\label{005274}
+ \index{Toeplitz!teorema indeks}%
+Jika $T_\phi$ suatu operator Toeplitz dengan simbol kontinu yang tidak pernah bernilai nol, maka operator ini
+merupakan operator Fredholm dan
+   \[ \ind(T_\phi) = -w(\phi)\,. \]
+\end{thm}
+
+\begin{proof} Bukti elementer dapat ditemukan dalam \cite{Arveson:2002}, teorema 4.4.3, dan
+\cite{Murphy:1990}. Bagi pembaca yang memiliki sedikit latar belakang tentang homotopi kurva,
+proposisi~\ref{005271}, yang mengantar ke definisi \emph{bilangan lilit} di atas,
+dapat dilewati. Merupakan fakta elementer dalam teori homotopi bahwa grup fundamental
+$\pi_1(\C \setminus \{0\})$ dari bidang kompleks berlubang bersifat siklik tak hingga. Terdapat
+isomorfisme $\tau$ dari $\pi_1(\C \setminus \{0\})$ ke $\Z$ yang mengaitkan bilangan bulat $+1$
+dengan (kelas ekuivalensi yang memuat) fungsi $\zeta$. Hal ini memungkinkan kita untuk
+mengaitkan setiap anggota invertibel $\phi$ dari $\fml C(\T)$ dengan bilangan bulat yang bersesuaian
+di bawah $\tau$ dengan kelas ekuivalensinya. Bilangan bulat ini kita sebut
+ \index{bilangan lilit}%
+ \index{fundamental!grup}%
+ \index{grup!fundamental}%
+\emph{bilangan lilit} dari~$\phi$. Definisi demikian memungkinkan pemberian bukti yang lebih singkat
+dan lebih anggun bagi \emph{teorema indeks Toeplitz}. Untuk pembahasan dengan pendekatan ini,
+lihat \cite{Douglas:1972}, teorema 7.26, atau \cite{HigsonR:2000}, teorema 2.3.2. Untuk
+latar belakang mengenai grup fundamental, lihat \cite{Massey:1967}, bab dua;
+\cite{Wallace:1970}, lampiran A; atau \cite{Willard:1968}, bagian 32 dan 33. \ns
+\end{proof}
+
+\begin{thm}[Dekomposisi Wold]
+ \index{dekomposisi Wold}%
+ \index{dekomposisi!Wold}%
+Setiap
+ \index{sejati!isometri}%
+ \index{isometri!sejati}%
+isometri sejati (yakni, nonuniter) pada suatu ruang Hilbert merupakan jumlah langsung salinan-salinan
+geser unilateral, atau merupakan jumlah langsung suatu operator uniter bersama salinan-salinan
+geser tersebut.
+\end{thm}
+
+\begin{proof} Lihat \cite{Davidson:1996}, teorema V.2.1; \cite{Halmos:1982}, soal (dan
+solusi) 149; atau \cite{Murphy:1990}, teorema 3.5.17. \ns
+\end{proof}
+
+\begin{thm}[Coburn]
+ \index{teorema Coburn}%
+Misalkan $v$ suatu isometri dalam aljabar-$C^*$ beridentitas~$A$.
+Maka
+terdapat
+homomorfisme-$*\,$
+beridentitas
+$\tau$ tunggal dari aljabar Toeplitz $\ofml T$ ke $A$ sedemikian sehingga
+$\tau(T_\zeta) = v$. Lebih lanjut, jika $vv^* \ne \vc 1$, maka $\tau$ merupakan suatu isometri.
+\end{thm}
+
+\begin{proof} Lihat \cite{Murphy:1990}, teorema 3.5.18, atau \cite{Davidson:1996},
+teorema V.2.2. \ns
+\end{proof}
+%
+%%
+ 
+  
+ 
+
+
+
+
+
+
+
+
+
