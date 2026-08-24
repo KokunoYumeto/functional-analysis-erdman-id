@@ -1,0 +1,98 @@
+{
+  "schema_version": "o008.coordinator-handoff.v1",
+  "role": "O008",
+  "curriculum_route": "D20",
+  "locale": "id-ID",
+  "status": "in_progress_chapters_1_16_of_17",
+  "source_work": {
+    "author": "John M. Erdman",
+    "title": "Functional Analysis and Operator Algebras: An Introduction",
+    "version": "2015-10-04",
+    "official_source_zip_sha256": "0c667cfa7420b61dda8f8cb4ed9d619db8abd1b53d17eafe7d4a2e153342e53",
+    "official_pdf_sha256": "f320b16af7448fbb43582c21569840fe657fccf6f31d97f176913fdd0e1eb823",
+    "license": "CC BY-SA 4.0"
+  },
+  "admitted_boundary": {
+    "first_unit_id": "FAOA-2015-CH01",
+    "last_unit_id": "FAOA-2015-CH16",
+    "whole_edition_complete": false,
+    "target_path": "source/id-ID/extensions-id.tex",
+    "target_bytes": 43804,
+    "target_sha256": "59d745a18c74f9abe2ebe6eda3a78eb7c89bdc7fdef935cbc31ea0a552bfbbc3",
+    "master_path": "source/id-ID/functional-analysis-id-through-ch16.tex",
+    "master_bytes": 10679,
+    "master_sha256": "6e528b0193d3179b58e44169430d043fa5399f7c860f09d832eb3ccd954a5388",
+    "reader_path": "output/pdf/analisis-fungsional-dan-aljabar-operator-id-bab-1-16.pdf",
+    "reader_pages": 213,
+    "reader_bytes": 2278823,
+    "reader_sha256": "8af194778cd60630ec767cfb381e4798253aa5d2ee205d2e72489cf3b5d90ef5",
+    "admission_receipt": "provenance/CH16_BUILD_AND_QA_RECEIPT.md",
+    "admission_receipt_sha256": "d2891beed9d1a46b3f7821cc87d2fe552b9e4edd90190d217645fe829e965e17"
+  },
+  "backend": {
+    "aggregate_records": 25338,
+    "manifest_path": "backend/BACKEND_MANIFEST.csv",
+    "manifest_sha256": "e707c21b95641997c72f63acf1ad4d61affe6c321f4d9f269e959cafbf0beff3",
+    "validation_path": "qa/CH16_BACKEND_VALIDATION.json",
+    "validation_sha256": "073a36a87d9c53ed52b552ebbeb0deccc2e6a4e5376550f14251b564fffed3e9",
+    "stable_ids_unique": true,
+    "relation_endpoints_resolved": true,
+    "deterministic_round_trip": true,
+    "chapters_1_15_prefix_lock": true
+  },
+  "publication": {
+    "github_repository": "https://github.com/KokunoYumeto/functional-analysis-erdman-id",
+    "github_content_commit": "f91578c166f781b4ce3f09fc8a65ea18e4eaccf7",
+    "github_content_tree": "2b0333e094e30a8c71668af6a6351161b53cb75d",
+    "github_anonymous_readback": "pass",
+    "github_receipt_path": "provenance/GITHUB_PUBLICATION_RECEIPT_CH16.json",
+    "github_receipt_sha256": "2b68318309b4cd5ca2966d9cb50d12da8563e266c77e4e3133877a34bd849231",
+    "zenodo_concept_id": "22059739",
+    "zenodo_record_id": "22076176",
+    "zenodo_doi": "10.5281/zenodo.22076176",
+    "zenodo_version": "2026.08.24-ch16",
+    "zenodo_record_url": "https://zenodo.org/records/22076176",
+    "zenodo_anonymous_readback": "pass",
+    "zenodo_receipt_path": "provenance/ZENODO_PUBLICATION_RECEIPT_CH16.json",
+    "zenodo_receipt_sha256": "ca58f948437971775abdf9cab766245dbb34b474fcbc2c26991c55b8dbb74362",
+    "zenodo_files": [
+      {
+        "filename": "analisis-fungsional-dan-aljabar-operator-id-bab-1-16.pdf",
+        "bytes": 2278823,
+        "sha256": "8af194778cd60630ec767cfb381e4798253aa5d2ee205d2e72489cf3b5d90ef5"
+      },
+      {
+        "filename": "functional-analysis-erdman-id-2026.08.24-ch16-source-backend.zip",
+        "bytes": 2921168,
+        "sha256": "48d9539b7a9f02cc46116b8b40f7d9e14723e6fcc86b71efe2f6448a01a68fd2"
+      },
+      {
+        "filename": "SHA256SUMS.txt",
+        "bytes": 254,
+        "sha256": "36a810214f2679540f9ea509af687471a950f198d5a1ffd7fbbafb40586735d6"
+      }
+    ]
+  },
+  "provenance": {
+    "translation_and_technical_editing_model": "OpenAI Codex gpt-5.6-sol, Ultra",
+    "source_author_credit_preserved": true,
+    "component_credits_preserved": true,
+    "nonendorsement_present": true,
+    "upstream_contact": "none"
+  },
+  "remaining_work": [
+    "FAOA-2015-CH17",
+    "final front and back matter reconciliation",
+    "semantic accessible reader surface",
+    "separately provenanced O001 mastery and solutions layer",
+    "separately provenanced compact-spectral and SVD bridge",
+    "complete-corpus QA and final publication"
+  ],
+  "next_source": {
+    "unit_id": "FAOA-2015-CH17",
+    "path": "source/upstream/K0_functor.tex",
+    "bytes": 59639,
+    "logical_records": 1362,
+    "sha256": "e8ebcaa4e5dbc1cc9b907edb235465610f3bd61e0bfa1ce2f1b5b26e9abf8c6a"
+  }
+}
