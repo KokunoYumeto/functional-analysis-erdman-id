@@ -1,0 +1,361 @@
+\chapter{ALJABAR PENGALI}\label{multiplier_algebras}
+
+\section{Modul Hilbert}
+\begin{notn}\label{0038014} Hasil kali dalam yang muncul sebelumnya dalam catatan ini
+dan yang dijumpai dalam buku teks dan monograf standar tentang ruang Hilbert,
+analisis fungsional, dan sebagainya, bersifat linear dalam variabel pertama dan linear konjugat dalam
+variabel kedua. Kebanyakan ahli aljabar operator kontemporer memilih bekerja dengan objek
+yang disebut modul Hilbert-$A$ \emph{kanan} ($A$ suatu aljabar-$C^*$). Untuk modul semacam itu,
+ternyata lebih mudah menggunakan ``hasil kali dalam'' yang linear dalam variabel kedua
+dan linear konjugat dalam variabel pertama. Walaupun perubahan konvensi ini mungkin menimbulkan
+sedikit rasa jengkel, secara matematis pengaruhnya kecil. Tentu saja,
+kita ingin ruang Hilbert menjadi contoh modul Hilbert-$\C$. Agar hal ini
+mungkin, kita membekali ruang Hilbert, yang hasil kali dalamnya dinyatakan dengan
+$\langle\hphantom{X},\hphantom{X}\rangle$, dengan ``hasil kali dalam'' baru yang didefinisikan
+ \index{<bracketspointy@$\langle x\,\vert\,y \rangle$ (hasil kali dalam)}%
+oleh $\langle x\,\vert\,y\rangle := \langle y,x \rangle$. ``Hasil kali dalam'' ini linear
+dalam variabel kedua dan linear konjugat dalam variabel pertama. Saya akan berusaha konsisten dalam
+menggunakan $\langle\hphantom{X},\hphantom{X}\rangle$ untuk hasil kali dalam standar dan
+$\langle\hphantom{X}\,\vert\,\hphantom{X}\rangle$ untuk hasil kali dalam yang linear dalam
+variabel keduanya.
+
+Solusi lain (yang sangat umum) untuk persoalan ini adalah menetapkan bahwa hasil kali dalam
+selalu linear dalam variabel keduanya dan ``mengoreksi'' buku teks, monograf, dan
+makalah standar sesuai dengan ketetapan tersebut.
+\end{notn}
+
+\begin{conv} Berdasarkan uraian sebelumnya, selanjutnya kita akan menggunakan kata
+``seskuilinear'' untuk berarti salah satu di antara
+ \index{seskuilinear}%
+ \index{konvensi!tentang \emph{seskuilinear}}%
+\emph{linear dalam variabel pertama dan linear konjugat dalam variabel kedua} atau \emph{linear dalam
+variabel kedua dan linear konjugat dalam variabel pertama}.
+\end{conv}
+
+\begin{defn}\label{0038017} Misalkan $A$ suatu aljabar-$C^*$ tak nol. Suatu ruang vektor $V$ adalah
+\df{modul-$A$}
+ \index{modul}%
+ \index{amodule@modul-$A$}%
+jika terdapat suatu pemetaan bilinear
+  \[ B\colon V \times A \sto V\colon (x,a) \mapsto xa \]
+sedemikian sehingga $x(ab) = (xa)b$ berlaku untuk semua $x \in V$ dan $a$, $b \in A$. Kita juga mensyaratkan
+bahwa $x \vc 1_A = x$ untuk setiap $x \in V$ jika $A$ beridentitas. (Suatu fungsi dua variabel
+ \index{bilinear}%
+disebut \df{bilinear} jika fungsi itu linear dalam kedua variabelnya.)
+\end{defn}
+
+\begin{defn}\label{0038021} Untuk memperjelas sebagian materi berikutnya, akan
+berguna untuk memiliki definisi formal berikut. Suatu
+ \index{vektor!ruang}%
+\df{ruang vektor (kompleks)} adalah tripel $(V,+,M)$ dengan $(V,+)$ suatu grup Abel dan
+$M\colon \C \sto \Hom(V,+)$ suatu homomorfisme gelanggang beridentitas. (Seperti dapat diduga,
+$\Hom(V,+)$ menyatakan gelanggang beridentitas dari endomorfisme grup $(V,+)$.) Jadi, suatu
+ \index{aljabar}%
+\df{aljabar} adalah kuadruplet terurut $(A,+,M,\,\cdot\,)$ dengan $(A,+,M)$ suatu ruang
+vektor dan $\,\cdot\,\colon A \times A \sto A \colon (a,b) \mapsto a \cdot b = ab$ suatu
+operasi biner pada $A$ yang memenuhi syarat-syarat dalam~\ref{defn_alg}.
+\end{defn}
+
+\begin{exer} Pastikan bahwa definisi \emph{ruang vektor} sebelumnya ekuivalen
+dengan definisi yang biasa Anda gunakan.
+\end{exer}
+
+\begin{defn} Misalkan $(A,+,M,\,\cdot\,)$ suatu aljabar (kompleks). Maka $A^{\textrm{op}}$
+ \index{<A@$A^{\textrm{op}}$ (aljabar lawan dari $A$)}%
+adalah aljabar $(A,+,M,*)$ dengan $a*b = b\cdot a$ untuk semua $a$, $b \in A$. Aljabar ini adalah
+ \index{aljabar lawan}%
+ \index{aljabar!lawan}%
+\df{aljabar lawan} dari~$A$. Aljabar itu hanyalah $A$ dengan urutan perkalian dibalik.
+Jika $A$ dan $B$ adalah aljabar, maka setiap fungsi $f \colon A \sto B$ dengan cara yang jelas menginduksi
+suatu fungsi dari $A$ ke $B^{\textrm{op}}$ (atau dari $A^{\textrm{op}}$ ke $B$,
+atau dari $A^{\textrm{op}}$ ke $B^{\textrm{op}}$). Semua fungsi ini akan kita nyatakan
+cukup dengan~$f$.
+\end{defn}
+
+\begin{defn}\label{0038027} Misalkan $A$ dan $B$ aljabar. Suatu fungsi
+$\phi\colon A \sto B$ adalah suatu
+ \index{antihomomorfisme}%
+\df{antihomomorfisme} jika fungsi $\phi\colon A \sto B^{\textrm{op}}$ merupakan suatu homomorfisme.
+Suatu antihomomorfisme bijektif adalah
+ \index{antiisomorfisme}%
+\df{antiisomorfisme}. Dalam contoh~\ref{0022057} kita menjumpai \emph{antiisomorfisme}
+ruang Hilbert. Antiisomorfisme tersebut agak berbeda karena alih-alih membalik perkalian
+(yang tidak dimiliki ruang Hilbert), antiisomorfisme itu mengonjugatkan skalar. Dalam kedua kasus,
+antiisomorfisme bukanlah sesuatu yang sama sekali berbeda dari isomorfisme, melainkan justru
+sesuatu yang sangat serupa.
+\end{defn}
+
+Gagasan modul-$A$ (dengan $A$ suatu aljabar) telah didefinisikan dalam~\ref{0038017}. Anda
+mungkin lebih menyukai definisi alternatif berikut, yang lebih selaras dengan
+definisi \emph{ruang vektor} dalam~\ref{0038021}.
+
+\begin{defn}\label{0038031} Misalkan $A$ suatu aljabar. Kuadruplet terurut
+ \index{modul}%
+ \index{amodule@modul-$A$}%
+$(V,+,M,\Phi)$ disebut \df{modul-$A$} jika $(V,+,M)$ suatu ruang vektor dan $\Phi\colon A \sto \ofml L(V)$ suatu
+homomorfisme aljabar. Jika $A$ beridentitas, kita juga mensyaratkan bahwa $\Phi$ beridentitas.
+\end{defn}
+
+\begin{exer} Periksa bahwa definisi \emph{modul-$A$} dalam~\ref{0038017}
+dan~\ref{0038031} ekuivalen.
+\end{exer}
+
+Sekarang kita nyatakan secara tepat apa artinya, ketika $A$ suatu aljabar-$C^*$, membekali modul-$A$ dengan
+hasil kali dalam bernilai-$A$.
+
+\begin{defn} Misalkan $A$ suatu aljabar-$C^*$. Suatu
+ \index{hasil kali dalam semu!modul-$A$}%
+ \index{modul!hasil kali dalam semu modul-$A$}%
+ \index{amodule@modul-$A$!hasil kali dalam semu}%
+\df{modul-$A$ hasil kali dalam semu} adalah suatu modul-$A$ $V$ beserta pemetaan
+  \[ \beta\colon V \times V \sto A\colon (x,y) \mapsto \langle x\vert\, y\rangle \]
+yang linear dalam variabel keduanya dan memenuhi
+ \begin{enumerate}
+    \item[(i)] $\langle x\vert\, ya\rangle = \langle x\vert\, y\rangle a$,
+    \item[(ii)] $\langle x\vert\, y\rangle = \langle y\vert\, x\rangle^*$, dan
+    \item[(iii)] $\langle x\vert\, x\rangle \ge \vc 0$
+ \end{enumerate}
+untuk semua $x$, $y \in V$ dan $a \in A$. Modul ini adalah suatu
+ \index{hasil kali dalam!modul-$A$}%
+ \index{modul!hasil kali dalam modul-$A$}%
+ \index{amodule@modul-$A$!hasil kali dalam}%
+\df{modul-$A$ hasil kali dalam} (atau suatu
+ \index{pra-Hilbert!modul-$A$}%
+ \index{modul!pra-Hilbert-$A$}%
+ \index{amodule@modul-$A$!pra-Hilbert}%
+\df{modul pra-Hilbert-$A$}) jika sebagai tambahan
+ \begin{enumerate}
+    \item[(iv)] $\langle x\vert\, x\rangle = \vc 0$ mengakibatkan $x = \vc 0$
+ \end{enumerate}
+untuk $x \in V$. Kita akan menyebut pemetaan $\beta$ sebagai
+ \index{hasil kali dalam!bernilai-$A$}%
+ \index{Aval@hasil kali dalam (semu) bernilai-$A$}%
+\df{hasil kali dalam (semu) bernilai-$A$} pada~$V$.
+\end{defn}
+
+\begin{exam} Setiap ruang hasil kali dalam adalah modul-$\C$ hasil kali dalam.
+\end{exam}
+
+\begin{prop} Misalkan $A$ suatu aljabar-$C^*$ dan $V$ suatu modul-$A$ hasil kali dalam semu.
+Hasil kali dalam semu $\langle\hphantom{x}\vert\,\hphantom{x}\rangle$ bersifat linear konjugat
+dalam variabel pertamanya, baik secara harfiah maupun dalam arti bahwa $\langle va \vert\,
+w\rangle = a^* \langle v \vert\, w\rangle$ untuk semua $v$, $w \in V$ dan $a \in A$.
+\end{prop}
+
+\begin{prop}[Ketaksamaan Schwarz---untuk modul-$A$ hasil kali dalam]\label{0038038} Misalkan
+$V$ suatu modul-$A$ hasil kali dalam dengan $A$ suatu aljabar-$C^*$. Maka
+  \[ \langle x\vert\, y \rangle^*\langle x\vert\, y \rangle
+          \le \norm{\langle x\vert\, x \rangle}\,\langle y\vert\, y \rangle \]
+untuk semua $x$, $y \in V$.
+\end{prop}
+
+\begin{proof}[\emph{Petunjuk pembuktian}] Tunjukkan bahwa, tanpa mengurangi keumuman,
+kita dapat mengasumsikan bahwa
+$\norm{\langle x\vert\, x\rangle} = 1$. Pertimbangkan elemen positif $\langle xa -
+y\vert\, xa - y\rangle$ dengan $a = \langle x \vert\, y \rangle$. Gunakan
+proposisi~\ref{0018203} dan~\ref{0018204}. \ns
+\end{proof}
+
+\begin{defn}\label{0038041} Untuk setiap elemen $v$ dari suatu modul-$A$ hasil kali dalam
+(dengan $A$ suatu aljabar-$C^*$), definisikan
+  \[ \norm v := \norm{\langle v \vert\, v \rangle}^{1/2}. \]
+\end{defn}
+
+\begin{prop}[Ketaksamaan Schwarz lainnya] Misalkan $A$ suatu aljabar-$C^*$ dan $V$ suatu
+modul-$A$ hasil kali dalam. Maka untuk semua $v$, $w \in V$
+  \[ \norm{\langle v \vert\, w\rangle} \le \norm v\,\norm w. \]
+\end{prop}
+
+\begin{cor} Jika $v$ dan $w$ merupakan elemen suatu modul-$A$ hasil kali dalam (dengan $A$ suatu
+aljabar-$C^*$), maka $\norm{v + w} \le \norm v + \norm w$ dan pemetaan $x \mapsto \norm x$
+merupakan norma pada~$V$.
+\end{cor}
+
+\begin{prop} Jika $A$ suatu aljabar-$C^*$ dan $V$ suatu modul-$A$ hasil kali dalam, maka
+  \[ \norm{va} \le \norm v\, \norm a \]
+untuk semua $v \in V$ dan $a \in A$.
+\end{prop}
+
+\begin{defn} Misalkan $A$ suatu aljabar-$C^*$ dan $V$ suatu modul-$A$ hasil kali dalam. Jika $V$
+lengkap terhadap (metrik yang diinduksi oleh) norma yang didefinisikan dalam~\ref{0038041},
+maka $V$ adalah suatu
+ \index{amodule@modul-$A$!Hilbert}%
+ \index{Hilbert!modul-$A$}%
+\df{modul Hilbert-$A$}.
+\end{defn}
+
+\begin{exam}\label{0038111} Untuk $a$ dan $b$ dalam suatu aljabar-$C^*$ $A$,
+ \index{Hilbert!modul-$A$!$A$ sebagai}%
+ \index{amodule@modul-$A$!Hilbert!$A$ sebagai}%
+definisikan
+  \[ \langle a \vert\, b\rangle := a^*b\,. \]
+Maka $A$ sendiri merupakan modul Hilbert-$A$. Setiap ideal kanan tertutup dalam $A$ juga merupakan
+modul Hilbert-$A$.
+\end{exam}
+
+\begin{defn} Misalkan $V$ dan $W$ modul-modul Hilbert-$A$ dengan $A$ suatu aljabar-$C^*$. Suatu
+pemetaan $T\colon V \sto W$ bersifat
+ \index{alinear@linear-$A$}%
+ \index{linear!$A$-}%
+\df{linear-$A$} jika pemetaan itu linear dan jika $T(va) = T(v)a$ berlaku untuk semua $v \in V$ dan $a \in
+A$. Pemetaan $T$ adalah suatu
+ \index{amodule@modul-$A$!morfisme}%
+ \index{modul!morfisme}%
+ \index{morfisme!modul Hilbert-$A$}%
+ \index{Hilbert!modul-$A$!morfisme}%
+\df{morfisme modul Hilbert-$A$} jika pemetaan itu terbatas dan linear-$A$.
+\end{defn}
+
+Ingat dari~\ref{def000926} bahwa setiap operator ruang Hilbert memiliki adjoin.
+Hal ini tidak berlaku untuk modul Hilbert-$A$.
+
+\begin{defn} Misalkan $V$ dan $W$ modul-modul Hilbert-$A$ dengan $A$ suatu aljabar-$C^*$. Suatu
+fungsi $T\colon V \sto W$ bersifat
+ \index{dapat diadjoinkan}%
+\df{dapat diadjoinkan} jika terdapat suatu fungsi $T^*\colon W \sto V$ yang memenuhi
+  \[ \langle Tv \vert\, w \rangle = \langle v \vert\, T^*w \rangle \]
+untuk semua $v \in V$ dan $w \in W$. Fungsi $T^*$, jika ada, adalah
+ \index{adjoin}
+\df{adjoin} dari~$T$. Nyatakan dengan
+ \index{L@$\ofml L(V,W)$, $\ofml L(V)$ (pemetaan yang dapat diadjoinkan)}%
+$\ofml L(V,W)$ keluarga pemetaan yang dapat diadjoinkan dari $V$ ke~$W$. Kita menyingkat $\ofml L(V,V)$
+menjadi~$\ofml L(V)$.
+\end{defn}
+
+\begin{prop} Misalkan $V$ dan $W$ modul-modul Hilbert-$A$ dengan $A$ suatu aljabar-$C^*$. Jika suatu
+fungsi $T\colon V \sto W$ dapat diadjoinkan, maka fungsi itu merupakan morfisme modul Hilbert-$A$.
+Lebih lanjut, jika $T$ dapat diadjoinkan, maka adjoinnya juga dapat diadjoinkan dan $T^{**} = T$.
+\end{prop}
+
+\begin{exam} Misalkan $X$ interval satuan $[0,1]$ dan $Y = \{0\}$. Dengan topologi biasa,
+$X$ merupakan ruang Hausdorff kompak dan $Y$ suatu subruang dari~$X$. Misalkan $A$ adalah
+aljabar-$C^*$ $\fml C(X)$ dan $J_0$ adalah ideal $\{f \in A\colon f(0) = 0\}$ (lihat
+proposisi~\ref{0006836}). Pandang $V = A$ dan $W = J_0$ sebagai modul-modul Hilbert-$A$ (lihat
+contoh~\ref{0038111}). Maka pemetaan inklusi
+$\iota\colon W \sto V$ merupakan morfisme modul Hilbert-$A$ yang tidak dapat diadjoinkan.
+\end{exam}
+
+\begin{prop} Misalkan $A$ suatu aljabar-$C^*$. Pasangan pemetaan $V \mapsto V$, $T \mapsto T^*$
+merupakan funktor kontravarian dari kategori modul Hilbert-$A$ dan pemetaan yang dapat diadjoinkan
+ke dirinya sendiri.
+\end{prop}
+
+\begin{prop}\label{0038244} Misalkan $A$ suatu aljabar-$C^*$ dan $V$ suatu modul Hilbert-$A$.
+ \index{C*@$C^*$-aljabar!$\ofml L(V)$ sebagai suatu}%
+ \index{L@$\ofml L(V)$!sebagai suatu aljabar-$C^*$}%
+Maka $\ofml L(V)$ merupakan aljabar-$C^*$ beridentitas.
+\end{prop}
+
+\begin{notn} Misalkan $V$ dan $W$ modul-modul Hilbert-$A$ dengan $A$ suatu aljabar-$C^*$.
+ \index{theta@$\Theta_{v,w}$}%
+Untuk $v \in V$ dan $w \in W$, misalkan
+  \[ \Theta_{v,w}\colon W \sto V\colon x \mapsto v\langle w \vert\, x\rangle\,. \]
+(Bandingkan dengan~\ref{0022431fa}.)
+\end{notn}
+
+\begin{prop} Pemetaan $\Theta$ yang didefinisikan di atas bersifat seskuilinear.
+\end{prop}
+
+\begin{prop} Misalkan $V$ dan $W$ modul-modul Hilbert-$A$ dengan $A$ suatu aljabar-$C^*$. Untuk
+setiap $v \in V$ dan $w \in W$, pemetaan $\Theta_{v,w}$ dapat diadjoinkan dan $(\Theta_{v,w})^*
+= \Theta_{w,v}$.
+\end{prop}
+
+Proposisi berikut memperumum proposisi~\ref{prop_op_act_otimes1} dan~\ref{prop_op_act_otimes2}.
+
+\begin{prop} Misalkan $U$, $V$, $W$, dan $Z$ modul-modul Hilbert-$A$ dengan $A$ suatu aljabar-$C^*$.
+Jika $S \in \ofml L(Z,W)$ dan $T \in \ofml L(V,U)$, maka
+  \[ T \Theta_{v,w} = \Theta_{Tv,w} \qquad \text{ dan } \qquad
+                               \Theta_{v,w} S = \Theta_{v,S^*w} \]
+untuk semua $v \in V$ dan $w \in W$.
+  \[ Z \to^S W \to^{\Theta_{v,w}} V \to^T U \]
+\end{prop}
+
+\begin{prop} Misalkan $U$, $V$, dan $W$ modul-modul Hilbert-$A$ dengan $A$ suatu aljabar-$C^*$.
+Andaikan $u \in U$; $v$, $v' \in V$; dan $w \in W$. Maka
+  \[ \Theta_{u,v}\Theta_{v',w} = \Theta_{u\langle v \vert\,v' \rangle, w}
+                               = \Theta_{u, w\langle v'\vert\,v \rangle}\,. \]
+\end{prop}
+
+\begin{notn}\label{0038331} Misalkan $A$ suatu aljabar-$C^*$ dan $V$ serta $W$
+modul-modul Hilbert-$A$. Kita nyatakan dengan
+ \index{K@$\ofml K(V,W)$, $\ofml K(V)$}%
+$\ofml K(W,V)$ rentang linear tertutup dari $\{\Theta_{v,w}\colon v \in V \text{ dan } w \in
+W\}$. Seperti biasa, kita menyingkat $\ofml K(V,V)$ menjadi~$\ofml K(V)$.
+\end{notn}
+
+\begin{prop}\label{0038334} Jika $A$ suatu aljabar-$C^*$ dan $V$
+suatu modul Hilbert-$A$, maka $\ofml K(V)$ adalah ideal dalam aljabar-$C^*$~$\ofml L(V)$.
+\end{prop}
+
+Contoh berikut dimaksudkan sebagai pembenaran bagi praktik standar untuk mengidentifikasi suatu
+aljabar-$C^*$ $A$ dengan $\ofml K(A)$.
+
+\begin{exam}\label{0038337} Jika suatu aljabar-$C^*$ $A$ kita pandang sebagai modul-$A$ (lihat
+contoh~\ref{0038111}), maka $\cstariso{\ofml K(A)}A$.
+\end{exam}
+
+\begin{proof}[\emph{Petunjuk pembuktian}] Seperti dalam akibat~\ref{0013151}, untuk setiap
+$a \in A$ definisikan operator perkalian kiri $L_a\colon A \sto A\colon x \mapsto ax$. Tunjukkan
+bahwa setiap operator semacam itu dapat diadjoinkan dan bahwa pemetaan $L\colon A \sto \ofml L(A) \colon
+a \mapsto L_a$ merupakan isomorfisme-$*\,$ ke suatu subaljabar-$C^*$ dari~$\ofml L(A)$. Kemudian
+verifikasikan bahwa $\ofml K(A)$ adalah tutupan citra oleh $L$ dari rentang linear hasil kali
+elemen-elemen~$A$. \ns
+\end{proof}
+
+\begin{exam}\label{0038341} Misalkan $H$ suatu ruang Hilbert yang dipandang sebagai modul-$\C$. Maka
+$\ofml K(H)$ (sebagaimana didefinisikan dalam~\ref{0038331}) adalah ideal operator kompak pada~$H$ (lihat
+proposisi~\ref{prop_K_is_clo_FR}).
+\end{exam}
+
+\begin{proof} Lihat~\cite{RaeburnW:1998}, contoh 2.27. \ns \end{proof}
+
+Contoh sebelumnya telah mendorong banyak peneliti, ketika menangani suatu modul Hilbert sebarang~$V$,
+menyebut elemen $\ofml K(V)$ sebagai \emph{operator kompak}. Istilah ini
+meragukan karena operator semacam itu belum tentu kompak. (Sebagai contoh, jika
+suatu aljabar-$C^*$ beridentitas berdimensi tak hingga $A$ kita pandang sebagai modul-$A$, maka
+$\Theta_{\vc 1,\vc 1} = I_A$, tetapi operator identitas pada $A$ tidak kompak---lihat
+contoh~\ref{cor_id_op_not_cpt}.)
+
+Fakta bahwa modul Hilbert-$C^*$ hanya digunakan secara terbatas dalam catatan ini hendaknya
+tidak membuat Anda berpikir bahwa kajiannya sangat khusus dan/atau kurang penting.
+Sebaliknya,
+kajian tersebut sekarang merupakan bidang penelitian penting dan dinamis yang memiliki penerapan
+pada bidang-bidang yang beragam seperti teori-$K$, aljabar-$C^*$ graf, grup kuantum, probabilitas
+kuantum, berkas vektor, geometri nonkomutatif, topologi aljabar dan topologi geometri,
+ruang dan aljabar operator, serta wavelet. Lihatlah
+laman web Michael Frank~\cite{Frank:2010}, \emph{Hilbert C*-modules and related subjects---a guided
+reference overview}, tempat ia mencantumkan 1531 referensi (pada pembaruan 11.09.10) berupa buku,
+makalah, dan tesis tentang modul semacam itu dan mengelompokkannya menurut penerapan. Terdapat
+grafik menarik (pada halaman 9) yang menggambarkan pertumbuhan bidang
+matematika ini. Grafik tersebut mencakup materi dari upaya perintis pada tahun 1950-an dan awal 1960-an
+(0--2 makalah per tahun) hingga saat catatan ini ditulis (sekitar 100 makalah per tahun).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

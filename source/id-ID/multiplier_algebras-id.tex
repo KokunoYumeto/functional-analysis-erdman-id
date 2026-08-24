@@ -1,0 +1,687 @@
+\chapter{ALJABAR PENGALI}\label{multiplier_algebras}
+
+\section{Modul Hilbert}
+\begin{notn}\label{0038014} Hasil kali dalam yang muncul sebelumnya dalam catatan ini
+dan yang dijumpai dalam buku teks dan monograf standar tentang ruang Hilbert,
+analisis fungsional, dan sebagainya, bersifat linear dalam variabel pertama dan linear konjugat dalam
+variabel kedua. Kebanyakan ahli aljabar operator kontemporer memilih bekerja dengan objek
+yang disebut modul Hilbert-$A$ \emph{kanan} ($A$ suatu aljabar-$C^*$). Untuk modul semacam itu,
+ternyata lebih mudah menggunakan ``hasil kali dalam'' yang linear dalam variabel kedua
+dan linear konjugat dalam variabel pertama. Walaupun perubahan konvensi ini mungkin menimbulkan
+sedikit rasa jengkel, secara matematis pengaruhnya kecil. Tentu saja,
+kita ingin ruang Hilbert menjadi contoh modul Hilbert-$\C$. Agar hal ini
+mungkin, kita membekali ruang Hilbert, yang hasil kali dalamnya dinyatakan dengan
+$\langle\hphantom{X},\hphantom{X}\rangle$, dengan ``hasil kali dalam'' baru yang didefinisikan
+ \index{<bracketspointy@$\langle x\,\vert\,y \rangle$ (hasil kali dalam)}%
+oleh $\langle x\,\vert\,y\rangle := \langle y,x \rangle$. ``Hasil kali dalam'' ini linear
+dalam variabel kedua dan linear konjugat dalam variabel pertama. Saya akan berusaha konsisten dalam
+menggunakan $\langle\hphantom{X},\hphantom{X}\rangle$ untuk hasil kali dalam standar dan
+$\langle\hphantom{X}\,\vert\,\hphantom{X}\rangle$ untuk hasil kali dalam yang linear dalam
+variabel keduanya.
+
+Solusi lain (yang sangat umum) untuk persoalan ini adalah menetapkan bahwa hasil kali dalam
+selalu linear dalam variabel keduanya dan ``mengoreksi'' buku teks, monograf, dan
+makalah standar sesuai dengan ketetapan tersebut.
+\end{notn}
+
+\begin{conv} Berdasarkan uraian sebelumnya, selanjutnya kita akan menggunakan kata
+``seskuilinear'' untuk berarti salah satu di antara
+ \index{seskuilinear}%
+ \index{konvensi!tentang \emph{seskuilinear}}%
+\emph{linear dalam variabel pertama dan linear konjugat dalam variabel kedua} atau \emph{linear dalam
+variabel kedua dan linear konjugat dalam variabel pertama}.
+\end{conv}
+
+\begin{defn}\label{0038017} Misalkan $A$ suatu aljabar-$C^*$ tak nol. Suatu ruang vektor $V$ adalah
+\df{modul-$A$}
+ \index{modul}%
+ \index{amodule@modul-$A$}%
+jika terdapat suatu pemetaan bilinear
+  \[ B\colon V \times A \sto V\colon (x,a) \mapsto xa \]
+sedemikian sehingga $x(ab) = (xa)b$ berlaku untuk semua $x \in V$ dan $a$, $b \in A$. Kita juga mensyaratkan
+bahwa $x \vc 1_A = x$ untuk setiap $x \in V$ jika $A$ beridentitas. (Suatu fungsi dua variabel
+ \index{bilinear}%
+disebut \df{bilinear} jika fungsi itu linear dalam kedua variabelnya.)
+\end{defn}
+
+\begin{defn}\label{0038021} Untuk memperjelas sebagian materi berikutnya, akan
+berguna untuk memiliki definisi formal berikut. Suatu
+ \index{vektor!ruang}%
+\df{ruang vektor (kompleks)} adalah tripel $(V,+,M)$ dengan $(V,+)$ suatu grup Abel dan
+$M\colon \C \sto \Hom(V,+)$ suatu homomorfisme gelanggang beridentitas. (Seperti dapat diduga,
+$\Hom(V,+)$ menyatakan gelanggang beridentitas dari endomorfisme grup $(V,+)$.) Jadi, suatu
+ \index{aljabar}%
+\df{aljabar} adalah kuadruplet terurut $(A,+,M,\,\cdot\,)$ dengan $(A,+,M)$ suatu ruang
+vektor dan $\,\cdot\,\colon A \times A \sto A \colon (a,b) \mapsto a \cdot b = ab$ suatu
+operasi biner pada $A$ yang memenuhi syarat-syarat dalam~\ref{defn_alg}.
+\end{defn}
+
+\begin{exer} Pastikan bahwa definisi \emph{ruang vektor} sebelumnya ekuivalen
+dengan definisi yang biasa Anda gunakan.
+\end{exer}
+
+\begin{defn} Misalkan $(A,+,M,\,\cdot\,)$ suatu aljabar (kompleks). Maka $A^{\textrm{op}}$
+ \index{<A@$A^{\textrm{op}}$ (aljabar lawan dari $A$)}%
+adalah aljabar $(A,+,M,*)$ dengan $a*b = b\cdot a$ untuk semua $a$, $b \in A$. Aljabar ini adalah
+ \index{aljabar lawan}%
+ \index{aljabar!lawan}%
+\df{aljabar lawan} dari~$A$. Aljabar itu hanyalah $A$ dengan urutan perkalian dibalik.
+Jika $A$ dan $B$ adalah aljabar, maka setiap fungsi $f \colon A \sto B$ dengan cara yang jelas menginduksi
+suatu fungsi dari $A$ ke $B^{\textrm{op}}$ (atau dari $A^{\textrm{op}}$ ke $B$,
+atau dari $A^{\textrm{op}}$ ke $B^{\textrm{op}}$). Semua fungsi ini akan kita nyatakan
+cukup dengan~$f$.
+\end{defn}
+
+\begin{defn}\label{0038027} Misalkan $A$ dan $B$ aljabar. Suatu fungsi
+$\phi\colon A \sto B$ adalah suatu
+ \index{antihomomorfisme}%
+\df{antihomomorfisme} jika fungsi $\phi\colon A \sto B^{\textrm{op}}$ merupakan suatu homomorfisme.
+Suatu antihomomorfisme bijektif adalah
+ \index{antiisomorfisme}%
+\df{antiisomorfisme}. Dalam contoh~\ref{0022057} kita menjumpai \emph{antiisomorfisme}
+ruang Hilbert. Antiisomorfisme tersebut agak berbeda karena alih-alih membalik perkalian
+(yang tidak dimiliki ruang Hilbert), antiisomorfisme itu mengonjugatkan skalar. Dalam kedua kasus,
+antiisomorfisme bukanlah sesuatu yang sama sekali berbeda dari isomorfisme, melainkan justru
+sesuatu yang sangat serupa.
+\end{defn}
+
+Gagasan modul-$A$ (dengan $A$ suatu aljabar) telah didefinisikan dalam~\ref{0038017}. Anda
+mungkin lebih menyukai definisi alternatif berikut, yang lebih selaras dengan
+definisi \emph{ruang vektor} dalam~\ref{0038021}.
+
+\begin{defn}\label{0038031} Misalkan $A$ suatu aljabar. Kuadruplet terurut
+ \index{modul}%
+ \index{amodule@modul-$A$}%
+$(V,+,M,\Phi)$ disebut \df{modul-$A$} jika $(V,+,M)$ suatu ruang vektor dan $\Phi\colon A \sto \ofml L(V)$ suatu
+homomorfisme aljabar. Jika $A$ beridentitas, kita juga mensyaratkan bahwa $\Phi$ beridentitas.
+\end{defn}
+
+\begin{exer} Periksa bahwa definisi \emph{modul-$A$} dalam~\ref{0038017}
+dan~\ref{0038031} ekuivalen.
+\end{exer}
+
+Sekarang kita nyatakan secara tepat apa artinya, ketika $A$ suatu aljabar-$C^*$, membekali modul-$A$ dengan
+hasil kali dalam bernilai-$A$.
+
+\begin{defn} Misalkan $A$ suatu aljabar-$C^*$. Suatu
+ \index{hasil kali dalam semu!modul-$A$}%
+ \index{modul!hasil kali dalam semu modul-$A$}%
+ \index{amodule@modul-$A$!hasil kali dalam semu}%
+\df{modul-$A$ hasil kali dalam semu} adalah suatu modul-$A$ $V$ beserta pemetaan
+  \[ \beta\colon V \times V \sto A\colon (x,y) \mapsto \langle x\vert\, y\rangle \]
+yang linear dalam variabel keduanya dan memenuhi
+ \begin{enumerate}
+    \item[(i)] $\langle x\vert\, ya\rangle = \langle x\vert\, y\rangle a$,
+    \item[(ii)] $\langle x\vert\, y\rangle = \langle y\vert\, x\rangle^*$, dan
+    \item[(iii)] $\langle x\vert\, x\rangle \ge \vc 0$
+ \end{enumerate}
+untuk semua $x$, $y \in V$ dan $a \in A$. Modul ini adalah suatu
+ \index{hasil kali dalam!modul-$A$}%
+ \index{modul!hasil kali dalam modul-$A$}%
+ \index{amodule@modul-$A$!hasil kali dalam}%
+\df{modul-$A$ hasil kali dalam} (atau suatu
+ \index{pra-Hilbert!modul-$A$}%
+ \index{modul!pra-Hilbert-$A$}%
+ \index{amodule@modul-$A$!pra-Hilbert}%
+\df{modul pra-Hilbert-$A$}) jika sebagai tambahan
+ \begin{enumerate}
+    \item[(iv)] $\langle x\vert\, x\rangle = \vc 0$ mengakibatkan $x = \vc 0$
+ \end{enumerate}
+untuk $x \in V$. Kita akan menyebut pemetaan $\beta$ sebagai
+ \index{hasil kali dalam!bernilai-$A$}%
+ \index{Aval@hasil kali dalam (semu) bernilai-$A$}%
+\df{hasil kali dalam (semu) bernilai-$A$} pada~$V$.
+\end{defn}
+
+\begin{exam} Setiap ruang hasil kali dalam adalah modul-$\C$ hasil kali dalam.
+\end{exam}
+
+\begin{prop} Misalkan $A$ suatu aljabar-$C^*$ dan $V$ suatu modul-$A$ hasil kali dalam semu.
+Hasil kali dalam semu $\langle\hphantom{x}\vert\,\hphantom{x}\rangle$ bersifat linear konjugat
+dalam variabel pertamanya, baik secara harfiah maupun dalam arti bahwa $\langle va \vert\,
+w\rangle = a^* \langle v \vert\, w\rangle$ untuk semua $v$, $w \in V$ dan $a \in A$.
+\end{prop}
+
+\begin{prop}[Ketaksamaan Schwarz---untuk modul-$A$ hasil kali dalam]\label{0038038} Misalkan
+$V$ suatu modul-$A$ hasil kali dalam dengan $A$ suatu aljabar-$C^*$. Maka
+  \[ \langle x\vert\, y \rangle^*\langle x\vert\, y \rangle
+          \le \norm{\langle x\vert\, x \rangle}\,\langle y\vert\, y \rangle \]
+untuk semua $x$, $y \in V$.
+\end{prop}
+
+\begin{proof}[\emph{Petunjuk pembuktian}] Tunjukkan bahwa, tanpa mengurangi keumuman,
+kita dapat mengasumsikan bahwa
+$\norm{\langle x\vert\, x\rangle} = 1$. Pertimbangkan elemen positif $\langle xa -
+y\vert\, xa - y\rangle$ dengan $a = \langle x \vert\, y \rangle$. Gunakan
+proposisi~\ref{0018203} dan~\ref{0018204}. \ns
+\end{proof}
+
+\begin{defn}\label{0038041} Untuk setiap elemen $v$ dari suatu modul-$A$ hasil kali dalam
+(dengan $A$ suatu aljabar-$C^*$), definisikan
+  \[ \norm v := \norm{\langle v \vert\, v \rangle}^{1/2}. \]
+\end{defn}
+
+\begin{prop}[Ketaksamaan Schwarz lainnya] Misalkan $A$ suatu aljabar-$C^*$ dan $V$ suatu
+modul-$A$ hasil kali dalam. Maka untuk semua $v$, $w \in V$
+  \[ \norm{\langle v \vert\, w\rangle} \le \norm v\,\norm w. \]
+\end{prop}
+
+\begin{cor} Jika $v$ dan $w$ merupakan elemen suatu modul-$A$ hasil kali dalam (dengan $A$ suatu
+aljabar-$C^*$), maka $\norm{v + w} \le \norm v + \norm w$ dan pemetaan $x \mapsto \norm x$
+merupakan norma pada~$V$.
+\end{cor}
+
+\begin{prop} Jika $A$ suatu aljabar-$C^*$ dan $V$ suatu modul-$A$ hasil kali dalam, maka
+  \[ \norm{va} \le \norm v\, \norm a \]
+untuk semua $v \in V$ dan $a \in A$.
+\end{prop}
+
+\begin{defn} Misalkan $A$ suatu aljabar-$C^*$ dan $V$ suatu modul-$A$ hasil kali dalam. Jika $V$
+lengkap terhadap (metrik yang diinduksi oleh) norma yang didefinisikan dalam~\ref{0038041},
+maka $V$ adalah suatu
+ \index{amodule@modul-$A$!Hilbert}%
+ \index{Hilbert!modul-$A$}%
+\df{modul Hilbert-$A$}.
+\end{defn}
+
+\begin{exam}\label{0038111} Untuk $a$ dan $b$ dalam suatu aljabar-$C^*$ $A$,
+ \index{Hilbert!modul-$A$!$A$ sebagai}%
+ \index{amodule@modul-$A$!Hilbert!$A$ sebagai}%
+definisikan
+  \[ \langle a \vert\, b\rangle := a^*b\,. \]
+Maka $A$ sendiri merupakan modul Hilbert-$A$. Setiap ideal kanan tertutup dalam $A$ juga merupakan
+modul Hilbert-$A$.
+\end{exam}
+
+\begin{defn} Misalkan $V$ dan $W$ modul-modul Hilbert-$A$ dengan $A$ suatu aljabar-$C^*$. Suatu
+pemetaan $T\colon V \sto W$ bersifat
+ \index{alinear@linear-$A$}%
+ \index{linear!$A$-}%
+\df{linear-$A$} jika pemetaan itu linear dan jika $T(va) = T(v)a$ berlaku untuk semua $v \in V$ dan $a \in
+A$. Pemetaan $T$ adalah suatu
+ \index{amodule@modul-$A$!morfisme}%
+ \index{modul!morfisme}%
+ \index{morfisme!modul Hilbert-$A$}%
+ \index{Hilbert!modul-$A$!morfisme}%
+\df{morfisme modul Hilbert-$A$} jika pemetaan itu terbatas dan linear-$A$.
+\end{defn}
+
+Ingat dari~\ref{def000926} bahwa setiap operator ruang Hilbert memiliki adjoin.
+Hal ini tidak berlaku untuk modul Hilbert-$A$.
+
+\begin{defn} Misalkan $V$ dan $W$ modul-modul Hilbert-$A$ dengan $A$ suatu aljabar-$C^*$. Suatu
+fungsi $T\colon V \sto W$ bersifat
+ \index{dapat diadjoinkan}%
+\df{dapat diadjoinkan} jika terdapat suatu fungsi $T^*\colon W \sto V$ yang memenuhi
+  \[ \langle Tv \vert\, w \rangle = \langle v \vert\, T^*w \rangle \]
+untuk semua $v \in V$ dan $w \in W$. Fungsi $T^*$, jika ada, adalah
+ \index{adjoin}
+\df{adjoin} dari~$T$. Nyatakan dengan
+ \index{L@$\ofml L(V,W)$, $\ofml L(V)$ (pemetaan yang dapat diadjoinkan)}%
+$\ofml L(V,W)$ keluarga pemetaan yang dapat diadjoinkan dari $V$ ke~$W$. Kita menyingkat $\ofml L(V,V)$
+menjadi~$\ofml L(V)$.
+\end{defn}
+
+\begin{prop} Misalkan $V$ dan $W$ modul-modul Hilbert-$A$ dengan $A$ suatu aljabar-$C^*$. Jika suatu
+fungsi $T\colon V \sto W$ dapat diadjoinkan, maka fungsi itu merupakan morfisme modul Hilbert-$A$.
+Lebih lanjut, jika $T$ dapat diadjoinkan, maka adjoinnya juga dapat diadjoinkan dan $T^{**} = T$.
+\end{prop}
+
+\begin{exam} Misalkan $X$ interval satuan $[0,1]$ dan $Y = \{0\}$. Dengan topologi biasa,
+$X$ merupakan ruang Hausdorff kompak dan $Y$ suatu subruang dari~$X$. Misalkan $A$ adalah
+aljabar-$C^*$ $\fml C(X)$ dan $J_0$ adalah ideal $\{f \in A\colon f(0) = 0\}$ (lihat
+proposisi~\ref{0006836}). Pandang $V = A$ dan $W = J_0$ sebagai modul-modul Hilbert-$A$ (lihat
+contoh~\ref{0038111}). Maka pemetaan inklusi
+$\iota\colon W \sto V$ merupakan morfisme modul Hilbert-$A$ yang tidak dapat diadjoinkan.
+\end{exam}
+
+\begin{prop} Misalkan $A$ suatu aljabar-$C^*$. Pasangan pemetaan $V \mapsto V$, $T \mapsto T^*$
+merupakan funktor kontravarian dari kategori modul Hilbert-$A$ dan pemetaan yang dapat diadjoinkan
+ke dirinya sendiri.
+\end{prop}
+
+\begin{prop}\label{0038244} Misalkan $A$ suatu aljabar-$C^*$ dan $V$ suatu modul Hilbert-$A$.
+ \index{C*@$C^*$-aljabar!$\ofml L(V)$ sebagai suatu}%
+ \index{L@$\ofml L(V)$!sebagai suatu aljabar-$C^*$}%
+Maka $\ofml L(V)$ merupakan aljabar-$C^*$ beridentitas.
+\end{prop}
+
+\begin{notn} Misalkan $V$ dan $W$ modul-modul Hilbert-$A$ dengan $A$ suatu aljabar-$C^*$.
+ \index{theta@$\Theta_{v,w}$}%
+Untuk $v \in V$ dan $w \in W$, misalkan
+  \[ \Theta_{v,w}\colon W \sto V\colon x \mapsto v\langle w \vert\, x\rangle\,. \]
+(Bandingkan dengan~\ref{0022431fa}.)
+\end{notn}
+
+\begin{prop} Pemetaan $\Theta$ yang didefinisikan di atas bersifat seskuilinear.
+\end{prop}
+
+\begin{prop} Misalkan $V$ dan $W$ modul-modul Hilbert-$A$ dengan $A$ suatu aljabar-$C^*$. Untuk
+setiap $v \in V$ dan $w \in W$, pemetaan $\Theta_{v,w}$ dapat diadjoinkan dan $(\Theta_{v,w})^*
+= \Theta_{w,v}$.
+\end{prop}
+
+Proposisi berikut memperumum proposisi~\ref{prop_op_act_otimes1} dan~\ref{prop_op_act_otimes2}.
+
+\begin{prop} Misalkan $U$, $V$, $W$, dan $Z$ modul-modul Hilbert-$A$ dengan $A$ suatu aljabar-$C^*$.
+Jika $S \in \ofml L(Z,W)$ dan $T \in \ofml L(V,U)$, maka
+  \[ T \Theta_{v,w} = \Theta_{Tv,w} \qquad \text{ dan } \qquad
+                               \Theta_{v,w} S = \Theta_{v,S^*w} \]
+untuk semua $v \in V$ dan $w \in W$.
+  \[ Z \to^S W \to^{\Theta_{v,w}} V \to^T U \]
+\end{prop}
+
+\begin{prop} Misalkan $U$, $V$, dan $W$ modul-modul Hilbert-$A$ dengan $A$ suatu aljabar-$C^*$.
+Andaikan $u \in U$; $v$, $v' \in V$; dan $w \in W$. Maka
+  \[ \Theta_{u,v}\Theta_{v',w} = \Theta_{u\langle v \vert\,v' \rangle, w}
+                               = \Theta_{u, w\langle v'\vert\,v \rangle}\,. \]
+\end{prop}
+
+\begin{notn}\label{0038331} Misalkan $A$ suatu aljabar-$C^*$ dan $V$ serta $W$
+modul-modul Hilbert-$A$. Kita nyatakan dengan
+ \index{K@$\ofml K(V,W)$, $\ofml K(V)$}%
+$\ofml K(W,V)$ rentang linear tertutup dari $\{\Theta_{v,w}\colon v \in V \text{ dan } w \in
+W\}$. Seperti biasa, kita menyingkat $\ofml K(V,V)$ menjadi~$\ofml K(V)$.
+\end{notn}
+
+\begin{prop}\label{0038334} Jika $A$ suatu aljabar-$C^*$ dan $V$
+suatu modul Hilbert-$A$, maka $\ofml K(V)$ adalah ideal dalam aljabar-$C^*$~$\ofml L(V)$.
+\end{prop}
+
+Contoh berikut dimaksudkan sebagai pembenaran bagi praktik standar untuk mengidentifikasi suatu
+aljabar-$C^*$ $A$ dengan $\ofml K(A)$.
+
+\begin{exam}\label{0038337} Jika suatu aljabar-$C^*$ $A$ kita pandang sebagai modul-$A$ (lihat
+contoh~\ref{0038111}), maka $\cstariso{\ofml K(A)}A$.
+\end{exam}
+
+\begin{proof}[\emph{Petunjuk pembuktian}] Seperti dalam akibat~\ref{0013151}, untuk setiap
+$a \in A$ definisikan operator perkalian kiri $L_a\colon A \sto A\colon x \mapsto ax$. Tunjukkan
+bahwa setiap operator semacam itu dapat diadjoinkan dan bahwa pemetaan $L\colon A \sto \ofml L(A) \colon
+a \mapsto L_a$ merupakan isomorfisme-$*\,$ ke suatu subaljabar-$C^*$ dari~$\ofml L(A)$. Kemudian
+verifikasikan bahwa $\ofml K(A)$ adalah tutupan citra oleh $L$ dari rentang linear hasil kali
+elemen-elemen~$A$. \ns
+\end{proof}
+
+\begin{exam}\label{0038341} Misalkan $H$ suatu ruang Hilbert yang dipandang sebagai modul-$\C$. Maka
+$\ofml K(H)$ (sebagaimana didefinisikan dalam~\ref{0038331}) adalah ideal operator kompak pada~$H$ (lihat
+proposisi~\ref{prop_K_is_clo_FR}).
+\end{exam}
+
+\begin{proof} Lihat~\cite{RaeburnW:1998}, contoh 2.27. \ns \end{proof}
+
+Contoh sebelumnya telah mendorong banyak peneliti, ketika menangani suatu modul Hilbert sebarang~$V$,
+menyebut elemen $\ofml K(V)$ sebagai \emph{operator kompak}. Istilah ini
+meragukan karena operator semacam itu belum tentu kompak. (Sebagai contoh, jika
+suatu aljabar-$C^*$ beridentitas berdimensi tak hingga $A$ kita pandang sebagai modul-$A$, maka
+$\Theta_{\vc 1,\vc 1} = I_A$, tetapi operator identitas pada $A$ tidak kompak---lihat
+contoh~\ref{cor_id_op_not_cpt}.)
+
+Fakta bahwa modul Hilbert-$C^*$ hanya digunakan secara terbatas dalam catatan ini hendaknya
+tidak membuat Anda berpikir bahwa kajiannya sangat khusus dan/atau kurang penting.
+Sebaliknya,
+kajian tersebut sekarang merupakan bidang penelitian penting dan dinamis yang memiliki penerapan
+pada bidang-bidang yang beragam seperti teori-$K$, aljabar-$C^*$ graf, grup kuantum, probabilitas
+kuantum, berkas vektor, geometri nonkomutatif, topologi aljabar dan topologi geometri,
+ruang dan aljabar operator, serta wavelet. Lihatlah
+laman web Michael Frank~\cite{Frank:2010}, \emph{Hilbert C*-modules and related subjects---a guided
+reference overview}, tempat ia mencantumkan 1531 referensi (pada pembaruan 11.09.10) berupa buku,
+makalah, dan tesis tentang modul semacam itu dan mengelompokkannya menurut penerapan. Terdapat
+grafik menarik (pada halaman 9) yang menggambarkan pertumbuhan bidang
+matematika ini. Grafik tersebut mencakup materi dari upaya perintis pada tahun 1950-an dan awal 1960-an
+(0--2 makalah per tahun) hingga saat catatan ini ditulis (sekitar 100 makalah per tahun).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Ideal Esensial}
+\begin{exam} Jika $A$ dan $B$ adalah aljabar-$C^*$, maka $A$ (lebih tepatnya, $A \oplus \{\vc
+0\}$) merupakan ideal dalam $A \oplus B$.
+\end{exam}
+
+\begin{conv} Sebagaimana ditunjukkan oleh contoh sebelumnya, lazimnya $A$ dipandang sebagai
+ \index{konvensi!$A$ merupakan subhimpunan dari $A \oplus B$}%
+subhimpunan dari $A \oplus B$. Selanjutnya kita akan melakukan ini tanpa menyebutkannya lagi.
+\end{conv}
+
+\begin{notn} Untuk suatu elemen $c$ dari aljabar $A$
+ \index{Ic@$I_c$}%
+tetapkan
+  \[ I_c := \biggl\{a_0c + cb_0 + \sum_{k=1}^p a_kcb_k \colon
+   \text{$p \in \N$, $a_0$, \dots, $a_p$, $b_0$, \dots, $b_p \in A$}\biggr\} \]
+\end{notn}
+
+\begin{prop} Jika $c$ merupakan elemen dari aljabar $A$, maka $I_c$ merupakan ideal
+(aljabar) dalam~$A$.
+\end{prop}
+
+Perhatikan bahwa dalam proposisi sebelumnya tidak dinyatakan bahwa ideal aljabar $I_c$
+harus sejati. Sangat mungkin $I_c = A$ (misalnya, ketika $c$ merupakan
+elemen invertibel dari aljabar beridentitas).
+
+\vskip 2 pt
+
+\begin{defn} Misalkan $c$ suatu elemen dari aljabar-$C^*$ $A$.
+ \index{Jc@$J_c$ (ideal utama (tertutup) yang memuat~$c$)}%
+ \index{utama!ideal}%
+ \index{ideal!utama}%
+Definisikan $J_c$, yakni \df{ideal utama} yang memuat $c$, sebagai irisan dari
+keluarga semua ideal (tertutup) dalam $A$ yang memuat~$c$. Jelas bahwa $J_c$ merupakan ideal terkecil
+yang memuat~$c$.
+\end{defn}
+
+\begin{prop} Dalam suatu aljabar-$C^*$, tutupan suatu ideal aljabar merupakan ideal.
+\end{prop}
+
+\begin{exam} Tutupan suatu ideal aljabar sejati dalam aljabar-$C^*$ tidak harus merupakan
+ideal sejati. Sebagai contoh, $l_c$, yaitu himpunan barisan bilangan kompleks yang
+pada akhirnya nol, padat dalam aljabar-$C^*$ $l_0 = \fml C_0(\N)$. (Namun, ingat
+proposisi~\ref{0006801}.)
+\end{exam}
+
+\begin{prop} Jika $c$ suatu elemen dari aljabar-$C^*$, maka $J_c = \clo{I_c}$.
+\end{prop}
+
+\begin{notn} Kita menggunakan suatu konvensi notasi standar. Jika $A$ dan $B$ merupakan subhimpunan tak kosong
+dari suatu aljabar, maka $AB$ berarti rentang linear dari hasil kali elemen-elemen dalam $A$ dan
+elemen-elemen dalam $B$; yaitu,
+ \index{<AB@$AB$ (dalam aljabar, rentang hasil kali elemen-elemen)}%
+ \index{konvensi!dalam suatu aljabar, $AB$ menyatakan rentang hasil kali}%
+$AB = \spn\{ab \colon \text{$a \in A$ dan $b \in B$}\}$. (Perhatikan bahwa dalam
+definisi~\ref{000551} tidak ada bedanya apakah $AJ$ diartikan sebagai himpunan
+hasil kali elemen-elemen dalam $A$ dengan elemen-elemen dalam $J$ atau rentang dari himpunan tersebut.)
+\end{notn}
+
+\begin{prop} Jika $I$ dan $J$ merupakan ideal dalam suatu aljabar-$C^*$, maka $\clo{IJ} =
+I \cap J$.
+\end{prop}
+
+\vskip 2 pt
+
+Suatu aljabar-$C^*$ tak beridentitas $A$ dapat dibenamkan sebagai ideal dalam aljabar-$C^*$ beridentitas melalui
+berbagai cara. Aljabar-$C^*$ beridentitas terkecil yang memuat $A$ adalah unitalisasinya~$\wt
+A$ (lihat proposisi~\ref{0015213}). Tentu saja tidak ada aljabar-$C^*$ beridentitas terbesar tempat
+$A$ dapat dibenamkan sebagai ideal, sebab jika $A$ dibenamkan sebagai ideal dalam suatu
+aljabar-$C^*$ beridentitas $B$ dan $C$ adalah \emph{sebarang} aljabar-$C^*$ beridentitas, maka $A$ merupakan ideal dalam
+aljabar-$C^*$ beridentitas $B \oplus C$ yang lebih besar lagi. Alasan unitalisasi yang lebih besar ini
+tidak begitu menarik adalah karena irisan ideal $C$ dengan $A$ ialah~$\{\vc 0\}$.
+Hal ini memotivasi definisi berikut.
+
+\vskip 2 pt
+
+\begin{defn} Suatu ideal $J$ dalam aljabar-$C^*$ $A$ disebut
+ \index{esensial!ideal}%
+ \index{ideal!esensial}%
+\df{esensial} jika dan hanya jika $I \cap J \ne \vc 0$ untuk setiap ideal tak nol $I$ dalam~$A$.
+\end{defn}
+
+\begin{exam} Suatu aljabar-$C^*$ $A$ merupakan ideal esensial dalam unitalisasinya $\wt A$ jika dan
+hanya jika $A$ \emph{tidak} beridentitas.
+\end{exam}
+
+\begin{exam} Jika $H$ suatu ruang Hilbert, maka ideal operator kompak $\ofml K(H)$
+merupakan ideal esensial dalam aljabar-$C^*$~$\ofml B(H)$.
+\end{exam}
+
+\begin{defn} Misalkan $J$ suatu ideal dalam aljabar-$C^*$~$A$. Kita mendefinisikan
+$J^\perp$, yakni
+ \index{anihilator}%
+ \index{<superscript@$J^\perp$ (anihilator dari $J$)}%
+\df{anihilator} dari $J$, sebagai $\bigl\{a \in A\colon Ja = \{\vc 0\}\bigr\}$.
+\end{defn}
+
+\begin{prop} Jika $J$ suatu ideal dalam aljabar-$C^*$, maka $J^\perp$ juga demikian.
+\end{prop}
+
+\begin{prop}\label{0038465} Suatu ideal $J$ dalam aljabar-$C^*$ $A$ bersifat esensial jika dan hanya
+jika $J^\perp = \{\vc 0\}$.
+\end{prop}
+
+\begin{prop}\label{0038468} Jika $J$ suatu ideal dalam aljabar-$C^*$, maka $\bigl(J \oplus
+J^\perp\bigr)^\perp = \{\vc 0\}$.
+\end{prop}
+
+\begin{notn} Misalkan $f$ suatu fungsi bernilai kompleks (atau real) pada himpunan $S$. Maka
+  \[ Z_f := \{ s \in S\colon f(s) = 0\}. \]
+Ini adalah
+ \index{himpunan nol}%
+ \index{Zf@$Z_f$ (himpunan nol dari~$f$)}%
+\df{himpunan nol} dari~$f$.
+\end{notn}
+
+ \vskip 2 pt
+
+Misalkan $A$ suatu aljabar-$C^*$ komutatif tak beridentitas. Menurut
+\emph{teorema Gelfand--Naimark kedua}~\ref{00152156}, terdapat suatu ruang Hausdorff kompak lokal tak kompak
+$X$ sedemikian sehingga $A = \fml C_0(X)$. (Di sini, tentu saja, kita membolehkan
+diri melakukan penyalahgunaan bahasa yang lazim: secara harfiah, persamaan yang ditunjukkan itu
+seharusnya berupa isomorfisme-$*\,$ isometrik.) Sekarang misalkan $Y$ suatu ruang Hausdorff kompak
+yang memuat $X$ sebagai subhimpunan terbuka dan misalkan $B = \fml C(Y)$. Maka $B$ suatu aljabar-$C^*$
+komutatif beridentitas. Pandang $A$ sebagai ideal dalam $B$ melalui pemetaan
+$\iota\colon A \sto B\colon f \mapsto \wt f$ dengan
+  \[ \wt f(y) = \left\{%
+                \begin{array}{ll}
+                         f(y), & \hbox{jika $y \in X$;} \\
+                         0, & \hbox{selainnya.} \\
+                \end{array}%
+                \right.\]
+Perhatikan bahwa himpunan tertutup $X^c$ adalah $\bigcap\{Z_{\wt f}\,\colon f \in \fml C_0(X)\}$.
+
+\vskip 2 pt
+
+\begin{prop}\label{0038474} Gunakan notasi seperti pada paragraf sebelumnya. Maka
+ideal $A$ bersifat esensial dalam $B$ jika dan hanya jika subhimpunan terbuka $X$ padat dalam~$Y$.
+\end{prop}
+
+Dengan demikian, sifat esensial suatu ideal dalam konteks unitalisasi aljabar-$C^*$
+komutatif tak beridentitas berkorespondensi secara tepat dengan sifat suatu subruang terbuka
+yang padat dalam konteks kompaktifikasi ruang Hausdorff kompak lokal
+tak kompak.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Kompaktifikasi dan Unitalisasi}
+Dalam definisi~\ref{00152131}, objek yang keberadaannya dibuktikan dalam
+proposisi sebelumnya~\ref{0015213} kita sebut ``unitalisasi'' dari suatu aljabar-$C^*$. Penyebutan seolah-olah tunggal
+tersebut jelas menyesatkan. Sebagaimana ruang topologis dapat memiliki banyak
+kompaktifikasi berbeda, suatu aljabar-$C^*$ dapat memiliki banyak unitalisasi. Jika $A$ merupakan
+aljabar-$C^*$ komutatif tak beridentitas, jelas dari akibat~\ref{001924} bahwa
+unitalisasi $\wt A$ adalah unitalisasi terkecil yang mungkin dari~$A$. Demikian pula, dalam topologi,
+jika $X$ suatu ruang Hausdorff kompak lokal tak kompak, maka kompaktifikasi
+satu titiknya jelas merupakan kompaktifikasi terkecil yang mungkin dari~$X$. Ingat bahwa
+dalam proposisi~\ref{00152194} kita membuktikan bahwa membangun unitalisasi terkecil
+dari $A$ ``pada dasarnya'' sama dengan membangun kompaktifikasi terkecil
+dari~$X$.
+
+ \vskip 2 pt
+
+Kadang-kadang lebih nyaman (seperti, misalnya, pada paragraf sebelumnya) untuk mengambil suatu
+``unitalisasi'' dari aljabar yang sudah beridentitas dan kadang-kadang lebih nyaman untuk mengambil suatu
+``kompaktifikasi'' dari ruang yang sudah kompak. Karena tampaknya tidak ada
+istilah yang diterima secara universal, saya memperkenalkan bahasa berikut (jelas tidak standar, tetapi
+saya harap berguna).
+
+\begin{defn}\label{0038614} Misalkan $A$ dan $B$ aljabar-$C^*$ serta $X$ dan $Y$
+ruang topologis Hausdorff. Kita mengatakan bahwa
+ \begin{enumerate}
+    \item $B$ merupakan suatu \df{unitalisasi} dari $A$ jika $B$ beridentitas dan $A$ ($*\,$-isomorfik
+dengan) suatu subaljabar-$C^*$ dari~$B$;
+ \index{unitalisasi}%
+ \index{unitalisasi!esensial}%
+ \index{esensial!unitalisasi}%
+    \item $B$ merupakan suatu \df{unitalisasi esensial} dari $A$ jika $B$ beridentitas dan $A$
+($*\,$-isomorfik dengan) suatu ideal esensial dari~$B$;
+ \index{kompaktifikasi}%
+ \index{kompaktifikasi!esensial}%
+ \index{esensial!kompaktifikasi}%
+    \item $Y$ merupakan suatu \df{kompaktifikasi} dari $X$ jika ruang itu kompak dan $X$ (homeomorfik
+dengan) suatu subruang dari~$Y$; dan
+    \item $Y$ merupakan suatu \df{kompaktifikasi esensial} dari $X$ jika ruang itu kompak dan $X$
+(homeomorfik dengan) suatu subruang padat dari~$Y$.
+ \end{enumerate}
+\end{defn}
+
+Kiranya beberapa kata perlu disampaikan mengenai bagian-bagian dalam tanda kurung pada definisi
+sebelumnya. Jarang terjadi bahwa suatu ruang topologis $X$ secara harfiah merupakan
+\emph{subhimpunan} dari kompaktifikasi tertentu atas $X$ atau bahwa suatu aljabar-$C^*$ $A$ merupakan
+\emph{subhimpunan} dari unitalisasi tertentu atas~$A$. Walaupun tentu benar bahwa sering kali
+lebih nyaman untuk memandang satu aljabar-$C^*$ sebagai subhimpunan dari aljabar lain ketika sebenarnya yang
+pertama hanya $*\,$-isomorfik dengan subhimpunan dari yang kedua, ada pula keadaan ketika
+perincian menjadi lebih jelas jika pembenaman yang sesungguhnya ditentukan. Jika rincian perbedaan
+ini belum sepenuhnya akrab, dua definisi berikut dimaksudkan untuk membantu.
+
+\begin{defn} Misalkan $A$ dan $B$ aljabar-$C^*$. Kita mengatakan bahwa $A$
+\df{dibenamkan} dalam~$B$ jika terdapat suatu homomorfisme-$*\,$ injektif $\iota\colon A \sto
+B$; yaitu, jika $A$ isomorfik-$*\,$ dengan suatu subaljabar-$C^*$ dari~$B$ (lihat
+proposisi~\ref{0019023} dan~\ref{00152181}). Homomorfisme-$*\,$ injektif $\iota$
+merupakan suatu
+ \index{C*@pembenaman-$C^*$}%
+ \index{pembenaman!aljabar-$C^*$}%
+\df{pembenaman} dari $A$ ke dalam~$B$. Dalam situasi ini lazimnya $A$ dan
+jangkauan~$\iota$ diperlakukan sebagai aljabar-$C^*$ yang identik. Pasangan $(B,\iota)$ merupakan suatu
+ \index{unitalisasi}%
+\df{unitalisasi} dari~$A$ jika $B$ merupakan aljabar-$C^*$ beridentitas dan $\iota\colon A \sto B$ merupakan suatu
+pembenaman. Unitalisasi $(B,\iota)$ bersifat
+  \index{unitalisasi!esensial}%
+  \index{esensial!unitalisasi}%
+\df{esensial} jika jangkauan $\iota$ merupakan ideal esensial dalam~$B$.
+\end{defn}
+
+\begin{defn} Misalkan $X$ dan $Y$ ruang topologis Hausdorff. Kita mengatakan bahwa $X$
+\df{dibenamkan} dalam~$Y$ jika terdapat homeomorfisme $j$ dari $X$ ke suatu subruang dari~$Y$.
+Homeomorfisme $j$ merupakan suatu
+ \index{topologis!pembenaman}%
+ \index{pembenaman!topologis}%
+\df{pembenaman} dari $X$ ke dalam~$Y$. Seperti dalam aljabar-$C^*$, lazimnya
+jangkauan $j$ diidentifikasi dengan ruang~$X$. Pasangan $(Y,j)$ merupakan suatu
+ \index{kompaktifikasi}%
+\df{kompaktifikasi} dari~$X$ jika $Y$ suatu ruang Hausdorff kompak dan $j\colon X \sto Y$
+merupakan suatu pembenaman. Kompaktifikasi $(Y,j)$ bersifat
+  \index{kompaktifikasi!esensial}%
+  \index{esensial!kompaktifikasi}%
+\df{esensial} jika jangkauan $j$ padat dalam~$Y$.
+\end{defn}
+
+Kita telah membahas unitalisasi terkecil dari suatu aljabar-$C^*$ dan kompaktifikasi terkecil
+dari suatu ruang Hausdorff kompak lokal. Sekarang, bagaimana dengan aljabar beridentitas terbesar, atau bahkan
+maksimal, yang memuat~$A$? Jelas bahwa objek seperti itu tidak ada, sebab jika $B$ suatu
+aljabar beridentitas yang memuat~$A$, maka $B \oplus C$ juga demikian, dengan $C$ sebarang
+aljabar-$C^*$ beridentitas. Demikian pula, tidak ada ruang kompak terbesar yang memuat~$X$: jika $Y$ suatu
+ruang kompak yang memuat $X$, maka gabungan saling lepas topologis $Y \uplus K$ juga demikian,
+dengan $K$ sebarang ruang kompak tak kosong. Namun, masuk akal untuk menanyakan apakah
+terdapat suatu unitalisasi esensial maksimal dari aljabar-$C^*$ atau suatu kompaktifikasi esensial
+maksimal dari ruang Hausdorff kompak lokal. Jawabannya adalah \emph{ya} dalam kedua
+kasus. \emph{Kompaktifikasi Stone--\v{C}ech} $\beta(X)$ yang terkenal bersifat maksimal di antara
+kompaktifikasi esensial dari ruang Hausdorff kompak lokal tak kompak~$X$. Perinciannya
+dapat ditemukan dalam sebarang buku teks topologi yang baik. Salah satu uraian standar yang mudah dibaca
+adalah~\cite{Willard:1968}, butir 19.3--19.12. Pendekatan yang lebih canggih menggunakan sebagian
+analisis fungsional---lihat, misalnya, \cite{Conway:1990}, bab V, bagian~6. Ternyata
+terdapat pula unitalisasi esensial maksimal dari suatu aljabar-$C^*$ tak beridentitas
+$A$---objek ini disebut \emph{aljabar pengali} dari~$A$.
+
+Kita mengatakan bahwa suatu unitalisasi esensial $M$ dari aljabar-$C^*$ $A$ bersifat \emph{maksimal} jika setiap
+aljabar-$C^*$ yang memuat $A$ sebagai ideal esensial dapat dibenamkan dalam~$M$. Berikut pernyataan yang lebih
+formal.
+
+\begin{defn} Suatu unitalisasi esensial $(M,j)$ dari aljabar-$C^*$ $A$ disebut
+ \index{maksimal!unitalisasi esensial}%
+ \index{esensial!unitalisasi!maksimal}%
+ \index{unitalisasi!esensial maksimal}%
+\df{maksimal} jika untuk setiap pembenaman $\iota\colon A \sto B$ yang jangkauannya merupakan ideal esensial
+dalam~$B$, terdapat homomorfisme-$*\,$ $\phi\colon B \sto M$ sedemikian sehingga $\phi
+\circ \iota = j$.
+\end{defn}
+
+\begin{prop} Dalam definisi sebelumnya, homomorfisme-$*\,$ $\phi$, jika ada, harus
+injektif.
+\end{prop}
+
+\begin{prop} Dalam definisi sebelumnya, homomorfisme-$*\,$ $\phi$, jika ada, harus
+tunggal.
+\end{prop}
+
+Bandingkan definisi berikut dengan~\ref{0028}.
+
+\begin{defn} Misalkan $A$ dan $B$ aljabar-$C^*$, dan $V$ modul Hilbert-$A$. Pemetaan
+$\phi\colon B \sto \ofml L(V)$ yang merupakan homomorfisme-$*\,$ disebut
+ \index{tak terdegenerasi!homomorfisme-$*\,$}%
+\df{tak terdegenerasi} jika $\phi^\sto(B)\,V$ padat dalam~$V$.
+\end{defn}
+
+\begin{prop} Misalkan $A$, $B$, dan $J$ aljabar-$C^*$, $V$ suatu modul Hilbert-$B$, serta
+$\iota\colon J \sto A$ suatu homomorfisme-$*\,$ injektif yang jangkauannya merupakan ideal dalam~$A$.
+Jika $\phi\colon J \sto \ofml L(V)$ suatu homomorfisme-$*\,$ tak terdegenerasi, maka terdapat
+perpanjangan tunggal dari $\phi$ menjadi homomorfisme-$*\,$ $\overline\phi\colon A \sto
+\ofml L(V)$ yang memenuhi $\overline\phi \circ \iota = \phi$.
+\end{prop}
+
+\begin{prop}\label{0038621} Jika $A$ suatu aljabar-$C^*$ tak nol, maka $(\ofml L(A),L)$ merupakan
+unitalisasi esensial maksimal dari~$A$. Unitalisasi ini tunggal dalam arti bahwa jika $(M,j)$ merupakan
+unitalisasi esensial maksimal lain dari $A$, maka terdapat suatu isomorfisme-$*\,$ $\phi
+\colon M \sto \ofml L(A)$ sedemikian sehingga $\phi \circ j = L$.
+\end{prop}
+
+\begin{defn}\label{0038641} Misalkan $A$ suatu aljabar-$C^*$. Kita mendefinisikan
+ \index{aljabar pengali}%
+ \index{aljabar!pengali}%
+\df{aljabar pengali} dari $A$ sebagai keluarga $\ofml L(A)$ operator yang dapat diadjoinkan
+pada~$A$. Mulai sekarang kita menyatakan keluarga ini
+ \index{MA@$M(A)$ (aljabar pengali dari $A$)}%
+dengan $M(A)$.
+\end{defn}
+
+
+
+
+
+
+
+
+
+\endinput

@@ -1,0 +1,290 @@
+{
+  "schema_version": "o008.source-corrections.v1",
+  "unit_id": "FAOA-2015-CH14",
+  "chapter": 14,
+  "status": "adjudicated_and_applied",
+  "source": {
+    "path": "source/upstream/multiplier_algebras.tex",
+    "bytes": 30579,
+    "logical_records": 687,
+    "line_endings": "CRLF",
+    "sha256": "d9bf8cf31a6e18a779863dcb397863430fe2daac9031a86354ce2274b42def7c"
+  },
+  "target": {
+    "path": "source/id-ID/multiplier_algebras-id.tex",
+    "bytes": 31900,
+    "logical_records": 687,
+    "line_endings": "LF",
+    "sha256": "2688ec9c2370371060aada680f5f95e9511ecb61cb99c2a126385f525a3c9142"
+  },
+  "normalization": {
+    "id": "explicit-range-nfc-whitespace-v1",
+    "source_selection": "inclusive physical source-line range",
+    "target_mapping": "inclusive physical target-line range",
+    "steps": [
+      "discard blank records and strip trailing whitespace",
+      "join selected records with LF",
+      "normalize Unicode NFC",
+      "collapse Unicode whitespace runs to ASCII spaces",
+      "trim leading and trailing ASCII space",
+      "hash UTF-8 bytes with SHA-256"
+    ]
+  },
+  "record_count": 9,
+  "class_counts": {
+    "SEMANTIC_IDENTIFIER_SOURCE_REPAIR": 1,
+    "MECHANICAL_PROSE_SOURCE_REPAIR": 7,
+    "MATHEMATICAL_SOURCE_REPAIR": 1
+  },
+  "independent_review": {
+    "pretranslation_math_review": "qa/CH14_PRETRANSLATION_MATH_REVIEW.md",
+    "terminology_plan": "provenance/CH14_TERMINOLOGY_PLAN.md",
+    "bilingual_math_review": "qa/CH14_BILINGUAL_MATH_REVIEW.md",
+    "upstream_contact": "none during production"
+  },
+  "records": [
+    {
+      "id": "FAOA-2015-CH14-CORR-001",
+      "source_lines": {
+        "start": 75,
+        "end": 79
+      },
+      "target_lines": {
+        "start": 75,
+        "end": 79
+      },
+      "classification": "SEMANTIC_IDENTIFIER_SOURCE_REPAIR",
+      "decision": "replace the undefined f in the antihomomorphism definition by the phi introduced by that definition",
+      "source_normalized_snippet": "\\begin{defn}\\label{0038027} Let $A$ and $B$ be algebras. A function $\\phi\\colon A \\sto B$ is an \\index{antihomomorphism}% \\df{antihomomorphism} if the function $f\\colon A \\sto B^{\\textrm{op}}$ is a homomorphism. A bijective antihomomorphism is an",
+      "target_normalized_snippet": "\\begin{defn}\\label{0038027} Misalkan $A$ dan $B$ aljabar. Suatu fungsi $\\phi\\colon A \\sto B$ adalah suatu \\index{antihomomorfisme}% \\df{antihomomorfisme} jika fungsi $\\phi\\colon A \\sto B^{\\textrm{op}}$ merupakan suatu homomorfisme. Suatu antihomomorfisme bijektif adalah",
+      "source_normalized_snippet_sha256": "d84b2fb62980d4a86c55b01e022acdc7980c2ae62bc79b57061e57d13c29735a",
+      "target_normalized_snippet_sha256": "62c9c1e9b65cf962d9c201de7c606e235da20bea01a81003ec5da8e589efbc7f",
+      "source_required_anchors": [
+        "$f\\colon A \\sto B^{\\textrm{op}}$ is a homomorphism"
+      ],
+      "forbidden_target_anchors": [
+        "fungsi $f\\colon A \\sto B^{\\textrm{op}}$"
+      ],
+      "required_target_anchors": [
+        "fungsi $\\phi\\colon A \\sto B^{\\textrm{op}}$ merupakan suatu homomorfisme"
+      ],
+      "affects_math": true
+    },
+    {
+      "id": "FAOA-2015-CH14-CORR-002",
+      "source_lines": {
+        "start": 102,
+        "end": 104
+      },
+      "target_lines": {
+        "start": 102,
+        "end": 104
+      },
+      "classification": "MECHANICAL_PROSE_SOURCE_REPAIR",
+      "decision": "repair the missing space in 'means,when' while translating the sentence",
+      "source_normalized_snippet": "We now say precisely what it means,when $A$ is a $C^*$-algebra, to give an $A$-module an $A$-valued inner product.",
+      "target_normalized_snippet": "Sekarang kita nyatakan secara tepat apa artinya, ketika $A$ suatu aljabar-$C^*$, membekali modul-$A$ dengan hasil kali dalam bernilai-$A$.",
+      "source_normalized_snippet_sha256": "0c8439613d1e80c6fe7ffa95b7a70ad527ef098626dc71582107024651ea0b94",
+      "target_normalized_snippet_sha256": "4dd281794ab7b790a0e6caeb969af3c020f90b8b3508214b74294530711f1171",
+      "source_required_anchors": [
+        "means,when"
+      ],
+      "forbidden_target_anchors": [
+        "artinya,ketika"
+      ],
+      "required_target_anchors": [
+        "apa artinya, ketika $A$ suatu aljabar-$C^*$"
+      ],
+      "affects_math": false
+    },
+    {
+      "id": "FAOA-2015-CH14-CORR-003",
+      "source_lines": {
+        "start": 208,
+        "end": 210
+      },
+      "target_lines": {
+        "start": 209,
+        "end": 210
+      },
+      "classification": "MECHANICAL_PROSE_SOURCE_REPAIR",
+      "decision": "supply the missing sentence stop after the statement about Hilbert A-modules",
+      "source_normalized_snippet": "Recall from~\\ref{def000926} that every Hilbert space operator has an adjoint. This is not true for Hilbert $A$-modules",
+      "target_normalized_snippet": "Ingat dari~\\ref{def000926} bahwa setiap operator ruang Hilbert memiliki adjoin. Hal ini tidak berlaku untuk modul Hilbert-$A$.",
+      "source_normalized_snippet_sha256": "cb163bc77dc3bd98e2ed0d324dba3caa9c58653d47e2a5e555b20ca357da7a11",
+      "target_normalized_snippet_sha256": "83c5f3faf5d451f484266c6abf730e3650c310aa7592047f0903f28cdc78d327",
+      "source_required_anchors": [
+        "This is not true for Hilbert $A$-modules\n"
+      ],
+      "forbidden_target_anchors": [
+        "Hal ini tidak berlaku untuk modul Hilbert-$A$\n"
+      ],
+      "required_target_anchors": [
+        "Hal ini tidak berlaku untuk modul Hilbert-$A$."
+      ],
+      "affects_math": false
+    },
+    {
+      "id": "FAOA-2015-CH14-CORR-004",
+      "source_lines": {
+        "start": 229,
+        "end": 233
+      },
+      "target_lines": {
+        "start": 230,
+        "end": 233
+      },
+      "classification": "MECHANICAL_PROSE_SOURCE_REPAIR",
+      "decision": "replace the literal equals sign in the malformed C-star-algebra compound by normal derivative typography",
+      "source_normalized_snippet": "\\begin{exam} Let $X$ be the unit interval $[0,1]$ and let $Y = \\{0\\}$. With its usual topology $X$ is a compact Hausdorff space and $Y$ is a subspace of~$X$. Let $A$ be the $C^*$=algebra $\\fml C(X)$ and $J_0$ be the ideal $\\{f \\in A\\colon f(0) = 0\\}$ (see proposition~\\ref{0006836}). Regard $V = A$ and $W = J_0$ as Hilbert $A$-modules (see example~\\ref{0038111}). Then the inclusion map $\\iota\\colon V \\sto W$ is a Hilbert",
+      "target_normalized_snippet": "\\begin{exam} Misalkan $X$ interval satuan $[0,1]$ dan $Y = \\{0\\}$. Dengan topologi biasa, $X$ merupakan ruang Hausdorff kompak dan $Y$ suatu subruang dari~$X$. Misalkan $A$ adalah aljabar-$C^*$ $\\fml C(X)$ dan $J_0$ adalah ideal $\\{f \\in A\\colon f(0) = 0\\}$ (lihat proposisi~\\ref{0006836}). Pandang $V = A$ dan $W = J_0$ sebagai modul-modul Hilbert-$A$ (lihat",
+      "source_normalized_snippet_sha256": "9fe78387a6a64d3ac8714c848b18bfcc90c441dfb86d050e7bc30d6262d86cf8",
+      "target_normalized_snippet_sha256": "8564146ff72733c7db352b3103e05a09ace4ad008788a94196c2ac7e0c449846",
+      "source_required_anchors": [
+        "$C^*$=algebra $\\fml C(X)$"
+      ],
+      "forbidden_target_anchors": [
+        "aljabar-$C^*$="
+      ],
+      "required_target_anchors": [
+        "aljabar-$C^*$ $\\fml C(X)$"
+      ],
+      "affects_math": false
+    },
+    {
+      "id": "FAOA-2015-CH14-CORR-005",
+      "source_lines": {
+        "start": 229,
+        "end": 234
+      },
+      "target_lines": {
+        "start": 230,
+        "end": 235
+      },
+      "classification": "MATHEMATICAL_SOURCE_REPAIR",
+      "decision": "reverse the displayed inclusion so that the proper ideal W=J_0 includes into V=A",
+      "source_normalized_snippet": "\\begin{exam} Let $X$ be the unit interval $[0,1]$ and let $Y = \\{0\\}$. With its usual topology $X$ is a compact Hausdorff space and $Y$ is a subspace of~$X$. Let $A$ be the $C^*$=algebra $\\fml C(X)$ and $J_0$ be the ideal $\\{f \\in A\\colon f(0) = 0\\}$ (see proposition~\\ref{0006836}). Regard $V = A$ and $W = J_0$ as Hilbert $A$-modules (see example~\\ref{0038111}). Then the inclusion map $\\iota\\colon V \\sto W$ is a Hilbert $A$-module morphism which is not adjointable.",
+      "target_normalized_snippet": "\\begin{exam} Misalkan $X$ interval satuan $[0,1]$ dan $Y = \\{0\\}$. Dengan topologi biasa, $X$ merupakan ruang Hausdorff kompak dan $Y$ suatu subruang dari~$X$. Misalkan $A$ adalah aljabar-$C^*$ $\\fml C(X)$ dan $J_0$ adalah ideal $\\{f \\in A\\colon f(0) = 0\\}$ (lihat proposisi~\\ref{0006836}). Pandang $V = A$ dan $W = J_0$ sebagai modul-modul Hilbert-$A$ (lihat contoh~\\ref{0038111}). Maka pemetaan inklusi $\\iota\\colon W \\sto V$ merupakan morfisme modul Hilbert-$A$ yang tidak dapat diadjoinkan.",
+      "source_normalized_snippet_sha256": "162ac625d77040a904242ebd85f40f15caf4d75054a4a51d2dd648d502b66b2e",
+      "target_normalized_snippet_sha256": "8b020800e638a4774bfdc839fff23a5b974282c43da751022ca054ddfe452890",
+      "source_required_anchors": [
+        "$\\iota\\colon V \\sto W$ is a Hilbert"
+      ],
+      "forbidden_target_anchors": [
+        "$\\iota\\colon V \\sto W$"
+      ],
+      "required_target_anchors": [
+        "$\\iota\\colon W \\sto V$ merupakan morfisme modul Hilbert-$A$"
+      ],
+      "affects_math": true
+    },
+    {
+      "id": "FAOA-2015-CH14-CORR-006",
+      "source_lines": {
+        "start": 312,
+        "end": 317
+      },
+      "target_lines": {
+        "start": 313,
+        "end": 318
+      },
+      "classification": "MECHANICAL_PROSE_SOURCE_REPAIR",
+      "decision": "render the erroneous past participle 'has lead' with its intended past-tense meaning",
+      "source_normalized_snippet": "The preceding example has lead many researchers, when dealing with an arbitrary Hilbert module~$V$, to refer to members of $\\ofml K(V)$ as \\emph{compact operators}. This is dubious terminology since such operators certainly need not be compact. (For example, if we regard an infinite dimensional unital $C^*$-algebra $A$ as an $A$-module, then $\\Theta_{\\vc 1,\\vc 1} = I_A$, but the identity operator on $A$ is not compact---see example~\\ref{cor_id_op_not_cpt}.)",
+      "target_normalized_snippet": "Contoh sebelumnya telah mendorong banyak peneliti, ketika menangani suatu modul Hilbert sebarang~$V$, menyebut elemen $\\ofml K(V)$ sebagai \\emph{operator kompak}. Istilah ini meragukan karena operator semacam itu belum tentu kompak. (Sebagai contoh, jika suatu aljabar-$C^*$ beridentitas berdimensi tak hingga $A$ kita pandang sebagai modul-$A$, maka $\\Theta_{\\vc 1,\\vc 1} = I_A$, tetapi operator identitas pada $A$ tidak kompak---lihat contoh~\\ref{cor_id_op_not_cpt}.)",
+      "source_normalized_snippet_sha256": "b5b9e569c1a2fc236af67cea7ffaf1ea672a62a43e1d52c3961e6c9a23ca107a",
+      "target_normalized_snippet_sha256": "d7b602b5f1d58c5483712f240d210aa234d688f87e937e5b1e428f6fdb0df047",
+      "source_required_anchors": [
+        "The preceding example has lead many researchers"
+      ],
+      "forbidden_target_anchors": [
+        "telah memimpin banyak peneliti"
+      ],
+      "required_target_anchors": [
+        "Contoh sebelumnya telah mendorong banyak peneliti"
+      ],
+      "affects_math": false
+    },
+    {
+      "id": "FAOA-2015-CH14-CORR-007",
+      "source_lines": {
+        "start": 413,
+        "end": 420
+      },
+      "target_lines": {
+        "start": 413,
+        "end": 420
+      },
+      "classification": "MECHANICAL_PROSE_SOURCE_REPAIR",
+      "decision": "join the period-fragment pair after 'subsets of an algebra' into one conditional notation sentence",
+      "source_normalized_snippet": "\\begin{notn} We adopt a standard notational convention. If $A$ and $B$ are nonempty subsets of an algebra. By $AB$ we mean the linear span of products of elements in $A$ and elements in $B$; that is, \\index{<AB@$AB$ (in algebras the span of products of elements)}% \\index{conventions!in an algebra $AB$ denotes the span of products}% $AB = \\spn\\{ab \\colon \\text{$a \\in A$ and $b \\in B$}\\}$. (Note that in definition~\\ref{000551} it makes no difference whether we take $AJ$ to mean the set of products of elements in $A$ with elements in $J$ or the span of that set.)",
+      "target_normalized_snippet": "\\begin{notn} Kita menggunakan suatu konvensi notasi standar. Jika $A$ dan $B$ merupakan subhimpunan tak kosong dari suatu aljabar, maka $AB$ berarti rentang linear dari hasil kali elemen-elemen dalam $A$ dan elemen-elemen dalam $B$; yaitu, \\index{<AB@$AB$ (dalam aljabar, rentang hasil kali elemen-elemen)}% \\index{konvensi!dalam suatu aljabar, $AB$ menyatakan rentang hasil kali}% $AB = \\spn\\{ab \\colon \\text{$a \\in A$ dan $b \\in B$}\\}$. (Perhatikan bahwa dalam definisi~\\ref{000551} tidak ada bedanya apakah $AJ$ diartikan sebagai himpunan hasil kali elemen-elemen dalam $A$ dengan elemen-elemen dalam $J$ atau rentang dari himpunan tersebut.)",
+      "source_normalized_snippet_sha256": "5647738e0aad62c428f81055e8a35ea175212ed71201ad1bab237f89d0654c34",
+      "target_normalized_snippet_sha256": "35e0d8e298cd4f5d6191e087f7c2ddd1a4bde532200b753fbf35fc1287a4118e",
+      "source_required_anchors": [
+        "subsets of an algebra. By $AB$ we mean"
+      ],
+      "forbidden_target_anchors": [
+        "dari suatu aljabar. Dengan $AB$"
+      ],
+      "required_target_anchors": [
+        "dari suatu aljabar, maka $AB$ berarti"
+      ],
+      "affects_math": false
+    },
+    {
+      "id": "FAOA-2015-CH14-CORR-008",
+      "source_lines": {
+        "start": 641,
+        "end": 643
+      },
+      "target_lines": {
+        "start": 641,
+        "end": 643
+      },
+      "classification": "MECHANICAL_PROSE_SOURCE_REPAIR",
+      "decision": "supply the second comma around 'if it exists' in the injectivity proposition",
+      "source_normalized_snippet": "\\begin{prop} In the preceding definition the $*\\,$-homomorphism $\\phi$, if it exists must be injective. \\end{prop}",
+      "target_normalized_snippet": "\\begin{prop} Dalam definisi sebelumnya, homomorfisme-$*\\,$ $\\phi$, jika ada, harus injektif. \\end{prop}",
+      "source_normalized_snippet_sha256": "9b1b4d0207ebb633ecdf2165cfc69907eedec9ca0955340fbabbb07c99a69af5",
+      "target_normalized_snippet_sha256": "faf44989a36ad657c90655946c3bcc6267d3e235b0aa1a64b6c3b034cc6c0920",
+      "source_required_anchors": [
+        "$\\phi$, if it exists must\nbe injective."
+      ],
+      "forbidden_target_anchors": [
+        "$\\phi$, jika ada harus"
+      ],
+      "required_target_anchors": [
+        "$\\phi$, jika ada, harus\ninjektif."
+      ],
+      "affects_math": false
+    },
+    {
+      "id": "FAOA-2015-CH14-CORR-009",
+      "source_lines": {
+        "start": 645,
+        "end": 647
+      },
+      "target_lines": {
+        "start": 645,
+        "end": 647
+      },
+      "classification": "MECHANICAL_PROSE_SOURCE_REPAIR",
+      "decision": "supply the second comma around 'if it exists' in the uniqueness proposition",
+      "source_normalized_snippet": "\\begin{prop} In the preceding definition the $*\\,$-homomorphism $\\phi$, if it exists must be unique. \\end{prop}",
+      "target_normalized_snippet": "\\begin{prop} Dalam definisi sebelumnya, homomorfisme-$*\\,$ $\\phi$, jika ada, harus tunggal. \\end{prop}",
+      "source_normalized_snippet_sha256": "cf9c31d8e0e9d9a08f004c859b43b9c8f4fb3a541f2e75d9e976913c6d998118",
+      "target_normalized_snippet_sha256": "773ab1728332403d65ad2205f65bd514116b7104814c051dcacaf1817dad2dc3",
+      "source_required_anchors": [
+        "$\\phi$, if it exists must\nbe unique."
+      ],
+      "forbidden_target_anchors": [
+        "$\\phi$, jika ada harus"
+      ],
+      "required_target_anchors": [
+        "$\\phi$, jika ada, harus\ntunggal."
+      ],
+      "affects_math": false
+    }
+  ]
+}

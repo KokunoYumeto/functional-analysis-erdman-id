@@ -1,0 +1,122 @@
+{
+  "corrections": {
+    "ledger_sha256": "a58f45716a73667d7da25431b1c87a0c438e0f17c0592946283d672b5f29cb97",
+    "records": 9
+  },
+  "errors": [],
+  "identities": {
+    "master_bytes": 10443,
+    "master_sha256": "f04180a796707c6cb0c5f74082a8b4c25721d20ff3ea9235819939b11e1e50c9",
+    "source_bytes": 30579,
+    "source_sha256": "d9bf8cf31a6e18a779863dcb397863430fe2daac9031a86354ce2274b42def7c",
+    "target_bytes": 31900,
+    "target_sha256": "2688ec9c2370371060aada680f5f95e9511ecb61cb99c2a126385f525a3c9142"
+  },
+  "linkage": {
+    "cumulative_labels": 496,
+    "unresolved_citations": [],
+    "unresolved_references": []
+  },
+  "math": {
+    "classified_transformations": [
+      {
+        "index": 54,
+        "kind": "source_identifier_repair",
+        "source": "f\\colon A \\sto B^{\\textrm{op}}",
+        "target": "\\phi\\colon A \\sto B^{\\textrm{op}}"
+      },
+      {
+        "kind": "locale_grammar_reorder",
+        "source_index": 58,
+        "surface": "A",
+        "target_index": 60
+      },
+      {
+        "index": 232,
+        "kind": "mathematical_source_repair",
+        "source": "\\iota\\colon V \\sto W",
+        "target": "\\iota\\colon W \\sto V"
+      },
+      {
+        "index": 277,
+        "kind": "localized_math_text",
+        "source": " T \\Theta_{v,w} = \\Theta_{Tv,w} \\qquad \\text{ and } \\qquad\n                               \\Theta_{v,w} S = \\Theta_{v,S^*w} ",
+        "target": " T \\Theta_{v,w} = \\Theta_{Tv,w} \\qquad \\text{ dan } \\qquad\n                               \\Theta_{v,w} S = \\Theta_{v,S^*w} "
+      },
+      {
+        "index": 300,
+        "kind": "localized_math_text",
+        "source": "\\{\\Theta_{v,w}\\colon v \\in V \\text{ and } w \\in\nW\\}",
+        "target": "\\{\\Theta_{v,w}\\colon v \\in V \\text{ dan } w \\in\nW\\}"
+      },
+      {
+        "index": 388,
+        "kind": "localized_math_text",
+        "source": " and ",
+        "target": " dan "
+      },
+      {
+        "index": 467,
+        "kind": "localized_math_text",
+        "source": " \\wt f(y) = \\left\\{%\n                \\begin{array}{ll}\n                         f(y), & \\hbox{if $y \\in X$;} \\\\\n                         0, & \\hbox{otherwise.} \\\\\n                \\end{array}%\n                \\right.",
+        "target": " \\wt f(y) = \\left\\{%\n                \\begin{array}{ll}\n                         f(y), & \\hbox{jika $y \\in X$;} \\\\\n                         0, & \\hbox{selainnya.} \\\\\n                \\end{array}%\n                \\right."
+      },
+      {
+        "kind": "locale_grammar_reorder",
+        "source_indices": [
+          607,
+          608
+        ],
+        "surfaces": [
+          "*\\,",
+          "\\phi\\colon B \\sto \\ofml L(V)"
+        ],
+        "target_indices": [
+          608,
+          607
+        ]
+      }
+    ],
+    "display_surfaces": 15,
+    "inventory_surface_count": 650,
+    "ordered_nonoverlapping_source_surfaces": 644,
+    "ordered_nonoverlapping_target_surfaces": 644,
+    "raw_dollar_pairs": 635
+  },
+  "rights_and_provenance": {
+    "author": "John M. Erdman",
+    "excluded_components_absent": true,
+    "license": "CC BY-SA 4.0",
+    "model_provenance": "OpenAI Codex gpt-5.6-sol, Ultra",
+    "nonendorsement_present": true
+  },
+  "schema_version": "o008.ch14-translation-qa.v1",
+  "status": "pass",
+  "structure": {
+    "citations": 4,
+    "defined_terms": 36,
+    "environment_counts": {
+      "array": 1,
+      "conv": 2,
+      "cor": 1,
+      "defn": 19,
+      "enumerate": 3,
+      "exam": 9,
+      "exer": 2,
+      "notn": 6,
+      "proof": 3,
+      "prop": 24
+    },
+    "environment_openings": 70,
+    "exercises": 2,
+    "index_hooks": 79,
+    "labels": 20,
+    "proofs": 3,
+    "references": 31,
+    "sections": 3,
+    "semantic_environment_openings": 66,
+    "source_records": 687,
+    "target_records": 687
+  },
+  "unit_id": "FAOA-2015-CH14"
+}

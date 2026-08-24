@@ -1,0 +1,323 @@
+\section{Ideal Esensial}
+\begin{exam} Jika $A$ dan $B$ adalah aljabar-$C^*$, maka $A$ (lebih tepatnya, $A \oplus \{\vc
+0\}$) merupakan ideal dalam $A \oplus B$.
+\end{exam}
+
+\begin{conv} Sebagaimana ditunjukkan oleh contoh sebelumnya, lazimnya $A$ dipandang sebagai
+ \index{konvensi!$A$ merupakan subhimpunan dari $A \oplus B$}%
+subhimpunan dari $A \oplus B$. Selanjutnya kita akan melakukan ini tanpa menyebutkannya lagi.
+\end{conv}
+
+\begin{notn} Untuk suatu elemen $c$ dari aljabar $A$
+ \index{Ic@$I_c$}%
+tetapkan
+  \[ I_c := \biggl\{a_0c + cb_0 + \sum_{k=1}^p a_kcb_k \colon
+   \text{$p \in \N$, $a_0$, \dots, $a_p$, $b_0$, \dots, $b_p \in A$}\biggr\} \]
+\end{notn}
+
+\begin{prop} Jika $c$ merupakan elemen dari aljabar $A$, maka $I_c$ merupakan ideal
+(aljabar) dalam~$A$.
+\end{prop}
+
+Perhatikan bahwa dalam proposisi sebelumnya tidak dinyatakan bahwa ideal aljabar $I_c$
+harus sejati. Sangat mungkin $I_c = A$ (misalnya, ketika $c$ merupakan
+elemen invertibel dari aljabar beridentitas).
+
+\vskip 2 pt
+
+\begin{defn} Misalkan $c$ suatu elemen dari aljabar-$C^*$ $A$.
+ \index{Jc@$J_c$ (ideal utama (tertutup) yang memuat~$c$)}%
+ \index{utama!ideal}%
+ \index{ideal!utama}%
+Definisikan $J_c$, yakni \df{ideal utama} yang memuat $c$, sebagai irisan dari
+keluarga semua ideal (tertutup) dalam $A$ yang memuat~$c$. Jelas bahwa $J_c$ merupakan ideal terkecil
+yang memuat~$c$.
+\end{defn}
+
+\begin{prop} Dalam suatu aljabar-$C^*$, tutupan suatu ideal aljabar merupakan ideal.
+\end{prop}
+
+\begin{exam} Tutupan suatu ideal aljabar sejati dalam aljabar-$C^*$ tidak harus merupakan
+ideal sejati. Sebagai contoh, $l_c$, yaitu himpunan barisan bilangan kompleks yang
+pada akhirnya nol, padat dalam aljabar-$C^*$ $l_0 = \fml C_0(\N)$. (Namun, ingat
+proposisi~\ref{0006801}.)
+\end{exam}
+
+\begin{prop} Jika $c$ suatu elemen dari aljabar-$C^*$, maka $J_c = \clo{I_c}$.
+\end{prop}
+
+\begin{notn} Kita menggunakan suatu konvensi notasi standar. Jika $A$ dan $B$ merupakan subhimpunan tak kosong
+dari suatu aljabar, maka $AB$ berarti rentang linear dari hasil kali elemen-elemen dalam $A$ dan
+elemen-elemen dalam $B$; yaitu,
+ \index{<AB@$AB$ (dalam aljabar, rentang hasil kali elemen-elemen)}%
+ \index{konvensi!dalam suatu aljabar, $AB$ menyatakan rentang hasil kali}%
+$AB = \spn\{ab \colon \text{$a \in A$ dan $b \in B$}\}$. (Perhatikan bahwa dalam
+definisi~\ref{000551} tidak ada bedanya apakah $AJ$ diartikan sebagai himpunan
+hasil kali elemen-elemen dalam $A$ dengan elemen-elemen dalam $J$ atau rentang dari himpunan tersebut.)
+\end{notn}
+
+\begin{prop} Jika $I$ dan $J$ merupakan ideal dalam suatu aljabar-$C^*$, maka $\clo{IJ} =
+I \cap J$.
+\end{prop}
+
+\vskip 2 pt
+
+Suatu aljabar-$C^*$ tak beridentitas $A$ dapat dibenamkan sebagai ideal dalam aljabar-$C^*$ beridentitas melalui
+berbagai cara. Aljabar-$C^*$ beridentitas terkecil yang memuat $A$ adalah unitalisasinya~$\wt
+A$ (lihat proposisi~\ref{0015213}). Tentu saja tidak ada aljabar-$C^*$ beridentitas terbesar tempat
+$A$ dapat dibenamkan sebagai ideal, sebab jika $A$ dibenamkan sebagai ideal dalam suatu
+aljabar-$C^*$ beridentitas $B$ dan $C$ adalah \emph{sebarang} aljabar-$C^*$ beridentitas, maka $A$ merupakan ideal dalam
+aljabar-$C^*$ beridentitas $B \oplus C$ yang lebih besar lagi. Alasan unitalisasi yang lebih besar ini
+tidak begitu menarik adalah karena irisan ideal $C$ dengan $A$ ialah~$\{\vc 0\}$.
+Hal ini memotivasi definisi berikut.
+
+\vskip 2 pt
+
+\begin{defn} Suatu ideal $J$ dalam aljabar-$C^*$ $A$ disebut
+ \index{esensial!ideal}%
+ \index{ideal!esensial}%
+\df{esensial} jika dan hanya jika $I \cap J \ne \vc 0$ untuk setiap ideal tak nol $I$ dalam~$A$.
+\end{defn}
+
+\begin{exam} Suatu aljabar-$C^*$ $A$ merupakan ideal esensial dalam unitalisasinya $\wt A$ jika dan
+hanya jika $A$ \emph{tidak} beridentitas.
+\end{exam}
+
+\begin{exam} Jika $H$ suatu ruang Hilbert, maka ideal operator kompak $\ofml K(H)$
+merupakan ideal esensial dalam aljabar-$C^*$~$\ofml B(H)$.
+\end{exam}
+
+\begin{defn} Misalkan $J$ suatu ideal dalam aljabar-$C^*$~$A$. Kita mendefinisikan
+$J^\perp$, yakni
+ \index{anihilator}%
+ \index{<superscript@$J^\perp$ (anihilator dari $J$)}%
+\df{anihilator} dari $J$, sebagai $\bigl\{a \in A\colon Ja = \{\vc 0\}\bigr\}$.
+\end{defn}
+
+\begin{prop} Jika $J$ suatu ideal dalam aljabar-$C^*$, maka $J^\perp$ juga demikian.
+\end{prop}
+
+\begin{prop}\label{0038465} Suatu ideal $J$ dalam aljabar-$C^*$ $A$ bersifat esensial jika dan hanya
+jika $J^\perp = \{\vc 0\}$.
+\end{prop}
+
+\begin{prop}\label{0038468} Jika $J$ suatu ideal dalam aljabar-$C^*$, maka $\bigl(J \oplus
+J^\perp\bigr)^\perp = \{\vc 0\}$.
+\end{prop}
+
+\begin{notn} Misalkan $f$ suatu fungsi bernilai kompleks (atau real) pada himpunan $S$. Maka
+  \[ Z_f := \{ s \in S\colon f(s) = 0\}. \]
+Ini adalah
+ \index{himpunan nol}%
+ \index{Zf@$Z_f$ (himpunan nol dari~$f$)}%
+\df{himpunan nol} dari~$f$.
+\end{notn}
+
+ \vskip 2 pt
+
+Misalkan $A$ suatu aljabar-$C^*$ komutatif tak beridentitas. Menurut
+\emph{teorema Gelfand--Naimark kedua}~\ref{00152156}, terdapat suatu ruang Hausdorff kompak lokal tak kompak
+$X$ sedemikian sehingga $A = \fml C_0(X)$. (Di sini, tentu saja, kita membolehkan
+diri melakukan penyalahgunaan bahasa yang lazim: secara harfiah, persamaan yang ditunjukkan itu
+seharusnya berupa isomorfisme-$*\,$ isometrik.) Sekarang misalkan $Y$ suatu ruang Hausdorff kompak
+yang memuat $X$ sebagai subhimpunan terbuka dan misalkan $B = \fml C(Y)$. Maka $B$ suatu aljabar-$C^*$
+komutatif beridentitas. Pandang $A$ sebagai ideal dalam $B$ melalui pemetaan
+$\iota\colon A \sto B\colon f \mapsto \wt f$ dengan
+  \[ \wt f(y) = \left\{%
+                \begin{array}{ll}
+                         f(y), & \hbox{jika $y \in X$;} \\
+                         0, & \hbox{selainnya.} \\
+                \end{array}%
+                \right.\]
+Perhatikan bahwa himpunan tertutup $X^c$ adalah $\bigcap\{Z_{\wt f}\,\colon f \in \fml C_0(X)\}$.
+
+\vskip 2 pt
+
+\begin{prop}\label{0038474} Gunakan notasi seperti pada paragraf sebelumnya. Maka
+ideal $A$ bersifat esensial dalam $B$ jika dan hanya jika subhimpunan terbuka $X$ padat dalam~$Y$.
+\end{prop}
+
+Dengan demikian, sifat esensial suatu ideal dalam konteks unitalisasi aljabar-$C^*$
+komutatif tak beridentitas berkorespondensi secara tepat dengan sifat suatu subruang terbuka
+yang padat dalam konteks kompaktifikasi ruang Hausdorff kompak lokal
+tak kompak.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Kompaktifikasi dan Unitalisasi}
+Dalam definisi~\ref{00152131}, objek yang keberadaannya dibuktikan dalam
+proposisi sebelumnya~\ref{0015213} kita sebut ``unitalisasi'' dari suatu aljabar-$C^*$. Penyebutan seolah-olah tunggal
+tersebut jelas menyesatkan. Sebagaimana ruang topologis dapat memiliki banyak
+kompaktifikasi berbeda, suatu aljabar-$C^*$ dapat memiliki banyak unitalisasi. Jika $A$ merupakan
+aljabar-$C^*$ komutatif tak beridentitas, jelas dari akibat~\ref{001924} bahwa
+unitalisasi $\wt A$ adalah unitalisasi terkecil yang mungkin dari~$A$. Demikian pula, dalam topologi,
+jika $X$ suatu ruang Hausdorff kompak lokal tak kompak, maka kompaktifikasi
+satu titiknya jelas merupakan kompaktifikasi terkecil yang mungkin dari~$X$. Ingat bahwa
+dalam proposisi~\ref{00152194} kita membuktikan bahwa membangun unitalisasi terkecil
+dari $A$ ``pada dasarnya'' sama dengan membangun kompaktifikasi terkecil
+dari~$X$.
+
+ \vskip 2 pt
+
+Kadang-kadang lebih nyaman (seperti, misalnya, pada paragraf sebelumnya) untuk mengambil suatu
+``unitalisasi'' dari aljabar yang sudah beridentitas dan kadang-kadang lebih nyaman untuk mengambil suatu
+``kompaktifikasi'' dari ruang yang sudah kompak. Karena tampaknya tidak ada
+istilah yang diterima secara universal, saya memperkenalkan bahasa berikut (jelas tidak standar, tetapi
+saya harap berguna).
+
+\begin{defn}\label{0038614} Misalkan $A$ dan $B$ aljabar-$C^*$ serta $X$ dan $Y$
+ruang topologis Hausdorff. Kita mengatakan bahwa
+ \begin{enumerate}
+    \item $B$ merupakan suatu \df{unitalisasi} dari $A$ jika $B$ beridentitas dan $A$ ($*\,$-isomorfik
+dengan) suatu subaljabar-$C^*$ dari~$B$;
+ \index{unitalisasi}%
+ \index{unitalisasi!esensial}%
+ \index{esensial!unitalisasi}%
+    \item $B$ merupakan suatu \df{unitalisasi esensial} dari $A$ jika $B$ beridentitas dan $A$
+($*\,$-isomorfik dengan) suatu ideal esensial dari~$B$;
+ \index{kompaktifikasi}%
+ \index{kompaktifikasi!esensial}%
+ \index{esensial!kompaktifikasi}%
+    \item $Y$ merupakan suatu \df{kompaktifikasi} dari $X$ jika ruang itu kompak dan $X$ (homeomorfik
+dengan) suatu subruang dari~$Y$; dan
+    \item $Y$ merupakan suatu \df{kompaktifikasi esensial} dari $X$ jika ruang itu kompak dan $X$
+(homeomorfik dengan) suatu subruang padat dari~$Y$.
+ \end{enumerate}
+\end{defn}
+
+Kiranya beberapa kata perlu disampaikan mengenai bagian-bagian dalam tanda kurung pada definisi
+sebelumnya. Jarang terjadi bahwa suatu ruang topologis $X$ secara harfiah merupakan
+\emph{subhimpunan} dari kompaktifikasi tertentu atas $X$ atau bahwa suatu aljabar-$C^*$ $A$ merupakan
+\emph{subhimpunan} dari unitalisasi tertentu atas~$A$. Walaupun tentu benar bahwa sering kali
+lebih nyaman untuk memandang satu aljabar-$C^*$ sebagai subhimpunan dari aljabar lain ketika sebenarnya yang
+pertama hanya $*\,$-isomorfik dengan subhimpunan dari yang kedua, ada pula keadaan ketika
+perincian menjadi lebih jelas jika pembenaman yang sesungguhnya ditentukan. Jika rincian perbedaan
+ini belum sepenuhnya akrab, dua definisi berikut dimaksudkan untuk membantu.
+
+\begin{defn} Misalkan $A$ dan $B$ aljabar-$C^*$. Kita mengatakan bahwa $A$
+\df{dibenamkan} dalam~$B$ jika terdapat suatu homomorfisme-$*\,$ injektif $\iota\colon A \sto
+B$; yaitu, jika $A$ isomorfik-$*\,$ dengan suatu subaljabar-$C^*$ dari~$B$ (lihat
+proposisi~\ref{0019023} dan~\ref{00152181}). Homomorfisme-$*\,$ injektif $\iota$
+merupakan suatu
+ \index{C*@pembenaman-$C^*$}%
+ \index{pembenaman!aljabar-$C^*$}%
+\df{pembenaman} dari $A$ ke dalam~$B$. Dalam situasi ini lazimnya $A$ dan
+jangkauan~$\iota$ diperlakukan sebagai aljabar-$C^*$ yang identik. Pasangan $(B,\iota)$ merupakan suatu
+ \index{unitalisasi}%
+\df{unitalisasi} dari~$A$ jika $B$ merupakan aljabar-$C^*$ beridentitas dan $\iota\colon A \sto B$ merupakan suatu
+pembenaman. Unitalisasi $(B,\iota)$ bersifat
+  \index{unitalisasi!esensial}%
+  \index{esensial!unitalisasi}%
+\df{esensial} jika jangkauan $\iota$ merupakan ideal esensial dalam~$B$.
+\end{defn}
+
+\begin{defn} Misalkan $X$ dan $Y$ ruang topologis Hausdorff. Kita mengatakan bahwa $X$
+\df{dibenamkan} dalam~$Y$ jika terdapat homeomorfisme $j$ dari $X$ ke suatu subruang dari~$Y$.
+Homeomorfisme $j$ merupakan suatu
+ \index{topologis!pembenaman}%
+ \index{pembenaman!topologis}%
+\df{pembenaman} dari $X$ ke dalam~$Y$. Seperti dalam aljabar-$C^*$, lazimnya
+jangkauan $j$ diidentifikasi dengan ruang~$X$. Pasangan $(Y,j)$ merupakan suatu
+ \index{kompaktifikasi}%
+\df{kompaktifikasi} dari~$X$ jika $Y$ suatu ruang Hausdorff kompak dan $j\colon X \sto Y$
+merupakan suatu pembenaman. Kompaktifikasi $(Y,j)$ bersifat
+  \index{kompaktifikasi!esensial}%
+  \index{esensial!kompaktifikasi}%
+\df{esensial} jika jangkauan $j$ padat dalam~$Y$.
+\end{defn}
+
+Kita telah membahas unitalisasi terkecil dari suatu aljabar-$C^*$ dan kompaktifikasi terkecil
+dari suatu ruang Hausdorff kompak lokal. Sekarang, bagaimana dengan aljabar beridentitas terbesar, atau bahkan
+maksimal, yang memuat~$A$? Jelas bahwa objek seperti itu tidak ada, sebab jika $B$ suatu
+aljabar beridentitas yang memuat~$A$, maka $B \oplus C$ juga demikian, dengan $C$ sebarang
+aljabar-$C^*$ beridentitas. Demikian pula, tidak ada ruang kompak terbesar yang memuat~$X$: jika $Y$ suatu
+ruang kompak yang memuat $X$, maka gabungan saling lepas topologis $Y \uplus K$ juga demikian,
+dengan $K$ sebarang ruang kompak tak kosong. Namun, masuk akal untuk menanyakan apakah
+terdapat suatu unitalisasi esensial maksimal dari aljabar-$C^*$ atau suatu kompaktifikasi esensial
+maksimal dari ruang Hausdorff kompak lokal. Jawabannya adalah \emph{ya} dalam kedua
+kasus. \emph{Kompaktifikasi Stone--\v{C}ech} $\beta(X)$ yang terkenal bersifat maksimal di antara
+kompaktifikasi esensial dari ruang Hausdorff kompak lokal tak kompak~$X$. Perinciannya
+dapat ditemukan dalam sebarang buku teks topologi yang baik. Salah satu uraian standar yang mudah dibaca
+adalah~\cite{Willard:1968}, butir 19.3--19.12. Pendekatan yang lebih canggih menggunakan sebagian
+analisis fungsional---lihat, misalnya, \cite{Conway:1990}, bab V, bagian~6. Ternyata
+terdapat pula unitalisasi esensial maksimal dari suatu aljabar-$C^*$ tak beridentitas
+$A$---objek ini disebut \emph{aljabar pengali} dari~$A$.
+
+Kita mengatakan bahwa suatu unitalisasi esensial $M$ dari aljabar-$C^*$ $A$ bersifat \emph{maksimal} jika setiap
+aljabar-$C^*$ yang memuat $A$ sebagai ideal esensial dapat dibenamkan dalam~$M$. Berikut pernyataan yang lebih
+formal.
+
+\begin{defn} Suatu unitalisasi esensial $(M,j)$ dari aljabar-$C^*$ $A$ disebut
+ \index{maksimal!unitalisasi esensial}%
+ \index{esensial!unitalisasi!maksimal}%
+ \index{unitalisasi!esensial maksimal}%
+\df{maksimal} jika untuk setiap pembenaman $\iota\colon A \sto B$ yang jangkauannya merupakan ideal esensial
+dalam~$B$, terdapat homomorfisme-$*\,$ $\phi\colon B \sto M$ sedemikian sehingga $\phi
+\circ \iota = j$.
+\end{defn}
+
+\begin{prop} Dalam definisi sebelumnya, homomorfisme-$*\,$ $\phi$, jika ada, harus
+injektif.
+\end{prop}
+
+\begin{prop} Dalam definisi sebelumnya, homomorfisme-$*\,$ $\phi$, jika ada, harus
+tunggal.
+\end{prop}
+
+Bandingkan definisi berikut dengan~\ref{0028}.
+
+\begin{defn} Misalkan $A$ dan $B$ aljabar-$C^*$, dan $V$ modul Hilbert-$A$. Pemetaan
+$\phi\colon B \sto \ofml L(V)$ yang merupakan homomorfisme-$*\,$ disebut
+ \index{tak terdegenerasi!homomorfisme-$*\,$}%
+\df{tak terdegenerasi} jika $\phi^\sto(B)\,V$ padat dalam~$V$.
+\end{defn}
+
+\begin{prop} Misalkan $A$, $B$, dan $J$ aljabar-$C^*$, $V$ suatu modul Hilbert-$B$, serta
+$\iota\colon J \sto A$ suatu homomorfisme-$*\,$ injektif yang jangkauannya merupakan ideal dalam~$A$.
+Jika $\phi\colon J \sto \ofml L(V)$ suatu homomorfisme-$*\,$ tak terdegenerasi, maka terdapat
+perpanjangan tunggal dari $\phi$ menjadi homomorfisme-$*\,$ $\overline\phi\colon A \sto
+\ofml L(V)$ yang memenuhi $\overline\phi \circ \iota = \phi$.
+\end{prop}
+
+\begin{prop}\label{0038621} Jika $A$ suatu aljabar-$C^*$ tak nol, maka $(\ofml L(A),L)$ merupakan
+unitalisasi esensial maksimal dari~$A$. Unitalisasi ini tunggal dalam arti bahwa jika $(M,j)$ merupakan
+unitalisasi esensial maksimal lain dari $A$, maka terdapat suatu isomorfisme-$*\,$ $\phi
+\colon M \sto \ofml L(A)$ sedemikian sehingga $\phi \circ j = L$.
+\end{prop}
+
+\begin{defn}\label{0038641} Misalkan $A$ suatu aljabar-$C^*$. Kita mendefinisikan
+ \index{aljabar pengali}%
+ \index{aljabar!pengali}%
+\df{aljabar pengali} dari $A$ sebagai keluarga $\ofml L(A)$ operator yang dapat diadjoinkan
+pada~$A$. Mulai sekarang kita menyatakan keluarga ini
+ \index{MA@$M(A)$ (aljabar pengali dari $A$)}%
+dengan $M(A)$.
+\end{defn}
+
+
+
+
+
+
+
+
+
+\endinput

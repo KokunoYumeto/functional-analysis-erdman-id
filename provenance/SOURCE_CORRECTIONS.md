@@ -194,6 +194,39 @@ No upstream contact occurs during production. These entries are held for the
 single deduplicated post-corpus report only if that report is separately
 authorized.
 
+## Chapter 14
+
+The following nine source candidates are adjudicated and applied in
+`source/id-ID/multiplier_algebras-id.tex`. The exact machine-verifiable ledger
+is `provenance/SOURCE_CORRECTIONS_CH14.json`; it binds every inclusive source
+and target range, correction class, normalized snippet hash, and required or
+forbidden target anchor.
+
+1. `multiplier_algebras.tex:75--79`: replace the undefined `f` in the
+   antihomomorphism definition by the declared map `\phi`.
+2. `multiplier_algebras.tex:102--104`: restore the missing space in
+   `means,when`.
+3. `multiplier_algebras.tex:208--210`: supply the missing sentence stop after
+   the assertion about Hilbert `$A$`-modules.
+4. `multiplier_algebras.tex:229--233`: replace the malformed
+   `$C^*$=algebra` typography by the ordinary `$C^*$-algebra` compound.
+5. `multiplier_algebras.tex:229--234`: reverse the impossible inclusion
+   `\iota\colon V\to W` to `\iota\colon W\to V`, since `V=A` and the proper
+   ideal `W=J_0` includes into `A`, not conversely.
+6. `multiplier_algebras.tex:312--317`: render the erroneous past participle
+   `has lead` with its intended past-tense meaning.
+7. `multiplier_algebras.tex:413--420`: join the period-fragment pair so the
+   notation sentence says that if `A` and `B` are nonempty subsets of an
+   algebra, `AB` denotes the stated linear span.
+8. `multiplier_algebras.tex:641--643`: supply the missing second comma around
+   `if it exists` in the injectivity proposition.
+9. `multiplier_algebras.tex:645--647`: supply the missing second comma around
+   `if it exists` in the uniqueness proposition.
+
+No upstream contact occurs during production. These entries are held for the
+single deduplicated post-corpus report only if that report is separately
+authorized.
+
 ## Chapter 13
 
 The following six source-facing changes are adjudicated and applied in

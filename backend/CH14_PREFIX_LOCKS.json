@@ -1,0 +1,62 @@
+{
+  "schema_version": "o008.ch14-prefix-locks.v1",
+  "unit_id": "FAOA-2015-CH14",
+  "scope": "complete admitted Chapters 1--13 backend; excludes every Chapter 14-derived record",
+  "files": {
+    "units.jsonl": {
+      "bytes": 20511,
+      "sha256": "e5e2c5e17f5e297ea0ced767a7bc8c0defd2831d02271f0e722b842b37407ef3",
+      "records": 18
+    },
+    "semantic_units.jsonl": {
+      "bytes": 1216332,
+      "sha256": "3ee1ee6d4b8d5a136b991c81ed76e1de9518aa9efd89c12b29809afcf6f5e37e",
+      "records": 1452
+    },
+    "segments.jsonl": {
+      "bytes": 1356584,
+      "sha256": "8761fec68fc4266e74fac1abb8cd882444cb442d7c92c3c205c6c1a13dc64a6f",
+      "records": 1711
+    },
+    "relations.jsonl": {
+      "bytes": 1716580,
+      "sha256": "b527d46df8b2faaa3cedae38c2712a72954b38e30d595924ad471bad17ccbc44",
+      "records": 6524
+    },
+    "formula_map.jsonl": {
+      "bytes": 5697297,
+      "sha256": "6b1f102eea28ffba0abee8abc2132aa323910aa40d46bc82c2bb330d8db051a1",
+      "records": 9312
+    },
+    "exercise_support.jsonl": {
+      "bytes": 26047,
+      "sha256": "0c719db21027ee9c67b87b94c964a259bdac6f9c663356f9f2ee2704990af065",
+      "records": 49
+    },
+    "artifacts.jsonl": {
+      "bytes": 73370,
+      "sha256": "e5e0e3da0ae637de776cf2eb70b63d2e6311d123de878d43495e053cc1cede2a",
+      "records": 129
+    },
+    "qa_events.jsonl": {
+      "bytes": 93966,
+      "sha256": "0e3039233cf8da4e1d1b2e8e4f3292b3571ee9b9e58eca549b85ceedd667cd34",
+      "records": 105
+    },
+    "corrections.jsonl": {
+      "bytes": 192865,
+      "sha256": "90601002223cf5879c21d9594df750788f3f70675cf539d71d743bc96febcd6b",
+      "records": 213
+    },
+    "terminology.jsonl": {
+      "bytes": 142221,
+      "sha256": "27ef79812d95b9432c7a1a054884e7281a1d7175bbb4a884b6dc8cdbe20ffcee",
+      "records": 339
+    },
+    "index_terms.csv": {
+      "bytes": 440765,
+      "sha256": "cff7a3b456bd7415eebf21d49a3f9598cc1d6ad165fb90985df11ef2a74f3063",
+      "records": 1719
+    }
+  }
+}

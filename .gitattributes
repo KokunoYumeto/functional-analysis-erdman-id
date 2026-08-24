@@ -34,3 +34,9 @@ provenance/*_RENDER_MANIFEST.csv -text
 
 # Chapter 13 correction ledger is likewise admitted with its exact CRLF bytes.
 /provenance/SOURCE_CORRECTIONS_CH13.json -text
+
+# Chapter 14 correction ledger is likewise admitted with its exact CRLF bytes.
+/provenance/SOURCE_CORRECTIONS_CH14.json -text
+
+# The Chapter 14 fixed-build result is bound with its exact PowerShell CRLF bytes.
+/qa/CH14_FINAL_BUILD_RESULT.json -text
