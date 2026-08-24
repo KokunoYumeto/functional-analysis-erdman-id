@@ -33,14 +33,13 @@ tetap tersedia sebagai artefak batas sebelumnya.
 
 ## Preservasi versi
 
-Batas Zenodo terakhir yang sudah terbit sebelum checkpoint Bab 17 ini adalah
-versi parsial `2026.08.24-ch16`, dipertahankan secara mandiri dengan
-[DOI 10.5281/zenodo.22076176](https://doi.org/10.5281/zenodo.22076176). Catatan
-Zenodo tersebut secara eksplisit berstatus **edisi dalam pengerjaan, Bab 1--16
-dari 17 bab**, bukan buku lengkap. Metadata publik dan ketiga berkasnya telah
-dibaca ulang secara anonim dan cocok byte demi byte dengan artefak lokal.
-Mirror GitHub juga telah diverifikasi pada commit
-`f91578c166f781b4ce3f09fc8a65ea18e4eaccf7`.
+Versi `2026.08.24-ch17` dipertahankan secara mandiri di Zenodo dengan
+[DOI 10.5281/zenodo.22077300](https://doi.org/10.5281/zenodo.22077300). Catatan
+Zenodo tersebut secara eksplisit berstatus **edisi dalam pengerjaan;
+terjemahan semua 17 bab sumber telah lengkap**, bukan edisi final. Metadata
+publik dan ketiga berkasnya telah dibaca ulang secara anonim dan cocok byte
+demi byte dengan artefak lokal. Mirror GitHub juga telah diverifikasi pada
+commit `30c128a7a94a076280ed78941d2be01a596e8854`.
 [Versi Figshare
 v4](https://doi.org/10.6084/m9.figshare.33314709.v4) masih merupakan penunjuk
 historis Bab 1--10 dan bukan bukti untuk batas produksi saat ini.

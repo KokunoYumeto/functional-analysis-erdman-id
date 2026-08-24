@@ -1,0 +1,100 @@
+{
+  "schema_version": "o008.coordinator-handoff.v1",
+  "role": "O008",
+  "curriculum_route": "D20",
+  "locale": "id-ID",
+  "status": "in_progress_all_17_source_chapters_admitted",
+  "source_work": {
+    "author": "John M. Erdman",
+    "title": "Functional Analysis and Operator Algebras: An Introduction",
+    "version": "2015-10-04",
+    "official_source_zip_sha256": "0c667cfa7420b61dda8f8cb4ed9d619db8abd1b53d17eafe7d4a2e153342e53",
+    "official_pdf_sha256": "f320b16af7448fbb43582c21569840fe657fccf6f31d97f176913fdd0e1eb823",
+    "license": "CC BY-SA 4.0"
+  },
+  "admitted_boundary": {
+    "first_unit_id": "FAOA-2015-CH01",
+    "last_unit_id": "FAOA-2015-CH17",
+    "source_order_chapters_complete": true,
+    "whole_edition_complete": false,
+    "target_path": "source/id-ID/K0_functor-id.tex",
+    "target_bytes": 61673,
+    "target_sha256": "061ffd28907e2251fc8b01077888de3e11b3bce67fec1ba52b080c924a241059",
+    "master_path": "source/id-ID/functional-analysis-id-through-ch17.tex",
+    "master_bytes": 10820,
+    "master_sha256": "51b3f4d790e3d09ac6ac4c160284510e4827140ecaa5a961a46c880ae5c8bb39",
+    "reader_path": "output/pdf/analisis-fungsional-dan-aljabar-operator-id-bab-1-17.pdf",
+    "reader_pages": 232,
+    "reader_bytes": 2432395,
+    "reader_sha256": "22fda5f25205f2a442c2b907db015fb4c93cb46cfcba6a1fa8814449469073f1",
+    "admission_receipt": "provenance/CH17_BUILD_AND_QA_RECEIPT.md",
+    "admission_receipt_sha256": "ca962b53070da4157bbf575c25e8729f20a3009ea66bbf7f3f6d079a70a442e9"
+  },
+  "backend": {
+    "aggregate_records": 27633,
+    "manifest_path": "backend/BACKEND_MANIFEST.csv",
+    "manifest_sha256": "2193fc07549a8b828cb89b3c6534f8697e41ac126b1f5bf92aee9de495cf51f7",
+    "validation_path": "qa/CH17_BACKEND_VALIDATION.json",
+    "validation_sha256": "8f904d959167c3e3ad6f960612d31d4f73de7f865b6d4e02c4a94118b149d3e2",
+    "stable_ids_unique": true,
+    "relation_endpoints_resolved": true,
+    "deterministic_round_trip": true,
+    "chapters_1_16_prefix_lock": true,
+    "source_formula_surfaces_covered": 1047,
+    "target_formula_surfaces_covered": 1048
+  },
+  "publication": {
+    "github_repository": "https://github.com/KokunoYumeto/functional-analysis-erdman-id",
+    "github_content_commit": "30c128a7a94a076280ed78941d2be01a596e8854",
+    "github_content_tree": "db0a849782d6daabb083afe20f112f3c884e1153",
+    "github_anonymous_readback": "pass",
+    "github_changed_paths": 51,
+    "github_changed_bytes": 17111536,
+    "github_receipt_path": "provenance/GITHUB_PUBLICATION_RECEIPT_CH17.json",
+    "github_receipt_sha256": "a841425e19df094d4cfb7770a7328fe9dd37162ce0b5eaede93855dabd890bad",
+    "zenodo_concept_id": "22059739",
+    "zenodo_record_id": "22077300",
+    "zenodo_doi": "10.5281/zenodo.22077300",
+    "zenodo_version": "2026.08.24-ch17",
+    "zenodo_record_url": "https://zenodo.org/records/22077300",
+    "zenodo_anonymous_readback": "pass",
+    "zenodo_receipt_path": "provenance/ZENODO_PUBLICATION_RECEIPT_CH17.json",
+    "zenodo_receipt_sha256": "10237418bc543613460da7b1bb01fa5fed42841e9ebe18a0a17ed00dab275de2",
+    "zenodo_files": [
+      {
+        "filename": "analisis-fungsional-dan-aljabar-operator-id-bab-1-17.pdf",
+        "bytes": 2432395,
+        "sha256": "22fda5f25205f2a442c2b907db015fb4c93cb46cfcba6a1fa8814449469073f1"
+      },
+      {
+        "filename": "functional-analysis-erdman-id-2026.08.24-ch17-source-backend.zip",
+        "bytes": 3209517,
+        "sha256": "7015a22e27f9def7412673937faf4b67f1f1d56ddc267fe0e43770d1b3fed6ab"
+      },
+      {
+        "filename": "SHA256SUMS.txt",
+        "bytes": 254,
+        "sha256": "36d3d6c5b213ce44077eb8851037506e087170686f3366c59defc2b10a49ac8c"
+      }
+    ]
+  },
+  "provenance": {
+    "translation_and_technical_editing_model": "OpenAI Codex gpt-5.6-sol, Ultra",
+    "source_author_credit_preserved": true,
+    "component_credits_preserved": true,
+    "nonendorsement_present": true,
+    "upstream_contact": "none"
+  },
+  "remaining_work": [
+    "final preface, bibliography, and index adaptation",
+    "semantic accessible reader surface",
+    "separately provenanced O001 mastery and solutions layer",
+    "separately provenanced compact-spectral and SVD bridge",
+    "complete-corpus QA and final publication"
+  ],
+  "next_action": {
+    "phase": "front_back_matter",
+    "first_surface": "preface",
+    "instruction": "preserve all admitted chapter bytes and begin the bounded preface inventory and translation"
+  }
+}
