@@ -1,0 +1,117 @@
+{
+  "schema_version": "o008.coordinator-handoff.v1",
+  "role": "O008",
+  "curriculum_route": "D20",
+  "locale": "id-ID",
+  "status": "in_progress_source_text_complete_and_published",
+  "source_work": {
+    "author": "John M. Erdman",
+    "title": "Functional Analysis and Operator Algebras: An Introduction",
+    "version": "2015-10-04",
+    "official_source_zip_sha256": "0c667cfa7420b61dda8f8cb4ed9d619db8abd1b53d17eafe7d4a2e153342e53",
+    "official_pdf_sha256": "f320b16af7448fbb43582c21569840fe657fccf6f31d97f176913fdd0e1eb823",
+    "license": "CC BY-SA 4.0"
+  },
+  "admitted_boundary": {
+    "first_unit_id": "FAOA-2015-PREFACE",
+    "source_order_chapter_ids": "FAOA-2015-CH01--FAOA-2015-CH17",
+    "preface_complete": true,
+    "source_order_chapters_complete": true,
+    "bibliography_complete": true,
+    "translated_index_complete": true,
+    "source_text_translation_complete": true,
+    "whole_edition_complete": false,
+    "preface_target_path": "source/id-ID/preface-id.tex",
+    "preface_target_bytes": 18140,
+    "preface_target_sha256": "c622dc9d9c1af4e5b1a6112c84eeff7328c778e8ef8643fc267f6fc6e3e7d564",
+    "master_path": "source/id-ID/functional-analysis-id-complete-source.tex",
+    "master_bytes": 11176,
+    "master_sha256": "7f06919a8ec9088a3bc812fab962a48b5f1b3b0d5d3bce80eb21055f65089041",
+    "reader_path": "output/pdf/analisis-fungsional-dan-aljabar-operator-id-teks-sumber-lengkap.pdf",
+    "reader_pages": 238,
+    "reader_bytes": 2480109,
+    "reader_sha256": "efa2358b3c3e6e8c47e0caee9a02f6afe78d15bea1b0f1822ea8449d801b2b10",
+    "admission_receipt": "provenance/PREFACE_BUILD_AND_QA_RECEIPT.md",
+    "admission_receipt_sha256": "76a5b4ecd113b7f3f6cbeaa9dd5613e2d93874baab4506d13ddc5577c92129fc"
+  },
+  "backend": {
+    "aggregate_records": 28073,
+    "chapter_1_17_prefix_records": 27633,
+    "chapter_1_17_prefix_files": 11,
+    "manifest_path": "backend/BACKEND_MANIFEST.csv",
+    "manifest_sha256": "413756e2e337e8c032c9fba14f07242c47c266503a582f40e537a0e94b4d105b",
+    "validation_path": "qa/PREFACE_BACKEND_VALIDATION.json",
+    "validation_sha256": "b91b55022ba40cce95932293bd98c82243749598cb34f24b48db1c39fc103112",
+    "stable_ids_unique": true,
+    "relation_endpoints_resolved": true,
+    "deterministic_round_trip": true,
+    "chapter_1_17_prefix_lock": true,
+    "semantic_accessibility_state": "remediation_required",
+    "html_state": "pending"
+  },
+  "pdf_qa": {
+    "deterministic_byte_identical_replays": 2,
+    "all_pages_rendered_and_inspected": true,
+    "outline_nodes": 109,
+    "links": 3043,
+    "named_destinations": 2331,
+    "unresolved_destinations": 0,
+    "embedded_subset_unicode_fonts": 49,
+    "tagged_pdf": false,
+    "unsafe_active_content": false
+  },
+  "publication": {
+    "github_repository": "https://github.com/KokunoYumeto/functional-analysis-erdman-id",
+    "github_content_commit": "ac6243a6c60396a67834986bd72160e7b1385f5a",
+    "github_content_tree": "d56cee7dac6bc4c83fe67692b96dea6a4815fcb1",
+    "github_anonymous_readback": "pass",
+    "github_changed_paths": 47,
+    "github_changed_bytes": 17307282,
+    "github_receipt_path": "provenance/GITHUB_PUBLICATION_RECEIPT_COMPLETE_SOURCE.json",
+    "github_receipt_sha256": "c379a29847106121dd9ad7c57cfef3b84d2005ad2876e3d4f0d0d0ca60d1f6ce",
+    "zenodo_concept_id": "22059739",
+    "zenodo_record_id": "22082688",
+    "zenodo_doi": "10.5281/zenodo.22082688",
+    "zenodo_version": "2026.08.24-source-text",
+    "zenodo_record_url": "https://zenodo.org/records/22082688",
+    "zenodo_anonymous_metadata_readback": "pass",
+    "zenodo_anonymous_file_byte_readback": "pass",
+    "zenodo_receipt_path": "provenance/ZENODO_PUBLICATION_RECEIPT_COMPLETE_SOURCE.json",
+    "zenodo_receipt_sha256": "cfd889e28c1b47d405903b0f8d5dcab3b00ecacd623ff2e791f2021062f2a8ba",
+    "zenodo_files": [
+      {
+        "filename": "analisis-fungsional-dan-aljabar-operator-id-teks-sumber-lengkap.pdf",
+        "bytes": 2480109,
+        "sha256": "efa2358b3c3e6e8c47e0caee9a02f6afe78d15bea1b0f1822ea8449d801b2b10"
+      },
+      {
+        "filename": "functional-analysis-erdman-id-2026.08.24-source-text-source-backend.zip",
+        "bytes": 3373338,
+        "sha256": "5dc94fe3d11120bdfe9eaa3c82b5b7e245d4ddb43b5f07557583e1b872f8e574"
+      },
+      {
+        "filename": "SHA256SUMS.txt",
+        "bytes": 272,
+        "sha256": "c4b9e941717022c8f8484a74e3de86ba1bb6b286242ef037877c19e056e57ccd"
+      }
+    ]
+  },
+  "provenance": {
+    "translation_and_technical_editing_model": "OpenAI Codex gpt-5.6-sol, Ultra",
+    "source_author_credit_preserved": true,
+    "component_credits_preserved": true,
+    "component_exclusions_preserved": true,
+    "nonendorsement_present": true,
+    "upstream_contact": "none"
+  },
+  "remaining_work": [
+    "semantic accessible HTML reader",
+    "separately provenanced O001 mastery and solutions layer",
+    "separately provenanced compact-spectral and SVD bridge",
+    "complete-corpus QA and final publication"
+  ],
+  "next_action": {
+    "phase": "semantic_html",
+    "instruction": "build and admit a semantic accessible HTML reader without changing the admitted translated source text"
+  }
+}

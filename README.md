@@ -38,8 +38,13 @@ tetap tersedia sebagai artefak batas sebelumnya.
 
 Semua versi terbit dipertahankan dalam
 [konsep Zenodo O008 yang sama](https://doi.org/10.5281/zenodo.22059739), tanpa
-membuat konsep pesaing. Versi `2026.08.24-ch17` sebelumnya tetap tersedia
-dengan [DOI 10.5281/zenodo.22077300](https://doi.org/10.5281/zenodo.22077300).
+membuat konsep pesaing. Versi teks sumber lengkap
+`2026.08.24-source-text` tersedia dengan
+[DOI 10.5281/zenodo.22082688](https://doi.org/10.5281/zenodo.22082688) dan
+terikat pada commit GitHub
+[`ac6243a6c60396a67834986bd72160e7b1385f5a`](https://github.com/KokunoYumeto/functional-analysis-erdman-id/tree/ac6243a6c60396a67834986bd72160e7b1385f5a).
+Versi `2026.08.24-ch17` sebelumnya tetap tersedia dengan
+[DOI 10.5281/zenodo.22077300](https://doi.org/10.5281/zenodo.22077300).
 Setiap checkpoint menyatakan cakupan dan keterbatasannya secara eksplisit;
 metadata publik serta semua berkas terbit dibaca ulang secara anonim dan
 dicocokkan byte demi byte dengan artefak lokal. Mirror GitHub juga diverifikasi

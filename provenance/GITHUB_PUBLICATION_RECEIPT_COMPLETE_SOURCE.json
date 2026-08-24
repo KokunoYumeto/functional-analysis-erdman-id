@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.0.0",
+  "receipt_id": "FAOA-2015-COMPLETE-SOURCE-GITHUB-PUBLICATION",
+  "verified_utc": "2026-08-24T14:30:39Z",
+  "repository": "https://github.com/KokunoYumeto/functional-analysis-erdman-id",
+  "branch": "main",
+  "commit": "ac6243a6c60396a67834986bd72160e7b1385f5a",
+  "tree": "d56cee7dac6bc4c83fe67692b96dea6a4815fcb1",
+  "remote_head": "ac6243a6c60396a67834986bd72160e7b1385f5a",
+  "remote_tree": "d56cee7dac6bc4c83fe67692b96dea6a4815fcb1",
+  "remote_head_matches": true,
+  "remote_tree_matches": true,
+  "anonymous_changed_path_readback": {
+    "path_count": 47,
+    "total_bytes": 17307282,
+    "all_paths_match_local_bytes": true,
+    "mismatch_count": 0
+  },
+  "representative_raw_readback": [
+    {
+      "path": "README.md",
+      "bytes": 6352,
+      "sha256": "5a9e761112f4391f7b4a78c42fa51023d4be149dc4fbe3ee585df3ee6b427cb4",
+      "match": true
+    },
+    {
+      "path": "backend/BACKEND_MANIFEST.csv",
+      "bytes": 5132,
+      "sha256": "413756e2e337e8c032c9fba14f07242c47c266503a582f40e537a0e94b4d105b",
+      "match": true
+    },
+    {
+      "path": "output/pdf/analisis-fungsional-dan-aljabar-operator-id-teks-sumber-lengkap.pdf",
+      "bytes": 2480109,
+      "sha256": "efa2358b3c3e6e8c47e0caee9a02f6afe78d15bea1b0f1822ea8449d801b2b10",
+      "match": true
+    },
+    {
+      "path": "provenance/PREFACE_BUILD_AND_QA_RECEIPT.md",
+      "bytes": 8834,
+      "sha256": "76a5b4ecd113b7f3f6cbeaa9dd5613e2d93874baab4506d13ddc5577c92129fc",
+      "match": true
+    },
+    {
+      "path": "source/id-ID/functional-analysis-id-complete-source.tex",
+      "bytes": 11176,
+      "sha256": "7f06919a8ec9088a3bc812fab962a48b5f1b3b0d5d3bce80eb21055f65089041",
+      "match": true
+    },
+    {
+      "path": "source/id-ID/preface-id.tex",
+      "bytes": 18140,
+      "sha256": "c622dc9d9c1af4e5b1a6112c84eeff7328c778e8ef8643fc267f6fc6e3e7d564",
+      "match": true
+    }
+  ],
+  "credential_material_recorded": false,
+  "result": "pass"
+}

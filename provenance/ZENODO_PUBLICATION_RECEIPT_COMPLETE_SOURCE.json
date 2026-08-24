@@ -1,0 +1,42 @@
+{
+  "schema_version": "1.0.0",
+  "receipt_id": "FAOA-2015-COMPLETE-SOURCE-ZENODO-PUBLICATION",
+  "verified_utc": "2026-08-24T14:33:18Z",
+  "conceptrecid": "22059739",
+  "record_id": "22082688",
+  "doi": "10.5281/zenodo.22082688",
+  "record_url": "https://zenodo.org/records/22082688",
+  "version": "2026.08.24-source-text",
+  "license": "CC BY-SA 4.0",
+  "title": "Analisis Fungsional dan Aljabar Operator: Suatu Pengantar — Edisi Bahasa Indonesia",
+  "publication_date": "2026-08-24",
+  "language": "ind",
+  "source_author_credit_present": true,
+  "scope_nonendorsement_component_model_metadata_present": true,
+  "required_related_identifiers_present": true,
+  "status": "published",
+  "anonymous_metadata_readback": true,
+  "anonymous_file_byte_readback": true,
+  "files": [
+    {
+      "filename": "analisis-fungsional-dan-aljabar-operator-id-teks-sumber-lengkap.pdf",
+      "bytes": 2480109,
+      "sha256": "efa2358b3c3e6e8c47e0caee9a02f6afe78d15bea1b0f1822ea8449d801b2b10",
+      "matches_local_bytes": true
+    },
+    {
+      "filename": "functional-analysis-erdman-id-2026.08.24-source-text-source-backend.zip",
+      "bytes": 3373338,
+      "sha256": "5dc94fe3d11120bdfe9eaa3c82b5b7e245d4ddb43b5f07557583e1b872f8e574",
+      "matches_local_bytes": true
+    },
+    {
+      "filename": "SHA256SUMS.txt",
+      "bytes": 272,
+      "sha256": "c4b9e941717022c8f8484a74e3de86ba1bb6b286242ef037877c19e056e57ccd",
+      "matches_local_bytes": true
+    }
+  ],
+  "credential_material_recorded": false,
+  "result": "pass"
+}
