@@ -1,0 +1,53 @@
+{
+  "schema_version": "1.0.0",
+  "receipt_id": "FAOA-2015-CH14-GITHUB-PUBLICATION",
+  "verified_utc": "2026-08-24T02:55:16Z",
+  "repository": "https://github.com/KokunoYumeto/functional-analysis-erdman-id",
+  "branch": "main",
+  "commit": "4d490a496c8157fc24dda181dff6c483e5371863",
+  "tree": "6bb9c2bfe2e4effd3794b9132646027a9b602df6",
+  "remote_head": "4d490a496c8157fc24dda181dff6c483e5371863",
+  "remote_tree": "6bb9c2bfe2e4effd3794b9132646027a9b602df6",
+  "remote_head_matches": true,
+  "remote_tree_matches": true,
+  "anonymous_changed_path_readback": {
+    "path_count": 42,
+    "total_bytes": 14109468,
+    "all_paths_match_local_bytes": true,
+    "mismatch_count": 0
+  },
+  "representative_raw_readback": [
+    {
+      "path": "README.md",
+      "bytes": 5523,
+      "sha256": "ad7faf93581b29cc00ed73036cad0cd77de27ae2188bd32147b806d14ed20b22",
+      "match": true
+    },
+    {
+      "path": "source/id-ID/multiplier_algebras-id.tex",
+      "bytes": 31900,
+      "sha256": "2688ec9c2370371060aada680f5f95e9511ecb61cb99c2a126385f525a3c9142",
+      "match": true
+    },
+    {
+      "path": "output/pdf/analisis-fungsional-dan-aljabar-operator-id-bab-1-14.pdf",
+      "bytes": 2104187,
+      "sha256": "3e82aca29ea623502e6ce5b2059238088d8e5b6f81d699463402aff16fe15b41",
+      "match": true
+    },
+    {
+      "path": "provenance/CH14_BUILD_AND_QA_RECEIPT.md",
+      "bytes": 7292,
+      "sha256": "ad3b9e7ba7720bcc6757f2360813bd4e85e27b28b40411583527c004ae30175f",
+      "match": true
+    },
+    {
+      "path": "backend/BACKEND_MANIFEST.csv",
+      "bytes": 3982,
+      "sha256": "df1a4f1fc33ecba4a9a3590e6f0d625ca376dc72f9d146fc887c34c7ed6892a2",
+      "match": true
+    }
+  ],
+  "credential_material_recorded": false,
+  "result": "pass"
+}
