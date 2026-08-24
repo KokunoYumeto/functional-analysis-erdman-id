@@ -1,0 +1,53 @@
+{
+  "schema_version": "1.0.0",
+  "receipt_id": "FAOA-2015-CH15-GITHUB-PUBLICATION",
+  "verified_utc": "2026-08-24T03:35:57Z",
+  "repository": "https://github.com/KokunoYumeto/functional-analysis-erdman-id",
+  "branch": "main",
+  "commit": "a3e36233489e4820f1a7f20947ba30d7dc209014",
+  "tree": "73064e56997c4808a53dca7e7457f077095b9a11",
+  "remote_head": "a3e36233489e4820f1a7f20947ba30d7dc209014",
+  "remote_tree": "73064e56997c4808a53dca7e7457f077095b9a11",
+  "remote_head_matches": true,
+  "remote_tree_matches": true,
+  "anonymous_changed_path_readback": {
+    "path_count": 42,
+    "total_bytes": 14491420,
+    "all_paths_match_local_bytes": true,
+    "mismatch_count": 0
+  },
+  "representative_raw_readback": [
+    {
+      "path": "README.md",
+      "bytes": 5619,
+      "sha256": "956fa6dd3e40f69d64e9add79c35965c699a70db5f832b79511a4efc77d0d03d",
+      "match": true
+    },
+    {
+      "path": "backend/BACKEND_MANIFEST.csv",
+      "bytes": 4267,
+      "sha256": "48727fd1875f1559a4a870d6ed09eb2a3062872f0440c8dbcb3a06ce1d3ddb36",
+      "match": true
+    },
+    {
+      "path": "output/pdf/analisis-fungsional-dan-aljabar-operator-id-bab-1-15.pdf",
+      "bytes": 2156827,
+      "sha256": "5b8d5d5f44671f4695dea7f470d6ea7bb63fd2a0ff459aa8e8fb1a0c0faac7c7",
+      "match": true
+    },
+    {
+      "path": "provenance/CH15_BUILD_AND_QA_RECEIPT.md",
+      "bytes": 8080,
+      "sha256": "7aa1f8c383e4366df8e30042a2212c7ba2e319d5d22aa42edf525cbd0a370f0e",
+      "match": true
+    },
+    {
+      "path": "source/id-ID/fredholm_theory-id.tex",
+      "bytes": 17672,
+      "sha256": "174b1ad2557f7dfa10e8171bd7482d907f858389b509f4d55de9cc785e2b43ba",
+      "match": true
+    }
+  ],
+  "credential_material_recorded": false,
+  "result": "pass"
+}
