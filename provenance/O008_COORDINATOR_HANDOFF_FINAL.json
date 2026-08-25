@@ -64,11 +64,11 @@
     "base_jsonl_files_preserved_byte_identically": 19,
     "base_jsonl_bytes": 14878396,
     "base_manifest_sha256": "06ad5f9c6931ef1838a8307c60b8b3b94a4c89a25d6ddc12dbfb2a3ddc591cfc",
-    "companion_manifest_sha256": "bb1bf6bc49d4ff88bd20e6d36a0e1751de8c95ed7876040efd918c23067823f4",
+    "companion_manifest_sha256": "9be0d071106f9ba38e00f50811a718c84102e4527ae507a8e51250bbd9bfb201",
     "relations": 826,
     "artifacts": 70,
     "validation_findings": 0,
-    "validation_report_sha256": "76b13901a45e08fc44fb3dccd0bc5a07fa89183f7eb017570d26f952cf0fa006"
+    "validation_report_sha256": "ee7ae54a5a069e22aabd9e2c76e16a5b8571736cf93a6298babd80730735312d"
   },
   "quality_gates": {
     "pdf_clean_replays": 2,
@@ -86,7 +86,7 @@
     "build_receipt": {
       "path": "provenance/FINAL_EDITION_BUILD_AND_QA_RECEIPT.md",
       "bytes": 7558,
-      "sha256": "eb47657582ea24094137e9507aa8a78faea84217dbed2036c4b8dc3de4feeee6"
+      "sha256": "3635789d7f404a7d41512f05ce0d37befbc51e8d4f577e5688a1cdce6709453d"
     }
   },
   "publication": {

@@ -6,15 +6,15 @@ from __future__ import annotations
 import package_final_integrated_release as _base
 
 
-RELEASE = "2026.08.25-authority-hash-correction-r2"
+RELEASE = "2026.08.25-backend-artifact-reconciliation"
 PREFIX = f"functional-analysis-erdman-id-{RELEASE}"
 PDF_NAME = _base.PDF_NAME
 ZIP_NAME = f"{PREFIX}-source-backend-html.zip"
 SUMS_NAME = _base.SUMS_NAME
 ROOT = _base.ROOT
-OUTPUT_DIR = ROOT / "qa" / "release-authority-hash-correction-r2"
+OUTPUT_DIR = ROOT / "qa" / "release-backend-artifact-reconciliation"
 MAX_RELEASE_BYTES = _base.MAX_RELEASE_BYTES
-ZIP_TIMESTAMP = (2026, 8, 25, 1, 30, 0)
+ZIP_TIMESTAMP = (2026, 8, 25, 2, 0, 0)
 
 CORRECTION_SCRIPTS = {
     "qa/package_authority_hash_correction_release.py",
@@ -22,9 +22,12 @@ CORRECTION_SCRIPTS = {
     "qa/verify_authority_hash_correction_github_public.py",
     "qa/verify_authority_hash_correction_r2_github_public.py",
     "qa/verify_authority_hash_correction_zenodo_public.py",
+    "qa/verify_backend_artifact_reconciliation_github_public.py",
+    "qa/verify_backend_artifact_reconciliation_zenodo_public.py",
 }
 CORRECTION_PROVENANCE = {
     "provenance/AUTHORITY_HASH_CORRECTION_20260825.md",
+    "provenance/BACKEND_ARTIFACT_RECONCILIATION_20260825.md",
 }
 
 

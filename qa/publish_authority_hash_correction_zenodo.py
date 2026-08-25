@@ -8,8 +8,8 @@ import publish_final_integrated_zenodo as _prior
 
 
 EXPECTED_CONCEPTRECID = _prior.EXPECTED_CONCEPTRECID
-EXPECTED_PREVIOUS_RECORD_ID = "22088619"
-EXPECTED_PREVIOUS_VERSION = "2026.08.25-authority-hash-correction"
+EXPECTED_PREVIOUS_RECORD_ID = "22088677"
+EXPECTED_PREVIOUS_VERSION = "2026.08.25-authority-hash-correction-r2"
 VERSION = package.RELEASE
 PUBLICATION_DATE = _prior.PUBLICATION_DATE
 TITLE = _prior.TITLE
@@ -22,7 +22,11 @@ EXPECTED_CREATORS = _prior.EXPECTED_CREATORS
 EXPECTED_CONTRIBUTORS = _prior.EXPECTED_CONTRIBUTORS
 EXPECTED_RELATED = _prior.EXPECTED_RELATED
 CORRECTION_MARKER = "Koreksi metadata otoritas sumber"
-DESCRIPTION_MARKERS = _prior.DESCRIPTION_MARKERS + (CORRECTION_MARKER,)
+BACKEND_MARKER = "Rekonsiliasi artefak backend"
+DESCRIPTION_MARKERS = _prior.DESCRIPTION_MARKERS + (
+    CORRECTION_MARKER,
+    BACKEND_MARKER,
+)
 _base_description = _prior.description
 
 
@@ -36,6 +40,12 @@ def description(github_commit: str) -> str:
         "anggota manifes. Revisi r2 juga memuat verifier anonim yang telah "
         "diperbaiki agar catatan penjelas koreksi tidak dianggap sebagai "
         "kontaminasi metadata.</p>"
+        "<p><strong>Rekonsiliasi artefak backend:</strong> versi ini juga "
+        "memperbarui satu rekaman artefak overlay agar cocok dengan byte konsol "
+        "validasi pendamping yang benar-benar diterbitkan. Sembilan belas JSONL "
+        "backend dasar, PDF, HTML, solusi, jembatan, dan matematika tidak "
+        "berubah; generator dan validator overlay lolos dua replay "
+        "byte-identik dengan nol temuan.</p>"
     )
 
 

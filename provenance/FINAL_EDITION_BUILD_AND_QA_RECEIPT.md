@@ -114,9 +114,9 @@ exercise solutions, ten reader-work solutions, 52 support-status overlays, 13
 bridge units, two admitted surfaces, 294 HTML routes, 826 relations, and 70
 artifacts. Strict validation and second-run byte replay pass with zero
 findings. `backend/COMPANION_BACKEND_MANIFEST.csv` is 1,073 bytes, SHA-256
-`bb1bf6bc49d4ff88bd20e6d36a0e1751de8c95ed7876040efd918c23067823f4`;
+`9be0d071106f9ba38e00f50811a718c84102e4527ae507a8e51250bbd9bfb201`;
 `qa/COMPANION_BACKEND_VALIDATION.json` is 4,524 bytes, SHA-256
-`76b13901a45e08fc44fb3dccd0bc5a07fa89183f7eb017570d26f952cf0fa006`.
+`ee7ae54a5a069e22aabd9e2c76e16a5b8571736cf93a6298babd80730735312d`.
 
 ## Rights, attribution, and contact boundary
 

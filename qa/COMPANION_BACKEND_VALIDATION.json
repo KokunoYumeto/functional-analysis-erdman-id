@@ -66,12 +66,12 @@
     {
       "bytes": 35524,
       "path": "backend/companion_artifacts.jsonl",
-      "sha256": "d6e6524cb479597e34144da2e147f1f24a85bad6cf017232c5d205a023a59fc0"
+      "sha256": "6256503166fb89d9de4959571602abcf9599b39f5edc902ac1851ef5bf1e7b30"
     },
     {
       "bytes": 1073,
       "path": "backend/COMPANION_BACKEND_MANIFEST.csv",
-      "sha256": "bb1bf6bc49d4ff88bd20e6d36a0e1751de8c95ed7876040efd918c23067823f4"
+      "sha256": "9be0d071106f9ba38e00f50811a718c84102e4527ae507a8e51250bbd9bfb201"
     }
   ],
   "generator": {
@@ -88,7 +88,7 @@
     {
       "bytes": 35524,
       "path": "backend/companion_artifacts.jsonl",
-      "sha256": "d6e6524cb479597e34144da2e147f1f24a85bad6cf017232c5d205a023a59fc0"
+      "sha256": "6256503166fb89d9de4959571602abcf9599b39f5edc902ac1851ef5bf1e7b30"
     },
     {
       "bytes": 2542,
