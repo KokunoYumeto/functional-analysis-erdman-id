@@ -56,3 +56,9 @@ provenance/*_RENDER_MANIFEST.csv -text
 
 # The Chapter 17 fixed-build result is bound with its exact PowerShell CRLF bytes.
 /qa/CH17_FINAL_BUILD_RESULT.json -text -eol
+
+# These admitted companion witnesses are hash-bound to their exact PowerShell
+# CRLF byte streams.  Preserve those bytes in Git and release archives.
+/qa/FINAL_COMPANION_BUILD_RESULT.json -text -eol
+/qa/FINAL_COMPANION_INPUT_SNAPSHOT.csv -text -eol
+/qa/FINAL_COMPANION_COMPONENT_VALIDATION_CONSOLE.txt -text -eol

@@ -91,10 +91,12 @@
   },
   "publication": {
     "backend_artifact_reconciliation": {
-      "status": "github_content_public_zenodo_successor_pending",
+      "status": "github_content_public_exact_byte_binding_pending",
       "content_commit": "dba6cc483d4a8406170746fe6d3dfa59c786ed83",
       "content_tree": "c9f7e452b5fce91cea0e2869c28e75bef945ab0f",
+      "verifier_fix_commit": "725c96bcd1dd93846d1282b1aeccce702664248e",
       "anonymous_changed_path_readback": true,
+      "exact_git_byte_binding": "pending",
       "zenodo_concept_doi": "10.5281/zenodo.22059739",
       "zenodo_successor": null
     },

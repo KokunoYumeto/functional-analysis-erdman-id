@@ -29,3 +29,21 @@ manifest SHA-256
 The admitted overlay counts remain four components, four provenance records,
 52 exercise solutions, ten reader-work solutions, 52 support overlays, 13
 bridge units, two surfaces, 294 HTML routes, 826 relations, and 70 artifacts.
+
+The strengthened public-byte verifier then exposed a separate Git line-ending
+boundary: three admitted PowerShell-generated witnesses matched their backend
+records on disk but Git's default text normalization stored LF variants. The
+release now marks those three exact paths `-text` and binds their actual CRLF
+bytes in Git, the compact archive, and both anonymous verifiers:
+
+- `qa/FINAL_COMPANION_BUILD_RESULT.json`: 1,935 bytes, SHA-256
+  `5719f9a726fb5a411a7b76879058ad7e14c155717130ad5e8c4672c941c591df`;
+- `qa/FINAL_COMPANION_INPUT_SNAPSHOT.csv`: 4,113 bytes, SHA-256
+  `322799f519043092002ad61fbf3f38367cf15004f5d43304b976187c3769d869`;
+- `qa/FINAL_COMPANION_COMPONENT_VALIDATION_CONSOLE.txt`: 4,330 bytes,
+  SHA-256
+  `874ea2a4da664f01be45152bc9dbaa1e15333608d7badc82df7082226e523d29`.
+
+This exact-byte binding changes only evidentiary line endings in the Git tree;
+it does not change source, translation, formulas, PDF, HTML, solutions, or
+bridge content.
