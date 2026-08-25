@@ -17,7 +17,7 @@
     "advanced_continuation": "Chapters 9-17",
     "official_source_zip": {
       "bytes": 262556,
-      "sha256": "0c667cfa7420b61dda8f8cb4ed9d619db8abd1b53d17eafe7d4a2e153342e53"
+      "sha256": "0c667cfa7420b61dda8f8cb4ed9d619db8abbd1b53d17eafe7d4a2e153342e53"
     },
     "official_pdf": {
       "pages": 230,
@@ -85,8 +85,8 @@
     "backend_findings": 0,
     "build_receipt": {
       "path": "provenance/FINAL_EDITION_BUILD_AND_QA_RECEIPT.md",
-      "bytes": 7557,
-      "sha256": "da117ac6709903ec2ba7b29afad479c184399a4f2d6c754cd55576c8d5f981db"
+      "bytes": 7558,
+      "sha256": "eb47657582ea24094137e9507aa8a78faea84217dbed2036c4b8dc3de4feeee6"
     }
   },
   "publication": {

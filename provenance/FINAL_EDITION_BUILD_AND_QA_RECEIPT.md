@@ -10,7 +10,7 @@ Status: **admitted; publication transaction pending**
 The source authority remains John M. Erdman's *Functional Analysis and
 Operator Algebras: An Introduction*, version 4 October 2015. The frozen
 official source ZIP is 262,556 bytes, SHA-256
-`0c667cfa7420b61dda8f8cb4ed9d619db8abd1b53d17eafe7d4a2e153342e53`; the
+`0c667cfa7420b61dda8f8cb4ed9d619db8abbd1b53d17eafe7d4a2e153342e53`; the
 official 230-page PDF is 2,336,387 bytes, SHA-256
 `f320b16af7448fbb43582c21569840fe657fccf6f31d97f176913fdd0e1eb823`;
 and `authority/SOURCE_MANIFEST.csv` closes all 27 archive members under
