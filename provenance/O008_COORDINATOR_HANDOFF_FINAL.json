@@ -2,7 +2,7 @@
   "schema_version": "o008.coordinator-handoff-final.v1",
   "handoff_id": "O008-FAOA-2015-ID-FINAL-INTEGRATED",
   "created_utc": "2026-08-25T00:38:12Z",
-  "status": "complete",
+  "status": "maintenance_release_in_progress",
   "role": "O008 / D20 Functional Analysis",
   "locale": "id-ID",
   "lane": ".",
@@ -90,6 +90,14 @@
     }
   },
   "publication": {
+    "backend_artifact_reconciliation": {
+      "status": "github_content_public_zenodo_successor_pending",
+      "content_commit": "dba6cc483d4a8406170746fe6d3dfa59c786ed83",
+      "content_tree": "c9f7e452b5fce91cea0e2869c28e75bef945ab0f",
+      "anonymous_changed_path_readback": true,
+      "zenodo_concept_doi": "10.5281/zenodo.22059739",
+      "zenodo_successor": null
+    },
     "github": {
       "repository": "https://github.com/KokunoYumeto/functional-analysis-erdman-id",
       "branch": "main",
@@ -189,5 +197,5 @@
     "performed": false,
     "reason": "The official source has no public issue tracker; no author contact was initiated."
   },
-  "terminal_condition": "The complete integrated id-ID reader, semantic surfaces, backend, QA evidence, GitHub mirror, Zenodo version, and public-byte receipts are complete."
+  "terminal_condition": "The complete integrated id-ID reader remains admitted and public. Final maintenance closeout is pending publication and anonymous byte verification of the reconciled companion-backend artifact identity in the existing Zenodo concept."
 }

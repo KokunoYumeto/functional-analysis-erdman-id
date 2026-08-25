@@ -37,6 +37,7 @@ def main() -> None:
     artifacts = payload["backend/companion_artifacts.jsonl"]
     manifest = payload["backend/COMPANION_BACKEND_MANIFEST.csv"]
     validation_data = payload["qa/COMPANION_BACKEND_VALIDATION.json"]
+    console_data = payload["qa/FINAL_COMPANION_COMPONENT_VALIDATION_CONSOLE.txt"]
     validation = json.loads(validation_data)
     records = [json.loads(line) for line in artifacts.decode("utf-8").splitlines()]
     console = next(
@@ -55,8 +56,10 @@ def main() -> None:
         or validation.get("result") != "pass"
         or validation.get("findings") != []
         or not isinstance(console, dict)
-        or int(console.get("bytes", -1)) != 4330
-        or console.get("sha256") != CONSOLE_SHA256
+        or len(console_data) != 4330
+        or sha256(console_data) != CONSOLE_SHA256
+        or int(console.get("bytes", -1)) != len(console_data)
+        or console.get("sha256") != sha256(console_data)
     ):
         raise SystemExit("packaged backend reconciliation identity differs")
 
