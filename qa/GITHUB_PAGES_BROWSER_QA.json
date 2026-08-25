@@ -1,0 +1,97 @@
+{
+  "base_url": "https://kokunoyumeto.github.io/functional-analysis-erdman-id/",
+  "browser_surface": "Codex In-app Browser",
+  "console_errors": [],
+  "console_warnings": [],
+  "deployment_commit": "8faf10ecd30a0e9497732ec487423dad4ab15c22",
+  "deployment_id": 6084901952,
+  "failed_requests": [],
+  "inspected_at_utc": "2026-08-25T14:04:54.912Z",
+  "inspected_urls": [
+    "https://kokunoyumeto.github.io/functional-analysis-erdman-id/",
+    "https://kokunoyumeto.github.io/functional-analysis-erdman-id/companion/",
+    "https://kokunoyumeto.github.io/functional-analysis-erdman-id/output/html/index.html",
+    "https://kokunoyumeto.github.io/functional-analysis-erdman-id/output/html/bab-06/index.html",
+    "https://kokunoyumeto.github.io/functional-analysis-erdman-id/output/html-companion/index.html",
+    "https://kokunoyumeto.github.io/functional-analysis-erdman-id/output/html-companion/jembatan-spektral-kompak-svd/index.html"
+  ],
+  "navigation_checks": [
+    {
+      "final_url": "https://kokunoyumeto.github.io/functional-analysis-erdman-id/output/html/index.html",
+      "requested_url": "https://kokunoyumeto.github.io/functional-analysis-erdman-id/",
+      "status": "pass"
+    },
+    {
+      "final_url": "https://kokunoyumeto.github.io/functional-analysis-erdman-id/output/html-companion/index.html",
+      "requested_url": "https://kokunoyumeto.github.io/functional-analysis-erdman-id/companion/",
+      "status": "pass"
+    },
+    {
+      "action": "followed the visible Jembatan spektral-kompak dan SVD link",
+      "final_url": "https://kokunoyumeto.github.io/functional-analysis-erdman-id/output/html-companion/jembatan-spektral-kompak-svd/index.html",
+      "status": "pass"
+    }
+  ],
+  "network_evidence": {
+    "lazy_loading_note": "Off-screen SVG diagrams reported loading=lazy and incomplete before scrolling, not a network failure; a representative Chapter 6 SVG loaded after scrolling at natural size 126 x 87 px.",
+    "method": "Browser console inspection plus separate anonymous HTTP SHA-256 readback; the terminal public verifier replays every manifested file.",
+    "representative_svg": "output/html/assets/diagrams/FAOA-2015-DIAGRAM-CH06-022.svg",
+    "status": "pass"
+  },
+  "schema": "o008.github-pages.browser-qa.v1",
+  "screenshots_inspected": 5,
+  "status": "pass",
+  "viewports": [
+    {
+      "document_width": 1425,
+      "height": 900,
+      "horizontal_overflow": false,
+      "main_width": 1104.888916015625,
+      "mathml_elements": 1067,
+      "name": "desktop source reader, Chapter 6",
+      "navigation_position": "sticky",
+      "readability": "pass",
+      "status": "pass",
+      "width": 1440
+    },
+    {
+      "document_width": 1425,
+      "height": 900,
+      "horizontal_overflow": false,
+      "main_width": 1104.888916015625,
+      "mathml_elements": 228,
+      "name": "desktop companion bridge",
+      "navigation_position": "sticky",
+      "readability": "pass",
+      "status": "pass",
+      "width": 1440
+    },
+    {
+      "document_width": 375,
+      "height": 844,
+      "horizontal_overflow": false,
+      "main_width": 375.1111145019531,
+      "mathml_elements": 1067,
+      "name": "mobile source reader, Chapter 6",
+      "navigation_position": "static",
+      "readability": "pass",
+      "status": "pass",
+      "wide_formula_contained_by_local_scroll": true,
+      "width": 390
+    },
+    {
+      "document_width": 375,
+      "height": 844,
+      "horizontal_overflow": false,
+      "main_width": 375.1111145019531,
+      "mathml_elements": 228,
+      "name": "mobile companion bridge",
+      "navigation_position": "static",
+      "readability": "pass",
+      "status": "pass",
+      "width": 390
+    }
+  ],
+  "visual_findings": [],
+  "workflow_run_id": 32857464154
+}

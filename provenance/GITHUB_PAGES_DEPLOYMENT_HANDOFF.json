@@ -1,0 +1,132 @@
+{
+  "artifact": {
+    "companion_manifest": {
+      "bytes": 1744,
+      "manifested_bytes": 1341400,
+      "manifested_files": 18,
+      "sha256": "e20683b5cb9ac6e6cd787d813476213ef8b5ddc2967ff0c6374b67b6419a7365"
+    },
+    "final_pdf": {
+      "bytes": 2838207,
+      "pages": 298,
+      "path": "output/pdf/analisis-fungsional-dan-aljabar-operator-id-edisi-lengkap-dengan-pendamping.pdf",
+      "sha256": "6d4bbf02959e5afb5fd34e1118f91f026c293b0056ec7a0ecdc5e95944df5d85"
+    },
+    "source_reader_manifest": {
+      "bytes": 11616,
+      "manifested_bytes": 7645353,
+      "manifested_files": 104,
+      "sha256": "3a3a4a4cdd03d1cae2c49c316fc1f94fe36dad6aa9da79f3764930f011045576"
+    }
+  },
+  "central_hub_ingestion": {
+    "curriculum_core": "D20",
+    "edition_status": "complete",
+    "language": "id-ID",
+    "primary_reader_url": "https://kokunoyumeto.github.io/functional-analysis-erdman-id/",
+    "program_role": "O008",
+    "repository": "https://github.com/KokunoYumeto/functional-analysis-erdman-id",
+    "secondary_reader_url": "https://kokunoyumeto.github.io/functional-analysis-erdman-id/companion/",
+    "zenodo_concept_doi": "10.5281/zenodo.22059739"
+  },
+  "deployment": {
+    "build_type": "workflow",
+    "commit": "8faf10ecd30a0e9497732ec487423dad4ab15c22",
+    "deployment_id": 6084901952,
+    "environment": "github-pages",
+    "tag": "o008-pages-2026.08.25-r2",
+    "tag_commit": "8faf10ecd30a0e9497732ec487423dad4ab15c22",
+    "tag_object": "06482f8cbe9a2f44f3c1254640254395d4e5d77a",
+    "tree": "74036bb86f7ca940d0c400a45f18f7399e7a3d55",
+    "workflow_path": ".github/workflows/pages.yml",
+    "workflow_run_id": 32857464154,
+    "workflow_run_url": "https://github.com/KokunoYumeto/functional-analysis-erdman-id/actions/runs/32857464154",
+    "workflow_status": "success"
+  },
+  "edition": {
+    "author": "John M. Erdman",
+    "coverage": "Preface, all 17 chapters, bibliography, index, 52 exercise solutions, 10 reader-work solutions, and 13 compact-spectral/SVD bridge units",
+    "language": "Bahasa Indonesia (id-ID)",
+    "source_version": "4 October 2015",
+    "status": "complete",
+    "title": "Analisis Fungsional dan Aljabar Operator: Sebuah Pengantar"
+  },
+  "historical_route_tag": {
+    "commit": "8a33a4b62bcac330ed849a2b25d9f85b91618a4b",
+    "disposition": "Superseded only by exact tracked-source closure; canonical reader bytes did not change.",
+    "tag": "o008-pages-2026.08.25"
+  },
+  "pages": {
+    "companion_alias": "https://kokunoyumeto.github.io/functional-analysis-erdman-id/companion/",
+    "companion_canonical": "https://kokunoyumeto.github.io/functional-analysis-erdman-id/output/html-companion/index.html",
+    "repository_homepage": "https://kokunoyumeto.github.io/functional-analysis-erdman-id/",
+    "root": "https://kokunoyumeto.github.io/functional-analysis-erdman-id/",
+    "source_reader_canonical": "https://kokunoyumeto.github.io/functional-analysis-erdman-id/output/html/index.html"
+  },
+  "payload": {
+    "all_manifested_bytes_have_exact_tracked_sources": true,
+    "manifest_bytes": 23871,
+    "manifest_path": "qa/GITHUB_PAGES_PUBLIC_MANIFEST.csv",
+    "manifest_rows": 128,
+    "manifest_sha256": "85891eb8140eb5e5ade2c1191c1b1297b42f619dde0c287d4df41c63aa436f1d",
+    "manifested_bytes": 9004103,
+    "payload_file_count_including_manifest": 129,
+    "payload_total_bytes_including_manifest": 9027974,
+    "payload_tree_sha256": "c88f1955793ab56bd991d84877702313d690ca82a7b0815615816736189b1f9a",
+    "substantive_reader_bytes_changed": false
+  },
+  "publication_scope": {
+    "duplicate_doi_created": false,
+    "duplicate_repository_created": false,
+    "upstream_contact": false,
+    "zenodo_version_created": false,
+    "zenodo_version_note": "Routing-only maintenance; the existing complete Zenodo version remains current."
+  },
+  "rights": {
+    "license": "CC BY-SA 4.0",
+    "model_provenance": "OpenAI Codex gpt-5.6-sol, Ultra, at the user's direction",
+    "non_endorsement_preserved": true,
+    "source_and_component_attribution_preserved": true
+  },
+  "schema": "o008.github-pages.deployment-handoff.v1",
+  "status": "complete",
+  "verification": {
+    "anonymous_public_readback": {
+      "authentication_used": false,
+      "manifest_matches_commit_and_pages": true,
+      "manifested_bytes_verified": 9004103,
+      "manifested_files_verified": 128,
+      "required_urls_http_200": 4,
+      "result": "pass"
+    },
+    "browser_qa": {
+      "bytes": 3749,
+      "console_errors": 0,
+      "desktop": "pass",
+      "failed_requests": 0,
+      "mobile": "pass",
+      "path": "qa/GITHUB_PAGES_BROWSER_QA.json",
+      "sha256": "eefd5b6f32c31f416c83ca77465607964f1369962d99222ac675f19f74e20069"
+    },
+    "local_payload_validation": {
+      "byte_identical_replay": true,
+      "bytes": 736,
+      "html_documents": 39,
+      "internal_references": 4064,
+      "mathml_elements": 13481,
+      "path": "qa/GITHUB_PAGES_PAYLOAD_VALIDATION.json",
+      "sha256": "8fa56ee5d3c7d36c2d806e80c8e14c9a30242900a78079a20490b6c17a9857fa",
+      "svg_assets": 80
+    },
+    "publication_receipt": {
+      "bytes": 94445,
+      "path": "provenance/GITHUB_PAGES_PUBLICATION_RECEIPT.json",
+      "sha256": "054f3946bf59c29922f8b92f8ff0aa829d2eb3c2bb517d4bcbd0ecb8c5b90cee"
+    },
+    "remote_tag_readback": {
+      "anonymous": true,
+      "peeled_commit_matches": true,
+      "tag_object_matches": true
+    }
+  }
+}

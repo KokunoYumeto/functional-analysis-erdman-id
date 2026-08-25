@@ -161,7 +161,9 @@ def raw_url(repo: str, commit: str, path: str) -> str:
 
 
 def api_url(repo: str, suffix: str) -> str:
-    return f"https://api.github.com/repos/{repo}/{suffix.lstrip('/')}"
+    base = f"https://api.github.com/repos/{repo}"
+    suffix = suffix.lstrip("/")
+    return base if not suffix else f"{base}/{suffix}"
 
 
 def require_dict(value: Any, label: str) -> dict[str, Any]:
