@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.0.0",
+  "receipt_id": "FAOA-2015-FINAL-INTEGRATED-ZENODO-PUBLICATION",
+  "verified_utc": "2026-08-25T00:36:56Z",
+  "conceptrecid": "22059739",
+  "record_id": "22088404",
+  "doi": "10.5281/zenodo.22088404",
+  "record_url": "https://zenodo.org/records/22088404",
+  "version": "2026.08.25-final-integrated",
+  "license": "CC BY-SA 4.0",
+  "title": "Analisis Fungsional dan Aljabar Operator: Suatu Pengantar — Edisi Bahasa Indonesia",
+  "publication_date": "2026-08-25",
+  "language": "ind",
+  "overall_status": "complete",
+  "source_text_status": "complete",
+  "semantic_html_status": "complete",
+  "mastery_solution_status": "complete",
+  "selected_reader_work_status": "complete",
+  "compact_spectral_svd_bridge_status": "complete",
+  "companion_html_status": "complete",
+  "github_commit": "1381492a62c789b49eef80e5e1e0a3357f54e30a",
+  "github_tree": "32b14bfa83260eec89fa78646c7265b3efd66c43",
+  "primary_reader_pages": 298,
+  "source_exercise_solutions": 52,
+  "selected_reader_work_solutions": 10,
+  "compact_spectral_svd_bridge_units": 13,
+  "source_author_credit_present": true,
+  "scope_nonendorsement_component_model_metadata_present": true,
+  "required_related_identifiers_present": true,
+  "reader_first_surface": {
+    "sole_primary_reader_pdf": "analisis-fungsional-dan-aljabar-operator-id-edisi-lengkap-dengan-pendamping.pdf",
+    "description_introduces_pdf_before_archive": true,
+    "api_file_array_treated_as_unordered": true,
+    "default_preview": null,
+    "explicit_file_order": []
+  },
+  "status": "published",
+  "latest_in_concept": true,
+  "unique_version_in_lineage": true,
+  "record_page_resolves": true,
+  "doi_resolves": true,
+  "anonymous_metadata_readback": true,
+  "anonymous_file_byte_readback": true,
+  "files": [
+    {
+      "filename": "analisis-fungsional-dan-aljabar-operator-id-edisi-lengkap-dengan-pendamping.pdf",
+      "bytes": 2838207,
+      "sha256": "6d4bbf02959e5afb5fd34e1118f91f026c293b0056ec7a0ecdc5e95944df5d85",
+      "matches_local_bytes": true
+    },
+    {
+      "filename": "functional-analysis-erdman-id-2026.08.25-final-integrated-source-backend-html.zip",
+      "bytes": 3768055,
+      "sha256": "8b54bae4b11f0d56e50f90b700ea2abe6d245ab04d3e6ad7990bc19a8c4bcdd9",
+      "matches_local_bytes": true
+    },
+    {
+      "filename": "SHA256SUMS.txt",
+      "bytes": 294,
+      "sha256": "41d91b24625aabb4575e8bdc2db5839347dbecd040a2522f08b45abe6233949a",
+      "matches_local_bytes": true
+    }
+  ],
+  "credential_material_recorded": false,
+  "result": "pass"
+}

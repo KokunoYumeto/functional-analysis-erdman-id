@@ -1,0 +1,177 @@
+{
+  "schema_version": "o008.coordinator-handoff-final.v1",
+  "handoff_id": "O008-FAOA-2015-ID-FINAL-INTEGRATED",
+  "created_utc": "2026-08-25T00:38:12Z",
+  "status": "complete",
+  "role": "O008 / D20 Functional Analysis",
+  "locale": "id-ID",
+  "lane": ".",
+  "coordinator_role": "program root",
+  "edition_role": "O008 persistent production lane",
+  "corpus": {
+    "author": "John M. Erdman",
+    "title": "Functional Analysis and Operator Algebras: An Introduction",
+    "source_version": "4 October 2015",
+    "scope": "preface; all 17 chapters in source order; bibliography; translated index",
+    "d20_core": "Chapters 1-8",
+    "advanced_continuation": "Chapters 9-17",
+    "official_source_zip": {
+      "bytes": 262556,
+      "sha256": "0c667cfa7420b61dda8f8cb4ed9d619db8abd1b53d17eafe7d4a2e153342e53"
+    },
+    "official_pdf": {
+      "pages": 230,
+      "bytes": 2336387,
+      "sha256": "f320b16af7448fbb43582c21569840fe657fccf6f31d97f176913fdd0e1eb823"
+    },
+    "source_manifest": {
+      "members": 27,
+      "sha256": "e222e326d8ff5fcd30b66b3b44642043295e1cb39920c58ff353eaafafd276d1"
+    }
+  },
+  "integrated_components": {
+    "source_exercise_solutions": 52,
+    "selected_reader_work_solutions": 10,
+    "compact_spectral_svd_bridge_units": 13,
+    "component_authorship_separate_from_erdman": true,
+    "source_correction_adjudications_preserved": true
+  },
+  "reader_artifacts": {
+    "pdf": {
+      "path": "output/pdf/analisis-fungsional-dan-aljabar-operator-id-edisi-lengkap-dengan-pendamping.pdf",
+      "pages": 298,
+      "bytes": 2838207,
+      "sha256": "6d4bbf02959e5afb5fd34e1118f91f026c293b0056ec7a0ecdc5e95944df5d85",
+      "tagged": false,
+      "accessible_alternative": "output/html/ and output/html-companion/"
+    },
+    "source_html": {
+      "path": "output/html/",
+      "files": 105,
+      "bytes": 7656969,
+      "inventory_sha256": "f04bb3f5ee883c794474b191faf0e724987ebc01c4711bac8f6dc5421e543f32"
+    },
+    "companion_html": {
+      "path": "output/html-companion/",
+      "files": 19,
+      "bytes": 1343144,
+      "inventory_sha256_including_manifest": "e9b8aa804bf619d7bfcc12a5767d5c6ef9836a1ac512c946fa925ef926e8f2fb",
+      "mathml_elements": 2288,
+      "route_records": 294
+    }
+  },
+  "backend": {
+    "base_jsonl_files_preserved_byte_identically": 19,
+    "base_jsonl_bytes": 14878396,
+    "base_manifest_sha256": "06ad5f9c6931ef1838a8307c60b8b3b94a4c89a25d6ddc12dbfb2a3ddc591cfc",
+    "companion_manifest_sha256": "bb1bf6bc49d4ff88bd20e6d36a0e1751de8c95ed7876040efd918c23067823f4",
+    "relations": 826,
+    "artifacts": 70,
+    "validation_findings": 0,
+    "validation_report_sha256": "76b13901a45e08fc44fb3dccd0bc5a07fa89183f7eb017570d26f952cf0fa006"
+  },
+  "quality_gates": {
+    "pdf_clean_replays": 2,
+    "pdf_replays_byte_identical": true,
+    "pdf_pages_rasterized_and_inspected": 298,
+    "pdf_outline_entries": 141,
+    "pdf_resolved_internal_links": 3116,
+    "pdf_named_destinations": 2612,
+    "pdf_font_rows_embedded_subset_unicode": 53,
+    "html_clean_replays": 2,
+    "html_replays_match_canonical": true,
+    "html_machine_findings": 0,
+    "responsive_browser_findings": 0,
+    "backend_findings": 0,
+    "build_receipt": {
+      "path": "provenance/FINAL_EDITION_BUILD_AND_QA_RECEIPT.md",
+      "bytes": 7557,
+      "sha256": "da117ac6709903ec2ba7b29afad479c184399a4f2d6c754cd55576c8d5f981db"
+    }
+  },
+  "publication": {
+    "github": {
+      "repository": "https://github.com/KokunoYumeto/functional-analysis-erdman-id",
+      "branch": "main",
+      "content_commit": "1381492a62c789b49eef80e5e1e0a3357f54e30a",
+      "content_tree": "32b14bfa83260eec89fa78646c7265b3efd66c43",
+      "changed_paths": 118,
+      "changed_bytes": 17882946,
+      "anonymous_all_changed_bytes_match": true,
+      "discoverability": {
+        "description_identifies_complete_bahasa_indonesia_edition": true,
+        "homepage": "https://doi.org/10.5281/zenodo.22088404",
+        "topics": [
+          "bahasa-indonesia",
+          "cc-by-sa-4-0",
+          "functional-analysis",
+          "mathematics-education",
+          "open-textbook",
+          "operator-algebras"
+        ],
+        "receipt_path": "provenance/GITHUB_REPOSITORY_METADATA_FINAL.json",
+        "receipt_bytes": 726,
+        "receipt_sha256": "2ed3852b424a31efb796d1c44b1d1c8521989ac6ed1f88eb08b23a3d1c1d401b"
+      },
+      "receipt": {
+        "path": "provenance/GITHUB_PUBLICATION_RECEIPT_FINAL.json",
+        "bytes": 25447,
+        "sha256": "8445e60570285f6057a50a5d15c7b22bf7570c270958f96a9f61cc50afa7c608"
+      }
+    },
+    "zenodo": {
+      "concept_id": "22059739",
+      "concept_doi": "10.5281/zenodo.22059739",
+      "record_id": "22088404",
+      "version_doi": "10.5281/zenodo.22088404",
+      "version": "2026.08.25-final-integrated",
+      "license": "CC BY-SA 4.0",
+      "latest_in_concept": true,
+      "anonymous_metadata_readback": true,
+      "anonymous_file_byte_readback": true,
+      "files": [
+        {
+          "name": "analisis-fungsional-dan-aljabar-operator-id-edisi-lengkap-dengan-pendamping.pdf",
+          "bytes": 2838207,
+          "sha256": "6d4bbf02959e5afb5fd34e1118f91f026c293b0056ec7a0ecdc5e95944df5d85"
+        },
+        {
+          "name": "functional-analysis-erdman-id-2026.08.25-final-integrated-source-backend-html.zip",
+          "bytes": 3768055,
+          "sha256": "8b54bae4b11f0d56e50f90b700ea2abe6d245ab04d3e6ad7990bc19a8c4bcdd9"
+        },
+        {
+          "name": "SHA256SUMS.txt",
+          "bytes": 294,
+          "sha256": "41d91b24625aabb4575e8bdc2db5839347dbecd040a2522f08b45abe6233949a"
+        }
+      ],
+      "receipt": {
+        "path": "provenance/ZENODO_PUBLICATION_RECEIPT_FINAL_INTEGRATED.json",
+        "bytes": 2540,
+        "sha256": "44fb5ac3630dde00dc7d46768b81faae756b18419e0c3351de7994c0e3eb30b4"
+      }
+    },
+    "release_package_receipt": {
+      "path": "provenance/FINAL_RELEASE_PACKAGE_RECEIPT.json",
+      "bytes": 1662,
+      "sha256": "a5936dc217d89ccdad610a3d0824e47be55e3d8aa991dcf05b9ec52204b012fa"
+    }
+  },
+  "rights": {
+    "edition_license": "CC BY-SA 4.0",
+    "attribution_present": true,
+    "change_notice_present": true,
+    "sharealike_preserved": true,
+    "additional_restrictions": false,
+    "non_endorsement_present": true,
+    "diagxy_preserved_byte_identically": true,
+    "uncleared_components_omitted": true,
+    "model_provenance": "OpenAI Codex gpt-5.6-sol, Ultra, at the user's direction"
+  },
+  "upstream_contact": {
+    "performed": false,
+    "reason": "The official source has no public issue tracker; no author contact was initiated."
+  },
+  "terminal_condition": "The complete integrated id-ID reader, semantic surfaces, backend, QA evidence, GitHub mirror, Zenodo version, and public-byte receipts are complete."
+}

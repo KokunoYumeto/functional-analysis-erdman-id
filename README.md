@@ -25,10 +25,13 @@ dipertahankan sebagai riwayat produksi, tetapi bukan lagi pintu masuk utama.
 
 Semua versi terbit dipertahankan dalam
 [konsep Zenodo O008 yang sama](https://doi.org/10.5281/zenodo.22059739), tanpa
-membuat konsep pesaing. Versi reader HTML `2026.08.24-html-reader` tersedia
-dengan [DOI 10.5281/zenodo.22086801](https://doi.org/10.5281/zenodo.22086801)
-dan terikat pada commit GitHub
-[`1471a3719f52463b01b71e48330ec7fe3c7b704a`](https://github.com/KokunoYumeto/functional-analysis-erdman-id/tree/1471a3719f52463b01b71e48330ec7fe3c7b704a).
+membuat konsep pesaing. Versi lengkap terintegrasi
+`2026.08.25-final-integrated` tersedia dengan
+[DOI 10.5281/zenodo.22088404](https://doi.org/10.5281/zenodo.22088404) dan
+terikat pada commit GitHub
+[`1381492a62c789b49eef80e5e1e0a3357f54e30a`](https://github.com/KokunoYumeto/functional-analysis-erdman-id/tree/1381492a62c789b49eef80e5e1e0a3357f54e30a).
+Versi reader HTML `2026.08.24-html-reader` sebelumnya tetap tersedia dengan
+[DOI 10.5281/zenodo.22086801](https://doi.org/10.5281/zenodo.22086801).
 Versi teks sumber lengkap `2026.08.24-source-text` sebelumnya tetap tersedia
 dengan [DOI 10.5281/zenodo.22082688](https://doi.org/10.5281/zenodo.22082688),
 dan versi `2026.08.24-ch17` tetap tersedia dengan

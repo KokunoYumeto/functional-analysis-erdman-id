@@ -1,0 +1,47 @@
+{
+  "schema_version": "o008.final-release-package-receipt.v1",
+  "created_utc": "2026-08-25T00:38:12Z",
+  "release": "2026.08.25-final-integrated",
+  "overall_status": "complete",
+  "git_commit": "1381492a62c789b49eef80e5e1e0a3357f54e30a",
+  "git_tree": "32b14bfa83260eec89fa78646c7265b3efd66c43",
+  "package_replays": 2,
+  "package_replays_byte_identical": true,
+  "tracked_payload_files": 295,
+  "archive_entries": 297,
+  "expanded_tracked_bytes": 28344663,
+  "primary_reader": {
+    "filename": "analisis-fungsional-dan-aljabar-operator-id-edisi-lengkap-dengan-pendamping.pdf",
+    "bytes": 2838207,
+    "pages": 298,
+    "sha256": "6d4bbf02959e5afb5fd34e1118f91f026c293b0056ec7a0ecdc5e95944df5d85"
+  },
+  "source_backend_html_archive": {
+    "filename": "functional-analysis-erdman-id-2026.08.25-final-integrated-source-backend-html.zip",
+    "bytes": 3768055,
+    "sha256": "8b54bae4b11f0d56e50f90b700ea2abe6d245ab04d3e6ad7990bc19a8c4bcdd9",
+    "integrity_test": "pass",
+    "duplicate_entries": 0,
+    "all_entry_streams_read": true
+  },
+  "checksums": {
+    "filename": "SHA256SUMS.txt",
+    "bytes": 294,
+    "sha256": "41d91b24625aabb4575e8bdc2db5839347dbecd040a2522f08b45abe6233949a"
+  },
+  "source_html": {
+    "files": 105,
+    "bytes": 7656969,
+    "inventory_sha256": "f04bb3f5ee883c794474b191faf0e724987ebc01c4711bac8f6dc5421e543f32"
+  },
+  "companion_html": {
+    "files": 19,
+    "bytes": 1343144,
+    "inventory_sha256_including_manifest": "e9b8aa804bf619d7bfcc12a5767d5c6ef9836a1ac512c946fa925ef926e8f2fb"
+  },
+  "private_absolute_paths": 0,
+  "forbidden_entries": 0,
+  "license": "CC BY-SA 4.0",
+  "reader_first": true,
+  "result": "pass"
+}
