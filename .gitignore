@@ -69,6 +69,8 @@
 /qa/replay-html-companion-final-a/
 /qa/replay-html-companion-final-b/
 /qa/release-final-integrated/
+/qa/pages-build-*/
+/_site*/
 /source/id-ID/$out/
 /tmp/
 

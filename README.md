@@ -6,6 +6,13 @@ John M. Erdman, *Functional Analysis and Operator Algebras: An Introduction*
 
 ## Baca edisi lengkap
 
+- **[Baca online — reader HTML teks sumber lengkap](https://kokunoyumeto.github.io/functional-analysis-erdman-id/)**
+  memuat prakata, seluruh 17 bab, bibliografi, indeks, MathML semantik, dan
+  diagram SVG berlabel dalam tata letak yang mengalir ulang di desktop maupun
+  seluler.
+- **[Buka pendamping penguasaan dan jembatan spektral](https://kokunoyumeto.github.io/functional-analysis-erdman-id/companion/)**
+  memuat 52 solusi latihan sumber, 10 solusi hasil kerja pembaca, dan jembatan
+  spektral-kompak/SVD 13 unit dengan provenans terpisah.
 - [PDF edisi lengkap dengan pendamping penguasaan](output/pdf/analisis-fungsional-dan-aljabar-operator-id-edisi-lengkap-dengan-pendamping.pdf)
   adalah reader utama 298 halaman.
 - [Reader HTML pendamping semantik](output/html-companion/index.html) memuat

@@ -23,6 +23,8 @@ provenance/*_RENDER_MANIFEST.csv -text
 /html/** text eol=lf
 /output/html/** text eol=lf
 /output/html-companion/** text eol=lf
+/pages/** text eol=lf
+/.github/workflows/*.yml text eol=lf
 /qa/*.py text eol=lf
 /qa/*.md text eol=lf
 /qa/*.json text eol=lf
