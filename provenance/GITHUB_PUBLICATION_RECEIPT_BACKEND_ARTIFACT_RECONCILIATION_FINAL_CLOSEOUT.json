@@ -1,0 +1,92 @@
+{
+  "schema_version": "1.0.0",
+  "receipt_id": "FAOA-2015-ID-GITHUB-BACKEND-RECONCILIATION-FINAL-CLOSEOUT",
+  "verified_utc": "2026-08-25T02:11:22Z",
+  "repository": "https://github.com/KokunoYumeto/functional-analysis-erdman-id",
+  "branch": "main",
+  "base_commit": "059bda086dfd6e6aa80f2077b2338c5d15039057",
+  "commit": "5d61293ed9ff36f102023835dd38f75367ccc11a",
+  "tree": "21cf4751616ec50163a9d070dcb8d59af98943fb",
+  "remote_head": "5d61293ed9ff36f102023835dd38f75367ccc11a",
+  "remote_tree": "21cf4751616ec50163a9d070dcb8d59af98943fb",
+  "authority_hash_correction": {
+    "official_source_zip_bytes": 262556,
+    "correct_sha256": "0c667cfa7420b61dda8f8cb4ed9d619db8abbd1b53d17eafe7d4a2e153342e53",
+    "corrected_record_count": 7,
+    "substantive_pdf_changed": false
+  },
+  "anonymous_changed_path_readback": {
+    "path_count": 8,
+    "total_bytes": 43523,
+    "all_paths_match_local_bytes": true,
+    "paths": [
+      {
+        "path": "README.md",
+        "bytes": 6826,
+        "sha256": "cf86639ed08d1577465e0557db8d5b4c34c72f9c6e94d869f6931c53dd405ebd",
+        "match": true
+      },
+      {
+        "path": "provenance/BACKEND_ARTIFACT_RECONCILIATION_RELEASE_PACKAGE_RECEIPT.json",
+        "bytes": 2619,
+        "sha256": "73450a86096bfcfe78ddc2f7e7153c3aff4c54ee58d060f910375c5fdd76a193",
+        "match": true
+      },
+      {
+        "path": "provenance/FINAL_EDITION_BUILD_AND_QA_RECEIPT.md",
+        "bytes": 8040,
+        "sha256": "ec0e613225271428c2fb096ee715304d7dd362b79c17c70b1c898ca3d3afa1fe",
+        "match": true
+      },
+      {
+        "path": "provenance/GITHUB_PUBLICATION_RECEIPT_BACKEND_ARTIFACT_RECONCILIATION.json",
+        "bytes": 3947,
+        "sha256": "6b29049e4d33ddf89680721a8b4f39e9a3f867c5cce5cf0be7dd65c9c0bdf42f",
+        "match": true
+      },
+      {
+        "path": "provenance/GITHUB_REPOSITORY_METADATA_BACKEND_ARTIFACT_RECONCILIATION.json",
+        "bytes": 749,
+        "sha256": "88d7915ef70eccb5a8c63dad0f41b27ecfc016fd473393d7ea1ca30315320354",
+        "match": true
+      },
+      {
+        "path": "provenance/O008_COORDINATOR_HANDOFF_FINAL.json",
+        "bytes": 9475,
+        "sha256": "b24ba7dab5f734b34e1d9e751633d4090d76b0be7227a9eae64809e5cf3878f9",
+        "match": true
+      },
+      {
+        "path": "provenance/ZENODO_PUBLICATION_RECEIPT_BACKEND_ARTIFACT_RECONCILIATION.json",
+        "bytes": 4291,
+        "sha256": "610df0dfdc17bd35c3da47014ac44d4226a113058794060222a1a6f8f6753c1d",
+        "match": true
+      },
+      {
+        "path": "qa/verify_backend_artifact_reconciliation_final_closeout_github_public.py",
+        "bytes": 7576,
+        "sha256": "37edb6c05d522315478d3b5342aa5c8211e0f6f4518ff6a2aa71f8c3030d0848",
+        "match": true
+      }
+    ]
+  },
+  "credential_material_recorded": false,
+  "result": "pass",
+  "terminal_closeout": {
+    "release_commit": "059bda086dfd6e6aa80f2077b2338c5d15039057",
+    "release_tree": "77822a94a46d6422d9ed9c6b48e345229a4e7c05",
+    "zenodo_record_id": "22088947",
+    "zenodo_version_doi": "10.5281/zenodo.22088947",
+    "handoff_bytes": 9475,
+    "handoff_sha256": "b24ba7dab5f734b34e1d9e751633d4090d76b0be7227a9eae64809e5cf3878f9",
+    "build_receipt_bytes": 8040,
+    "build_receipt_sha256": "ec0e613225271428c2fb096ee715304d7dd362b79c17c70b1c898ca3d3afa1fe",
+    "github_publication_receipt_sha256": "6b29049e4d33ddf89680721a8b4f39e9a3f867c5cce5cf0be7dd65c9c0bdf42f",
+    "zenodo_publication_receipt_sha256": "610df0dfdc17bd35c3da47014ac44d4226a113058794060222a1a6f8f6753c1d",
+    "repository_metadata_receipt_sha256": "88d7915ef70eccb5a8c63dad0f41b27ecfc016fd473393d7ea1ca30315320354",
+    "release_package_receipt_sha256": "73450a86096bfcfe78ddc2f7e7153c3aff4c54ee58d060f910375c5fdd76a193",
+    "public_receipt_relationships_pass": true,
+    "private_absolute_paths": 0,
+    "credential_material_recorded": false
+  }
+}
