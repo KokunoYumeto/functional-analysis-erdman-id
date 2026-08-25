@@ -1,0 +1,63 @@
+{
+  "schema_version": "o008.backend-artifact-reconciliation-package.v1",
+  "created_utc": "2026-08-25T02:05:58Z",
+  "release": "2026.08.25-backend-artifact-reconciliation",
+  "overall_status": "complete",
+  "git_commit": "059bda086dfd6e6aa80f2077b2338c5d15039057",
+  "git_tree": "77822a94a46d6422d9ed9c6b48e345229a4e7c05",
+  "package_replays": 2,
+  "package_replays_byte_identical": true,
+  "tracked_payload_files": 304,
+  "archive_entries": 306,
+  "expanded_tracked_bytes": 28376934,
+  "primary_reader": {
+    "filename": "analisis-fungsional-dan-aljabar-operator-id-edisi-lengkap-dengan-pendamping.pdf",
+    "pages": 298,
+    "bytes": 2838207,
+    "sha256": "6d4bbf02959e5afb5fd34e1118f91f026c293b0056ec7a0ecdc5e95944df5d85",
+    "changed_from_prior_version": false
+  },
+  "source_backend_html_archive": {
+    "filename": "functional-analysis-erdman-id-2026.08.25-backend-artifact-reconciliation-source-backend-html.zip",
+    "bytes": 3793368,
+    "sha256": "ac5b3ec1fe7c2cf0a17eacce29c920ca5976c0c7d15e37f0ba0476afe9c48e32"
+  },
+  "checksums": {
+    "filename": "SHA256SUMS.txt",
+    "bytes": 309,
+    "sha256": "231c5dd7742d3a387c4098039d17add2d0c66a34267cc79e267045664ca18b9a"
+  },
+  "backend": {
+    "base_jsonl_files_unchanged": 19,
+    "base_jsonl_bytes_unchanged": 14878396,
+    "base_manifest_sha256": "06ad5f9c6931ef1838a8307c60b8b3b94a4c89a25d6ddc12dbfb2a3ddc591cfc",
+    "companion_artifacts_sha256": "6256503166fb89d9de4959571602abcf9599b39f5edc902ac1851ef5bf1e7b30",
+    "companion_manifest_sha256": "9be0d071106f9ba38e00f50811a718c84102e4527ae507a8e51250bbd9bfb201",
+    "validation_report_sha256": "ee7ae54a5a069e22aabd9e2c76e16a5b8571736cf93a6298babd80730735312d",
+    "validation_findings": 0
+  },
+  "exact_artifact_bindings": [
+    {
+      "path": "qa/FINAL_COMPANION_BUILD_RESULT.json",
+      "bytes": 1935,
+      "sha256": "5719f9a726fb5a411a7b76879058ad7e14c155717130ad5e8c4672c941c591df"
+    },
+    {
+      "path": "qa/FINAL_COMPANION_COMPONENT_VALIDATION_CONSOLE.txt",
+      "bytes": 4330,
+      "sha256": "874ea2a4da664f01be45152bc9dbaa1e15333608d7badc82df7082226e523d29"
+    },
+    {
+      "path": "qa/FINAL_COMPANION_INPUT_SNAPSHOT.csv",
+      "bytes": 4113,
+      "sha256": "322799f519043092002ad61fbf3f38367cf15004f5d43304b976187c3769d869"
+    }
+  ],
+  "source_html_inventory_sha256": "f04bb3f5ee883c794474b191faf0e724987ebc01c4711bac8f6dc5421e543f32",
+  "companion_html_inventory_sha256": "e9b8aa804bf619d7bfcc12a5767d5c6ef9836a1ac512c946fa925ef926e8f2fb",
+  "private_absolute_paths": 0,
+  "forbidden_entries": 0,
+  "license": "CC BY-SA 4.0",
+  "reader_first": true,
+  "result": "pass"
+}

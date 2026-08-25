@@ -1,0 +1,103 @@
+{
+  "schema_version": "1.0.0",
+  "receipt_id": "FAOA-2015-ID-GITHUB-BACKEND-ARTIFACT-RECONCILIATION",
+  "verified_utc": "2026-08-25T01:59:57Z",
+  "repository": "https://github.com/KokunoYumeto/functional-analysis-erdman-id",
+  "branch": "main",
+  "base_commit": "725c96bcd1dd93846d1282b1aeccce702664248e",
+  "commit": "059bda086dfd6e6aa80f2077b2338c5d15039057",
+  "tree": "77822a94a46d6422d9ed9c6b48e345229a4e7c05",
+  "remote_head": "059bda086dfd6e6aa80f2077b2338c5d15039057",
+  "remote_tree": "77822a94a46d6422d9ed9c6b48e345229a4e7c05",
+  "authority_hash_correction": {
+    "official_source_zip_bytes": 262556,
+    "correct_sha256": "0c667cfa7420b61dda8f8cb4ed9d619db8abbd1b53d17eafe7d4a2e153342e53",
+    "corrected_record_count": 7,
+    "substantive_pdf_changed": false
+  },
+  "anonymous_changed_path_readback": {
+    "path_count": 8,
+    "total_bytes": 32449,
+    "all_paths_match_local_bytes": true,
+    "paths": [
+      {
+        "path": ".gitattributes",
+        "bytes": 2400,
+        "sha256": "c85ce66f88f0c259687a79c0cfcc40fc960a627fb73e9fcd090ffa693df76999",
+        "match": true
+      },
+      {
+        "path": "provenance/BACKEND_ARTIFACT_RECONCILIATION_20260825.md",
+        "bytes": 2710,
+        "sha256": "4feabb5be3c1fd48759fadfb40c7369c24cc01db430dbbe8229f0953329ebf7d",
+        "match": true
+      },
+      {
+        "path": "provenance/O008_COORDINATOR_HANDOFF_FINAL.json",
+        "bytes": 8408,
+        "sha256": "af07bf5a0310d006e65c6196016bf6159a040a3d2522847a16fd3edf8d6b4b0a",
+        "match": true
+      },
+      {
+        "path": "qa/FINAL_COMPANION_BUILD_RESULT.json",
+        "bytes": 1935,
+        "sha256": "5719f9a726fb5a411a7b76879058ad7e14c155717130ad5e8c4672c941c591df",
+        "match": true
+      },
+      {
+        "path": "qa/FINAL_COMPANION_COMPONENT_VALIDATION_CONSOLE.txt",
+        "bytes": 4330,
+        "sha256": "874ea2a4da664f01be45152bc9dbaa1e15333608d7badc82df7082226e523d29",
+        "match": true
+      },
+      {
+        "path": "qa/FINAL_COMPANION_INPUT_SNAPSHOT.csv",
+        "bytes": 4113,
+        "sha256": "322799f519043092002ad61fbf3f38367cf15004f5d43304b976187c3769d869",
+        "match": true
+      },
+      {
+        "path": "qa/verify_backend_artifact_reconciliation_github_public.py",
+        "bytes": 4778,
+        "sha256": "78389c9438c80e8e5fc35fbcac2dd8f5f09d0eb666949e5fbcdebeb58497637e",
+        "match": true
+      },
+      {
+        "path": "qa/verify_backend_artifact_reconciliation_zenodo_public.py",
+        "bytes": 3775,
+        "sha256": "41415c6f36d018ab1a1a6d4813e82c594abd3eb0fd6c8b892245d3a209f34cf5",
+        "match": true
+      }
+    ]
+  },
+  "credential_material_recorded": false,
+  "result": "pass",
+  "backend_artifact_reconciliation": {
+    "reconciliation_content_commit": "dba6cc483d4a8406170746fe6d3dfa59c786ed83",
+    "previous_verifier_commit": "725c96bcd1dd93846d1282b1aeccce702664248e",
+    "companion_artifacts_sha256": "6256503166fb89d9de4959571602abcf9599b39f5edc902ac1851ef5bf1e7b30",
+    "companion_manifest_sha256": "9be0d071106f9ba38e00f50811a718c84102e4527ae507a8e51250bbd9bfb201",
+    "validation_report_sha256": "ee7ae54a5a069e22aabd9e2c76e16a5b8571736cf93a6298babd80730735312d",
+    "exact_public_artifact_bindings": [
+      {
+        "path": "qa/FINAL_COMPANION_BUILD_RESULT.json",
+        "bytes": 1935,
+        "sha256": "5719f9a726fb5a411a7b76879058ad7e14c155717130ad5e8c4672c941c591df"
+      },
+      {
+        "path": "qa/FINAL_COMPANION_COMPONENT_VALIDATION_CONSOLE.txt",
+        "bytes": 4330,
+        "sha256": "874ea2a4da664f01be45152bc9dbaa1e15333608d7badc82df7082226e523d29"
+      },
+      {
+        "path": "qa/FINAL_COMPANION_INPUT_SNAPSHOT.csv",
+        "bytes": 4113,
+        "sha256": "322799f519043092002ad61fbf3f38367cf15004f5d43304b976187c3769d869"
+      }
+    ],
+    "validation_findings": 0,
+    "base_jsonl_files_unchanged": 19,
+    "base_jsonl_bytes_unchanged": 14878396,
+    "substantive_pdf_changed": false
+  }
+}

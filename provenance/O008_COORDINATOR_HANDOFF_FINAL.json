@@ -2,7 +2,8 @@
   "schema_version": "o008.coordinator-handoff-final.v1",
   "handoff_id": "O008-FAOA-2015-ID-FINAL-INTEGRATED",
   "created_utc": "2026-08-25T00:38:12Z",
-  "status": "maintenance_release_in_progress",
+  "updated_utc": "2026-08-25T02:05:58Z",
+  "status": "complete",
   "role": "O008 / D20 Functional Analysis",
   "locale": "id-ID",
   "lane": ".",
@@ -85,20 +86,32 @@
     "backend_findings": 0,
     "build_receipt": {
       "path": "provenance/FINAL_EDITION_BUILD_AND_QA_RECEIPT.md",
-      "bytes": 7558,
-      "sha256": "3635789d7f404a7d41512f05ce0d37befbc51e8d4f577e5688a1cdce6709453d"
+      "bytes": 8040,
+      "sha256": "ec0e613225271428c2fb096ee715304d7dd362b79c17c70b1c898ca3d3afa1fe"
     }
   },
   "publication": {
     "backend_artifact_reconciliation": {
-      "status": "github_content_public_exact_byte_binding_pending",
+      "status": "complete",
       "content_commit": "dba6cc483d4a8406170746fe6d3dfa59c786ed83",
       "content_tree": "c9f7e452b5fce91cea0e2869c28e75bef945ab0f",
       "verifier_fix_commit": "725c96bcd1dd93846d1282b1aeccce702664248e",
       "anonymous_changed_path_readback": true,
-      "exact_git_byte_binding": "pending",
+      "exact_git_byte_binding": true,
+      "exact_byte_binding_commit": "059bda086dfd6e6aa80f2077b2338c5d15039057",
+      "exact_byte_binding_tree": "77822a94a46d6422d9ed9c6b48e345229a4e7c05",
+      "github_receipt": {
+        "path": "provenance/GITHUB_PUBLICATION_RECEIPT_BACKEND_ARTIFACT_RECONCILIATION.json",
+        "bytes": 3947,
+        "sha256": "6b29049e4d33ddf89680721a8b4f39e9a3f867c5cce5cf0be7dd65c9c0bdf42f"
+      },
       "zenodo_concept_doi": "10.5281/zenodo.22059739",
-      "zenodo_successor": null
+      "zenodo_successor": {
+        "record_id": "22088947",
+        "doi": "10.5281/zenodo.22088947",
+        "version": "2026.08.25-backend-artifact-reconciliation",
+        "anonymous_all_file_bytes_match": true
+      }
     },
     "github": {
       "repository": "https://github.com/KokunoYumeto/functional-analysis-erdman-id",
@@ -109,14 +122,17 @@
       "authority_hash_correction_tree": "1603c1dc8e654d89365f337bc79899e252f22ba0",
       "authority_hash_correction_r2_commit": "ff4ddae454b7aae6df3500ce7b26a95c02f00bc7",
       "authority_hash_correction_r2_tree": "5ec8b70dbf65cf904e8d69a9a2eb53cd34c5c509",
+      "backend_artifact_reconciliation_commit": "059bda086dfd6e6aa80f2077b2338c5d15039057",
+      "backend_artifact_reconciliation_tree": "77822a94a46d6422d9ed9c6b48e345229a4e7c05",
       "authority_hash_metadata_corrected": true,
       "packaged_verifier_fixed": true,
+      "backend_artifact_identity_reconciled": true,
       "changed_paths": 118,
       "changed_bytes": 17882946,
       "anonymous_all_changed_bytes_match": true,
       "discoverability": {
         "description_identifies_complete_bahasa_indonesia_edition": true,
-        "homepage": "https://doi.org/10.5281/zenodo.22088677",
+        "homepage": "https://doi.org/10.5281/zenodo.22088947",
         "topics": [
           "bahasa-indonesia",
           "cc-by-sa-4-0",
@@ -125,9 +141,9 @@
           "open-textbook",
           "operator-algebras"
         ],
-        "receipt_path": "provenance/GITHUB_REPOSITORY_METADATA_AUTHORITY_HASH_CORRECTION_R2.json",
-        "receipt_bytes": 705,
-        "receipt_sha256": "3846b15fefc61f1bf2f29838104340a96a40e30e3a70fd146aebce4c591f4f20"
+        "receipt_path": "provenance/GITHUB_REPOSITORY_METADATA_BACKEND_ARTIFACT_RECONCILIATION.json",
+        "receipt_bytes": 749,
+        "receipt_sha256": "88d7915ef70eccb5a8c63dad0f41b27ecfc016fd473393d7ea1ca30315320354"
       },
       "receipt": {
         "path": "provenance/GITHUB_PUBLICATION_RECEIPT_FINAL.json",
@@ -143,14 +159,19 @@
         "path": "provenance/GITHUB_PUBLICATION_RECEIPT_AUTHORITY_HASH_CORRECTION_R2.json",
         "bytes": 2311,
         "sha256": "0be58bfd60ae6e7024e024623a923e98be27127dff955f129ed3a5ba90f4c8b2"
+      },
+      "backend_artifact_reconciliation_receipt": {
+        "path": "provenance/GITHUB_PUBLICATION_RECEIPT_BACKEND_ARTIFACT_RECONCILIATION.json",
+        "bytes": 3947,
+        "sha256": "6b29049e4d33ddf89680721a8b4f39e9a3f867c5cce5cf0be7dd65c9c0bdf42f"
       }
     },
     "zenodo": {
       "concept_id": "22059739",
       "concept_doi": "10.5281/zenodo.22059739",
-      "record_id": "22088677",
-      "version_doi": "10.5281/zenodo.22088677",
-      "version": "2026.08.25-authority-hash-correction-r2",
+      "record_id": "22088947",
+      "version_doi": "10.5281/zenodo.22088947",
+      "version": "2026.08.25-backend-artifact-reconciliation",
       "license": "CC BY-SA 4.0",
       "latest_in_concept": true,
       "anonymous_metadata_readback": true,
@@ -162,26 +183,26 @@
           "sha256": "6d4bbf02959e5afb5fd34e1118f91f026c293b0056ec7a0ecdc5e95944df5d85"
         },
         {
-          "name": "functional-analysis-erdman-id-2026.08.25-authority-hash-correction-r2-source-backend-html.zip",
-          "bytes": 3784876,
-          "sha256": "f9dfe91d176554019e496713dde4a2fcce20f630ef633c0914e0c5ce070cf370"
+          "name": "functional-analysis-erdman-id-2026.08.25-backend-artifact-reconciliation-source-backend-html.zip",
+          "bytes": 3793368,
+          "sha256": "ac5b3ec1fe7c2cf0a17eacce29c920ca5976c0c7d15e37f0ba0476afe9c48e32"
         },
         {
           "name": "SHA256SUMS.txt",
-          "bytes": 306,
-          "sha256": "0d9fd2e3674d595ad73f3e7463bc2c2c2d0d694d5b6976a4e3058aa7e30ef3b1"
+          "bytes": 309,
+          "sha256": "231c5dd7742d3a387c4098039d17add2d0c66a34267cc79e267045664ca18b9a"
         }
       ],
       "receipt": {
-        "path": "provenance/ZENODO_PUBLICATION_RECEIPT_AUTHORITY_HASH_CORRECTION.json",
-        "bytes": 3173,
-        "sha256": "0d8e4ef7a6955411648a1b3198dedb9a4889b5c4a1b3bb62f790d8720004375e"
+        "path": "provenance/ZENODO_PUBLICATION_RECEIPT_BACKEND_ARTIFACT_RECONCILIATION.json",
+        "bytes": 4291,
+        "sha256": "610df0dfdc17bd35c3da47014ac44d4226a113058794060222a1a6f8f6753c1d"
       }
     },
     "release_package_receipt": {
-      "path": "provenance/AUTHORITY_HASH_CORRECTION_R2_RELEASE_PACKAGE_RECEIPT.json",
-      "bytes": 1929,
-      "sha256": "28cfb4d369ec95f8c9d74d9937bd2ef2c0019b537e7db52ad3101a93dd367328"
+      "path": "provenance/BACKEND_ARTIFACT_RECONCILIATION_RELEASE_PACKAGE_RECEIPT.json",
+      "bytes": 2619,
+      "sha256": "73450a86096bfcfe78ddc2f7e7153c3aff4c54ee58d060f910375c5fdd76a193"
     }
   },
   "rights": {
@@ -199,5 +220,5 @@
     "performed": false,
     "reason": "The official source has no public issue tracker; no author contact was initiated."
   },
-  "terminal_condition": "The complete integrated id-ID reader remains admitted and public. Final maintenance closeout is pending publication and anonymous byte verification of the reconciled companion-backend artifact identity in the existing Zenodo concept."
+  "terminal_condition": "The complete integrated id-ID reader, semantic surfaces, mastery and bridge components, reconciled backend, QA evidence, GitHub mirror, Zenodo successor, discoverability metadata, and anonymous public-byte receipts are complete."
 }

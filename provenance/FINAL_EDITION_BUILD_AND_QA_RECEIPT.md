@@ -3,7 +3,7 @@
 Date: 2026-08-25
 Role: O008 / D20
 Locale: `id-ID`
-Status: **admitted; publication transaction pending**
+Status: **admitted and publicly preserved**
 
 ## Authority and scope
 
@@ -117,6 +117,10 @@ findings. `backend/COMPANION_BACKEND_MANIFEST.csv` is 1,073 bytes, SHA-256
 `9be0d071106f9ba38e00f50811a718c84102e4527ae507a8e51250bbd9bfb201`;
 `qa/COMPANION_BACKEND_VALIDATION.json` is 4,524 bytes, SHA-256
 `ee7ae54a5a069e22aabd9e2c76e16a5b8571736cf93a6298babd80730735312d`.
+All 70 artifact records agree with their live bytes. Three PowerShell-generated
+QA witnesses are explicitly marked `-text` so Git and release archives retain
+their admitted CRLF streams exactly; anonymous GitHub and Zenodo verifiers
+check each actual stream against its backend record.
 
 ## Rights, attribution, and contact boundary
 
@@ -130,6 +134,10 @@ components and are not represented as Erdman-authored. Model provenance is
 stated exactly as `OpenAI Codex gpt-5.6-sol, Ultra`, at the user's direction,
 without displacing source-author credit. No upstream contact occurred.
 
-This receipt admits the local integrated edition. Completion additionally
-requires publication in the existing GitHub mirror and Zenodo concept, public
-byte readback, sanitized publication receipts, and a final coordinator handoff.
+The admitted integrated edition and reconciled backend are public in the
+existing GitHub mirror and Zenodo concept. The release archive is bound to
+Git commit `059bda086dfd6e6aa80f2077b2338c5d15039057`, tree
+`77822a94a46d6422d9ed9c6b48e345229a4e7c05`; Zenodo record/DOI
+`22088947` / `10.5281/zenodo.22088947`. Separate sanitized GitHub, package,
+metadata, and Zenodo receipts record anonymous byte readback and final
+coordinator handoff.

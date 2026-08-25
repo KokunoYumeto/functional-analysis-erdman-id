@@ -1,0 +1,22 @@
+{
+  "schema_version": "1.0.0",
+  "verified_utc": "2026-08-25T02:05:58Z",
+  "repository": "https://github.com/KokunoYumeto/functional-analysis-erdman-id",
+  "description": "Edisi lengkap Bahasa Indonesia: Functional Analysis and Operator Algebras karya John M. Erdman, dengan solusi dan reader semantik",
+  "homepage": "https://doi.org/10.5281/zenodo.22088947",
+  "default_branch": "main",
+  "topics": [
+    "bahasa-indonesia",
+    "cc-by-sa-4-0",
+    "functional-analysis",
+    "mathematics-education",
+    "open-textbook",
+    "operator-algebras"
+  ],
+  "private": false,
+  "archived": false,
+  "backend_artifact_reconciliation_discoverability": true,
+  "anonymous_api_readback": true,
+  "credential_material_recorded": false,
+  "result": "pass"
+}

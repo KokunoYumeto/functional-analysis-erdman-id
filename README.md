@@ -26,13 +26,17 @@ dipertahankan sebagai riwayat produksi, tetapi bukan lagi pintu masuk utama.
 Semua versi terbit dipertahankan dalam
 [konsep Zenodo O008 yang sama](https://doi.org/10.5281/zenodo.22059739), tanpa
 membuat konsep pesaing. Versi terkini
-`2026.08.25-authority-hash-correction-r2` tersedia dengan
-[DOI 10.5281/zenodo.22088677](https://doi.org/10.5281/zenodo.22088677) dan
+`2026.08.25-backend-artifact-reconciliation` tersedia dengan
+[DOI 10.5281/zenodo.22088947](https://doi.org/10.5281/zenodo.22088947) dan
 terikat pada commit GitHub
-[`ff4ddae454b7aae6df3500ce7b26a95c02f00bc7`](https://github.com/KokunoYumeto/functional-analysis-erdman-id/tree/ff4ddae454b7aae6df3500ce7b26a95c02f00bc7).
-Versi ini memperbaiki satu karakter yang hilang pada rekaman SHA-256 ZIP sumber
-resmi serta membawa verifier anonim yang telah diperbaiki; PDF 298 halaman dan
-isi matematisnya tidak berubah. Versi lengkap terintegrasi sebelumnya
+[`059bda086dfd6e6aa80f2077b2338c5d15039057`](https://github.com/KokunoYumeto/functional-analysis-erdman-id/tree/059bda086dfd6e6aa80f2077b2338c5d15039057).
+Versi ini merekonsiliasi satu identitas artefak overlay backend dan mengikat
+tiga saksi QA yang dihasilkan PowerShell pada byte CRLF persisnya di Git serta
+arsip rilis. Seluruh 19 JSONL backend dasar, PDF 298 halaman, HTML, terjemahan,
+solusi, jembatan, dan isi matematis tidak berubah. Versi koreksi metadata
+otoritas sebelumnya `2026.08.25-authority-hash-correction-r2` tetap tersedia
+dengan [DOI 10.5281/zenodo.22088677](https://doi.org/10.5281/zenodo.22088677).
+Versi lengkap terintegrasi sebelumnya
 `2026.08.25-final-integrated` tetap tersedia dengan
 [DOI 10.5281/zenodo.22088404](https://doi.org/10.5281/zenodo.22088404).
 Versi reader HTML `2026.08.24-html-reader` sebelumnya tetap tersedia dengan
