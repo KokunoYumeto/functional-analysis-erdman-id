@@ -21,6 +21,11 @@ RECEIPT = (
 )
 CORRECT_HASH = b"0c667cfa7420b61dda8f8cb4ed9d619db8abbd1b53d17eafe7d4a2e153342e53"
 INCORRECT_HASH = b"0c667cfa7420b61dda8f8cb4ed9d619db8abd1b53d17eafe7d4a2e153342e53"
+EXPECTED_EXPLANATORY_OCCURRENCES = {
+    "provenance/AUTHORITY_HASH_CORRECTION_20260825.md",
+    "qa/verify_authority_hash_correction_github_public.py",
+    "qa/verify_authority_hash_correction_zenodo_public.py",
+}
 
 
 def configure() -> None:
@@ -49,7 +54,11 @@ def main() -> None:
         return
     zip_path = package.OUTPUT_DIR / package.ZIP_NAME
     _, payload, _ = package.read_release_archive(zip_path)
-    contaminated = sorted(path for path, data in payload.items() if INCORRECT_HASH in data)
+    contaminated = sorted(
+        path
+        for path, data in payload.items()
+        if INCORRECT_HASH in data and path not in EXPECTED_EXPLANATORY_OCCURRENCES
+    )
     if contaminated:
         raise SystemExit(f"invalid 63-character authority hash remains: {contaminated}")
     required = {
@@ -70,7 +79,10 @@ def main() -> None:
     result["authority_hash_correction"] = {
         "official_source_zip_bytes": 262556,
         "correct_sha256": CORRECT_HASH.decode("ascii"),
-        "incorrect_63_character_value_absent_from_release_archive": True,
+        "incorrect_63_character_value_absent_from_authoritative_records": True,
+        "expected_explanatory_occurrence_paths": sorted(
+            EXPECTED_EXPLANATORY_OCCURRENCES
+        ),
         "substantive_pdf_changed": False,
     }
     RECEIPT.write_text(

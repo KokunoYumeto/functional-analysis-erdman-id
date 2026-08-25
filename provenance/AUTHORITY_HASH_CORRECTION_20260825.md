@@ -29,4 +29,8 @@ Independent replay after correction proved:
   `6d4bbf02959e5afb5fd34e1118f91f026c293b0056ec7a0ecdc5e95944df5d85`.
 
 The correction is released as a new version in the existing publication
-lineages. It does not overwrite or conceal the prior version.
+lineages. It does not overwrite or conceal the prior version. The first
+correction version contained correct reader/archive bytes but its packaged
+anonymous verifier overrejected the explanatory occurrence of the old value;
+the `r2` successor fixes that verifier and preserves the working tool with the
+same unchanged 298-page PDF.

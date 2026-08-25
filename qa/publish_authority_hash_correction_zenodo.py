@@ -8,8 +8,8 @@ import publish_final_integrated_zenodo as _prior
 
 
 EXPECTED_CONCEPTRECID = _prior.EXPECTED_CONCEPTRECID
-EXPECTED_PREVIOUS_RECORD_ID = "22088404"
-EXPECTED_PREVIOUS_VERSION = "2026.08.25-final-integrated"
+EXPECTED_PREVIOUS_RECORD_ID = "22088619"
+EXPECTED_PREVIOUS_VERSION = "2026.08.25-authority-hash-correction"
 VERSION = package.RELEASE
 PUBLICATION_DATE = _prior.PUBLICATION_DATE
 TITLE = _prior.TITLE
@@ -33,7 +33,9 @@ def description(github_commit: str) -> str:
         "kehilangan satu karakter <code>b</code>. PDF 298 halaman, matematika, "
         "terjemahan, solusi, reader HTML, dan lisensi tidak berubah. Nilai yang "
         "benar diverifikasi ulang langsung dari 262.556 byte ZIP resmi dan 27 "
-        "anggota manifes.</p>"
+        "anggota manifes. Revisi r2 juga memuat verifier anonim yang telah "
+        "diperbaiki agar catatan penjelas koreksi tidak dianggap sebagai "
+        "kontaminasi metadata.</p>"
     )
 
 
