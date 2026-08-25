@@ -25,11 +25,16 @@ dipertahankan sebagai riwayat produksi, tetapi bukan lagi pintu masuk utama.
 
 Semua versi terbit dipertahankan dalam
 [konsep Zenodo O008 yang sama](https://doi.org/10.5281/zenodo.22059739), tanpa
-membuat konsep pesaing. Versi lengkap terintegrasi
-`2026.08.25-final-integrated` tersedia dengan
-[DOI 10.5281/zenodo.22088404](https://doi.org/10.5281/zenodo.22088404) dan
+membuat konsep pesaing. Versi terkini
+`2026.08.25-authority-hash-correction-r2` tersedia dengan
+[DOI 10.5281/zenodo.22088677](https://doi.org/10.5281/zenodo.22088677) dan
 terikat pada commit GitHub
-[`1381492a62c789b49eef80e5e1e0a3357f54e30a`](https://github.com/KokunoYumeto/functional-analysis-erdman-id/tree/1381492a62c789b49eef80e5e1e0a3357f54e30a).
+[`ff4ddae454b7aae6df3500ce7b26a95c02f00bc7`](https://github.com/KokunoYumeto/functional-analysis-erdman-id/tree/ff4ddae454b7aae6df3500ce7b26a95c02f00bc7).
+Versi ini memperbaiki satu karakter yang hilang pada rekaman SHA-256 ZIP sumber
+resmi serta membawa verifier anonim yang telah diperbaiki; PDF 298 halaman dan
+isi matematisnya tidak berubah. Versi lengkap terintegrasi sebelumnya
+`2026.08.25-final-integrated` tetap tersedia dengan
+[DOI 10.5281/zenodo.22088404](https://doi.org/10.5281/zenodo.22088404).
 Versi reader HTML `2026.08.24-html-reader` sebelumnya tetap tersedia dengan
 [DOI 10.5281/zenodo.22086801](https://doi.org/10.5281/zenodo.22086801).
 Versi teks sumber lengkap `2026.08.24-source-text` sebelumnya tetap tersedia

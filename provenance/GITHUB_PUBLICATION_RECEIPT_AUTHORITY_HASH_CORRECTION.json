@@ -1,0 +1,99 @@
+{
+  "schema_version": "1.0.0",
+  "receipt_id": "FAOA-2015-ID-GITHUB-AUTHORITY-HASH-CORRECTION",
+  "verified_utc": "2026-08-25T01:12:37Z",
+  "repository": "https://github.com/KokunoYumeto/functional-analysis-erdman-id",
+  "branch": "main",
+  "base_commit": "9af913459ef9ceb6be3aef056102b56e779498cb",
+  "commit": "9b01fe7ea058c3bc5f4e6259c3598afef3713dc1",
+  "tree": "1603c1dc8e654d89365f337bc79899e252f22ba0",
+  "remote_head": "9b01fe7ea058c3bc5f4e6259c3598afef3713dc1",
+  "remote_tree": "1603c1dc8e654d89365f337bc79899e252f22ba0",
+  "authority_hash_correction": {
+    "official_source_zip_bytes": 262556,
+    "correct_sha256": "0c667cfa7420b61dda8f8cb4ed9d619db8abbd1b53d17eafe7d4a2e153342e53",
+    "corrected_record_count": 7,
+    "substantive_pdf_changed": false
+  },
+  "anonymous_changed_path_readback": {
+    "path_count": 12,
+    "total_bytes": 53298,
+    "all_paths_match_local_bytes": true,
+    "paths": [
+      {
+        "path": "provenance/AUTHORITY_HASH_CORRECTION_20260825.md",
+        "bytes": 1543,
+        "sha256": "1caa958d1c630c3b4f7729e5b962d2e6dab42317fad24d4bbf929599b1e96841",
+        "match": true
+      },
+      {
+        "path": "provenance/FINAL_EDITION_BUILD_AND_QA_RECEIPT.md",
+        "bytes": 7558,
+        "sha256": "eb47657582ea24094137e9507aa8a78faea84217dbed2036c4b8dc3de4feeee6",
+        "match": true
+      },
+      {
+        "path": "provenance/O008_COORDINATOR_HANDOFF_CH15.json",
+        "bytes": 3301,
+        "sha256": "122e6d8e71eddb7798b9b39531c6a4effeec77f6d7114c417e69f44ed5379c05",
+        "match": true
+      },
+      {
+        "path": "provenance/O008_COORDINATOR_HANDOFF_CH16.json",
+        "bytes": 4284,
+        "sha256": "53dbb1d373fd82b836304a90095b59fae6079d3400e4f95bdeebaeaa3980061e",
+        "match": true
+      },
+      {
+        "path": "provenance/O008_COORDINATOR_HANDOFF_CH17.json",
+        "bytes": 4455,
+        "sha256": "b39b133359eb3bb84f8c74b69b52abbadbcf7e07f46ab8b52a0a07bc356190cb",
+        "match": true
+      },
+      {
+        "path": "provenance/O008_COORDINATOR_HANDOFF_COMPLETE_SOURCE.json",
+        "bytes": 5147,
+        "sha256": "db7e373f72567db5dae4c92498bf7de14f1e0eebc8d3bc6e17524c0442a569df",
+        "match": true
+      },
+      {
+        "path": "provenance/O008_COORDINATOR_HANDOFF_FINAL.json",
+        "bytes": 6782,
+        "sha256": "29656eb9a7352ee49fe8c0cfa35259aef6863df3365e6f859d404e876096f00f",
+        "match": true
+      },
+      {
+        "path": "provenance/O008_COORDINATOR_HANDOFF_HTML.json",
+        "bytes": 5042,
+        "sha256": "82dd2ada61e13198976a2388fa2238f37e0021471345b88ebb3c5796deca7f49",
+        "match": true
+      },
+      {
+        "path": "qa/package_authority_hash_correction_release.py",
+        "bytes": 1922,
+        "sha256": "8a6c208f576dcae75fdf2c172beeb4d32381858116277fbd996e4db25fcb37b6",
+        "match": true
+      },
+      {
+        "path": "qa/publish_authority_hash_correction_zenodo.py",
+        "bytes": 3304,
+        "sha256": "85277fc064365a8d18c848af2a879c3c250795ebbc2fdc608119544dd54d6b95",
+        "match": true
+      },
+      {
+        "path": "qa/verify_authority_hash_correction_github_public.py",
+        "bytes": 6947,
+        "sha256": "76e497d0478ed9fdea5f516be6cfdb173baacefd59a189a2231923a6c63ee662",
+        "match": true
+      },
+      {
+        "path": "qa/verify_authority_hash_correction_zenodo_public.py",
+        "bytes": 3013,
+        "sha256": "049e7c36dffb23057d771c7273052271280a280ca29580feeefb3f790744a41d",
+        "match": true
+      }
+    ]
+  },
+  "credential_material_recorded": false,
+  "result": "pass"
+}

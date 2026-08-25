@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.0.0",
+  "receipt_id": "FAOA-2015-ID-GITHUB-AUTHORITY-HASH-CORRECTION-R2",
+  "verified_utc": "2026-08-25T01:19:25Z",
+  "repository": "https://github.com/KokunoYumeto/functional-analysis-erdman-id",
+  "branch": "main",
+  "base_commit": "9b01fe7ea058c3bc5f4e6259c3598afef3713dc1",
+  "commit": "ff4ddae454b7aae6df3500ce7b26a95c02f00bc7",
+  "tree": "5ec8b70dbf65cf904e8d69a9a2eb53cd34c5c509",
+  "remote_head": "ff4ddae454b7aae6df3500ce7b26a95c02f00bc7",
+  "remote_tree": "5ec8b70dbf65cf904e8d69a9a2eb53cd34c5c509",
+  "authority_hash_correction": {
+    "official_source_zip_bytes": 262556,
+    "correct_sha256": "0c667cfa7420b61dda8f8cb4ed9d619db8abbd1b53d17eafe7d4a2e153342e53",
+    "corrected_record_count": 7,
+    "substantive_pdf_changed": false
+  },
+  "anonymous_changed_path_readback": {
+    "path_count": 5,
+    "total_bytes": 12285,
+    "all_paths_match_local_bytes": true,
+    "paths": [
+      {
+        "path": "provenance/AUTHORITY_HASH_CORRECTION_20260825.md",
+        "bytes": 1813,
+        "sha256": "7c28adad80b4bb6461dfc2a57bdc7e34598b08c215dce6f650bdd4e47476a59a",
+        "match": true
+      },
+      {
+        "path": "qa/package_authority_hash_correction_release.py",
+        "bytes": 1992,
+        "sha256": "eb0c68587c94ef09abb01f83337e2eed5eb85efcc960c591da722d7461a2dfeb",
+        "match": true
+      },
+      {
+        "path": "qa/publish_authority_hash_correction_zenodo.py",
+        "bytes": 3470,
+        "sha256": "220c16b56a226011b106b4d829f0c9abdc63ea873a579af59357f4a8262bb7d6",
+        "match": true
+      },
+      {
+        "path": "qa/verify_authority_hash_correction_r2_github_public.py",
+        "bytes": 1584,
+        "sha256": "b468a0c38ea206d86548a193efd4daf35b616eb205212f0236a48e087bab900c",
+        "match": true
+      },
+      {
+        "path": "qa/verify_authority_hash_correction_zenodo_public.py",
+        "bytes": 3426,
+        "sha256": "ff927a0027ca7cd710bd614ae6532e11669d7f487a36cfd787f11811942f7c9f",
+        "match": true
+      }
+    ]
+  },
+  "credential_material_recorded": false,
+  "result": "pass",
+  "packaged_verifier_fix": {
+    "prior_zenodo_record_id": "22088619",
+    "prior_version": "2026.08.25-authority-hash-correction",
+    "false_positive_on_explanatory_occurrences_fixed": true,
+    "substantive_pdf_changed": false
+  }
+}

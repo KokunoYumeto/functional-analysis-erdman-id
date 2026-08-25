@@ -1,0 +1,79 @@
+{
+  "schema_version": "1.0.0",
+  "receipt_id": "FAOA-2015-ID-ZENODO-AUTHORITY-HASH-CORRECTION",
+  "verified_utc": "2026-08-25T01:22:36Z",
+  "conceptrecid": "22059739",
+  "record_id": "22088677",
+  "doi": "10.5281/zenodo.22088677",
+  "record_url": "https://zenodo.org/records/22088677",
+  "version": "2026.08.25-authority-hash-correction-r2",
+  "license": "CC BY-SA 4.0",
+  "title": "Analisis Fungsional dan Aljabar Operator: Suatu Pengantar — Edisi Bahasa Indonesia",
+  "publication_date": "2026-08-25",
+  "language": "ind",
+  "overall_status": "complete",
+  "source_text_status": "complete",
+  "semantic_html_status": "complete",
+  "mastery_solution_status": "complete",
+  "selected_reader_work_status": "complete",
+  "compact_spectral_svd_bridge_status": "complete",
+  "companion_html_status": "complete",
+  "github_commit": "ff4ddae454b7aae6df3500ce7b26a95c02f00bc7",
+  "github_tree": "5ec8b70dbf65cf904e8d69a9a2eb53cd34c5c509",
+  "primary_reader_pages": 298,
+  "source_exercise_solutions": 52,
+  "selected_reader_work_solutions": 10,
+  "compact_spectral_svd_bridge_units": 13,
+  "source_author_credit_present": true,
+  "scope_nonendorsement_component_model_metadata_present": true,
+  "required_related_identifiers_present": true,
+  "reader_first_surface": {
+    "sole_primary_reader_pdf": "analisis-fungsional-dan-aljabar-operator-id-edisi-lengkap-dengan-pendamping.pdf",
+    "description_introduces_pdf_before_archive": true,
+    "api_file_array_treated_as_unordered": true,
+    "default_preview": null,
+    "explicit_file_order": []
+  },
+  "status": "published",
+  "latest_in_concept": true,
+  "unique_version_in_lineage": true,
+  "record_page_resolves": true,
+  "doi_resolves": true,
+  "anonymous_metadata_readback": true,
+  "anonymous_file_byte_readback": true,
+  "files": [
+    {
+      "filename": "analisis-fungsional-dan-aljabar-operator-id-edisi-lengkap-dengan-pendamping.pdf",
+      "bytes": 2838207,
+      "sha256": "6d4bbf02959e5afb5fd34e1118f91f026c293b0056ec7a0ecdc5e95944df5d85",
+      "matches_local_bytes": true
+    },
+    {
+      "filename": "functional-analysis-erdman-id-2026.08.25-authority-hash-correction-r2-source-backend-html.zip",
+      "bytes": 3784876,
+      "sha256": "f9dfe91d176554019e496713dde4a2fcce20f630ef633c0914e0c5ce070cf370",
+      "matches_local_bytes": true
+    },
+    {
+      "filename": "SHA256SUMS.txt",
+      "bytes": 306,
+      "sha256": "0d9fd2e3674d595ad73f3e7463bc2c2c2d0d694d5b6976a4e3058aa7e30ef3b1",
+      "matches_local_bytes": true
+    }
+  ],
+  "credential_material_recorded": false,
+  "result": "pass",
+  "prior_record_id": "22088619",
+  "prior_version": "2026.08.25-authority-hash-correction",
+  "authority_hash_correction": {
+    "official_source_zip_bytes": 262556,
+    "correct_sha256": "0c667cfa7420b61dda8f8cb4ed9d619db8abbd1b53d17eafe7d4a2e153342e53",
+    "incorrect_63_character_value_absent_from_authoritative_records": true,
+    "expected_explanatory_occurrence_paths": [
+      "provenance/AUTHORITY_HASH_CORRECTION_20260825.md",
+      "qa/verify_authority_hash_correction_github_public.py",
+      "qa/verify_authority_hash_correction_zenodo_public.py"
+    ],
+    "substantive_pdf_changed": false
+  }
+}
