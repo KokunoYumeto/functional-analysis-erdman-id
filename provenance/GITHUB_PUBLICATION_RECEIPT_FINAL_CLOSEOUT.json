@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.0.0",
+  "receipt_id": "FAOA-2015-ID-FINAL-GITHUB-PUBLICATION-CLOSEOUT",
+  "verified_utc": "2026-08-25T00:49:03Z",
+  "repository": "https://github.com/KokunoYumeto/functional-analysis-erdman-id",
+  "branch": "main",
+  "base_commit": "1381492a62c789b49eef80e5e1e0a3357f54e30a",
+  "commit": "d9e47c5455278ad5e481cbf75a5a858842f5fc1f",
+  "tree": "b703063ff5b2b622c57a4ee4a433bae0d8c76cc4",
+  "remote_head": "d9e47c5455278ad5e481cbf75a5a858842f5fc1f",
+  "remote_tree": "b703063ff5b2b622c57a4ee4a433bae0d8c76cc4",
+  "anonymous_changed_path_readback": {
+    "path_count": 7,
+    "total_bytes": 48880,
+    "all_paths_match_local_bytes": true,
+    "paths": [
+      {
+        "path": "README.md",
+        "bytes": 6196,
+        "sha256": "fb5ba287e5b3eb44764202990913e6105516261b86971ab71d63330d1ab021a4",
+        "match": true
+      },
+      {
+        "path": "provenance/FINAL_RELEASE_PACKAGE_RECEIPT.json",
+        "bytes": 1662,
+        "sha256": "a5936dc217d89ccdad610a3d0824e47be55e3d8aa991dcf05b9ec52204b012fa",
+        "match": true
+      },
+      {
+        "path": "provenance/GITHUB_PUBLICATION_RECEIPT_FINAL.json",
+        "bytes": 25447,
+        "sha256": "8445e60570285f6057a50a5d15c7b22bf7570c270958f96a9f61cc50afa7c608",
+        "match": true
+      },
+      {
+        "path": "provenance/GITHUB_REPOSITORY_METADATA_FINAL.json",
+        "bytes": 726,
+        "sha256": "2ed3852b424a31efb796d1c44b1d1c8521989ac6ed1f88eb08b23a3d1c1d401b",
+        "match": true
+      },
+      {
+        "path": "provenance/O008_COORDINATOR_HANDOFF_FINAL.json",
+        "bytes": 6781,
+        "sha256": "69f88c2b6c1ba7f65f46cdca89b667c665f7b80f336a661527bb4b449042bda0",
+        "match": true
+      },
+      {
+        "path": "provenance/ZENODO_PUBLICATION_RECEIPT_FINAL_INTEGRATED.json",
+        "bytes": 2540,
+        "sha256": "44fb5ac3630dde00dc7d46768b81faae756b18419e0c3351de7994c0e3eb30b4",
+        "match": true
+      },
+      {
+        "path": "qa/verify_final_closeout_github_public.py",
+        "bytes": 5528,
+        "sha256": "d462970baf5d4c4aeb98cbc2c875a16e302a7ee36dad4f8a9d26391aba13ee02",
+        "match": true
+      }
+    ]
+  },
+  "credential_material_recorded": false,
+  "result": "pass"
+}
