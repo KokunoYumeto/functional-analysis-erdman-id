@@ -1,0 +1,492 @@
+% Bab: FAOA-2015-CH03
+% Provenans: OpenAI Codex gpt-5.6-sol, Ultra, atas arahan pengguna
+% Lisensi komponen solusi asli: CC BY-SA 4.0
+% Non-endorsement: solusi ini bukan karya John M. Erdman dan tidak menyiratkan dukungannya.
+% Jumlah solusi: 7
+\markboth{SOLUSI O001 UNTUK BAB 3: RUANG LINEAR BERNORMA}{SOLUSI O001 UNTUK BAB 3: RUANG LINEAR BERNORMA}
+\section*{Solusi O001 untuk Bab 3: Ruang Linear Bernorma}
+\addcontentsline{toc}{section}{Solusi O001 untuk Bab 3: Ruang Linear Bernorma}
+\noindent\textit{Catatan komponen.}
+Ketujuh solusi berikut ditulis terpisah dari teks sumber, dilisensikan di bawah
+CC BY-SA 4.0, dan berprovenans
+\emph{OpenAI Codex gpt-5.6-sol, Ultra, atas arahan pengguna}.
+Solusi-solusi ini bukan tulisan John M. Erdman dan tidak menyiratkan dukungannya.
+
+% O001-SOLUTION-ID: O001-FAOA-2015-CH03-EX-001-SOLUTION
+% SOURCE-EXERCISE-ID: FAOA-2015-CH03-NODE-0041
+% STATEMENT-TARGET-SHA256: 1f693891073e0afb70f5764271328dd22974b4c3b33055ec494a61b7713f62e2
+\begin{o001solution}
+  {O001-FAOA-2015-CH03-EX-001-SOLUTION}
+  {FAOA-2015-CH03-NODE-0041}
+  {1f693891073e0afb70f5764271328dd22974b4c3b33055ec494a61b7713f62e2}
+\begin{o001statement}
+\label{C023191} Misalkan
+ \index{l@$l_1$!sebagai ruang linear bernorma}%
+ \index{l@$l_1$!barisan yang dapat dijumlahkan mutlak}%
+ \index{bernorma!ruang linear!$l_1$ sebagai}%
+$l_1$ merupakan himpunan semua barisan $x = (x_n)$ dari bilangan kompleks sedemikian
+sehingga deret $\sum x_k$ konvergen mutlak. Jadikan $l_1$ ruang vektor dengan definisi
+penjumlahan dan perkalian skalar titik demi titik yang biasa. Untuk setiap $x \in l_1$,
+definisikan
+ \index{<unopn@$\norm{\hphantom{x}}_1$ (norma-$1$)}%
+ \index{<unopn@$\norm{\hphantom{x}}_\infty$ (norma seragam)}%
+   \begin{align*}
+      \norm{x}_1 &:= \sum_{k=1}^\infty \abs{x_k} \\
+   \intertext{dan}
+      \norm{x}_\infty &:= \sup\{\abs{x_k}\colon k \in \N\}.
+   \end{align*}
+(Masing-masing adalah
+ \index{satu@norma-$1$!dari suatu barisan}%
+ \index{norma!$1$- (dari suatu barisan)}%
+norma-$1$ dan
+ \index{seragam!norma!dari suatu barisan}%
+\emph{norma seragam}.) Tunjukkan bahwa $\norm{\hphantom{x}}_1$ dan
+$\norm{\hphantom{x}}_\infty$ keduanya merupakan norma pada~$l_1$. Kemudian buktikan atau
+sangkal:
+ \begin{enumerate}
+  \item[(a)] Jika suatu barisan $(x^i)$ dari vektor-vektor dalam ruang linear bernorma
+$\bigl(l_1, \norm{\hphantom{x}}_1\bigr)$ konvergen, maka barisan tersebut juga konvergen
+dalam $\bigl(l_1, \norm{\hphantom{x}}_\infty\bigr)$.
+  \item[(b)] Jika suatu barisan $(x^i)$ dari vektor-vektor dalam ruang linear bernorma
+$\bigl(l_1, \norm{\hphantom{x}}_\infty\bigr)$ konvergen, maka barisan tersebut juga
+konvergen dalam $\bigl(l_1, \norm{\hphantom{x}}_1\bigr)$.
+ \end{enumerate}
+\end{o001statement}
+\begin{o001answer}
+Kedua fungsi tersebut adalah norma pada $l_1$, dan
+$\norm{x}_\infty\le\norm{x}_1$ untuk setiap $x\in l_1$. Karena itu (a) benar.
+Pernyataan (b) salah: barisan
+\[
+x^i=(\underbrace{1/i,\ldots,1/i}_{i\ \text{suku}},0,0,\ldots)
+\]
+konvergen ke nol dalam norma seragam, tetapi
+$\norm{x^i}_1=1$ untuk setiap $i$.
+\end{o001answer}
+\begin{o001proof}
+Untuk $x\in l_1$, setiap $|x_k|$ tidak melebihi
+$\sum_{j=1}^\infty|x_j|$, sehingga supremumnya berhingga. Jadi kedua rumus
+memang bernilai real berhingga pada seluruh $l_1$.
+
+Untuk norma-$1$, ketaknegatifan dan homogenitas mengikuti dari sifat nilai
+mutlak. Jika $\norm{x}_1=0$, setiap suku $|x_k|$ bernilai nol, sehingga
+$x=0$. Ketaksamaan segitiga titik demi titik dan penjumlahan deret
+nonnegatif memberi
+\[
+\norm{x+y}_1
+=\sum_{k=1}^\infty|x_k+y_k|
+\le\sum_{k=1}^\infty(|x_k|+|y_k|)
+=\norm{x}_1+\norm{y}_1.
+\]
+Maka $\norm{\hphantom{x}}_1$ adalah norma.
+
+Untuk norma seragam, ketaknegatifan dan homogenitas juga mengikuti dari nilai
+mutlak. Jika $\norm{x}_\infty=0$, maka $|x_k|=0$ untuk setiap $k$, sehingga
+$x=0$. Selain itu,
+\[
+|x_k+y_k|\le|x_k|+|y_k|
+\le\norm{x}_\infty+\norm{y}_\infty
+\]
+untuk setiap $k$; pengambilan supremum membuktikan ketaksamaan segitiga.
+Jadi $\norm{\hphantom{x}}_\infty$ juga norma.
+
+Karena
+\[
+\norm{z}_\infty=\sup_k|z_k|
+\le\sum_{k=1}^\infty|z_k|=\norm{z}_1,
+\]
+konvergensi $x^i\to x$ dalam norma-$1$ mengakibatkan
+$\norm{x^i-x}_\infty\le\norm{x^i-x}_1\to0$. Ini membuktikan (a).
+
+Untuk vektor $x^i$ dalam jawaban, setiap vektor bertumpuan hingga, jadi
+$x^i\in l_1$. Akan tetapi,
+\[
+\norm{x^i}_\infty=\frac1i\longrightarrow0,
+\qquad
+\norm{x^i}_1=i\frac1i=1.
+\]
+Dengan demikian $x^i\to0$ dalam norma seragam tetapi tidak dalam norma-$1$,
+yang menyangkal (b).
+\end{o001proof}
+\end{o001solution}
+
+% O001-SOLUTION-ID: O001-FAOA-2015-CH03-EX-002-SOLUTION
+% SOURCE-EXERCISE-ID: FAOA-2015-CH03-NODE-0058
+% STATEMENT-TARGET-SHA256: c063bcd29e442aa5670f59b396568ce8af222f0543fab7295967f54568271718
+\begin{o001solution}
+  {O001-FAOA-2015-CH03-EX-002-SOLUTION}
+  {FAOA-2015-CH03-NODE-0058}
+  {c063bcd29e442aa5670f59b396568ce8af222f0543fab7295967f54568271718}
+\begin{o001statement}
+Periksalah pernyataan-pernyataan yang belum dibuktikan dalam paragraf
+sebelumnya. Secara khusus, buktikan bahwa
+ \begin{enumerate}
+    \item[(a)] $\cat{NLS_{\boldsymbol\infty}}$ merupakan suatu kategori.
+    \item[(b)] Suatu isomorfisme dalam $\cat{NLS_{\boldsymbol\infty}}$ merupakan
+isomorfisme ruang vektor sekaligus homeomorfisme.
+    \item[(c)] Suatu pemetaan linear antara ruang-ruang linear bernorma merupakan isometri
+jika dan hanya jika pemetaan tersebut mempertahankan norma.
+    \item[(d)] $\cat{NLS_{\vc 1}}$ merupakan suatu kategori.
+    \item[(e)] Suatu isomorfisme dalam $\cat{NLS_{\vc 1}}$ merupakan isometri sekaligus
+isomorfisme ruang vektor.
+    \item[(f)] Kategori $\cat{NLS_{\vc 1}}$ merupakan subkategori dari
+$\cat{NLS_{\boldsymbol\infty}}$ dalam arti bahwa setiap morfisme kategori pertama
+termasuk dalam kategori kedua.
+ \end{enumerate}
+\end{o001statement}
+\begin{o001answer}
+Pemetaan linear kontinu tertutup terhadap identitas dan komposisi, demikian
+pula kontraksi linear. Isomorfisme dalam
+$\cat{NLS_{\boldsymbol\infty}}$ adalah isomorfisme linear yang pemetaan dan
+inversnya kontinu. Isomorfisme dalam $\cat{NLS_{\vc1}}$ adalah isometri
+linear bijektif. Untuk pemetaan linear, sifat isometri ekuivalen dengan
+pelestarian norma, dan setiap kontraksi linear merupakan pemetaan linear
+kontinu.
+\end{o001answer}
+\begin{o001proof}
+\begin{enumerate}
+\item[(a)] Untuk setiap ruang linear bernorma $V$, identitas $I_V$ linear dan
+kontinu. Jika $S\colon U\to V$ dan $T\colon V\to W$ linear kontinu, maka
+$TS$ linear kontinu; dalam bentuk norma operator,
+$\norm{TS}\le\norm{T}\norm{S}$. Asosiativitas komposisi dan hukum identitas
+diwarisi dari komposisi fungsi. Semua aksioma kategori karena itu dipenuhi.
+
+\item[(b)] Jika $T\colon V\to W$ isomorfisme dalam
+$\cat{NLS_{\boldsymbol\infty}}$, terdapat morfisme
+$S\colon W\to V$ dengan $ST=I_V$ dan $TS=I_W$. Maka $T$ bijektif,
+$S=T^{-1}$, dan keduanya linear, jadi $T$ isomorfisme ruang vektor.
+Karena $T$ dan $T^{-1}$ kontinu, $T$ juga homeomorfisme.
+
+\item[(c)] Jika $T$ linear dan isometri, maka $T0=0$ dan
+\[
+\norm{Tx}=\norm{Tx-T0}=\norm{x-0}=\norm{x}.
+\]
+Sebaliknya, jika $T$ mempertahankan norma, linearitas memberi
+\[
+\norm{Tx-Ty}=\norm{T(x-y)}=\norm{x-y}
+\]
+untuk setiap $x,y$, sehingga $T$ isometri.
+
+\item[(d)] Identitas memenuhi $\norm{I_Vx}=\norm{x}$, jadi merupakan
+kontraksi. Jika $S$ dan $T$ kontraksi, maka
+\[
+\norm{TSx}\le\norm{Sx}\le\norm{x},
+\]
+sehingga komposisinya kontraksi. Asosiativitas dan hukum identitas kembali
+diwarisi dari fungsi. Maka $\cat{NLS_{\vc1}}$ adalah kategori.
+
+\item[(e)] Jika $T$ isomorfisme dalam $\cat{NLS_{\vc1}}$, baik $T$ maupun
+$T^{-1}$ merupakan kontraksi. Jadi
+\[
+\norm{Tx}\le\norm{x}
+=\norm{T^{-1}Tx}\le\norm{Tx}.
+\]
+Dengan demikian $\norm{Tx}=\norm{x}$ untuk setiap $x$. Bagian (c)
+menunjukkan bahwa $T$ isometri; persamaan invers menunjukkan bahwa $T$
+sekaligus isomorfisme ruang vektor.
+
+\item[(f)] Jika $T$ kontraksi linear, maka
+$\norm{Tx}\le\norm{x}$, jadi $T$ terbatas dengan $\norm T\le1$ dan karena
+itu kontinu. Objek, identitas, dan komposisinya sama dengan yang diwarisi
+dari $\cat{NLS_{\boldsymbol\infty}}$. Jadi setiap morfisme kategori
+geometris merupakan morfisme kategori topologis, tepat dalam arti
+subkategori yang dinyatakan dalam soal.
+\end{enumerate}
+\end{o001proof}
+\end{o001solution}
+
+% O001-SOLUTION-ID: O001-FAOA-2015-CH03-EX-003-SOLUTION
+% SOURCE-EXERCISE-ID: FAOA-2015-CH03-NODE-0073
+% STATEMENT-TARGET-SHA256: 730caa86f3c8bec4a40678e8832cce25c3d05b021a5fe0770bcff3a73f4a3ec2
+\begin{o001solution}
+  {O001-FAOA-2015-CH03-EX-003-SOLUTION}
+  {FAOA-2015-CH03-NODE-0073}
+  {730caa86f3c8bec4a40678e8832cce25c3d05b021a5fe0770bcff3a73f4a3ec2}
+\begin{o001statement}
+Verifikasilah pernyataan-pernyataan dalam Definisi~\ref{quo002def}. Secara khusus,
+tunjukkan bahwa $\sim$ merupakan relasi ekuivalensi, bahwa penjumlahan dan perkalian skalar pada
+himpunan kelas-kelas ekuivalensi terdefinisi dengan baik, bahwa terhadap operasi-operasi ini $V/M$ merupakan
+ruang vektor, bahwa fungsi yang di sini disebut ``pemetaan hasil bagi'' memang merupakan pemetaan hasil bagi
+dalam pengertian~\ref{quo001def}, dan bahwa pemetaan hasil bagi ini bersifat linear.
+\end{o001statement}
+\begin{o001answer}
+Relasi $x\sim y\iff y-x\in M$ adalah relasi ekuivalensi. Rumus
+$[x]+[y]=[x+y]$ dan $\alpha[x]=[\alpha x]$ tidak bergantung pada wakil,
+menjadikan $V/M$ ruang vektor, dan pemetaan
+$\pi(x)=[x]$ adalah pemetaan linear surjektif. Lebih lanjut, setiap fungsi
+$h\colon V/M\to W$ yang membuat $h\pi$ linear harus linear; jadi $\pi$
+adalah pemetaan hasil bagi dalam pengertian~\ref{quo001def}.
+\end{o001answer}
+\begin{o001proof}
+Karena $M$ subruang, $0\in M$, tertutup terhadap invers aditif, dan tertutup
+terhadap penjumlahan. Maka $x-x=0\in M$, sehingga $x\sim x$. Jika
+$x\sim y$, maka $y-x\in M$ dan $x-y=-(y-x)\in M$, sehingga $y\sim x$.
+Jika $x\sim y$ dan $y\sim z$, maka
+$z-x=(z-y)+(y-x)\in M$, sehingga $x\sim z$. Jadi $\sim$ relasi
+ekuivalensi.
+
+Andaikan $[x]=[x']$ dan $[y]=[y']$. Berarti $x'-x,y'-y\in M$, sehingga
+\[
+(x'+y')-(x+y)=(x'-x)+(y'-y)\in M.
+\]
+Jadi $[x'+y']=[x+y]$. Untuk $\alpha\in\K$,
+\[
+\alpha x'-\alpha x=\alpha(x'-x)\in M,
+\]
+sehingga $[\alpha x']=[\alpha x]$. Kedua operasi dengan demikian
+terdefinisi dengan baik.
+
+Setiap aksioma ruang vektor sekarang dapat diperiksa pada wakilnya. Sebagai
+contoh,
+\[
+([x]+[y])+[z]=[(x+y)+z]=[x+(y+z)]=[x]+([y]+[z]),
+\]
+$[0]$ adalah identitas aditif, $[-x]$ invers dari $[x]$, dan
+\[
+\alpha([x]+[y])=[\alpha(x+y)]
+=[\alpha x]+[\alpha y].
+\]
+Komutativitas, aksioma skalar lainnya, dan identitas skalar mengikuti dengan
+perhitungan wakil yang sama. Maka $V/M$ adalah ruang vektor.
+
+Pemetaan $\pi\colon V\to V/M$, $\pi(x)=[x]$, surjektif karena setiap kelas
+memiliki wakil. Selain itu,
+\[
+\pi(x+y)=[x+y]=[x]+[y],\qquad
+\pi(\alpha x)=[\alpha x]=\alpha[x],
+\]
+jadi $\pi$ linear.
+
+Terakhir, ambil sebarang ruang vektor $W$ dan fungsi
+$h\colon V/M\to W$ sedemikian sehingga $h\circ\pi$ linear. Untuk semua
+$[x],[y]\in V/M$ dan $\alpha\in\K$,
+\[
+\begin{aligned}
+h([x]+[y])
+ &=h(\pi(x+y))
+  =(h\pi)(x+y)
+  =(h\pi)(x)+(h\pi)(y)
+  =h([x])+h([y]),\\
+h(\alpha[x])
+ &=h(\pi(\alpha x))
+  =(h\pi)(\alpha x)
+  =\alpha(h\pi)(x)
+  =\alpha h([x]).
+\end{aligned}
+\]
+Jadi $h$ linear. Ini persis sifat universal pada
+Definisi~\ref{quo001def}, sehingga $\pi$ memang pemetaan hasil bagi.
+\end{o001proof}
+\end{o001solution}
+
+% O001-SOLUTION-ID: O001-FAOA-2015-CH03-EX-004-SOLUTION
+% SOURCE-EXERCISE-ID: FAOA-2015-CH03-NODE-0094
+% STATEMENT-TARGET-SHA256: c2de90c5ffcfd0c7af44f29f75839337bc75b7c09430a8da07d70509a7db2ad1
+\begin{o001solution}
+  {O001-FAOA-2015-CH03-EX-004-SOLUTION}
+  {FAOA-2015-CH03-NODE-0094}
+  {c2de90c5ffcfd0c7af44f29f75839337bc75b7c09430a8da07d70509a7db2ad1}
+\begin{o001statement}
+Berikan bukti yang \emph{sangat} singkat (tanpa $\epsilon$, $\delta$, ataupun himpunan terbuka) bahwa jika
+$(x_n)$ dan $(y_n)$ merupakan barisan-barisan dalam suatu ruang linear bernorma yang masing-masing konvergen ke $a$ dan $b$,
+maka $x_n + y_n \sto a + b$.
+\end{o001statement}
+\begin{o001answer}
+\[
+\norm{(x_n+y_n)-(a+b)}
+\le\norm{x_n-a}+\norm{y_n-b}\longrightarrow0.
+\]
+Jadi $x_n+y_n\to a+b$.
+\end{o001answer}
+\begin{o001proof}
+Dengan mengelompokkan suku dan memakai ketaksamaan segitiga,
+\[
+\norm{(x_n+y_n)-(a+b)}
+=\norm{(x_n-a)+(y_n-b)}
+\le\norm{x_n-a}+\norm{y_n-b}.
+\]
+Kedua suku di ruas kanan menuju nol berdasarkan kedua hipotesis, sehingga
+ruas kiri juga menuju nol. Ini adalah definisi konvergensi dalam norma dan
+tidak memakai $\epsilon$, $\delta$, ataupun himpunan terbuka.
+\end{o001proof}
+\end{o001solution}
+
+% O001-SOLUTION-ID: O001-FAOA-2015-CH03-EX-005-SOLUTION
+% SOURCE-EXERCISE-ID: FAOA-2015-CH03-NODE-0118
+% STATEMENT-TARGET-SHA256: a54a95af268dbf3cafc70d6ee756695be4fe8a45d3f1d175b15012cfa280f0d5
+\begin{o001solution}
+  {O001-FAOA-2015-CH03-EX-005-SOLUTION}
+  {FAOA-2015-CH03-NODE-0118}
+  {a54a95af268dbf3cafc70d6ee756695be4fe8a45d3f1d175b15012cfa280f0d5}
+\begin{o001statement}
+Apa saja koproduk dalam kategori $\cat{NLS_{\boldsymbol\infty}}$?
+\end{o001statement}
+\begin{o001answer}
+Koproduk suatu keluarga ruang linear bernorma ada tepat ketika hanya
+berhingga banyak anggotanya yang bukan ruang nol. Untuk
+$V_1,\ldots,V_n$, satu modelnya ialah jumlah langsung aljabar
+\[
+\bigoplus_{k=1}^nV_k
+\quad\text{dengan}\quad
+\norm{(x_1,\ldots,x_n)}=\sum_{k=1}^n\norm{x_k},
+\]
+beserta injeksi koordinat. Koproduk keluarga kosong adalah ruang nol.
+Jika terdapat tak hingga banyak objek bukan nol, koproduknya tidak ada dalam
+kategori dengan semua pemetaan linear terbatas sebagai morfisme.
+\end{o001answer}
+\begin{o001proof}
+Untuk keluarga hingga $V_1,\ldots,V_n$, injeksi koordinat
+$\iota_k\colon V_k\to\bigoplus_{j=1}^nV_j$ merupakan pemetaan linear
+terbatas. Jika $f_k\colon V_k\to W$ adalah pemetaan linear terbatas,
+definisikan
+\[
+F(x_1,\ldots,x_n)=\sum_{k=1}^nf_k(x_k).
+\]
+Pemetaan ini satu-satunya pemetaan linear dengan $F\iota_k=f_k$, dan
+\[
+\norm{F(x_1,\ldots,x_n)}
+\le\sum_{k=1}^n\norm{f_k}\norm{x_k}
+\le\left(\max_{1\le k\le n}\norm{f_k}\right)
+   \sum_{k=1}^n\norm{x_k}.
+\]
+Jadi $F$ terbatas dan sifat universal koproduk dipenuhi. Ruang nol tidak
+mengubah konstruksi ini, sehingga keluarga dengan hanya berhingga banyak
+anggota bukan nol mempunyai koproduk yang sama.
+
+Sekarang andaikan keluarga $(V_\lambda)_{\lambda\in\Lambda}$ mempunyai tak
+hingga banyak anggota bukan nol dan mempunyai koproduk hipotetis
+$(C,(\iota_\lambda))$. Untuk setiap indeks $\lambda$ dengan
+$V_\lambda\ne0$, gunakan keluarga morfisme ke $V_\lambda$ yang pada
+$V_\lambda$ adalah identitas dan pada semua komponen lain adalah nol.
+Sifat universal menghasilkan $p_\lambda\colon C\to V_\lambda$ dengan
+$p_\lambda\iota_\lambda=I_{V_\lambda}$; khususnya
+$\iota_\lambda\ne0$.
+
+Pilih indeks-indeks berbeda $\lambda_1,\lambda_2,\ldots$ dengan
+$V_{\lambda_n}\ne0$. Untuk setiap $n$, tetapkan
+$f_{\lambda_n}=n\,\iota_{\lambda_n}\colon V_{\lambda_n}\to C$, dan tetapkan
+$f_\lambda=0$ pada indeks lain. Masing-masing $f_\lambda$ adalah morfisme
+terbatas. Sifat universal akan menghasilkan pemetaan linear terbatas
+$F\colon C\to C$ dengan
+\[
+F\iota_{\lambda_n}=n\,\iota_{\lambda_n}.
+\]
+Ambil $x_n$ sehingga $\iota_{\lambda_n}x_n\ne0$. Maka
+\[
+\norm F\ge
+\frac{\norm{F\iota_{\lambda_n}x_n}}
+     {\norm{\iota_{\lambda_n}x_n}}
+=n
+\]
+untuk setiap $n$, yang mustahil bagi operator terbatas. Jadi koproduk tak
+ada bila tak hingga banyak komponen bukan nol.
+\end{o001proof}
+\end{o001solution}
+
+% O001-SOLUTION-ID: O001-FAOA-2015-CH03-EX-006-SOLUTION
+% SOURCE-EXERCISE-ID: FAOA-2015-CH03-NODE-0119
+% STATEMENT-TARGET-SHA256: c18a12a34660fdaf55f44c9058084c0551cb4ad4560ec59d554f7a37201caf37
+\begin{o001solution}
+  {O001-FAOA-2015-CH03-EX-006-SOLUTION}
+  {FAOA-2015-CH03-NODE-0119}
+  {c18a12a34660fdaf55f44c9058084c0551cb4ad4560ec59d554f7a37201caf37}
+\begin{o001statement}
+Tentukan hasil kali dan koproduk dua ruang $V$ dan $W$ dalam kategori
+$\cat{NLS_{\vc 1}}$ yang terdiri atas ruang-ruang linear bernorma dan kontraksi-kontraksi linear.
+\end{o001statement}
+\begin{o001answer}
+Hasil kali adalah $V\times W$ dengan norma maksimum
+\[
+\norm{(v,w)}_{\mathrm{prod}}=\max\{\norm v,\norm w\}
+\]
+dan proyeksi koordinat. Koproduk adalah $V\oplus W$ dengan norma jumlah
+\[
+\norm{(v,w)}_{\mathrm{koprod}}=\norm v+\norm w
+\]
+dan injeksi koordinat.
+\end{o001answer}
+\begin{o001proof}
+Pada norma maksimum, kedua proyeksi
+$\pi_V(v,w)=v$ dan $\pi_W(v,w)=w$ adalah kontraksi. Jika
+$f\colon X\to V$ dan $g\colon X\to W$ kontraksi, satu-satunya pemetaan
+linear $H\colon X\to V\times W$ yang memenuhi
+$\pi_VH=f$ dan $\pi_WH=g$ ialah $H(x)=(f(x),g(x))$. Pemetaan ini kontraksi
+karena
+\[
+\norm{H(x)}_{\mathrm{prod}}
+=\max\{\norm{f(x)},\norm{g(x)}\}\le\norm{x}.
+\]
+Jadi objek tersebut adalah hasil kali.
+
+Pada norma jumlah, injeksi
+$\iota_V(v)=(v,0)$ dan $\iota_W(w)=(0,w)$ adalah kontraksi, bahkan isometri.
+Jika $f\colon V\to X$ dan $g\colon W\to X$ kontraksi, satu-satunya pemetaan
+linear $K\colon V\oplus W\to X$ dengan
+$K\iota_V=f$ dan $K\iota_W=g$ ialah
+$K(v,w)=f(v)+g(w)$. Ketaksamaan
+\[
+\norm{K(v,w)}
+\le\norm{f(v)}+\norm{g(w)}
+\le\norm v+\norm w
+=\norm{(v,w)}_{\mathrm{koprod}}
+\]
+menunjukkan bahwa $K$ kontraksi. Jadi objek kedua adalah koproduk.
+\end{o001proof}
+\end{o001solution}
+
+% O001-SOLUTION-ID: O001-FAOA-2015-CH03-EX-007-SOLUTION
+% SOURCE-EXERCISE-ID: FAOA-2015-CH03-NODE-0163
+% STATEMENT-TARGET-SHA256: 9ceb84511f36b87a9eb590f586023123c303e4bc85ba4a4938930a5c6aca9926
+\begin{o001solution}
+  {O001-FAOA-2015-CH03-EX-007-SOLUTION}
+  {FAOA-2015-CH03-NODE-0163}
+  {9ceb84511f36b87a9eb590f586023123c303e4bc85ba4a4938930a5c6aca9926}
+\begin{o001statement}
+Kawan Anda, Fred R. Dimm, mengira bahwa ia telah menemukan pembuktian langsung yang sangat sederhana untuk
+versi teorema Hahn--Banach yang diberikan dalam Teorema~\ref{HBTIII}: Suatu fungsional
+linear kontinu $f$ yang didefinisikan pada subruang (linear) $M$ dari ruang linear bernorma~$V$ dapat
+diperpanjang menjadi fungsional linear kontinu $g$ pada seluruh $V$ tanpa memperbesar
+normanya. Menurutnya, kita hanya perlu mengambil $N$ sebagai sebarang komplemen ruang vektor
+dari~$M$ dan mengambil $B$ sebagai suatu basis (Hamel) untuk $N$. Definisikan $g(e) = 0$ untuk setiap vektor $e
+\in B$ dan $g = f$ pada~$M$. Kemudian perpanjang $g$ secara linear ke seluruh~$V$. Tentunya, kata Fred, $g$ linear berdasarkan konstruksinya dan normanya tidak bertambah karena kita
+telah menjadikannya nol di tempat-tempat yang sebelumnya belum didefinisikan. Tunjukkan kepada Fred letak kekeliruannya.
+\end{o001statement}
+\begin{o001answer}
+Perpanjangan Fred adalah $g=f\circ P$, dengan $P$ proyeksi aljabar ke $M$
+sepanjang komplemen $N$. Proyeksi itu tidak harus kontraktif, bahkan tidak
+harus terbatas. Jadi menaruh nilai nol pada $N$ tidak mengendalikan norma
+$g$. Sudah pada $\R^2$ dapat terjadi $\norm g>\norm f$.
+\end{o001answer}
+\begin{o001proof}
+Ambil $V=\R^2$ dengan norma Euclid,
+\[
+M=\spn\{(1,0)\},\qquad
+f(t,0)=t,\qquad
+N=\spn\{(1,1)\}.
+\]
+Fungsional $f$ mempunyai norma $1$ pada $M$. Pilih basis Hamel
+$B=\{(1,1)\}$ untuk $N$ dan lakukan persis konstruksi Fred: tetapkan
+$g(1,1)=0$ dan $g=f$ pada $M$. Karena
+\[
+(x,y)=(x-y,0)+y(1,1),
+\]
+perpanjangan linearnya adalah
+\[
+g(x,y)=x-y.
+\]
+Norma fungsional ini pada ruang Euclid adalah
+\[
+\norm g=\sqrt{1^2+(-1)^2}=\sqrt2>1=\norm f.
+\]
+Sebagai pemeriksaan langsung, pada
+$u=(1,-1)/\sqrt2$ berlaku $\norm u=1$ tetapi $|g(u)|=\sqrt2$.
+
+Kesalahannya ialah bahwa vektor $m+n$ dapat mempunyai norma jauh lebih kecil
+daripada norma komponen $m$. Menjadikan $g$ nol pada $n$ tidak menghilangkan
+kemungkinan pembatalan geometris itu. Secara umum, jika
+$P\colon M\oplus N\to M$ adalah proyeksi aljabar, konstruksi Fred memberi
+$g=f\circ P$; suatu komplemen aljabar sebarang tidak menjamin
+$\norm P\le1$, dan dalam ruang berdimensi tak hingga $P$ bahkan dapat tidak
+terbatas. Karena itu konstruksi tersebut tidak menjamin kesamaan norma maupun
+kekontinuan.
+\end{o001proof}
+\end{o001solution}

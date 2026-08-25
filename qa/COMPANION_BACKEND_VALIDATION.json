@@ -1,0 +1,141 @@
+{
+  "actual_counts": {
+    "artifacts": 70,
+    "bridge_units": 13,
+    "components": 4,
+    "exercise_solutions": 52,
+    "exercise_status_overlays": 52,
+    "html_routes": 294,
+    "provenance": 4,
+    "reader_work_solutions": 10,
+    "relations": 826,
+    "surfaces": 2
+  },
+  "base_backend_manifest_bytes": 5684,
+  "base_backend_manifest_sha256": "06ad5f9c6931ef1838a8307c60b8b3b94a4c89a25d6ddc12dbfb2a3ddc591cfc",
+  "base_jsonl_bytes_locked": 14878396,
+  "base_jsonl_files_locked": 19,
+  "endpoint_count": 28222,
+  "findings": [],
+  "generated_files": [
+    {
+      "bytes": 1635,
+      "path": "backend/companion_schema.json",
+      "sha256": "4c2eab62e0368fc49404501934674e9ec7b7a4a52754607a264ef586c0f4447f"
+    },
+    {
+      "bytes": 2542,
+      "path": "backend/companion_components.jsonl",
+      "sha256": "7e74697e4d4c60dfde8f6ab369de5a8fb610f2f9dadaa27f6889682a9564a7f0"
+    },
+    {
+      "bytes": 2943,
+      "path": "backend/companion_provenance.jsonl",
+      "sha256": "6be0447ce229bda99ad72a7b6a72cc9fed79261be614964f243b7a9994f693d4"
+    },
+    {
+      "bytes": 93436,
+      "path": "backend/o001_mastery.jsonl",
+      "sha256": "fce0ed2199735cffa0604851f626815984bc52a98a25676d5d0a7424f4eebb85"
+    },
+    {
+      "bytes": 33280,
+      "path": "backend/o001_status.jsonl",
+      "sha256": "b00f06649515662e86ffe3ff2f0d3cc5fc7c0485ecba767dc3d16479df2fffb6"
+    },
+    {
+      "bytes": 12566,
+      "path": "backend/bridge_units.jsonl",
+      "sha256": "cdcc841aed4c1e98cbe6e446f96085bce0601b57902ac20ee13de24c99894de4"
+    },
+    {
+      "bytes": 4216,
+      "path": "backend/companion_surfaces.jsonl",
+      "sha256": "97a8ded12612bc7de9e469bac6052dbf1c19f8dfd5b2226666f9caeb835d4874"
+    },
+    {
+      "bytes": 211653,
+      "path": "backend/companion_html_routes.jsonl",
+      "sha256": "2b55d6890bb20bba73bccaf8f1deca39cfb143eea24b5d2cc5bc8b6eff05f4f8"
+    },
+    {
+      "bytes": 214078,
+      "path": "backend/companion_relations.jsonl",
+      "sha256": "1a19a432fda1546ccfd7ef74546a8903bb1326cacc3205e6107656d30ce37ba0"
+    },
+    {
+      "bytes": 35524,
+      "path": "backend/companion_artifacts.jsonl",
+      "sha256": "d6e6524cb479597e34144da2e147f1f24a85bad6cf017232c5d205a023a59fc0"
+    },
+    {
+      "bytes": 1073,
+      "path": "backend/COMPANION_BACKEND_MANIFEST.csv",
+      "sha256": "bb1bf6bc49d4ff88bd20e6d36a0e1751de8c95ed7876040efd918c23067823f4"
+    }
+  ],
+  "generator": {
+    "bytes": 60947,
+    "path": "backend/generate_companion_backend.py",
+    "sha256": "2924b4c3a21a286021d827f6d0250bf68dead4efa8fa26105e70dd9c2a3f0479"
+  },
+  "manifest_entries": [
+    {
+      "bytes": 12566,
+      "path": "backend/bridge_units.jsonl",
+      "sha256": "cdcc841aed4c1e98cbe6e446f96085bce0601b57902ac20ee13de24c99894de4"
+    },
+    {
+      "bytes": 35524,
+      "path": "backend/companion_artifacts.jsonl",
+      "sha256": "d6e6524cb479597e34144da2e147f1f24a85bad6cf017232c5d205a023a59fc0"
+    },
+    {
+      "bytes": 2542,
+      "path": "backend/companion_components.jsonl",
+      "sha256": "7e74697e4d4c60dfde8f6ab369de5a8fb610f2f9dadaa27f6889682a9564a7f0"
+    },
+    {
+      "bytes": 211653,
+      "path": "backend/companion_html_routes.jsonl",
+      "sha256": "2b55d6890bb20bba73bccaf8f1deca39cfb143eea24b5d2cc5bc8b6eff05f4f8"
+    },
+    {
+      "bytes": 2943,
+      "path": "backend/companion_provenance.jsonl",
+      "sha256": "6be0447ce229bda99ad72a7b6a72cc9fed79261be614964f243b7a9994f693d4"
+    },
+    {
+      "bytes": 214078,
+      "path": "backend/companion_relations.jsonl",
+      "sha256": "1a19a432fda1546ccfd7ef74546a8903bb1326cacc3205e6107656d30ce37ba0"
+    },
+    {
+      "bytes": 1635,
+      "path": "backend/companion_schema.json",
+      "sha256": "4c2eab62e0368fc49404501934674e9ec7b7a4a52754607a264ef586c0f4447f"
+    },
+    {
+      "bytes": 4216,
+      "path": "backend/companion_surfaces.jsonl",
+      "sha256": "97a8ded12612bc7de9e469bac6052dbf1c19f8dfd5b2226666f9caeb835d4874"
+    },
+    {
+      "bytes": 60947,
+      "path": "backend/generate_companion_backend.py",
+      "sha256": "2924b4c3a21a286021d827f6d0250bf68dead4efa8fa26105e70dd9c2a3f0479"
+    },
+    {
+      "bytes": 93436,
+      "path": "backend/o001_mastery.jsonl",
+      "sha256": "fce0ed2199735cffa0604851f626815984bc52a98a25676d5d0a7424f4eebb85"
+    },
+    {
+      "bytes": 33280,
+      "path": "backend/o001_status.jsonl",
+      "sha256": "b00f06649515662e86ffe3ff2f0d3cc5fc7c0485ecba767dc3d16479df2fffb6"
+    }
+  ],
+  "result": "pass",
+  "schema_version": "o008.companion-backend-validation.v1"
+}

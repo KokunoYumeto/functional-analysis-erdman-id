@@ -1,0 +1,82 @@
+% Lapisan solusi O001 -- Bab 7 (Operator Kompak)
+% 1 solusi asli terpisah; bukan tulisan John M. Erdman.
+% Provenans model: OpenAI Codex gpt-5.6-sol, Ultra, atas arahan pengguna.
+% Lisensi komponen solusi: CC BY-SA 4.0.
+% Tidak menyiratkan dukungan John M. Erdman atau Portland State University.
+
+\markboth{SOLUSI O001 UNTUK BAB 7: OPERATOR KOMPAK}{SOLUSI O001 UNTUK BAB 7: OPERATOR KOMPAK}
+\section*{Solusi O001 untuk Bab 7: Operator Kompak}
+\addcontentsline{toc}{section}{Solusi O001 untuk Bab 7: Operator Kompak}
+\begin{center}
+\small
+Komponen solusi asli terpisah, CC BY-SA 4.0. Ditulis dengan bantuan
+OpenAI Codex gpt-5.6-sol, Ultra, atas arahan pengguna. Pernyataan latihan
+berasal dari edisi terjemahan karya John M. Erdman; solusi ini bukan tulisan
+beliau dan tidak menyiratkan dukungan beliau atau Portland State University.
+\end{center}
+
+% O001-SOLUTION-ID: O001-FAOA-2015-CH07-EX-001-SOLUTION
+% SOURCE-EXERCISE-ID: FAOA-2015-CH07-NODE-0045
+% STATEMENT-TARGET-SHA256: d34a802dca82cf381a646022b8b8cec4c40d52cfbb09ae67d5a13d39e1d48396
+\begin{o001solution}
+  {O001-FAOA-2015-CH07-EX-001-SOLUTION}
+  {FAOA-2015-CH07-NODE-0045}
+  {d34a802dca82cf381a646022b8b8cec4c40d52cfbb09ae67d5a13d39e1d48396}
+\begin{o001statement}
+Misalkan $(S, \fml A,\mu)$ suatu ruang ukur $\sigma$-hingga dan $\phi \in
+L_\infty(\mu)$. Tentukan dekomposisi polar dari
+ \index{operator perkalian!dekomposisi polar dari}%
+ \index{operator!perkalian!dekomposisi polar dari}%
+ \index{dekomposisi polar!dari operator perkalian}%
+operator perkalian $M_\phi$ (lihat contoh~\ref{C063527}).
+\end{o001statement}
+\begin{o001answer}
+Pada $L_2(S,\mu)$, misalkan $E=\{s:|\phi(s)|>0\}$ hingga himpunan nol dan
+definisikan
+\[
+ u(s)=\begin{cases}\phi(s)/|\phi(s)|,&s\in E,\\0,&s\notin E.\end{cases}
+\]
+Maka
+\[
+  |M_\phi|=M_{|\phi|},\qquad M_\phi=M_uM_{|\phi|},
+\]
+dan $M_u$ adalah isometri parsial dengan proyeksi awal sekaligus proyeksi
+akhir $M_{\mathbf1_E}$.
+\end{o001answer}
+\begin{o001proof}
+Dari Contoh~\ref{C063527}, ${M_\phi}^*=M_{\overline\phi}$. Oleh karena itu
+\[
+ {M_\phi}^*M_\phi=M_{|\phi|^2}
+ \quad\hbox{dan}\quad
+ |M_\phi|=({M_\phi}^*M_\phi)^{1/2}=M_{|\phi|},
+\]
+karena $M_{|\phi|}$ positif dan kuadratnya $M_{|\phi|^2}$.
+
+Fungsi $u$ terukur, terbatas secara esensial, dan
+$|u|^2=\mathbf1_E$ hampir di mana-mana. Maka
+\[
+  M_u^*M_u=M_{|u|^2}=M_{\mathbf1_E},
+\]
+sebuah proyeksi ortogonal; jadi $M_u$ isometri parsial. Perhitungan titik
+demi titik memberi
+\[
+ M_uM_{|\phi|}=M_{u|\phi|}=M_\phi.
+\]
+Kernel $M_\phi$ terdiri atas kelas fungsi yang nol hampir di mana-mana pada
+$E$, sehingga komplemen ortogonalnya adalah $L_2(E)$, yakni jangkauan
+$M_{\mathbf1_E}$. Ini ruang awal $M_u$.
+
+Untuk memeriksa ruang akhir yang disyaratkan dekomposisi polar, ambil
+$g\in L_2(E)$ dan tetapkan
+$g_n=g\mathbf1_{\{|\phi|\ge1/n\}}$. Maka $g_n\to g$ dalam $L_2$ melalui
+konvergensi terdominasi, sedangkan
+\[
+ g_n=M_\phi\left(\frac{g_n}{\phi}\right)
+ \quad\hbox{dan}\quad
+ \frac{g_n}{\phi}\in L_2.
+\]
+Jadi $\overline{\ran M_\phi}=L_2(E)$. Karena $M_uM_u^*=M_{\mathbf1_E}$,
+ruang akhir $M_u$ juga $L_2(E)$. Semua syarat dekomposisi polar, termasuk
+kasus $\phi=0$ hampir di mana-mana, telah terpenuhi.
+\end{o001proof}
+\end{o001solution}

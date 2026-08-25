@@ -1,0 +1,98 @@
+{
+  "chapter_counts": {
+    "CH01": 6,
+    "CH03": 7,
+    "CH04": 10,
+    "CH05": 4,
+    "CH06": 6,
+    "CH07": 1,
+    "CH08": 2,
+    "CH09": 1,
+    "CH10": 11,
+    "CH13": 1,
+    "CH14": 2,
+    "CH17": 1
+  },
+  "expected_solutions": 52,
+  "findings": [],
+  "inventory_bytes": 80266,
+  "inventory_path": "mastery/O001_EXERCISE_INVENTORY.jsonl",
+  "inventory_sha256": "d98c1a91308b4b35dea61f157427efa80bd9b406ecd04a15a3572d44ddb6643a",
+  "parsed_solutions": 52,
+  "result": "pass",
+  "schema_version": "o008.o001-solution-validation.v1",
+  "solution_files": [
+    {
+      "bytes": 16202,
+      "path": "mastery/id-ID/solutions-ch01.tex",
+      "sha256": "83320dab91cc03db874b27866cb307994a462b0c0141ff785e928f4e8ecff7f1",
+      "solution_records": 6
+    },
+    {
+      "bytes": 19804,
+      "path": "mastery/id-ID/solutions-ch03.tex",
+      "sha256": "82b7e71e4700304f6c5cc23c2b1b32b55b05cda3af9fa8232e335a9426f87cc9",
+      "solution_records": 7
+    },
+    {
+      "bytes": 25787,
+      "path": "mastery/id-ID/solutions-ch04.tex",
+      "sha256": "6c004a0c8de4da46b00603e0160311c4c05b5d43d06f7668ebacaaee249a3a2b",
+      "solution_records": 10
+    },
+    {
+      "bytes": 11106,
+      "path": "mastery/id-ID/solutions-ch05.tex",
+      "sha256": "8d350e9857f38e97daf89c3e3184b629a3aa25a623e28fe593a0fa30ab510744",
+      "solution_records": 4
+    },
+    {
+      "bytes": 13575,
+      "path": "mastery/id-ID/solutions-ch06.tex",
+      "sha256": "73e317a38b314d4920869e19080851ef6e64e229ec7c7b85ba4531d55fa97a8b",
+      "solution_records": 6
+    },
+    {
+      "bytes": 3191,
+      "path": "mastery/id-ID/solutions-ch07.tex",
+      "sha256": "5a9902a3565a53d1c3bb8d5232d08e60d0a63186289b4158dca2b2c5311584d5",
+      "solution_records": 1
+    },
+    {
+      "bytes": 8812,
+      "path": "mastery/id-ID/solutions-ch08.tex",
+      "sha256": "f6ee40e2450a0cf52e27f79780f19abe37b05c063f876e3ef554f021c1d8d50e",
+      "solution_records": 2
+    },
+    {
+      "bytes": 2931,
+      "path": "mastery/id-ID/solutions-ch09.tex",
+      "sha256": "ac03801c4719852a4a61b311d4c00c8a2d78fc40572c5a704dbfab846d88eaf0",
+      "solution_records": 1
+    },
+    {
+      "bytes": 19420,
+      "path": "mastery/id-ID/solutions-ch10.tex",
+      "sha256": "e6d7eb52db79869403b0a33ce87eef61665bb7a9e5df57da9b335e6b27b8f9f9",
+      "solution_records": 11
+    },
+    {
+      "bytes": 2544,
+      "path": "mastery/id-ID/solutions-ch13.tex",
+      "sha256": "dfb46463a58f8ce5b6537833f56e7f1e25f75af7211f0e89d3fed3e64412e802",
+      "solution_records": 1
+    },
+    {
+      "bytes": 5673,
+      "path": "mastery/id-ID/solutions-ch14.tex",
+      "sha256": "0c8408f51b5eca14b0ec7c9b7fd69015faaeecb2752edc56e50a686e1fc70a38",
+      "solution_records": 2
+    },
+    {
+      "bytes": 2212,
+      "path": "mastery/id-ID/solutions-ch17.tex",
+      "sha256": "d58d9b515ecb7ec223d951244ef393fe83d626ba06ae9514fecd4fec1d510890",
+      "solution_records": 1
+    }
+  ]
+}

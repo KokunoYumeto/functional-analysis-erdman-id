@@ -1,0 +1,26 @@
+{
+  "bridge_internal_references": 5,
+  "findings": [],
+  "labels": 13,
+  "result": "pass",
+  "schema_version": "o008.compact-spectral-bridge-validation.v1",
+  "source_bytes": 16999,
+  "source_path": "bridge/id-ID/compact-spectral-svd.tex",
+  "source_sha256": "201e343ddac2776e072f40f7d5f9c24a72f361d5ec973aff750a03c2bd95c31a",
+  "stable_id_count": 13,
+  "stable_ids": [
+    "O008-BRIDGE-CS-DEF-001",
+    "O008-BRIDGE-CS-THM-001",
+    "O008-BRIDGE-CS-REM-001",
+    "O008-BRIDGE-CS-EXAM-001",
+    "O008-BRIDGE-CS-LEM-001",
+    "O008-BRIDGE-CS-LEM-002",
+    "O008-BRIDGE-CS-THM-002",
+    "O008-BRIDGE-CS-COR-001",
+    "O008-BRIDGE-CS-DEF-002",
+    "O008-BRIDGE-CS-THM-003",
+    "O008-BRIDGE-CS-COR-002",
+    "O008-BRIDGE-CS-PROP-001",
+    "O008-BRIDGE-CS-EXAM-002"
+  ]
+}

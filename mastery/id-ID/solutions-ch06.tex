@@ -1,0 +1,308 @@
+% Lapisan solusi O001 -- Bab 6 (Ruang Banach)
+% 6 solusi asli terpisah; bukan tulisan John M. Erdman.
+% Provenans model: OpenAI Codex gpt-5.6-sol, Ultra, atas arahan pengguna.
+% Lisensi komponen solusi: CC BY-SA 4.0.
+% Tidak menyiratkan dukungan John M. Erdman atau Portland State University.
+
+\markboth{SOLUSI O001 UNTUK BAB 6: RUANG BANACH}{SOLUSI O001 UNTUK BAB 6: RUANG BANACH}
+\section*{Solusi O001 untuk Bab 6: Ruang Banach}
+\addcontentsline{toc}{section}{Solusi O001 untuk Bab 6: Ruang Banach}
+\begin{center}
+\small
+Komponen solusi asli terpisah, CC BY-SA 4.0. Ditulis dengan bantuan
+OpenAI Codex gpt-5.6-sol, Ultra, atas arahan pengguna. Pernyataan latihan
+berasal dari edisi terjemahan karya John M. Erdman; solusi ini bukan tulisan
+beliau dan tidak menyiratkan dukungan beliau atau Portland State University.
+\end{center}
+
+% O001-SOLUTION-ID: O001-FAOA-2015-CH06-EX-001-SOLUTION
+% SOURCE-EXERCISE-ID: FAOA-2015-CH06-NODE-0013
+% STATEMENT-TARGET-SHA256: bd4185ea9f3d1d399ef89f65145ab56c16f94038a48e3a3c894f2fca587e84ca
+\begin{o001solution}
+  {O001-FAOA-2015-CH06-EX-001-SOLUTION}
+  {FAOA-2015-CH06-NODE-0013}
+  {bd4185ea9f3d1d399ef89f65145ab56c16f94038a48e3a3c894f2fca587e84ca}
+\begin{o001statement}
+Misalkan $V$ dan $W$ ruang-ruang linear bernorma, $U$ subhimpunan konveks takkosong dari $V$,
+dan $f \colon U \sto W$.  Tanpa menggunakan bentuk apa pun dari \emph{teorema nilai rata-rata}, tunjukkan
+bahwa jika $df = \vc 0$ pada $U$, maka $f$ konstan pada~$U$.  (Untuk definisi $df$, yaitu
+\emph{diferensial} dari~$f$, lihat Bagian 13.1--2 dalam catatan saya~\cite{Erdman:2007}.)
+\end{o001statement}
+\begin{o001answer}
+Untuk setiap $x,y\in U$ berlaku $f(y)=f(x)$; jadi $f$ konstan pada seluruh~$U$.
+\end{o001answer}
+\begin{o001proof}
+Ambil $x,y\in U$ dan tulis $v=y-x$. Jika $v=0$, klaim segera berlaku.
+Jika $v\ne0$, kekonveksan $U$ menjamin bahwa
+\[
+  x+tv\in U\qquad(0\le t\le1).
+\]
+Definisikan $g(t)=f(x+tv)$. Dari definisi diferensial dan $df_{x+tv}=0$
+diperoleh, langsung tanpa teorema nilai rata-rata,
+\[
+ \lim_{h\to0}\frac{\norm{g(t+h)-g(t)}}{|h|}=0
+\]
+untuk $t\in(0,1)$, dengan limit satu sisi pada kedua titik ujung.
+
+Tetapkan $\varepsilon>0$. Misalkan $E$ adalah himpunan semua $s\in[0,1]$
+sedemikian sehingga
+\[
+  \norm{g(t)-g(0)}\le\varepsilon t
+  \quad\hbox{untuk setiap }0\le t\le s.
+\]
+Limit satu sisi di $0$ menunjukkan bahwa $E$ memuat suatu interval
+$[0,\delta]$. Misalkan $c=\sup E$. Kontinuitas $g$ menunjukkan bahwa
+ketaksamaan tersebut tetap berlaku untuk semua $t\le c$. Jika $c<1$,
+limit di $c$ memberi $\eta>0$ sehingga, untuk $0\le t\le1$ dan
+$|t-c|<\eta$,
+\[
+  \norm{g(t)-g(c)}\le\varepsilon|t-c|.
+\]
+Karena itu, untuk $c\le t<\min(1,c+\eta)$,
+\[
+ \norm{g(t)-g(0)}
+ \le \norm{g(t)-g(c)}+\norm{g(c)-g(0)}
+ \le \varepsilon(t-c)+\varepsilon c=\varepsilon t.
+\]
+Hal ini memperluas interval yang termasuk dalam $E$ melewati $c$, suatu
+kontradiksi. Maka $c=1$ dan
+$\norm{f(y)-f(x)}=\norm{g(1)-g(0)}\le\varepsilon$. Karena
+$\varepsilon$ sebarang, $f(y)=f(x)$. Kedua titik dipilih sebarang, sehingga
+$f$ konstan pada~$U$.
+\end{o001proof}
+\end{o001solution}
+
+% O001-SOLUTION-ID: O001-FAOA-2015-CH06-EX-002-SOLUTION
+% SOURCE-EXERCISE-ID: FAOA-2015-CH06-NODE-0038
+% STATEMENT-TARGET-SHA256: 47dec53a61225c4a15f0ee33785dcea99ea9c145ba44a8f0f3dd82d79505b2dd
+\begin{o001solution}
+  {O001-FAOA-2015-CH06-EX-002-SOLUTION}
+  {FAOA-2015-CH06-NODE-0038}
+  {47dec53a61225c4a15f0ee33785dcea99ea9c145ba44a8f0f3dd82d79505b2dd}
+\begin{o001statement}
+Apakah terdapat suatu barisan $(a_n)$ dari bilangan kompleks yang memenuhi
+syarat berikut: suatu barisan $(x_n)$ dalam $\C$ dapat dijumlahkan secara mutlak jika dan hanya jika
+$(a_nx_n)$ terbatas? \emph{Petunjuk.} Tinjau $ T\colon l_\infty \sto l_1\colon (x_n)
+\mapsto (x_n/a_n)$.
+\end{o001statement}
+\begin{o001answer}
+Tidak terdapat barisan $(a_n)$ dengan sifat tersebut.
+\end{o001answer}
+\begin{o001proof}
+Andaikan barisan semacam itu ada dan tulis
+$Z=\{n\in\N:a_n=0\}$. Himpunan $Z$ harus berhingga: jika $Z$ tak
+berhingga, barisan indikator $Z$ tidak termasuk $l_1$, sedangkan
+$(a_nx_n)$ identik nol dan karena itu terbatas. Misalkan
+$I=\N\setminus Z$; himpunan ini tak berhingga.
+
+Pada ruang Banach $l_1(I)$, definisikan
+\[
+ A:l_1(I)\longrightarrow l_\infty(I),\qquad
+ (Ax)_n=a_nx_n.
+\]
+Hipotesis memastikan bahwa $A$ terdefinisi pada seluruh $l_1(I)$. Grafnya
+tertutup: jika $x^{(k)}\to x$ dalam $l_1(I)$ dan
+$Ax^{(k)}\to y$ dalam $l_\infty(I)$, maka konvergensi koordinat memberi
+$y_n=a_nx_n$ untuk setiap $n\in I$. Berikut pembuktian lokal bahwa ini
+membuat $A$ terbatas, tanpa memakai teorema graf tertutup yang baru muncul
+sesudah latihan ini. Graf $G(A)$ adalah ruang Banach karena tertutup dalam
+$l_1(I)\times l_\infty(I)$. Proyeksi
+$\pi_1:G(A)\to l_1(I)$ merupakan bijeksi linear terbatas. Korolar teorema
+pemetaan terbuka memberi bahwa $\pi_1^{-1}$ terbatas. Karena proyeksi kedua
+$\pi_2:G(A)\to l_\infty(I)$ juga terbatas,
+$A=\pi_2\pi_1^{-1}$ terbatas. Dengan menguji vektor satuan koordinat
+diperoleh
+\[
+  |a_n|\le \norm A=:C\qquad(n\in I).
+\]
+
+Sebaliknya, definisikan
+\[
+ T:l_\infty(I)\longrightarrow l_1(I),\qquad
+ (Ty)_n=\frac{y_n}{a_n}.
+\]
+Untuk $y\in l_\infty(I)$, perluas $Ty$ dengan nol pada $Z$. Hasil kali
+$a_n(Ty)_n$ terbatas, sehingga arah ``jika'' dalam hipotesis menjamin
+$Ty\in l_1(I)$. Argumen konvergensi koordinat yang sama menunjukkan bahwa
+graf $T$ tertutup. Dengan menerapkan lagi argumen ruang-graf dan teorema
+pemetaan terbuka dari paragraf sebelumnya, $T$ terbatas. Khusus untuk barisan konstan
+$y_n=1$ diperoleh
+\[
+  \sum_{n\in I}\frac1{|a_n|}<\infty.
+\]
+Namun $|a_n|\le C$ pada himpunan tak berhingga $I$, sehingga setiap suku
+$1/|a_n|\ge1/C$ (dan $C>0$). Deret tersebut harus divergen, bertentangan
+dengan kesimpulan sebelumnya. Jadi barisan yang diminta tidak ada.
+\end{o001proof}
+\end{o001solution}
+
+% O001-SOLUTION-ID: O001-FAOA-2015-CH06-EX-003-SOLUTION
+% SOURCE-EXERCISE-ID: FAOA-2015-CH06-NODE-0041
+% STATEMENT-TARGET-SHA256: 4f5917f5a92603b55d9972e86c260a0307895ba7080637f5d07e796026fe043b
+\begin{o001solution}
+  {O001-FAOA-2015-CH06-EX-003-SOLUTION}
+  {FAOA-2015-CH06-NODE-0041}
+  {4f5917f5a92603b55d9972e86c260a0307895ba7080637f5d07e796026fe043b}
+\begin{o001statement}
+Tinjau suatu persamaan diferensial berbentuk
+   \[ y'' + p_1\,y' + p_0\,y = q  \tag{$\ast$} \]
+dengan $p_0$, $p_1$, dan $q$ fungsi-fungsi bernilai real kontinu (yang tetap) pada interval
+$[a,b]$.  Nyatakan secara tepat, lalu buktikan, pernyataan bahwa \emph{solusi-solusi $(\ast)$
+bergantung secara kontinu pada nilai awal}.  Anda boleh menggunakan tanpa bukti teorema standar berikut:
+untuk setiap titik $c$ dalam $[a,b]$ dan setiap pasangan bilangan real $a_0$ dan $a_1$,
+terdapat solusi tunggal untuk $(\ast)$ sedemikian sehingga $y(c) = a_0$ dan $y'(c) = a_1$.
+\emph{Petunjuk.} Untuk $c \in [a,b]$ yang tetap, tinjau pemetaan
+  \[ S\colon \fml C^2([a,b]) \sto \fml C([a,b]) \times \R^2 \colon
+                                        f \mapsto \bigl(Tf,f(c),f'(c)\bigr) \]
+dengan $\fml C^2([a,b])$ ruang Banach dari Contoh~\ref{C069431} dan $T$ pemetaan
+linear terbatas dari Contoh~\ref{C069432}.
+\end{o001statement}
+\begin{o001answer}
+Untuk setiap $c\in[a,b]$ terdapat konstanta $K_c<\infty$ sehingga, jika
+$y_{u,v}$ dan $y_{\widetilde u,\widetilde v}$ adalah solusi dengan ruas kanan
+$q$ yang sama dan data awal masing-masing $(u,v)$ dan
+$(\widetilde u,\widetilde v)$ di $c$, maka
+\[
+ \norm{y_{u,v}-y_{\widetilde u,\widetilde v}}_{\fml C^2}
+ \le K_c\bigl(|u-\widetilde u|+|v-\widetilde v|\bigr).
+\]
+Jadi ketergantungan pada nilai awal bahkan bersifat Lipschitz dalam norma
+$\fml C^2$.
+\end{o001answer}
+\begin{o001proof}
+Lengkapi $\fml C([a,b])\times\R^2$ dengan norma
+\[
+  \norm{(r,u,v)}=\norm r_u+|u|+|v|.
+\]
+Ruang ini Banach. Untuk $c$ yang tetap, pemetaan
+\[
+ S:\fml C^2([a,b])\longrightarrow\fml C([a,b])\times\R^2,
+ \qquad S f=(Tf,f(c),f'(c))
+\]
+linear dan terbatas: keterbatasan $T$ diberikan oleh Contoh~\ref{C069432},
+sedangkan $|f(c)|\le\norm f_u$ dan $|f'(c)|\le\norm{f'}_u$.
+
+Teorema keberadaan dan ketunggalan yang diizinkan dalam soal menunjukkan
+bahwa $S$ bijektif. Memang, untuk setiap $(r,u,v)$ terdapat tepat satu
+$f\in\fml C^2([a,b])$ dengan $Tf=r$, $f(c)=u$, dan $f'(c)=v$.
+Karena domain dan kodomainnya Banach, teorema pemetaan terbuka menyatakan
+bahwa $S^{-1}$ terbatas. Tuliskan $K_c=\norm{S^{-1}}$.
+
+Sekarang $S y_{u,v}=(q,u,v)$ dan
+$S y_{\widetilde u,\widetilde v}=(q,\widetilde u,\widetilde v)$. Linearitas
+memberi
+\[
+ y_{u,v}-y_{\widetilde u,\widetilde v}
+ =S^{-1}(0,u-\widetilde u,v-\widetilde v),
+\]
+dan pengambilan norma menghasilkan tepat estimasi dalam jawaban. Estimasi
+itu sekaligus mengendalikan fungsi, turunan pertama, dan turunan kedua
+secara seragam; khususnya, konvergensi data awal mengakibatkan konvergensi
+solusi dalam $\fml C^2([a,b])$.
+\end{o001proof}
+\end{o001solution}
+
+% O001-SOLUTION-ID: O001-FAOA-2015-CH06-EX-004-SOLUTION
+% SOURCE-EXERCISE-ID: FAOA-2015-CH06-NODE-0044
+% STATEMENT-TARGET-SHA256: 402b55b02ea5879d8c8ab502089ac5bfa33972450b373ea5be17ecef04361dfa
+\begin{o001solution}
+  {O001-FAOA-2015-CH06-EX-004-SOLUTION}
+  {FAOA-2015-CH06-NODE-0044}
+  {402b55b02ea5879d8c8ab502089ac5bfa33972450b373ea5be17ecef04361dfa}
+\begin{o001statement}
+Jika $T\colon B \sto C$ suatu pemetaan linear kontinu antara ruang-ruang Banach, maka grafnya tertutup.
+\end{o001statement}
+\begin{o001answer}
+Graf $G(T)=\{(x,Tx):x\in B\}$ tertutup dalam $B\times C$.
+\end{o001answer}
+\begin{o001proof}
+Ambil barisan $(x_n,Tx_n)$ dalam $G(T)$ yang konvergen di $B\times C$ ke
+suatu $(x,y)$. Maka $x_n\to x$ dalam $B$ dan $Tx_n\to y$ dalam $C$.
+Kontinuitas $T$ juga memberi $Tx_n\to Tx$. Karena limit di ruang bernorma
+$C$ tunggal, $y=Tx$. Jadi $(x,y)=(x,Tx)\in G(T)$. Produk ruang bernorma
+bersifat metrik, sehingga tertutup secara barisan ekuivalen dengan tertutup;
+akibatnya $G(T)$ tertutup.
+\end{o001proof}
+\end{o001solution}
+
+% O001-SOLUTION-ID: O001-FAOA-2015-CH06-EX-005-SOLUTION
+% SOURCE-EXERCISE-ID: FAOA-2015-CH06-NODE-0133
+% STATEMENT-TARGET-SHA256: 43e22044a2ac89ed49aa32918c9786ed99670261fafce6eb918ea3414704ab25
+\begin{o001solution}
+  {O001-FAOA-2015-CH06-EX-005-SOLUTION}
+  {FAOA-2015-CH06-NODE-0133}
+  {43e22044a2ac89ed49aa32918c9786ed99670261fafce6eb918ea3414704ab25}
+\begin{o001statement}
+\label{C070114} Misalkan $V$ dan $W$ ruang linear bernorma. Jika suatu keluarga $\fml T$ dari
+pemetaan linear terbatas dari $V$ ke $W$ terbatas seragam, maka keluarga itu terbatas titik demi titik.
+\end{o001statement}
+\begin{o001answer}
+Jika $M>0$ memenuhi $\norm T\le M$ untuk semua $T\in\fml T$, maka untuk
+setiap $x\in V$ berlaku $\norm{Tx}\le M\norm x$ bagi semua
+$T\in\fml T$; misalnya $M_x=M\norm x+1$ adalah batas titik demi titik.
+\end{o001answer}
+\begin{o001proof}
+Ambil $x\in V$. Dari definisi norma operator, untuk setiap
+$T\in\fml T$ diperoleh
+\[
+  \norm{Tx}\le\norm T\,\norm x\le M\norm x<M\norm x+1=M_x.
+\]
+Konstanta $M_x>0$ hanya bergantung pada $x$, bukan pada $T$. Ini persis
+definisi bahwa $\fml T$ terbatas titik demi titik. Tidak diperlukan
+kelengkapan $V$ atau~$W$ untuk arah implikasi ini.
+\end{o001proof}
+\end{o001solution}
+
+% O001-SOLUTION-ID: O001-FAOA-2015-CH06-EX-006-SOLUTION
+% SOURCE-EXERCISE-ID: FAOA-2015-CH06-NODE-0144
+% STATEMENT-TARGET-SHA256: 6cf97638fdea6d6113149f32f2a310d17d66f855f8b7b863003b30d6e15c694a
+\begin{o001solution}
+  {O001-FAOA-2015-CH06-EX-006-SOLUTION}
+  {FAOA-2015-CH06-NODE-0144}
+  {6cf97638fdea6d6113149f32f2a310d17d66f855f8b7b863003b30d6e15c694a}
+\begin{o001statement}
+Sahabat baik Anda, Fred R. Dimm, kembali memerlukan bantuan. Kali ini ia mencemaskan
+pernyataan (lihat~\ref{C070131}) bahwa suatu subhimpunan ruang linear bernorma terbatas jika
+dan hanya jika subhimpunan itu terbatas secara lemah. Ia meninjau barisan $(a^n)$ dalam ruang Hilbert
+$l^2$ yang didefinisikan oleh $a^n = \sqrt{n}\,\vc e^n$ untuk setiap $n \in \N$, dengan $\{\vc
+e^n\colon n \in \N\}$ basis ortonormal biasa untuk~$l_2$ (lihat
+contoh~\ref{C063149}). Ia melihat bahwa barisan itu jelas tidak terbatas (dengan topologi biasa
+pada~$l^2$). Namun, baginya barisan itu tampak terbatas secara lemah. Jika tidak, menurut argumennya, maka
+berdasarkan \emph{teorema Riesz-Fr\'echet} \ref{000342} akan terdapat barisan $x$ dalam
+$l^2$ sedemikian sehingga himpunan $\{\abs{\langle a^n,x \rangle}\colon n \in\N\}$ tidak terbatas. Baginya ini tampak
+tidak mungkin terjadi karena barisan semacam itu harus menurun lebih lambat daripada
+barisan $\bigl(n^{-1/2}\bigr)$, yang sudah menurun terlalu lambat untuk menjadi anggota~$l^2$.
+Tenangkan Fred dengan menemukan barisan yang sesuai. \emph{Petunjuk:} Gunakan barisan yang
+memiliki banyak nol.
+\end{o001statement}
+\begin{o001answer}
+Ambil
+\[
+ x_n=\begin{cases}
+       k/2^k,&n=4^k\text{ untuk suatu }k\in\N,\\
+       0,&\text{selain itu}.
+     \end{cases}
+\]
+Maka $x\in l^2$, tetapi
+$\abs{\langle a^{4^k},x\rangle}=k$, sehingga himpunan nilai hasil kali
+dalam tersebut tidak terbatas.
+\end{o001answer}
+\begin{o001proof}
+Karena koordinat taknol hanya muncul pada $n=4^k$, diperoleh
+\[
+ \norm x_2^2=\sum_{k=1}^{\infty}\frac{k^2}{4^k}<\infty.
+\]
+Jadi $x\in l^2$. Untuk $n=4^k$, vektor
+$a^n=\sqrt n\,\vc e^n=2^k\vc e^{4^k}$. Terlepas dari konvensi mengenai
+peubah mana yang linear dalam hasil kali dalam kompleks, nilai mutlaknya
+adalah
+\[
+ \abs{\langle a^{4^k},x\rangle}
+ =2^k\abs{x_{4^k}}=2^k\frac{k}{2^k}=k.
+\]
+Nilai ini menuju tak hingga. Dengan demikian barisan jarang tersebut
+memberikan fungsional Riesz--Fr\'echet yang menyaksikan bahwa
+$\{a^n:n\in\N\}$ tidak terbatas secara lemah, sesuai dengan fakta bahwa
+$\norm{a^n}=\sqrt n$ tidak terbatas.
+\end{o001proof}
+\end{o001solution}

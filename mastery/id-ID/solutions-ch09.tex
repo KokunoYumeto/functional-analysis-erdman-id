@@ -1,0 +1,61 @@
+% Lapisan solusi O001 -- Bab 9 (Ruang Vektor Topologis)
+% 1 solusi asli terpisah; bukan tulisan John M. Erdman.
+% Provenans model: OpenAI Codex gpt-5.6-sol, Ultra, atas arahan pengguna.
+% Lisensi komponen solusi: CC BY-SA 4.0.
+% Tidak menyiratkan dukungan John M. Erdman atau Portland State University.
+
+\markboth{SOLUSI O001 UNTUK BAB 9: RUANG VEKTOR TOPOLOGIS}{SOLUSI O001 UNTUK BAB 9: RUANG VEKTOR TOPOLOGIS}
+\section*{Solusi O001 untuk Bab 9: Ruang Vektor Topologis}
+\addcontentsline{toc}{section}{Solusi O001 untuk Bab 9: Ruang Vektor Topologis}
+\begin{center}
+\small
+Komponen solusi asli terpisah, CC BY-SA 4.0. Ditulis dengan bantuan
+OpenAI Codex gpt-5.6-sol, Ultra, atas arahan pengguna. Pernyataan latihan
+berasal dari edisi terjemahan karya John M. Erdman; solusi ini bukan tulisan
+beliau dan tidak menyiratkan dukungan beliau atau Portland State University.
+\end{center}
+
+% O001-SOLUTION-ID: O001-FAOA-2015-CH09-EX-001-SOLUTION
+% SOURCE-EXERCISE-ID: FAOA-2015-CH09-NODE-0072
+% STATEMENT-TARGET-SHA256: 69f9a89b1b499eb3fee7d7d92605c324b0dabd8f66918754428f27cd5482fdfe
+\begin{o001solution}
+  {O001-FAOA-2015-CH09-EX-001-SOLUTION}
+  {FAOA-2015-CH09-NODE-0072}
+  {69f9a89b1b499eb3fee7d7d92605c324b0dabd8f66918754428f27cd5482fdfe}
+\begin{o001statement}
+Jelaskan pula bagaimana proposisi sebelumnya memungkinkan kita mengaitkan suatu ruang lain yang bersifat Hausdorff dengan
+suatu ruang vektor topologis non-Hausdorff.
+\end{o001statement}
+\begin{o001answer}
+Untuk ruang vektor topologis $X$, ruang yang terkait secara kanonik adalah
+Hausdorffisasi
+\[
+  X_{\mathrm H}:=X/\overline{\{\vc0\}}.
+\]
+Ruang ini Hausdorff, dan setiap pemetaan linear kontinu dari $X$ ke ruang
+vektor topologis Hausdorff berfaktor secara unik melalui pemetaan hasil bagi
+$X\to X_{\mathrm H}$.
+\end{o001answer}
+\begin{o001proof}
+Misalkan $N=\overline{\{\vc0\}}$. Karena penjumlahan, invers aditif, dan
+perkalian skalar kontinu, tutupan subruang vektor tetap merupakan subruang
+vektor; jadi $N$ adalah subruang tertutup dari~$X$. Proposisi sebelumnya
+langsung memberi bahwa ruang hasil bagi $X/N$ dengan topologi hasil bagi
+bersifat Hausdorff. Hal ini tetap berlaku ketika $X$ sendiri non-Hausdorff;
+dalam kasus tersebut $N\ne\{\vc0\}$.
+
+Konstruksi ini kanonik. Jika $Y$ ruang vektor topologis Hausdorff dan
+$T:X\to Y$ linear kontinu, maka $\{\vc0\}$ tertutup dalam $Y$, sehingga
+$\ker T=T^{-1}(\{\vc0\})$ tertutup dalam $X$. Karena $\vc0\in\ker T$,
+\[
+  N=\overline{\{\vc0\}}\subseteq\ker T.
+\]
+Maka rumus $\widetilde T([x])=T(x)$ terdefinisi dengan baik dan memberi
+pemetaan linear unik $\widetilde T:X/N\to Y$ dengan
+$T=\widetilde T\circ\pi$. Kontinuitas $\widetilde T$ mengikuti sifat
+topologi hasil bagi: untuk setiap himpunan terbuka $O\subseteq Y$,
+$\pi^{-1}(\widetilde T^{-1}(O))=T^{-1}(O)$ terbuka. Jadi $X/N$ bukan hanya
+suatu ruang Hausdorff yang terkait, melainkan hasil bagi Hausdorff universal
+dari~$X$.
+\end{o001proof}
+\end{o001solution}

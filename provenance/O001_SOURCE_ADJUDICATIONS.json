@@ -1,0 +1,42 @@
+{
+  "schema_version": "o008.o001-source-adjudications.v1",
+  "status": "adjudicated_in_separate_mastery_layer",
+  "source_text_policy": "preserve_admitted_translation_bytes",
+  "upstream_contact": "none_during_production",
+  "record_count": 1,
+  "records": [
+    {
+      "id": "O008-O001-SOURCE-ADJUDICATION-001",
+      "chapter_id": "FAOA-2015-CH14",
+      "exercise_solution_id": "O001-FAOA-2015-CH14-EX-002-SOLUTION",
+      "classification": "MATHEMATICAL_SOURCE_INCONSISTENCY",
+      "source_path": "source/upstream/multiplier_algebras.tex",
+      "source_right_module_lines": {
+        "start": 35,
+        "end": 45,
+        "normalized_lf_sha256": "85bb4fe314e8ca26909f3059495500acfeb83534393f465cab90799c29e0ace1"
+      },
+      "source_formal_definition_and_exercise_lines": {
+        "start": 92,
+        "end": 100,
+        "normalized_lf_sha256": "342c26492accb9b95800db40ca534097a7b37b044175eaf71cb008391b05d811"
+      },
+      "translated_formal_definition_and_exercise_lines": {
+        "path": "source/id-ID/multiplier_algebras-id.tex",
+        "start": 92,
+        "end": 100,
+        "normalized_lf_sha256": "240d6a2fbf5349636ee8515d88ab065099ceac6fc84c2681260f88a78bdbc0e9"
+      },
+      "source_claim": "The right-module definition x(ab)=(xa)b is said to be equivalent to a unital algebra homomorphism Phi:A->L(V).",
+      "adjudication": "With standard operator composition, a right action yields Phi(ab)=Phi(b)Phi(a), so Phi is an antihomomorphism A->L(V), equivalently a homomorphism A^op->L(V).",
+      "proof_witness": "For Phi(a)x=xa, module associativity gives Phi(ab)x=x(ab)=(xa)b=Phi(b)Phi(a)x.",
+      "counterexample": "For A=M_2(C) acting on V=A on the right, R_a R_b=R_{ba}; with a=E_12 and b=E_21, ab=E_11 differs from ba=E_22.",
+      "reader_resolution": "The admitted Erdman translation remains byte-identical; the separately authored solution states the inconsistency and proves the corrected equivalence.",
+      "solution_path": "mastery/id-ID/solutions-ch14.tex",
+      "solution_bytes_at_adjudication": 4803,
+      "solution_sha256_at_adjudication": "39aea5b915b4b149b1145c706e81749ab5a4e6305fb31960b5cf907967d7c92a",
+      "upstream_report_candidate": true,
+      "upstream_report_state": "not_sent_production_contact_prohibited"
+    }
+  ]
+}

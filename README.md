@@ -1,45 +1,25 @@
 # Analisis Fungsional dan Aljabar Operator — Bahasa Indonesia
 
-Repositori ini memuat edisi Bahasa Indonesia yang sedang dikerjakan dari buku
+Repositori ini memuat edisi Bahasa Indonesia lengkap dari buku
 John M. Erdman, *Functional Analysis and Operator Algebras: An Introduction*
-(versi 4 Oktober 2015).
+(versi 4 Oktober 2015), beserta pendamping penguasaan berprovenans terpisah.
 
-## Baca edisi saat ini
+## Baca edisi lengkap
 
-[Buka beranda reader HTML semantik](output/html/index.html) setelah mengunduh
-atau mengklon repositori ini. Reader offline tersebut mencakup prakata, seluruh
-17 bab, bibliografi, indeks, 11.193 rumus MathML, serta 80 diagram SVG dengan
-teks alternatif dan transkrip Bahasa Indonesia.
+- [PDF edisi lengkap dengan pendamping penguasaan](output/pdf/analisis-fungsional-dan-aljabar-operator-id-edisi-lengkap-dengan-pendamping.pdf)
+  adalah reader utama 298 halaman.
+- [Reader HTML pendamping semantik](output/html-companion/index.html) memuat
+  jembatan spektral-kompak/SVD, 52 solusi latihan sumber, dan 10 solusi hasil
+  kerja pembaca dengan MathML, jangkar stabil, serta reflow desktop/seluler.
+- [Reader HTML teks sumber](output/html/index.html) memuat prakata, seluruh 17
+  bab, bibliografi, indeks, 11.193 rumus MathML, serta 80 diagram SVG berlabel.
 
-[Buka PDF teks sumber lengkap](output/pdf/analisis-fungsional-dan-aljabar-operator-id-teks-sumber-lengkap.pdf)
-
-Prakata dan Bab 1 sampai Bab 17 telah diterjemahkan lengkap; bibliografi serta
-indeks hasil terjemahan juga disertakan. Reader ini melewati pemeriksaan
-struktur, matematika, residu bahasa, hak komponen, dua build bersih yang
-menghasilkan PDF identik, serta inspeksi visual seluruh 238 halaman. Dengan
-demikian, batas teks sumber lengkap sudah selesai. Reader HTML semantik juga
-sudah selesai, lolos pemeriksaan build deterministik, struktur, aksesibilitas,
-tautan, formula, dan reflow desktop/seluler. Edisi keseluruhan masih dalam
-pengerjaan karena lapisan penguasaan/solusi dan jembatan
-spektral-kompak/SVD berprovenans terpisah belum selesai.
-[PDF Bab 1--17](output/pdf/analisis-fungsional-dan-aljabar-operator-id-bab-1-17.pdf),
-[PDF Bab 1--16](output/pdf/analisis-fungsional-dan-aljabar-operator-id-bab-1-16.pdf),
-[PDF Bab 1--15](output/pdf/analisis-fungsional-dan-aljabar-operator-id-bab-1-15.pdf),
-[PDF Bab 1--14](output/pdf/analisis-fungsional-dan-aljabar-operator-id-bab-1-14.pdf),
-[PDF Bab 1--13](output/pdf/analisis-fungsional-dan-aljabar-operator-id-bab-1-13.pdf),
-[PDF Bab 1--12](output/pdf/analisis-fungsional-dan-aljabar-operator-id-bab-1-12.pdf),
-[PDF Bab 1--11](output/pdf/analisis-fungsional-dan-aljabar-operator-id-bab-1-11.pdf),
-[PDF Bab 1--10](output/pdf/analisis-fungsional-dan-aljabar-operator-id-bab-1-10.pdf),
-[PDF Bab 1--9](output/pdf/analisis-fungsional-dan-aljabar-operator-id-bab-1-9.pdf),
-[PDF Bab 1--8](output/pdf/analisis-fungsional-dan-aljabar-operator-id-bab-1-8.pdf),
-[PDF Bab 1--7](output/pdf/analisis-fungsional-dan-aljabar-operator-id-bab-1-7.pdf),
-[PDF Bab 1--6](output/pdf/analisis-fungsional-dan-aljabar-operator-id-bab-1-6.pdf),
-[PDF Bab 1--5](output/pdf/analisis-fungsional-dan-aljabar-operator-id-bab-1-5.pdf),
-[PDF Bab 1--4](output/pdf/analisis-fungsional-dan-aljabar-operator-id-bab-1-4.pdf),
-[PDF Bab 1--3](output/pdf/analisis-fungsional-dan-aljabar-operator-id-bab-1-3.pdf),
-[PDF Bab 1--2](output/pdf/analisis-fungsional-dan-aljabar-operator-id-bab-1-2.pdf),
-dan [PDF Unit 1](output/pdf/analisis-fungsional-dan-aljabar-operator-id-unit-1.pdf)
-tetap tersedia sebagai artefak batas sebelumnya.
+Terjemahan, pendamping, PDF terintegrasi, kedua reader HTML, dan backend
+modular kini lengkap. Dua build PDF bersih menghasilkan byte identik; seluruh
+298 halaman dirender dan diperiksa. Reader pendamping juga direproduksi dua
+kali tanpa selisih byte dan lolos pemeriksaan struktur, tautan, formula,
+aksesibilitas, serta reflow. PDF dan reader checkpoint sebelumnya tetap
+dipertahankan sebagai riwayat produksi, tetapi bukan lagi pintu masuk utama.
 
 ## Preservasi versi
 
@@ -65,13 +45,14 @@ seluruh berkas substantif tetap berlisensi CC BY-SA 4.0.
 
 ## Cakupan
 
-Edisi yang dipilih mencakup seluruh buku 17 bab, prakata, bibliografi,
+Edisi ini mencakup seluruh buku 17 bab, prakata, bibliografi,
 dan indeks. Bab 1–8 membentuk rute inti D20; Bab 9–17 merupakan lanjutan
 analisis fungsional dan aljabar operator. Penandaan kurikuler tidak menghapus
-isi sumber. Terjemahan teks sumber lengkap kini selesai, termasuk prakata dan
-indeks hasil terjemahan. Reader semantik yang aksesibel juga sudah tersedia;
-lapisan penguasaan O001 dan jembatan spektral-kompak/SVD tetap ditulis dan
-disajikan dengan ID serta provenans terpisah.
+isi sumber. Pendamping menambahkan solusi lengkap bagi seluruh 52 latihan
+eksplisit, sepuluh hasil kerja pembaca sentral, serta jembatan 13 unit mengenai
+Riesz--Schauder, teorema spektral swaadjoin kompak, nilai singular/SVD, galat
+aproksimasi peringkat hingga, dan dekomposisi polar. Semua tambahan memakai ID,
+atribusi, lisensi komponen, dan provenans terpisah dari teks Erdman.
 
 Sumber resmi:
 
@@ -102,12 +83,13 @@ modern sengaja boleh mengalir ulang; nomor halaman bukan pengenal tetap.
 
 ## Aksesibilitas
 
-PDF teks sumber lengkap memiliki metadata, 109 bookmark, 3.043 tautan, indeks,
-warna tautan berkontras tinggi, dan pemetaan Unicode untuk seluruh 49 objek
-font. PDF 238 halaman ini belum merupakan PDF bertag. Reader HTML semantik
-menyediakan struktur judul, navigasi, MathML, diagram berlabel, transkrip
-diagram, dan reflow responsif sebagai permukaan aksesibilitas tambahan. Tidak
-ada klaim bahwa PDF itu sendiri sudah bertag atau sepenuhnya aksesibel.
+PDF terintegrasi memiliki metadata `id-ID`, 141 entri kerangka, 3.116 tautan
+internal yang seluruhnya terurai, dan pemetaan Unicode untuk seluruh 53 objek
+font. PDF 298 halaman ini belum merupakan PDF bertag. Kedua reader HTML
+semantik menyediakan struktur judul, navigasi, MathML, diagram berlabel,
+transkrip diagram, jangkar stabil, dan reflow responsif sebagai permukaan
+aksesibilitas. Tidak ada klaim bahwa PDF itu sendiri sudah bertag atau
+sepenuhnya aksesibel.
 
 ## Lisensi dan atribusi
 
@@ -122,6 +104,5 @@ University.
 Komponen yang statusnya tidak cukup jelas tidak masuk ke reader. Berkas
 `DIAGXY.TEX` dipertahankan byte-identik di bawah pemberitahuan distribusi
 Michael Barr yang tertanam di dalamnya. Materi solusi, penguasaan, dan jembatan
-spektral-kompak yang ditulis terpisah akan memiliki ID, atribusi, dan
-provenansnya sendiri; materi tersebut tidak akan dinyatakan sebagai tulisan
-Erdman.
+spektral-kompak yang ditulis terpisah memiliki ID, atribusi, dan provenansnya
+sendiri; materi tersebut tidak dinyatakan sebagai tulisan Erdman.

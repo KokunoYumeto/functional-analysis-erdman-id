@@ -1,0 +1,42 @@
+{
+  "builds": [
+    {
+      "bytes": 1343144,
+      "files": 19,
+      "inventory_sha256_including_manifest": "e9b8aa804bf619d7bfcc12a5767d5c6ef9836a1ac512c946fa925ef926e8f2fb",
+      "role": "canonical"
+    },
+    {
+      "bytes": 1343144,
+      "files": 19,
+      "inventory_sha256_including_manifest": "e9b8aa804bf619d7bfcc12a5767d5c6ef9836a1ac512c946fa925ef926e8f2fb",
+      "role": "replay_a"
+    },
+    {
+      "bytes": 1343144,
+      "files": 19,
+      "inventory_sha256_including_manifest": "e9b8aa804bf619d7bfcc12a5767d5c6ef9836a1ac512c946fa925ef926e8f2fb",
+      "role": "replay_b"
+    }
+  ],
+  "comparisons": {
+    "canonical_vs_replay_a": {
+      "extra": [],
+      "identity_mismatch": [],
+      "missing": []
+    },
+    "canonical_vs_replay_b": {
+      "extra": [],
+      "identity_mismatch": [],
+      "missing": []
+    },
+    "replay_a_vs_replay_b": {
+      "extra": [],
+      "identity_mismatch": [],
+      "missing": []
+    }
+  },
+  "passed": true,
+  "schema_version": "o008.html-companion-reproducibility.v1",
+  "source_reader_inventory_sha256": "f04bb3f5ee883c794474b191faf0e724987ebc01c4711bac8f6dc5421e543f32"
+}

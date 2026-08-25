@@ -1,0 +1,64 @@
+% Lapisan solusi O001 -- Bab 13 (Konstruksi GNS)
+% 1 solusi asli terpisah; bukan tulisan John M. Erdman.
+% Provenans model: OpenAI Codex gpt-5.6-sol, Ultra, atas arahan pengguna.
+% Lisensi komponen solusi: CC BY-SA 4.0.
+% Tidak menyiratkan dukungan John M. Erdman atau Portland State University.
+
+\markboth{SOLUSI O001 UNTUK BAB 13: KONSTRUKSI GNS}{SOLUSI O001 UNTUK BAB 13: KONSTRUKSI GNS}
+\section*{Solusi O001 untuk Bab 13: Konstruksi GNS}
+\addcontentsline{toc}{section}{Solusi O001 untuk Bab 13: Konstruksi GNS}
+\begin{center}
+\small
+Komponen solusi asli terpisah, CC BY-SA 4.0. Ditulis dengan bantuan
+OpenAI Codex gpt-5.6-sol, Ultra, atas arahan pengguna. Pernyataan latihan
+berasal dari edisi terjemahan karya John M. Erdman; solusi ini bukan tulisan
+beliau dan tidak menyiratkan dukungan beliau atau Portland State University.
+\end{center}
+
+% O001-SOLUTION-ID: O001-FAOA-2015-CH13-EX-001-SOLUTION
+% SOURCE-EXERCISE-ID: FAOA-2015-CH13-NODE-0018
+% STATEMENT-TARGET-SHA256: 84c22fa77eaccb119f0537a7807cc91265e0dc1e0c2aae2137eadc8497924228
+\begin{o001solution}
+  {O001-FAOA-2015-CH13-EX-001-SOLUTION}
+  {FAOA-2015-CH13-NODE-0018}
+  {84c22fa77eaccb119f0537a7807cc91265e0dc1e0c2aae2137eadc8497924228}
+\begin{o001statement}
+Misalkan $X$ suatu ruang Hausdorff kompak lokal. Carilah suatu representasi
+isometrik (dan karena itu setia) $(\pi,H)$ dari aljabar-$C^*$ $C_0(X)$ pada suatu
+ruang Hilbert~$H$.
+\end{o001statement}
+\begin{o001answer}
+Ambil $H=\ell^2(X)$ dan definisikan
+$(\pi(f)\xi)(x)=f(x)\xi(x)$. Maka $\pi$ adalah representasi isometrik dan
+setia dari $C_0(X)$ pada~$H$.
+\end{o001answer}
+\begin{o001proof}
+Untuk setiap $f\in C_0(X)$ dan $\xi\in\ell^2(X)$, perkalian titik demi titik
+memberi
+\[
+ \|\pi(f)\xi\|_2^2
+ =\sum_{x\in X}|f(x)|^2|\xi(x)|^2
+ \leq\|f\|_\infty^2\|\xi\|_2^2.
+\]
+Jadi $\pi(f)$ operator terbatas dan $\|\pi(f)\|\leq\|f\|_\infty$. Definisi
+titik demi titik langsung memberi
+\[
+ \pi(fg)=\pi(f)\pi(g),
+ \qquad
+ \pi(\overline f)=\pi(f)^*,
+\]
+serta linearitas~$\pi$.
+
+Untuk setiap $x\in X$, misalkan $e_x$ adalah vektor basis satuan yang bernilai
+$1$ di~$x$ dan nol di tempat lain. Maka
+\[
+ \|\pi(f)e_x\|_2=|f(x)|.
+\]
+Akibatnya $\|\pi(f)\|\geq |f(x)|$ untuk setiap~$x$, dan dengan mengambil
+supremum diperoleh $\|\pi(f)\|\geq\|f\|_\infty$. Bersama estimasi sebelumnya,
+$\|\pi(f)\|=\|f\|_\infty$. Jadi $\pi$ isometrik; khususnya
+$\pi(f)=0$ memaksa $f=0$, sehingga representasi itu setia. Konstruksi ini
+berlaku tanpa perlu memilih ukuran pada~$X$, bahkan ketika $X$ tidak dapat
+dihitung.
+\end{o001proof}
+\end{o001solution}

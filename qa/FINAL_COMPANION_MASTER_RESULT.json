@@ -1,0 +1,14 @@
+{
+  "base_bytes": 11176,
+  "base_path": "source/id-ID/functional-analysis-id-complete-source.tex",
+  "base_sha256": "7f06919a8ec9088a3bc812fab962a48b5f1b3b0d5d3bce80eb21055f65089041",
+  "bridge_component": "bridge/id-ID/compact-spectral-svd.tex",
+  "explicit_exercise_solution_count": 52,
+  "output_bytes": 14023,
+  "output_path": "source/id-ID/functional-analysis-id-complete-with-companions.tex",
+  "output_sha256": "d50c78b69f342b8d22a817dcaf74746a992115d14077065f019a1ecd47152024",
+  "result": "pass",
+  "schema_version": "o008.final-companion-master.v1",
+  "selected_reader_work_count": 10,
+  "solution_component_count": 12
+}

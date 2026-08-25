@@ -1,0 +1,564 @@
+% Lapisan solusi O001 -- Bab 4 (Ruang Hilbert)
+% 10 solusi asli terpisah; bukan tulisan John M. Erdman.
+% Provenans model: OpenAI Codex gpt-5.6-sol, Ultra, atas arahan pengguna.
+% Lisensi komponen solusi: CC BY-SA 4.0.
+% Tidak menyiratkan dukungan John M. Erdman atau Portland State University.
+
+\markboth{SOLUSI O001 UNTUK BAB 4: RUANG HILBERT}{SOLUSI O001 UNTUK BAB 4: RUANG HILBERT}
+\section*{Solusi O001 untuk Bab 4: Ruang Hilbert}
+\addcontentsline{toc}{section}{Solusi O001 untuk Bab 4: Ruang Hilbert}
+\begin{center}
+\small
+Komponen solusi asli terpisah, CC BY-SA 4.0. Ditulis dengan bantuan
+OpenAI Codex gpt-5.6-sol, Ultra, atas arahan pengguna. Pernyataan latihan
+berasal dari edisi terjemahan karya John M. Erdman; solusi ini bukan tulisan
+beliau dan tidak menyiratkan dukungan beliau atau Portland State University.
+\end{center}
+
+% O001-SOLUTION-ID: O001-FAOA-2015-CH04-EX-001-SOLUTION
+% SOURCE-EXERCISE-ID: FAOA-2015-CH04-NODE-0023
+% STATEMENT-TARGET-SHA256: a4f5325f6a535b95e804661fb3f2a11e0b9b8d5a613e45903338613c2f6e4c70
+\begin{o001solution}
+  {O001-FAOA-2015-CH04-EX-001-SOLUTION}
+  {FAOA-2015-CH04-NODE-0023}
+  {a4f5325f6a535b95e804661fb3f2a11e0b9b8d5a613e45903338613c2f6e4c70}
+\begin{o001statement}
+ Apakah jumlah langsung yang didefinisikan di atas (dengan morfisme yang sesuai) merupakan hasil kali dalam kategori $\cat{HSp}$
+yang objeknya ruang Hilbert dan morfismenya pemetaan linear terbatas?  Apakah jumlah langsung itu merupakan koproduk?
+\end{o001statement}
+\begin{o001answer}
+Jumlah langsung ortogonal suatu keluarga $(H_i)_{i\in I}$ merupakan hasil kali
+sekaligus koproduk dalam $\cat{HSp}$ jika dan hanya jika hanya berhingga banyak
+$H_i$ yang tak nol.
+\end{o001answer}
+\begin{o001proof}
+Jika hanya $H_1,\ldots,H_m$ yang tak nol, proyeksi koordinat
+$p_i\colon\bigoplus_iH_i\to H_i$
+bersifat terbatas. Jika $f_i\colon K\to H_i$ terbatas, maka
+\[
+ f(x)=(f_1x,\ldots,f_mx)
+\]
+adalah satu-satunya pemetaan yang memenuhi $p_i f=f_i$, dan
+$\norm{f}^2\leq\sum_i\norm{f_i}^2$. Jadi jumlah langsung berhingga adalah
+hasil kali. Dengan inklusi koordinat $j_i$, untuk pemetaan terbatas
+$g_i\colon H_i\to K$, rumus
+$g(x_1,\ldots,x_m)=\sum_i g_i x_i$ memberikan satu-satunya morfisme dengan
+$g j_i=g_i$. Jadi objek yang sama juga koproduk.
+
+Sebaliknya, andaikan tak hingga banyak $H_i$ yang tak nol. Pilih indeks
+berbeda $i_1,i_2,\ldots$ dan vektor satuan $u_n\in H_{i_n}$. Untuk sifat
+hasil kali, ambil $K=\K$, definisikan
+$f_{i_n}(\alpha)=\alpha u_n$, dan ambil $f_i=0$ pada indeks lain. Setiap
+$f_i$ terbatas. Namun pemetaan yang dipaksakan oleh semua proyeksi harus
+mengirim $1$ ke keluarga yang koordinat $i_n$-nya sama dengan~$u_n$ untuk
+semua~$n$; keluarga itu tidak dapat dijumlahkuadratkan. Jadi morfisme
+pemfaktor tidak ada.
+
+Untuk sifat koproduk, definisikan
+$g_{i_n}(x)=\langle x,u_n\rangle$ dan $g_i=0$ pada indeks lain. Setiap
+$g_i$ terbatas. Jika morfisme pemfaktor $g$ ada, maka untuk
+\[
+ x_N=\frac1{\sqrt N}\sum_{n=1}^{N}j_{i_n}u_n
+\]
+berlaku $\|x_N\|=1$, tetapi $g(x_N)=\sqrt N$. Ini bertentangan dengan
+keterbatasan~$g$. Maka kedua sifat universal gagal tepat ketika terdapat tak
+hingga banyak summan tak nol.
+\end{o001proof}
+\end{o001solution}
+
+% O001-SOLUTION-ID: O001-FAOA-2015-CH04-EX-002-SOLUTION
+% SOURCE-EXERCISE-ID: FAOA-2015-CH04-NODE-0053
+% STATEMENT-TARGET-SHA256: 22c06694e8a8ce55ab43731d60ce3c9656a0b7af895ba5cbb039796129395f13
+\begin{o001solution}
+  {O001-FAOA-2015-CH04-EX-002-SOLUTION}
+  {FAOA-2015-CH04-NODE-0053}
+  {22c06694e8a8ce55ab43731d60ce3c9656a0b7af895ba5cbb039796129395f13}
+\begin{o001statement}
+Suatu fungsi $f\colon \R \sto \C$ berbentuk
+   \[ f(t) = a_0 + \sum_{k=1}^n (a_k \cos kt + b_k \sin kt) \]
+dengan $a_0, \dots, a_n, b_1, \dots, b_n$ bilangan kompleks disebut
+ \index{polinom trigonometri}%
+ \index{polinom!trigonometri}%
+\df{polinom trigonometri}.
+ \begin{enumerate}
+  \item Jelaskan mengapa fungsi bernilai kompleks yang $2\pi$-periodik pada garis real $\R$
+sering diidentifikasi dengan fungsi bernilai kompleks pada lingkaran satuan~$\T$.
+  \item Beberapa penulis menyebut \emph{polinom trigonometri} sebagai fungsi berbentuk
+    \[ f(t) = \sum_{k=-n}^n c_k e^{ikt} \]
+ dengan $c_{-n}, \dots, c_{-1}, c_0, c_1, \dots, c_n$ bilangan kompleks. Jelaskan dengan cermat mengapa bentuk ini persis
+sama dengan definisi sebelumnya.
+  \item Jelaskan alasan penggunaan istilah \emph{polinom trigonometri}.
+  \item Buktikan bahwa setiap fungsi kontinu yang $2\pi$-periodik pada $\R$ merupakan limit seragam
+dari suatu barisan polinom trigonometri.
+ \end{enumerate}
+\end{o001statement}
+\begin{o001answer}
+(1) Identifikasi itu melalui $t\mapsto e^{it}$ dan ruang hasil bagi
+$\R/(2\pi\Z)\cong\T$. (2) Kedua bentuk terkait oleh
+\[
+ c_0=a_0,\qquad c_k=\frac{a_k-i b_k}{2},\qquad
+ c_{-k}=\frac{a_k+i b_k}{2}\quad(k\geq1).
+\]
+(3) Bentuk eksponensial merupakan polinom Laurent pada $z=e^{it}$.
+(4) Jumlah Fej\'er dari deret Fourier $f$ adalah polinom trigonometri dan
+konvergen seragam ke~$f$.
+\end{o001answer}
+\begin{o001proof}
+Pemetaan $q\colon\R\to\T$, $q(t)=e^{it}$, bernilai sama tepat pada kelas
+kongruensi modulo $2\pi$. Karena itu setiap fungsi $2\pi$-periodik mempunyai
+faktorisasi tunggal melalui $\R/(2\pi\Z)$, yang secara alami diidentifikasi
+dengan~$\T$.
+
+Identitas Euler memberikan
+\[
+ \cos kt=\frac{e^{ikt}+e^{-ikt}}2,
+ \qquad
+ \sin kt=\frac{e^{ikt}-e^{-ikt}}{2i}.
+\]
+Substitusi memberi rumus koefisien dalam jawaban. Sebaliknya,
+$a_k=c_k+c_{-k}$ dan $b_k=i(c_k-c_{-k})$, sehingga kedua keluarga fungsi
+persis sama. Dengan $z=e^{it}$, bentuk itu adalah pembatasan
+$\sum_{k=-n}^n c_kz^k$ pada $\abs z=1$; inilah alasan istilah
+``polinom trigonometri''.
+
+Tinggal dibuktikan pernyataan aproksimasi. Untuk $f$ kontinu dan
+$2\pi$-periodik, tetapkan
+\[
+ \widehat f(k)=\frac1{2\pi}\int_{-\pi}^{\pi}f(s)e^{-iks}\,ds
+\]
+dan jumlah Fej\'er
+\[
+ \sigma_N f(t)=\sum_{k=-N}^{N}\left(1-\frac{\abs k}{N+1}\right)
+                 \widehat f(k)e^{ikt}.
+\]
+Ini polinom trigonometri. Perkalian hingga dan perubahan variabel langsung
+memberi
+\[
+ \sigma_N f(t)=\frac1{2\pi}\int_{-\pi}^{\pi}F_N(u)f(t-u)\,du,
+ \qquad
+ F_N(u)=\frac1{N+1}
+ \left(\frac{\sin((N+1)u/2)}{\sin(u/2)}\right)^2,
+\]
+dengan nilai kontinu $F_N(0)=N+1$. Kernel ini tak negatif dan
+$\frac1{2\pi}\int_{-\pi}^{\pi}F_N=1$. Maka
+\[
+ \abs{\sigma_N f(t)-f(t)}
+ \leq\frac1{2\pi}\int_{-\pi}^{\pi}
+ F_N(u)\abs{f(t-u)-f(t)}\,du.
+\]
+Untuk $\epsilon>0$, kekontinuan seragam $f$ memberi $\delta\in(0,\pi)$
+sehingga faktor selisih kurang dari $\epsilon/2$ apabila $\abs u<\delta$.
+Pada $\delta\leq\abs u\leq\pi$ berlaku
+\[
+ F_N(u)\leq\frac1{(N+1)\sin^2(\delta/2)}.
+\]
+Bagian integral tersebut jadi paling besar
+$2\norm f_\infty/((N+1)\sin^2(\delta/2))$, terlepas dari~$t$, dan kurang
+dari $\epsilon/2$ untuk $N$ cukup besar. Jadi
+$\norm{\sigma_Nf-f}_\infty\to0$.
+\end{o001proof}
+\end{o001solution}
+
+% O001-SOLUTION-ID: O001-FAOA-2015-CH04-EX-003-SOLUTION
+% SOURCE-EXERCISE-ID: FAOA-2015-CH04-NODE-0078
+% STATEMENT-TARGET-SHA256: 4f8e6fe2fc3fbbf3c5cd40c97d7a3c2295778e82b32add1bf6cf200560d0a1b4
+\begin{o001solution}
+  {O001-FAOA-2015-CH04-EX-003-SOLUTION}
+  {FAOA-2015-CH04-NODE-0078}
+  {4f8e6fe2fc3fbbf3c5cd40c97d7a3c2295778e82b32add1bf6cf200560d0a1b4}
+\begin{o001statement}
+Pada suatu sore, kawan Anda, Fred R. Dimm, datang membawa masalah. ``Begini,'' katanya,
+``Pada $\lfs 2 = \lfs 2(\R,\R)$, fungsional evaluasi $E_0$, yang mengevaluasi setiap anggota $\lfs 2$
+di~$0$, jelas merupakan fungsional linear terbatas. Jadi, menurut Teorema Representasi Riesz,
+seharusnya ada fungsi $g$ dalam $\lfs 2$ sedemikian sehingga $f(0) = \langle f,g \rangle = \int_{-\infty}^\infty fg$
+untuk semua $f$ dalam~$\lfs 2$. Namun, itu adalah sifat `fungsi~$\delta$', yang katanya
+tidak ada. Di mana letak kesalahan saya?'' Berilah Freddy nasihat (yang membantu).
+\end{o001statement}
+\begin{o001answer}
+$E_0$ bukan fungsional pada $\lfs2(\R)$: anggota $\lfs2$ adalah kelas
+ekuivalensi hampir-di-mana-mana, sehingga nilai di satu titik tidak
+terdefinisi. Bahkan pada fungsi kontinu terintegralkan-kuadrat, evaluasi di
+nol tidak terbatas terhadap norma $\lfs2$.
+\end{o001answer}
+\begin{o001proof}
+Jika dua fungsi hanya berbeda nilainya di nol, keduanya menentukan anggota
+$\lfs2(\R)$ yang sama, tetapi ``evaluasi di nol'' akan memberi nilai berbeda.
+Jadi $E_0$ tidak terdefinisi pada ruang itu.
+
+Masalah tersebut tidak hilang dengan memilih fungsi kontinu sebagai wakil.
+Untuk $n\geq1$, ambil
+\[
+ f_n(t)=\max\{1-n\abs t,0\}.
+\]
+Fungsi ini kontinu, $f_n(0)=1$, dan perhitungan langsung memberi
+\[
+ \norm{f_n}_2^2
+ =2\int_0^{1/n}(1-nt)^2\,dt=\frac{2}{3n}\longrightarrow0.
+\]
+Jika evaluasi terbatas terhadap norma $\lfs2$, seharusnya
+$1=\abs{E_0f_n}\leq\norm{E_0}\norm{f_n}_2\to0$, suatu kontradiksi.
+Karena hipotesis Teorema Representasi Riesz gagal, tidak ada vektor
+$g\in\lfs2$ yang merepresentasikan evaluasi titik tersebut.
+\end{o001proof}
+\end{o001solution}
+
+% O001-SOLUTION-ID: O001-FAOA-2015-CH04-EX-004-SOLUTION
+% SOURCE-EXERCISE-ID: FAOA-2015-CH04-NODE-0079
+% STATEMENT-TARGET-SHA256: 7a531d47180bfa90ec00b09db0665bc412ad4270a85442b46f63ce4efa10ab53
+\begin{o001solution}
+  {O001-FAOA-2015-CH04-EX-004-SOLUTION}
+  {FAOA-2015-CH04-NODE-0079}
+  {7a531d47180bfa90ec00b09db0665bc412ad4270a85442b46f63ce4efa10ab53}
+\begin{o001statement}
+Masih pada sore yang sama, Freddy kembali. Setelah mempertimbangkan
+nasihat yang Anda berikan (dalam soal sebelumnya), ia merevisi
+pertanyaannya dengan menjadikan domain $E_0$ sebagai himpunan fungsi bernilai real yang terbatas dan
+kontinu pada~$\R$. Dengan sabar Anda
+menjelaskan kepada Freddy bahwa sekarang setidaknya ada dua kekeliruan dalam caranya
+menggunakan `fungsi~$\delta$'. Apakah kedua kekeliruan tersebut?
+\end{o001statement}
+\begin{o001answer}
+Dengan norma supremum, $C_b(\R)$ memang membuat $E_0$ terbatas, tetapi
+$C_b(\R)$ bukan ruang Hilbert, sehingga teorema representasi Hilbert--Riesz
+tidak berlaku. Jika ia justru bermaksud memakai hasil kali dalam
+$\int fg$, hasil kali itu bahkan tidak terdefinisi pada semua $C_b(\R)$;
+setelah domain dibatasi agar masuk $L_2$, evaluasi tetap tidak terbatas.
+\end{o001answer}
+\begin{o001proof}
+Pada $C_b(\R)$ dengan norma supremum berlaku
+$\abs{f(0)}\leq\norm f_\infty$, jadi evaluasi memang kontinu. Namun norma
+supremum tidak berasal dari hasil kali dalam: misalnya fungsi konstan
+$f=1$ dan $g$ dengan nilai dalam $[0,1]$, $g(0)=1$, dan tumpuan kompak
+dapat dipilih sehingga
+\[
+ \norm{f+g}_\infty^2+\norm{f-g}_\infty^2=4+1\neq4
+ =2\norm f_\infty^2+2\norm g_\infty^2.
+\]
+Jadi hukum jajargenjang gagal dan Teorema Representasi Riesz untuk ruang
+Hilbert tidak dapat diterapkan.
+
+Di sisi lain, rumus $\langle f,g\rangle=\int_\R fg$ tidak menentukan hasil
+kali dalam pada seluruh $C_b(\R)$: fungsi konstan $1$ saja tidak berada
+dalam $L_2(\R)$. Jika domain diganti dengan $C_b(\R)\cap L_2(\R)$ dan norma
+$L_2$, barisan tenda $f_n$ dari solusi sebelumnya masih memenuhi
+$f_n(0)=1$ dan $\norm{f_n}_2\to0$. Maka evaluasi tidak terbatas. Evaluasi
+titik secara benar direpresentasikan oleh ukuran titik Dirac dalam teori
+representasi untuk fungsional pada ruang fungsi kontinu, bukan oleh suatu
+fungsi $L_2$ dalam argumen Freddy.
+\end{o001proof}
+\end{o001solution}
+
+% O001-SOLUTION-ID: O001-FAOA-2015-CH04-EX-005-SOLUTION
+% SOURCE-EXERCISE-ID: FAOA-2015-CH04-NODE-0080
+% STATEMENT-TARGET-SHA256: 40661e351b7cad48baf7c9d8e4b91c629468788e4e93a6722bd384dc6146a546
+\begin{o001solution}
+  {O001-FAOA-2015-CH04-EX-005-SOLUTION}
+  {FAOA-2015-CH04-NODE-0080}
+  {40661e351b7cad48baf7c9d8e4b91c629468788e4e93a6722bd384dc6146a546}
+\begin{o001statement}
+Mimpi buruk itu berlanjut. Sekarang pukul 23.00 dan Freddy kembali lagi.
+Kali ini (setelah, untungnya, menyerah soal fungsi~$\delta$) ia ingin
+menerapkan teorema representasi pada fungsional ``evaluasi
+pada nol'' pada ruang~$l_2(\Z)$. Dapatkah ia melakukannya? Jelaskan.
+\end{o001statement}
+\begin{o001answer}
+Ya. Evaluasi koordinat nol adalah fungsional terbatas bernorma satu pada
+$l_2(\Z)$ dan direpresentasikan oleh vektor basis standar $e^0$:
+$E_0(x)=x_0=\langle x,e^0\rangle$.
+\end{o001answer}
+\begin{o001proof}
+Berbeda dari $L_2(\R)$, anggota $l_2(\Z)$ benar-benar merupakan barisan
+dengan koordinat yang terdefinisi. Untuk setiap $x=(x_k)_{k\in\Z}$,
+\[
+ \abs{x_0}^2\leq\sum_{k\in\Z}\abs{x_k}^2=\norm x_2^2,
+\]
+sehingga $E_0$ linear dan $\norm{E_0}\leq1$. Pada $e^0$ berlaku
+$\norm{e^0}=1$ dan $E_0(e^0)=1$, jadi normanya tepat satu. Dengan konvensi
+hasil kali dalam edisi ini,
+\[
+ \langle x,e^0\rangle=\sum_{k\in\Z}x_k\conj{e^0_k}=x_0.
+\]
+Jadi semua hipotesis teorema representasi terpenuhi dan representernya
+adalah~$e^0$.
+\end{o001proof}
+\end{o001solution}
+
+% O001-SOLUTION-ID: O001-FAOA-2015-CH04-EX-006-SOLUTION
+% SOURCE-EXERCISE-ID: FAOA-2015-CH04-NODE-0091
+% STATEMENT-TARGET-SHA256: 986b9bb676932d7ef63f7ab92f49a8fa51ab6068b73b4daedb6c0c01a7c2ec38
+\begin{o001solution}
+  {O001-FAOA-2015-CH04-EX-006-SOLUTION}
+  {FAOA-2015-CH04-NODE-0091}
+  {986b9bb676932d7ef63f7ab92f49a8fa51ab6068b73b4daedb6c0c01a7c2ec38}
+\begin{o001statement}
+Jelaskan mengapa topologi pada ruang Hilbert yang dibangkitkan oleh konvergensi lemah jaring sesungguhnya merupakan
+topologi lemah dalam pengertian topologis yang lazim.
+\end{o001statement}
+\begin{o001answer}
+Topologi itu tepat sama dengan topologi awal
+$\sigma(H,H^*)$: topologi terkecil yang membuat setiap fungsional linear
+terbatas kontinu.
+\end{o001answer}
+\begin{o001proof}
+Untuk setiap $y\in H$, definisikan $\phi_y(x)=\langle x,y\rangle$. Teorema
+Representasi Riesz menyatakan bahwa keluarga $\{\phi_y:y\in H\}$ adalah
+seluruh dual kontinu~$H^*$. Topologi awal yang ditentukan keluarga ini
+mempunyai basis lingkungan di $a$ berupa
+\[
+ U(a;y_1,\ldots,y_m;\epsilon)
+ =\{x:\abs{\langle x-a,y_j\rangle}<\epsilon,
+             \ 1\leq j\leq m\}.
+\]
+Menurut sifat umum topologi awal, suatu jaring $(x_\lambda)$ konvergen ke
+$a$ dalam topologi tersebut jika dan hanya jika
+$\phi_y(x_\lambda)\to\phi_y(a)$ untuk setiap $y\in H$. Kondisi ini persis
+$\langle x_\lambda,y\rangle\to\langle a,y\rangle$ untuk setiap~$y$, yaitu
+definisi konvergensi lemah dalam soal. Karena konvergensi jaring menentukan
+topologi secara tunggal, topologi yang dibangkitkan oleh konvergensi itu
+adalah $\sigma(H,H^*)$, topologi lemah dalam arti topologis.
+\end{o001proof}
+\end{o001solution}
+
+% O001-SOLUTION-ID: O001-FAOA-2015-CH04-EX-007-SOLUTION
+% SOURCE-EXERCISE-ID: FAOA-2015-CH04-NODE-0092
+% STATEMENT-TARGET-SHA256: 848170d90169079965a64c432bbc9a6b1bfaf0ab895ba7558340a4a60524926c
+\begin{o001solution}
+  {O001-FAOA-2015-CH04-EX-007-SOLUTION}
+  {FAOA-2015-CH04-NODE-0092}
+  {848170d90169079965a64c432bbc9a6b1bfaf0ab895ba7558340a4a60524926c}
+\begin{o001statement}
+Misalkan $H$ ruang Hilbert dan $(x_{{}_{\sst\lambda}})$ jaring dalam $H$.
+ \begin{enumerate}
+  \item Jika $x_{{}_{\sst\lambda}} \to^s  a$ dalam $H$, maka $x_{{}_{\sst\lambda}} \to^w a$ dalam $H$.
+  \item Topologi kuat (norma) pada $H$ lebih kuat (lebih besar) daripada topologi lemah.
+  \item Tunjukkan dengan contoh bahwa kebalikan dari (a) tidak berlaku.
+  \item Apakah norma pada $H$ kontinu secara lemah?
+  \item Jika $x_{{}_{\sst\lambda}} \to^w  a$ dalam $H$ dan jika $\norm{x_{{}_{\sst\lambda}}} \to \norm{a}$, maka
+$x_{{}_{\sst\lambda}}\to^s a$ dalam~$H$.
+  \item Jika pemetaan linear $T\colon H \sto H$ kontinu (secara kuat), maka pemetaan tersebut kontinu secara lemah.
+ \end{enumerate}
+\end{o001statement}
+\begin{o001answer}
+(1), (2), (5), dan (6) benar. Untuk (3), basis standar $(e^n)$ di $l_2$
+konvergen lemah ke nol tetapi tidak dalam norma. Untuk (4), norma kontinu
+secara lemah tepat ketika $H$ berdimensi hingga.
+\end{o001answer}
+\begin{o001proof}
+(1) Dari ketaksamaan Cauchy--Schwarz,
+\[
+ \abs{\langle x_\lambda-a,y\rangle}
+ \leq\norm{x_\lambda-a}\norm y\longrightarrow0
+\]
+untuk setiap $y\in H$. (2) Jadi setiap jaring yang konvergen dalam topologi
+norma juga konvergen lemah; ekuivalen dengan mengatakan bahwa topologi norma
+lebih kuat.
+
+(3) Dalam $l_2$, untuk setiap $y=(y_n)\in l_2$ berlaku
+$\langle e^n,y\rangle=\conj{y_n}\to0$, sebab koordinat setiap barisan
+$l_2$ menuju nol. Namun $\norm{e^n}=1$, sehingga $e^n$ tidak konvergen dalam
+norma ke nol.
+
+(4) Contoh yang sama menunjukkan bahwa, jika $H$ berdimensi tak hingga,
+norma tidak kontinu lemah di nol: pilih suatu barisan ortonormal $(e^n)$;
+maka $e^n\to^w0$ tetapi $\norm{e^n}=1\not\to0$. Jika $H$ berdimensi hingga,
+ambil basis ortonormal $e^1,\ldots,e^m$. Konvergensi lemah berarti konvergensi
+setiap koordinat, dan
+$\norm x^2=\sum_{j=1}^m\abs{\langle x,e^j\rangle}^2$; jadi topologi lemah
+sama dengan topologi norma dan fungsi norma kontinu.
+
+(5) Karena hasil kali dalam kontinu pada setiap koordinat lemah yang tetap,
+\[
+ \norm{x_\lambda-a}^2
+ =\norm{x_\lambda}^2+\norm a^2
+  -2\Re\langle x_\lambda,a\rangle\longrightarrow0.
+\]
+(6) Untuk $y\in H$, pemetaan
+$x\mapsto\langle Tx,y\rangle$ adalah fungsional linear terbatas, sebab nilai
+mutlaknya paling besar $\norm T\norm y\norm x$. Oleh Riesz, ada $z_y\in H$
+sehingga $\langle Tx,y\rangle=\langle x,z_y\rangle$. Jika
+$x_\lambda\to^w a$, maka
+$\langle Tx_\lambda,y\rangle\to\langle Ta,y\rangle$ untuk setiap~$y$;
+jadi $Tx_\lambda\to^wTa$. Kriteria jaring untuk kontinuitas menyelesaikan
+pembuktian.
+\end{o001proof}
+\end{o001solution}
+
+% O001-SOLUTION-ID: O001-FAOA-2015-CH04-EX-008-SOLUTION
+% SOURCE-EXERCISE-ID: FAOA-2015-CH04-NODE-0093
+% STATEMENT-TARGET-SHA256: 4c8d88aed6251f2083c6029080a78a9b8a175cd792a4d2e114382a46518d4f4f
+\begin{o001solution}
+  {O001-FAOA-2015-CH04-EX-008-SOLUTION}
+  {FAOA-2015-CH04-NODE-0093}
+  {4c8d88aed6251f2083c6029080a78a9b8a175cd792a4d2e114382a46518d4f4f}
+\begin{o001statement}
+Misalkan $H$ ruang Hilbert berdimensi tak hingga. Tinjau subhimpunan-subhimpunan berikut dari~$H$:
+ \begin{enumerate}[label=\rm{(\alph*)}]
+  \item bola satuan terbuka;
+  \item bola satuan tertutup;
+  \item sfer satuan;
+  \item subruang linear tertutup.
+ \end{enumerate}
+Tentukan untuk setiap himpunan tersebut apakah masing-masing bersifat: tertutup secara kuat, tertutup secara lemah,
+terbuka secara kuat, terbuka secara lemah, kompak secara kuat, kompak secara lemah. (Salah satu bagian
+terlalu sulit untuk saat ini: \emph{Teorema Alaoglu}~\futurexref{6.2.9}{C067441} akan menunjukkan bahwa
+bola satuan tertutup kompak secara lemah.)
+\end{o001statement}
+\begin{o001answer}
+Dengan urutan sifat ``tertutup kuat, tertutup lemah, terbuka kuat, terbuka
+lemah, kompak kuat, kompak lemah'', jawabannya adalah
+\[
+\begin{array}{c|cccccc}
+ &\mathrm{TK}&\mathrm{TL}&\mathrm{BK}&\mathrm{BL}&\mathrm{KK}&\mathrm{KL}\\ \hline
+\{\norm x<1\}&\text{tidak}&\text{tidak}&\text{ya}&\text{tidak}&\text{tidak}&\text{tidak}\\
+\{\norm x\leq1\}&\text{ya}&\text{ya}&\text{tidak}&\text{tidak}&\text{tidak}&\text{ya}\\
+\{\norm x=1\}&\text{ya}&\text{tidak}&\text{tidak}&\text{tidak}&\text{tidak}&\text{tidak}.
+\end{array}
+\]
+Untuk subruang linear tertutup $M$: ia tertutup kuat dan lemah; ia terbuka
+kuat maupun lemah tepat jika $M=H$; dan ia kompak kuat maupun lemah tepat
+jika $M=\{0\}$.
+\end{o001answer}
+\begin{o001proof}
+Kontinuitas norma memberi keterbukaan bola terbuka serta ketertutupan bola
+tertutup dan sfer dalam topologi kuat. Ketiganya tidak mempunyai sifat kuat
+lain yang tercantum: bola terbuka tidak tertutup; dua himpunan lainnya tidak
+terbuka; dan tidak satu pun kompak kuat. Untuk klaim terakhir, suatu barisan
+ortonormal terletak di bola tertutup dan sfer serta mempunyai jarak
+$\sqrt2$ antarsuku. Kelipatan tetap, misalnya $e^n/2$, memberi argumen yang
+sama di dalam bola terbuka.
+
+Bola tertutup bersifat tertutup lemah karena
+\[
+ \{x:\norm x\leq1\}
+ =\bigcap_{\norm y\leq1}\{x:\abs{\langle x,y\rangle}\leq1\},
+\]
+suatu irisan himpunan tertutup lemah. Ia juga kompak lemah. Berikut bukti
+lokal klaim terakhir. Petakan bola itu ke
+$\prod_{y\in H}\{z\in\C:\abs z\leq\norm y\}$ melalui
+$x\mapsto(\langle x,y\rangle)_y$. Produk cakram kompak ini kompak menurut
+teorema kekompakan hasil kali. Setiap titik tutupan koordinat menentukan
+fungsional konjugat-linear $\Phi(y)$ yang memenuhi
+$\abs{\Phi(y)}\leq\norm y$ dan mempertahankan penjumlahan serta perkalian
+skalar; sifat-sifat itu adalah persamaan tertutup dalam produk. Teorema
+Representasi Riesz memberi $x\in H$, $\norm x\leq1$, dengan
+$\Phi(y)=\langle x,y\rangle$. Jadi citra bola tertutup sendiri tertutup di
+dalam produk kompak dan karenanya kompak; topologi yang diwarisi tepat
+topologi lemah.
+
+Setiap lingkungan lemah dasar hanya membatasi berhingga banyak hasil kali
+dalam. Karena $H$ berdimensi tak hingga, terdapat vektor satuan $v$ yang
+ortogonal terhadap semua vektor penguji itu. Maka lingkungan tersebut
+memuat $x+tv$ untuk setiap skalar~$t$. Akibatnya bola terbuka, bola tertutup,
+dan sfer tidak terbuka lemah. Barisan ortonormal memenuhi $e^n\to^w0$;
+karena itu bola terbuka tidak tertutup lemah (kelipatan
+$(1-1/n)e^1$ juga memberi limit batas), dan sfer tidak tertutup lemah.
+Dalam ruang Hausdorff, himpunan kompak harus tertutup; jadi bola terbuka dan
+sfer tidak kompak lemah.
+
+Terakhir, untuk subruang tertutup $M$, teorema proyeksi memberi
+$M=M^{\perp\perp}$. Dengan demikian
+\[
+ M=\bigcap_{y\in M^\perp}\{x:\langle x,y\rangle=0\},
+\]
+sehingga $M$ tertutup lemah. Subruang yang mempunyai interior dalam suatu
+topologi ruang vektor harus sama dengan seluruh ruang; jadi $M$ terbuka
+dalam salah satu topologi tepat jika $M=H$. Jika $M$ memuat $u\neq0$, fungsi
+lemah-kontinu $x\mapsto\langle x,u\rangle$ tidak terbatas pada
+$\{tu:t\in\K\}\subset M$, sedangkan citra kontinu himpunan kompak harus
+kompak dan terbatas. Jadi $M$ tidak kompak lemah, dan terlebih lagi tidak
+kompak kuat. Subruang nol adalah kompak dalam kedua topologi.
+\end{o001proof}
+\end{o001solution}
+
+% O001-SOLUTION-ID: O001-FAOA-2015-CH04-EX-009-SOLUTION
+% SOURCE-EXERCISE-ID: FAOA-2015-CH04-NODE-0094
+% STATEMENT-TARGET-SHA256: 6ac5283840818281ac10974dbec5da9b992478b82ef530203afa9f84a1cfcb77
+\begin{o001solution}
+  {O001-FAOA-2015-CH04-EX-009-SOLUTION}
+  {FAOA-2015-CH04-NODE-0094}
+  {6ac5283840818281ac10974dbec5da9b992478b82ef530203afa9f84a1cfcb77}
+\begin{o001statement}
+Misalkan $\{e^n\colon n \in \N\}$ basis biasa untuk $l_2$. Untuk
+setiap $n \in \N$, misalkan $a_n = \sqrt n\, e^n$. Manakah di antara pernyataan berikut
+yang benar?
+ \begin{enumerate}
+  \item $0$ adalah titik akumulasi lemah dari himpunan
+$\{a_n\colon n \in \N\}$.
+  \item $0$ adalah titik gugus lemah dari barisan~$(a_n)$.
+  \item $0$ adalah limit lemah dari suatu subbarisan dari~$(a_n)$.
+ \end{enumerate}
+\end{o001statement}
+\begin{o001answer}
+Pernyataan (1) dan (2) benar, sedangkan (3) salah.
+\end{o001answer}
+\begin{o001proof}
+Ambil lingkungan lemah dasar nol yang ditentukan oleh
+$y^1,\ldots,y^m\in l_2$ dan $\epsilon>0$. Tetapkan
+$s_n=\sum_{j=1}^m\abs{y^j_n}^2$. Karena $\sum_ns_n<\infty$, untuk setiap
+$N$ ada $n\geq N$ dengan $ns_n<\epsilon^2$: jika tidak, deret ekor
+$\sum_ns_n$ mendominasi kelipatan deret harmonik. Untuk indeks itu,
+\[
+ \abs{\langle a_n,y^j\rangle}
+ =\sqrt n\,\abs{y^j_n}\leq\sqrt{ns_n}<\epsilon
+ \qquad(1\leq j\leq m).
+\]
+Jadi setiap lingkungan lemah nol memuat $a_n$ untuk indeks yang arbitrer
+besar. Karena $0$ bukan salah satu $a_n$, nol adalah titik akumulasi lemah
+himpunannya, dan karena kunjungan terjadi setelah setiap indeks, nol juga
+titik gugus lemah barisan.
+
+Sekarang ambil sebarang subbarisan $(a_{n_k})$. Jika ia konvergen lemah ke
+$x$, maka untuk setiap koordinat tetap $r$, akhirnya $n_k\neq r$, sehingga
+$\langle a_{n_k},e^r\rangle=0$ dan $\langle x,e^r\rangle=0$. Kelengkapan
+basis memaksa $x=0$. Pilih lagi subsubbarisan dengan
+$n_{k_j}\geq2^j$, dan definisikan $y\in l_2$ dengan
+$y_{n_{k_j}}=n_{k_j}^{-1/2}$ serta koordinat lain nol. Memang
+$\sum_j\abs{y_{n_{k_j}}}^2\leq\sum_j2^{-j}<\infty$, tetapi
+\[
+ \langle a_{n_{k_j}},y\rangle=1
+\]
+untuk setiap~$j$. Subsubbarisan itu tidak konvergen lemah ke nol, sehingga
+subbarisan semula pun tidak mungkin konvergen lemah. Maka (3) salah.
+\end{o001proof}
+\end{o001solution}
+
+% O001-SOLUTION-ID: O001-FAOA-2015-CH04-EX-010-SOLUTION
+% SOURCE-EXERCISE-ID: FAOA-2015-CH04-NODE-0097
+% STATEMENT-TARGET-SHA256: 4d967e20b7456eb8ff5a320ebaa0e09a669d541a90efd55b495fa12f0ecb5237
+\begin{o001solution}
+  {O001-FAOA-2015-CH04-EX-010-SOLUTION}
+  {FAOA-2015-CH04-NODE-0097}
+  {4d967e20b7456eb8ff5a320ebaa0e09a669d541a90efd55b495fa12f0ecb5237}
+\begin{o001statement}
+Dalam definisi sebelumnya, rujukan kepada funktor pelupa sering
+dihilangkan dan diagram yang menyertainya sering digambar sebagai berikut:
+ \[\xy
+     \qtriangle/{>}`{>}`{-->}/[S`F`A;\iota`f`\wt f_\iota]
+   \endxy\]
+Diagram ini tentu terlihat jauh lebih sederhana. Menurut Anda, mengapa saya memilih versi yang
+lebih rumit?
+\end{o001statement}
+\begin{o001answer}
+Versi lengkap menjaga tipe setiap objek dan panah: $S,\abs F,\abs A$ serta
+$\iota,f,\abs{\widetilde f_\iota}$ berada di kategori himpunan, sedangkan
+$F,A$ dan $\widetilde f_\iota$ berada di kategori konkret. Diagram ringkas
+mencampurkan dua kategori dan menyembunyikan peran funktor pelupa.
+\end{o001answer}
+\begin{o001proof}
+Dalam kategori konkret $\cat C$, $F$ dan $A$ adalah objek kategori, bukan
+secara harfiah himpunan. Pemetaan $\iota\colon S\to\abs F$ dan
+$f\colon S\to\abs A$ hanyalah fungsi antarhimpunan dan pada umumnya bukan
+morfisme $\cat C$. Sebaliknya, pemetaan universal
+$\widetilde f_\iota\colon F\to A$ adalah morfisme dalam $\cat C$, dan
+persamaan yang benar pada himpunan dasar ialah
+\[
+ \abs{\widetilde f_\iota}\circ\iota=f.
+\]
+Diagram sederhana menulis $S,F,A$ seolah-olah ketiganya objek satu kategori
+dan menulis ketiga panah seolah-olah bertipe sama. Diagram yang lebih rumit
+memperlihatkan baik segitiga pada himpunan dasar maupun morfisme kategori
+yang dipetakan ke sana oleh funktor pelupa. Karena itu komutativitas dan
+sifat universalnya bertipe benar dan tidak bergantung pada penyalahgunaan
+notasi yang hanya aman setelah pembaca memahami identifikasi tersebut.
+\end{o001proof}
+\end{o001solution}

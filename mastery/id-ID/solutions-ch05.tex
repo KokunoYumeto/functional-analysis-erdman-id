@@ -1,0 +1,273 @@
+% Lapisan solusi O001 -- Bab 5 (Operator pada Ruang Hilbert)
+% 4 solusi asli terpisah; bukan tulisan John M. Erdman.
+% Provenans model: OpenAI Codex gpt-5.6-sol, Ultra, atas arahan pengguna.
+% Lisensi komponen solusi: CC BY-SA 4.0.
+% Tidak menyiratkan dukungan John M. Erdman atau Portland State University.
+
+\markboth{SOLUSI O001 UNTUK BAB 5: OPERATOR PADA RUANG HILBERT}{SOLUSI O001 UNTUK BAB 5: OPERATOR PADA RUANG HILBERT}
+\section*{Solusi O001 untuk Bab 5: Operator pada Ruang Hilbert}
+\addcontentsline{toc}{section}{Solusi O001 untuk Bab 5: Operator pada Ruang Hilbert}
+\begin{center}
+\small
+Komponen solusi asli terpisah, CC BY-SA 4.0. Ditulis dengan bantuan
+OpenAI Codex gpt-5.6-sol, Ultra, atas arahan pengguna. Pernyataan latihan
+berasal dari edisi terjemahan karya John M. Erdman; solusi ini bukan tulisan
+beliau dan tidak menyiratkan dukungan beliau atau Portland State University.
+\end{center}
+
+% O001-SOLUTION-ID: O001-FAOA-2015-CH05-EX-001-SOLUTION
+% SOURCE-EXERCISE-ID: FAOA-2015-CH05-NODE-0034
+% STATEMENT-TARGET-SHA256: ee6308dea448da22e9841970db96f86a106225688b6a5aef98ca4b39f1d20a35
+\begin{o001solution}
+  {O001-FAOA-2015-CH05-EX-001-SOLUTION}
+  {FAOA-2015-CH05-NODE-0034}
+  {ee6308dea448da22e9841970db96f86a106225688b6a5aef98ca4b39f1d20a35}
+\begin{o001statement}
+Misalkan $\N_3 = \{1,2,3\}$ dan $\mu$ ukuran pencacahan pada $\N_3$.
+ \begin{enumerate}
+  \item[(a)] Identifikasilah ruang Hilbert~$L_2(\N_3,\mu)$.
+  \item[(b)] Identifikasilah operator perkalian pada~$L_2(\N_3,\mu)$.
+  \item[(c)] Misalkan $T$ operator linear pada $\C^3$ yang representasi
+matriksnya adalah
+   \[ \begin{bmatrix}
+          2  &  0  &  1 \\
+          0  &  2  & -1 \\
+          1  & -1  &  1
+      \end{bmatrix}.\]
+Gunakan operator $T$ untuk mengilustrasikan rumusan teorema spektral sebelumnya.
+ \end{enumerate}
+\end{o001statement}
+\begin{o001answer}
+(a) $L_2(\N_3,\mu)=\C^3$ dengan
+$\langle x,y\rangle=\sum_{j=1}^3x_j\conj{y_j}$. (b) Operator perkalian
+adalah $M_\phi=\diag(\phi(1),\phi(2),\phi(3))$. (c) Matriks $T$ mempunyai
+nilai eigen $0,2,3$ dengan basis ortonormal
+\[
+ u_0=\frac{(-1,1,2)}{\sqrt6},\qquad
+ u_2=\frac{(1,1,0)}{\sqrt2},\qquad
+ u_3=\frac{(1,-1,1)}{\sqrt3}.
+\]
+Jadi $T$ ekuivalen secara uniter dengan operator perkalian oleh fungsi
+$\phi(1)=0$, $\phi(2)=2$, $\phi(3)=3$ pada~$L_2(\N_3,\mu)$.
+\end{o001answer}
+\begin{o001proof}
+Karena ukuran setiap singleton sama dengan satu, kelas fungsi pada $\N_3$
+ditentukan oleh tiga nilainya dan
+\[
+ \norm f_2^2=\sum_{j=1}^3\abs{f(j)}^2.
+\]
+Ini memberikan identifikasi isometrik dalam (a). Perkalian titik demi titik
+oleh $\phi$ kemudian mempunyai matriks diagonal yang dinyatakan dalam (b),
+dan setiap operator perkalian diperoleh dengan cara itu.
+
+Untuk matriks $A$ pada (c), ekspansi determinan memberi
+\[
+ \det(\lambda I-A)=\lambda(\lambda-2)(\lambda-3).
+\]
+Substitusi langsung menunjukkan
+\[
+ Au_0=0,\qquad Au_2=2u_2,\qquad Au_3=3u_3.
+\]
+Ketiga vektor yang ditampilkan bernorma satu dan hasil kali dalam setiap
+pasangannya nol, sehingga membentuk basis ortonormal. Definisikan
+$U\colon L_2(\N_3,\mu)\to\C^3$ dengan
+$U\delta_1=u_0$, $U\delta_2=u_2$, dan $U\delta_3=u_3$. Maka $U$ uniter dan,
+untuk $j=1,2,3$,
+\[
+ TU\delta_j=\phi(j)U\delta_j=UM_\phi\delta_j.
+\]
+Karena vektor-vektor itu suatu basis, $T=UM_\phi U^{-1}$. Ini tepat
+rumusan teorema spektral: operator normal (di sini bahkan swaadjoin)
+ekuivalen secara uniter dengan operator perkalian.
+\end{o001proof}
+\end{o001solution}
+
+% O001-SOLUTION-ID: O001-FAOA-2015-CH05-EX-002-SOLUTION
+% SOURCE-EXERCISE-ID: FAOA-2015-CH05-NODE-0038
+% STATEMENT-TARGET-SHA256: a4478e29765c8fb04487e45bd6b6fd8fdd22d706e22b5fab1b6b7f7294f1952c
+\begin{o001solution}
+  {O001-FAOA-2015-CH05-EX-002-SOLUTION}
+  {FAOA-2015-CH05-NODE-0038}
+  {a4478e29765c8fb04487e45bd6b6fd8fdd22d706e22b5fab1b6b7f7294f1952c}
+\begin{o001statement}
+Misalkan $V$ adalah \emph{operator Volterra} yang didefinisikan di atas.
+ \begin{enumerate}
+  \item[(a)] Tunjukkan bahwa $V$ injektif.
+  \item[(b)] Hitunglah $V^*$.
+  \item[(c)] Tentukan $V + V^*$ beserta jangkauannya.
+ \end{enumerate}
+\end{o001statement}
+\begin{o001answer}
+$V$ injektif,
+\[
+ (V^*g)(t)=\int_t^1g(x)\,dx,
+ \qquad
+ ((V+V^*)f)(x)=\int_0^1f(t)\,dt,
+\]
+dan $\ran(V+V^*)$ adalah subruang satu-dimensi semua fungsi konstan pada
+$[0,1]$.
+\end{o001answer}
+\begin{o001proof}
+Untuk $f\in L_2([0,1])$, fungsi
+$F(x)=\int_0^x f(t)\,dt$ mempunyai wakil kontinu mutlak dan $F'=f$ hampir
+di mana-mana. Jika $Vf=0$ sebagai anggota $L_2$, maka $F=0$ hampir di
+mana-mana. Kekontinuan $F$ memaksa $F=0$ di setiap titik, sehingga
+$f=F'=0$ hampir di mana-mana. Jadi $V$ injektif.
+
+Teorema Fubini dapat diterapkan karena, dengan Cauchy--Schwarz, integral
+mutlak pada segitiga $0\leq t\leq x\leq1$ berhingga. Untuk $f,g\in L_2$,
+\begin{align*}
+ \langle Vf,g\rangle
+ &=\int_0^1\left(\int_0^x f(t)\,dt\right)g(x)\,dx\\
+ &=\int_0^1 f(t)\left(\int_t^1g(x)\,dx\right)dt.
+\end{align*}
+Karena ruangnya real, ini sama dengan
+$\langle f,V^*g\rangle$ untuk rumus $V^*$ dalam jawaban. Akhirnya,
+\[
+ ((V+V^*)f)(x)
+ =\int_0^xf(t)\,dt+\int_x^1f(t)\,dt
+ =\int_0^1f(t)\,dt.
+\]
+Jadi setiap citra konstan. Sebaliknya, fungsi konstan $f=c$ menghasilkan
+fungsi konstan bernilai $c$, sehingga jangkauannya tepat semua fungsi
+konstan.
+\end{o001proof}
+\end{o001solution}
+
+% O001-SOLUTION-ID: O001-FAOA-2015-CH05-EX-003-SOLUTION
+% SOURCE-EXERCISE-ID: FAOA-2015-CH05-NODE-0051
+% STATEMENT-TARGET-SHA256: a360c061f372f76160bf31105405bc47db3322f73be4c99931a6f4e167c6eb0d
+\begin{o001solution}
+  {O001-FAOA-2015-CH05-EX-003-SOLUTION}
+  {FAOA-2015-CH05-NODE-0051}
+  {a360c061f372f76160bf31105405bc47db3322f73be4c99931a6f4e167c6eb0d}
+\begin{o001statement}
+Misalkan $\fml E$ adalah basis ortonormal bagi ruang Hilbert~$H$. Bahas transformasi linear $T$ pada $H$
+sedemikian sehingga $T(e) = 0$ untuk setiap $e \in \fml E$. Berikan contoh tak trivial.
+\end{o001statement}
+\begin{o001answer}
+Jika $T$ terbatas, maka $T=0$. Namun pada ruang Hilbert berdimensi tak
+hingga terdapat transformasi linear tak kontinu dan tak nol yang menghilang
+pada setiap vektor suatu basis ortonormal.
+\end{o001answer}
+\begin{o001proof}
+Rentang linear $\spn\fml E$ padat dalam~$H$. Jika $T$ terbatas, untuk setiap
+$x\in H$ pilih jaring (atau barisan jika basisnya terhitung) $x_\alpha$ dari
+$\spn\fml E$ yang konvergen dalam norma ke~$x$. Hipotesis memberi
+$Tx_\alpha=0$, sehingga kekontinuan menghasilkan $Tx=0$.
+
+Untuk contoh tak trivial, ambil $H=l_2$, $\fml E=\{e^n:n\in\N\}$, dan
+\[
+ u=(1,1/2,1/3,\ldots)\in l_2.
+\]
+Vektor $u$ tidak berada dalam rentang linear hingga $\spn\fml E$, sehingga
+$\fml E\cup\{u\}$ bebas linear. Perluas himpunan ini menjadi basis Hamel
+$\fml B$ untuk $l_2$. Definisikan $T$ pada basis Hamel dengan
+\[
+ T(u)=e^1,\qquad T(b)=0\quad(b\in\fml B\setminus\{u\}),
+\]
+lalu perluas secara linear. Maka $T(e^n)=0$ untuk setiap~$n$, tetapi
+$T(u)=e^1\neq0$. Transformasi ini harus tak terbatas, sebab seandainya
+terbatas, argumen kepadatan pada paragraf pertama akan memaksanya sama
+dengan nol. Dalam dimensi hingga, basis ortonormal sekaligus basis Hamel,
+sehingga contoh tak trivial tidak mungkin ada.
+\end{o001proof}
+\end{o001solution}
+
+% O001-SOLUTION-ID: O001-FAOA-2015-CH05-EX-004-SOLUTION
+% SOURCE-EXERCISE-ID: FAOA-2015-CH05-NODE-0075
+% STATEMENT-TARGET-SHA256: 84852f969329993492bb16e9519447052b491750458f20a6faa9aa1a87069596
+\begin{o001solution}
+  {O001-FAOA-2015-CH05-EX-004-SOLUTION}
+  {FAOA-2015-CH05-NODE-0075}
+  {84852f969329993492bb16e9519447052b491750458f20a6faa9aa1a87069596}
+\begin{o001statement}
+Misalkan $H$ ruang Hilbert kompleks dan $T$ operator positif pada~$H$.  Definisikan
+   \[ \langle x,y \rangle_1 := \langle Tx,y \rangle \qquad \text{ dan } \qquad \norm{x}_1 \equiv \sqrt{\langle x,x \rangle_1} \]
+untuk semua $x \in H$.
+ \begin{enumerate}
+  \item[(a)] Buktikan bahwa $\norm{\hphantom O}_1$ merupakan norma jika dan hanya jika $\ker T = \{0\}$.
+  \item[(b)] Misalkan $\ker T = \{0\}$. Tunjukkan bahwa norma $\norm{\hphantom O}$ dan
+$\norm{\hphantom O}_1$ menginduksi topologi yang sama pada~$H$ jika dan hanya jika $T$ invertibel dalam
+$\ofml B(H)$. \emph{Petunjuk.}  Ketika terdapat dua topologi pada~$H$, sering kali berguna untuk
+mempertimbangkan operator identitas pada~$H$.
+  \item[(c)] Misalkan $T$ invertibel dalam $\ofml B(H)$.  Untuk $S \in \ofml B(H)$, carilah suatu rumus bagi
+adjoin dari $S$ terhadap hasil kali dalam $\langle \hphantom x , \hphantom y \rangle_1$.
+ \end{enumerate}
+\end{o001statement}
+\begin{o001answer}
+(a) $\norm{\hphantom O}_1$ adalah norma tepat ketika $\ker T=\{0\}$.
+(b) Kedua norma menginduksi topologi yang sama tepat ketika $T$ invertibel.
+(c) Jika $S^{*_1}$ menyatakan adjoin terhadap hasil kali dalam baru, maka
+\[
+ S^{*_1}=T^{-1}S^*T.
+\]
+\end{o001answer}
+\begin{o001proof}
+Bentuk $[x,y]=\langle Tx,y\rangle$ bersifat seskuilinear dan Hermitian
+karena $T=T^*$, serta $[x,x]\geq0$. Ketaksamaan Cauchy--Schwarz untuk bentuk
+positif memberi
+\[
+ \abs{[x,y]}^2\leq[x,x][y,y].
+\]
+Jika $[x,x]=0$, ruas kanan menunjukkan $\langle Tx,y\rangle=0$ untuk semua
+$y$, jadi $Tx=0$. Sebaliknya, $Tx=0$ langsung memberi $[x,x]=0$. Maka
+bentuk itu definit positif, dan akar kuadratnya norma, tepat ketika
+$\ker T=\{0\}$. Ini membuktikan (a), termasuk ketaksamaan segitiga yang
+merupakan konsekuensi Cauchy--Schwarz bagi hasil kali dalam~$[\ ,\ ]$.
+
+Selalu berlaku
+\[
+ \norm{x}_1^2=\langle Tx,x\rangle\leq\norm T\,\norm x^2,
+\]
+jadi identitas $I\colon(H,\norm{\hphantom O})\to
+(H,\norm{\hphantom O}_1)$ kontinu. Kedua topologi sama tepat ketika
+identitas sebaliknya kontinu, yaitu ketika ada $c>0$ sehingga
+\[
+ \norm x\leq c\norm{x}_1\quad(x\in H). \tag{1}
+\]
+Jika (1) berlaku dan $\delta=c^{-2}$, maka
+\[
+ \delta\norm x^2\leq\langle Tx,x\rangle
+ \leq\norm{Tx}\norm x,
+\]
+sehingga $\norm{Tx}\geq\delta\norm x$. Jadi $T$ injektif dan jangkauannya
+tertutup. Selain itu
+$(\ran T)^\perp=\ker T^*=\ker T=\{0\}$, sehingga jangkauannya padat. Ia
+karena itu sama dengan~$H$, dan invers $T^{-1}$ terbatas dengan norma paling
+besar $\delta^{-1}$.
+
+Sebaliknya, andaikan $T$ invertibel. Inversnya positif: jika $y=Tx$, maka
+\[
+ \langle T^{-1}y,y\rangle=\langle x,Tx\rangle
+ =\langle Tx,x\rangle\geq0.
+\]
+Gunakan Cauchy--Schwarz untuk bentuk positif $[u,v]=\langle Tu,v\rangle$:
+\begin{align*}
+ \norm x^2
+ &=\langle T(T^{-1}x),x\rangle\\
+ &\leq
+ \langle T(T^{-1}x),T^{-1}x\rangle^{1/2}
+ \langle Tx,x\rangle^{1/2}\\
+ &=\langle x,T^{-1}x\rangle^{1/2}\norm{x}_1
+ \leq\norm{T^{-1}}^{1/2}\norm x\,\norm{x}_1.
+\end{align*}
+Untuk $x\neq0$, pembagian dengan $\norm x$ memberi
+$\norm x\leq\norm{T^{-1}}^{1/2}\norm{x}_1$, yaitu (1). Ini menyelesaikan
+(b).
+
+Untuk (c), tetapkan $A=T^{-1}S^*T$, yang terbatas karena ketiga faktornya
+terbatas. Untuk semua $x,y\in H$,
+\begin{align*}
+ \langle Sx,y\rangle_1
+ &=\langle TSx,y\rangle
+  =\langle Sx,Ty\rangle
+  =\langle x,S^*Ty\rangle\\
+ &=\langle Tx,T^{-1}S^*Ty\rangle
+  =\langle x,Ay\rangle_1.
+\end{align*}
+Jadi, menurut definisi adjoin dalam hasil kali dalam baru,
+$S^{*_1}=A=T^{-1}S^*T$. Urutan faktor ini juga memeriksa bahwa rumus sesuai
+dengan konvensi edisi bahwa hasil kali dalam linear pada variabel pertama.
+\end{o001proof}
+\end{o001solution}

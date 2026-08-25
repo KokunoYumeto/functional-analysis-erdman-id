@@ -1,0 +1,24 @@
+{
+  "artifacts": {
+    "manifest_sha256": "e20683b5cb9ac6e6cd787d813476213ef8b5ddc2967ff0c6374b67b6419a7365",
+    "route_map_sha256": "4a95bfba3957dc2d0fc73dc1a1ae4c47848e197a61a9d71365fd51d312388ee1",
+    "site_inventory_sha256": "b2f953e6b4049f87ce583c45ca7f0f96eb496f7d678a85d0a1918a3c49d9cafe",
+    "source_reader_inventory_sha256": "f04bb3f5ee883c794474b191faf0e724987ebc01c4711bac8f6dc5421e543f32"
+  },
+  "counts": {
+    "bridge_units": 13,
+    "findings": 0,
+    "headings": 322,
+    "html_documents": 15,
+    "internal_references": 448,
+    "mathml_elements": 2288,
+    "reader_work": 10,
+    "route_records": 294,
+    "solutions": 52,
+    "source_reader_links": 126,
+    "text_diagrams": 1
+  },
+  "findings": [],
+  "passed": true,
+  "schema_version": "o008.html-companion-qa.v1"
+}

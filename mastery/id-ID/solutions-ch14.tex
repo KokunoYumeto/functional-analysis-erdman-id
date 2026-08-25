@@ -1,0 +1,145 @@
+% Lapisan solusi O001 -- Bab 14 (Aljabar Pengali)
+% 2 solusi asli terpisah; bukan tulisan John M. Erdman.
+% Provenans model: OpenAI Codex gpt-5.6-sol, Ultra, atas arahan pengguna.
+% Lisensi komponen solusi: CC BY-SA 4.0.
+% Tidak menyiratkan dukungan John M. Erdman atau Portland State University.
+
+\clearpage
+\markboth{SOLUSI O001 UNTUK BAB 14: ALJABAR PENGALI}{SOLUSI O001 UNTUK BAB 14: ALJABAR PENGALI}
+% AMSBook mengambil kepala halaman genap dari topmark halaman sebelumnya.
+% Gaya satu halaman ini memastikan halaman pembuka Bab 14 memakai kepala
+% Bab 14 tanpa memindahkan tanda tersebut ke halaman terakhir Bab 13.
+\makeatletter
+\def\ps@oonechapterxiv{%
+  \ps@headings
+  \def\@evenhead{%
+    \setTrue{runhead}%
+    \normalfont\scriptsize
+    \rlap{\thepage}\hfil
+    \def\thanks{\protect\thanks@warning}%
+    SOLUSI O001 UNTUK BAB 14: ALJABAR PENGALI\hfil}%
+  \def\@oddhead{%
+    \setTrue{runhead}%
+    \normalfont\scriptsize\hfil
+    \def\thanks{\protect\thanks@warning}%
+    SOLUSI O001 UNTUK BAB 14: ALJABAR PENGALI\hfil\llap{\thepage}}%
+}
+\makeatother
+\thispagestyle{oonechapterxiv}
+\section*{Solusi O001 untuk Bab 14: Aljabar Pengali}
+\addcontentsline{toc}{section}{Solusi O001 untuk Bab 14: Aljabar Pengali}
+\begin{center}
+\small
+Komponen solusi asli terpisah, CC BY-SA 4.0. Ditulis dengan bantuan
+OpenAI Codex gpt-5.6-sol, Ultra, atas arahan pengguna. Pernyataan latihan
+berasal dari edisi terjemahan karya John M. Erdman; solusi ini bukan tulisan
+beliau dan tidak menyiratkan dukungan beliau atau Portland State University.
+\end{center}
+
+% O001-SOLUTION-ID: O001-FAOA-2015-CH14-EX-001-SOLUTION
+% SOURCE-EXERCISE-ID: FAOA-2015-CH14-NODE-0005
+% STATEMENT-TARGET-SHA256: cd4d713e827bc5f3452e91f669d72db723d317f124b43c853eda067d3b95539e
+\begin{o001solution}
+  {O001-FAOA-2015-CH14-EX-001-SOLUTION}
+  {FAOA-2015-CH14-NODE-0005}
+  {cd4d713e827bc5f3452e91f669d72db723d317f124b43c853eda067d3b95539e}
+\begin{o001statement}
+Pastikan bahwa definisi \emph{ruang vektor} sebelumnya ekuivalen
+dengan definisi yang biasa Anda gunakan.
+\end{o001statement}
+\begin{o001answer}
+Pemetaan $M$ dan perkalian skalar biasa saling menentukan melalui
+$\alpha x=M(\alpha)(x)$; aksioma homomorfisme gelanggang beridentitas bagi
+$M$ tepat ekuivalen dengan aksioma perkalian skalar.
+\end{o001answer}
+\begin{o001proof}
+Andaikan mula-mula $(V,+,M)$ memenuhi definisi formal dan tetapkan
+$\alpha x=M(\alpha)(x)$. Karena setiap $M(\alpha)$ merupakan endomorfisme
+grup Abel~$(V,+)$,
+\[
+ \alpha(x+y)=\alpha x+\alpha y.
+\]
+Karena $M$ homomorfisme gelanggang,
+\begin{align*}
+ (\alpha+\beta)x
+ &=M(\alpha+\beta)x
+  =\bigl(M(\alpha)+M(\beta)\bigr)x
+  =\alpha x+\beta x,\\
+ (\alpha\beta)x
+ &=M(\alpha\beta)x
+  =M(\alpha)M(\beta)x
+  =\alpha(\beta x),\\
+ 1x&=M(1)x=x.
+\end{align*}
+Grup Abel memberi seluruh aksioma penjumlahan vektor, dan ketiga identitas di
+atas beserta aditivitas $M(\alpha)$ memberi seluruh aksioma perkalian skalar
+kompleks yang biasa.
+
+Sebaliknya, mulai dari ruang vektor kompleks dalam pengertian biasa dan
+definisikan $M(\alpha)(x)=\alpha x$. Distributivitas terhadap penjumlahan
+vektor menunjukkan $M(\alpha)\in\Hom(V,+)$. Distributivitas terhadap
+penjumlahan skalar memberi $M(\alpha+\beta)=M(\alpha)+M(\beta)$,
+asosiativitas perkalian skalar memberi
+$M(\alpha\beta)=M(\alpha)M(\beta)$, dan aksioma satuan memberi
+$M(1)=I_V$. Jadi $M$ homomorfisme gelanggang beridentitas. Kedua konstruksi
+jelas saling invers.
+\end{o001proof}
+\end{o001solution}
+
+% O001-SOLUTION-ID: O001-FAOA-2015-CH14-EX-002-SOLUTION
+% SOURCE-EXERCISE-ID: FAOA-2015-CH14-NODE-0009
+% STATEMENT-TARGET-SHA256: 167b8865f270fa360a46726a6ce2259e3433b08b036fc661bf498ef6242b93dc
+\begin{o001solution}
+  {O001-FAOA-2015-CH14-EX-002-SOLUTION}
+  {FAOA-2015-CH14-NODE-0009}
+  {167b8865f270fa360a46726a6ce2259e3433b08b036fc661bf498ef6242b93dc}
+\begin{o001statement}
+Periksa bahwa definisi \emph{modul-$A$} dalam~\ref{0038017}
+dan~\ref{0038031} ekuivalen.
+\end{o001statement}
+\begin{o001answer}
+Dengan perkalian operator standar, kedua definisi tidak ekuivalen persis
+seperti tercetak: definisi~\ref{0038031} harus memakai antihomomorfisme
+$\Phi\colon A\to\ofml L(V)$, atau secara ekuivalen homomorfisme
+$A^{\mathrm{op}}\to\ofml L(V)$. Setelah koreksi itu, korespondensinya ialah
+$\Phi(a)x=xa$.
+\end{o001answer}
+\begin{o001proof}
+Mulailah dengan modul kanan dalam~\ref{0038017} dan definisikan operator
+$\Phi(a)$ melalui
+\[
+ \Phi(a)x=xa.
+\]
+Bilinearitas aksi menunjukkan bahwa $\Phi(a)$ linear dan bahwa
+$a\mapsto\Phi(a)$ linear. Akan tetapi, aksioma modul kanan memberi
+\[
+ \Phi(ab)x=x(ab)=(xa)b=\Phi(b)\Phi(a)x,
+\]
+jadi
+\[
+ \Phi(ab)=\Phi(b)\Phi(a).
+\]
+Dengan kata lain, $\Phi$ adalah antihomomorfisme
+$A\to\ofml L(V)$, atau homomorfisme
+$A^{\mathrm{op}}\to\ofml L(V)$. Jika $A$ beridentitas, syarat
+$x1_A=x$ tepat sama dengan $\Phi(1_A)=I_V$.
+
+Sebaliknya, andaikan $\Phi\colon A\to\ofml L(V)$ linear, beridentitas bila
+diperlukan, dan memenuhi $\Phi(ab)=\Phi(b)\Phi(a)$. Tetapkan
+$xa=\Phi(a)x$. Linearitas $\Phi$ dan setiap operator $\Phi(a)$ memberi
+bilinearitas, sedangkan
+\[
+ (xa)b=\Phi(b)\Phi(a)x=\Phi(ab)x=x(ab).
+\]
+Syarat satuan juga langsung cocok. Kedua konstruksi ini saling invers, sehingga
+memberi ekuivalensi yang benar.
+
+Bahwa kata ``homomorfisme'' pada~\ref{0038031} tidak dapat dipertahankan untuk
+aljabar tak komutatif dapat dilihat dari contoh $A=M_2(\C)$ dan $V=A$ dengan
+aksi kanan biasa. Jika $R_a(x)=xa$, maka
+$R_aR_b=R_{ba}$, bukan $R_{ab}$ pada umumnya. Misalnya, untuk
+$a=E_{12}$ dan $b=E_{21}$, diperoleh $ab=E_{11}$ dan $ba=E_{22}$.
+Jadi pernyataan tercetak memerlukan koreksi arah perkalian di atas; solusi ini
+tidak menyamarkan ketidaksesuaian tersebut.
+\end{o001proof}
+\end{o001solution}

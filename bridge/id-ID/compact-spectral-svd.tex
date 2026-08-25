@@ -1,0 +1,433 @@
+% O008 compact-spectral/SVD bridge -- separately authored component.
+% Model provenance: OpenAI Codex gpt-5.6-sol, Ultra, atas arahan pengguna.
+% Component license: CC BY-SA 4.0.
+% Not authored or endorsed by John M. Erdman or Portland State University.
+
+\chapter{JEMBATAN SPEKTRAL-KOMPAK DAN NILAI SINGULAR}
+\label{o008bridge:compact-spectral-svd}
+
+\begin{center}
+\small
+Komponen asli terpisah, CC BY-SA 4.0. Ditulis dengan bantuan OpenAI Codex
+gpt-5.6-sol, Ultra, atas arahan pengguna. Komponen ini bukan tulisan John M.
+Erdman dan tidak menyiratkan dukungan beliau atau Portland State University.
+\end{center}
+
+Bab~\ref{chap_cpt_ops} telah mengembangkan operator kompak dan dekomposisi
+polar, sedangkan Bab~\ref{spectrum} telah mengembangkan spektrum. Bab tentang
+teori Fredholm kemudian membuktikan alternatif Fredholm bagi operator
+Riesz--Schauder, sifat jangkauan tertutup, serta teori indeks. Tujuan jembatan
+ini bukan mengulang teori Fredholm tersebut, melainkan menghubungkan hasilnya
+ke geometri eigenvektor operator kompak dan selanjutnya ke dekomposisi nilai
+singular.
+
+Semua ruang dalam bab ini merupakan ruang kompleks. Simbol $H_1$ dan $H_2$
+menyatakan ruang Hilbert, sedangkan $B$ menyatakan ruang Banach. Jika
+$u\in H_2$ dan $v\in H_1$, kita memakai notasi peringkat-satu
+\[
+  u\otimes v\colon H_1\longrightarrow H_2,
+  \qquad
+  (u\otimes v)x=\langle x,v\rangle u.
+\]
+
+\section{Konsekuensi spektral Riesz--Schauder}
+
+% O008-BRIDGE-ID: O008-BRIDGE-CS-DEF-001
+\begin{defn}\label{o008bridge:spectral-multiplicity}
+Jika $T\in\ofml B(B)$ dan $\lambda\in\C$, maka
+\df{ruang eigen} untuk~$\lambda$ adalah $\ker(T-\lambda I)$. Dimensinya
+disebut \df{multiplikitas geometrik} nilai eigen~$\lambda$.
+\end{defn}
+
+% O008-BRIDGE-ID: O008-BRIDGE-CS-THM-001
+\begin{thm}[Konsekuensi spektral Riesz--Schauder]
+\label{o008bridge:riesz-schauder-spectrum}
+Misalkan $B$ ruang Banach kompleks berdimensi tak hingga dan
+$K\in\ofml K(B)$. Maka:
+\begin{enumerate}[label=\rm{(\alph*)}]
+  \item setiap $\lambda\in\sigma(K)\setminus\{0\}$ merupakan nilai eigen;
+  \item setiap ruang eigen untuk $\lambda\neq0$ berdimensi hingga;
+  \item untuk setiap $r>0$, hanya ada berhingga banyak nilai eigen berbeda
+        yang memenuhi $|\lambda|\geq r$;
+  \item $\sigma(K)\setminus\{0\}$ paling banyak terhitung, setiap titiknya
+        terisolasi dalam spektrum, dan satu-satunya titik akumulasi yang
+        mungkin adalah~$0$;
+  \item $0\in\sigma(K)$.
+\end{enumerate}
+\end{thm}
+
+\begin{proof}
+Ambil $\lambda\neq0$. Operator
+$\lambda I-K$ adalah operator Riesz--Schauder dalam pengertian
+Bab~15. Alternatif Fredholm~\ref{0040343} menyatakan bahwa operator itu
+injektif jika dan hanya jika surjektif. Jika injektif, ia bijektif dan teorema
+pemetaan terbuka memberi invers terbatas. Jadi, bila
+$\lambda\in\sigma(K)$, operator $\lambda I-K$ tidak injektif; dengan kata
+lain, $\lambda$ adalah nilai eigen. Alternatif Fredholm yang sama juga memberi
+\[
+ \dim\ker(\lambda I-K)<\infty,
+\]
+yang membuktikan (a) dan~(b) tanpa mengulang argumen Fredholm.
+
+Untuk (c), andaikan terdapat nilai eigen berbeda
+$\lambda_1,\lambda_2,\ldots$ dengan $|\lambda_n|\geq r>0$, dan pilih
+eigenvektor $x_n\neq0$. Eigenvektor untuk nilai eigen berbeda bebas linear.
+Tuliskan $M_n=\spn\{x_1,\ldots,x_n\}$. Menurut lema Riesz, kita dapat memilih
+$y_n\in M_n$ dengan $\|y_n\|=1$ dan
+\[
+  \dist(y_n,M_{n-1})>\frac12.
+\]
+Karena $(K-\lambda_n I)M_n\subseteq M_{n-1}$, berlaku
+$y_n-\lambda_n^{-1}Ky_n\in M_{n-1}$. Untuk $m<n$ juga
+$\lambda_m^{-1}Ky_m\in M_m\subseteq M_{n-1}$. Akibatnya
+\[
+ \left\|\lambda_n^{-1}Ky_n-\lambda_m^{-1}Ky_m\right\|>\frac12.
+\]
+Namun barisan $(\lambda_n^{-1}y_n)$ terbatas oleh~$1/r$, sehingga
+kekompakan~$K$ mengharuskan $(\lambda_n^{-1}Ky_n)$ mempunyai subbarisan
+konvergen. Ini bertentangan dengan pemisahan di atas. Jadi (c) benar.
+
+Terakhir,
+\[
+ \sigma(K)\setminus\{0\}
+ =\bigcup_{m=1}^{\infty}
+   \{\lambda\in\sigma(K):|\lambda|\geq1/m\}
+\]
+adalah gabungan terhitung himpunan-himpunan berhingga. Pernyataan isolasi dan
+akumulasi mengikuti langsung dari (c), sehingga (d) terbukti. Jika
+$0\notin\sigma(K)$, maka $K$ invertibel dan
+$I=K^{-1}K$ kompak. Hal ini mustahil pada ruang Banach berdimensi tak hingga:
+lema Riesz menghasilkan barisan vektor satuan yang tidak mempunyai
+subbarisan konvergen. Jadi operator identitas tidak kompak, dan (e) terbukti.
+\end{proof}
+
+% O008-BRIDGE-ID: O008-BRIDGE-CS-REM-001
+\begin{rem}\label{o008bridge:no-fredholm-duplication}
+Teorema~\ref{o008bridge:riesz-schauder-spectrum} memakai alternatif Fredholm
+yang sudah terdapat dalam Bab~15 hanya pada dua titik: kesetaraan
+injektif--surjektif dan keberhinggaan dimensi kernel. Jembatan ini tidak
+mengulang pembentukan aljabar Calkin, teorema Atkinson, indeks Fredholm, atau
+klasifikasi komponen lintasan operator Fredholm.
+\end{rem}
+
+% O008-BRIDGE-ID: O008-BRIDGE-CS-EXAM-001
+\begin{exam}\label{o008bridge:diagonal-compact-example}
+Pada $\ell^2$, tetapkan
+\[
+ K(x_1,x_2,\ldots)=
+   \left(x_1,\frac{x_2}{2},\frac{x_3}{3},\ldots\right).
+\]
+Operator ini kompak dan swaadjoin. Nilai eigennya adalah $1/n$, masing-masing
+bermultiplikitas satu, dan
+$\sigma(K)=\{0\}\cup\{1/n:n\in\N\}$. Contoh ini memperlihatkan bahwa nol
+memang dapat menjadi titik akumulasi dan bahwa jangkauan operator kompak tidak
+harus tertutup.
+\end{exam}
+
+\section{Teorema spektral kompak swaadjoin}
+
+% O008-BRIDGE-ID: O008-BRIDGE-CS-LEM-001
+\begin{lem}\label{o008bridge:max-eigenvalue}
+Jika $T\in\ofml K(H)$ swaadjoin dan $T\neq0$, maka $T$ mempunyai nilai eigen
+real $\lambda$ dengan $|\lambda|=\|T\|$.
+\end{lem}
+
+\begin{proof}
+Untuk operator swaadjoin, hasil tentang jangkauan numerik di Bab~5 memberi
+\[
+ \|T\|=\sup_{\|x\|=1}|\langle Tx,x\rangle|.
+\]
+Pilih vektor satuan $x_n$ sehingga nilai mutlak di ruas kanan menuju
+$\|T\|$. Karena bentuk kuadratik swaadjoin bernilai real, setelah mengambil
+subbarisan terdapat $\alpha\in\{\|T\|,-\|T\|\}$ dengan
+$\langle Tx_n,x_n\rangle\to\alpha$. Untuk $\alpha=\|T\|$, misalnya,
+\begin{align*}
+ \|(T-\alpha I)x_n\|^2
+ &=\|Tx_n\|^2-2\alpha\langle Tx_n,x_n\rangle+\alpha^2\\
+ &\leq2\alpha\bigl(\alpha-\langle Tx_n,x_n\rangle\bigr)
+ \longrightarrow0.
+\end{align*}
+Kasus $\alpha=-\|T\|$ sama dengan memakai $T-\alpha I=T+\|T\|I$.
+Kekompakan~$T$ memberi subbarisan $(Tx_n)$ yang konvergen. Karena
+$(T-\alpha I)x_n\to0$ dan $\alpha\neq0$, subbarisan $(x_n)$ sendiri
+konvergen ke suatu vektor satuan~$x$. Dengan mengambil limit diperoleh
+$Tx=\alpha x$. Jadi $\lambda=\alpha$ adalah nilai eigen real dan
+$|\lambda|=\|T\|$.
+\end{proof}
+
+% O008-BRIDGE-ID: O008-BRIDGE-CS-LEM-002
+\begin{lem}\label{o008bridge:orthogonal-eigenspaces}
+Jika $T$ swaadjoin, maka ruang eigen untuk dua nilai eigen berbeda saling
+ortogonal. Selain itu, komplemen ortogonal setiap ruang eigen invarian
+terhadap~$T$.
+\end{lem}
+
+\begin{proof}
+Misalkan $Tx=\lambda x$ dan $Ty=\mu y$. Nilai $\lambda$ dan $\mu$ real, dan
+\[
+ \lambda\langle x,y\rangle
+ =\langle Tx,y\rangle
+ =\langle x,Ty\rangle
+ =\mu\langle x,y\rangle.
+\]
+Jika $\lambda\neq\mu$, maka $\langle x,y\rangle=0$. Jika $z$ tegak lurus
+ruang eigen $E_\lambda$, maka untuk setiap $x\in E_\lambda$,
+\[
+ \langle Tz,x\rangle=\langle z,Tx\rangle
+ =\lambda\langle z,x\rangle=0,
+\]
+sehingga $Tz\in E_\lambda^\perp$.
+\end{proof}
+
+% O008-BRIDGE-ID: O008-BRIDGE-CS-THM-002
+\begin{thm}[Teorema spektral untuk operator kompak swaadjoin]
+\label{o008bridge:compact-selfadjoint-spectral-theorem}
+Misalkan $T\in\ofml K(H)$ swaadjoin. Terdapat himpunan ortonormal
+$(e_n)$ yang terdiri atas eigenvektor untuk nilai eigen tak nol
+$(\lambda_n)$ sedemikian sehingga
+\begin{enumerate}[label=\rm{(\alph*)}]
+  \item setiap nilai eigen tak nol diulang menurut multiplikitasnya yang
+        hingga;
+  \item bila daftarnya tak hingga, $|\lambda_n|\to0$;
+  \item $H=\ker T\oplus\clo{\spn\{e_n:n\geq1\}}$;
+  \item untuk setiap $x\in H$,
+        \[
+          Tx=\sum_n\lambda_n\langle x,e_n\rangle e_n;
+        \]
+  \item jika daftar tak hingga, tetapkan
+        $T_N=\sum_{n=1}^N\lambda_n(e_n\otimes e_n)$; jika daftar berhingga
+        memiliki panjang~$m$, tetapkan
+        $T_N=\sum_{n=1}^{\min\{N,m\}}\lambda_n(e_n\otimes e_n)$.
+        Dengan urutan $|\lambda_1|\geq|\lambda_2|\geq\cdots$, berlaku
+        $\|T-T_N\|=\sup_{n>N}|\lambda_n|\to0$, dengan supremum himpunan
+        indeks kosong didefinisikan sebagai~$0$.
+\end{enumerate}
+Dengan menambahkan sembarang basis ortonormal bagi $\ker T$, kita memperoleh
+basis ortonormal seluruh~$H$ yang terdiri atas eigenvektor~$T$.
+\end{thm}
+
+\begin{proof}
+Jika $T=0$, ambil daftar kosong dan hasilnya langsung benar. Jika
+$\dim H<\infty$, teorema spektral kompleks berdimensi hingga dari
+Bab~1, Teorema~\ref{00017}, memberikan basis ortonormal eigenvektor; setelah
+eigenvektor bernilai eigen nol dipindahkan ke $\ker T$, semua butir di atas
+mengikuti, termasuk konvensi ekor kosong pada~(e). Karena itu, selanjutnya
+andaikan $\dim H=\infty$ dan $T\neq0$.
+Teorema~\ref{o008bridge:riesz-schauder-spectrum} mengatakan bahwa himpunan
+nilai eigennya yang tak nol paling banyak terhitung dan setiap ruang eigennya
+berdimensi hingga. Pilih satu basis ortonormal dari setiap ruang eigen tak nol.
+Menurut Lemma~\ref{o008bridge:orthogonal-eigenspaces}, gabungan semua basis
+tersebut ortonormal, sehingga dapat disusun sebagai barisan $(e_n)$ dengan
+nilai eigen terkait~$(\lambda_n)$. Teorema Riesz--Schauder yang sama memberi
+$|\lambda_n|\to0$ bila barisan itu tak hingga.
+
+Misalkan $M=\clo{\spn\{e_n:n\geq1\}}$. Komplemen $M^\perp$ invarian. Jika
+$T|_{M^\perp}$ tidak nol, Lemma~\ref{o008bridge:max-eigenvalue} akan memberi
+eigenvektor tak nol lain yang tegak lurus semua~$e_n$, bertentangan dengan
+pemilihan seluruh ruang eigen tak nol. Jadi $T|_{M^\perp}=0$ dan
+$M^\perp\subseteq\ker T$. Sebaliknya, setiap vektor dalam $\ker T$ tegak
+lurus semua ruang eigen dengan nilai eigen tak nol, sehingga
+$\ker T=M^\perp$. Ini membuktikan (c).
+
+Uraikan $x=x_0+\sum_n\langle x,e_n\rangle e_n$ dengan
+$x_0\in\ker T$. Kontinuitas $T$ memberi deret pada (d). Untuk ekor operator,
+ortonormalitas memberi
+\[
+ \|(T-T_N)x\|^2
+ =\sum_{n>N}|\lambda_n|^2|\langle x,e_n\rangle|^2
+ \leq\left(\sup_{n>N}|\lambda_n|^2\right)\|x\|^2.
+\]
+Jadi $\|T-T_N\|\leq\sup_{n>N}|\lambda_n|$. Arah sebaliknya diperoleh dengan
+menerapkan $T-T_N$ pada setiap $e_n$ dengan $n>N$ dan mengambil supremum.
+Maka (e) benar dan $T$ merupakan limit norma operator-operator spektral
+berperingkat hingga tersebut.
+\end{proof}
+
+% O008-BRIDGE-ID: O008-BRIDGE-CS-COR-001
+\begin{cor}\label{o008bridge:positive-compact-spectral}
+Jika $T$ juga positif dan $T\neq0$, maka semua $\lambda_n>0$ dan
+\[
+ \|T\|=\lambda_1,
+ \qquad
+ Tx=\sum_n\lambda_n\langle x,e_n\rangle e_n.
+\]
+\end{cor}
+
+\begin{proof}
+Untuk eigenvektor satuan~$e_n$,
+$\lambda_n=\langle Te_n,e_n\rangle\geq0$. Karena daftar hanya memuat nilai
+eigen tak nol, semuanya positif. Pernyataan norma mengikuti pengurutan dalam
+teorema.
+\end{proof}
+
+\section{Nilai singular dan SVD kompak}
+
+% O008-BRIDGE-ID: O008-BRIDGE-CS-DEF-002
+\begin{defn}\label{o008bridge:absolute-value-singular-values}
+Untuk $T\in\ofml K(H_1,H_2)$, tetapkan
+\[
+ |T|=(T^*T)^{1/2}.
+\]
+Nilai eigen positif $s_n$ dari $|T|$, diulang menurut multiplikitas dan
+diurutkan tak-menaik, disebut \df{nilai singular}~$T$. Secara ekuivalen,
+$s_n^2$ adalah nilai eigen positif dari~$T^*T$.
+\end{defn}
+
+Operator $T^*T$ kompak, positif, dan swaadjoin. Karena itu
+Teorema~\ref{o008bridge:compact-selfadjoint-spectral-theorem} berlaku pada
+$T^*T$. Akar positifnya~$|T|$ juga kompak: melalui kalkulus fungsional,
+fungsi akar pada spektrum dapat didekati seragam oleh polinom yang bernilai
+nol di~$0$, sehingga $|T|$ merupakan limit norma operator-operator kompak.
+Jadi teorema tersebut berlaku pula pada~$|T|$. Kernel ketiga operator terkait oleh
+\[
+ \ker|T|=\ker(T^*T)=\ker T,
+\]
+sebab $\langle T^*Tx,x\rangle=\|Tx\|^2$.
+
+Dekomposisi nilai singular untuk operator kompak memperoleh bentuk berikut.
+
+% O008-BRIDGE-ID: O008-BRIDGE-CS-THM-003
+\begin{thm}[SVD untuk operator kompak]
+\label{o008bridge:compact-svd}
+Misalkan $T\in\ofml K(H_1,H_2)$. Terdapat daftar hingga (mungkin kosong) atau
+barisan nilai singular $s_1\geq s_2\geq\cdots>0$ dan keluarga ortonormal
+$(v_n)$ dalam~$H_1$ serta $(u_n)$ dalam~$H_2$ sedemikian sehingga
+\begin{align*}
+  T v_n&=s_nu_n, & T^*u_n&=s_nv_n,\\
+  Tx&=\sum_n s_n\langle x,v_n\rangle u_n,
+      &&x\in H_1.
+\end{align*}
+Lebih tepat,
+\begin{enumerate}[label=\rm{(\alph*)}]
+  \item $(v_n)$ merupakan basis ortonormal
+        $\clo{\ran T^*}=(\ker T)^\perp$;
+  \item $(u_n)$ merupakan basis ortonormal
+        $\clo{\ran T}=(\ker T^*)^\perp$;
+  \item dalam norma operator,
+        \[
+          T=\sum_n s_n(u_n\otimes v_n);
+        \]
+  \item untuk daftar tak hingga tetapkan
+        $T_N=\sum_{n=1}^Ns_n(u_n\otimes v_n)$, sedangkan untuk daftar
+        berhingga sepanjang~$m$ tetapkan
+        $T_N=\sum_{n=1}^{\min\{N,m\}}s_n(u_n\otimes v_n)$; maka
+        \[
+          \|T-T_N\|=s_{N+1}\longrightarrow0,
+        \]
+        dengan konvensi $s_{N+1}=0$ setelah daftar berhingga berakhir,
+        termasuk untuk daftar kosong ketika $T=0$.
+\end{enumerate}
+\end{thm}
+
+\begin{proof}
+Terapkan teorema spektral kompak swaadjoin pada operator positif~$T^*T$.
+Pilih eigenvektor ortonormal $v_n$ dan nilai eigen
+$s_n^2>0$ sehingga
+\[
+ T^*Tv_n=s_n^2v_n.
+\]
+Tetapkan $u_n=s_n^{-1}Tv_n$. Maka
+\[
+ \langle u_n,u_m\rangle
+ =\frac{1}{s_ns_m}\langle T^*Tv_n,v_m\rangle
+ =\delta_{nm},
+\]
+jadi $(u_n)$ ortonormal, dan
+$T^*u_n=s_n^{-1}T^*Tv_n=s_nv_n$.
+
+Teorema spektral memberi bahwa $(v_n)$ merentang
+$(\ker(T^*T))^\perp=(\ker T)^\perp$. Karena $T$ nol pada $\ker T$, ekspansi
+Fourier setiap $x\in H_1$ menghasilkan
+\[
+ Tx=\sum_n\langle x,v_n\rangle Tv_n
+   =\sum_n s_n\langle x,v_n\rangle u_n.
+\]
+Jadi $\clo{\ran T}$ termuat dalam rentang tertutup $(u_n)$, sedangkan setiap
+$u_n=s_n^{-1}Tv_n$ termasuk dalam $\ran T$; ini membuktikan (a) dan~(b).
+
+Untuk setiap vektor satuan~$x$,
+\[
+ \|(T-T_N)x\|^2
+ =\sum_{n>N}s_n^2|\langle x,v_n\rangle|^2
+ \leq s_{N+1}^2.
+\]
+Kesamaan dicapai pada $x=v_{N+1}$ bila suku itu ada. Maka
+$\|T-T_N\|=s_{N+1}\to0$, yang sekaligus membuktikan (c) dan~(d).
+\end{proof}
+
+% O008-BRIDGE-ID: O008-BRIDGE-CS-COR-002
+\begin{cor}[Pendekatan peringkat hingga terbaik]
+\label{o008bridge:best-rank-n}
+Jika $R\colon H_1\to H_2$ berperingkat paling banyak~$N$, maka
+\[
+  \|T-R\|\geq s_{N+1}.
+\]
+Karena $\|T-T_N\|=s_{N+1}$, pemotongan SVD~$T_N$ merupakan pendekatan
+peringkat paling banyak~$N$ yang terbaik dalam norma operator.
+\end{cor}
+
+\begin{proof}
+Jika daftar nilai singular mempunyai paling banyak~$N$ suku, maka
+$s_{N+1}=0$ dan ketaksamaannya langsung. Andaikan $s_{N+1}$ ada.
+Subruang $E=\spn\{v_1,\ldots,v_{N+1}\}$ berdimensi~$N+1$, sedangkan
+$R|_E$ berperingkat paling banyak~$N$. Jadi terdapat vektor satuan
+$x\in E\cap\ker R$. Tuliskan $x=\sum_{j=1}^{N+1}c_jv_j$. Karena
+$s_j\geq s_{N+1}$,
+\[
+ \|(T-R)x\|^2=\|Tx\|^2
+ =\sum_{j=1}^{N+1}s_j^2|c_j|^2
+ \geq s_{N+1}^2\sum_{j=1}^{N+1}|c_j|^2
+ =s_{N+1}^2.
+\]
+Dengan mengambil supremum atas vektor satuan diperoleh batas bawah yang
+diminta; teorema sebelumnya menunjukkan bahwa~$T_N$ mencapainya.
+\end{proof}
+
+% O008-BRIDGE-ID: O008-BRIDGE-CS-PROP-001
+\begin{prop}[Hubungan dengan dekomposisi polar]
+\label{o008bridge:svd-polar}
+Dalam dekomposisi polar $T=U|T|$, isometri parsial~$U$ memenuhi
+$Uv_n=u_n$ untuk semua indeks singular. Secara khusus,
+\[
+ |T|=\sum_n s_n(v_n\otimes v_n),
+ \qquad
+ U|T|=\sum_n s_n(u_n\otimes v_n)=T.
+\]
+\end{prop}
+
+\begin{proof}
+Karena $|T|v_n=s_nv_n$ dan $Tv_n=s_nu_n$, persamaan
+$T=U|T|$ memberi $s_nUv_n=s_nu_n$. Nilai $s_n$ positif, sehingga
+$Uv_n=u_n$. Kedua ekspansi kemudian mengikuti dari teorema spektral bagi
+$|T|$ dan konvergensi norma dalam
+Teorema~\ref{o008bridge:compact-svd}.
+\end{proof}
+
+% O008-BRIDGE-ID: O008-BRIDGE-CS-EXAM-002
+\begin{exam}[Matriks sebagai kasus berhingga]
+Jika $H_1=\C^n$ dan $H_2=\C^m$, semua operator otomatis kompak. Setelah
+$(v_n)$ dan $(u_n)$ diperluas menjadi basis ortonormal pada domain dan
+kodomain, matriks operator mengambil bentuk
+\[
+  T=U\Sigma V^*,
+\]
+dengan $U$ dan $V$ uniter serta $\Sigma$ diagonal-persegi-panjang yang entri
+tak nolnya adalah $s_1\geq s_2\geq\cdots$. Jadi teorema di atas tepat
+memperluas SVD matriks ke operator kompak antar-ruang Hilbert.
+\end{exam}
+
+\section{Peta penggunaan}
+
+Urutan konseptualnya bergerak dari operator kompak (Bab~7), melalui spektrum
+(Bab~8), menuju Teorema~\ref{o008bridge:riesz-schauder-spectrum}, teorema
+spektral kompak swaadjoin, lalu SVD. Prasyarat pembuktiannya lebih rinci:
+\begin{enumerate}[label=\rm{(\alph*)}]
+  \item pembuktian Riesz--Schauder memakai alternatif Fredholm yang telah
+        dibuktikan pada Bab~15;
+  \item teorema spektral kompak swaadjoin memakai hasil tersebut bersama
+        geometri ruang Hilbert dari Bab~4;
+  \item konstruksi $|T|=(T^*T)^{1/2}$ dan SVD juga memakai akar positif dan
+        kalkulus fungsional kontinu dari Bab~11.
+\end{enumerate}
+Peta ini ditempatkan setelah seluruh buku agar tidak menimbulkan ketergantungan
+melingkar dan tidak menggandakan pembuktian Fredholm dari Bab~15.

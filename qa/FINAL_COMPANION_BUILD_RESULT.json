@@ -1,0 +1,70 @@
+{
+  "schema_version": "o008.final-companion-build.v1",
+  "result": "pass",
+  "source_date_epoch": 1444126743,
+  "input_count": 36,
+  "inputs_unchanged": true,
+  "component_counts": {
+    "source_exercise_solutions": 52,
+    "selected_reader_work_solutions": 10,
+    "bridge_units": 13,
+    "solution_files": 12
+  },
+  "replay_a": {
+    "bytes": 2838207,
+    "sha256": "6d4bbf02959e5afb5fd34e1118f91f026c293b0056ec7a0ecdc5e95944df5d85"
+  },
+  "replay_b": {
+    "bytes": 2838207,
+    "sha256": "6d4bbf02959e5afb5fd34e1118f91f026c293b0056ec7a0ecdc5e95944df5d85"
+  },
+  "byte_identical": true,
+  "pages": 298,
+  "final_log_forbidden_counts": {
+    "tex_error": 0,
+    "undefined_reference": 0,
+    "undefined_citation": 0,
+    "unresolved_summary": 0,
+    "rerun_required": 0,
+    "multiply_defined": 0,
+    "missing_character": 0
+  },
+  "overfull_boxes": [
+    {
+      "points": 2.90276,
+      "context": "in paragraph at lines 323--326"
+    },
+    {
+      "points": 7.30707,
+      "context": "in paragraph at lines 380--383"
+    },
+    {
+      "points": 11.09703,
+      "context": "in paragraph at lines 385--387"
+    },
+    {
+      "points": 21.73163,
+      "context": "in paragraph at lines 185--193"
+    },
+    {
+      "points": 14.48387,
+      "context": "in paragraph at lines 214--216"
+    },
+    {
+      "points": 3.32439,
+      "context": "in paragraph at lines 337--339"
+    }
+  ],
+  "inherited_overfull_box_count": 6,
+  "companion_overfull_box_count": 0,
+  "pdf": {
+    "path": "output/pdf/analisis-fungsional-dan-aljabar-operator-id-edisi-lengkap-dengan-pendamping.pdf",
+    "bytes": 2838207,
+    "sha256": "6d4bbf02959e5afb5fd34e1118f91f026c293b0056ec7a0ecdc5e95944df5d85"
+  },
+  "input_snapshot": {
+    "path": "qa/FINAL_COMPANION_INPUT_SNAPSHOT.csv",
+    "rows": 36,
+    "sha256": "322799f519043092002ad61fbf3f38367cf15004f5d43304b976187c3769d869"
+  }
+}

@@ -1,0 +1,467 @@
+% Bab: FAOA-2015-CH01
+% Provenans: OpenAI Codex gpt-5.6-sol, Ultra, atas arahan pengguna
+% Lisensi komponen solusi asli: CC BY-SA 4.0
+% Non-endorsement: solusi ini bukan karya John M. Erdman dan tidak menyiratkan dukungannya.
+% Jumlah solusi: 6
+\markboth{SOLUSI O001 UNTUK BAB 1: ALJABAR LINEAR DAN TEOREMA SPEKTRAL}{SOLUSI O001 UNTUK BAB 1: ALJABAR LINEAR DAN TEOREMA SPEKTRAL}
+\section*{Solusi O001 untuk Bab 1: Aljabar Linear dan Teorema Spektral}
+\addcontentsline{toc}{section}{Solusi O001 untuk Bab 1: Aljabar Linear dan Teorema Spektral}
+\noindent\textit{Catatan komponen.}
+Keenam solusi berikut ditulis terpisah dari teks sumber, dilisensikan di bawah
+CC BY-SA 4.0, dan berprovenans
+\emph{OpenAI Codex gpt-5.6-sol, Ultra, atas arahan pengguna}.
+Solusi-solusi ini bukan tulisan John M. Erdman dan tidak menyiratkan dukungannya.
+
+% O001-SOLUTION-ID: O001-FAOA-2015-CH01-EX-001-SOLUTION
+% SOURCE-EXERCISE-ID: FAOA-2015-CH01-NODE-0003
+% STATEMENT-TARGET-SHA256: aebec53b01a9f71876a10649836fb04c2425385c4bf14115a19b2d06bb946b9e
+\begin{o001solution}
+  {O001-FAOA-2015-CH01-EX-001-SOLUTION}
+  {FAOA-2015-CH01-NODE-0003}
+  {aebec53b01a9f71876a10649836fb04c2425385c4bf14115a19b2d06bb946b9e}
+\begin{o001statement}
+Definisi \emph{ruang vektor} yang ditemukan dalam banyak buku dasar kurang lebih
+sebagai berikut: suatu \emph{ruang vektor atas} $\K$ adalah himpunan $V$ beserta operasi
+penjumlahan dan perkalian skalar yang memenuhi aksioma-aksioma berikut:
+ \begin{enumerate}
+  \item[(1)] jika $x$, $y \in V$, maka $x + y \in V$;
+  \item[(2)] $(x + y) + z = x + (y + z)$ untuk setiap
+ \index{asosiatif}%
+$x$, $y$, $z \in V$ (asosiativitas);
+  \item[(3)] terdapat $\vc 0 \in V$ sehingga $x + \vc 0 = x$ untuk setiap
+ \index{identitas!aditif}%
+$x \in V$ (keberadaan identitas aditif);
+  \item[(4)] untuk setiap $x\in V$ terdapat $-x \in V$ sehingga
+ \index{aditif!invers}%
+ \index{invers!aditif}%
+$x + (-x) = \vc 0$ (keberadaan invers aditif);
+  \item[(5)] $x + y = y + x$ untuk setiap $x$, $y \in V$
+ \index{komutatif}%
+(komutativitas);
+  \item[(6)] jika $\alpha \in \K$ dan $x \in V$, maka $\alpha x \in V$;
+  \item[(7)] $\alpha (x + y) = \alpha x + \alpha y$ untuk setiap $\alpha \in \K$
+dan setiap $x$, $y \in V$;
+  \item[(8)] $(\alpha + \beta)x = \alpha x + \beta x$ untuk setiap $\alpha$,
+$\beta \in \K$ dan setiap $x \in V$;
+  \item[(9)] $(\alpha\beta)x = \alpha(\beta x)$ untuk setiap $\alpha$,
+$\beta \in \K$ dan setiap $x \in V$; dan
+  \item[(10)] $1\,x = x$ untuk setiap $x \in V$.
+ \end{enumerate}
+Buktikan bahwa definisi ini ekuivalen dengan definisi yang diberikan di atas dalam~\ref{00001}.
+\end{o001statement}
+\begin{o001answer}
+Aksioma (1)--(5) tepat menyatakan bahwa $(V,+)$ adalah grup Abelian, sedangkan
+aksioma (6)--(10) tepat menyatakan bahwa pemetaan
+\[
+ M\colon\K\longrightarrow\Hom(V),\qquad M(\alpha)(x)=\alpha x,
+\]
+merupakan homomorfisme gelanggang beridentitas. Jadi kedua definisi menentukan
+struktur yang sama.
+\end{o001answer}
+\begin{o001proof}
+Andaikan lebih dahulu aksioma (1)--(10) dipenuhi. Aksioma (1) memastikan bahwa
+penjumlahan merupakan operasi pada $V$; aksioma (2)--(5), bersama keberadaan
+operasi itu, memberi asosiativitas, identitas, invers, dan komutativitas.
+Karena itu $(V,+)$ adalah grup Abelian.
+
+Untuk $\alpha\in\K$, definisikan $M(\alpha)\colon V\to V$ dengan
+$M(\alpha)(x)=\alpha x$. Aksioma (6) memastikan kodomainnya benar, dan
+aksioma (7) memberi
+\[
+ M(\alpha)(x+y)=M(\alpha)x+M(\alpha)y.
+\]
+Jadi $M(\alpha)\in\Hom(V)$. Penjumlahan dalam $\Hom(V)$ didefinisikan titik
+demi titik dan perkaliannya ialah komposisi. Oleh aksioma (8)--(10), untuk
+setiap $\alpha,\beta\in\K$ berlaku
+\[
+ M(\alpha+\beta)=M(\alpha)+M(\beta),\qquad
+ M(\alpha\beta)=M(\alpha)M(\beta),\qquad
+ M(1)=I_V.
+\]
+Maka $M$ adalah homomorfisme gelanggang beridentitas seperti dalam
+Definisi~\ref{00001}.
+
+Sebaliknya, andaikan $(V,+)$ grup Abelian dan
+$M\colon\K\to\Hom(V)$ homomorfisme gelanggang beridentitas. Sifat grup
+Abelian memberi (1)--(5). Tetapkan $\alpha\in\K$ dan tulis
+$\alpha x:=M(\alpha)(x)$. Karena $M(\alpha)$ adalah pemetaan $V\to V$, kita
+memperoleh (6); karena $M(\alpha)$ homomorfisme grup, kita memperoleh (7).
+Kesamaan
+\[
+ M(\alpha+\beta)=M(\alpha)+M(\beta),\quad
+ M(\alpha\beta)=M(\alpha)\circ M(\beta),\quad
+ M(1)=I_V
+\]
+masing-masing memberi (8), (9), dan (10) setelah diterapkan pada sebarang
+$x\in V$. Kedua konstruksi tersebut saling membalik, sehingga definisinya
+ekuivalen.
+\end{o001proof}
+\end{o001solution}
+
+% O001-SOLUTION-ID: O001-FAOA-2015-CH01-EX-002-SOLUTION
+% SOURCE-EXERCISE-ID: FAOA-2015-CH01-NODE-0058
+% STATEMENT-TARGET-SHA256: 47a91f1c72eaedd58f83411463d0bd5444618c6107a05854fdc7924c856e0dbd
+\begin{o001solution}
+  {O001-FAOA-2015-CH01-EX-002-SOLUTION}
+  {FAOA-2015-CH01-NODE-0058}
+  {47a91f1c72eaedd58f83411463d0bd5444618c6107a05854fdc7924c856e0dbd}
+\begin{o001statement}
+Misalkan $T$ adalah operator pada $\R^3$ yang representasi matriksnya
+    \[
+      \begin{bmatrix}
+               2  &  0  &  0 \\
+              -1  &  3  &  2 \\
+               1  & -1  &  0
+      \end{bmatrix}.
+    \]
+  \begin{enumerate}
+    \item Tentukan polinomial karakteristik dan polinomial minimal dari~$T$.
+    \item Apa yang dapat disimpulkan dari bentuk polinomial minimal tersebut?
+    \item Tentukan matriks yang mendiagonalkan~$T$. Apa bentuk diagonal $T$ yang dihasilkan oleh matriks ini?
+    \item Tentukan (representasi matriks dari)~$\sqrt T$.
+  \end{enumerate}
+\end{o001statement}
+\begin{o001answer}
+Dengan $A=[T]$,
+\[
+ c_T(\lambda)=(\lambda-1)(\lambda-2)^2,\qquad
+ m_T(\lambda)=(\lambda-1)(\lambda-2).
+\]
+Jadi $T$ dapat didiagonalkan. Salah satu matriks pendiagonal ialah
+\[
+ S=\begin{bmatrix}0&1&2\\-1&1&0\\1&0&1\end{bmatrix},
+ \qquad S^{-1}AS=\diag(1,2,2).
+\]
+Salah satu akar kuadrat real yang diperoleh dengan memilih akar positif pada
+kedua nilai eigen adalah
+\[
+ \sqrt A=(2-\sqrt2)I+(\sqrt2-1)A
+ =\begin{bmatrix}
+ \sqrt2&0&0\\
+ 1-\sqrt2&2\sqrt2-1&2\sqrt2-2\\
+ \sqrt2-1&1-\sqrt2&2-\sqrt2
+ \end{bmatrix}.
+\]
+\end{o001answer}
+\begin{o001proof}
+Ekspansi sepanjang baris pertama memberi
+\[
+\det(\lambda I-A)
+ =(\lambda-2)
+   \det\begin{bmatrix}\lambda-3&-2\\1&\lambda\end{bmatrix}
+ =(\lambda-2)(\lambda^2-3\lambda+2)
+ =(\lambda-1)(\lambda-2)^2.
+\]
+Penyelesaian sistem eigen menghasilkan
+\[
+\ker(A-I)=\spn\{(0,-1,1)\}
+\]
+dan
+\[
+\ker(A-2I)=\spn\{(1,1,0),(2,0,1)\}.
+\]
+Ketiga vektor yang ditampilkan bebas linear; memang matriks $S$ yang
+menjadikan ketiganya sebagai kolom memiliki determinan $-1$. Jadi terdapat
+basis eigen dan
+$S^{-1}AS=\diag(1,2,2)$. Karena kedua nilai eigen benar-benar muncul,
+polinomial minimal harus habis dibagi $(\lambda-1)(\lambda-2)$; karena $A$
+dapat didiagonalkan, tidak diperlukan faktor berulang. Ini membuktikan rumus
+untuk $m_T$ dan kesimpulan pada bagian kedua.
+
+Misalkan $E_1$ dan $E_2$ proyeksi spektral untuk nilai eigen $1$ dan $2$.
+Dari $I=E_1+E_2$ dan $A=E_1+2E_2$ diperoleh
+$E_1=2I-A$ serta $E_2=A-I$. Karena $E_jE_k=0$ untuk $j\ne k$ dan
+$E_j^2=E_j$, matriks
+\[
+ R:=E_1+\sqrt2\,E_2=(2-\sqrt2)I+(\sqrt2-1)A
+\]
+memenuhi
+\[
+ R^2=E_1+2E_2=A.
+\]
+Substitusi matriks $A$ memberi matriks yang dinyatakan dalam jawaban.
+Perhitungan $R^2=A$ juga merupakan pemeriksaan langsung atas semua tanda.
+\end{o001proof}
+\end{o001solution}
+
+% O001-SOLUTION-ID: O001-FAOA-2015-CH01-EX-003-SOLUTION
+% SOURCE-EXERCISE-ID: FAOA-2015-CH01-NODE-0063
+% STATEMENT-TARGET-SHA256: 36a90568d574839d10490f6cccf49001911a58d38d7d248542829133d7a33ae9
+\begin{o001solution}
+  {O001-FAOA-2015-CH01-EX-003-SOLUTION}
+  {FAOA-2015-CH01-NODE-0063}
+  {36a90568d574839d10490f6cccf49001911a58d38d7d248542829133d7a33ae9}
+\begin{o001statement}
+Misalkan $T$ adalah operator pada $\R^3$ yang representasi matriksnya
+ \[ \begin{bmatrix}
+        3  &  1  & -1 \\
+        2  &  2  & -1 \\
+        2  &  2  &  0
+  \end{bmatrix}. \]
+
+ \begin{enumerate}
+  \item Tentukan polinomial karakteristik dan polinomial minimal dari~$T$.
+  \item Tentukan ruang-ruang eigen dari~$T$.
+  \item Tentukan bagian yang dapat didiagonalkan $D$ dan bagian nilpoten $N$ dari~$T$.
+  \item Tentukan matriks yang mendiagonalkan~$D$. Apa bentuk diagonal
+dari $D$ yang dihasilkan oleh matriks ini?
+  \item Tunjukkan bahwa $D$ berkomutasi dengan~$N$.
+ \end{enumerate}
+\end{o001statement}
+\begin{o001answer}
+Dengan $A=[T]$,
+\[
+ c_T(\lambda)=(\lambda-1)(\lambda-2)^2,\qquad
+ m_T(\lambda)=(\lambda-1)(\lambda-2)^2.
+\]
+Ruang eigennya ialah
+\[
+ \ker(A-I)=\spn\{(1,0,2)\},\qquad
+ \ker(A-2I)=\spn\{(1,1,2)\}.
+\]
+Dekomposisi Jordan--Chevalley $A=D+N$ diberikan oleh
+\[
+D=\begin{bmatrix}1&1&0\\0&2&0\\-2&2&2\end{bmatrix},
+\qquad
+N=\begin{bmatrix}2&0&-1\\2&0&-1\\4&0&-2\end{bmatrix}.
+\]
+Matriks
+\[
+S=\begin{bmatrix}1&1&0\\0&1&0\\2&0&1\end{bmatrix}
+\quad\text{memenuhi}\quad
+S^{-1}DS=\diag(1,2,2),
+\]
+dan $DN=ND=\begin{bmatrix}4&0&-2\\4&0&-2\\8&0&-4\end{bmatrix}$.
+\end{o001answer}
+\begin{o001proof}
+Perhitungan determinan memberi
+\[
+\det(\lambda I-A)=(\lambda-1)(\lambda-2)^2.
+\]
+Reduksi baris pada $A-I$ dan $A-2I$ masing-masing memberi ruang eigen yang
+ditampilkan dalam jawaban. Khususnya, nilai eigen $2$ bermultiplisitas
+aljabar dua tetapi ruang eigennya berdimensi satu. Oleh karena itu faktor
+$(\lambda-2)$ dalam polinomial minimal harus berpangkat dua. Kedua nilai
+eigen muncul, sehingga
+$m_T(\lambda)=(\lambda-1)(\lambda-2)^2$.
+
+Definisikan proyeksi ke ruang eigen untuk nilai $1$ sepanjang ruang eigen
+tergeneralisasi untuk nilai $2$ dengan
+\[
+ E_1=(A-2I)^2
+ =\begin{bmatrix}1&-1&0\\0&0&0\\2&-2&0\end{bmatrix}.
+\]
+Identitas polinomial minimal memberi $(A-I)E_1=0$, dan perkalian langsung
+memberi $E_1^2=E_1$. Maka bagian yang dapat didiagonalkan adalah
+\[
+ D=1E_1+2(I-E_1)=2I-E_1
+ =\begin{bmatrix}1&1&0\\0&2&0\\-2&2&2\end{bmatrix},
+\]
+dan
+\[
+ N=A-D
+ =\begin{bmatrix}2&0&-1\\2&0&-1\\4&0&-2\end{bmatrix}.
+\]
+Perkalian matriks memberikan $N^2=0$, jadi $N$ nilpoten.
+
+Kolom-kolom $S$ adalah $(1,0,2)$, $(1,1,0)$, dan $(0,0,1)$.
+Kolom pertama merupakan vektor eigen $D$ untuk nilai $1$, sedangkan dua
+kolom terakhir membentuk basis ruang eigen $D$ untuk nilai $2$.
+Karena $\det S=1$, matriks itu invertibel dan menghasilkan bentuk diagonal
+yang dinyatakan di atas. Terakhir, perkalian pada kedua urutan memberi
+\[
+ DN=ND=
+ \begin{bmatrix}4&0&-2\\4&0&-2\\8&0&-4\end{bmatrix},
+\]
+yang memeriksa komutativitas secara langsung.
+\end{o001proof}
+\end{o001solution}
+
+% O001-SOLUTION-ID: O001-FAOA-2015-CH01-EX-004-SOLUTION
+% SOURCE-EXERCISE-ID: FAOA-2015-CH01-NODE-0076
+% STATEMENT-TARGET-SHA256: f08e0ac70bab35e80596474dab5772dd1ab96f6eb0a60ed50265915217a9256b
+\begin{o001solution}
+  {O001-FAOA-2015-CH01-EX-004-SOLUTION}
+  {FAOA-2015-CH01-NODE-0076}
+  {f08e0ac70bab35e80596474dab5772dd1ab96f6eb0a60ed50265915217a9256b}
+\begin{o001statement}
+Misalkan $0 < a < b$.
+ \begin{enumerate}
+  \item Jika $f$ dan $g$ merupakan fungsi kontinu bernilai real pada
+interval $[a,b]$, maka
+   \[\left(\int_a^b f(x)g(x)\,dx\right)^2
+             \le \int_a^b\bigl(f(x)\bigr)^2\,dx \cdot
+                       \int_a^b\bigl(g(x)\bigr)^2\,dx.\]
+
+\vskip 3 pt
+
+  \item Gunakan bagian (a) untuk mencari bilangan $M$ dan $N$ (yang bergantung pada $a$
+dan~$b$) sedemikian sehingga
+   \[M(b-a) \le \ln\left(\frac ba\right) \le N(b-a).\]
+
+\vskip 3 pt
+
+  \item Gunakan bagian (b) untuk menunjukkan bahwa $2.5 \le e \le 3$.
+ \end{enumerate}
+\end{o001statement}
+\begin{o001answer}
+Bagian (a) adalah ketaksamaan Schwarz untuk hasil kali dalam integral. Pilihan
+yang memenuhi bagian (b) ialah
+\[
+ M=\frac{2}{a+b},\qquad N=\frac1{\sqrt{ab}},
+\]
+sehingga
+\[
+\frac{2(b-a)}{a+b}\le\ln\frac ba
+\le\frac{b-a}{\sqrt{ab}}.
+\]
+Dengan $(a,b)=(1,3)$ dan $(a,b)=(2,5)$ diperoleh
+$\frac52<e\le3$, yang khususnya memberi $2.5\le e\le3$.
+\end{o001answer}
+\begin{o001proof}
+Pada ruang fungsi kontinu bernilai real di $[a,b]$, tetapkan
+\[
+\langle f,g\rangle=\int_a^b f(x)g(x)\,dx.
+\]
+Ketaksamaan Schwarz memberi
+$|\langle f,g\rangle|^2\le\langle f,f\rangle\langle g,g\rangle$.
+Karena kuadrat bilangan real sama dengan kuadrat nilai mutlaknya, inilah
+ketaksamaan pada bagian (a).
+
+Mengikuti petunjuk pembuktian sumber, ambil
+$f(x)=\sqrt{x}$ dan $g(x)=1/\sqrt{x}$. Bagian (a) memberi
+\[
+(b-a)^2
+\le\left(\int_a^b x\,dx\right)\left(\int_a^b\frac{dx}{x}\right)
+=\frac{(b-a)(a+b)}2\ln\frac ba.
+\]
+Karena $b-a>0$, pembagian menghasilkan
+\[
+\ln\frac ba\ge\frac{2(b-a)}{a+b}.
+\]
+Selanjutnya, dengan $f(x)=1/x$ dan $g(x)=1$, bagian (a) memberi
+\[
+\left(\ln\frac ba\right)^2
+\le\left(\int_a^b\frac{dx}{x^2}\right)(b-a)
+=\left(\frac1a-\frac1b\right)(b-a)
+=\frac{(b-a)^2}{ab}.
+\]
+Semua suku yang diakarkan nonnegatif, sehingga
+\[
+\ln\frac ba\le\frac{b-a}{\sqrt{ab}}.
+\]
+Ini membuktikan pilihan $M$ dan $N$.
+
+Untuk $(a,b)=(1,3)$, batas bawah memberi $\ln3\ge1$, sehingga, oleh
+monotonisitas fungsi eksponensial, $3\ge e$. Untuk $(a,b)=(2,5)$, batas atas
+memberi
+\[
+\ln\frac52\le\frac3{\sqrt{10}}<1
+\]
+karena $9<10$. Maka $\frac52<e$. Kedua hasil tersebut membuktikan batas yang
+diminta.
+\end{o001proof}
+\end{o001solution}
+
+% O001-SOLUTION-ID: O001-FAOA-2015-CH01-EX-005-SOLUTION
+% SOURCE-EXERCISE-ID: FAOA-2015-CH01-NODE-0079
+% STATEMENT-TARGET-SHA256: caeb07172c1e9193b4b6ba208c8dc34e8fea8474e2369b3a7187f64c418bd73b
+\begin{o001solution}
+  {O001-FAOA-2015-CH01-EX-005-SOLUTION}
+  {FAOA-2015-CH01-NODE-0079}
+  {caeb07172c1e9193b4b6ba208c8dc34e8fea8474e2369b3a7187f64c418bd73b}
+\begin{o001statement}
+Tunjukkan mengapa langsung jelas dari definisi bahwa $\norm{\vc 0} = 0$ dan bahwa norma
+(dan seminorma) hanya dapat mengambil nilai nonnegatif.
+\end{o001statement}
+\begin{o001answer}
+Homogenitas memberi $\norm{\vc0}=0$, dan ketaksamaan segitiga bersama
+$\norm{-x}=\norm{x}$ memberi $0\le2\norm{x}$. Jadi setiap nilai norma maupun
+seminorma nonnegatif.
+\end{o001answer}
+\begin{o001proof}
+Untuk sebarang $x\in V$, homogenitas absolut menghasilkan
+\[
+\norm{\vc0}=\norm{0x}=|0|\,\norm{x}=0.
+\]
+Selain itu, $\norm{-x}=|-1|\,\norm{x}=\norm{x}$. Dengan menerapkan ketaksamaan
+segitiga pada $x+(-x)=\vc0$, diperoleh
+\[
+0=\norm{\vc0}=\norm{x+(-x)}
+\le\norm{x}+\norm{-x}=2\norm{x}.
+\]
+Jadi $\norm{x}\ge0$. Argumen ini hanya memakai homogenitas dan ketaksamaan
+segitiga, sehingga berlaku tanpa perubahan untuk seminorma.
+\end{o001proof}
+\end{o001solution}
+
+% O001-SOLUTION-ID: O001-FAOA-2015-CH01-EX-006-SOLUTION
+% SOURCE-EXERCISE-ID: FAOA-2015-CH01-NODE-0125
+% STATEMENT-TARGET-SHA256: ccf740d0df0eda4816be273a62026efa2cf1f2b433b990a40551ed07a9cc0f61
+\begin{o001solution}
+  {O001-FAOA-2015-CH01-EX-006-SOLUTION}
+  {FAOA-2015-CH01-NODE-0125}
+  {ccf740d0df0eda4816be273a62026efa2cf1f2b433b990a40551ed07a9cc0f61}
+\begin{o001statement}
+Misalkan $N = \dfrac13\begin{bmatrix}
+                                4+2i & 1-i  & 1-i  \\
+                                1-i  & 4+2i & 1-i  \\
+                                1-i  & 1-i  & 4+2i \end{bmatrix}$.
+
+\vskip 3 pt
+ \begin{enumerate}
+  \item Tunjukkan bahwa matriks $N$ bersifat normal.
+
+\vskip 3 pt
+
+  \item Dengan demikian, menurut \emph{teorema spektral}, $N$
+dapat dituliskan sebagai kombinasi linear proyeksi-proyeksi ortogonal.
+Tunjukkan secara eksplisit cara melakukannya (dan kerjakan perhitungannya).
+ \end{enumerate}
+\end{o001statement}
+\begin{o001answer}
+Definisikan
+\[
+P=\frac13\begin{bmatrix}1&1&1\\1&1&1\\1&1&1\end{bmatrix},
+\qquad
+Q=I-P=\frac13\begin{bmatrix}2&-1&-1\\-1&2&-1\\-1&-1&2\end{bmatrix}.
+\]
+Maka $P$ dan $Q$ adalah proyeksi ortogonal yang saling ortogonal,
+$P+Q=I$, dan
+\[
+N=2P+(1+i)Q.
+\]
+Jadi $N$ normal. Nilai eigennya adalah $2$ pada
+$\spn\{(1,1,1)\}$ dan $1+i$ pada
+$\{(z_1,z_2,z_3):z_1+z_2+z_3=0\}$.
+\end{o001answer}
+\begin{o001proof}
+Matriks $P$ memenuhi $P^*=P$ dan $P^2=P$, sehingga merupakan proyeksi
+ortogonal ke $\spn\{(1,1,1)\}$. Karena $Q=I-P$, berlaku pula
+$Q^*=Q$, $Q^2=Q$, serta
+\[
+PQ=QP=0,\qquad P+Q=I.
+\]
+Perhitungan entri pada
+\[
+2P+(1+i)Q
+\]
+memberi entri diagonal
+$\frac23+\frac{2(1+i)}3=\frac{4+2i}{3}$ dan entri nondiagonal
+$\frac23-\frac{1+i}{3}=\frac{1-i}{3}$. Jadi kombinasi itu persis matriks
+$N$ dalam soal.
+
+Karena $P$ dan $Q$ swaadjoin,
+\[
+N^*=2P+(1-i)Q.
+\]
+Dengan relasi proyeksi di atas,
+\[
+NN^*=4P+(1+i)(1-i)Q=4P+2Q=N^*N.
+\]
+Ini membuktikan kenormalan tanpa mengandaikannya. Persamaan
+$N=2P+(1+i)Q$ sekaligus merupakan dekomposisi spektral yang diminta:
+$P$ dan $Q$ adalah proyeksi-proyeksi ortogonal ke ruang eigen yang
+bersesuaian.
+\end{o001proof}
+\end{o001solution}

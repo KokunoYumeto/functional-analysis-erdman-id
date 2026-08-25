@@ -61,6 +61,15 @@
 /qa/html-replay-*-build/
 /qa/html-replay-*-site/
 /qa/release-html-reader/
+/qa/build-final-companion-final/
+/qa/final-companion-build-probe/
+/qa/build-html-companion/
+/qa/build-html-companion-replay-a/
+/qa/build-html-companion-replay-b/
+/qa/replay-html-companion-final-a/
+/qa/replay-html-companion-final-b/
+/qa/release-final-integrated/
+/source/id-ID/$out/
 /tmp/
 
 # TeX intermediates

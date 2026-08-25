@@ -1,0 +1,270 @@
+{
+  "schema_version": "o008.final-companion-render-audit.v1",
+  "pdf": {
+    "path": "output/pdf/analisis-fungsional-dan-aljabar-operator-id-edisi-lengkap-dengan-pendamping.pdf",
+    "bytes": 2838207,
+    "sha256": "6d4bbf02959e5afb5fd34e1118f91f026c293b0056ec7a0ecdc5e95944df5d85"
+  },
+  "page_count": 298,
+  "render_dimensions_px": [
+    935,
+    1210
+  ],
+  "aggregate_png_bytes": 70069986,
+  "blank_pages": [
+    28,
+    56,
+    86,
+    108,
+    122,
+    144,
+    154,
+    168,
+    172,
+    186,
+    198,
+    218,
+    224,
+    234,
+    276
+  ],
+  "outer_5px_ink_pages": [],
+  "minimum_nonblank_margins_px": {
+    "left": 109,
+    "top": 72,
+    "right": 78,
+    "bottom": 60
+  },
+  "manifest": {
+    "path": "provenance/FINAL_COMPANION_RENDER_MANIFEST.csv",
+    "bytes": 34135,
+    "sha256": "0a421ee19fe0743c8ae04caaf1f2beac4e4d68c6d50779aa4226caf17c7f1826"
+  },
+  "contact_sheets": [
+    {
+      "file": "contact-001-012.png",
+      "pages": [
+        1,
+        12
+      ],
+      "bytes": 377992,
+      "sha256": "de086fd9415da3281c01ef5fba3d1c34bf1e7a7e7d5a38d5f41b576c2f11210b"
+    },
+    {
+      "file": "contact-013-024.png",
+      "pages": [
+        13,
+        24
+      ],
+      "bytes": 580501,
+      "sha256": "7154ef34fb89b9ecf6fb4603865bdf606eb76f26eda696b150a4e0ef2c79da41"
+    },
+    {
+      "file": "contact-025-036.png",
+      "pages": [
+        25,
+        36
+      ],
+      "bytes": 583947,
+      "sha256": "9250012e61cb89e146747d48c82d0df7c92dd8904bc25a969397a91ab6a0c6be"
+    },
+    {
+      "file": "contact-037-048.png",
+      "pages": [
+        37,
+        48
+      ],
+      "bytes": 607490,
+      "sha256": "a3ece37664edc6837248a9b4a3dbb13b580dd478124b7d855dd6aef1082858ae"
+    },
+    {
+      "file": "contact-049-060.png",
+      "pages": [
+        49,
+        60
+      ],
+      "bytes": 557405,
+      "sha256": "7e29274e14f833500178d63b1ce329cb46a025f6f06691915821db616eceee92"
+    },
+    {
+      "file": "contact-061-072.png",
+      "pages": [
+        61,
+        72
+      ],
+      "bytes": 563229,
+      "sha256": "18780762a8a57cbd392486084dc34db0e770ca756ef7720c7eb6d910456c6b1a"
+    },
+    {
+      "file": "contact-073-084.png",
+      "pages": [
+        73,
+        84
+      ],
+      "bytes": 573402,
+      "sha256": "891dd12ca8847d1bf10db1d3e8295d5d7ca473d2489cfb8bd56de5477899de0b"
+    },
+    {
+      "file": "contact-085-096.png",
+      "pages": [
+        85,
+        96
+      ],
+      "bytes": 552390,
+      "sha256": "4b682e040a8cbd8b858c94ecd35d566dae554f03f5f641cb0d614702677c08d9"
+    },
+    {
+      "file": "contact-097-108.png",
+      "pages": [
+        97,
+        108
+      ],
+      "bytes": 501851,
+      "sha256": "be3dcef41257537533d4dd208eb3c56e5a404eb316db34e916e09c357ca328e9"
+    },
+    {
+      "file": "contact-109-120.png",
+      "pages": [
+        109,
+        120
+      ],
+      "bytes": 553657,
+      "sha256": "2be5af7a65a2fe96ee5cf7e0800ccfe180e55decc8e543cd3f7a0739671cb35e"
+    },
+    {
+      "file": "contact-121-132.png",
+      "pages": [
+        121,
+        132
+      ],
+      "bytes": 505681,
+      "sha256": "3cf3bd7d141860e4037251de319421312657f9ac044fe84a937782020c12db76"
+    },
+    {
+      "file": "contact-133-144.png",
+      "pages": [
+        133,
+        144
+      ],
+      "bytes": 502751,
+      "sha256": "77b8d1fa028fa1c796b0e91bee8d4befc3f672abe253aa257b6c64557c829527"
+    },
+    {
+      "file": "contact-145-156.png",
+      "pages": [
+        145,
+        156
+      ],
+      "bytes": 512571,
+      "sha256": "bcd73d19c2563e8593e63790182bd06b3b4312a0128cbb039ffdab30f0e955b1"
+    },
+    {
+      "file": "contact-157-168.png",
+      "pages": [
+        157,
+        168
+      ],
+      "bytes": 504779,
+      "sha256": "1aeb6e850da35cc6d0bd1640f8c2c18a23bb86e5d6b4bf87506dc630b9c55de6"
+    },
+    {
+      "file": "contact-169-180.png",
+      "pages": [
+        169,
+        180
+      ],
+      "bytes": 544895,
+      "sha256": "028d767791ad5e8befec350dce614927dd082b0c22a257711d242506641e57fe"
+    },
+    {
+      "file": "contact-181-192.png",
+      "pages": [
+        181,
+        192
+      ],
+      "bytes": 500085,
+      "sha256": "ec6071127b6e3ba85c16e4a38bcf352df767145207e121c57dd847ee20eaa23e"
+    },
+    {
+      "file": "contact-193-204.png",
+      "pages": [
+        193,
+        204
+      ],
+      "bytes": 519769,
+      "sha256": "8d9fde96295e8737c42afa555fc7caba9fe273ac1ac7715471600cee3cca3ac1"
+    },
+    {
+      "file": "contact-205-216.png",
+      "pages": [
+        205,
+        216
+      ],
+      "bytes": 429166,
+      "sha256": "6758c102920a9877dcf2cb660ac0a797a5cd01e0f57d92f1ea030d71d07aebc2"
+    },
+    {
+      "file": "contact-217-228.png",
+      "pages": [
+        217,
+        228
+      ],
+      "bytes": 410331,
+      "sha256": "67410445b0980819e8787628413f05a1d4001abd1ffd92af2219e0dabab47805"
+    },
+    {
+      "file": "contact-229-240.png",
+      "pages": [
+        229,
+        240
+      ],
+      "bytes": 401458,
+      "sha256": "0e4e4efd53dee62006cd827e391d1abb5648cc7d77177658e0598ae1ccccdf02"
+    },
+    {
+      "file": "contact-241-252.png",
+      "pages": [
+        241,
+        252
+      ],
+      "bytes": 475240,
+      "sha256": "95583fd589967234867fbb477ab15120337806c81114dad401b94dd83aeccce3"
+    },
+    {
+      "file": "contact-253-264.png",
+      "pages": [
+        253,
+        264
+      ],
+      "bytes": 484220,
+      "sha256": "02be1afe9e148f036878d934d087fade4a7162259e7ab9288af80634e3e396f1"
+    },
+    {
+      "file": "contact-265-276.png",
+      "pages": [
+        265,
+        276
+      ],
+      "bytes": 401889,
+      "sha256": "805a7797bcb16945c2e3dbc0ef175e9a64bc4ebbbc5a04d7890df8b638e01cb5"
+    },
+    {
+      "file": "contact-277-288.png",
+      "pages": [
+        277,
+        288
+      ],
+      "bytes": 434872,
+      "sha256": "78b322aa86dc729eb537806cf32b73c09e1fdac7160c9ca6da699fc675b50e6b"
+    },
+    {
+      "file": "contact-289-298.png",
+      "pages": [
+        289,
+        298
+      ],
+      "bytes": 331166,
+      "sha256": "921a5bf543e28bec8ebf53e763af0e2c95489cbe388579997bf0d2927d45ee39"
+    }
+  ]
+}

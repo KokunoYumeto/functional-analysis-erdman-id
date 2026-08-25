@@ -1,0 +1,56 @@
+{
+  "accessibility_limitation": "PDF is honestly untagged; the semantic MathML HTML readers are the accessible companion surfaces.",
+  "acroform": false,
+  "action_types": {
+    "/GoTo": 3116,
+    "/URI": 10
+  },
+  "annotation_subtypes": {
+    "/Link": 3126
+  },
+  "catalog_language": "id-ID",
+  "embedded_files_name_tree": false,
+  "encrypted": false,
+  "failures": [],
+  "file_attachment_annotations": 0,
+  "fonts": {
+    "all_embedded": true,
+    "all_subset": true,
+    "all_unicode_mapped": true,
+    "font_rows": 53,
+    "nonembedded": [],
+    "nonsubset": [],
+    "without_unicode_map": []
+  },
+  "internal_links": 3116,
+  "javascript_actions": 0,
+  "javascript_name_tree": false,
+  "launch_actions": 0,
+  "mark_info": false,
+  "metadata_stream": false,
+  "named_destinations": 2612,
+  "open_action": "/GoTo",
+  "outline_entries": 141,
+  "pages": 298,
+  "pdf": {
+    "bytes": 2838207,
+    "path": "output/pdf/analisis-fungsional-dan-aljabar-operator-id-edisi-lengkap-dengan-pendamping.pdf",
+    "sha256": "6d4bbf02959e5afb5fd34e1118f91f026c293b0056ec7a0ecdc5e95944df5d85"
+  },
+  "rich_media_annotations": 0,
+  "schema_version": "o008.final-companion-pdf-security-navigation-audit.v1",
+  "status": "pass",
+  "struct_tree_root": false,
+  "tagged": false,
+  "unique_uri_targets": [
+    "http://en.wikipedia.org",
+    "http://web.pdx.edu/~erdman/CRA/CRAlicensepage.html",
+    "http://web.pdx.edu/~erdman/PTAC/PTAClicensepage.html",
+    "http://www.imn.htwk-leipzig.de/~mfrank/mlit.pdf",
+    "https://creativecommons.org/licenses/by-sa/4.0/",
+    "https://doi.org/10.1142/11896",
+    "https://web.pdx.edu/~erdman/FAOA/functional_analysis_operator_algebras_pdf.pdf",
+    "https://web.pdx.edu/~erdman/FAOA/functional_analysis_operator_algebras_web.zip"
+  ],
+  "unresolved_internal_links": 0
+}

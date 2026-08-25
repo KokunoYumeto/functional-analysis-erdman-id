@@ -1,0 +1,55 @@
+{
+  "base_backend_manifest": "backend/BACKEND_MANIFEST.csv",
+  "base_backend_manifest_sha256": "06ad5f9c6931ef1838a8307c60b8b3b94a4c89a25d6ddc12dbfb2a3ddc591cfc",
+  "base_schema": "interlanguage-modular-math",
+  "base_schema_version": "0.1.0",
+  "encoding": "UTF-8",
+  "identity_policy": "locale-neutral stable IDs; never page-derived",
+  "overlay": "o008.companion-backend.v1",
+  "record_sets": [
+    {
+      "path": "companion_components.jsonl",
+      "record_type": "companion_component"
+    },
+    {
+      "path": "companion_provenance.jsonl",
+      "record_type": "companion_provenance"
+    },
+    {
+      "path": "o001_mastery.jsonl",
+      "record_types": [
+        "o001_exercise_solution",
+        "o001_reader_work_solution"
+      ]
+    },
+    {
+      "path": "o001_status.jsonl",
+      "record_type": "exercise_support_status_overlay"
+    },
+    {
+      "path": "bridge_units.jsonl",
+      "record_type": "o008_bridge_unit"
+    },
+    {
+      "path": "companion_surfaces.jsonl",
+      "record_type": "companion_surface"
+    },
+    {
+      "path": "companion_html_routes.jsonl",
+      "record_type": "companion_html_route"
+    },
+    {
+      "path": "companion_relations.jsonl",
+      "record_type": "companion_relation"
+    },
+    {
+      "path": "companion_artifacts.jsonl",
+      "record_type": "companion_artifact"
+    }
+  ],
+  "state_policy": {
+    "admission_state": "admitted",
+    "meaning": "component sources and their integrated deterministic PDF and semantic HTML readers passed their stated gates and are exactly bound here"
+  },
+  "write_policy": "additive overlay; admitted base backend files are read-only"
+}

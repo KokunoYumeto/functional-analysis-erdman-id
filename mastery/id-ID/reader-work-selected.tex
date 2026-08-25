@@ -1,0 +1,634 @@
+% O001 selected central reader-work results -- separately authored proofs.
+% Model provenance: OpenAI Codex gpt-5.6-sol, Ultra, atas arahan pengguna.
+% Component license: CC BY-SA 4.0.
+% Not authored or endorsed by John M. Erdman or Portland State University.
+
+\chapter{DUKUNGAN PENGUASAAN UNTUK HASIL KERJA-PEMBACA TERPILIH}
+
+\begin{center}
+\small
+Sepuluh pembuktian asli terpisah, CC BY-SA 4.0. Ditulis dengan bantuan
+OpenAI Codex gpt-5.6-sol, Ultra, atas arahan pengguna. Pernyataan dan petunjuk
+berasal dari edisi terjemahan karya John M. Erdman; pembuktian lengkap ini
+bukan tulisan beliau dan tidak menyiratkan dukungan beliau atau Portland State
+University.
+\end{center}
+
+% O001-READER-WORK-SOLUTION-ID: O001-FAOA-2015-CH01-RW-001-SOLUTION
+% SOURCE-RESULT-ID: FAOA-2015-CH01-NODE-0070
+% SOURCE-HINT-ID: FAOA-2015-CH01-NODE-0071
+% RESULT-TARGET-SHA256: 42ef1dbc69da73f7b5a0e6f64304b7e60174116ffe724d7f402b1f4be2b51632
+% HINT-TARGET-SHA256: 9922dc89fda69dbcd1243bb117b5773d60030ad17056bb1be739d9ae4634ba4f
+\begin{o001readerwork}
+  {O001-FAOA-2015-CH01-RW-001-SOLUTION}
+  {FAOA-2015-CH01-NODE-0070}
+  {FAOA-2015-CH01-NODE-0071}
+  {42ef1dbc69da73f7b5a0e6f64304b7e60174116ffe724d7f402b1f4be2b51632}
+  {9922dc89fda69dbcd1243bb117b5773d60030ad17056bb1be739d9ae4634ba4f}
+\begin{o001result}
+\begin{thm}[Ketaksamaan Schwarz]\label{00015002} Misalkan $s$ suatu hasil kali dalam semu yang didefinisikan pada ruang vektor~$V$.
+ \index{ketaksamaan Schwarz}%
+ \index{ketaksamaan!Schwarz}%
+Maka ketaksamaan
+   \[ \abs{s(x,y)} \le \norm x \,\norm y. \]
+berlaku untuk semua vektor $x$ dan~$y$ dalam~$V$.
+\end{thm}
+\end{o001result}
+\begin{o001sourcehint}
+\begin{proof}[\emph{Petunjuk pembuktian}] Tetapkan $x$, $y \in V$. Untuk setiap $\alpha \in \K$, kita mengetahui bahwa
+  \begin{equation}\label{Schwarz_ineq}
+      0 \le s(x - \alpha y, x - \alpha y) .
+  \end{equation}
+Uraikan ruas kanan~\eqref{Schwarz_ineq} menjadi empat suku. Jika $s(y,x)=0$, kesimpulannya langsung. Jika tidak,
+tuliskan $s(y,x)$ dalam bentuk polar: $s(y,x) = r e^{i\theta}$, dengan $r > 0$ dan $\theta \in \R$.
+Kemudian, dalam ketaksamaan yang diperoleh, tinjau $\alpha$ yang berbentuk $e^{-i\theta}t$ dengan
+$t \in \R$. Perhatikan bahwa kini ruas kanan~\eqref{Schwarz_ineq} merupakan polinom kuadrat dalam~$t$. Apa yang dapat Anda katakan tentang
+diskriminannya? \ns
+\end{proof}
+\end{o001sourcehint}
+\begin{o001answer}
+Diskriminan polinom kuadrat yang selalu tak negatif harus tak positif; hasilnya
+$|s(x,y)|^2\leq s(x,x)s(y,y)=\|x\|^2\|y\|^2$.
+\end{o001answer}
+\begin{o001proof}
+Tuliskan $s(y,x)=re^{i\theta}$ dengan $r\geq0$. Karena $s$ Hermitian,
+$s(x,y)=re^{-i\theta}$. Untuk $t\in\R$, ambil
+$\alpha=e^{-i\theta}t$. Seskuilinearitas memberi
+\begin{align*}
+0&\leq s(x-\alpha y,x-\alpha y)\\
+ &=s(x,x)-\overline\alpha s(x,y)-\alpha s(y,x)
+   +|\alpha|^2s(y,y)\\
+ &=\|x\|^2-2rt+t^2\|y\|^2.
+\end{align*}
+Jika $\|y\|>0$, polinom kuadrat ini tak negatif untuk setiap~$t$, sehingga
+diskriminannya tak positif:
+$4r^2-4\|x\|^2\|y\|^2\leq0$. Jika $\|y\|=0$, polinom linear
+$\|x\|^2-2rt$ tak mungkin tak negatif untuk semua~$t$ kecuali $r=0$;
+ketaksamaan yang sama tetap berlaku. Karena $r=|s(x,y)|$, mengambil akar
+kuadrat membuktikan ketaksamaan Schwarz, termasuk kasus seminorma nol.
+\end{o001proof}
+\end{o001readerwork}
+
+% O001-READER-WORK-SOLUTION-ID: O001-FAOA-2015-CH03-RW-001-SOLUTION
+% SOURCE-RESULT-ID: FAOA-2015-CH03-NODE-0157
+% SOURCE-HINT-ID: FAOA-2015-CH03-NODE-0158
+% RESULT-TARGET-SHA256: 8237a739b34dd84596960ed828967e88de8c127cf9a24022dfd6cf4bda2be6cb
+% HINT-TARGET-SHA256: 8a9f7610446c0e7aed01ed8eded7c0b6745888c5263661e4479f4f03d4730404
+\begin{o001readerwork}
+  {O001-FAOA-2015-CH03-RW-001-SOLUTION}
+  {FAOA-2015-CH03-NODE-0157}
+  {FAOA-2015-CH03-NODE-0158}
+  {8237a739b34dd84596960ed828967e88de8c127cf9a24022dfd6cf4bda2be6cb}
+  {8a9f7610446c0e7aed01ed8eded7c0b6745888c5263661e4479f4f03d4730404}
+\begin{o001result}
+\begin{thm}[Teorema Hahn--Banach I]\label{HBTI} Misalkan $M$ suatu subruang dari ruang vektor real $V$ dan $p$
+ \index{teorema Hahn--Banach}%
+suatu fungsional sublinear pada~$V$. Jika $f$ suatu fungsional linear pada $M$ sedemikian sehingga $f \le p$ pada $M$, maka
+$f$ memiliki perpanjangan $g$ ke seluruh $V$ sedemikian sehingga $g \le p$ pada~$V$.
+\end{thm}
+\end{o001result}
+\begin{o001sourcehint}
+\begin{proof}[\emph{Petunjuk pembuktian}] Dalam teorema ini, notasi $h \le p$ berarti bahwa $\dom h \subseteq \dom p = V$
+dan bahwa $h(x) \le p(x)$ untuk semua $x \in \dom h$. Dalam hal ini kita mengatakan bahwa $h$
+ \index{didominasi}%
+\df{didominasi} oleh~$p$. Kita menulis
+ \index{<binrelle@$f \preccurlyeq g$ ($g$ merupakan perpanjangan~$f$)}%
+$f \preccurlyeq g$ jika $g$ merupakan perpanjangan~$f$ (yakni,
+jika $f(x) = g(x)$ untuk semua $x \in \dom f$).
+
+Misalkan $\fml S$ keluarga semua fungsional linear bernilai real pada subruang-subruang $V$ yang merupakan perpanjangan~$f$ dan
+didominasi oleh~$p$. Keluarga $\fml S$ terurut parsial oleh $\preccurlyeq$. Gunakan \emph{lema Zorn} untuk menghasilkan suatu
+elemen maksimal $g$ dari~$\fml S$. Pembuktian selesai jika Anda dapat menunjukkan bahwa $\dom{g} = V$.
+
+Untuk itu, andaikan demi kontradiksi bahwa terdapat vektor $c \in V$ yang tidak termasuk dalam~$D = \dom{g}$. Buktikan terlebih dahulu bahwa
+   \begin{equation}\label{eq_HBTI}
+      g(y) - p(y - c) \le - g(x) + p(x + c)
+   \end{equation}
+untuk semua $x$, $y \in D$. Simpulkan bahwa terdapat bilangan $\gamma$ yang terletak di antara supremum semua bilangan
+di ruas kiri~\eqref{eq_HBTI} dan infimum semua bilangan di ruas kanan.
+
+Misalkan $E$ rentang dari $D \cup \{c\}$. Definisikan $h$ pada $E$ dengan $h(x + \alpha c) = g(x) + \alpha\gamma$ untuk $x \in D$ dan
+$\alpha \in \R$. Sekarang tunjukkan bahwa $h \in \fml S$. (Ambil $\alpha > 0$ dan tinjau secara terpisah $h(x + \alpha c)$ dan $h(x - \alpha c)$.) \ns
+\end{proof}
+\end{o001sourcehint}
+\begin{o001answer}
+Keluarga semua perpanjangan yang didominasi mempunyai elemen maksimal menurut
+lema Zorn; elemen maksimal itu harus berdomain seluruh~$V$ karena setiap
+vektor di luar domain memungkinkan perpanjangan satu dimensi yang masih
+didominasi oleh~$p$.
+\end{o001answer}
+\begin{o001proof}
+Misalkan $\fml S$ terdiri atas semua pasangan $(D,h)$ dengan $M\subseteq D$
+subruang $V$, $h\colon D\to\R$ linear, $f\preccurlyeq h$, dan $h\leq p$.
+Urutkan dengan perpanjangan. Himpunan ini tidak kosong karena memuat~$(M,f)$.
+Untuk setiap rantai, gabungan domainnya adalah subruang dan fungsi gabungan
+terdefinisi dengan baik: dua anggota rantai dapat dibandingkan, sehingga
+nilainya cocok pada irisan. Fungsi gabungan linear, memperpanjang~$f$, dan
+tetap didominasi oleh~$p$. Jadi setiap rantai mempunyai batas atas. Lema Zorn
+memberi elemen maksimal $(D,g)$.
+
+Andaikan $D\neq V$ dan pilih $c\notin D$. Untuk $x,y\in D$,
+\[
+ g(x)+g(y)=g(x+y)\leq p(x+y)
+ \leq p(x+c)+p(y-c).
+\]
+Maka
+\[
+ g(y)-p(y-c)\leq-g(x)+p(x+c).
+\]
+Definisikan
+\[
+ A=\sup_{y\in D}\{g(y)-p(y-c)\},\qquad
+ B=\inf_{x\in D}\{-g(x)+p(x+c)\}.
+\]
+Ketaksamaan tadi menunjukkan $A\leq B$; kedua batas bernilai real karena
+masing-masing keluarga tidak kosong dan saling membatasi. Pilih
+$\gamma\in[A,B]$.
+
+Karena $c\notin D$, setiap elemen $E=D+\R c$ mempunyai penulisan tunggal
+$x+\alpha c$. Tetapkan
+$h(x+\alpha c)=g(x)+\alpha\gamma$. Fungsi~$h$ linear dan memperpanjang~$g$.
+Tinggal memeriksa dominasi. Jika $\alpha>0$, dari $\gamma\leq B$ dengan
+$x/\alpha\in D$ diperoleh
+\[
+ g(x/\alpha)+\gamma\leq p(x/\alpha+c),
+\]
+sehingga, oleh homogenitas positif~$p$,
+$h(x+\alpha c)\leq p(x+\alpha c)$. Jika $\alpha=-\beta<0$, dari
+$\gamma\geq A$ dengan $x/\beta\in D$ diperoleh
+\[
+ g(x/\beta)-\gamma\leq p(x/\beta-c),
+\]
+dan setelah dikalikan~$\beta$ didapat
+$h(x-\beta c)\leq p(x-\beta c)$. Kasus $\alpha=0$ adalah dominasi~$g$.
+Jadi $(E,h)\in\fml S$ memperluas $(D,g)$ secara ketat, bertentangan dengan
+maksimalitas. Karena itu $D=V$, dan~$g$ adalah perpanjangan yang diminta.
+\end{o001proof}
+\end{o001readerwork}
+
+% O001-READER-WORK-SOLUTION-ID: O001-FAOA-2015-CH04-RW-001-SOLUTION
+% SOURCE-RESULT-ID: FAOA-2015-CH04-NODE-0064
+% SOURCE-HINT-ID: FAOA-2015-CH04-NODE-0065
+% RESULT-TARGET-SHA256: 2676db6dfe542cf8bd2de4096013eb24533e755933d9953dd70b09a91e91f3d2
+% HINT-TARGET-SHA256: bb8f98e29368268dd55b5c76f34a2060e5a0a38b303eccb5d877395800b7fbfa
+\begin{o001readerwork}
+  {O001-FAOA-2015-CH04-RW-001-SOLUTION}
+  {FAOA-2015-CH04-NODE-0064}
+  {FAOA-2015-CH04-NODE-0065}
+  {2676db6dfe542cf8bd2de4096013eb24533e755933d9953dd70b09a91e91f3d2}
+  {bb8f98e29368268dd55b5c76f34a2060e5a0a38b303eccb5d877395800b7fbfa}
+\begin{o001result}
+\begin{thm}[Teorema Riesz--Fr\'echet]\label{000342} Jika $f \in H^*$ dengan $H$ ruang Hilbert,
+ \index{teorema Riesz--Fr\'echet}%
+maka terdapat vektor unik $a$ dalam $H$ sehingga $f = \psi_a$. Selain itu,
+$\norm a = \norm{\psi_a}$.
+\end{thm}
+\end{o001result}
+\begin{o001sourcehint}
+\begin{proof}[\emph{Petunjuk pembuktian}] Untuk kasus $f \ne 0$, pilih vektor satuan $z$ dalam $(\ker f)^\perp$.
+Perhatikan bahwa untuk setiap $x \in H$, vektor $x - \frac{f(x)}{f(z)}\,z$ termasuk dalam $\ker f$. \ns
+\end{proof}
+\end{o001sourcehint}
+\begin{o001answer}
+Jika $f\neq0$, pilih vektor satuan $z\in(\ker f)^\perp$ dan ambil
+$a=\overline{f(z)}z$; maka $f(x)=\langle x,a\rangle$ untuk semua~$x$, dan
+$\|a\|=\|f\|$.
+\end{o001answer}
+\begin{o001proof}
+Jika $f=0$, ambil $a=0$. Andaikan $f\neq0$. Kernel~$f$ tertutup dan proper,
+sehingga $(\ker f)^\perp$ memuat suatu vektor satuan~$z$. Nilai $f(z)$ tidak
+nol, sebab jika nol maka $z\in\ker f\cap(\ker f)^\perp=\{0\}$.
+
+Untuk setiap $x\in H$, vektor
+$w=x-f(x)f(z)^{-1}z$ termasuk dalam $\ker f$. Karena $z\perp\ker f$,
+\[
+ 0=\langle w,z\rangle
+  =\langle x,z\rangle-\frac{f(x)}{f(z)}.
+\]
+Jadi $f(x)=f(z)\langle x,z\rangle$. Dengan konvensi bahwa hasil kali dalam
+linear dalam variabel pertama, jika $a=\overline{f(z)}z$ maka
+\[
+ \langle x,a\rangle=f(z)\langle x,z\rangle=f(x).
+\]
+Ketaksamaan Schwarz memberi $\|f\|\leq\|a\|$. Jika $a\neq0$, penerapan pada
+$x=a/\|a\|$ memberi $|f(x)|=\|a\|$, sehingga $\|f\|=\|a\|$; kasus
+$a=0$ sudah selesai. Jika $\psi_a=\psi_b$, maka
+$\langle x,a-b\rangle=0$ untuk setiap~$x$. Mengambil $x=a-b$ memberi
+$a=b$, jadi vektor representasi unik.
+\end{o001proof}
+\end{o001readerwork}
+
+% O001-READER-WORK-SOLUTION-ID: O001-FAOA-2015-CH05-RW-001-SOLUTION
+% SOURCE-RESULT-ID: FAOA-2015-CH05-NODE-0023
+% SOURCE-HINT-ID: FAOA-2015-CH05-NODE-0024
+% RESULT-TARGET-SHA256: 93218a7be4fa5cc031f93ac7990bf692f03cbf101a28e4539817f9f4f3fe6fb7
+% HINT-TARGET-SHA256: c05412a2b16f484469ac8e68a65ea3695e647c245369758bd8795660de5b29e9
+\begin{o001readerwork}
+  {O001-FAOA-2015-CH05-RW-001-SOLUTION}
+  {FAOA-2015-CH05-NODE-0023}
+  {FAOA-2015-CH05-NODE-0024}
+  {93218a7be4fa5cc031f93ac7990bf692f03cbf101a28e4539817f9f4f3fe6fb7}
+  {c05412a2b16f484469ac8e68a65ea3695e647c245369758bd8795660de5b29e9}
+\begin{o001result}
+\begin{prop} Misalkan $\phi \colon H \times K \sto \C$ fungsional seskuilinear terbatas pada
+hasil kali dua ruang Hilbert tak nol. Maka terdapat pemetaan linear terbatas yang unik $T \in \ofml B(H,K)$ dan
+$S \in \ofml B(K,H)$ sedemikian sehingga
+    \[ \phi(x,y) = \langle Tx,y \rangle = \langle x,Sy \rangle \]
+untuk semua $x \in H$ dan $y \in K$. Selain itu, $\norm T = \norm S = \norm\phi$.
+\end{prop}
+\end{o001result}
+\begin{o001sourcehint}
+\begin{proof}[\emph{Petunjuk pembuktian}] Tunjukkan bahwa untuk setiap $x \in H$, pemetaan
+$y \mapsto \conj{\phi(x,y)}$ adalah fungsional linear terbatas pada~$K$. \ns
+\end{proof}
+\end{o001sourcehint}
+\begin{o001answer}
+Teorema Riesz--Fréchet yang diterapkan pada tiap irisan variabel menghasilkan
+operator unik $T$ dan~$S$; definisi norma seskuilinear memberi
+$\|T\|=\|S\|=\|\phi\|$.
+\end{o001answer}
+\begin{o001proof}
+Untuk $x\in H$ tetap, fungsi
+$F_x(y)=\overline{\phi(x,y)}$ linear pada~$K$ dan memenuhi
+$|F_x(y)|\leq\|\phi\|\|x\|\|y\|$. Teorema Riesz--Fréchet memberi vektor
+tunggal $Tx\in K$ dengan $F_x(y)=\langle y,Tx\rangle$. Setelah dikonjugatkan,
+\[
+ \phi(x,y)=\langle Tx,y\rangle.
+\]
+Linearitas $\phi$ dalam~$x$ dan ketunggalan vektor representasi menunjukkan
+$T(\alpha x+\beta z)=\alpha Tx+\beta Tz$. Selain itu,
+$\|Tx\|=\|F_x\|\leq\|\phi\|\|x\|$, jadi $T$ terbatas dan
+$\|T\|\leq\|\phi\|$. Sebaliknya,
+$|\phi(x,y)|=|\langle Tx,y\rangle|\leq\|T\|\|x\|\|y\|$, sehingga
+$\|\phi\|\leq\|T\|$. Jadi $\|T\|=\|\phi\|$.
+
+Untuk $y\in K$ tetap, fungsi $x\mapsto\phi(x,y)$ adalah fungsional linear
+terbatas pada~$H$. Riesz--Fréchet memberi vektor tunggal $Sy\in H$ sehingga
+$\phi(x,y)=\langle x,Sy\rangle$. Karena $\phi$ linear konjugat dalam~$y$ dan
+hasil kali dalam juga linear konjugat dalam variabel kedua, ketunggalan
+menunjukkan bahwa $S$ linear. Argumen norma yang sama memberi
+$\|S\|=\|\phi\|$. Jika operator lain mempunyai salah satu identitas tersebut,
+ketunggalan dalam teorema Riesz--Fréchet pada setiap irisan memaksanya sama
+dengan $T$ atau~$S$. Dengan demikian kedua operator unik.
+\end{o001proof}
+\end{o001readerwork}
+
+% O001-READER-WORK-SOLUTION-ID: O001-FAOA-2015-CH06-RW-001-SOLUTION
+% SOURCE-RESULT-ID: FAOA-2015-CH06-NODE-0024
+% SOURCE-HINT-ID: FAOA-2015-CH06-NODE-0025
+% RESULT-TARGET-SHA256: ad2506613fe9a301018275484eb844333cf2b5efa5a268c3a54ff1a2c9882b64
+% HINT-TARGET-SHA256: 888706ad7f71a8381be45b7bcf76b7f3e4d5156dc7bcdb7566f2680c443fd808
+\begin{o001readerwork}
+  {O001-FAOA-2015-CH06-RW-001-SOLUTION}
+  {FAOA-2015-CH06-NODE-0024}
+  {FAOA-2015-CH06-NODE-0025}
+  {ad2506613fe9a301018275484eb844333cf2b5efa5a268c3a54ff1a2c9882b64}
+  {888706ad7f71a8381be45b7bcf76b7f3e4d5156dc7bcdb7566f2680c443fd808}
+\begin{o001result}
+\begin{thm}[Teorema Alaoglu]\label{C067441} Bola satuan tertutup dalam dual suatu ruang linear bernorma
+ \index{teorema Alaoglu}%
+kompak dalam topologi-$w^*$.
+\end{thm}
+\end{o001result}
+\begin{o001sourcehint}
+\begin{proof}[\emph{Petunjuk pembuktian}] Misalkan $V$ suatu ruang linear bernorma, dan nyatakan dengan $[V^*]_1$ bola satuan tertutup dari
+ruang dualnya.  Untuk setiap $x \in V$, definisikan $D_x = \{\lambda \in \K \colon \abs\lambda \le \norm x\}$.  Hasil kali
+\smash[b]{$\mathbf P = \prod\limits_{x \in V} D_x$} kompak berdasarkan \emph{teorema Tychonoff}.  Tinjau fungsi
+   \[ \Phi\colon [V^*]_1 \sto \mathbf P \colon f \mapsto \bigl(f(x)\bigr)_{x \in V} \]
+dengan $[V^*]_1$ dilengkapi topologi-$w^*$ dan $\mathbf P$ dilengkapi topologi hasil kali (lihat~\ref{C021437}).  Di sini kita menulis
+$\bigl(f(x)\bigr)_{x \in V}$ untuk keluarga bilangan terindeks (atau barisan tergeneralisasi), bukan notasi yang lebih lazim
+$\bigl(f_x\bigr)_{x \in V}$.  (Untuk pembahasan lebih lanjut tentang keluarga terindeks, lihat~\cite{Erdman:2007}, Bagian~7.2.)  Mudah dilihat bahwa
+$\Phi$ injektif.  Untuk menunjukkan bahwa pemetaan itu kontinu, misalkan $\bigl(f_\lambda\bigr)_{\lambda \in \Lambda}$ suatu jaring dalam $[V^*]_1$
+dan $g$ suatu fungsi dalam $[V^*]_1$ sedemikian sehingga $f_\lambda \to^{w^*} g$.  Perhatikan bahwa hal ini terjadi jika dan hanya jika
+$\pi_x(f_\lambda) \sto \pi_x(g)$ untuk setiap $x \in V$ (dengan $\pi_x$ proyeksi koordinat pada~$\mathbf P$---lihat~\ref{C015531}).
+Terakhir, misalkan $\bigl(f_\lambda\bigr)_{\lambda \in \Lambda}$ suatu jaring dalam $[V^*]_1$ sedemikian sehingga $\bigl(\Phi(f_\lambda)\bigr)_{\lambda \in \Lambda}$
+konvergen dalam~$\mathbf P$.  Tunjukkan bahwa jaring $\bigl(f_\lambda(x)\bigr)_{\lambda \in \Lambda}$ konvergen dalam $\K$ untuk setiap $x \in V$.
+Misalkan $g(x) = \lim\limits_\lambda f_\lambda(x)$ untuk setiap $x \in V$, lalu buktikan bahwa $g$ linear, $\norm g \le 1$,
+$f_\lambda \to^{w^*} g$ dalam $[V^*]_1$, dan $\Phi(f_\lambda) \sto \Phi(g)$ dalam~$\mathbf P$.  \ns
+\end{proof}
+\end{o001sourcehint}
+\begin{o001answer}
+Bola dual tertutup tertanam secara homeomorfik sebagai subhimpunan tertutup
+dari hasil kali kompak $\prod_{x\in V}\{\lambda:|\lambda|\leq\|x\|\}$;
+karena itu ia kompak dalam topologi-$w^*$.
+\end{o001answer}
+\begin{o001proof}
+Untuk setiap $x\in V$, cakram tertutup
+$D_x=\{\lambda\in\K:|\lambda|\leq\|x\|\}$ kompak. Teorema Tychonoff memberi
+kekompakan ruang hasil kali $\mathbf P=\prod_{x\in V}D_x$. Jika
+$[V^*]_1$ adalah bola satuan dual, definisikan
+\[
+ \Phi(f)=(f(x))_{x\in V}.
+\]
+Ketaksamaan $|f(x)|\leq\|x\|$ memastikan bahwa $\Phi(f)\in\mathbf P$.
+Pemetaan ini injektif. Berdasarkan definisi topologi-$w^*$, suatu jaring
+$f_\lambda$ konvergen ke~$f$ jika dan hanya jika setiap koordinat
+$f_\lambda(x)$ konvergen ke~$f(x)$. Jadi $\Phi$ adalah homeomorfisme dari
+$[V^*]_1$ ke citranya dengan topologi subruang.
+
+Kita tunjukkan bahwa citra itu tertutup. Misalkan jaring
+$\Phi(f_\lambda)$ konvergen di~$\mathbf P$ ke $z=(z_x)_{x\in V}$ dan tetapkan
+$g(x)=z_x$. Limit koordinat mempertahankan penjumlahan dan perkalian skalar:
+\[
+ g(\alpha x+\beta y)
+ =\lim_\lambda f_\lambda(\alpha x+\beta y)
+ =\alpha g(x)+\beta g(y).
+\]
+Selain itu $|g(x)|\leq\|x\|$ karena $z_x\in D_x$. Maka $g$ linear terbatas
+dengan $\|g\|\leq1$, sehingga $g\in[V^*]_1$, dan $z=\Phi(g)$. Dengan
+kriteria jaring untuk ketertutupan, $\Phi([V^*]_1)$ tertutup dalam~$\mathbf P$.
+Citra itu kompak sebagai subhimpunan tertutup ruang kompak; homeomorfisme
+$\Phi$ kemudian membuktikan kekompakan-$w^*$ bola dual.
+\end{o001proof}
+\end{o001readerwork}
+
+% O001-READER-WORK-SOLUTION-ID: O001-FAOA-2015-CH06-RW-002-SOLUTION
+% SOURCE-RESULT-ID: FAOA-2015-CH06-NODE-0030
+% SOURCE-HINT-ID: FAOA-2015-CH06-NODE-0031
+% RESULT-TARGET-SHA256: 7325fa61fae025e9f01d4aa48c36f6c41f02c4d0f6f073f1d2ac750a9bd1c70d
+% HINT-TARGET-SHA256: 9b01db1c39da23fc93882972564dcf6c8ba7d482ad352c2c6efb50f6fe58fe89
+\begin{o001readerwork}
+  {O001-FAOA-2015-CH06-RW-002-SOLUTION}
+  {FAOA-2015-CH06-NODE-0030}
+  {FAOA-2015-CH06-NODE-0031}
+  {7325fa61fae025e9f01d4aa48c36f6c41f02c4d0f6f073f1d2ac750a9bd1c70d}
+  {9b01db1c39da23fc93882972564dcf6c8ba7d482ad352c2c6efb50f6fe58fe89}
+\begin{o001result}
+\begin{thm}[Teorema pemetaan terbuka]\label{C069414} Setiap surjeksi linear terbatas antara
+ \index{terbuka!pemetaan!teorema}%
+ \index{morfisme bijektif!dapat diinverskan!dalam $\cat{BAN_\infty}$}%
+ruang-ruang Banach merupakan pemetaan terbuka.
+\end{thm}
+\end{o001result}
+\begin{o001sourcehint}
+\begin{proof}[\emph{Petunjuk pembuktian}] Misalkan $T\colon B \sto C$ suatu surjeksi linear terbatas antara ruang-ruang Banach.
+Mulailah dengan membuktikan klaim berikut: yang perlu kita tunjukkan hanyalah bahwa $T\bigl((B)_1\bigr)$ memuat suatu bola terbuka di sekitar
+titik asal dalam~$C$.  Untuk sementara, misalkan kita mengetahui bahwa bola semacam itu ada.  Namai bola itu~$W$.  Diberikan suatu subhimpunan terbuka $U$ dari $B$, kita
+ingin menunjukkan bahwa citranya oleh $T$ terbuka dalam~$C$.  Untuk itu, ambil sebarang titik $y$ dalam $T(U)$ dan pilih $x$
+dalam $U$ sedemikian sehingga $y = Tx$.  Karena $U - x$ merupakan lingkungan titik asal dalam $B$, kita dapat mencari bilangan $r > 0$ sedemikian sehingga
+$r\,(B)_1 \subseteq U - x$.  Buktikan bahwa $T(U)$ terbuka dengan menunjukkan bahwa $y + rW \subseteq T(U)$.
+
+Untuk membuktikan klaim di atas, misalkan $V = T\bigl((B)_1\bigr)$ dan perhatikan bahwa karena $T$ surjektif, $C = T(B) =
+\bigcup_{k=1}^\infty k\clo V$.  Gunakan versi \emph{teorema kategori Baire} yang menyatakan bahwa jika suatu ruang metrik lengkap takkosong
+merupakan gabungan suatu barisan himpunan tertutup, maka sekurang-kurangnya salah satu himpunan tersebut memiliki interior takkosong.
+(Lihat, misalnya, Teorema 29.3.21 dalam~\cite{Erdman:2007}.)  Pilih $k \in \N$ sedemikian sehingga $\bigl(k\clo V\bigr)^o \neq \emptyset$.
+Dengan demikian, terdapat $y \in \clo V$ dan $r > 0$ sedemikian sehingga $y + (C)_r \subseteq k\clo V$.  Dari kekonveksan
+$k\clo V$, tidak sulit melihat bahwa $(C)_r \subseteq k\clo V$.  (Tuliskan sebarang titik $z$ dalam $(C)_r$ sebagai
+$\frac12(y + z) + \frac12(-y + z)$.) Sekarang diperoleh $(C)_{r/k} \subseteq \clo V$.  Gunakan Proposisi~\ref{prop_for_OMT}.
+\ns \end{proof}
+\end{o001sourcehint}
+\begin{o001answer}
+Teorema kategori Baire memberi bola di sekitar nol dalam tutupan citra bola
+satuan; argumen deret konvergen menghapus tanda tutupan. Linearitas kemudian
+memindahkan dan menskalakan bola itu di sekitar setiap titik citra.
+\end{o001answer}
+\begin{o001proof}
+Misalkan $V=T((B)_1)$. Karena $T$ surjektif,
+$C=\bigcup_{k\geq1}k\clo V$. Teorema kategori Baire memberi suatu~$k$ sehingga
+$k\clo V$ mempunyai interior tak kosong. Maka terdapat $y\in C$ dan $r>0$
+dengan $y+(C)_r\subseteq k\clo V$. Himpunan $k\clo V$ konveks dan simetris;
+karena itu juga $-y+(C)_r\subseteq k\clo V$. Untuk $z\in(C)_r$, kedua vektor
+$y+z$ dan $-y+z$ berada di $k\clo V$, sehingga rata-ratanya~$z$ juga berada
+di sana. Jadi $(C)_{r/k}\subseteq\clo V$.
+
+Kita buktikan langkah teknis bahwa bila $(C)_s\subseteq\clo{T((B)_1)}$, maka
+$(C)_s\subseteq T((B)_1)$. Dengan penskalaan cukup ambil $s=1$. Untuk
+$z\in(C)_1$, pilih $0<\delta<1$ sehingga $\|z\|<1-\delta$, dan tetapkan
+$q=z/(1-\delta)$. Secara induktif, dari hipotesis tutupan pilih
+$u_n\in\delta^{n-1}(B)_1$ agar
+\[
+ \left\|q-T\sum_{j=1}^{n}u_j\right\|<\delta^n.
+\]
+Pemilihan dimulai dengan mendekati~$q$ oleh $T((B)_1)$; pada langkah
+berikutnya, bagi residu dengan $\delta^n$, dekati di bola satuan, lalu
+skalakan kembali. Deret $\sum u_n$ konvergen mutlak dalam ruang Banach~$B$.
+Jika $x=\sum u_n$, kontinuitas~$T$ dan residu yang menuju nol memberi
+$Tx=q$, sedangkan $\|x\|<\sum_{n\geq1}\delta^{n-1}=1/(1-\delta)$.
+Jadi $z=T((1-\delta)x)$ dengan $\|(1-\delta)x\|<1$. Langkah teknis terbukti,
+dan karena itu $V$ memuat suatu bola terbuka~$W$ di sekitar nol.
+
+Sekarang ambil $U\subseteq B$ terbuka dan $y=Tx\in T(U)$. Ada $a>0$ dengan
+$x+a(B)_1\subseteq U$. Maka
+\[
+ y+aW\subseteq Tx+T(a(B)_1)\subseteq T(U).
+\]
+Jadi setiap titik $T(U)$ mempunyai lingkungan yang termuat dalam $T(U)$;
+dengan demikian $T(U)$ terbuka.
+\end{o001proof}
+\end{o001readerwork}
+
+% O001-READER-WORK-SOLUTION-ID: O001-FAOA-2015-CH06-RW-003-SOLUTION
+% SOURCE-RESULT-ID: FAOA-2015-CH06-NODE-0045
+% SOURCE-HINT-ID: FAOA-2015-CH06-NODE-0046
+% RESULT-TARGET-SHA256: 6b71222dff40bb8011df9a11d4042434fb0957662a12b18711a6ecdd53291517
+% HINT-TARGET-SHA256: 23c62195283597b3dfd4933a536d993e287129d5f29981be51eecf10015f9000
+\begin{o001readerwork}
+  {O001-FAOA-2015-CH06-RW-003-SOLUTION}
+  {FAOA-2015-CH06-NODE-0045}
+  {FAOA-2015-CH06-NODE-0046}
+  {6b71222dff40bb8011df9a11d4042434fb0957662a12b18711a6ecdd53291517}
+  {23c62195283597b3dfd4933a536d993e287129d5f29981be51eecf10015f9000}
+\begin{o001result}
+\begin{thm}[Teorema graf tertutup]\label{thm_CGT} Misalkan $T\colon B \sto C$ suatu pemetaan linear antara ruang-ruang Banach.
+ \index{tertutup!teorema graf}%
+Jika graf $T$ tertutup, maka $T$ kontinu.
+\end{thm}
+\end{o001result}
+\begin{o001sourcehint}
+\begin{proof}[\emph{Petunjuk pembuktian}] Misalkan $G = \{(x,Tx)\colon x \in B\}$ graf~$T$. Terapkan
+(Korolar~\ref{C069417} dari) \emph{teorema pemetaan terbuka} pada pemetaan
+  \[ \pi\colon G \sto B\colon (x,Tx) \mapsto x\,. \]
+\ns \end{proof}
+\end{o001sourcehint}
+\begin{o001answer}
+Graf tertutup adalah ruang Banach; proyeksi graf ke domain merupakan bijeksi
+linear terbatas, sehingga inversnya terbatas oleh teorema pemetaan terbuka.
+Komposisi invers itu dengan proyeksi kodomain adalah~$T$.
+\end{o001answer}
+\begin{o001proof}
+Lengkapi $B\times C$ dengan norma produk, misalnya
+$\|(x,y)\|=\|x\|+\|y\|$. Ruang ini Banach. Karena graf
+$G=\{(x,Tx):x\in B\}$ tertutup, $G$ adalah subruang Banach. Pemetaan
+\[
+ \pi\colon G\to B,
+ \qquad
+ \pi(x,Tx)=x,
+\]
+linear, bijektif, dan terbatas karena $\|x\|\leq\|(x,Tx)\|$. Teorema pemetaan
+terbuka, dalam bentuk teorema invers terbatas, menyatakan bahwa
+$\pi^{-1}\colon B\to G$ terbatas. Proyeksi koordinat kedua
+$q\colon G\to C$, $q(x,y)=y$, juga terbatas. Namun
+\[
+ T=q\circ\pi^{-1}.
+\]
+Jadi $T$ adalah komposisi dua pemetaan linear terbatas dan karena itu kontinu.
+\end{o001proof}
+\end{o001readerwork}
+
+% O001-READER-WORK-SOLUTION-ID: O001-FAOA-2015-CH06-RW-004-SOLUTION
+% SOURCE-RESULT-ID: FAOA-2015-CH06-NODE-0136
+% SOURCE-HINT-ID: FAOA-2015-CH06-NODE-0137
+% RESULT-TARGET-SHA256: 0f6ce55313015e56ae0678821dcb6e5cad7d434ff09b62120fa0b3e95ab3354c
+% HINT-TARGET-SHA256: d7ed276423d393da1ea3f084b5faf2f4d3ebba7da0a3902ad41dee24d81e6983
+\begin{o001readerwork}
+  {O001-FAOA-2015-CH06-RW-004-SOLUTION}
+  {FAOA-2015-CH06-NODE-0136}
+  {FAOA-2015-CH06-NODE-0137}
+  {0f6ce55313015e56ae0678821dcb6e5cad7d434ff09b62120fa0b3e95ab3354c}
+  {d7ed276423d393da1ea3f084b5faf2f4d3ebba7da0a3902ad41dee24d81e6983}
+\begin{o001result}
+\begin{thm}[Prinsip keterbatasan seragam]\label{thm_PUB} Misalkan $B$ ruang Banach dan $W$ ruang linear bernorma.
+ \index{prinsip!keterbatasan seragam}%
+ \index{keterbatasan!prinsip seragam}%
+ \index{seragam!keterbatasan!prinsip}%
+Jika suatu keluarga $\ofml T$ dari pemetaan linear terbatas dari $B$ ke $W$ terbatas titik demi
+titik, maka keluarga itu terbatas seragam.
+\end{thm}
+\end{o001result}
+\begin{o001sourcehint}
+\begin{proof}[\emph{Petunjuk pembuktian}] Untuk setiap $T \in \ofml T$, definisikan
+  \[ \sbsb fT\colon B \sto \R\colon x \mapsto \norm{Tx}. \]
+Gunakan proposisi sebelumnya untuk menunjukkan bahwa terdapat subhimpunan terbuka tak kosong $U$ dari $B$
+dan konstanta $M > 0$ sedemikian sehingga $\sbsb fT(x) \le M$ untuk setiap $T \in \ofml T$ dan setiap
+$x \in U$. Pilih titik $a \in B$ dan bilangan $r > 0$ sedemikian sehingga $\clo{B_r(a)} \subseteq
+U$. Kemudian verifikasi bahwa
+  \[ \norm{Ty} \le r^{-1}\bigl(\, \sbsb fT(a + ry) + \sbsb fT(a)\,\bigr) \le 2Mr^{-1} \]
+untuk setiap $T \in \ofml T$ dan setiap $y \in B$ sedemikian sehingga $\norm y \le 1$. \ns
+\end{proof}
+\end{o001sourcehint}
+\begin{o001answer}
+Teorema kategori Baire memberi satu bola tempat seluruh keluarga terbatas oleh
+satu konstanta; linearitas memindahkan estimasi itu ke bola satuan dan memberi
+$\sup_{T\in\ofml T}\|T\|<\infty$.
+\end{o001answer}
+\begin{o001proof}
+Untuk $n\in\N$, tetapkan
+\[
+ A_n=\{x\in B:\|Tx\|\leq n\text{ untuk setiap }T\in\ofml T\}.
+\]
+Setiap $A_n$ tertutup sebagai irisan prabayangan bola tertutup oleh pemetaan
+kontinu. Keterbatasan titik demi titik menyatakan
+$B=\bigcup_{n\geq1}A_n$. Karena $B$ Banach, teorema kategori Baire memberi
+$N$ sehingga $A_N$ mempunyai interior tak kosong. Pilih $a\in B$ dan $r>0$
+sedemikian sehingga bola tertutup $\clo{B_r(a)}$ termuat dalam~$A_N$.
+
+Jika $\|y\|\leq1$ dan $T\in\ofml T$, maka $a$ serta $a+ry$ berada dalam
+$A_N$. Linearitas dan ketaksamaan segitiga memberi
+\[
+ r\|Ty\|=\|T(a+ry)-Ta\|
+ \leq\|T(a+ry)\|+\|Ta\|\leq2N.
+\]
+Jadi $\|Ty\|\leq2N/r$ seragam untuk semua $T$ dan semua vektor dalam bola
+satuan. Dengan mengambil supremum atas~$y$, diperoleh
+$\|T\|\leq2N/r$ untuk setiap $T\in\ofml T$. Dengan demikian keluarga
+terbatas seragam.
+\end{o001proof}
+\end{o001readerwork}
+
+% O001-READER-WORK-SOLUTION-ID: O001-FAOA-2015-CH07-RW-001-SOLUTION
+% SOURCE-RESULT-ID: FAOA-2015-CH07-NODE-0018
+% SOURCE-HINT-ID: FAOA-2015-CH07-NODE-0019
+% RESULT-TARGET-SHA256: 457ea425abb80f594c4cc4e579674722ce2be7ae22e3d7c523a1049ad7d323f9
+% HINT-TARGET-SHA256: 6f4e9644b3dc23c58bb2b84c5d77764cc8828e283d03c093b98951b736cb1d1a
+\begin{o001readerwork}
+  {O001-FAOA-2015-CH07-RW-001-SOLUTION}
+  {FAOA-2015-CH07-NODE-0018}
+  {FAOA-2015-CH07-NODE-0019}
+  {457ea425abb80f594c4cc4e579674722ce2be7ae22e3d7c523a1049ad7d323f9}
+  {6f4e9644b3dc23c58bb2b84c5d77764cc8828e283d03c093b98951b736cb1d1a}
+\begin{o001result}
+\begin{exam} Misalkan $C$ ruang Banach $\fml C([0,1])$ dan $k \in \fml C([0,1] \times [0,1])$.  Untuk setiap $f \in C$
+ \index{integral!operator}%
+ \index{operator!integral}%
+definisikan fungsi $Kf$ pada $[0,1]$ dengan
+   \[ Kf(x) = \int_0^1 k(x,y)f(y)\,dy\,. \]
+Maka operator integral $K$ merupakan operator kompak pada~$C$.
+\end{exam}
+\end{o001result}
+\begin{o001sourcehint}
+\begin{proof}[\emph{Petunjuk untuk bukti}] Gunakan \emph{teorema Arzel\`a-Ascoli}~\ref{AAThm}.  \ns
+\end{proof}
+\end{o001sourcehint}
+\begin{o001answer}
+Citra bola satuan oleh~$K$ terbatas seragam dan ekuikontinu; teorema
+Arzelà--Ascoli membuat tutupannya kompak, sehingga~$K$ operator kompak.
+\end{o001answer}
+\begin{o001proof}
+Linearitas~$K$ langsung dari linearitas integral. Jika
+$M=\|k\|_\infty$, maka untuk $\|f\|_\infty\leq1$,
+\[
+ |Kf(x)|\leq\int_0^1|k(x,y)|\,dy\leq M.
+\]
+Jadi citra bola satuan terbatas seragam. Karena $k$ kontinu pada persegi
+kompak, ia kontinu seragam. Diberikan $\epsilon>0$, ada $\delta>0$ sehingga
+$|x-x'|<\delta$ mengakibatkan
+\[
+ \sup_{0\leq y\leq1}|k(x,y)-k(x',y)|<\epsilon.
+\]
+Untuk semua $f$ dalam bola satuan,
+\[
+ |Kf(x)-Kf(x')|
+ \leq\int_0^1|k(x,y)-k(x',y)|\,|f(y)|\,dy
+ <\epsilon.
+\]
+Dengan demikian keluarga $K((C)_1)$ ekuikontinu. Teorema Arzelà--Ascoli
+menyatakan bahwa tutupannya kompak dalam $\fml C([0,1])$ dengan norma
+supremum. Jadi $K$ membawa bola satuan ke himpunan relatif kompak dan,
+menurut definisi, $K$ merupakan operator kompak.
+\end{o001proof}
+\end{o001readerwork}
+
+% O001-READER-WORK-SOLUTION-ID: O001-FAOA-2015-CH08-RW-001-SOLUTION
+% SOURCE-RESULT-ID: FAOA-2015-CH08-NODE-0052
+% SOURCE-HINT-ID: FAOA-2015-CH08-NODE-0053
+% RESULT-TARGET-SHA256: c357c420d40d3fc1aebb795d7a32686947ef6b99c15f0ba276cb122d3b67df7c
+% HINT-TARGET-SHA256: 896fca1413df66e29c5b7f5161d8f4d7de60c2a6c90fc3c3a5323625bed07609
+\begin{o001readerwork}
+  {O001-FAOA-2015-CH08-RW-001-SOLUTION}
+  {FAOA-2015-CH08-NODE-0052}
+  {FAOA-2015-CH08-NODE-0053}
+  {c357c420d40d3fc1aebb795d7a32686947ef6b99c15f0ba276cb122d3b67df7c}
+  {896fca1413df66e29c5b7f5161d8f4d7de60c2a6c90fc3c3a5323625bed07609}
+\begin{o001result}
+\begin{prop}\label{C073134} Spektrum setiap elemen dari aljabar Banach beridentitas tidak kosong.
+\end{prop}
+\end{o001result}
+\begin{o001sourcehint}
+\begin{proof}[\emph{Petunjuk untuk bukti}] Gunakan argumen kontradiksi. Gunakan \emph{teorema Liouville}~\ref{C073131}
+untuk menunjukkan bahwa $\phi \circ R_a$ konstan bagi setiap fungsional linear terbatas $\phi$ pada~$A$. Kemudian gunakan
+(salah satu versi) \emph{teorema Hahn-Banach} untuk membuktikan bahwa $R_a$ konstan. Mengapa konstanta ini harus~$0$?   \ns
+\end{proof}
+\end{o001sourcehint}
+\begin{o001answer}
+Jika spektrum kosong, resolven bernilai-aljabar terdefinisi di seluruh~$\C$.
+Setiap komposisinya dengan fungsional dual terbatas dan entire, sehingga nol
+oleh Liouville dan perilaku di tak hingga; Hahn--Banach lalu memaksa resolven
+sendiri nol, bertentangan dengan sifat invers.
+\end{o001answer}
+\begin{o001proof}
+Andaikan $\sigma(a)=\emptyset$. Maka fungsi resolven
+\[
+ R_a(\lambda)=(a-\lambda\vc1)^{-1}
+\]
+terdefinisi dan analitik pada seluruh~$\C$. Untuk
+$|\lambda|>\|a\|$, deret Neumann memberi
+\[
+ R_a(\lambda)
+ =-\frac1\lambda\left(\vc1-\frac a\lambda\right)^{-1},
+ \qquad
+ \|R_a(\lambda)\|\leq\frac1{|\lambda|-\|a\|}.
+\]
+Jadi resolven menuju nol ketika $|\lambda|\to\infty$. Pada setiap cakram
+kompak ia terbatas karena kontinu.
+
+Ambil $\phi\in A^*$. Fungsi skalar $\phi\circ R_a$ entire dan terbatas di
+seluruh bidang: di luar suatu cakram gunakan estimasi tadi, sedangkan di dalam
+cakram gunakan kekompakan. Teorema Liouville membuatnya konstan, dan limit di
+tak hingga menunjukkan bahwa konstanta itu nol. Jadi
+$\phi(R_a(\lambda))=0$ untuk setiap $\phi\in A^*$ dan setiap~$\lambda$.
+Teorema Hahn--Banach memisahkan titik-titik aljabar Banach, sehingga
+$R_a(\lambda)=0$. Tetapi
+$(a-\lambda\vc1)R_a(\lambda)=\vc1$, yang mustahil bila resolven nol.
+Kontradiksi ini membuktikan bahwa $\sigma(a)$ tidak kosong.
+\end{o001proof}
+\end{o001readerwork}

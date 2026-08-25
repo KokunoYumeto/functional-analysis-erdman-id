@@ -1,0 +1,472 @@
+% Lapisan solusi O001 -- Bab 10 (Distribusi)
+% 11 solusi asli terpisah; bukan tulisan John M. Erdman.
+% Provenans model: OpenAI Codex gpt-5.6-sol, Ultra, atas arahan pengguna.
+% Lisensi komponen solusi: CC BY-SA 4.0.
+% Tidak menyiratkan dukungan John M. Erdman atau Portland State University.
+
+\markboth{SOLUSI O001 UNTUK BAB 10: DISTRIBUSI}{SOLUSI O001 UNTUK BAB 10: DISTRIBUSI}
+\section*{Solusi O001 untuk Bab 10: Distribusi}
+\addcontentsline{toc}{section}{Solusi O001 untuk Bab 10: Distribusi}
+\begin{center}
+\small
+Komponen solusi asli terpisah, CC BY-SA 4.0. Ditulis dengan bantuan
+OpenAI Codex gpt-5.6-sol, Ultra, atas arahan pengguna. Pernyataan latihan
+berasal dari edisi terjemahan karya John M. Erdman; solusi ini bukan tulisan
+beliau dan tidak menyiratkan dukungan beliau atau Portland State University.
+\end{center}
+
+% O001-SOLUTION-ID: O001-FAOA-2015-CH10-EX-001-SOLUTION
+% SOURCE-EXERCISE-ID: FAOA-2015-CH10-NODE-0034
+% STATEMENT-TARGET-SHA256: 993392326124fdc4d83c44ae53cdb333a2ca2c9911da027d164621951aafc62a
+\begin{o001solution}
+  {O001-FAOA-2015-CH10-EX-001-SOLUTION}
+  {FAOA-2015-CH10-NODE-0034}
+  {993392326124fdc4d83c44ae53cdb333a2ca2c9911da027d164621951aafc62a}
+\begin{o001statement}
+Misalkan $S$ suatu fungsi signum (atau tanda) pada $\R$; artinya, misalkan $S = 2H - 1$, dengan $H$ fungsi Heaviside.
+Misalkan pula $g$ suatu fungsi pada $\R$ sedemikian sehingga $g\colon x \mapsto -x - 3$ untuk $x < 0$ dan $g\colon x \mapsto x + 5$ untuk $x \ge 0$.
+   \begin{enumerate}[label=\rm{(\alph*)}]
+     \item Carilah konstanta $\alpha$ dan $\beta$ sedemikian sehingga ${\tilde g}' = \alpha \widetilde S + \beta \delta$.
+     \item Carilah suatu fungsi $a$ pada $\R$ sedemikian sehingga ${\tilde a}' = \wt S$.
+   \end{enumerate}
+\end{o001statement}
+\begin{o001answer}
+$\alpha=1$, $\beta=8$, dan salah satu pilihan ialah $a(x)=\lvert x\rvert$.
+Lebih umum, $a(x)=\lvert x\rvert+C$ untuk sembarang konstanta~$C$.
+\end{o001answer}
+\begin{o001proof}
+Pada masing-masing setengah garis, turunan klasik $g$ sama dengan $-1$ untuk
+$x<0$ dan $1$ untuk $x>0$, yaitu sama hampir di mana-mana dengan~$S$.
+Sementara itu, loncatan $g$ di titik asal adalah
+\[
+  g(0+)-g(0-)=5-(-3)=8.
+\]
+Rumus turunan distribusional bagi fungsi mulus-sepotong karena itu memberi
+\[
+  {\tilde g}'=\widetilde S+8\delta,
+\]
+sehingga $\alpha=1$ dan $\beta=8$.
+
+Untuk bagian kedua, ambil $a(x)=\lvert x\rvert$. Fungsi ini kontinu di nol,
+jadi tidak menghasilkan suku delta, dan turunannya sama dengan $-1$ di
+$(-\infty,0)$ serta $1$ di $(0,\infty)$. Maka
+${\tilde a}'=\widetilde S$. Penambahan konstanta tidak mengubah turunan
+distribusional.
+\end{o001proof}
+\end{o001solution}
+
+% O001-SOLUTION-ID: O001-FAOA-2015-CH10-EX-002-SOLUTION
+% SOURCE-EXERCISE-ID: FAOA-2015-CH10-NODE-0035
+% STATEMENT-TARGET-SHA256: f48002bdb810711a169089b4f615782e5af6798ecf6f38a7be8141ef70a103e5
+\begin{o001solution}
+  {O001-FAOA-2015-CH10-EX-002-SOLUTION}
+  {FAOA-2015-CH10-NODE-0035}
+  {f48002bdb810711a169089b4f615782e5af6798ecf6f38a7be8141ef70a103e5}
+\begin{o001statement}
+Misalkan $f(x) = \left\{
+                           \begin{array}{ll}
+                             1 - \abs x, & \hbox{jika $\abs x \le 1$;} \\
+                                 0,      & \hbox{selain itu.}
+                           \end{array}
+                         \right.$ Dengan menghitung kedua ruas persamaan~\eqref{deriv_reg_distr} secara terpisah, tunjukkan bahwa persamaan itu
+benar secara klasik untuk setiap fungsi uji yang tumpuannya termuat dalam interval~$[-1,1]$.
+\end{o001statement}
+\begin{o001answer}
+Kedua ruas bernilai
+\[
+  \int_{-1}^{0}\phi(x)\,dx-\int_{0}^{1}\phi(x)\,dx .
+\]
+\end{o001answer}
+\begin{o001proof}
+Turunan klasik $f$ ada hampir di mana-mana dan diberikan oleh
+\[
+ f'(x)=
+ \begin{cases}
+  1,&-1<x<0,\\
+ -1,&0<x<1,\\
+  0,&\text{selain itu}.
+ \end{cases}
+\]
+Oleh sebab itu,
+\[
+ L_{f'}(\phi)=\int_{-1}^{0}\phi(x)\,dx-
+               \int_{0}^{1}\phi(x)\,dx .
+\]
+Di sisi lain, dengan memecah integral di nol dan mengintegralkan per bagian,
+\begin{align*}
+ (L_f)'(\phi)
+ &=-\int_{-1}^{0}(1+x)\phi'(x)\,dx
+   -\int_{0}^{1}(1-x)\phi'(x)\,dx\\
+ &=\left[-\phi(0)+\int_{-1}^{0}\phi(x)\,dx\right]
+   +\left[\phi(0)-\int_{0}^{1}\phi(x)\,dx\right]\\
+ &=\int_{-1}^{0}\phi(x)\,dx-\int_{0}^{1}\phi(x)\,dx.
+\end{align*}
+Suku batas di nol saling menghapus. Dengan demikian
+$(L_f)'=L_{f'}$, sebagaimana dinyatakan oleh~\eqref{deriv_reg_distr} untuk
+fungsi kontinu dan mulus-sepotong ini.
+\end{o001proof}
+\end{o001solution}
+
+% O001-SOLUTION-ID: O001-FAOA-2015-CH10-EX-003-SOLUTION
+% SOURCE-EXERCISE-ID: FAOA-2015-CH10-NODE-0036
+% STATEMENT-TARGET-SHA256: b4a47ce3926ad911b776a8e31eb2efc713e5e925d51c317a06458160b0c7cbbc
+\begin{o001solution}
+  {O001-FAOA-2015-CH10-EX-003-SOLUTION}
+  {FAOA-2015-CH10-NODE-0036}
+  {b4a47ce3926ad911b776a8e31eb2efc713e5e925d51c317a06458160b0c7cbbc}
+\begin{o001statement}
+Misalkan $f(x) = \sbsb\chi{(0,1)}$ untuk $x \in~\R$ dan $\phi \in \fml D\bigl((-1,1)\bigr)$. Bandingkan nilai $L_{f\,'}(\phi)$ dan
+$\bigl(L_f\bigr)'(\phi)$.
+\end{o001statement}
+\begin{o001answer}
+$L_{f'}(\phi)=0$, sedangkan $(L_f)'(\phi)=\phi(0)$; jadi pada
+$(-1,1)$ berlaku $(L_f)'=\delta_0$ dan keduanya tidak sama pada umumnya.
+\end{o001answer}
+\begin{o001proof}
+Turunan klasik $f'$ sama dengan nol hampir di mana-mana, sehingga distribusi
+reguler yang ditentukannya memenuhi $L_{f'}(\phi)=0$. Sebaliknya,
+\[
+ (L_f)'(\phi)=-L_f(\phi')=-\int_0^1\phi'(x)\,dx
+ =\phi(0)-\phi(1)=\phi(0).
+\]
+Karena $\phi$ bertumpuan kompak di dalam $(-1,1)$, nilainya di~$1$ adalah
+nol. Jadi turunan distribusional menangkap loncatan di~$0$, yang diabaikan
+oleh turunan klasik hampir di mana-mana.
+\end{o001proof}
+\end{o001solution}
+
+% O001-SOLUTION-ID: O001-FAOA-2015-CH10-EX-004-SOLUTION
+% SOURCE-EXERCISE-ID: FAOA-2015-CH10-NODE-0037
+% STATEMENT-TARGET-SHA256: 76fa760413de68845660f5155e23b736072da6a018d66a8e53d649fa3f39a8eb
+\begin{o001solution}
+  {O001-FAOA-2015-CH10-EX-004-SOLUTION}
+  {FAOA-2015-CH10-NODE-0037}
+  {76fa760413de68845660f5155e23b736072da6a018d66a8e53d649fa3f39a8eb}
+\begin{o001statement}
+Misalkan $f(x) = \left\{
+                           \begin{array}{ll}
+                             x, & \hbox{jika $0 \le x \le 1$;} \\
+                             x + 2, & \hbox{jika $1 < x \le 2$;} \\
+                             0, & \hbox{selain itu.}
+                           \end{array}
+                         \right.$ Bandingkan nilai $L_{f\,'}(\phi)$ dan $\bigl(L_f\bigr)'(\phi)$ untuk suatu fungsi uji~$\phi$.
+\end{o001statement}
+\begin{o001answer}
+\[
+ L_{f'}(\phi)=\int_0^2\phi(x)\,dx,
+ \qquad
+ (L_f)'(\phi)=\int_0^2\phi(x)\,dx+2\phi(1)-4\phi(2).
+\]
+\end{o001answer}
+\begin{o001proof}
+Di luar himpunan berukuran nol $\{0,1,2\}$, turunan klasik $f$ sama dengan
+$1$ pada $(0,2)$ dan nol di luar interval tersebut. Maka
+$L_{f'}(\phi)=\int_0^2\phi$. Fungsi $f$ tidak meloncat di~$0$, tetapi
+loncatannya di~$1$ dan~$2$ berturut-turut adalah
+\[
+ f(1+)-f(1-)=3-1=2,
+ \qquad
+ f(2+)-f(2-)=0-4=-4.
+\]
+Turunan distribusional fungsi mulus-sepotong adalah distribusi reguler dari
+turunan hampir-di-mana-mana ditambah besar setiap loncatan kali delta pada
+titik loncatan. Karena itu
+\[
+ (L_f)'=L_{\sbsb\chi{(0,2)}}+2\delta_1-4\delta_2,
+\]
+yang memberikan rumus jawaban setelah diterapkan pada~$\phi$.
+\end{o001proof}
+\end{o001solution}
+
+% O001-SOLUTION-ID: O001-FAOA-2015-CH10-EX-005-SOLUTION
+% SOURCE-EXERCISE-ID: FAOA-2015-CH10-NODE-0038
+% STATEMENT-TARGET-SHA256: f52569f7102a885e40cd395f3d064ee179df2aacdc336e54e891140188da963f
+\begin{o001solution}
+  {O001-FAOA-2015-CH10-EX-005-SOLUTION}
+  {FAOA-2015-CH10-NODE-0038}
+  {f52569f7102a885e40cd395f3d064ee179df2aacdc336e54e891140188da963f}
+\begin{o001statement}
+Misalkan $h(x) = \left\{
+                           \begin{array}{ll}
+                             2x, & \hbox{jika $x < -1$;} \\
+                             1, & \hbox{jika $-1 \le x < 1$;} \\
+                             0, & \hbox{jika $x \ge 1$.}
+                           \end{array}
+                         \right.$ Carilah suatu fungsi $f$ yang terintegralkan secara lokal sedemikian sehingga ${\tilde f}\,' = \tilde h + 3\delta_1 - \delta_{-1}$.
+\end{o001statement}
+\begin{o001answer}
+Salah satu pilihan adalah
+\[
+ f(x)=
+ \begin{cases}
+ x^2,&x<-1,\\
+ x+1,&-1\leq x<1,\\
+ 5,&x\geq1.
+ \end{cases}
+\]
+Setiap solusi lain sama hampir di mana-mana dengan $f+C$ untuk suatu konstanta
+global~$C$; pada tingkat distribusi, kebebasannya tepat satu konstanta global.
+\end{o001answer}
+\begin{o001proof}
+Pada tiga interval terbuka yang bersangkutan, turunan klasik fungsi yang
+diberikan berturut-turut adalah $2x$, $1$, dan~$0$, jadi bagian regulernya
+adalah $\tilde h$. Di~$-1$, limit kanan dan kiri adalah
+\[
+ f(-1+)=0,
+ \qquad
+ f(-1-)=1,
+\]
+sehingga loncatannya $-1$. Di~$1$, limit kanan dan kiri adalah $5$ dan~$2$,
+sehingga loncatannya~$3$. Oleh rumus turunan fungsi mulus-sepotong,
+\[
+ {\tilde f}\,'=\tilde h-\delta_{-1}+3\delta_1.
+\]
+Jika antiturunan pada ketiga interval diberi konstanta terpisah, syarat kedua
+loncatan memaksa konstanta tersebut berbeda tepat seperti pada rumus di atas,
+hingga penambahan satu konstanta yang sama pada semua bagian. Perubahan nilai
+fungsi pada himpunan berukuran nol tidak mengubah distribusi reguler, sehingga
+pernyataan keunikan untuk fungsi harus dipahami hampir di mana-mana.
+\end{o001proof}
+\end{o001solution}
+
+% O001-SOLUTION-ID: O001-FAOA-2015-CH10-EX-006-SOLUTION
+% SOURCE-EXERCISE-ID: FAOA-2015-CH10-NODE-0040
+% STATEMENT-TARGET-SHA256: c64f5a0efcf4bce85f5462849dd1c213bdb4a6fde85b288a8891a0e99b5db78c
+\begin{o001solution}
+  {O001-FAOA-2015-CH10-EX-006-SOLUTION}
+  {FAOA-2015-CH10-NODE-0040}
+  {c64f5a0efcf4bce85f5462849dd1c213bdb4a6fde85b288a8891a0e99b5db78c}
+\begin{o001statement}
+Suatu \df{dipol} (dengan momen listrik 1 di titik asal pada $\R$) dapat dipandang sebagai ``limit'' ketika $\epsilon \sto 0^+$
+ \index{dipol}%
+dari suatu sistem $T_\epsilon$ yang terdiri atas dua muatan $-\frac1\epsilon$ dan $\frac1\epsilon$ yang masing-masing ditempatkan di $0$ dan $\epsilon$. Tunjukkan
+bagaimana hal ini dapat mengarahkan kita untuk mendefinisikan dipol secara matematis sebagai $-\delta\,'$. \emph{Petunjuk.} Pandanglah $T_\epsilon$ sebagai
+distribusi $\frac1\epsilon \delta_\epsilon - \frac1\epsilon \delta$.
+\end{o001statement}
+\begin{o001answer}
+$T_\epsilon\to-\delta'$ dalam $\fml D^*(\R)$ ketika
+$\epsilon\to0^+$.
+\end{o001answer}
+\begin{o001proof}
+Untuk setiap $\phi\in\fml D(\R)$,
+\[
+ T_\epsilon(\phi)
+ =\frac{\phi(\epsilon)-\phi(0)}{\epsilon}
+ \longrightarrow \phi'(0).
+\]
+Menurut definisi turunan distribusi,
+$\delta'(\phi)=-\delta(\phi')=-\phi'(0)$, sehingga
+$(-\delta')(\phi)=\phi'(0)$. Jadi limit dua muatan tersebut, dalam arti
+konvergensi titik demi titik pada setiap fungsi uji, tepat sama dengan
+$-\delta'$.
+\end{o001proof}
+\end{o001solution}
+
+% O001-SOLUTION-ID: O001-FAOA-2015-CH10-EX-007-SOLUTION
+% SOURCE-EXERCISE-ID: FAOA-2015-CH10-NODE-0047
+% STATEMENT-TARGET-SHA256: fd8775418583e8d49dd07a07086c23720b69fc2cd2a0946237eb620641240fcf
+\begin{o001solution}
+  {O001-FAOA-2015-CH10-EX-007-SOLUTION}
+  {FAOA-2015-CH10-NODE-0047}
+  {fd8775418583e8d49dd07a07086c23720b69fc2cd2a0946237eb620641240fcf}
+\begin{o001statement}
+Jika $\delta$ bukan suatu fungsi pada $\R$, lalu apa yang dimaksud orang ketika mereka menulis
+   \[ \lim_{k \sto \infty} \frac{k}{\pi(1+k^2x^2)} = \delta(x)\quad? \]
+Tunjukkan bahwa, jika ditafsirkan dengan tepat (sebagai suatu pernyataan tentang distribusi), ungkapan itu bahkan benar. \emph{Petunjuk.}
+Jika $s_k(x) = k\,\pi^{-1}(1+k^2x^2)^{-1}$ dan $\phi$ suatu fungsi uji pada $\R$, maka
+$\int_{-\infty}^\infty s_k\phi = \int_{-\infty}^\infty s_k\phi(0) + \int_{-\infty}^\infty s_k\eta$ dengan $\eta(x) = \phi(x) - \phi(0)$.
+Tunjukkan bahwa $\int_{-\infty}^\infty s_k\eta \sto 0$ ketika $k \sto \infty$.
+\end{o001statement}
+\begin{o001answer}
+Maknanya ialah $L_{s_k}\to\delta$ dalam $\fml D^*(\R)$, yaitu
+\[
+ \int_{\R}s_k(x)\phi(x)\,dx\longrightarrow\phi(0)
+ \qquad\text{untuk setiap }\phi\in\fml D(\R).
+\]
+\end{o001answer}
+\begin{o001proof}
+Dengan substitusi $y=kx$ diperoleh
+\[
+ \int_{\R}s_k(x)\phi(x)\,dx
+ =\frac1\pi\int_{\R}\frac{\phi(y/k)}{1+y^2}\,dy.
+\]
+Untuk setiap $y$, $\phi(y/k)\to\phi(0)$, sedangkan integrannya secara mutlak
+dibatasi oleh
+$\|\phi\|_\infty\big/\bigl(\pi(1+y^2)\bigr)$, sebuah fungsi yang
+terintegralkan. Teorema konvergensi terdominasi memberi
+\[
+ \lim_{k\to\infty}\int_{\R}s_k\phi
+ =\frac{\phi(0)}\pi\int_{\R}\frac{dy}{1+y^2}
+ =\phi(0)=\delta(\phi).
+\]
+Pernyataan tersebut dengan demikian merupakan pernyataan tentang limit
+distribusi, bukan limit titik demi titik fungsi.
+\end{o001proof}
+\end{o001solution}
+
+% O001-SOLUTION-ID: O001-FAOA-2015-CH10-EX-008-SOLUTION
+% SOURCE-EXERCISE-ID: FAOA-2015-CH10-NODE-0048
+% STATEMENT-TARGET-SHA256: debe9140cb2f7d0021122f265e6c1e892dbe064fb8578e7594839762ed156c72
+\begin{o001solution}
+  {O001-FAOA-2015-CH10-EX-008-SOLUTION}
+  {FAOA-2015-CH10-NODE-0048}
+  {debe9140cb2f7d0021122f265e6c1e892dbe064fb8578e7594839762ed156c72}
+\begin{o001statement}
+Misalkan $f_n(x) = \sin nx$ untuk $n \in \N$ dan $x \in \R$. Barisan $(f_n)$ tidak konvergen secara klasik;
+tetapi barisan itu konvergen secara distribusional (ke $0$). Nyatakan pernyataan ini dengan tepat, lalu buktikan. \emph{Petunjuk.} Carilah antiturunannya.
+\end{o001statement}
+\begin{o001answer}
+Untuk setiap $\phi\in\fml D(\R)$,
+$\int_{\R}\sin(nx)\phi(x)\,dx\to0$; yakni $L_{f_n}\to0$ dalam
+$\fml D^*(\R)$.
+\end{o001answer}
+\begin{o001proof}
+Karena $-\cos(nx)/n$ adalah antiturunan $\sin(nx)$ dan $\phi$ bertumpuan
+kompak, integrasi per bagian menghasilkan
+\[
+ \int_{\R}\sin(nx)\phi(x)\,dx
+ =\frac1n\int_{\R}\cos(nx)\phi'(x)\,dx.
+\]
+Oleh karena itu,
+\[
+ \left|\int_{\R}\sin(nx)\phi(x)\,dx\right|
+ \leq\frac{\|\phi'\|_{L^1}}{n}\longrightarrow0.
+\]
+Inilah tepat definisi konvergensi distribusional ke distribusi nol.
+\end{o001proof}
+\end{o001solution}
+
+% O001-SOLUTION-ID: O001-FAOA-2015-CH10-EX-009-SOLUTION
+% SOURCE-EXERCISE-ID: FAOA-2015-CH10-NODE-0050
+% STATEMENT-TARGET-SHA256: ec002d6bdad3dd72b45e60fa31af1c8ef543b8b53ad21cee638924f22b6cfd48
+\begin{o001solution}
+  {O001-FAOA-2015-CH10-EX-009-SOLUTION}
+  {FAOA-2015-CH10-NODE-0050}
+  {ec002d6bdad3dd72b45e60fa31af1c8ef543b8b53ad21cee638924f22b6cfd48}
+\begin{o001statement}
+Berikan makna pada ungkapan
+   \[ 2\pi\sum_{n = -\infty}^\infty \delta(x-2\pi n) =  1 +  2\sum_{n = 1}^\infty \cos nx\,, \]
+dan tunjukkan bahwa, jika ditafsirkan dengan tepat, ungkapan itu benar. \emph{Petunjuk.} Siapa pun yang cukup bejat untuk percaya bahwa $\delta(x)$ \emph{berarti}
+sesuatu kemungkinan akan menafsirkan $\delta(x-a)$ sebagai hal yang sama dengan $\delta_a(x)$. Anda dapat memulai proses
+merasionalisasikannya dengan menghitung deret Fourier fungsi $g$ yang didefinisikan oleh $g(x) = \frac1{4\pi}x^2 - \frac12 x$ pada $[0,2\pi]$
+dan kemudian diperluas secara periodik ke $\R$. Anda mungkin perlu mencari teorema tentang konvergensi titik demi titik dan seragam dari deret Fourier
+serta tentang pendiferensialan suku demi suku deret semacam itu.
+\end{o001statement}
+\begin{o001answer}
+Dalam $\fml D^*(\R)$ berlaku
+\[
+ 2\pi\sum_{k\in\Z}\delta_{2\pi k}
+ =\lim_{N\to\infty}\left(1+2\sum_{n=1}^{N}\cos(nx)\right).
+\]
+Kedua ruas yang diterapkan pada $\phi$ bernilai
+$2\pi\sum_{k\in\Z}\phi(2\pi k)$.
+\end{o001answer}
+\begin{o001proof}
+Ambil $\phi\in\fml D(\R)$ dan periodisasikan fungsi itu dengan
+\[
+ P\phi(t)=\sum_{k\in\Z}\phi(t+2\pi k).
+\]
+Pada setiap titik hanya berhingga banyak suku yang tidak nol secara lokal,
+sehingga $P\phi$ mulus dan $2\pi$-periodik. Koefisien Fourier-nya adalah
+\[
+ c_n=\frac1{2\pi}\int_0^{2\pi}P\phi(t)e^{-int}\,dt
+ =\frac1{2\pi}\int_{\R}\phi(t)e^{-int}\,dt.
+\]
+Integrasi per bagian berulang menunjukkan bahwa $(c_n)$ menurun lebih cepat
+daripada setiap pangkat $|n|^{-1}$. Jadi deret Fourier tersebut konvergen
+mutlak dan seragam. Dengan mengevaluasinya di~$0$, kita memperoleh rumus
+penjumlahan Poisson
+\[
+ 2\pi\sum_{k\in\Z}\phi(2\pi k)
+ =\sum_{n\in\Z}\int_{\R}\phi(t)e^{-int}\,dt.
+\]
+Penggantian $n$ oleh $-n$ tidak mengubah jumlah atas semua bilangan bulat,
+sehingga ruas kanan juga sama dengan
+\[
+ \lim_{N\to\infty}\int_{\R}
+ \left(\sum_{n=-N}^{N}e^{int}\right)\phi(t)\,dt
+ =\lim_{N\to\infty}\int_{\R}
+ \left(1+2\sum_{n=1}^{N}\cos(nt)\right)\phi(t)\,dt.
+\]
+Sementara itu, ruas kiri adalah penerapan distribusi
+$2\pi\sum_{k\in\Z}\delta_{2\pi k}$ pada~$\phi$; jumlah ini berhingga untuk
+setiap fungsi uji. Identitas berlaku untuk setiap~$\phi$, sehingga berlaku
+dalam arti distribusi.
+\end{o001proof}
+\end{o001solution}
+
+% O001-SOLUTION-ID: O001-FAOA-2015-CH10-EX-010-SOLUTION
+% SOURCE-EXERCISE-ID: FAOA-2015-CH10-NODE-0086
+% STATEMENT-TARGET-SHA256: 0f28bc54f7a5f5bffbd03ec67bc3d3d57cd2e3851430c8c294375d7fe333d618
+\begin{o001solution}
+  {O001-FAOA-2015-CH10-EX-010-SOLUTION}
+  {FAOA-2015-CH10-NODE-0086}
+  {0f28bc54f7a5f5bffbd03ec67bc3d3d57cd2e3851430c8c294375d7fe333d618}
+\begin{o001statement}
+Buktikan proposisi sebelumnya dengan asumsi bahwa $u$ dan $v$ \emph{keduanya} memiliki tumpuan kompak. \emph{Petunjuk.}
+Gunakan $(u \ast v) \ast (\phi \ast \psi)$, dengan $\phi$ dan $\psi$ fungsi-fungsi uji, sambil mengingat bahwa konvolusi fungsi
+bersifat komutatif.
+\end{o001statement}
+\begin{o001answer}
+Jika $u$ dan $v$ bertumpuan kompak, maka $u\ast v=v\ast u$.
+\end{o001answer}
+\begin{o001proof}
+Karena $u$ dan $v$ bertumpuan kompak, $u\ast\psi$ dan $v\ast\phi$
+merupakan fungsi uji untuk setiap $\phi,\psi\in\fml D(\R^n)$. Dengan definisi
+konvolusi dua distribusi, sifat asosiatif konvolusi distribusi--fungsi-uji,
+dan komutativitas konvolusi fungsi, diperoleh
+\begin{align*}
+ (u\ast v)\ast(\phi\ast\psi)
+ &=u\ast\bigl(v\ast(\phi\ast\psi)\bigr)\\
+ &=u\ast\bigl((v\ast\phi)\ast\psi\bigr)\\
+ &=u\ast\bigl(\psi\ast(v\ast\phi)\bigr)\\
+ &=(u\ast\psi)\ast(v\ast\phi).
+\end{align*}
+Di sisi lain, karena $\phi\ast\psi=\psi\ast\phi$, perhitungan yang sama
+dengan $u,v$ dan $\phi,\psi$ dipertukarkan memberi
+\[
+ (v\ast u)\ast(\phi\ast\psi)
+ =(v\ast\phi)\ast(u\ast\psi).
+\]
+Dua ruas terakhir sama karena keduanya merupakan konvolusi fungsi uji.
+
+Sekarang tetapkan $w=u\ast v-v\ast u$. Ambil sembarang
+$\eta\in\fml D(\R^n)$ dan suatu aproksimasi identitas
+$(\rho_\epsilon)$ dalam $\fml D(\R^n)$. Hasil di atas dengan
+$\phi=\eta$ dan $\psi=\rho_\epsilon$ menunjukkan
+\[
+ w\ast(\eta\ast\rho_\epsilon)=0.
+\]
+Karena $\eta\ast\rho_\epsilon\to\eta$ dalam topologi fungsi uji dan distribusi
+kontinu pada topologi itu, kita memperoleh $w\ast\eta=0$. Hal ini berlaku
+untuk setiap~$\eta$. Proposisi ketunggalan tepat sebelum definisi tumpuan
+kemudian memberi $w=0$, yaitu $u\ast v=v\ast u$.
+\end{o001proof}
+\end{o001solution}
+
+% O001-SOLUTION-ID: O001-FAOA-2015-CH10-EX-011-SOLUTION
+% SOURCE-EXERCISE-ID: FAOA-2015-CH10-NODE-0099
+% STATEMENT-TARGET-SHA256: d7c771909a0b07a97813b77756de75190669a00de4df0212ffbcdc10f4c996f3
+\begin{o001solution}
+  {O001-FAOA-2015-CH10-EX-011-SOLUTION}
+  {FAOA-2015-CH10-NODE-0099}
+  {d7c771909a0b07a97813b77756de75190669a00de4df0212ffbcdc10f4c996f3}
+\begin{o001statement}
+Carilah suatu solusi distribusional bagi persamaan diferensial $x \dfrac{du}{dx} + u = 0$ pada~$\R$.
+\end{o001statement}
+\begin{o001answer}
+Distribusi delta Dirac $u=\delta$ merupakan suatu solusi.
+\end{o001answer}
+\begin{o001proof}
+Untuk setiap fungsi uji~$\phi$,
+\[
+ (x\delta')(\phi)=\delta'(x\phi)
+ =-(x\phi)'(0)=-\phi(0)=-\delta(\phi).
+\]
+Jadi $x\delta'=-\delta$, dan akibatnya
+\[
+ x\frac{d\delta}{dx}+\delta=x\delta'+\delta=0
+\]
+dalam $\fml D^*(\R)$.
+\end{o001proof}
+\end{o001solution}

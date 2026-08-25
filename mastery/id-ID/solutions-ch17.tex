@@ -1,0 +1,55 @@
+% Lapisan solusi O001 -- Bab 17 (Funktor K0)
+% 1 solusi asli terpisah; bukan tulisan John M. Erdman.
+% Provenans model: OpenAI Codex gpt-5.6-sol, Ultra, atas arahan pengguna.
+% Lisensi komponen solusi: CC BY-SA 4.0.
+% Tidak menyiratkan dukungan John M. Erdman atau Portland State University.
+
+\markboth{SOLUSI O001 UNTUK BAB 17: FUNKTOR $K_0$}{SOLUSI O001 UNTUK BAB 17: FUNKTOR $K_0$}
+\section*{Solusi O001 untuk Bab 17: Funktor $K_0$}
+\addcontentsline{toc}{section}{Solusi O001 untuk Bab 17: Funktor $K_0$}
+\begin{center}
+\small
+Komponen solusi asli terpisah, CC BY-SA 4.0. Ditulis dengan bantuan
+OpenAI Codex gpt-5.6-sol, Ultra, atas arahan pengguna. Pernyataan latihan
+berasal dari edisi terjemahan karya John M. Erdman; solusi ini bukan tulisan
+beliau dan tidak menyiratkan dukungan beliau atau Portland State University.
+\end{center}
+
+% O001-SOLUTION-ID: O001-FAOA-2015-CH17-EX-001-SOLUTION
+% SOURCE-EXERCISE-ID: FAOA-2015-CH17-NODE-0026
+% STATEMENT-TARGET-SHA256: 76065558fdb1aff0f098a8215cec17050381cb2ca560da7994991909e0f3f8cd
+\begin{o001solution}
+  {O001-FAOA-2015-CH17-EX-001-SOLUTION}
+  {FAOA-2015-CH17-NODE-0026}
+  {76065558fdb1aff0f098a8215cec17050381cb2ca560da7994991909e0f3f8cd}
+\begin{o001statement}
+Jelaskan mengapa terminologi dalam definisi sebelumnya masuk akal.
+\end{o001statement}
+\begin{o001answer}
+Jika $s^*s=1$, maka perkalian kiri oleh~$s$ mempertahankan norma; dalam setiap
+representasi-$*$ setia, operator yang mewakili~$s$ juga merupakan isometri
+dalam arti operator Hilbert.
+\end{o001answer}
+\begin{o001proof}
+Untuk setiap $x$ dalam aljabar-$C^*$ beridentitas~$A$, identitas-$C^*$ memberi
+\[
+ \|sx\|^2
+ =\|(sx)^*(sx)\|
+ =\|x^*s^*sx\|
+ =\|x^*x\|
+ =\|x\|^2.
+\]
+Jadi operator perkalian kiri $L_s\colon x\mapsto sx$ mempertahankan norma.
+Secara setara, jika $\pi\colon A\to\ofml L(H)$ suatu representasi-$*$ setia,
+maka untuk setiap $\xi\in H$,
+\[
+ \|\pi(s)\xi\|^2
+ =\langle\pi(s)^*\pi(s)\xi,\xi\rangle
+ =\langle\pi(s^*s)\xi,\xi\rangle
+ =\|\xi\|^2.
+\]
+Maka $\pi(s)$ adalah operator isometrik, yang menjelaskan terminologinya.
+Syarat $s^*s=1$ tidak memaksa $ss^*=1$, sehingga isometri ini tidak harus
+surjektif; geser unilateral adalah contoh standar.
+\end{o001proof}
+\end{o001solution}

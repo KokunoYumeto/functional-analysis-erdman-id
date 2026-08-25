@@ -1,0 +1,13 @@
+{
+  "expected_records": 10,
+  "findings": [],
+  "inventory_bytes": 21753,
+  "inventory_path": "mastery/O001_READER_WORK_INVENTORY.jsonl",
+  "inventory_sha256": "606505ede826bcc38666d590e8fb9586a89ed01048259a4f2e5a635eca747dad",
+  "parsed_records": 10,
+  "result": "pass",
+  "schema_version": "o008.o001-reader-work-validation.v1",
+  "source_bytes": 31165,
+  "source_path": "mastery/id-ID/reader-work-selected.tex",
+  "source_sha256": "b1576f92dad5572c2862feebf8e9fdd8f5b7625f97157c853892e10e8f425082"
+}

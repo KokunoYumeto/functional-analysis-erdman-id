@@ -1,0 +1,76 @@
+{
+  "artifacts": {
+    "inventory_sha256_including_manifest": "e9b8aa804bf619d7bfcc12a5767d5c6ef9836a1ac512c946fa925ef926e8f2fb",
+    "manifest_sha256": "e20683b5cb9ac6e6cd787d813476213ef8b5ddc2967ff0c6374b67b6419a7365",
+    "route_map_sha256": "4a95bfba3957dc2d0fc73dc1a1ae4c47848e197a61a9d71365fd51d312388ee1",
+    "site_inventory_sha256_excluding_manifest": "b2f953e6b4049f87ce583c45ca7f0f96eb496f7d678a85d0a1918a3c49d9cafe"
+  },
+  "browser": "Codex In-app Browser",
+  "checks": {
+    "desktop_1440x900": {
+      "bridge": {
+        "article_left_gap_px": 519,
+        "article_right_gap_px": 199,
+        "article_width_px": 707,
+        "bridge_units": 13,
+        "document_client_width_px": 1425,
+        "document_scroll_width_px": 1425,
+        "mathml_nodes": 228,
+        "main_content_column_centered": true,
+        "page_overflow": false
+      },
+      "home": {
+        "article_left_gap_px": 519,
+        "article_right_gap_px": 199,
+        "article_width_px": 707,
+        "document_client_width_px": 1425,
+        "document_scroll_width_px": 1425,
+        "main_content_column_centered": true,
+        "page_overflow": false,
+        "status_text_verified": "Status: edisi lengkap; pemeriksaan matematis, integrasi PDF/HTML, build deterministik, dan aksesibilitas dicatat dalam bukti QA edisi."
+      }
+    },
+    "mobile_390x844": {
+      "article_left_px": 17,
+      "article_right_px": 358,
+      "article_width_px": 342,
+      "document_client_width_px": 375,
+      "document_scroll_width_px": 375,
+      "navigation": {
+        "client_height_px": 273,
+        "computed_position": "static",
+        "computed_vertical_overflow": "auto",
+        "main_top_px": 392,
+        "scroll_height_px": 689
+      },
+      "page_overflow": false,
+      "routes_checked": [
+        "index.html",
+        "jembatan-spektral-kompak-svd/index.html",
+        "hasil-kerja-pembaca/index.html",
+        "solusi-bab-01/index.html",
+        "solusi-bab-03/index.html",
+        "solusi-bab-04/index.html",
+        "solusi-bab-05/index.html",
+        "solusi-bab-06/index.html",
+        "solusi-bab-07/index.html",
+        "solusi-bab-08/index.html",
+        "solusi-bab-09/index.html",
+        "solusi-bab-10/index.html",
+        "solusi-bab-13/index.html",
+        "solusi-bab-14/index.html",
+        "solusi-bab-17/index.html"
+      ],
+      "text_diagram": {
+        "accessible_label_present": true,
+        "left_px": 54,
+        "right_px": 326,
+        "role": "img",
+        "width_px": 273
+      }
+    }
+  },
+  "findings": [],
+  "passed": true,
+  "schema_version": "o008.html-companion-visual-qa.v1"
+}

@@ -2,6 +2,22 @@
 
 ## PDF
 
+For the complete integrated edition, run the guarded repository-root script:
+
+```powershell
+./qa/run_final_companion_build.ps1
+```
+
+The script requires fresh exact output targets, validates all 52 exercise
+solutions, ten selected reader-work solutions, and 13 bridge units, regenerates
+`source/id-ID/functional-analysis-id-complete-with-companions.tex`, freezes all
+36 inputs, and performs two clean fixed-path replays. The admitted result is
+the 298-page reader in `output/pdf/`; exact identities are recorded in
+`provenance/FINAL_EDITION_BUILD_AND_QA_RECEIPT.md`.
+
+The following command remains the reproducible baseline for the source-text-
+only historical boundary.
+
 Run from `source/id-ID` with a TeX distribution providing pdfLaTeX, BibTeX,
 MakeIndex, Xy-pic, and `latexmk`:
 
@@ -60,3 +76,22 @@ is static and works offline: open `output/html/index.html` after building or
 downloading the repository. The exact admitted identities and all-route
 responsive QA are recorded in
 `provenance/HTML_READER_BUILD_AND_QA_RECEIPT.md`.
+
+### Integrated companion reader and additive backend
+
+From the repository root:
+
+```powershell
+python html/build_companion_reader.py
+python html/qa_companion_reader.py
+python backend/generate_companion_backend.py
+python qa/validate_companion_backend.py
+```
+
+For the deterministic HTML receipt, build two additional clean sites with the
+same builder and compare all three using
+`html/verify_companion_replays.py`. The admitted companion has 15 HTML
+documents, 2,288 MathML elements, 294 route records, and no machine-QA or
+responsive-layout findings. The additive generator preserves all admitted base
+JSONLs byte-identically and writes only the separately manifested companion
+overlay.

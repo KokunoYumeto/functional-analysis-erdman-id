@@ -18,9 +18,15 @@ provenance/*_RENDER_MANIFEST.csv -text
 /backend/*.py text eol=lf
 /source/id-ID/*.tex text eol=lf
 /source/id-ID/*.bib text eol=lf
+/mastery/** text eol=lf
+/bridge/** text eol=lf
+/html/** text eol=lf
+/output/html/** text eol=lf
+/output/html-companion/** text eol=lf
 /qa/*.py text eol=lf
 /qa/*.md text eol=lf
 /qa/*.json text eol=lf
+/qa/*.csv text eol=lf
 /qa/*.ps1 text eol=lf
 /qa/ch*_translation_part*.tex text eol=lf
 /qa/ch*_translation_parts/*.tex text eol=lf
@@ -28,6 +34,7 @@ provenance/*_RENDER_MANIFEST.csv -text
 /provenance/*.json text eol=lf
 /README.md text eol=lf
 /BUILD.md text eol=lf
+/LICENSE.md text eol=lf
 
 # Chapter 11 ledgers/reconciliation are already bound by exact CRLF hashes in
 # the admission receipt and backend; these last-match exceptions preserve the

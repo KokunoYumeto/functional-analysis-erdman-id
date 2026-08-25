@@ -1,0 +1,208 @@
+% Lapisan solusi O001 -- Bab 8 (Spektrum)
+% 2 solusi asli terpisah; bukan tulisan John M. Erdman.
+% Provenans model: OpenAI Codex gpt-5.6-sol, Ultra, atas arahan pengguna.
+% Lisensi komponen solusi: CC BY-SA 4.0.
+% Tidak menyiratkan dukungan John M. Erdman atau Portland State University.
+
+\markboth{SOLUSI O001 UNTUK BAB 8: SPEKTRUM}{SOLUSI O001 UNTUK BAB 8: SPEKTRUM}
+\section*{Solusi O001 untuk Bab 8: Spektrum}
+\addcontentsline{toc}{section}{Solusi O001 untuk Bab 8: Spektrum}
+\begin{center}
+\small
+Komponen solusi asli terpisah, CC BY-SA 4.0. Ditulis dengan bantuan
+OpenAI Codex gpt-5.6-sol, Ultra, atas arahan pengguna. Pernyataan latihan
+berasal dari edisi terjemahan karya John M. Erdman; solusi ini bukan tulisan
+beliau dan tidak menyiratkan dukungan beliau atau Portland State University.
+\end{center}
+
+% O001-SOLUTION-ID: O001-FAOA-2015-CH08-EX-001-SOLUTION
+% SOURCE-EXERCISE-ID: FAOA-2015-CH08-NODE-0031
+% STATEMENT-TARGET-SHA256: e16770f5d0da46b3543a0b001816b53299c752a00a3a6db2d47672ff3d0309cf
+\begin{o001solution}
+  {O001-FAOA-2015-CH08-EX-001-SOLUTION}
+  {FAOA-2015-CH08-NODE-0031}
+  {e16770f5d0da46b3543a0b001816b53299c752a00a3a6db2d47672ff3d0309cf}
+\begin{o001statement}
+Identifikasi hasil kali dan koproduk (jika ada) dalam kategori $\cat{BALG}$
+yang objeknya aljabar Banach
+ \index{hasil kali!dalam $\cat{BALG}$}%
+ \index{Banach!aljabar!hasil kali}%
+ \index{Banach!aljabar!koproduk}%
+ \index{koproduk!dalam $\cat{BALG}$}%
+ \index{BALG@$\cat{BALG}$!hasil kali dan koproduk dalam}%
+dan morfismenya homomorfisme aljabar kontinu, serta dalam kategori yang objeknya aljabar Banach dan
+morfismenya homomorfisme aljabar kontraktif. (Di sini,
+ \index{kontraktif}%
+\emph{kontraktif} berarti $\norm{Tx} \le \norm x$ untuk setiap~$x$.)
+\end{o001statement}
+\begin{o001answer}
+Dalam $\cat{BALG}$ dengan homomorfisme kontinu, hasil kali $A$ dan $B$
+adalah $A\times B$ dengan operasi titik demi titik dan, misalnya, norma
+$\norm{(a,b)}=\norm a+\norm b$; kategori ini tidak mempunyai koproduk
+biner pada umumnya. Dalam kategori homomorfisme kontraktif, hasil kali
+adalah $A\times B$ dengan norma maksimum, sedangkan koproduknya adalah
+produk bebas Banach kontraktif $A*B$, yaitu penyelesaian jumlah-$l_1$
+dari kata-kata tensor berselang-seling dalam $A$ dan~$B$.
+\end{o001answer}
+\begin{o001proof}
+Untuk homomorfisme kontinu, proyeksi koordinat dari $A\times B$ kontinu.
+Jika $f:C\to A$ dan $g:C\to B$ kontinu, satu-satunya pemetaan yang membuat
+diagram hasil kali komutatif ialah
+\[
+  h:C\longrightarrow A\times B,\qquad h(c)=(f(c),g(c)).
+\]
+Pemetaan ini homomorfisme dan
+$\norm{h(c)}\le(\norm f+\norm g)\norm c$, sehingga kontinu. Ini membuktikan
+sifat universal hasil kali. Norma maksimum juga memberi objek hasil kali
+yang isomorfik dalam kategori ini.
+
+Untuk melihat bahwa koproduk tidak selalu ada dalam kategori morfisme
+kontinu, ambil aljabar Banach satu dimensi $E=\C$ dengan perkalian nol.
+Andaikan $(P,i,j)$ adalah koproduk dua salinan $E$, dan tulis
+$p=i(1)$ serta $q=j(1)$. Untuk setiap $\lambda>0$, pemetaan
+\[
+ f_\lambda(z)=\lambda z e_{12},\qquad
+ g_\lambda(z)=\lambda z e_{21}
+\]
+adalah homomorfisme kontinu $E\to M_2(\C)$ karena
+$e_{12}^2=e_{21}^2=0$. Sifat universal akan memberi homomorfisme kontinu
+$H_\lambda:P\to M_2(\C)$ dengan nilai-nilai tersebut. Maka
+\[
+ H_\lambda((pq)^n)=\lambda^{2n}e_{11}.
+\]
+Dengan norma operator pada $M_2(\C)$ dan submultiplikativitas norma di
+$P$, kontinuitas $H_\lambda$ akan memaksa
+\[
+ \lambda^{2n}\le\norm{H_\lambda}
+       (\norm p\,\norm q)^n\qquad(n\ge1).
+\]
+Pemetaan universal ke aljabar perkalian-nol menunjukkan $p,q\ne0$.
+Memilih $\lambda^2>\norm p\,\norm q$ membuat ketaksamaan terakhir mustahil
+saat $n\to\infty$. Jadi kategori ini tidak mempunyai semua koproduk biner.
+
+Dalam kategori homomorfisme kontraktif, beri $A\times B$ norma
+\[
+  \norm{(a,b)}_{\max}=\max\{\norm a,\norm b\}.
+\]
+Proyeksinya kontraktif, dan pasangan $h=(f,g)$ kontraktif apabila $f$ dan
+$g$ kontraktif. Jadi inilah hasil kali pada kategori tersebut.
+
+Untuk koproduk kontraktif, bagi setiap kata takkosong berselang-seling
+$\epsilon=(\epsilon_1,\ldots,\epsilon_n)$ dengan huruf $A,B$, bentuk hasil
+kali tensor projektif
+\[
+ X_{\epsilon_1}\mathbin{\widehat{\otimes}_{\pi}}\cdots
+ \mathbin{\widehat{\otimes}_{\pi}}X_{\epsilon_n},
+ \qquad X_A=A,\quad X_B=B,
+\]
+lalu ambil jumlah langsung-$l_1$ atas semua kata tersebut. Perkalian
+dilakukan dengan menggabungkan kata; jika dua huruf pada sambungan sama,
+kedua faktor batas dikalikan di dalam $A$ atau $B$. Submultiplikativitas
+norma aljabar dan sifat norma projektif membuat operasi ini kontraktif dan
+memanjang ke penyelesaiannya, yang kita notasikan $A*B$.
+
+Penyertaan ke suku satu-huruf bersifat isometrik. Jika
+$f:A\to C$ dan $g:B\to C$ kontraktif, pada tensor elementer definisikan
+\[
+ x_1\otimes\cdots\otimes x_n\longmapsto
+ F_{\epsilon_1}(x_1)\cdots F_{\epsilon_n}(x_n),
+ \qquad F_A=f,\quad F_B=g.
+\]
+Norma hasilnya paling besar daripada hasil kali norma faktor, sehingga
+pemetaan pada setiap suku dan pada jumlah-$l_1$ kontraktif. Pemetaan ini
+adalah homomorfisme dan memanjang secara unik ke $A*B$; keunikannya berlaku
+karena kata-kata dalam kedua citra penyertaan rapat. Jadi $A*B$ memenuhi
+sifat universal koproduk kontraktif.
+\end{o001proof}
+\end{o001solution}
+
+% O001-SOLUTION-ID: O001-FAOA-2015-CH08-EX-002-SOLUTION
+% SOURCE-EXERCISE-ID: FAOA-2015-CH08-NODE-0064
+% STATEMENT-TARGET-SHA256: 8542ce320f7fb680060f8d11f114b381d061752b828a1f4a5e5f5080a8287e9c
+\begin{o001solution}
+  {O001-FAOA-2015-CH08-EX-002-SOLUTION}
+  {FAOA-2015-CH08-NODE-0064}
+  {8542ce320f7fb680060f8d11f114b381d061752b828a1f4a5e5f5080a8287e9c}
+\begin{o001statement}
+Dengan menggunakan rumus untuk operator Volterra $V$ dalam contoh~\ref{000319} sebagai
+ \index{operator Volterra!dan persamaan integral}%
+ \index{operator!Volterra!dan persamaan integral}%
+acuan, pada ruang Banach~$\fml C([0,1])$ definisikan operator integral melalui rumus $Vf(x)=\int_0^x f(t)\,dt$.
+ \begin{enumerate}
+  \item[(a)] Hitung spektrum operator $V$. (\emph{Petunjuk.} Tunjukkan bahwa $\norm{V^n}
+\le (n!)^{-1}$ untuk setiap $n \in \N$ dan gunakan \emph{rumus radius spektral}.)
+  \item[(b)] Apa implikasi (a) terhadap kemungkinan memperoleh fungsi kontinu $f$ yang
+memenuhi persamaan integral
+   \[ f(x) - \mu\int_0^xf(t)\,dt = h(x), \]
+dengan $\mu$ suatu skalar dan $h$ suatu fungsi kontinu yang diberikan pada~$[0,1]$?
+  \item[(c)] Gunakan gagasan dalam (b) dan uraian deret Neumann untuk $\vc 1 - \mu V$ (lihat
+proposisi~\ref{prop_Neumann_series}) untuk menghitung secara eksplisit (dan dalam bentuk fungsi elementer)
+suatu solusi untuk persamaan integral
+ \[f(x) - {\textstyle \frac12}\int_0^xf(t)\,dt = e^x.\]
+ \end{enumerate}
+\end{o001statement}
+\begin{o001answer}
+\begin{enumerate}
+ \item[(a)] $\sigma(V)=\{0\}$.
+ \item[(b)] Untuk setiap skalar $\mu$ dan setiap
+ $h\in\fml C([0,1])$, terdapat tepat satu solusi, yaitu
+ \[
+   f=(\vc1-\mu V)^{-1}h=\sum_{n=0}^{\infty}\mu^nV^nh.
+ \]
+ \item[(c)] Solusi eksplisitnya adalah
+ $f(x)=2e^x-e^{x/2}$.
+\end{enumerate}
+\end{o001answer}
+\begin{o001proof}
+Induksi dan teorema Fubini untuk integral kontinu memberi, untuk $n\ge1$,
+\[
+ (V^nf)(x)=\frac1{(n-1)!}\int_0^x(x-t)^{n-1}f(t)\,dt.
+\]
+Karena $0\le x\le1$,
+\[
+ |(V^nf)(x)|\le\frac{x^n}{n!}\norm f_u
+ \le\frac1{n!}\norm f_u,
+\]
+sehingga $\norm{V^n}\le1/n!$. Rumus radius spektral menghasilkan
+\[
+ \rho(V)\le\lim_{n\to\infty}(1/n!)^{1/n}=0.
+\]
+Spektrum operator pada ruang Banach kompleks takkosong, jadi
+$\sigma(V)\subseteq\{0\}$ memaksa $\sigma(V)=\{0\}$. Secara langsung,
+$0$ memang berada dalam spektrum karena $V$ tidak surjektif: setiap fungsi
+dalam jangkauannya bernilai nol di~$0$.
+
+Untuk setiap $\mu$, $\sigma(\mu V)=\{0\}$ (termasuk $\mu=0$), sehingga
+$\vc1-\mu V$ invertibel. Lebih konkret, estimasi di atas memberi
+\[
+ \sum_{n=0}^{\infty}\norm{\mu^nV^n}
+ \le\sum_{n=0}^{\infty}\frac{|\mu|^n}{n!}=e^{|\mu|}<\infty.
+\]
+Karena itu deret operator $R=\sum_{n\ge0}\mu^nV^n$ konvergen dalam norma.
+Mengalikan jumlah parsial dengan $\vc1-\mu V$ menghasilkan
+$\vc1-\mu^{N+1}V^{N+1}$, yang menuju $\vc1$ dalam norma; urutan perkalian
+yang lain sama. Maka $R=(\vc1-\mu V)^{-1}$ dan untuk setiap $h$ terdapat
+tepat satu solusi $f=Rh$.
+
+Untuk $h(x)=e^x$ dan $n\ge1$, induksi dari integrasi menunjukkan
+\[
+ (V^ne^\cdot)(x)=e^x-\sum_{k=0}^{n-1}\frac{x^k}{k!}.
+\]
+Dengan $\mu=1/2$, penataan ulang sah karena konvergensi mutlak dan seragam,
+dan
+\begin{align*}
+ f(x)
+ &=e^x+\sum_{n=1}^{\infty}2^{-n}
+       \left(e^x-\sum_{k=0}^{n-1}\frac{x^k}{k!}\right)\\
+ &=2e^x-\sum_{k=0}^{\infty}\frac{x^k}{k!}
+       \sum_{n=k+1}^{\infty}2^{-n}
+ =2e^x-\sum_{k=0}^{\infty}\frac{(x/2)^k}{k!}
+ =2e^x-e^{x/2}.
+\end{align*}
+Sebagai pemeriksaan langsung,
+\[
+ \frac12\int_0^x(2e^t-e^{t/2})\,dt=e^x-e^{x/2},
+\]
+sehingga $f(x)-\frac12\int_0^xf(t)\,dt=e^x$.
+\end{o001proof}
+\end{o001solution}
