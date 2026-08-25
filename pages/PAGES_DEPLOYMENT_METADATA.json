@@ -1,0 +1,35 @@
+{
+  "attribution": "John M. Erdman; Indonesian translation and separately provenanced companion components as documented in the edition",
+  "companion_reader": "output/html-companion/index.html",
+  "license": "CC BY-SA 4.0",
+  "model_provenance": "OpenAI Codex gpt-5.6-sol, Ultra, at the user's direction",
+  "non_endorsement": "No endorsement, sponsorship, or approval by John M. Erdman or Portland State University is implied.",
+  "pages_root": "https://kokunoyumeto.github.io/functional-analysis-erdman-id/",
+  "primary_reader": "output/html/index.html",
+  "reader_aliases": {
+    "/": "output/html/index.html",
+    "/companion/": "output/html-companion/index.html"
+  },
+  "readers": [
+    {
+      "manifest_bytes": 11616,
+      "manifest_sha256": "3a3a4a4cdd03d1cae2c49c316fc1f94fe36dad6aa9da79f3764930f011045576",
+      "manifested_bytes": 7645353,
+      "manifested_files": 104,
+      "public_prefix": "output/html/",
+      "role": "source_reader"
+    },
+    {
+      "manifest_bytes": 1744,
+      "manifest_sha256": "e20683b5cb9ac6e6cd787d813476213ef8b5ddc2967ff0c6374b67b6419a7365",
+      "manifested_bytes": 1341400,
+      "manifested_files": 18,
+      "public_prefix": "output/html-companion/",
+      "role": "companion_reader"
+    }
+  ],
+  "repository": "https://github.com/KokunoYumeto/functional-analysis-erdman-id",
+  "schema": "o008.github-pages.deployment-metadata.v1",
+  "status": "complete",
+  "substantive_reader_bytes_changed": false
+}

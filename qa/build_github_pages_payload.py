@@ -177,23 +177,17 @@ def main() -> int:
             }
         )
 
-    metadata = {
-        "schema": "o008.github-pages.deployment-metadata.v1",
-        "status": "complete",
-        "repository": "https://github.com/KokunoYumeto/functional-analysis-erdman-id",
-        "pages_root": "https://kokunoyumeto.github.io/functional-analysis-erdman-id/",
-        "primary_reader": "output/html/index.html",
-        "companion_reader": "output/html-companion/index.html",
-        "reader_aliases": {"/": "output/html/index.html", "/companion/": "output/html-companion/index.html"},
-        "readers": reader_metadata,
-        "substantive_reader_bytes_changed": False,
-        "license": "CC BY-SA 4.0",
-        "attribution": "John M. Erdman; Indonesian translation and separately provenanced companion components as documented in the edition",
-        "model_provenance": "OpenAI Codex gpt-5.6-sol, Ultra, at the user's direction",
-        "non_endorsement": "No endorsement, sponsorship, or approval by John M. Erdman or Portland State University is implied.",
-    }
-    metadata_bytes = (json.dumps(metadata, ensure_ascii=False, indent=2, sort_keys=True) + "\n").encode("utf-8")
-    add(PurePosixPath("PAGES_DEPLOYMENT_METADATA.json"), "deployment_metadata", "generated", metadata_bytes)
+    metadata_source = ROOT / "pages" / "PAGES_DEPLOYMENT_METADATA.json"
+    metadata_bytes = metadata_source.read_bytes()
+    metadata = json.loads(metadata_bytes.decode("utf-8"))
+    if metadata.get("readers") != reader_metadata:
+        raise ValueError("tracked deployment metadata does not match the replayed reader manifests")
+    add(
+        PurePosixPath("PAGES_DEPLOYMENT_METADATA.json"),
+        "deployment_metadata",
+        metadata_source.relative_to(ROOT).as_posix(),
+        metadata_bytes,
+    )
 
     rows.sort(key=lambda row: str(row["public_path"]))
     manifest_bytes = manifest_csv(rows)

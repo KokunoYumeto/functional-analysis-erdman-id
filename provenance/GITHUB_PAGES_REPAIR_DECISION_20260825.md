@@ -33,6 +33,12 @@ workflow builds a curated static artifact containing only:
 - the admitted companion under `output/html-companion/`, byte-identically;
 - deterministic deployment metadata and an exact public-byte manifest.
 
+The deployment metadata is itself tracked at
+`pages/PAGES_DEPLOYMENT_METADATA.json`; it is copied byte-identically after the
+builder proves that its reader counts, byte totals, and source-manifest hashes
+match a fresh replay. Thus every deployed manifest row has one exact tracked
+source path, including the additive metadata row.
+
 This exposes every existing relative route—including the companion's links to
 `../html/index.html`—without rewriting reader bytes, and avoids publishing the
 repository's source, backend, build evidence, or credentials as website
