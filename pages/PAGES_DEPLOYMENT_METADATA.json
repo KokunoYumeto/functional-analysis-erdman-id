@@ -6,11 +6,6 @@
   "non_endorsement": "No endorsement, sponsorship, or approval by John M. Erdman or Portland State University is implied.",
   "pages_root": "https://kokunoyumeto.github.io/functional-analysis-erdman-id/",
   "primary_reader": "output/html/index.html",
-  "reciprocal_navigation": {
-    "authoritative_original": "https://web.pdx.edu/~erdman/FAOA/functional_analysis_operator_algebras_pdf.pdf",
-    "curriculum_id": "https://kokunoyumeto.github.io/program-matematika-indonesia/id/#course-D20",
-    "role": "D20"
-  },
   "reader_aliases": {
     "/": "output/html/index.html",
     "/companion/": "output/html-companion/index.html"
@@ -18,21 +13,27 @@
   "readers": [
     {
       "manifest_bytes": 11617,
-      "manifest_sha256": "b3a74bc69e41bfb20a27492fb674087a35c6ae5325f8cd238c1f07d289049eec",
-      "manifested_bytes": 7655766,
+      "manifest_sha256": "9c9d6805ed42e7a2e1985b5ac3dec0c36fc5c6936c9f8899b01a889bb3dfdc5a",
+      "manifested_bytes": 7660254,
       "manifested_files": 104,
       "public_prefix": "output/html/",
       "role": "source_reader"
     },
     {
       "manifest_bytes": 1745,
-      "manifest_sha256": "16eaf14084f280c5a705d9ef4c3732608a8bb808311c9429eeb8f8de7e15274d",
-      "manifested_bytes": 1348670,
+      "manifest_sha256": "8a5032c7555dc3f203546de9c3ecdbe91f0e12e6948b607ed18302eaed00b98a",
+      "manifested_bytes": 1351730,
       "manifested_files": 18,
       "public_prefix": "output/html-companion/",
       "role": "companion_reader"
     }
   ],
+  "reciprocal_navigation": {
+    "authoritative_original": "https://web.pdx.edu/~erdman/FAOA/functional_analysis_operator_algebras_pdf.pdf",
+    "curriculum_en": "https://kokunoyumeto.github.io/program-matematika-indonesia/en/#course-D20",
+    "curriculum_id": "https://kokunoyumeto.github.io/program-matematika-indonesia/id/#course-D20",
+    "role": "D20"
+  },
   "repository": "https://github.com/KokunoYumeto/functional-analysis-erdman-id",
   "schema": "o008.github-pages.deployment-metadata.v1",
   "status": "complete",

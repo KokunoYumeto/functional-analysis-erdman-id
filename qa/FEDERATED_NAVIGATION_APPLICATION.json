@@ -1,0 +1,445 @@
+{
+  "authoritative_original_url": "https://web.pdx.edu/~erdman/FAOA/functional_analysis_operator_algebras_pdf.pdf",
+  "course_id": "D20",
+  "documents": [
+    {
+      "bytes": 376321,
+      "link_counts": {
+        "en": 1,
+        "id": 1,
+        "marker": 1,
+        "original": 1
+      },
+      "path": "output/html/bab-01/index.html",
+      "sha256": "a767be55f86b3b047899845986a98fe557b7872536189a5839dadcd4fd521040"
+    },
+    {
+      "bytes": 150053,
+      "link_counts": {
+        "en": 1,
+        "id": 1,
+        "marker": 1,
+        "original": 1
+      },
+      "path": "output/html/bab-02/index.html",
+      "sha256": "5e3906f2ca76c248f9ab9633d8e294ddd8cab1b5b4d90afdb9cf543219265b2a"
+    },
+    {
+      "bytes": 544003,
+      "link_counts": {
+        "en": 1,
+        "id": 1,
+        "marker": 1,
+        "original": 1
+      },
+      "path": "output/html/bab-03/index.html",
+      "sha256": "6b43b9e16cb5df543e19c738fe6ce0fd558b3bb7c6324b171a04d0f287e4dd5b"
+    },
+    {
+      "bytes": 382724,
+      "link_counts": {
+        "en": 1,
+        "id": 1,
+        "marker": 1,
+        "original": 1
+      },
+      "path": "output/html/bab-04/index.html",
+      "sha256": "51cff7f87bab8b14d138c8ed56a00cb6ac931bc39b07b5e01786831bffced7eb"
+    },
+    {
+      "bytes": 330670,
+      "link_counts": {
+        "en": 1,
+        "id": 1,
+        "marker": 1,
+        "original": 1
+      },
+      "path": "output/html/bab-05/index.html",
+      "sha256": "cf3b706e1e473ee3a0472c1a8290f4aae1692ef3c74e0fe78492e91eba970272"
+    },
+    {
+      "bytes": 523585,
+      "link_counts": {
+        "en": 1,
+        "id": 1,
+        "marker": 1,
+        "original": 1
+      },
+      "path": "output/html/bab-06/index.html",
+      "sha256": "b4e74cce87fa7de125ed2eb1b7d1cc7c061f3376d17a531f2e57f06836ddca11"
+    },
+    {
+      "bytes": 124897,
+      "link_counts": {
+        "en": 1,
+        "id": 1,
+        "marker": 1,
+        "original": 1
+      },
+      "path": "output/html/bab-07/index.html",
+      "sha256": "4e47c1db772588aafc5463d98a12d667a06a5664ac580b0b63ad99e772b9a7f6"
+    },
+    {
+      "bytes": 184309,
+      "link_counts": {
+        "en": 1,
+        "id": 1,
+        "marker": 1,
+        "original": 1
+      },
+      "path": "output/html/bab-08/index.html",
+      "sha256": "c904b3f956790cd84bd2499880a11eeb723b4b08969a537eb170d0f0d53c77bd"
+    },
+    {
+      "bytes": 242633,
+      "link_counts": {
+        "en": 1,
+        "id": 1,
+        "marker": 1,
+        "original": 1
+      },
+      "path": "output/html/bab-09/index.html",
+      "sha256": "2c24fe822a16c1ea12918e27c8a882f06f0b9d8426608e1b56d06bc7ba1ce221"
+    },
+    {
+      "bytes": 289431,
+      "link_counts": {
+        "en": 1,
+        "id": 1,
+        "marker": 1,
+        "original": 1
+      },
+      "path": "output/html/bab-10/index.html",
+      "sha256": "b7c9ae2a82854ca5559a9976cdbb26a5787731d2b236c5fc6fadc241099570cb"
+    },
+    {
+      "bytes": 251631,
+      "link_counts": {
+        "en": 1,
+        "id": 1,
+        "marker": 1,
+        "original": 1
+      },
+      "path": "output/html/bab-11/index.html",
+      "sha256": "6e72d17e156d5086f7429c2f97b57a1e96d6a221889ed53b8125d24b5089d1ca"
+    },
+    {
+      "bytes": 383965,
+      "link_counts": {
+        "en": 1,
+        "id": 1,
+        "marker": 1,
+        "original": 1
+      },
+      "path": "output/html/bab-12/index.html",
+      "sha256": "524d9dfdcb958906e2140fea4728d0adba54061c64b7fb5ccca262cbafc0528d"
+    },
+    {
+      "bytes": 98957,
+      "link_counts": {
+        "en": 1,
+        "id": 1,
+        "marker": 1,
+        "original": 1
+      },
+      "path": "output/html/bab-13/index.html",
+      "sha256": "2645d92f723e0a9a4d1652f3124bfc1b03e1cf2438347bf968d0bd77e13bec2f"
+    },
+    {
+      "bytes": 225088,
+      "link_counts": {
+        "en": 1,
+        "id": 1,
+        "marker": 1,
+        "original": 1
+      },
+      "path": "output/html/bab-14/index.html",
+      "sha256": "caef9e8a079c0964cae716526b77b2fa85b5acff4148cd1d3ba778bbc3ac0636"
+    },
+    {
+      "bytes": 107240,
+      "link_counts": {
+        "en": 1,
+        "id": 1,
+        "marker": 1,
+        "original": 1
+      },
+      "path": "output/html/bab-15/index.html",
+      "sha256": "5f6ced6a0730583397721bebbbe0580fe61b2151a7f9b69d46cbf9df939297f4"
+    },
+    {
+      "bytes": 325593,
+      "link_counts": {
+        "en": 1,
+        "id": 1,
+        "marker": 1,
+        "original": 1
+      },
+      "path": "output/html/bab-16/index.html",
+      "sha256": "f751fcc2233ab615a8d260f015625df61302e85420f906cfeacdc5999cf1890a"
+    },
+    {
+      "bytes": 494789,
+      "link_counts": {
+        "en": 1,
+        "id": 1,
+        "marker": 1,
+        "original": 1
+      },
+      "path": "output/html/bab-17/index.html",
+      "sha256": "e7444747e1f18c5a8511cd6988db1da898936ab8be2a6f6f4015d22037edc85a"
+    },
+    {
+      "bytes": 13352,
+      "link_counts": {
+        "en": 1,
+        "id": 1,
+        "marker": 1,
+        "original": 1
+      },
+      "path": "output/html/daftar-pustaka/index.html",
+      "sha256": "5dcbe3493f6a264e39c7dd1595957f1d4e6400d6bbdf1c7c8e5af89718fc6477"
+    },
+    {
+      "bytes": 350054,
+      "link_counts": {
+        "en": 1,
+        "id": 1,
+        "marker": 1,
+        "original": 1
+      },
+      "path": "output/html/indeks/index.html",
+      "sha256": "58b82868efea013191e57f29634f91860a3fee9b2c8ff9949760e6e56c3699c8"
+    },
+    {
+      "bytes": 6461,
+      "link_counts": {
+        "en": 1,
+        "id": 1,
+        "marker": 1,
+        "original": 1
+      },
+      "path": "output/html/index.html",
+      "sha256": "b28d20633aa87b281a3de8ea8c3d2b978ff8c3c5e09262a9c742d1e69c6fca42"
+    },
+    {
+      "bytes": 85103,
+      "link_counts": {
+        "en": 1,
+        "id": 1,
+        "marker": 1,
+        "original": 1
+      },
+      "path": "output/html/prakata/index.html",
+      "sha256": "a91eec52b2c573e062eeeec3ee01876d687265cbdefd8f1133bdb90f332bddf6"
+    },
+    {
+      "bytes": 4678,
+      "link_counts": {
+        "en": 1,
+        "id": 1,
+        "marker": 1,
+        "original": 1
+      },
+      "path": "output/html/tentang/index.html",
+      "sha256": "38df3bf6b4d50d36811499cfd392abc6b2ab49c54ff8a9b15e74067149b73f9f"
+    },
+    {
+      "bytes": 225121,
+      "link_counts": {
+        "en": 1,
+        "id": 1,
+        "marker": 1,
+        "original": 1
+      },
+      "path": "output/html-companion/hasil-kerja-pembaca/index.html",
+      "sha256": "f0092bd42f4589dab15d2b8eb49777b364c4c26a191c143bc4870ad8869784cf"
+    },
+    {
+      "bytes": 6335,
+      "link_counts": {
+        "en": 1,
+        "id": 1,
+        "marker": 1,
+        "original": 1
+      },
+      "path": "output/html-companion/index.html",
+      "sha256": "6aa8e4d0421943c5a80a15f1d9869645b53fc0cd84a0ad42f18e114b111146d3"
+    },
+    {
+      "bytes": 118165,
+      "link_counts": {
+        "en": 1,
+        "id": 1,
+        "marker": 1,
+        "original": 1
+      },
+      "path": "output/html-companion/jembatan-spektral-kompak-svd/index.html",
+      "sha256": "eb953b7e565a64792c55435f4f86afc2298c3be3cab2735affcf0724c8d21ed0"
+    },
+    {
+      "bytes": 127902,
+      "link_counts": {
+        "en": 1,
+        "id": 1,
+        "marker": 1,
+        "original": 1
+      },
+      "path": "output/html-companion/solusi-bab-01/index.html",
+      "sha256": "d42b4c036044f9a2539e74ae25a47f46ee32ef8d9f07e0aac346309f4d52ebb5"
+    },
+    {
+      "bytes": 142589,
+      "link_counts": {
+        "en": 1,
+        "id": 1,
+        "marker": 1,
+        "original": 1
+      },
+      "path": "output/html-companion/solusi-bab-03/index.html",
+      "sha256": "bcdb15607135c8a1360b76e92cbe58e7f30c2b49fe78187e7c7f5c1d34904e59"
+    },
+    {
+      "bytes": 158483,
+      "link_counts": {
+        "en": 1,
+        "id": 1,
+        "marker": 1,
+        "original": 1
+      },
+      "path": "output/html-companion/solusi-bab-04/index.html",
+      "sha256": "80b8ca0e205153861bb16890d79c41617709eae6f303b40a90b0ab73cc64bab4"
+    },
+    {
+      "bytes": 84400,
+      "link_counts": {
+        "en": 1,
+        "id": 1,
+        "marker": 1,
+        "original": 1
+      },
+      "path": "output/html-companion/solusi-bab-05/index.html",
+      "sha256": "a016b7b6705ae7b5985cf337dd1d85b4a816686b1b368c1127750d451f0353a9"
+    },
+    {
+      "bytes": 104286,
+      "link_counts": {
+        "en": 1,
+        "id": 1,
+        "marker": 1,
+        "original": 1
+      },
+      "path": "output/html-companion/solusi-bab-06/index.html",
+      "sha256": "c2f69e0569e5396d527a29679cee09918de577d6994b2bef4c38b662e4958017"
+    },
+    {
+      "bytes": 22832,
+      "link_counts": {
+        "en": 1,
+        "id": 1,
+        "marker": 1,
+        "original": 1
+      },
+      "path": "output/html-companion/solusi-bab-07/index.html",
+      "sha256": "69b5927c8e31254f19e294e1f13ecedb1f69b81478b9875f6331acd800e0d241"
+    },
+    {
+      "bytes": 59436,
+      "link_counts": {
+        "en": 1,
+        "id": 1,
+        "marker": 1,
+        "original": 1
+      },
+      "path": "output/html-companion/solusi-bab-08/index.html",
+      "sha256": "4d261c6aa1e2ec2c93546ea1c79649e717e65483fcaaec62f32a403d64263545"
+    },
+    {
+      "bytes": 16831,
+      "link_counts": {
+        "en": 1,
+        "id": 1,
+        "marker": 1,
+        "original": 1
+      },
+      "path": "output/html-companion/solusi-bab-09/index.html",
+      "sha256": "37a5c0e6d413f1964f5f9be625dfcc8443d4626f9fd118516bdfce64a2b5841c"
+    },
+    {
+      "bytes": 134859,
+      "link_counts": {
+        "en": 1,
+        "id": 1,
+        "marker": 1,
+        "original": 1
+      },
+      "path": "output/html-companion/solusi-bab-10/index.html",
+      "sha256": "d095ed199f90166b09a6391083fb6ac5d887723e0f3120943554987f591623b3"
+    },
+    {
+      "bytes": 20077,
+      "link_counts": {
+        "en": 1,
+        "id": 1,
+        "marker": 1,
+        "original": 1
+      },
+      "path": "output/html-companion/solusi-bab-13/index.html",
+      "sha256": "08170c80d6cd8411439e8322f9a15593a281d23169296bdf6a6b914e35be454a"
+    },
+    {
+      "bytes": 33320,
+      "link_counts": {
+        "en": 1,
+        "id": 1,
+        "marker": 1,
+        "original": 1
+      },
+      "path": "output/html-companion/solusi-bab-14/index.html",
+      "sha256": "1b7c1e903086cb69c45b574eb29b937d6b9eab82f94dcf3f4bb4580e2922e288"
+    },
+    {
+      "bytes": 13669,
+      "link_counts": {
+        "en": 1,
+        "id": 1,
+        "marker": 1,
+        "original": 1
+      },
+      "path": "output/html-companion/solusi-bab-17/index.html",
+      "sha256": "7d36761e9e0d6e4f44a8873b6394a43409cd3a86d17a88ec381a9e05958254a9"
+    },
+    {
+      "bytes": 1905,
+      "link_counts": {
+        "en": 1,
+        "id": 1,
+        "marker": 1,
+        "original": 1
+      },
+      "path": "pages/companion/index.html",
+      "sha256": "b0e8dda97bd9273b2ec102047ef44f5571320ed41c4e13272b961e922bd3fe53"
+    },
+    {
+      "bytes": 2245,
+      "link_counts": {
+        "en": 1,
+        "id": 1,
+        "marker": 1,
+        "original": 1
+      },
+      "path": "pages/index.html",
+      "sha256": "5fbed0a807a183f0ee2fc1b2d3384b1f407b805882520690729eb067d0da90ec"
+    }
+  ],
+  "en_course_url": "https://kokunoyumeto.github.io/program-matematika-indonesia/en/#course-D20",
+  "html_documents": 39,
+  "id_course_url": "https://kokunoyumeto.github.io/program-matematika-indonesia/id/#course-D20",
+  "published_root": [
+    "pages",
+    "output/html",
+    "output/html-companion"
+  ],
+  "repository": "functional-analysis-erdman-id",
+  "status": "pass"
+}

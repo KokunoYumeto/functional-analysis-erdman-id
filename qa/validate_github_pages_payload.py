@@ -17,7 +17,10 @@ from urllib.parse import unquote, urlsplit
 ROOT = Path(__file__).resolve().parents[1]
 MANIFEST_NAME = "PAGES_DEPLOYMENT_MANIFEST.csv"
 MANIFEST_FIELDS = ["public_path", "role", "source_path", "bytes", "sha256"]
-COURSE_RETURN_URL = "https://kokunoyumeto.github.io/program-matematika-indonesia/id/#course-D20"
+COURSE_RETURN_URLS = (
+    "https://kokunoyumeto.github.io/program-matematika-indonesia/id/#course-D20",
+    "https://kokunoyumeto.github.io/program-matematika-indonesia/en/#course-D20",
+)
 AUTHORITATIVE_SOURCE_URL = "https://web.pdx.edu/~erdman/FAOA/functional_analysis_operator_algebras_pdf.pdf"
 RECIPROCAL_NAV_LABEL = "Navigasi lintas situs"
 
@@ -199,8 +202,11 @@ def validate_payload(payload: Path, expected_manifest: Path | None) -> dict[str,
     for source in reciprocal_surfaces:
         parser = surfaces[source]
         hrefs = {value for kind, value in parser.references if kind == "href"}
-        if COURSE_RETURN_URL not in hrefs:
-            raise ValidationError(f"missing D20 curriculum return link in {source}")
+        for course_return_url in COURSE_RETURN_URLS:
+            if course_return_url not in hrefs:
+                raise ValidationError(
+                    f"missing bilingual D20 curriculum return link {course_return_url} in {source}"
+                )
         if AUTHORITATIVE_SOURCE_URL not in hrefs:
             raise ValidationError(f"missing authoritative original link in {source}")
         if RECIPROCAL_NAV_LABEL not in parser.navigation_labels:
