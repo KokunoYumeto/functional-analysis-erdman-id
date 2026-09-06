@@ -22,6 +22,7 @@ from typing import Any, Iterable
 from lxml import etree, html
 
 from build_reader import (
+    cross_site_navigation,
     LICENSE_URL,
     MODEL,
     ROOT,
@@ -47,7 +48,7 @@ from build_reader import (
 SOURCE_READER = ROOT / "output" / "html"
 SOURCE_ROUTE_MAP = ROOT / "backend" / "html_routes.jsonl"
 COMPANION_CSS = ROOT / "html" / "static" / "companion.css"
-EXPECTED_SOURCE_READER_INVENTORY = "f04bb3f5ee883c794474b191faf0e724987ebc01c4711bac8f6dc5421e543f32"
+EXPECTED_SOURCE_READER_INVENTORY = "1662bdafe6adb9c1e3abe2ecda21b6ad8e805aec364b26c76ea7fd4e7a519b3d"
 
 CHAPTERS: list[tuple[int, str]] = [
     (1, "Aljabar Linear dan Teorema Spektral"),
@@ -586,6 +587,7 @@ def page_document(
     badge = html.Element("span", {"class": "edition-badge"})
     badge.text = "O001 + O008"
     header_inner.append(badge)
+    header_inner.append(cross_site_navigation())
     header.append(header_inner)
     body.append(header)
     layout = html.Element("div", {"class": "reader-layout"})

@@ -26,6 +26,8 @@ CSS_SOURCE = ROOT / "html" / "static" / "reader.css"
 DIAGXY = ROOT / "source" / "id-ID" / "DIAGXY.TEX"
 MODEL = "OpenAI Codex gpt-5.6-sol, Ultra"
 LICENSE_URL = "https://creativecommons.org/licenses/by-sa/4.0/"
+COURSE_RETURN_URL = "https://kokunoyumeto.github.io/program-matematika-indonesia/id/#course-D20"
+AUTHORITATIVE_SOURCE_URL = "https://web.pdx.edu/~erdman/FAOA/functional_analysis_operator_algebras_pdf.pdf"
 SOURCE_DATE_EPOCH = "1444126743"
 DIAGXY_SHA256 = "3df2bc0a4d57650280fd92006c904fc876ebcbe989cee76ee7a73d9d3fa9eefb"
 DIAGRAM_ID_RE = re.compile(r"FAOA-2015-DIAGRAM-(?:PREFACE|CH(?:0[1-9]|1[0-7]))-[0-9]{3}\Z")
@@ -1120,6 +1122,26 @@ def book_navigation(current_slug: str) -> etree._Element:
     return nav
 
 
+def cross_site_navigation() -> etree._Element:
+    """Expose the curriculum backlink and authoritative original on every page."""
+    nav = html.Element("nav", {"class": "site-header__links", "aria-label": "Navigasi lintas situs"})
+    for label, href in (
+        ("← Kembali ke Program Matematika Indonesia (D20)", COURSE_RETURN_URL),
+        ("Sumber asli resmi (PDF)", AUTHORITATIVE_SOURCE_URL),
+    ):
+        link = html.Element(
+            "a",
+            {
+                "class": "site-header__link",
+                "href": href,
+                "rel": "external noopener noreferrer",
+            },
+        )
+        link.text = label
+        nav.append(link)
+    return nav
+
+
 def qualify_external_links(article: etree._Element) -> None:
     """Mark optional outbound navigation without turning it into a dependency."""
     for anchor in list(article.xpath(".//a[@href]")):
@@ -1179,6 +1201,7 @@ def page_document(
     badge = html.Element("span", {"class": "edition-badge"})
     badge.text = "Teks sumber lengkap"
     header_inner.append(badge)
+    header_inner.append(cross_site_navigation())
     header.append(header_inner)
     body.append(header)
     layout = html.Element("div", {"class": "reader-layout"})

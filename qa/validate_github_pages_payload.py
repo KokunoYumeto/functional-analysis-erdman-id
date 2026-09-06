@@ -17,6 +17,9 @@ from urllib.parse import unquote, urlsplit
 ROOT = Path(__file__).resolve().parents[1]
 MANIFEST_NAME = "PAGES_DEPLOYMENT_MANIFEST.csv"
 MANIFEST_FIELDS = ["public_path", "role", "source_path", "bytes", "sha256"]
+COURSE_RETURN_URL = "https://kokunoyumeto.github.io/program-matematika-indonesia/id/#course-D20"
+AUTHORITATIVE_SOURCE_URL = "https://web.pdx.edu/~erdman/FAOA/functional_analysis_operator_algebras_pdf.pdf"
+RECIPROCAL_NAV_LABEL = "Navigasi lintas situs"
 
 
 class ValidationError(RuntimeError):
@@ -29,6 +32,7 @@ class SurfaceParser(HTMLParser):
         self.anchors: set[str] = set()
         self.references: list[tuple[str, str]] = []
         self.meta_refresh: list[str] = []
+        self.navigation_labels: list[str] = []
 
     def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
         values = {name.lower(): value for name, value in attrs if value is not None}
@@ -43,6 +47,8 @@ class SurfaceParser(HTMLParser):
             match = re.search(r"(?:^|;)\s*url\s*=\s*['\"]?([^'\";]+)", content, re.I)
             if match:
                 self.meta_refresh.append(match.group(1).strip())
+        if tag.lower() == "nav" and "aria-label" in values:
+            self.navigation_labels.append(values["aria-label"])
 
 
 def sha256_bytes(data: bytes) -> str:
@@ -182,6 +188,23 @@ def validate_payload(payload: Path, expected_manifest: Path | None) -> dict[str,
                 if target_parser is None or fragment not in target_parser.anchors:
                     raise ValidationError(f"missing fragment target in {source}: {raw_url}")
             checked_references += 1
+
+    reciprocal_surfaces = [
+        path
+        for path in html_paths
+        if path in {PurePosixPath("index.html"), PurePosixPath("companion/index.html")}
+        or path.as_posix().startswith("output/html/")
+        or path.as_posix().startswith("output/html-companion/")
+    ]
+    for source in reciprocal_surfaces:
+        parser = surfaces[source]
+        hrefs = {value for kind, value in parser.references if kind == "href"}
+        if COURSE_RETURN_URL not in hrefs:
+            raise ValidationError(f"missing D20 curriculum return link in {source}")
+        if AUTHORITATIVE_SOURCE_URL not in hrefs:
+            raise ValidationError(f"missing authoritative original link in {source}")
+        if RECIPROCAL_NAV_LABEL not in parser.navigation_labels:
+            raise ValidationError(f"missing accessible reciprocal navigation landmark in {source}")
 
     css_url_pattern = re.compile(r"url\(\s*(['\"]?)(.*?)\1\s*\)", re.I)
     for public_path in sorted(path for path in declared if path.suffix.lower() == ".css"):

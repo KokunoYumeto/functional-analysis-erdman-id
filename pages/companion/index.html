@@ -11,12 +11,18 @@
     body { margin: 0; padding: 2rem 1rem; }
     main { width: min(44rem, 100%); margin: 12vh auto 0; line-height: 1.65; }
     a { color: #1769aa; }
+    .cross-site-nav { display: flex; flex-wrap: wrap; gap: .65rem; margin: 1.25rem 0; }
+    .cross-site-nav a { border: .1rem solid currentColor; border-radius: .35rem; font-weight: 700; padding: .5rem .7rem; }
     @media (prefers-color-scheme: dark) { a { color: #8bc4ff; } }
   </style>
 </head>
 <body>
   <main>
     <h1>Pendamping penguasaan dan jembatan spektral</h1>
+    <nav class="cross-site-nav" aria-label="Navigasi lintas situs">
+      <a href="https://kokunoyumeto.github.io/program-matematika-indonesia/id/#course-D20" rel="external noopener noreferrer">← Kembali ke Program Matematika Indonesia (D20)</a>
+      <a href="https://web.pdx.edu/~erdman/FAOA/functional_analysis_operator_algebras_pdf.pdf" rel="external noopener noreferrer">Sumber asli resmi (PDF)</a>
+    </nav>
     <p>Anda sedang diarahkan ke pendamping lengkap Bahasa Indonesia.</p>
     <p><a href="../output/html-companion/index.html">Buka pendamping lengkap</a></p>
     <p><a href="../output/html/index.html">Buka reader teks sumber lengkap</a></p>

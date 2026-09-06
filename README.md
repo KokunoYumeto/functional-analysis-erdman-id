@@ -6,6 +6,8 @@ John M. Erdman, *Functional Analysis and Operator Algebras: An Introduction*
 
 ## Baca edisi lengkap
 
+- **[← Kembali ke Program Matematika Indonesia — D20](https://kokunoyumeto.github.io/program-matematika-indonesia/id/#course-D20)**
+  membuka kembali posisi mata kuliah yang tepat dalam kurikulum pusat.
 - **[Baca online — reader HTML teks sumber lengkap](https://kokunoyumeto.github.io/functional-analysis-erdman-id/)**
   memuat prakata, seluruh 17 bab, bibliografi, indeks, MathML semantik, dan
   diagram SVG berlabel dalam tata letak yang mengalir ulang di desktop maupun

@@ -72,6 +72,7 @@ a:focus-visible {
 .site-header__inner {
   align-items: center;
   display: flex;
+  flex-wrap: wrap;
   gap: 1rem;
   justify-content: space-between;
   margin: 0 auto;
@@ -85,6 +86,29 @@ a:focus-visible {
   font-size: clamp(1rem, 2vw, 1.3rem);
   font-weight: 700;
   text-decoration: none;
+}
+
+.site-header__links {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+}
+
+.site-header__link {
+  border: 0.08rem solid rgb(255 255 255 / 70%);
+  border-radius: 0.35rem;
+  color: #ffffff;
+  font-size: 0.86rem;
+  font-weight: 700;
+  padding: 0.34rem 0.62rem;
+  text-decoration: none;
+}
+
+.site-header__link:hover,
+.site-header__link:focus-visible {
+  background: #ffffff;
+  color: #0d3b5f;
 }
 
 .edition-badge,
@@ -531,6 +555,12 @@ pre,
   .site-header__inner {
     align-items: flex-start;
     flex-direction: column;
+  }
+
+  .site-header__links {
+    align-items: stretch;
+    flex-direction: column;
+    width: 100%;
   }
 
   main {

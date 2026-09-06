@@ -1,0 +1,20 @@
+{
+  "byte_identical_replay": true,
+  "canonical_source_bytes_verified": 9023307,
+  "findings": [],
+  "html_documents": 39,
+  "internal_references_checked": 4064,
+  "manifest_bytes": 23873,
+  "manifest_rows": 128,
+  "manifest_sha256": "3b07b105273b79fb06d45933b68d16c67c0cf35f1fb2750d917684f9b1cb3252",
+  "manifested_bytes": 9023307,
+  "mathml_elements": 13481,
+  "payload": "qa/pages-build-reciprocal-a",
+  "payload_file_count": 129,
+  "payload_tree_sha256": "ffb4b5921b2a5b5705b6230f0e1a837aadc7233dfd5a5de0c67f96c581dd5f34",
+  "replay_payload_tree_sha256": "ffb4b5921b2a5b5705b6230f0e1a837aadc7233dfd5a5de0c67f96c581dd5f34",
+  "schema": "o008.github-pages.payload-validation.v1",
+  "script_elements": 0,
+  "status": "pass",
+  "svg_assets": 80
+}
