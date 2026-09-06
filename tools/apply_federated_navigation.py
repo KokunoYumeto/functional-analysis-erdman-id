@@ -251,6 +251,7 @@ def refresh_functional_analysis_manifests() -> None:
     metadata_path.write_text(
         json.dumps(metadata, ensure_ascii=False, indent=2, sort_keys=True) + "\n",
         encoding="utf-8",
+        newline="\n",
     )
     build_dir = ROOT / "qa/pages-build-federated-nav"
     replay_dir = ROOT / "qa/pages-build-federated-nav-replay"
@@ -371,6 +372,7 @@ def main() -> int:
         destination.write_text(
             json.dumps(report, ensure_ascii=False, indent=2, sort_keys=True) + "\n",
             encoding="utf-8",
+            newline="\n",
         )
     print(json.dumps({key: report[key] for key in ("repository", "html_documents", "status")}, sort_keys=True))
     return 0
