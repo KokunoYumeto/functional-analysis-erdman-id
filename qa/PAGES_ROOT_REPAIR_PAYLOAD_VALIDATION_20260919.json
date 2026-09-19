@@ -1,0 +1,20 @@
+{
+  "byte_identical_replay": true,
+  "canonical_source_bytes_verified": 9031362,
+  "findings": [],
+  "html_documents": 39,
+  "internal_references_checked": 4064,
+  "manifest_bytes": 23873,
+  "manifest_rows": 128,
+  "manifest_sha256": "00b273ec3e2cf1b9074592f2124b02e577a033de1e5e4e7d004775ae5156e57e",
+  "manifested_bytes": 9031362,
+  "mathml_elements": 13481,
+  "payload": "_site-repair-20260919-a",
+  "payload_file_count": 129,
+  "payload_tree_sha256": "6dac9bf8e24dac1796da1a283d9364c68c506e0f930c1195af55809cee9ffce5",
+  "replay_payload_tree_sha256": "6dac9bf8e24dac1796da1a283d9364c68c506e0f930c1195af55809cee9ffce5",
+  "schema": "o008.github-pages.payload-validation.v1",
+  "script_elements": 0,
+  "status": "pass",
+  "svg_assets": 80
+}
