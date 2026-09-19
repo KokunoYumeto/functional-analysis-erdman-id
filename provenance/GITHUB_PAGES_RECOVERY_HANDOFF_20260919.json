@@ -1,0 +1,147 @@
+{
+  "schema": "o008.github-pages.recovery-handoff.v1",
+  "status": "complete",
+  "recorded_at_utc": "2026-09-19T21:31:00Z",
+  "central_hub_ingestion": {
+    "curriculum_core": "D20",
+    "program_role": "O008",
+    "language": "id-ID",
+    "edition_status": "complete",
+    "primary_reader_url": "https://kokunoyumeto.github.io/functional-analysis-erdman-id/",
+    "companion_url": "https://kokunoyumeto.github.io/functional-analysis-erdman-id/companion/",
+    "repository": "https://github.com/KokunoYumeto/functional-analysis-erdman-id",
+    "zenodo_concept_doi": "10.5281/zenodo.22059739"
+  },
+  "repository": {
+    "name_with_owner": "KokunoYumeto/functional-analysis-erdman-id",
+    "branch": "main",
+    "deployment_commit": "d0c47da0802742fdd7316acc86c82d9ce238b4a2",
+    "deployment_tree": "c479cc0f4bd227336727a3b39b5d67d67ff0eb5c",
+    "tag": "o008-pages-2026.09.19-recovery",
+    "tag_object": "08e57b69b581be281f72273595b1f7805e28ecfa",
+    "tag_commit": "d0c47da0802742fdd7316acc86c82d9ce238b4a2",
+    "duplicate_repository_created": false
+  },
+  "deployment": {
+    "build_type": "workflow",
+    "workflow_path": ".github/workflows/pages.yml",
+    "workflow_run_id": 35470384181,
+    "workflow_run_url": "https://github.com/KokunoYumeto/functional-analysis-erdman-id/actions/runs/35470384181",
+    "workflow_event": "workflow_dispatch",
+    "workflow_conclusion": "success",
+    "deployment_id": 6545897535,
+    "deployment_status": "success",
+    "environment": "github-pages",
+    "https_enforced": true
+  },
+  "routes": {
+    "pages_root": {
+      "url": "https://kokunoyumeto.github.io/functional-analysis-erdman-id/",
+      "http_status": 200,
+      "bytes": 2245,
+      "sha256": "5fbed0a807a183f0ee2fc1b2d3384b1f407b805882520690729eb067d0da90ec"
+    },
+    "source_reader": {
+      "url": "https://kokunoyumeto.github.io/functional-analysis-erdman-id/output/html/index.html",
+      "http_status": 200,
+      "bytes": 6461,
+      "sha256": "b28d20633aa87b281a3de8ea8c3d2b978ff8c3c5e09262a9c742d1e69c6fca42"
+    },
+    "companion_alias": {
+      "url": "https://kokunoyumeto.github.io/functional-analysis-erdman-id/companion/",
+      "http_status": 200,
+      "target": "output/html-companion/index.html"
+    },
+    "companion_reader": {
+      "url": "https://kokunoyumeto.github.io/functional-analysis-erdman-id/output/html-companion/index.html",
+      "http_status": 200,
+      "bytes": 6335,
+      "sha256": "6aa8e4d0421943c5a80a15f1d9869645b53fc0cd84a0ad42f18e114b111146d3"
+    },
+    "bridge": {
+      "url": "https://kokunoyumeto.github.io/functional-analysis-erdman-id/output/html-companion/jembatan-spektral-kompak-svd/index.html",
+      "http_status": 200,
+      "bytes": 118165,
+      "sha256": "eb953b7e565a64792c55435f4f86afc2298c3be3cab2735affcf0724c8d21ed0"
+    }
+  },
+  "readme": {
+    "path": "README.md",
+    "public_raw_url": "https://raw.githubusercontent.com/KokunoYumeto/functional-analysis-erdman-id/d0c47da0802742fdd7316acc86c82d9ce238b4a2/README.md",
+    "bytes": 7583,
+    "sha256": "d3d13a42c1a9e4750a40580ccb1d1895293f8d89a966a3aa130d151c49c2358d",
+    "anonymous_byte_match": true,
+    "primary_reader_link_visible_in_first_reading_section": true,
+    "companion_link_visible_in_first_reading_section": true,
+    "repository_homepage_matches_pages_root": true
+  },
+  "payload": {
+    "manifest_path": "qa/GITHUB_PAGES_PUBLIC_MANIFEST.csv",
+    "manifest_rows": 128,
+    "manifest_bytes": 23873,
+    "manifest_sha256": "00b273ec3e2cf1b9074592f2124b02e577a033de1e5e4e7d004775ae5156e57e",
+    "manifested_bytes": 9031362,
+    "payload_file_count_including_manifest": 129,
+    "payload_tree_sha256": "6dac9bf8e24dac1796da1a283d9364c68c506e0f930c1195af55809cee9ffce5",
+    "byte_identical_local_replay": true,
+    "all_public_files_match_manifest_and_tracked_sources": true,
+    "substantive_reader_bytes_changed": false,
+    "source_reader_manifest": {
+      "path": "output/html/MANIFEST.csv",
+      "bytes": 11617,
+      "sha256": "9c9d6805ed42e7a2e1985b5ac3dec0c36fc5c6936c9f8899b01a889bb3dfdc5a"
+    },
+    "companion_reader_manifest": {
+      "path": "output/html-companion/MANIFEST.csv",
+      "bytes": 1745,
+      "sha256": "8a5032c7555dc3f203546de9c3ecdbe91f0e12e6948b607ed18302eaed00b98a"
+    }
+  },
+  "verification": {
+    "local_payload_validation": {
+      "path": "qa/PAGES_ROOT_REPAIR_PAYLOAD_VALIDATION_20260919.json",
+      "bytes": 743,
+      "sha256": "a33ab073af5d8813412acefc8e87da36a45a13ed654601a144fe1d1036373716",
+      "status": "pass",
+      "html_documents": 39,
+      "mathml_elements": 13481,
+      "svg_assets": 80,
+      "internal_references_checked": 4064
+    },
+    "browser_qa": {
+      "path": "qa/PAGES_ROOT_REPAIR_BROWSER_QA_20260919.json",
+      "bytes": 7498,
+      "sha256": "8a61564bb0b5b1357a0d2817fd3bd57df1a40438627d07884e7626457a3f8d0e",
+      "status": "pass",
+      "desktop_viewports_passed": 2,
+      "mobile_viewports_passed": 2,
+      "reader_console_errors": 0,
+      "reader_failed_requests": 0,
+      "page_horizontal_overflow_findings": 0,
+      "host_level_observation": "Chromium requested https://kokunoyumeto.github.io/favicon.ico, which is outside this repository's project path; this did not affect reader resources, routes, or rendering."
+    },
+    "anonymous_public_readback": {
+      "path": "provenance/GITHUB_PAGES_RECOVERY_PUBLIC_READBACK_20260919.json",
+      "bytes": 94456,
+      "sha256": "07a99a93d3770b045db45fd1040302ab2305db2b0d43aaeea81304af153c5439",
+      "result": "pass",
+      "authentication_used": false,
+      "credential_material_recorded": false,
+      "public_files_verified": 128,
+      "public_bytes_verified": 9031362
+    }
+  },
+  "preservation": {
+    "pdf_preserved": true,
+    "editable_source_preserved": true,
+    "backend_preserved": true,
+    "rights_and_attribution_preserved": true,
+    "license": "CC BY-SA 4.0",
+    "non_endorsement_preserved": true,
+    "duplicate_doi_created": false,
+    "zenodo_lineage_changed": false,
+    "upstream_issue_opened": false,
+    "author_contacted": false
+  }
+}
+

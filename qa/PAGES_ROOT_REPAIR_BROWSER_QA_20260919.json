@@ -1,0 +1,215 @@
+{
+  "schema": "o008.github-pages.recovery-browser-qa.v1",
+  "status": "pass",
+  "inspected_at_utc": "2026-09-19T21:30:37.104Z",
+  "anonymous_context": true,
+  "authentication_used": false,
+  "base_url": "https://kokunoyumeto.github.io/functional-analysis-erdman-id/",
+  "browser_engine": "Chromium via installed Microsoft Edge",
+  "console_errors": [],
+  "failed_requests": [],
+  "inspected_urls": [
+    "https://kokunoyumeto.github.io/functional-analysis-erdman-id/",
+    "https://kokunoyumeto.github.io/functional-analysis-erdman-id/companion/",
+    "https://kokunoyumeto.github.io/functional-analysis-erdman-id/output/html-companion/index.html",
+    "https://kokunoyumeto.github.io/functional-analysis-erdman-id/output/html-companion/jembatan-spektral-kompak-svd/index.html",
+    "https://kokunoyumeto.github.io/functional-analysis-erdman-id/output/html/bab-06/index.html",
+    "https://kokunoyumeto.github.io/functional-analysis-erdman-id/output/html/index.html"
+  ],
+  "viewports": [
+    {
+      "name": "desktop-root-reader",
+      "width": 1440,
+      "height": 900,
+      "status": "pass"
+    },
+    {
+      "name": "desktop-companion",
+      "width": 1440,
+      "height": 900,
+      "status": "pass"
+    },
+    {
+      "name": "mobile-source-chapter-06",
+      "width": 390,
+      "height": 844,
+      "status": "pass"
+    },
+    {
+      "name": "mobile-companion-bridge",
+      "width": 390,
+      "height": 844,
+      "status": "pass"
+    }
+  ],
+  "surfaces": [
+    {
+      "name": "desktop-root-reader",
+      "viewport": {
+        "width": 1440,
+        "height": 900,
+        "mobile": false
+      },
+      "requested_url": "https://kokunoyumeto.github.io/functional-analysis-erdman-id/",
+      "final_url": "https://kokunoyumeto.github.io/functional-analysis-erdman-id/output/html/index.html",
+      "initial_http_status": 200,
+      "metrics": {
+        "title": "Beranda pembaca — Analisis Fungsional dan Aljabar Operator",
+        "language": "id",
+        "h1": "Analisis Fungsional dan Aljabar Operator",
+        "client_width": 1440,
+        "document_width": 1440,
+        "body_width": 1440,
+        "main_width": 1120,
+        "page_horizontal_overflow": false,
+        "mathml_elements": 0,
+        "svg_elements": 0,
+        "navigation_landmarks": 4,
+        "curriculum_links": 2,
+        "original_source_links": 1,
+        "overflowing_math_elements": 0,
+        "locally_scroll_contained_math_elements": 0
+      },
+      "console_errors": [],
+      "host_level_observations": [
+        {
+          "text": "Failed to load resource: the server responded with a status of 404 ()",
+          "location": {
+            "url": "https://kokunoyumeto.github.io/favicon.ico",
+            "line": 0,
+            "column": 0,
+            "lineNumber": 0,
+            "columnNumber": 0
+          },
+          "disposition": "The browser requested the GitHub user-site favicon outside this repository's project path; it is not a reader resource or a deployable route in this lane."
+        }
+      ],
+      "page_errors": [],
+      "failed_requests": [],
+      "bad_http_responses": [],
+      "screenshot": {
+        "filename": "desktop-root-reader.png",
+        "bytes": 112495,
+        "sha256": "bfdb6ee8fe9c84a3bf851ba677c37c4e5a55c4fb02e2e60cbdfbbcdf29a468ab"
+      },
+      "status": "pass"
+    },
+    {
+      "name": "desktop-companion",
+      "viewport": {
+        "width": 1440,
+        "height": 900,
+        "mobile": false
+      },
+      "requested_url": "https://kokunoyumeto.github.io/functional-analysis-erdman-id/companion/",
+      "final_url": "https://kokunoyumeto.github.io/functional-analysis-erdman-id/output/html-companion/index.html",
+      "initial_http_status": 200,
+      "metrics": {
+        "title": "Beranda pendamping — Pendamping Analisis Fungsional",
+        "language": "id",
+        "h1": "Pendamping penguasaan dan jembatan spektral",
+        "client_width": 1440,
+        "document_width": 1440,
+        "body_width": 1440,
+        "main_width": 1120,
+        "page_horizontal_overflow": false,
+        "mathml_elements": 0,
+        "svg_elements": 0,
+        "navigation_landmarks": 4,
+        "curriculum_links": 2,
+        "original_source_links": 1,
+        "overflowing_math_elements": 0,
+        "locally_scroll_contained_math_elements": 0
+      },
+      "console_errors": [],
+      "host_level_observations": [],
+      "page_errors": [],
+      "failed_requests": [],
+      "bad_http_responses": [],
+      "screenshot": {
+        "filename": "desktop-companion.png",
+        "bytes": 103496,
+        "sha256": "dadbd9d2a932b4f1894142017655e955578584e347f04da98c8ca08dca5335bc"
+      },
+      "status": "pass"
+    },
+    {
+      "name": "mobile-source-chapter-06",
+      "viewport": {
+        "width": 390,
+        "height": 844,
+        "mobile": true
+      },
+      "requested_url": "https://kokunoyumeto.github.io/functional-analysis-erdman-id/output/html/bab-06/index.html",
+      "final_url": "https://kokunoyumeto.github.io/functional-analysis-erdman-id/output/html/bab-06/index.html",
+      "initial_http_status": 200,
+      "metrics": {
+        "title": "Ruang Banach — Analisis Fungsional dan Aljabar Operator",
+        "language": "id",
+        "h1": "Bab 6 · Ruang Banach",
+        "client_width": 390,
+        "document_width": 390,
+        "body_width": 390,
+        "main_width": 390,
+        "page_horizontal_overflow": false,
+        "mathml_elements": 1067,
+        "svg_elements": 0,
+        "navigation_landmarks": 5,
+        "curriculum_links": 2,
+        "original_source_links": 1,
+        "overflowing_math_elements": 0,
+        "locally_scroll_contained_math_elements": 0
+      },
+      "console_errors": [],
+      "host_level_observations": [],
+      "page_errors": [],
+      "failed_requests": [],
+      "bad_http_responses": [],
+      "screenshot": {
+        "filename": "mobile-source-chapter-06.png",
+        "bytes": 41057,
+        "sha256": "1384f94cf8b8d15a33b462515acec318ba7b0d4bca2dc84c1272ba8787b27917"
+      },
+      "status": "pass"
+    },
+    {
+      "name": "mobile-companion-bridge",
+      "viewport": {
+        "width": 390,
+        "height": 844,
+        "mobile": true
+      },
+      "requested_url": "https://kokunoyumeto.github.io/functional-analysis-erdman-id/output/html-companion/jembatan-spektral-kompak-svd/index.html",
+      "final_url": "https://kokunoyumeto.github.io/functional-analysis-erdman-id/output/html-companion/jembatan-spektral-kompak-svd/index.html",
+      "initial_http_status": 200,
+      "metrics": {
+        "title": "Jembatan spektral-kompak dan SVD — Pendamping Analisis Fungsional",
+        "language": "id",
+        "h1": "Jembatan spektral-kompak dan SVD",
+        "client_width": 390,
+        "document_width": 390,
+        "body_width": 390,
+        "main_width": 390,
+        "page_horizontal_overflow": false,
+        "mathml_elements": 228,
+        "svg_elements": 0,
+        "navigation_landmarks": 5,
+        "curriculum_links": 2,
+        "original_source_links": 1,
+        "overflowing_math_elements": 0,
+        "locally_scroll_contained_math_elements": 0
+      },
+      "console_errors": [],
+      "host_level_observations": [],
+      "page_errors": [],
+      "failed_requests": [],
+      "bad_http_responses": [],
+      "screenshot": {
+        "filename": "mobile-companion-bridge.png",
+        "bytes": 42668,
+        "sha256": "cea4c1edbeddb37af5417df392b62a48627db1ce1a2da8bae456f50221f3fd52"
+      },
+      "status": "pass"
+    }
+  ]
+}
