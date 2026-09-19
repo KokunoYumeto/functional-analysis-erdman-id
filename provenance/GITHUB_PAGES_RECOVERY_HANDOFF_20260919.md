@@ -38,4 +38,3 @@ repository or DOI was created, and no upstream issue or author contact occurred.
 
 Machine-readable ingestion record:
 `provenance/GITHUB_PAGES_RECOVERY_HANDOFF_20260919.json`.
-
